@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>General Solution to SHM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.25rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .tip {
+      background-color: #fef9c3;
+      border-left: 6px solid #facc15;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      font-size: 1rem;
+    }
+    canvas {
+      display: block;
+      margin: 1rem auto;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    #xCanvas, #vCanvas, #aCanvas {
+      height: 200px;
+    }
+    .label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .controls {
+      margin-top: 1.5rem;
+    }
+    #omegaDisplay {
+      margin-top: 1.2rem;
+      font-size: 1.15rem;
+      color: #1e3a8a;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>General Solution to Simple Harmonic Motion</h1>
+
+    <p>
+      Once you understand that SHM is governed by a restoring force, the next step is learning how to describe the motion mathematically. This is where calculus and trigonometry meet physics!
+    </p>
+
+    <h2>1. Position Function</h2>
+    <p>
+      The motion of an object in SHM is described by a cosine (or sine) function. The most general solution is:
+    </p>
+
+    <div class="formula-box">
+      \( x(t) = A \cos(\omega t + \phi) \)
+    </div>
+
+    <p><strong>Where:</strong></p>
+    <ul>
+      <li>\( x(t) \): Position at time \( t \)</li>
+      <li>\( A \): Amplitude (maximum displacement)</li>
+      <li>\( \omega \): Angular frequency \( = \sqrt{\frac{k}{m}} \) for a spring, \( \sqrt{\frac{g}{L}} \) for a pendulum</li>
+      <li>\( \phi \): Phase constant (depends on where the object starts)</li>
+    </ul>
+
+    <div class="tip">
+      If the object starts at maximum displacement, then \( \phi = 0 \) and the function simplifies to \( x(t) = A \cos(\omega t) \).
+    </div>
+
+    <h2>2. Velocity Function</h2>
+    <p>
+      Velocity is the derivative of position with respect to time:
+    </p>
+
+    <div class="formula-box">
+      \( v(t) = \frac{dx}{dt} = -A\omega \sin(\omega t + \phi) \)
+    </div>
+
+    <p>
+      Velocity is zero at maximum displacement (where the object turns around) and maximum at the equilibrium point.
+    </p>
+
+    <h2>3. Acceleration Function</h2>
+    <p>
+      Acceleration is the derivative of velocity (or second derivative of position):
+    </p>
+
+    <div class="formula-box">
+      \( a(t) = \frac{d^2x}{dt^2} = -A\omega^2 \cos(\omega t + \phi) \)
+    </div>
+
+    <p>
+      Notice how acceleration is proportional to position but in the opposite direction — that's the hallmark of SHM.
+    </p>
+
+    <div class="tip">
+      In SHM: <strong>Acceleration = (− constant) × Position</strong>
+    </div>
+
+    <img src="x-v-a.png" alt="x-v-a graph" class="img-fluid-center">
+    <figcaption>Figure: All three SHM functions are sinusoidal and related by phase.</figcaption>
+
+    <h2>4. Physical Meaning of Constants</h2>
+    <ul>
+      <li><strong>Amplitude \( A \):</strong> Maximum distance from equilibrium</li>
+      <li><strong>Angular Frequency \( \omega \):</strong> How fast the object oscillates (in radians/second)</li>
+      <li><strong>Phase Constant \( \phi \):</strong> Shifts the graph to match starting position and velocity</li>
+    </ul>
+
+    <h2>5. Graphical Understanding</h2>
+    <p>
+      - \( x(t) \): Peaks and troughs = maximum displacement<br>
+      - \( v(t) \): Crosses zero at max displacement, peaks at equilibrium<br>
+      - \( a(t) \): Always opposite in sign to position
+    </p>
+
+    <div class="tip">
+      Velocity is <strong>90° ahead</strong> of position; acceleration is <strong>180° out of phase</strong>.
+    </div>
+
+    <h2>6. Why This Matters</h2>
+    <p>
+      These equations let you predict where the object is, how fast it’s moving, and how it’s accelerating at any moment — all using a single formula. This is especially powerful when solving for energy, timing, or motion comparisons in SHM problems.
+    </p>
+    <div class="container">
+    <h1>Spring-Block Oscillator + SHM Graphs</h1>
+    <canvas id="springCanvas" width="800" height="300"></canvas>
+    <canvas id="xCanvas" width="800" height="200"></canvas>
+    <canvas id="vCanvas" width="800" height="200"></canvas>
+    <canvas id="aCanvas" width="800" height="200"></canvas>
+
+    <div class="controls">
+      <label class="label" for="massSlider">Mass (kg): <span id="massVal">1.0</span></label>
+      <input type="range" id="massSlider" min="0.5" max="10" step="0.1" value="1.0">
+
+      <label class="label" for="kSlider">Spring Constant (N/m): <span id="kVal">10</span></label>
+      <input type="range" id="kSlider" min="1" max="10" step=".1" value="10">
+    </div>
+
+    <div id="omegaDisplay">Angular Frequency (ω): 3.16 rad/s</div>
+  </div>
+
+  <script>
+    const springCanvas = document.getElementById('springCanvas');
+    const springCtx = springCanvas.getContext('2d');
+    const xCanvas = document.getElementById('xCanvas');
+    const vCanvas = document.getElementById('vCanvas');
+    const aCanvas = document.getElementById('aCanvas');
+    const xCtx = xCanvas.getContext('2d');
+    const vCtx = vCanvas.getContext('2d');
+    const aCtx = aCanvas.getContext('2d');
+
+    let mass = 1.0;
+    let k = 10;
+    let A = 80;
+    let t = 0;
+    let dt = 0.016;
+    const origin = 150;
+    const x_eq = origin + 200;
+
+    const xVals = [], vVals = [], aVals = [], timeVals = [];
+
+    const massSlider = document.getElementById("massSlider");
+    const kSlider = document.getElementById("kSlider");
+    const massVal = document.getElementById("massVal");
+    const kVal = document.getElementById("kVal");
+    const omegaDisplay = document.getElementById("omegaDisplay");
+
+    massSlider.addEventListener("input", () => {
+      mass = parseFloat(massSlider.value);
+      massVal.textContent = mass.toFixed(1);
+      updateOmega();
+    });
+
+    kSlider.addEventListener("input", () => {
+      k = parseFloat(kSlider.value);
+      kVal.textContent = k.toFixed(1);
+      updateOmega();
+    });
+
+    function updateOmega() {
+      const omega = Math.sqrt(k / mass);
+      omegaDisplay.textContent = `Angular Frequency (ω): ${omega.toFixed(2)} rad/s`;
+    }
+
+    function drawZigZagSpring(ctx, xStart, xEnd, y, coils = 10, amplitude = 10) {
+      const dx = (xEnd - xStart) / coils;
+      ctx.beginPath();
+      ctx.moveTo(xStart, y);
+      for (let i = 1; i < coils; i++) {
+        const x = xStart + dx * i;
+        const yOffset = i % 2 === 0 ? -amplitude : amplitude;
+        ctx.lineTo(x, y + yOffset);
+      }
+      ctx.lineTo(xEnd, y);
+      ctx.strokeStyle = "#1e3a8a";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+    }
+
+    function drawSpringBlock(x) {
+      springCtx.clearRect(0, 0, springCanvas.width, springCanvas.height);
+      springCtx.fillStyle = "#555";
+      springCtx.fillRect(origin - 20, 100, 20, 100);
+      drawZigZagSpring(springCtx, origin, x, 150);
+      springCtx.fillStyle = "#3b82f6";
+      springCtx.fillRect(x, 120, 50, 60);
+
+      springCtx.setLineDash([5, 5]);
+      springCtx.beginPath();
+      springCtx.moveTo(x_eq + 25, 100);
+      springCtx.lineTo(x_eq + 25, 220);
+      springCtx.strokeStyle = "#f59e0b";
+      springCtx.lineWidth = 2;
+      springCtx.stroke();
+      springCtx.setLineDash([]);
+      springCtx.fillStyle = "#f59e0b";
+      springCtx.font = "14px Roboto";
+      springCtx.fillText("Equilibrium", x_eq - 30, 95);
+    }
+
+    function drawGraph(ctx, data, label, color, scaleY = 1) {
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+  // Draw axes
+  ctx.strokeStyle = "#999";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(40, 0);
+  ctx.lineTo(40, ctx.canvas.height);
+  ctx.moveTo(0, ctx.canvas.height / 2);
+  ctx.lineTo(ctx.canvas.width, ctx.canvas.height / 2);
+  ctx.stroke();
+
+  if (data.length < 2) return;
+
+  ctx.beginPath();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+
+  const centerY = ctx.canvas.height / 2;
+  const scaleX = 4;
+
+  // Helper to get point coordinates
+  function point(i) {
+    return {
+      x: 40 + timeVals[i] * scaleX,
+      y: centerY - data[i] * scaleY,
+    };
+  }
+
+  ctx.moveTo(point(0).x, point(0).y);
+
+  for (let i = 0; i < data.length - 1; i++) {
+    const p0 = point(i);
+    const p1 = point(i + 1);
+
+    // Control points for smooth curve
+    const cp1x = p0.x + (p1.x - (i > 0 ? point(i - 1).x : p0.x)) / 2;
+    const cp1y = p0.y;
+
+    const cp2x = p1.x - ((i + 2 < data.length ? point(i + 2).x : p1.x) - p0.x) / 2;
+    const cp2y = p1.y;
+
+    ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, p1.x, p1.y);
+  }
+
+  ctx.stroke();
+
+  ctx.fillStyle = color;
+  ctx.font = "14px Roboto";
+  ctx.fillText(label, 10, 20);
+}
+    function animate() {
+      const omega = Math.sqrt(k / mass);
+      const displacement = A * Math.cos(omega * t);
+      const velocity = -A * omega * Math.sin(omega * t);
+      const acceleration = -A * omega * omega * Math.cos(omega * t);
+      const x = x_eq + displacement;
+
+      drawSpringBlock(x);
+
+      timeVals.push(t);
+      xVals.push(displacement);
+      vVals.push(velocity);
+      aVals.push(acceleration);
+
+      drawGraph(xCtx, xVals, "x(t)", "#ef4444", 0.2);
+      drawGraph(vCtx, vVals, "v(t)", "#10b981", 1.2);
+      drawGraph(aCtx, aVals, "a(t)", "#6366f1", 2);
+
+      t += dt;
+      requestAnimationFrame(animate);
+    }
+
+    updateOmega();
+    animate();
+  </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newton's First Law – Inertia & Equilibrium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #f0f4ff, #d9e8ff);
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+    main {
+      max-width: 720px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 50, 0.1);
+      padding: 2.5rem 3rem;
+    }
+
+    /* Headings */
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      text-align: center;
+      color: #1a3c72;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #4a6fa5;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    h3 {
+      color: #1a3c72;
+      border-bottom: 2px solid #4a6fa5;
+      padding-bottom: 0.3rem;
+      margin-top: 3rem;
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* Paragraphs */
+    p {
+      font-weight: 300;
+      font-size: 1.12rem;
+      margin-bottom: 1.25rem;
+      color: #444;
+    }
+
+    /* Lists */
+    ul {
+      padding-left: 1.4rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+      font-weight: 400;
+    }
+    ul li strong {
+      color: #1a3c72;
+      font-weight: 600;
+    }
+
+    /* Diagram */
+    .diagram {
+      margin: 2rem auto;
+      max-width: 100%;
+      display: block;
+      box-shadow: 0 6px 20px rgba(26, 60, 114, 0.15);
+      border-radius: 12px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    /* Summary table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+    th, td {
+      padding: 0.8rem 1rem;
+      border: 1px solid #4a6fa5;
+      text-align: left;
+      font-size: 1rem;
+      color: #2a3f71;
+    }
+    th {
+      background: #e5efff;
+      font-weight: 600;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #d9e8ff;
+      border-left: 6px solid #4a6fa5;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      color: #335a99;
+      margin: 2rem 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(74, 111, 165, 0.12);
+    }
+
+    /* Quiz Container */
+    .quiz-container {
+      margin-top: 3rem;
+      background: #f7faff;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(26, 60, 114, 0.1);
+      padding: 2rem 2.5rem;
+    }
+    .quiz-container h2 {
+      text-align: center;
+      color: #1a3c72;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Questions */
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question h4 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #2c3e70;
+    }
+
+    /* Options */
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .options button {
+      flex: 1 1 45%;
+      background: white;
+      border: 2px solid #4a6fa5;
+      color: #4a6fa5;
+      font-weight: 500;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 1px 6px rgba(74, 111, 165, 0.15);
+      user-select: none;
+    }
+    .options button:hover {
+      background: #4a6fa5;
+      color: white;
+      box-shadow: 0 4px 15px rgba(74, 111, 165, 0.35);
+      transform: translateY(-2px);
+    }
+    .options button.active {
+      background: #1a3c72;
+      color: white;
+      border-color: #1a3c72;
+      box-shadow: 0 6px 20px rgba(26, 60, 114, 0.4);
+      pointer-events: auto;
+      transform: translateY(-2px);
+    }
+    .options button.correct {
+      background-color: #198754 !important;
+      border-color: #198754 !important;
+      color: white !important;
+      box-shadow: 0 6px 20px rgba(25, 135, 84, 0.5);
+      cursor: default;
+    }
+    .options button.incorrect {
+      background-color: #dc3545 !important;
+      border-color: #dc3545 !important;
+      color: white !important;
+      box-shadow: 0 6px 20px rgba(220, 53, 69, 0.5);
+      cursor: default;
+    }
+
+    /* Feedback */
+    .feedback {
+      margin-top: 0.3rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1a3c72;
+      min-height: 24px;
+      user-select: none;
+    }
+    .feedback.incorrect {
+      color: #dc3545;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      display: block;
+      margin: 1.8rem auto 0;
+      background: #1a3c72;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(26, 60, 114, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .btn-submit:hover:not(:disabled) {
+      background-color: #164e9c;
+      box-shadow: 0 10px 22px rgba(22, 78, 156, 0.7);
+      transform: translateY(-2px);
+    }
+    .btn-submit:disabled {
+      background: #a2b8d9;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* Score Display */
+    #scoreDisplay {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #1a3c72;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .options button {
+        flex: 1 1 100%;
+      }
+      main {
+        padding: 1.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+
+  <main>
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Newton's First Law of Motion</h1>
+
+    <h2>Inertia &amp; Equilibrium</h2>
+
+    <p>Newton's First Law, also known as the <em>Law of Inertia</em>, states that an object at rest will stay at rest, and an object moving at a constant velocity will continue moving at that velocity, unless acted upon by a net external force.</p>
+    
+    <p>This means objects resist changes to their state of motion. This property is called <strong>inertia</strong>, and it's directly related to the mass of the object—the more mass, the greater the inertia.</p>
+
+    <h3>Understanding Inertia</h3>
+    <p>Inertia explains why you feel pushed back into your seat when a car accelerates suddenly, or why a rolling ball eventually stops due to friction, which is an external force acting against its motion.</p>
+
+    <div class="diagram" role="img" aria-label="Diagram illustrating inertia: a ball at rest remains at rest until pushed, and a moving ball continues moving until friction stops it.">
+      <svg width="100%" height="200" viewBox="0 0 700 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:12px;">
+        <rect width="700" height="200" fill="#e5efff" rx="12" />
+        <circle cx="150" cy="100" r="30" fill="#4a6fa5" />
+        <text x="150" y="100" fill="white" font-size="16" font-weight="700" dominant-baseline="middle" text-anchor="middle">At Rest</text>
+        <line x1="220" y1="100" x2="450" y2="100" stroke="#4a6fa5" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+        <circle cx="550" cy="100" r="30" fill="#4a6fa5" />
+        <text x="550" y="100" fill="white" font-size="16" font-weight="700" dominant-baseline="middle" text-anchor="middle">In Motion</text>
+        <text x="340" y="85" fill="#4a6fa5" font-size="14" font-weight="600" text-anchor="middle">External Force Applied</text>
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto" fill="#4a6fa5">
+            <polygon points="0 0, 10 3.5, 0 7" />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T1ux9D7-O38?si=txt69r1_DnENV0dQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h3>Historical Context</h3>
+    <p>Before Newton, the dominant belief (from Aristotle) was that objects needed continuous force to keep moving. Newton revolutionized physics by showing that motion is natural and only changes when forces act on objects.</p>
+
+    <h3>Equilibrium Explained</h3>
+    <p>When the <strong>net force</strong> on an object is zero, it is said to be in <strong>equilibrium</strong>. This means:</p>
+    <ul>
+      <li><strong>Static Equilibrium:</strong> Object is at rest and stays at rest.</li>
+      <li><strong>Dynamic Equilibrium:</strong> Object moves with constant velocity (no acceleration).</li>
+    </ul>
+    <p>Mathematically, <em>∑F = 0 ⇒ constant velocity</em>, where <em>∑F</em> is the sum of all forces acting on the object.</p>
+
+    <h3>Common Misconceptions</h3>
+    <ul>
+      <li>Objects need a force to keep moving — actually, force is needed only to change motion, not maintain it.</li>
+      <li>Heavier objects fall faster — Newton's laws show all objects accelerate equally (ignoring air resistance).</li>
+    </ul>
+
+    <div class="callout" role="note">
+      <strong>Did you know?</strong> The concept of inertia was first hinted at by Galileo, who studied motion on inclined planes before Newton formalized it.
+    </div>
+
+    <h3>Summary Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inertia</td>
+          <td>Resistance to change in motion, proportional to mass.</td>
+          <td>A passenger lurching forward when a car stops suddenly.</td>
+        </tr>
+        <tr>
+          <td>Equilibrium</td>
+          <td>Net force equals zero, no change in velocity.</td>
+          <td>A book resting on a table or a puck sliding at constant speed on ice.</td>
+        </tr>
+        <tr>
+          <td>Net Force</td>
+          <td>Sum of all forces acting on an object.</td>
+          <td>Friction, gravity, applied push or pull.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="quiz-container" aria-label="Newton's First Law Quiz">
+      <h2>Test Your Understanding</h2>
+      <div id="quiz"></div>
+      <button id="submitBtn" class="btn-submit" onclick="submitQuiz()">Submit Answers</button>
+      <div id="scoreDisplay" role="alert" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script>
+    const questions = [
+      {
+        q: "What does Newton's First Law describe?",
+        options: [
+          "The relationship between force and acceleration",
+          "An object's resistance to changes in motion",
+          "How objects attract each other",
+          "How velocity changes with time"
+        ],
+        correct: 1
+      },
+      {
+        q: "When is an object said to be in equilibrium?",
+        options: [
+          "When it is accelerating",
+          "When the net force on it is zero",
+          "When it is moving in a circle",
+          "When it is at rest only"
+        ],
+        correct: 1
+      },
+      {
+        q: "What is inertia?",
+        options: [
+          "The force that causes motion",
+          "The tendency to resist change in motion",
+          "The acceleration of an object",
+          "The speed of an object"
+        ],
+        correct: 1
+      },
+      {
+        q: "A book resting on a table is an example of:",
+        options: [
+          "Dynamic equilibrium",
+          "Acceleration",
+          "Static equilibrium",
+          "Inertia"
+        ],
+        correct: 2
+      },
+      {
+        q: "If a car suddenly stops, why do passengers lurch forward?",
+        options: [
+          "Because of friction",
+          "Because of acceleration",
+          "Because of inertia",
+          "Because of gravity"
+        ],
+        correct: 2
+      }
+    ];
+
+    let userAnswers = Array(questions.length).fill(null);
+
+    function renderQuiz() {
+      const quizDiv = document.getElementById("quiz");
+      questions.forEach((question, i) => {
+        const questionDiv = document.createElement("div");
+        questionDiv.className = "question";
+        questionDiv.setAttribute("role", "group");
+        questionDiv.setAttribute("aria-labelledby", `question-${i}-label`);
+
+        const questionTitle = document.createElement("h4");
+        questionTitle.id = `question-${i}-label`;
+        questionTitle.textContent = `Q${i+1}: ${question.q}`;
+        questionDiv.appendChild(questionTitle);
+
+        const optionsDiv = document.createElement("div");
+        optionsDiv.className = "options";
+
+        question.options.forEach((opt, j) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = opt;
+          btn.setAttribute("aria-pressed", "false");
+          btn.onclick = () => selectAnswer(i, j, btn);
+          optionsDiv.appendChild(btn);
+        });
+
+        questionDiv.appendChild(optionsDiv);
+
+        const feedback = document.createElement("div");
+        feedback.className = "feedback";
+        feedback.id = `feedback-${i}`;
+        questionDiv.appendChild(feedback);
+
+        quizDiv.appendChild(questionDiv);
+      });
+    }
+
+    function selectAnswer(qIndex, optionIndex, btn) {
+      userAnswers[qIndex] = optionIndex;
+      const buttons = btn.parentElement.querySelectorAll("button");
+      buttons.forEach(b => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
+      document.getElementById(`feedback-${qIndex}`).textContent = "";
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questions.forEach((question, i) => {
+        const feedbackDiv = document.getElementById(`feedback-${i}`);
+        const buttons = document.querySelectorAll(`#quiz .question:nth-child(${i+1}) .options button`);
+        if (userAnswers[i] === null) {
+          feedbackDiv.textContent = "Please select an answer.";
+          feedbackDiv.classList.add("incorrect");
+        } else if (userAnswers[i] === question.correct) {
+          score++;
+          feedbackDiv.textContent = "Correct!";
+          feedbackDiv.classList.remove("incorrect");
+          feedbackDiv.style.color = "#198754";
+          buttons.forEach((btn, idx) => {
+            if (idx === question.correct) btn.classList.add("correct");
+            else btn.classList.remove("correct");
+            btn.disabled = true;
+          });
+        } else {
+          feedbackDiv.textContent = `Incorrect. Correct answer: "${question.options[question.correct]}"`;
+          feedbackDiv.classList.add("incorrect");
+          buttons.forEach((btn, idx) => {
+            if (idx === question.correct) btn.classList.add("correct");
+            if (idx === userAnswers[i]) btn.classList.add("incorrect");
+            btn.disabled = true;
+          });
+        }
+      });
+
+      document.getElementById("submitBtn").disabled = true;
+      document.getElementById("scoreDisplay").textContent = `You scored ${score} out of ${questions.length}`;
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

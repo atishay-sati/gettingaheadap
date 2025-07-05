@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy Conservation with Rolling</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #005a9c;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 220px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .example {
+      background-color: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .example p {
+      margin-bottom: 0.8rem;
+    }
+    .example p:last-child {
+      margin-bottom: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      width: 90%;
+      background: #f8fafc;
+      font-size: 1.05rem;
+    }
+    th, td {
+      border: 1px solid #b6c6e3;
+      padding: 0.7rem 1rem;
+      text-align: center;
+    }
+    th {
+      background: #dbeafe;
+      color: #003049;
+    }
+    .simulation-container {
+      background: #f8fafc;
+      border: 2px solid #3b82f6;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-canvas {
+      border: 2px solid #1e3a8a;
+      border-radius: 10px;
+      background: white;
+      margin: 1rem auto;
+      display: block;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .control-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    .control-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .control-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-group .value-display {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .checkbox-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      text-align: left;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #374151;
+      cursor: pointer;
+    }
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    .energy-display {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+    }
+    .energy-display strong {
+      color: #1e40af;
+    }
+    .energy-bar {
+      width: 100%;
+      height: 20px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    .energy-bar-fill {
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+    .potential-fill {
+      background: linear-gradient(90deg, #10b981, #059669);
+    }
+    .kinetic-fill {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+    }
+    .rotational-fill {
+      background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="rolling-motion.html" class="back-link">← Back to Concepts</a>
+    <h1>Energy Conservation with Rolling</h1>
+    
+
+    <div class="formula-box">
+      <h3>Energy Conservation in Rolling Motion</h3>
+      $$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$$
+      <p><strong>Initial gravitational potential energy equals final translational plus rotational kinetic energy.</strong></p>
+    </div>
+
+    <p>
+      When an object rolls down an incline or up a ramp, energy is conserved (in the absence of friction). The gravitational potential energy is converted into both translational and rotational kinetic energy. The distribution between these two forms depends on the object's shape and moment of inertia.
+    </p>
+
+    <h2>Energy Distribution in Rolling</h2>
+    <p>
+      The total kinetic energy of a rolling object is split between:
+    </p>
+    <ul>
+      <li><strong>Translational Kinetic Energy:</strong> $K_{\text{trans}} = \frac{1}{2}mv^2$</li>
+      <li><strong>Rotational Kinetic Energy:</strong> $K_{\text{rot}} = \frac{1}{2}I\omega^2$</li>
+    </ul>
+
+    <p>
+      Using the rolling condition $v = \omega R$ and $I = kmR^2$, we can express the total kinetic energy as:
+    </p>
+
+    <div class="formula-box">
+      $$K_{\text{total}} = \frac{1}{2}mv^2 + \frac{1}{2}(kmR^2)\left(\frac{v}{R}\right)^2 = \frac{1}{2}mv^2(1 + k)$$
+    </div>
+
+    <h2>Interactive Simulation: Rolling Up a Ramp</h2>
+    <div class="simulation-container">
+      <p>Explore how energy is distributed between translational and rotational motion as an object rolls up a ramp.</p>
+      
+      <canvas id="rampCanvas" class="simulation-canvas" width="800" height="400"></canvas>
+      
+      <div class="controls">
+        <div class="control-group">
+          <label for="massSlider">Mass (1-10 kg):</label>
+          <input type="range" id="massSlider" min="1" max="10" step="0.1" value="5.0">
+          <div class="value-display">Current: <span id="massValue">5.0</span> kg</div>
+        </div>
+        
+        <div class="control-group">
+                  <label for="radiusSlider">Radius (0.5-1.25 m):</label>
+        <input type="range" id="radiusSlider" min="0.5" max="1.25" step="0.1" value="1.0">
+          <div class="value-display">Current: <span id="radiusValue">1.0</span> m</div>
+        </div>
+        
+        <div class="control-group">
+          <label for="initialVelocitySlider">Initial Angular Velocity (5-15 rad/s):</label>
+          <input type="range" id="initialVelocitySlider" min="5" max="15" step="0.5" value="10.0">
+                      <div class="value-display">Current: <span id="initialVelocityValue">10.0</span> rad/s</div>
+        </div>
+        
+
+        
+
+      </div>
+      
+      <div class="energy-display">
+        <strong>Energy Analysis:</strong><br>
+        Initial Kinetic Energy: <span id="initialEnergy">375.0</span> J<br>
+        Current Height: <span id="currentHeight">0.0</span> m<br>
+        Current Velocity: <span id="currentVelocity">10.0</span> m/s<br>
+        Angular Velocity: <span id="angularVelocity">10.0</span> rad/s<br>
+        <br>
+        <strong>Energy Distribution:</strong><br>
+        <div>Potential Energy: <span id="potentialEnergy">0.0</span> J</div>
+        <div class="energy-bar">
+          <div class="energy-bar-fill potential-fill" id="potentialBar" style="width: 0%"></div>
+        </div>
+        <div>Translational Kinetic: <span id="translationalEnergy">375.0</span> J</div>
+        <div class="energy-bar">
+          <div class="energy-bar-fill kinetic-fill" id="translationalBar" style="width: 100%"></div>
+        </div>
+        <div>Rotational Kinetic: <span id="rotationalEnergy">187.5</span> J</div>
+        <div class="energy-bar">
+          <div class="energy-bar-fill rotational-fill" id="rotationalBar" style="width: 50%"></div>
+        </div>
+        <small>Note: Shape factor k = 0.5 (solid cylinder)</small>
+      </div>
+    </div>
+
+    <h2>Energy Conservation Examples</h2>
+    
+    <h3>Example 1: Rolling Down an Incline</h3>
+    <div class="example">
+      <p>A solid sphere of mass $2\,\text{kg}$ and radius $0.1\,\text{m}$ starts from rest at a height of $3\,\text{m}$ and rolls down a frictionless incline. What is its speed at the bottom?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Initial energy: $E_i = mgh = 2 \times 9.8 \times 3 = 58.8\,\text{J}$</p>
+      <p>Final energy: $E_f = \frac{1}{2}mv^2(1 + k)$ where $k = 0.4$ for a solid sphere</p>
+      <p>Energy conservation: $58.8 = \frac{1}{2} \times 2 \times v^2 \times 1.4$</p>
+      <p>$v = \sqrt{\frac{58.8}{1.4}} = 6.48\,\text{m/s}$</p>
+    </div>
+
+    <h3>Example 2: Rolling Up a Ramp</h3>
+    <div class="example">
+      <p>A hollow cylinder with initial speed $8\,\text{m/s}$ rolls up a $30°$ incline. How high does it go before stopping?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Initial kinetic energy: $K_i = \frac{1}{2}mv^2(1 + k)$ where $k = 1.0$ for hollow cylinder</p>
+      <p>$K_i = \frac{1}{2}m(8^2)(2) = 64m\,\text{J}$</p>
+      <p>Final potential energy: $U_f = mgh$</p>
+      <p>Energy conservation: $64m = mgh$</p>
+      <p>$h = \frac{64}{9.8} = 6.53\,\text{m}$</p>
+    </div>
+
+    <h3>Example 3: Comparing Different Shapes</h3>
+    <div class="example">
+      <p>Three objects with the same mass and radius roll down the same incline: a solid sphere, solid cylinder, and hollow cylinder. Which reaches the bottom first?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Solid sphere: $k = 0.4$, energy factor = 1.4</p>
+      <p>Solid cylinder: $k = 0.5$, energy factor = 1.5</p>
+      <p>Hollow cylinder: $k = 1.0$, energy factor = 2.0</p>
+      <p><strong>Answer:</strong> The solid sphere reaches the bottom first because it has the lowest moment of inertia and thus the most translational kinetic energy.</p>
+    </div>
+
+    
+
+    <h2>Effect of Friction</h2>
+<p>
+  Friction plays a crucial role in rolling motion. When there is enough friction, an object can roll without slipping. In this case, friction allows some of the object's energy to be converted into rotational kinetic energy as it moves. This rotational energy can then be transformed back into translational kinetic energy, helping the object reach higher points on an incline or ramp than it would if it were simply sliding without friction.
+</p>
+<ul>
+  <li><strong>Rolling Without Slipping:</strong> Friction enables the object to roll, allowing energy to transfer between translation and rotation. This can help the object reach higher heights, as rotational energy can be converted back to translational energy as it climbs.</li>
+  <li><strong>No Friction (Sliding):</strong> If there is no friction, the object slides without rotating. All the energy remains as translational kinetic energy, and the object cannot convert rotational energy back to help it climb higher.</li>
+  <li><strong>Energy Dissipation:</strong> If friction is too high (kinetic friction or energy loss), some energy is converted to heat, and the object will reach a lower height.</li>
+</ul>
+
+    <h2>Energy Distribution by Shape</h2>
+    <table>
+      <tr>
+        <th>Shape</th>
+        <th>k Value</th>
+        <th>Energy Factor (1+k)</th>
+        <th>% Translational</th>
+        <th>% Rotational</th>
+      </tr>
+      <tr>
+        <td>Solid Sphere</td>
+        <td>0.4</td>
+        <td>1.4</td>
+        <td>71.4%</td>
+        <td>28.6%</td>
+      </tr>
+      <tr>
+        <td>Solid Cylinder</td>
+        <td>0.5</td>
+        <td>1.5</td>
+        <td>66.7%</td>
+        <td>33.3%</td>
+      </tr>
+      <tr>
+        <td>Hollow Cylinder</td>
+        <td>1.0</td>
+        <td>2.0</td>
+        <td>50.0%</td>
+        <td>50.0%</td>
+      </tr>
+      <tr>
+        <td>Thin Ring</td>
+        <td>1.0</td>
+        <td>2.0</td>
+        <td>50.0%</td>
+        <td>50.0%</td>
+      </tr>
+    </table>
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li><b>Automotive Engineering:</b> Understanding energy distribution in vehicle dynamics</li>
+      <li><b>Sports Equipment:</b> Ball design affects rolling behavior and energy efficiency</li>
+      <li><b>Industrial Machinery:</b> Optimizing rolling systems for energy efficiency</li>
+      <li><b>Transportation:</b> Wheel design affects fuel efficiency and performance</li>
+      <li><b>Physics Experiments:</b> Studying energy conservation in rolling systems</li>
+    </ul>
+
+    <img src="rolling-manufacturing.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Advanced Concepts</h2>
+    <h3>Energy Loss Mechanisms</h3>
+    <p>
+      Even in "frictionless" rolling, there are energy losses:
+    </p>
+    <ul>
+      <li><strong>Air Resistance:</strong> Affects high-speed rolling objects</li>
+      <li><strong>Deformation:</strong> Object and surface deform slightly</li>
+      <li><strong>Internal Friction:</strong> Within the rolling object</li>
+      <li><strong>Sound:</strong> Energy converted to acoustic waves</li>
+    </ul>
+
+    <h3>Non-Conservative Forces</h3>
+    <p>
+      When friction is present, mechanical energy is not conserved:
+    </p>
+    <div class="formula-box">
+      $$E_{\text{final}} = E_{\text{initial}} - W_{\text{friction}}$$
+    </div>
+
+    <h2>Summary / Takeaways</h2>
+    <ul>
+      <li>Energy conservation in rolling: $mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$</li>
+      <li>Total kinetic energy: $K_{\text{total}} = \frac{1}{2}mv^2(1 + k)$</li>
+      <li>Shape affects energy distribution between translation and rotation</li>
+      <li>Objects with lower moment of inertia (smaller k) roll faster</li>
+      <li>Friction reduces the maximum height an object can reach</li>
+      <li>Understanding energy distribution is crucial for engineering applications</li>
+    </ul>
+  </div>
+
+  <script>
+    // Simple Quarter-Ellipse Ramp Simulation
+    class RampSimulation {
+      constructor() {
+        this.canvas = document.getElementById('rampCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        
+        // Ramp parameters - higher exponential ramp
+        this.rampWidth = 300;
+        this.rampHeight = 250;
+        this.rampX = this.canvas.width / 2 - this.rampWidth / 2;
+        this.rampY = this.canvas.height - 50;
+        
+        // Object properties
+        this.mass = 5.0;
+        this.radius = 1.0;
+        this.initialAngularVelocity = 10.0;
+        
+        // Simulation state
+        this.x = this.rampX - 100; // Start on flat ground before ramp
+        this.velocity = this.initialAngularVelocity * this.radius;
+        this.angularVelocity = this.initialAngularVelocity;
+        this.angle = 0;
+        this.time = 0;
+        this.initialEnergy = 0;
+        
+        this.initializeControls();
+        this.calculateInitialEnergy();
+        this.startAnimation();
+      }
+      
+      initializeControls() {
+        const massSlider = document.getElementById('massSlider');
+        const radiusSlider = document.getElementById('radiusSlider');
+        const initialAngularVelocitySlider = document.getElementById('initialVelocitySlider');
+        
+        massSlider.addEventListener('input', (e) => {
+          this.mass = parseFloat(e.target.value);
+          document.getElementById('massValue').textContent = this.mass.toFixed(1);
+          this.calculateInitialEnergy();
+          this.resetSimulation();
+        });
+        
+        radiusSlider.addEventListener('input', (e) => {
+          this.radius = parseFloat(e.target.value);
+          document.getElementById('radiusValue').textContent = this.radius.toFixed(1);
+          this.calculateInitialEnergy();
+          this.resetSimulation();
+        });
+        
+        initialAngularVelocitySlider.addEventListener('input', (e) => {
+          this.initialAngularVelocity = parseFloat(e.target.value);
+          document.getElementById('initialVelocityValue').textContent = this.initialAngularVelocity.toFixed(1);
+          this.calculateInitialEnergy();
+          this.resetSimulation();
+        });
+        
+
+        
+        this.calculateInitialEnergy();
+      }
+      
+      calculateInitialEnergy() {
+        const k = 0.5; // Solid cylinder
+        const initialVelocity = this.initialAngularVelocity * this.radius;
+        this.initialEnergy = 0.5 * this.mass * initialVelocity * initialVelocity * (1 + k);
+        document.getElementById('initialEnergy').textContent = this.initialEnergy.toFixed(1);
+      }
+      
+      resetSimulation() {
+        this.x = this.rampX - 100; // Start on flat ground before ramp
+        this.velocity = this.initialAngularVelocity * this.radius;
+        this.angularVelocity = this.initialAngularVelocity;
+        this.angle = 0;
+        this.time = 0;
+      }
+      
+      getRampY(x) {
+        // Calculate y position on the exponential ramp
+        const relativeX = x - this.rampX;
+        const normalizedX = relativeX / this.rampWidth;
+        if (normalizedX < 0) return this.rampY; // Flat ground before ramp
+        if (normalizedX > 1) return this.rampY; // Flat ground after ramp
+        
+        return this.rampY - this.rampHeight * Math.pow(normalizedX, 2); // Exponential curve
+      }
+      
+      getCurrentHeight() {
+        const rampY = this.getRampY(this.x);
+        return this.rampY - rampY; // Height is still ground level minus current Y
+      }
+      
+      updateEnergy() {
+        const g = 9.8;
+        const k = 0.5; // Solid cylinder
+        
+        const currentHeight = this.getCurrentHeight();
+        
+        // Calculate energies
+        const potentialEnergy = this.mass * g * currentHeight;
+        const translationalEnergy = 0.5 * this.mass * this.velocity * this.velocity;
+        const rotationalEnergy = 0.5 * (k * this.mass * this.radius * this.radius) * this.angularVelocity * this.angularVelocity;
+        
+        // Update displays
+        document.getElementById('currentHeight').textContent = currentHeight.toFixed(2);
+        document.getElementById('currentVelocity').textContent = this.velocity.toFixed(2);
+        document.getElementById('angularVelocity').textContent = this.angularVelocity.toFixed(2);
+        document.getElementById('potentialEnergy').textContent = potentialEnergy.toFixed(1);
+        document.getElementById('translationalEnergy').textContent = translationalEnergy.toFixed(1);
+        document.getElementById('rotationalEnergy').textContent = rotationalEnergy.toFixed(1);
+        
+        // Update energy bars
+        const totalEnergy = this.initialEnergy;
+        const potentialPercent = Math.min(100, (potentialEnergy / totalEnergy) * 100);
+        const translationalPercent = Math.min(100, (translationalEnergy / totalEnergy) * 100);
+        const rotationalPercent = Math.min(100, (rotationalEnergy / totalEnergy) * 100);
+        
+        document.getElementById('potentialBar').style.width = `${potentialPercent}%`;
+        document.getElementById('translationalBar').style.width = `${translationalPercent}%`;
+        document.getElementById('rotationalBar').style.width = `${rotationalPercent}%`;
+      }
+      
+      drawRamp() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw the exponential ramp
+        this.ctx.strokeStyle = '#666';
+        this.ctx.lineWidth = 4;
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.rampX, this.rampY);
+        for (let i = 0; i <= 100; i++) {
+          const x = this.rampX + (i / 100) * this.rampWidth;
+          const y = this.rampY - this.rampHeight * Math.pow(i / 100, 2);
+          if (i === 0) {
+            this.ctx.moveTo(x, y);
+          } else {
+            this.ctx.lineTo(x, y);
+          }
+        }
+        this.ctx.stroke();
+        
+        // Draw ground
+        this.ctx.strokeStyle = '#333';
+        this.ctx.lineWidth = 3;
+        this.ctx.beginPath();
+        this.ctx.moveTo(0, this.rampY);
+        this.ctx.lineTo(this.canvas.width, this.rampY);
+        this.ctx.stroke();
+        
+        // Adaptive scale factor
+        const maxRadius = Math.min(this.canvas.width / 8, this.canvas.height / 6);
+        const scale = Math.min(20, maxRadius / this.radius);
+        const pixelRadius = this.radius * scale;
+        
+        // Get object position on ramp (shifted up by radius)
+        const objectY = this.getRampY(this.x) - pixelRadius;
+        
+        // Draw rolling object
+        this.ctx.fillStyle = '#fb8500';
+        this.ctx.beginPath();
+        this.ctx.arc(this.x, objectY, pixelRadius, 0, 2 * Math.PI);
+        this.ctx.fill();
+        this.ctx.strokeStyle = '#023047';
+        this.ctx.lineWidth = 2;
+        this.ctx.stroke();
+        
+        // Draw spokes
+        const numSpokes = 8;
+        for (let i = 0; i < numSpokes; i++) {
+          const spokeAngle = this.angle + (i * 2 * Math.PI / numSpokes);
+          const endX = this.x + (pixelRadius - 3) * Math.cos(spokeAngle);
+          const endY = objectY + (pixelRadius - 3) * Math.sin(spokeAngle);
+          
+          this.ctx.beginPath();
+          this.ctx.moveTo(this.x, objectY);
+          this.ctx.lineTo(endX, endY);
+          this.ctx.strokeStyle = '#ffffff';
+          this.ctx.lineWidth = 1;
+          this.ctx.stroke();
+        }
+        
+        // Draw curved angular velocity arrow (only when rotating)
+        if (Math.abs(this.angularVelocity) > 0.1) {
+          const arrowRadius = pixelRadius + 15;
+          const arrowLength = this.angularVelocity * 2;
+          const startAngle = 0;
+          const endAngle = Math.min(arrowLength, Math.PI/2);
+          
+          this.ctx.strokeStyle = '#dc2626';
+          this.ctx.lineWidth = 3;
+          this.ctx.beginPath();
+          this.ctx.arc(this.x, objectY, arrowRadius, startAngle, endAngle, false);
+          this.ctx.stroke();
+          
+          // Arrow head
+          const headX = this.x + arrowRadius * Math.cos(endAngle);
+          const headY = objectY + arrowRadius * Math.sin(endAngle);
+          const tangentX = -arrowRadius * Math.sin(endAngle);
+          const tangentY = arrowRadius * Math.cos(endAngle);
+          const headLength = 8;
+          
+          this.ctx.beginPath();
+          this.ctx.moveTo(headX, headY);
+          this.ctx.lineTo(headX - headLength * tangentX / arrowRadius - 3 * tangentY / arrowRadius, 
+                         headY - headLength * tangentY / arrowRadius + 3 * tangentX / arrowRadius);
+          this.ctx.moveTo(headX, headY);
+          this.ctx.lineTo(headX - headLength * tangentX / arrowRadius + 3 * tangentY / arrowRadius, 
+                         headY - headLength * tangentY / arrowRadius - 3 * tangentX / arrowRadius);
+          this.ctx.stroke();
+          
+          // Labels
+          this.ctx.fillStyle = '#dc2626';
+          this.ctx.font = 'bold 12px Arial';
+          this.ctx.textAlign = 'center';
+          this.ctx.fillText(`ω = ${this.angularVelocity.toFixed(1)} rad/s`, this.x + arrowRadius + 10, objectY - 10);
+        }
+        
+        this.ctx.fillStyle = '#023047';
+        this.ctx.fillText(`h = ${this.getCurrentHeight().toFixed(1)} m`, this.x, objectY - pixelRadius - 10);
+        
+
+      }
+      
+      animate() {
+        const g = 9.8;
+        const dt = 0.05;
+        
+        // Calculate slope at current position
+        const relativeX = this.x - this.rampX;
+        const normalizedX = relativeX / this.rampWidth;
+        const angle = normalizedX * Math.PI / 2;
+        
+        // Calculate slope angle (derivative of exponential function)
+        const slopeAngle = Math.atan(2 * this.rampHeight * normalizedX / this.rampWidth);
+        
+        // Calculate acceleration based on slope
+        const acceleration = -g * Math.sin(slopeAngle);
+        
+        // Update velocity (no general friction applied to translation)
+        this.velocity += acceleration * dt;
+        
+        // Ball always rolls (rolling without slipping)
+        this.angularVelocity = this.velocity / this.radius;
+        
+        // Ensure velocity doesn't go negative
+        if (this.velocity < 0) {
+          this.velocity = 0;
+          this.angularVelocity = 0; // Stop rotation when velocity stops
+        }
+        
+
+        
+        // Update position
+        this.x += this.velocity * dt * 8; // Scale for visualization (slower)
+        
+        // Update angle for spokes
+        this.angle += this.angularVelocity * dt;
+        
+        // Reset if object goes off the ramp
+        if (this.x > this.rampX + this.rampWidth + 50 || 
+            this.x < this.rampX - 150 || 
+            (this.velocity <= 0.1 && this.x < this.rampX)) {
+          this.resetSimulation();
+        }
+        
+        this.drawRamp();
+        this.updateEnergy();
+        this.time += dt;
+        requestAnimationFrame(() => this.animate());
+      }
+      
+      startAnimation() {
+        this.animate();
+      }
+    }
+    
+    // Initialize simulation when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      new RampSimulation();
+    });
+  </script>
+</body>
+</html> 

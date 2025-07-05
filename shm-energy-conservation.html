@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy Conservation in SHM</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+    }
+    .image-placeholder, figcaption {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Energy Conservation in Simple Harmonic Motion (SHM)</h1>
+
+    <p>In any ideal system undergoing Simple Harmonic Motion, the <strong>total mechanical energy</strong> remains constant. This energy shifts between kinetic and potential forms, but the sum of both stays the same at every instant in time.</p>
+
+    <h2>Total Mechanical Energy</h2>
+    <p>The total energy in SHM is the sum of the potential energy stored in the spring and the kinetic energy of the mass:</p>
+
+    <div class="formula-box">
+      \( E = \frac{1}{2}kA^2 = \text{constant} \)
+    </div>
+
+    <p>Here:</p>
+    <ul>
+      <li>\( E \) is the total mechanical energy</li>
+      <li>\( k \) is the spring constant</li>
+      <li>\( A \) is the amplitude of oscillation</li>
+    </ul>
+
+    <h2>Why Is Energy Conserved?</h2>
+    <p>
+      In an ideal SHM system, there is no friction, air resistance, or energy loss to heat. That means energy simply transforms between kinetic (due to motion) and potential (due to compression/stretching of the spring), but the total amount stays the same.
+    </p>
+
+    <div class="image-placeholder">[Insert Energy Bar Diagram: KE vs PE at various positions]</div>
+    <figcaption>Figure: At different points during motion, energy shifts between kinetic and potential forms.</figcaption>
+
+    <h2>Breakdown Over a Cycle</h2>
+    <ul>
+      <li><strong>At maximum displacement</strong> (\( x = \pm A \)): All energy is stored as spring potential energy.</li>
+      <li><strong>At equilibrium</strong> (\( x = 0 \)): All energy is in the form of kinetic energy (mass moves fastest).</li>
+      <li><strong>In between</strong>: The system has both KE and PE, but their sum is constant.</li>
+    </ul>
+
+    <h2>Pendulum Case</h2>
+    <p>
+      For a simple pendulum of length \( L \) and mass \( m \), energy conservation also applies. The total energy remains constant and is exchanged between kinetic energy and gravitational potential energy:
+    </p>
+    <img src="pendulumenergy.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+    <div class="formula-box">
+      \( E = K + U = \frac{1}{2}mv^2 + mgL(1 - \cos\theta) \)
+    </div>
+    <p>
+      Where:
+    </p>
+    <ul>
+      <li>\( v \) is the speed of the pendulum bob</li>
+      <li>\( \theta \) is the angular displacement from the vertical</li>
+      <li>\( L \) is the length of the pendulum</li>
+    </ul>
+    <p>
+      At the highest point, the pendulum has maximum potential energy and zero kinetic energy. At the lowest point, all energy is kinetic.
+    </p>
+
+    <h2>Deriving the Pendulum Energy Formula</h2>
+    <p>
+      The height \( h \) of the pendulum bob above its lowest point at angle \( \theta \) is given by:
+    </p>
+    <div class="formula-box">
+      \( h = L(1 - \cos\theta) \)
+    </div>
+    <p>
+      Using this, the gravitational potential energy is:
+    </p>
+    <div class="formula-box">
+      \( U = mgh = mgL(1 - \cos\theta) \)
+    </div>
+    <p>
+      The kinetic energy, as usual, is:
+    </p>
+    <div class="formula-box">
+      \( K = \frac{1}{2}mv^2 \)
+    </div>
+    <p>
+      So the total energy at any position is:
+    </p>
+    <div class="formula-box">
+      \( E = K + U = \frac{1}{2}mv^2 + mgL(1 - \cos\theta) \)
+    </div>
+
+    <h2>Graphical Representation</h2>
+    <p>
+      A plot of energy over time shows oscillation between kinetic and potential energy, while total energy remains flat and constant:
+    </p>
+
+    <div class="image-placeholder">[Insert Energy vs. Time Graph]</div>
+    <figcaption>Figure: KE and PE oscillate in SHM. Their sum, total energy, remains constant.</figcaption>
+
+    <h2>Key Takeaway</h2>
+    <p>
+      Energy conservation is a hallmark of SHM. It allows us to analyze motion using energy principles, even without solving differential equations.
+    </p>
+  </div>
+</body>
+</html>

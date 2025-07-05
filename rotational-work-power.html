@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work and Power in Rotation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #005a9c;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 220px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .example {
+      background-color: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .example p {
+      margin-bottom: 0.8rem;
+    }
+    .example p:last-child {
+      margin-bottom: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      width: 90%;
+      background: #f8fafc;
+      font-size: 1.05rem;
+    }
+    th, td {
+      border: 1px solid #b6c6e3;
+      padding: 0.7rem 1rem;
+      text-align: center;
+    }
+    th {
+      background: #dbeafe;
+      color: #003049;
+    }
+    .simulation-container {
+      background: #f8fafc;
+      border: 2px solid #3b82f6;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-canvas {
+      border: 2px solid #1e3a8a;
+      border-radius: 10px;
+      background: white;
+      margin: 1rem auto;
+      display: block;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .control-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    .control-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .control-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-group .value-display {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .energy-display {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+    }
+    .energy-display strong {
+      color: #1e40af;
+    }
+    #impulseOutput, #angularMomentumDisplay {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    #barContainer {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    #impulseBarBackground {
+      width: 100%;
+      height: 30px;
+      background: #e5e7eb;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    #impulseBar {
+      height: 100%;
+      width: 0%;
+      background: #fb8500;
+      transition: width 0.3s ease;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Work and Power in Rotation</h1>
+    
+
+    <p>
+      Just as forces do work in linear motion, <strong>torques do work in rotational motion</strong>. When a torque acts through an angular displacement, it transfers energy to the rotating object. The rate at which this work is done is the rotational power.
+    </p>
+
+    <h2>Work Done by Torque</h2>
+    <div class="formula-box">
+      $$W = \tau \Delta \theta$$
+    </div>
+
+    <ul>
+      <li><strong>$W$</strong>: Work done by torque (Joules, J)</li>
+      <li><strong>$\tau$</strong>: Torque (Newton-meters, N·m)</li>
+      <li><strong>$\Delta \theta$</strong>: Angular displacement (radians, rad)</li>
+    </ul>
+
+    
+
+    <h2>Power from Torque</h2>
+    <div class="formula-box">
+      $$P = \tau \omega$$
+    </div>
+
+    <ul>
+      <li><strong>$P$</strong>: Rotational power (Watts, W)</li>
+      <li><strong>$\tau$</strong>: Torque (Newton-meters, N·m)</li>
+      <li><strong>$\omega$</strong>: Angular velocity (radians per second, rad/s)</li>
+    </ul>
+
+    <img src="engine-torque.gif" alt = "engine torque"  class="img-fluid-center">
+
+    <h2>Calculus-Based Definitions</h2>
+    <p>
+      When torque is not constant, we use calculus to find the total work done and instantaneous power in rotational motion.
+    </p>
+    <div class="formula-box">
+      $$ W = \int_{\theta_i}^{\theta_f} \tau(\theta) \, d\theta $$
+    </div>
+    <p>
+      This sums up the small amounts of work done by torque over each tiny angular displacement.
+    </p>
+    <div class="formula-box">
+      $$ P(t) = \frac{dW}{dt} = \tau(t) \omega(t) $$
+    </div>
+    <p>
+      Instantaneous power is the product of torque and angular velocity at each moment.
+    </p>
+    <ul>
+      <li>For variable torque, work is the <b>area under the torque vs. angle graph</b>.</li>
+      <li>For variable torque or angular velocity, power can change with time.</li>
+    </ul>
+
+    <h2>Physical Meaning</h2>
+    <p>
+      <strong>Work:</strong> When you apply a torque (like turning a wrench), you do work equal to the torque times the angle through which you turn. This work can increase the rotational kinetic energy of the object.
+    </p>
+    <p>
+      <strong>Power:</strong> The rate at which work is done. A motor that applies a constant torque while rotating at a constant angular velocity delivers constant power.
+    </p>
+
+    <h2>Compare: Linear vs. Rotational Work and Power</h2>
+    <table>
+      <tr>
+        <th>Linear</th>
+        <th>Rotational</th>
+      </tr>
+      <tr>
+        <td>Work: $W = F \Delta x$</td>
+        <td>Work: $W = \tau \Delta \theta$</td>
+      </tr>
+      <tr>
+        <td>Power: $P = Fv$</td>
+        <td>Power: $P = \tau \omega$</td>
+      </tr>
+      <tr>
+        <td>Force ($F$)</td>
+        <td>Torque ($\tau$)</td>
+      </tr>
+      <tr>
+        <td>Displacement ($\Delta x$)</td>
+        <td>Angular displacement ($\Delta \theta$)</td>
+      </tr>
+      <tr>
+        <td>Velocity ($v$)</td>
+        <td>Angular velocity ($\omega$)</td>
+      </tr>
+    </table>
+
+    <h2>Interactive Simulation: Rotational Impulse and Angular Momentum</h2>
+    <div class="simulation-container">
+      <p>Explore how torque impulse affects angular momentum and angular velocity.</p>
+      
+      <div class="controls">
+        <div class="control-group">
+          <label>Moment of Inertia (kg·m²): <span id="inertiaLabel">5.0</span></label>
+          <input type="range" id="inertiaSlider" min="1" max="20" step="0.1" value="5" />
+        </div>
+        <div class="control-group">
+          <label>Initial Angular Velocity (rad/s): <span id="angularVelocityLabel">2.0</span></label>
+          <input type="range" id="angularVelocitySlider" min="-5" max="5" step="0.1" value="2" />
+        </div>
+        <div class="control-group">
+          <label>Impulse Torque (N·m): <span id="torqueLabel">0</span></label>
+          <input type="range" id="torqueSlider" min="-20" max="20" step="0.5" value="0" />
+        </div>
+        <div class="control-group">
+          <label>Impulse Duration (s): <span id="durationLabel">1.0</span></label>
+          <input type="range" id="durationSlider" min="0.1" max="3" step="0.1" value="1" />
+        </div>
+      </div>
+
+      <div id="impulseOutput">Angular Impulse: 0 N·m·s</div>
+      <div id="angularMomentumDisplay">Angular Momentum: 10.0 kg·m²/s</div>
+
+      <!-- Simulation canvas -->
+      <canvas id="rotationalCanvas" width="700" height="150"></canvas>
+
+      <!-- Angular Momentum vs Time graph -->
+      <canvas id="momentumGraph" width="700" height="150"></canvas>
+
+      <div id="barContainer">
+        <strong>Angular Impulse Bar:</strong>
+        <div id="impulseBarBackground">
+          <div id="impulseBar"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Example 1: Work Done by a Wrench</h2>
+    <div class="example">
+      <p>A mechanic applies a torque of $25\,\text{N} \cdot \text{m}$ to tighten a bolt, rotating it through $0.5\,\text{rad}$. How much work is done?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>$W = \tau \Delta \theta = 25 \times 0.5 = 12.5\,\text{J}$</p>
+      <p>The mechanic does 12.5 Joules of work to tighten the bolt.</p>
+    </div>
+
+    <h3>Example 2: Motor Power</h3>
+    <div class="example">
+      <p>An electric motor applies a constant torque of $15\,\text{N} \cdot \text{m}$ while rotating at $120\,\text{rad/s}$. What is the motor's power output?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>$P = \tau \omega = 15 \times 120 = 1800\,\text{W} = 1.8\,\text{kW}$</p>
+      <p>The motor delivers 1.8 kilowatts of power.</p>
+    </div>
+
+    <h3>Example 3: Variable Torque</h3>
+    <div class="example">
+      <p>A wind turbine blade experiences a torque that varies with time: $\tau(t) = 50t\,\text{N} \cdot \text{m}$ for $0 \leq t \leq 10\,\text{s}$. If it rotates at constant $\omega = 2\,\text{rad/s}$, what is the average power over 10 seconds?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Average torque: $\tau_{\text{avg}} = \frac{1}{10} \int_0^{10} 50t \, dt = \frac{1}{10} \times 2500 = 250\,\text{N} \cdot \text{m}$</p>
+      <p>Average power: $P_{\text{avg}} = \tau_{\text{avg}} \omega = 250 \times 2 = 500\,\text{W}$</p>
+    </div>
+
+    <img src="wind-turbine.jpg" alt = "wind turbine"  class="img-fluid-center">
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li><b>Electric Motors:</b> Convert electrical energy to rotational work and power.</li>
+      <li><b>Wind Turbines:</b> Extract work from wind to generate electrical power.</li>
+      <li><b>Automotive Engines:</b> Produce torque and power to drive vehicles.</li>
+      <li><b>Power Tools:</b> Drills, saws, and grinders use rotational work and power.</li>
+      <li><b>Industrial Machinery:</b> Conveyors, pumps, and compressors rely on rotational power.</li>
+    </ul>
+
+    <img src="common-applications.gif" alt = "common applications"  class="img-fluid-center">
+
+    <h2>Energy Conservation</h2>
+    <p>
+      The work-energy theorem applies to rotation: <strong>the net work done by torques equals the change in rotational kinetic energy</strong>.
+    </p>
+    <div class="formula-box">
+      $$W_{\text{net}} = \Delta K_{\text{rot}} = \frac{1}{2}I\omega_f^2 - \frac{1}{2}I\omega_i^2$$
+    </div>
+
+    <p>We will go into more detail about energy conservation in the next concept.</p>
+
+    <h2>Summary / Takeaways</h2>
+    <ul>
+      <li>Torque does work when it acts through an angular displacement: $W = \tau \Delta \theta$</li>
+      <li>Rotational power is the rate of doing work: $P = \tau \omega$</li>
+      <li>These formulas are the rotational analogs of linear work ($W = F \Delta x$) and power ($P = Fv$)</li>
+      <li>Work can change rotational kinetic energy according to the work-energy theorem</li>
+      <li>Understanding rotational work and power is crucial for engineering applications like motors, turbines, and machinery</li>
+    </ul>
+  </div>
+
+  <script>
+    // Rotational Impulse and Angular Momentum Simulation
+    const inertiaSlider = document.getElementById('inertiaSlider');
+    const angularVelocitySlider = document.getElementById('angularVelocitySlider');
+    const torqueSlider = document.getElementById('torqueSlider');
+    const durationSlider = document.getElementById('durationSlider');
+
+    const inertiaLabel = document.getElementById('inertiaLabel');
+    const angularVelocityLabel = document.getElementById('angularVelocityLabel');
+    const torqueLabel = document.getElementById('torqueLabel');
+    const durationLabel = document.getElementById('durationLabel');
+
+    const impulseOutput = document.getElementById('impulseOutput');
+    const angularMomentumDisplay = document.getElementById('angularMomentumDisplay');
+    const impulseBar = document.getElementById('impulseBar');
+
+    const rotationalCanvas = document.getElementById('rotationalCanvas');
+    const ctx = rotationalCanvas.getContext('2d');
+
+    const momentumGraphCanvas = document.getElementById('momentumGraph');
+    const graphCtx = momentumGraphCanvas.getContext('2d');
+
+    let inertia = parseFloat(inertiaSlider.value);
+    let angularVelocity = parseFloat(angularVelocitySlider.value);
+    let torque = parseFloat(torqueSlider.value);
+    let duration = parseFloat(durationSlider.value);
+
+    // Angular Impulse = Torque * Duration
+    let angularImpulse = torque * duration;
+
+    // Angular momentum changes according to angular impulse-angular momentum theorem:
+    // final angular momentum = initial angular momentum + angular impulse
+
+    // History for momentum graph
+    let angularImpulseHistory = [];
+    let angularMomentumHistory = [];
+
+    // Simulation parameters
+    let time = 0;
+    let dt = 0.05; // time step in seconds
+
+    // Rotating object position for visualization
+    let angle = 0;
+    let posX = 50;
+    let posY = rotationalCanvas.height / 2;
+
+    // Initialize angular velocity and momentum
+    let currentAngularVelocity = angularVelocity;
+    let initialAngularMomentum = inertia * angularVelocity;
+    let currentAngularMomentum = initialAngularMomentum;
+
+    function updateValues() {
+      inertia = parseFloat(inertiaSlider.value);
+      angularVelocity = parseFloat(angularVelocitySlider.value);
+      torque = parseFloat(torqueSlider.value);
+      duration = parseFloat(durationSlider.value);
+
+      inertiaLabel.textContent = inertia.toFixed(1);
+      angularVelocityLabel.textContent = angularVelocity.toFixed(1);
+      torqueLabel.textContent = torque.toFixed(1);
+      durationLabel.textContent = duration.toFixed(1);
+
+      angularImpulse = torque * duration;
+      impulseOutput.textContent = `Angular Impulse: ${angularImpulse.toFixed(2)} N·m·s`;
+
+      // Reset simulation values on input change
+      time = 0;
+      angle = 0;
+      posX = 50;
+      currentAngularVelocity = angularVelocity;
+      initialAngularMomentum = inertia * angularVelocity;
+      currentAngularMomentum = initialAngularMomentum;
+      angularImpulseHistory = [];
+      angularMomentumHistory = [];
+    }
+
+    function drawRotatingObject() {
+      ctx.clearRect(0, 0, rotationalCanvas.width, rotationalCanvas.height);
+
+      // Draw track line (within canvas bounds)
+      ctx.strokeStyle = '#ddd';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(20, posY + 15);
+      ctx.lineTo(rotationalCanvas.width - 20, posY + 15);
+      ctx.stroke();
+
+      // Draw rotating object (wheel with spokes)
+      const size = 20 + inertia * 1.5;
+      const centerX = posX;
+      const centerY = posY;
+
+      // Draw wheel
+      ctx.fillStyle = '#fb8500';
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, size/2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#023047';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Draw spokes (8 spokes)
+      const numSpokes = 8;
+      for (let i = 0; i < numSpokes; i++) {
+        const spokeAngle = angle + (i * 2 * Math.PI / numSpokes);
+        const endX = centerX + (size/2 - 2) * Math.cos(spokeAngle);
+        const endY = centerY + (size/2 - 2) * Math.sin(spokeAngle);
+        
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(endX, endY);
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      // Draw angular velocity curved arrow
+      const arrowRadius = size/2 + 15;
+      const arrowAngle = currentAngularVelocity >= 0 ? 3*Math.PI : 5*Math.PI/4; // Start angle in 3rd quadrant (bottom-left)
+      const arcLength = Math.min(Math.abs(currentAngularVelocity) * 0.5, Math.PI/2); // Arc length based on angular velocity
+      
+      ctx.strokeStyle = '#023047';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, arrowRadius, arrowAngle, arrowAngle + arcLength, currentAngularVelocity < 0);
+      ctx.stroke();
+
+      // Arrow head at the end of the arc
+      const endAngle = arrowAngle + arcLength;
+      const arrowHeadX = centerX + arrowRadius * Math.cos(endAngle);
+      const arrowHeadY = centerY + arrowRadius * Math.sin(endAngle);
+      
+      // Calculate tangent direction for arrow head
+      const tangentAngle = endAngle + (currentAngularVelocity >= 0 ? Math.PI/2 : -Math.PI/2);
+      const arrowHeadLength = 8;
+      
+      ctx.beginPath();
+      ctx.moveTo(arrowHeadX, arrowHeadY);
+      ctx.lineTo(arrowHeadX - arrowHeadLength * Math.cos(tangentAngle - 0.3), 
+                 arrowHeadY - arrowHeadLength * Math.sin(tangentAngle - 0.3));
+      ctx.moveTo(arrowHeadX, arrowHeadY);
+      ctx.lineTo(arrowHeadX - arrowHeadLength * Math.cos(tangentAngle + 0.3), 
+                 arrowHeadY - arrowHeadLength * Math.sin(tangentAngle + 0.3));
+      ctx.stroke();
+
+      // Draw labels
+      ctx.fillStyle = '#023047';
+      ctx.font = 'bold 12px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(`I = ${inertia} kg·m²`, centerX, centerY + size/2 + 20);
+      
+      // Position angular velocity label near the curved arrow
+      const labelAngle = arrowAngle + arcLength/2;
+      const labelRadius = arrowRadius + 20;
+      const labelX = centerX + labelRadius * Math.cos(labelAngle);
+      const labelY = centerY + labelRadius * Math.sin(labelAngle)-10;
+      ctx.fillText(`ω = ${currentAngularVelocity.toFixed(1)} rad/s`, labelX, labelY);
+    }
+
+    function drawMomentumGraph() {
+      graphCtx.clearRect(0, 0, momentumGraphCanvas.width, momentumGraphCanvas.height);
+
+      // Axis settings
+      const leftPadding = 40;
+      const bottomPadding = 30;
+      const topPadding = 20;
+      const graphHeight = momentumGraphCanvas.height - topPadding - bottomPadding;
+      const graphWidth = momentumGraphCanvas.width - leftPadding - 20;
+
+      // Calculate max absolute momentum for y-scaling
+      const maxAbsMomentum = Math.max(...angularMomentumHistory.map(p => Math.abs(p))) * 1.2 || 50;
+
+      // Y origin for 0 momentum (middle if we have both neg and pos)
+      const yZero = topPadding + graphHeight / 2;
+
+      // Draw axes
+      graphCtx.strokeStyle = '#888';
+      graphCtx.lineWidth = 1;
+      graphCtx.beginPath();
+      // x-axis at yZero
+      graphCtx.moveTo(leftPadding, yZero);
+      graphCtx.lineTo(momentumGraphCanvas.width - 20, yZero);
+      // y-axis
+      graphCtx.moveTo(leftPadding, topPadding);
+      graphCtx.lineTo(leftPadding, momentumGraphCanvas.height - bottomPadding);
+      graphCtx.stroke();
+
+      // Draw graph border to contain the line
+      graphCtx.strokeStyle = '#e5e7eb';
+      graphCtx.lineWidth = 1;
+      graphCtx.strokeRect(leftPadding, topPadding, graphWidth, graphHeight);
+
+      // Labels
+      graphCtx.fillStyle = '#333';
+      graphCtx.font = '12px Roboto, sans-serif';
+      graphCtx.fillText('Time (s) →', momentumGraphCanvas.width - 80, momentumGraphCanvas.height - 10);
+      graphCtx.fillText('Angular Momentum (kg·m²/s)', 5, 15);
+
+      if (angularMomentumHistory.length < 2) return;
+
+      graphCtx.strokeStyle = '#fb8500';
+      graphCtx.lineWidth = 2;
+      graphCtx.beginPath();
+
+      angularMomentumHistory.forEach((p, i) => {
+        const x = leftPadding + (i / (angularMomentumHistory.length - 1)) * graphWidth;
+        const y = yZero - (p / maxAbsMomentum) * (graphHeight / 2);
+        // Clamp y values to stay within graph bounds
+        const clampedY = Math.max(topPadding, Math.min(topPadding + graphHeight, y));
+        if (i === 0) graphCtx.moveTo(x, clampedY);
+        else graphCtx.lineTo(x, clampedY);
+      });
+
+      graphCtx.stroke();
+    }
+
+    function updateImpulseBar() {
+      // Bar width is relative to impulse magnitude, max 60 N·m·s for scaling
+      const percent = Math.min(Math.abs(angularImpulse) / 60 * 100, 100);
+      impulseBar.style.width = `${percent}%`;
+      impulseBar.style.backgroundColor = angularImpulse >= 0 ? '#fb8500' : '#d00000';
+    }
+
+    function animate() {
+      // Apply impulse torque only during impulse duration
+      if (time < duration) {
+        // angular acceleration = torque / moment of inertia
+        const angularAcceleration = torque / inertia;
+        currentAngularVelocity += angularAcceleration * dt;
+      }
+
+      currentAngularMomentum = inertia * currentAngularVelocity;
+      angularMomentumDisplay.textContent = `Angular Momentum: ${currentAngularMomentum.toFixed(2)} kg·m²/s`;
+
+      // Update angle for visualization
+      angle += currentAngularVelocity * dt;
+      
+      // Move object for visualization (scaled) - keep within bounds
+      posX += currentAngularVelocity * dt * 15;
+      if (posX > rotationalCanvas.width - 30) posX = 30;
+      if (posX < 30) posX = rotationalCanvas.width - 30;
+
+      // Update history arrays
+      angularImpulseHistory.push(time < duration ? angularImpulse : 0);
+      angularMomentumHistory.push(currentAngularMomentum);
+      if (angularMomentumHistory.length > 200) angularMomentumHistory.shift();
+      if (angularImpulseHistory.length > 200) angularImpulseHistory.shift();
+
+      drawRotatingObject();
+      drawMomentumGraph();
+      updateImpulseBar();
+
+      time += dt;
+      requestAnimationFrame(animate);
+    }
+
+    // Event listeners for inputs
+    [inertiaSlider, angularVelocitySlider, torqueSlider, durationSlider].forEach(input => {
+      input.addEventListener('input', updateValues);
+    });
+
+    // Initialize
+    updateValues();
+    animate();
+  </script>
+</body>
+</html> 

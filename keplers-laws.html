@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kepler's Laws of Planetary Motion</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.2rem;
+      color: #005f73;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      font-style: italic;
+      user-select: none;
+    }
+    .img-fluid-center {
+    height: auto;
+    width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-fluid-center2 {
+    height: auto;
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      border-top: 3px solid #3b82f6;
+      padding-top: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+  </style>
+  <!-- MathJax for rendering LaTeX-style math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Kepler's Laws of Planetary Motion</h1>
+    <p>
+      Kepler's Laws describe the motion of planets around the Sun and form a cornerstone of classical astronomy and physics. Developed in the early 17th century by Johannes Kepler, these laws provide a precise mathematical description of planetary orbits, challenging earlier circular orbit theories and paving the way for Newton's theory of gravitation.
+    </p>
+
+    <h2>Overview of Kepler's Laws</h2>
+    <ul>
+      <li><strong>First Law (Law of Ellipses):</strong> Planets orbit the Sun in ellipses, with the Sun at one focus.</li>
+      <li><strong>Second Law (Law of Equal Areas):</strong> A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time.</li>
+      <li><strong>Third Law (Law of Harmonies):</strong> The square of the orbital period of a planet is proportional to the cube of the semi-major axis of its orbit.</li>
+    </ul>
+
+    <img src="keplerperson.jpg" alt ="Descriptive Alt Text" class="img-fluid-center2">
+
+    <h2>First Law: The Law of Ellipses</h2>
+    <p>
+      A planet’s path around the Sun is an ellipse, not a perfect circle. An ellipse has two foci, and the Sun lies at one of them. The elliptical nature of orbits explains the varying speed and distance of a planet from the Sun during its orbit. The orbital object is the fastest near the sun (aphelion) due to less GPE and more KE. It is the slowest away from the sun (perihelion) due to more GPE and less KE.
+    </p>
+
+    <div class="formula-box">
+      \( \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \)
+      <br><br>
+      where \( a \) is the semi-major axis and \( b \) is the semi-minor axis.
+    </div>
+
+    <img src="keplers1stlaw.jpg" alt = "Descriptive Alt Text" class = "img-fluid-center">
+
+    <figcaption>a is half of the major axis and b is half of the minor axis</figcaption>
+
+    <h2>Second Law: The Law of Equal Areas</h2>
+    <p>
+      This law states that a planet sweeps out <b>equal areas</b> in <b>equal intervals of time</b>. It moves faster when closer to the Sun (perihelion) and slower when farther away (aphelion), preserving angular momentum.
+    </p>
+
+    <div class="formula-box">
+      \( \frac{dA}{dt} = \text{constant} \)
+    </div>
+
+    <img src="keplerlaw2diagram.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Third Law: The Law of Harmonies</h2>
+    <p>
+      Kepler's third law relates the square of a planet’s orbital period to the cube of its average distance from the Sun.
+    </p>
+
+    <div class="formula-box">
+      \( T^2 \propto a^3 \)
+      <br><br>
+      or more precisely:
+      <br>
+      \( \frac{T^2}{a^3} = \text{constant} \)
+    </div>
+
+    <img src = "dataforkeplers3.jpg" alt = "Descriptive Alt Text" class="img-fluid-center">
+    <figcaption>Data from satelites proving kepler's 3rd law</figcaption>
+
+    <h3>Derived from Newton's Law</h3>
+    <p>
+      Using Newton’s Law of Gravitation and centripetal motion, we can derive Kepler’s third law:
+    </p>
+    <div class="formula-box">
+      \( F_{\text{gravity}} = F_{\text{centripetal}} \Rightarrow \frac{GMm}{r^2} = \frac{mv^2}{r} \)
+      <br><br>
+      \( v^2 = \frac{GM}{r} \)
+      <br><br>
+      \( v = \frac{2\pi r}{T} \Rightarrow \left( \frac{2\pi r}{T} \right)^2 = \frac{GM}{r} \)
+      <br><br>
+      \( T^2 = \frac{4\pi^2}{GM} r^3 \)
+    </div>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>Used to predict planetary positions and satellite behavior.</li>
+      <li>Basis for understanding orbital mechanics in spaceflight.</li>
+      <li>Essential in exoplanet detection via orbital timing and motion.</li>
+    </ul>
+
+    <p class="summary">
+      Summary:
+    </p>
+    <p>Kepler’s Laws capture the essence of planetary motion using elegant geometry and mathematics, laying the groundwork for Newtonian mechanics and modern astrophysics.</p>
+  </div>
+</body>
+</html>

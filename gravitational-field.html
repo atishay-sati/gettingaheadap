@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gravitational Field - AP Physics C: Mechanics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+    ul {
+      padding-left: 1.4rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    .img-fluid-center {
+    height: auto;
+    width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      border-top: 3px solid #3b82f6;
+      padding-top: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Gravitational Field</h1>
+
+    <h2>Definition of Gravitational Field</h2>
+<p>
+  The gravitational field <strong>g</strong> at a point in space is defined as the gravitational force <em>per unit mass</em> experienced by a small test mass placed at that point:
+</p>
+<div class="formula-box">
+  \[
+  \mathbf{g} = \frac{\mathbf{F}}{m} = G \frac{M}{r^2} \hat{r}
+  \]
+</div>
+
+<p>
+  Where:<br>
+  <ul>
+    <li>\( \mathbf{g} \) is the gravitational field vector at distance \( r \) from the mass \( M \)</li>
+    <li>\( \mathbf{F} \) is the gravitational force on the test mass \( m \)</li>
+    <li>\( G \) is the universal gravitational constant</li>
+    <li>\( \hat{r} \) is a unit vector pointing from \( M \) toward the test mass (direction of the field)</li>
+  </ul>
+</p>
+
+<!-- Inserted explanation -->
+<p>
+  The reason the gravitational field is defined as <em>force per unit mass</em> is to separate the effect of the source mass from the test mass. When you place any small object in the gravitational field created by a large mass \( M \), the force it experiences depends on its own mass \( m \). To understand the nature of the gravitational influence itself — independent of which object you place there — physicists define the <strong>gravitational field</strong> as the force that would act on a mass of exactly 1 kilogram.
+</p>
+<p>
+  This makes <strong>gravitational field strength</strong> a property of the space around the source mass, not a property of the object experiencing the force. Once the field \( \mathbf{g} \) is known, you can find the force on any mass \( m \) by simply multiplying: \( \mathbf{F} = m \mathbf{g} \).
+</p>
+<p>
+  This concept is similar to defining electric field in electromagnetism, where the field describes how a charge would be influenced independent of the test charge’s magnitude.
+</p>
+
+    <h2>Physical Interpretation</h2>
+    <p>
+      The gravitational field represents the influence that a mass \( M \) exerts on the space around it. Any other mass placed in this field experiences a force proportional to its mass.
+    </p>
+    <p>
+      Unlike force, the gravitational field is <em>independent</em> of the test mass placed in the field. It depends only on the source mass \( M \) and the distance \( r \).
+    </p>
+    <p>
+      At Earth's surface, the gravitational field strength is approximately \( 9.8 \, \text{N/kg} \), which corresponds to the familiar acceleration due to gravity \( g = 9.8 \, \text{m/s}^2 \).
+    </p>
+
+    <h2>Vector Nature of Gravitational Field</h2>
+    <p>
+      The gravitational field is a vector field. This means at every point in space, it has both magnitude and direction:
+    </p>
+    <ul>
+      <li><strong>Magnitude:</strong> Decreases with the square of the distance \( r \) from the source mass.</li>
+      <li><strong>Direction:</strong> Always points <em>towards</em> the source mass \( M \), indicating gravity is always attractive.</li>
+    </ul>
+    <p>
+      When multiple masses are present, the total gravitational field at a point is the <em>vector sum</em> of the fields from each mass.
+    </p>
+
+    <h2>Gravitational Field Lines</h2>
+    <p>
+      Gravitational field lines provide a visual way to understand the field's direction and strength:
+    </p>
+    <ul>
+      <li>Field lines point inward, toward the mass creating the field.</li>
+      <li>The density of the field lines represents the magnitude of the field; closer lines mean stronger gravity.</li>
+      <li>Lines never cross because the gravitational field at a point has a unique direction.</li>
+      <li>The pattern is spherically symmetric for a point mass or a spherical mass distribution.</li>
+    </ul>
+    <p>
+      These lines help explain how objects move under gravity and how the force varies in space.
+    </p>
+
+    <img src="gravitational-field-diagram.png" alt="Descriptive Alt Text" class = "img-fluid-center">
+
+    <h2>Why the Gravitational Field Concept is Useful</h2>
+    <p>
+      Using the gravitational field allows us to:
+    </p>
+    <ul>
+      <li>Calculate gravitational forces on any mass without recalculating source mass effects repeatedly.</li>
+      <li>Analyze motion in systems with multiple masses by adding fields vectorially.</li>
+      <li>Understand gravity as a property of space around a mass, rather than just a force acting at a distance.</li>
+    </ul>
+
+    <h2>Example Problem</h2>
+    <p>
+      Calculate the gravitational field strength \( g \) at a distance of 10,000 km from Earth's center. Earth's mass is \( 5.97 \times 10^{24} \, \text{kg} \).
+    </p>
+    <div class="formula-box">
+      \[
+      g = G \frac{M}{r^2} = (6.674 \times 10^{-11}) \times \frac{5.97 \times 10^{24}}{(1 \times 10^{7})^2} = 3.98 \, \text{m/s}^2
+      \]
+    </div>
+    <p>
+      This means the gravitational field strength (and acceleration due to gravity) is weaker at this altitude than at Earth's surface.
+    </p>
+
+    <h2 class="summary">Summary</h2>
+    <p>
+      The gravitational field \( \mathbf{g} \) is the gravitational force per unit mass experienced by a test mass placed near a source mass. It is a vector field that decreases in magnitude with the square of the distance and points toward the source mass. Understanding gravitational fields helps predict forces and motions in multi-body systems and provides a foundation for more advanced physics concepts.
+    </p>
+  </div>
+</body>
+</html>

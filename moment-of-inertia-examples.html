@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Common Moments of Inertia – Derivations</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Common Moments of Inertia — With Derivations</h1>
+
+    <p>
+      These classic shapes come up constantly in rotational motion. Below are their moments of inertia and complete calculus-based derivations using symmetry and mass density.
+    </p>
+
+    <p><b>You do NOT have to memorize these formulas</b> The common derivations are shown to give you an example of how to figure out the moment of inertia if asked to derive from scratch. On the test, they will give you the moment of inertia formula.</p>
+
+    <h2>1. Solid Disk (Radius \( R \), Mass \( M \))</h2>
+    <p>
+      We slice the disk into concentric rings of radius \( r \) and thickness \( dr \), each treated like a hoop.
+    </p>
+
+    <div class="formula-box">
+      \( dI = r^2 \, dm \)
+    </div>
+
+    <p>The area of each ring is \( dA = 2\pi r \, dr \), and mass per unit area is \( \sigma = \frac{M}{\pi R^2} \).</p>
+
+    <div class="formula-box">
+      \( dm = \sigma \, dA = \frac{M}{\pi R^2} \cdot 2\pi r \, dr = \frac{2M}{R^2} r \, dr \)
+    </div>
+
+    <p>Now integrate:</p>
+
+    <div class="formula-box">
+      \( I = \int_0^R r^2 \cdot \frac{2M}{R^2} r \, dr = \frac{2M}{R^2} \int_0^R r^3 \, dr = \frac{2M}{R^2} \cdot \frac{R^4}{4} = \frac{1}{2}MR^2 \)
+    </div>
+
+    <img src="MoI-disk.jpg" alt="solid-disk" class="img-fluid-center">
+
+    <h2>2. Thin Hoop (Radius \( R \), Mass \( M \))</h2>
+    <p>
+      For a hoop, all the mass is a fixed distance \( R \) from the center, so there's no need to integrate.
+    </p>
+
+    <div class="formula-box">
+      \( I = \sum m_i R^2 = M R^2 \)
+    </div>
+
+    
+
+    <h2>3. Solid Sphere (Radius \( R \), Mass \( M \))</h2>
+    <p>
+      Consider the sphere as stacked disks of radius \( r(x) \) along the vertical axis. Each disk is at distance \( x \) from the center.
+    </p>
+
+    <p>Radius at height \( x \):</p>
+
+    <div class="formula-box">
+      \( r = \sqrt{R^2 - x^2} \)
+    </div>
+
+    <p>Moment of inertia of each disk (from above): \( dI = \frac{1}{2} \, r^2 \, dm \)</p>
+
+    <p>Volume of each disk is \( dV = \pi r^2 dx \), and mass density is \( \rho = \frac{M}{\frac{4}{3}\pi R^3} \).</p>
+
+    <div class="formula-box">
+      \( dm = \rho \cdot dV = \rho \pi (R^2 - x^2) dx \)
+    </div>
+
+    <p>So:</p>
+
+    <div class="formula-box">
+      \( dI = \frac{1}{2} (R^2 - x^2) \cdot \rho \pi (R^2 - x^2) dx = \frac{1}{2} \rho \pi (R^2 - x^2)^2 dx \)
+    </div>
+
+    <p>Integrate from \(-R\) to \(+R\):</p>
+
+    <div class="formula-box">
+      \( I = \int_{-R}^{R} \frac{1}{2} \rho \pi (R^2 - x^2)^2 dx \)
+    </div>
+
+    <p>Use symmetry and solve the integral (or use known result):</p>
+
+    <div class="formula-box">
+      \( I = \frac{2}{5} M R^2 \)
+    </div>
+
+    <img src="MoI-sphere.png" alt="solid-sphere" class="img-fluid-center">
+
+    <h2>Other Common Moment of Inertia's</h2>
+
+    <img src="multiple-moment-of-inertia.jpg" alt = "Descriptive Alt Text" class = "img-fluid-center">
+
+    <h2>Summary Table</h2>
+    <ul>
+      <li><strong>Solid Disk:</strong> \( \frac{1}{2}MR^2 \)</li>
+      <li><strong>Thin Hoop:</strong> \( MR^2 \)</li>
+      <li><strong>Solid Sphere:</strong> \( \frac{2}{5}MR^2 \)</li>
+    </ul>
+
+    
+
+    <h2>Takeaway</h2>
+    <p>
+      The farther mass is from the axis, the larger the moment of inertia. Calculus allows us to derive these exact formulas by summing the contributions of tiny mass elements.
+    </p>
+  </div>
+</body>
+</html>

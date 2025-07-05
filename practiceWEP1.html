@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work, Energy, and Power Practice Test – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <a href="Energy.html" class="back-link">← Back to Concepts</a>
+    <h1>Work, Energy, and Power Practice Test</h1>
+    <h2>30 Questions – Mixed Conceptual & Calculations</h2>
+
+    <!-- Example questions 1-3 shown. You can expand to 30 following this format. -->
+
+    <!-- Question 1 -->
+<div class="question">
+  <div class="question-number">1.</div>
+  <p>A block of mass <em>m</em> slides down a rough incline of angle <em>θ</em> and height <em>h</em>. It loses 20% of its mechanical energy to friction by the time it reaches the bottom. What is the speed of the block at the bottom?</p>
+  <div class="options">
+    <label><input type="radio" name="q1"> a) √(2gh)</label>
+    <label><input type="radio" name="q1"> b) √(1.6gh)</label>
+    <label><input type="radio" name="q1"> c) √(0.8gh)</label>
+    <label><input type="radio" name="q1"> d) √(2gh cosθ)</label>
+  </div>
+  <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 2 -->
+<div class="question">
+  <div class="question-number">2.</div>
+  <p>A particle moves under the influence of a position-dependent force <em>F(x) = -kx + αx³</em>, where <em>k</em> and <em>α</em> are constants. Which of the following expressions represents the potential energy function <em>U(x)</em> (assuming <em>U(0) = 0</em>)?</p>
+  <div class="options">
+    <label><input type="radio" name="q2"> a) \( U(x) = \frac{1}{2}kx^2 + \frac{1}{4}\alpha x^4 \)</label>
+    <label><input type="radio" name="q2"> b) \( U(x) = -\frac{1}{2}kx^2 + \frac{1}{4}\alpha x^4 \)</label>
+    <label><input type="radio" name="q2"> c) \( U(x) = \frac{1}{2}kx^2 - \frac{1}{4}\alpha x^4 \)</label>
+    <label><input type="radio" name="q2"> d) \( U(x) = -\frac{1}{2}kx^2 - \frac{1}{4}\alpha x^4 \)</label>
+  </div>
+  <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 3 -->
+<div class="question">
+  <div class="question-number">3.</div>
+  <p>A spring (with spring constant <em>k</em>) is compressed by a distance <em>x</em> and used to launch a mass <em>m</em> up a frictionless incline angled at <em>θ</em>. What is the maximum distance <em>d</em> the mass travels along the incline before momentarily coming to rest?</p>
+  <div class="options">
+    <label><input type="radio" name="q3"> a) \( d = \frac{kx^2}{2mg\sinθ} \)</label>
+    <label><input type="radio" name="q3"> b) \( d = \frac{kx^2}{mg\cosθ} \)</label>
+    <label><input type="radio" name="q3"> c) \( d = \frac{kx^2 \sinθ}{2mg} \)</label>
+    <label><input type="radio" name="q3"> d) \( d = \frac{kx^2}{mg} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 4 -->
+<div class="question">
+  <div class="question-number">4.</div>
+  <p>A block of mass <em>m</em> is attached to a spring and oscillates with amplitude <em>A</em> on a horizontal frictionless surface. At what position <em>x</em> (relative to equilibrium) does the kinetic energy equal the potential energy?</p>
+  <div class="options">
+    <label><input type="radio" name="q4"> a) \( x = \frac{A}{\sqrt{2}} \)</label>
+    <label><input type="radio" name="q4"> b) \( x = \frac{A}{2} \)</label>
+    <label><input type="radio" name="q4"> c) \( x = \frac{A}{\sqrt{3}} \)</label>
+    <label><input type="radio" name="q4"> d) \( x = \frac{A}{3} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 5 -->
+<div class="question">
+  <div class="question-number">5.</div>
+  <p>A 2-kg object is moving at 3 m/s on a rough horizontal surface. A constant force of 5 N is applied in the direction of motion for 4 seconds. If the coefficient of kinetic friction is 0.3, what is the final speed of the object?</p>
+  <div class="options">
+    <label><input type="radio" name="q5"> a) 13.4 m/s</label>
+    <label><input type="radio" name="q5"> b) 11.2 m/s</label>
+    <label><input type="radio" name="q5"> c) 10.0 m/s</label>
+    <label><input type="radio" name="q5"> d) 7.6 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+</div>
+
+    <!-- Question 6 -->
+<div class="question">
+  <div class="question-number">6.</div>
+  <p>A force \( F(x) = ax^2 + bx \) acts on a particle moving along the x-axis, where \( a \) and \( b \) are constants. What is the work done by this force as the particle moves from \( x = 0 \) to \( x = L \)?</p>
+  <div class="options">
+    <label><input type="radio" name="q6"> a) \( aL^3 + bL^2 \)</label>
+    <label><input type="radio" name="q6"> b) \( \frac{aL^3}{3} + \frac{bL^2}{2} \)</label>
+    <label><input type="radio" name="q6"> c) \( \frac{aL^2}{2} + \frac{bL}{2} \)</label>
+    <label><input type="radio" name="q6"> d) \( \frac{aL^2}{2} + bL \)</label>
+  </div>
+  <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 7 -->
+<div class="question">
+  <div class="question-number">7.</div>
+  <p>A particle of mass <em>m</em> is moving in a circular path under the influence of a conservative central force such that the potential energy is given by \( U(r) = -\frac{k}{r} + \frac{λ}{r^2} \), where \( k \) and \( λ \) are positive constants. At equilibrium radius \( r_0 \), the net radial force is zero. Which expression gives \( r_0 \)?</p>
+  <div class="options">
+    <label><input type="radio" name="q7"> a) \( r_0 = \frac{2λ}{k} \)</label>
+    <label><input type="radio" name="q7"> b) \( r_0 = \frac{k}{λ} \)</label>
+    <label><input type="radio" name="q7"> c) \( r_0 = \sqrt{\frac{2λ}{k}} \)</label>
+    <label><input type="radio" name="q7"> d) \( r_0 = \frac{λ}{2k} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 8 -->
+<div class="question">
+  <div class="question-number">8.</div>
+  <p>A pendulum of length <em>L</em> is released from rest at an angle \( \theta_0 \). Assuming no friction, what is the speed of the pendulum bob at the lowest point of the swing?</p>
+  <div class="options">
+    <label><input type="radio" name="q8"> a) \( v = \sqrt{2gL(1 - \cos\theta_0)} \)</label>
+    <label><input type="radio" name="q8"> b) \( v = \sqrt{gL\cos\theta_0} \)</label>
+    <label><input type="radio" name="q8"> c) \( v = \sqrt{2gL\cos\theta_0} \)</label>
+    <label><input type="radio" name="q8"> d) \( v = \sqrt{gL(1 - \cos\theta_0)} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 9 -->
+<div class="question">
+  <div class="question-number">9.</div>
+  <p>An object is acted upon by a non-conservative force such that its total mechanical energy changes over time as \( E(t) = E_0 e^{-\gamma t} \). Which of the following best describes the power delivered by the non-conservative force at time <em>t</em>?</p>
+  <div class="options">
+    <label><input type="radio" name="q9"> a) \( P(t) = -\gamma E_0 e^{-\gamma t} \)</label>
+    <label><input type="radio" name="q9"> b) \( P(t) = \gamma E_0 e^{-\gamma t} \)</label>
+    <label><input type="radio" name="q9"> c) \( P(t) = -\frac{dE}{dt} = \gamma^2 E_0 e^{-\gamma t} \)</label>
+    <label><input type="radio" name="q9"> d) \( P(t) = -\gamma^2 t E_0 e^{-\gamma t} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 10 -->
+<div class="question">
+  <div class="question-number">10.</div>
+  <p>A uniform rope of mass <em>m</em> and length <em>L</em> is lifted vertically at constant speed from a horizontal surface. What is the work done to lift the entire rope to a height <em>L</em> above the surface?</p>
+  <div class="options">
+    <label><input type="radio" name="q10"> a) \( W = mgL \)</label>
+    <label><input type="radio" name="q10"> b) \( W = \frac{1}{2}mgL \)</label>
+    <label><input type="radio" name="q10"> c) \( W = 2mgL \)</label>
+    <label><input type="radio" name="q10"> d) \( W = \frac{1}{4}mgL \)</label>
+  </div>
+  <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 11 -->
+<div class="question">
+  <div class="question-number">11.</div>
+  <p>A block slides down a frictionless incline of angle \( \theta \) and length \( L \). The block starts from rest. What is the work done by gravity on the block during its descent?</p>
+  <div class="options">
+    <label><input type="radio" name="q11"> a) \( mgL \cos \theta \)</label>
+    <label><input type="radio" name="q11"> b) \( mgL \sin \theta \)</label>
+    <label><input type="radio" name="q11"> c) \( mgL \)</label>
+    <label><input type="radio" name="q11"> d) \( mgL \tan \theta \)</label>
+  </div>
+  <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 12 -->
+<div class="question">
+  <div class="question-number">12.</div>
+  <p>A spring with spring constant \( k \) is compressed by a distance \( x \) and then releases a block of mass \( m \) on a frictionless surface. If the block encounters a rough patch of length \( d \) with coefficient of kinetic friction \( \mu_k \), what is the speed of the block after crossing the rough patch?</p>
+  <div class="options">
+    <label><input type="radio" name="q12"> a) \( \sqrt{\frac{k}{m}x^2 - 2\mu_k g d} \)</label>
+    <label><input type="radio" name="q12"> b) \( \sqrt{\frac{k}{m}x^2 - \frac{2\mu_k g d}{m}} \)</label>
+    <label><input type="radio" name="q12"> c) \( \sqrt{\frac{k}{m}x^2 - 2\mu_k m g d} \)</label>
+    <label><input type="radio" name="q12"> d) \( \sqrt{\frac{k}{m}x^2 + 2\mu_k g d} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 13 -->
+<div class="question">
+  <div class="question-number">13.</div>
+  <p>An object of mass \( m \) moves under a velocity-dependent resistive force \( \vec{F} = -b \vec{v} \). The object starts with initial kinetic energy \( K_0 \). How much work does the resistive force do after the object slows to half its initial speed?</p>
+  <div class="options">
+    <label><input type="radio" name="q13"> a) \( -\frac{3}{4} K_0 \)</label>
+    <label><input type="radio" name="q13"> b) \( -\frac{1}{4} K_0 \)</label>
+    <label><input type="radio" name="q13"> c) \( -\frac{1}{2} K_0 \)</label>
+    <label><input type="radio" name="q13"> d) \( -\frac{7}{8} K_0 \)</label>
+  </div>
+  <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 14 -->
+<div class="question">
+  <div class="question-number">14.</div>
+  <p>A particle moves along the x-axis with total mechanical energy \( E \) under a potential \( U(x) = U_0 \sin^2 \left(\frac{\pi x}{L}\right) \). What is the maximum kinetic energy of the particle?</p>
+  <div class="options">
+    <label><input type="radio" name="q14"> a) \( E + U_0 \)</label>
+    <label><input type="radio" name="q14"> b) \( E - U_0 \)</label>
+    <label><input type="radio" name="q14"> c) \( E \)</label>
+    <label><input type="radio" name="q14"> d) \( U_0 - E \)</label>
+  </div>
+  <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 15 -->
+<div class="question">
+  <div class="question-number">15.</div>
+  <p>A particle of mass \( m \) moves under a force \( F(x) = -kx + bx^3 \), where \( k \) and \( b \) are positive constants. Near the equilibrium at \( x=0 \), which statement about the work done by the force for small oscillations is correct?</p>
+  <div class="options">
+    <label><input type="radio" name="q15"> a) The work done is purely harmonic and proportional to \( x^2 \).</label>
+    <label><input type="radio" name="q15"> b) The cubic term \( bx^3 \) does no work.</label>
+    <label><input type="radio" name="q15"> c) The work includes anharmonic contributions and deviates from simple harmonic motion.</label>
+    <label><input type="radio" name="q15"> d) The force is conservative only if \( b = 0 \).</label>
+  </div>
+  <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 16 -->
+<div class="question">
+  <div class="question-number">16.</div>
+  <p>A block of mass \( m \) is attached to a spring (spring constant \( k \)) on a frictionless surface. The block is pulled from equilibrium and released. If a constant non-conservative force \( F \) acts opposite to the block's motion during the first half of the oscillation, what happens to the mechanical energy of the system after one full oscillation?</p>
+  <div class="options">
+    <label><input type="radio" name="q16"> a) It remains the same.</label>
+    <label><input type="radio" name="q16"> b) It decreases by \( 2 F A \), where \( A \) is amplitude.</label>
+    <label><input type="radio" name="q16"> c) It decreases by \( F A \).</label>
+    <label><input type="radio" name="q16"> d) It increases by \( F A \).</label>
+  </div>
+  <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 17 -->
+<div class="question">
+  <div class="question-number">17.</div>
+  <p>A 2 kg block slides down a 30° frictional incline with coefficient of kinetic friction \( \mu_k = 0.2 \). If the block travels 5 m, what is the work done by friction?</p>
+  <div class="options">
+    <label><input type="radio" name="q17"> a) \( -9.8 \, \text{J} \)</label>
+    <label><input type="radio" name="q17"> b) \( -19.6 \, \text{J} \)</label>
+    <label><input type="radio" name="q17"> c) \( -16.96 \, \text{J} \)</label>
+    <label><input type="radio" name="q17"> d) \( -24.5 \, \text{J} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 18 -->
+<div class="question">
+  <div class="question-number">18.</div>
+  <p>An object with mass \( m \) moves in one dimension under a force \( F(x) = -kx \), where \( k \) is a constant. The object is displaced by a distance \( x_0 \) from equilibrium and released. What is the total mechanical energy of the system?</p>
+  <div class="options">
+    <label><input type="radio" name="q18"> a) \( \frac{1}{2} k x_0^2 \)</label>
+    <label><input type="radio" name="q18"> b) \( k x_0 \)</label>
+    <label><input type="radio" name="q18"> c) \( \frac{1}{2} m v_0^2 \)</label>
+    <label><input type="radio" name="q18"> d) \( k x_0^2 \)</label>
+  </div>
+  <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 19 -->
+<div class="question">
+  <div class="question-number">19.</div>
+  <p>A force \( F(x) = -\alpha x^2 \) acts on a particle along the x-axis, where \( \alpha \) is positive. Which of the following expressions correctly gives the potential energy function \( U(x) \) assuming \( U(0) = 0 \)?</p>
+  <div class="options">
+    <label><input type="radio" name="q19"> a) \( U(x) = \frac{\alpha x^3}{3} \)</label>
+    <label><input type="radio" name="q19"> b) \( U(x) = -\frac{\alpha x^3}{3} \)</label>
+    <label><input type="radio" name="q19"> c) \( U(x) = \alpha x^2 \)</label>
+    <label><input type="radio" name="q19"> d) \( U(x) = -\alpha x^2 \)</label>
+  </div>
+  <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 20 -->
+<div class="question">
+  <div class="question-number">20.</div>
+  <p>A constant power \( P \) is applied to accelerate a car of mass \( m \) from rest on a frictionless road. How does the speed \( v \) of the car depend on time \( t \)?</p>
+  <div class="options">
+    <label><input type="radio" name="q20"> a) \( v \propto t \)</label>
+    <label><input type="radio" name="q20"> b) \( v \propto \sqrt{t} \)</label>
+    <label><input type="radio" name="q20"> c) \( v \propto t^2 \)</label>
+    <label><input type="radio" name="q20"> d) \( v \) is constant</label>
+  </div>
+  <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 21 -->
+<div class="question">
+  <div class="question-number">21.</div>
+  <p>A 5 kg block is pulled horizontally with a force of 30 N over a rough surface with coefficient of kinetic friction 0.3 for 10 m. What is the net work done on the block?</p>
+  <div class="options">
+    <label><input type="radio" name="q21"> a) 153 J</label>
+    <label><input type="radio" name="q21"> b) 150 J</label>
+    <label><input type="radio" name="q21"> c) 120 J</label>
+    <label><input type="radio" name="q21"> d) 90 J</label>
+  </div>
+  <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 22 -->
+<div class="question">
+  <div class="question-number">22.</div>
+  <p>An object is moving with speed \( v \) and collides elastically with a stationary object of the same mass. What is the total kinetic energy after the collision?</p>
+  <div class="options">
+    <label><input type="radio" name="q22"> a) \( \frac{1}{2} m v^2 \)</label>
+    <label><input type="radio" name="q22"> b) \( m v^2 \)</label>
+    <label><input type="radio" name="q22"> c) 0</label>
+    <label><input type="radio" name="q22"> d) \( \frac{1}{4} m v^2 \)</label>
+  </div>
+  <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 23 -->
+<div class="question">
+  <div class="question-number">23.</div>
+  <p>A force \( F(x) = 3x^2 - 2x + 1 \) (in newtons) acts on an object along the x-axis. Calculate the work done by this force as the object moves from \( x=0 \) to \( x=2 \) m.</p>
+  <div class="options">
+    <label><input type="radio" name="q23"> a) 6 J</label>
+    <label><input type="radio" name="q23"> b) 8 J</label>
+    <label><input type="radio" name="q23"> c) 10 J</label>
+    <label><input type="radio" name="q23"> d) 12 J</label>
+  </div>
+  <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 24 -->
+<div class="question">
+  <div class="question-number">24.</div>
+  <p>A mass-spring system oscillates with amplitude \( A \) and frequency \( f \). Which of the following expressions represents the maximum power delivered to the system if driven at resonance by an external force?</p>
+  <div class="options">
+    <label><input type="radio" name="q24"> a) \( P_{max} = \frac{1}{2} k A^2 f \)</label>
+    <label><input type="radio" name="q24"> b) \( P_{max} = k A^2 \pi f \)</label>
+    <label><input type="radio" name="q24"> c) \( P_{max} = b A^2 \omega^2 \)</label>
+    <label><input type="radio" name="q24"> d) \( P_{max} = \frac{1}{2} b A^2 \omega^2 \)</label>
+  </div>
+  <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 25 -->
+<div class="question">
+  <div class="question-number">25.</div>
+  <p>A car of mass 1000 kg accelerates uniformly from rest to 20 m/s in 8 seconds. Calculate the average power output of the engine during this time.</p>
+  <div class="options">
+    <label><input type="radio" name="q25"> a) 25,000 W</label>
+    <label><input type="radio" name="q25"> b) 30,000 W</label>
+    <label><input type="radio" name="q25"> c) 20,000 W</label>
+    <label><input type="radio" name="q25"> d) 40,000 W</label>
+  </div>
+  <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 26 -->
+<div class="question">
+  <div class="question-number">26.</div>
+  <p>A 2 kg block slides down a frictionless incline of height 5 m. If the block compresses a spring of spring constant 800 N/m at the bottom, what is the maximum compression of the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q26"> a) 0.35 m</label>
+    <label><input type="radio" name="q26"> b) 0.5 m</label>
+    <label><input type="radio" name="q26"> c) 0.25 m</label>
+    <label><input type="radio" name="q26"> d) 0.45 m</label>
+  </div>
+  <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 27 -->
+<div class="question">
+  <div class="question-number">27.</div>
+  <p>An object of mass 3 kg is moving at 4 m/s and experiences a resistive force \( F = -kv \) where \( k = 0.6 \, \text{kg/s} \). How much work is done by the resistive force after the object moves 5 m?</p>
+  <div class="options">
+    <label><input type="radio" name="q27"> a) -12 J</label>
+    <label><input type="radio" name="q27"> b) -30 J</label>
+    <label><input type="radio" name="q27"> c) -24 J</label>
+    <label><input type="radio" name="q27"> d) -40 J</label>
+  </div>
+  <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 28 -->
+<div class="question">
+  <div class="question-number">28.</div>
+  <p>A force \( \vec{F} = (2x \hat{i} + 3y \hat{j}) \, \text{N} \) acts on a particle moving from \( (0,0) \) to \( (3,4) \). What is the total work done by this force along this path?</p>
+  <div class="options">
+    <label><input type="radio" name="q28"> a) 42 J</label>
+    <label><input type="radio" name="q28"> b) 33 J</label>
+    <label><input type="radio" name="q28"> c) 30 J</label>
+    <label><input type="radio" name="q28"> d) 24 J</label>
+  </div>
+  <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 29 -->
+<div class="question">
+  <div class="question-number">29.</div>
+  <p>A 10 kg block attached to a horizontal spring (spring constant 200 N/m) oscillates with amplitude 0.1 m. What is the total mechanical energy of the system?</p>
+  <div class="options">
+    <label><input type="radio" name="q29"> a) 1.0 J</label>
+    <label><input type="radio" name="q29"> b) 2.0 J</label>
+    <label><input type="radio" name="q29"> c) 0.5 J</label>
+    <label><input type="radio" name="q29"> d) 1.5 J</label>
+  </div>
+  <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 30 -->
+<div class="question">
+  <div class="question-number">30.</div>
+  <p>A particle moves under a force described by the potential energy function \( U(x) = 4x^3 - 6x^2 + 3 \) J. What is the force \( F(x) \) at \( x=2 \) m?</p>
+  <div class="options">
+    <label><input type="radio" name="q30"> a) -24 N</label>
+    <label><input type="radio" name="q30"> b) 12 N</label>
+    <label><input type="radio" name="q30"> c) 18 N</label>
+    <label><input type="radio" name="q30"> d) -12 N</label>
+  </div>
+  <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+</div>
+  <style>
+  #submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  }
+
+  #submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+    cursor: pointer;
+  }
+
+  #result {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+</style>
+
+<button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+<div id="result" class="mt-3 fw-bold"></div>
+
+  
+
+<script>
+  const answers = {
+  q1: "b",
+  q2: "c",
+  q3: "a",
+  q4: "a",
+  q5: "c",
+  q6: "b",
+  q7: "a",
+  q8: "a",
+  q9: "a",
+  q10: "b",
+  q11: "b",
+  q12: "a",
+  q13: "a",
+  q14: "c",
+  q15: "c",
+  q16: "c",
+  q17: "c",
+  q18: "a",
+  q19: "a",
+  q20: "b",
+  q21: "a",
+  q22: "a",
+  q23: "a",
+  q24: "c",
+  q25: "a",
+  q26: "b",
+  q27: "a",
+  q28: "b",
+  q29: "a",
+  q30: "a"
+};
+
+  const feedback = {
+  q1: "The block loses 20% of its energy to friction, so only 80% remains for kinetic energy: \\( KE = 0.8 mgh = \\frac{1}{2}mv^2 \\). Thus, \\( v = \\sqrt{2 \\times 0.8gh} = \\sqrt{1.6gh} \\).",
+  
+  q2: "Integrate \\( F(x) = -kx + \\alpha x^3 \\) to get potential energy: \\( U(x) = \\int (kx - \\alpha x^3) dx = \\frac{1}{2}kx^2 - \\frac{1}{4}\\alpha x^4 \\).",
+  
+  q3: "Set spring energy equal to gravitational work: \\( \\frac{1}{2}kx^2 = mgd\\sin\\theta \\implies d = \\frac{kx^2}{2mg\\sin\\theta} \\).",
+  
+  q4: "Set kinetic and potential energy equal: \\( \\frac{1}{2}k(A^2 - x^2) = \\frac{1}{2}kx^2 \\implies x = \\frac{A}{\\sqrt{2}} \\).",
+  
+  q5: "Friction force: \\( f = \\mu mg = 0.3 \\times 2 \\times 9.8 = 5.88 \\) N. Net force: \\( 5 - 5.88 = -0.88 \\) N. Acceleration: \\( a = -0.44 \\) m/s². Final speed: \\( v = 3 + (-0.44) \\times 4 = 1.2 \\) m/s.",
+  
+  q6: "Integrate the force: \\( W = \\int_0^L (ax^2 + bx) dx = \\frac{aL^3}{3} + \\frac{bL^2}{2} \\).",
+  
+  q7: "Set the derivative of potential to zero: \\( F = -\\frac{dU}{dr} = -\\left(\\frac{k}{r^2} - \\frac{2\\lambda}{r^3}\\right) \\). Set to zero and solve: \\( r_0 = \\frac{2\\lambda}{k} \\).",
+  
+  q8: "Use energy conservation: \\( mgh = \\frac{1}{2}mv^2 \\), with \\( h = L(1 - \\cos\\theta_0) \\). Thus, \\( v = \\sqrt{2gL(1 - \\cos\\theta_0)} \\).",
+  
+  q9: "Power is the rate of change of energy: \\( P = \\frac{dE}{dt} = -\\gamma E_0 e^{-\\gamma t} \\).",
+  
+  q10: "The rope's center of mass rises by \\( L/2 \\), so \\( W = mg \\cdot (L/2) = \\frac{1}{2}mgL \\).",
+  
+  q11: "Work by gravity is \\( mg \\) times the vertical height: \\( h = L \\sin \\theta \\), so \\( W = mgL \\sin \\theta \\).",
+  q12: "Initial energy is \\( \\frac{1}{2}kx^2 \\), friction does work \\( -\\mu_k mg d \\). Set \\( \\frac{1}{2}kx^2 - \\mu_k mg d = \\frac{1}{2}mv^2 \\) and solve for \\( v \\).",
+  q13: "Initial KE is \\( K_0 \\), final KE is \\( \\frac{1}{4}K_0 \\) (since \\( v \\) halves, \\( v^2 \\) is quartered). Work = change in KE = \\( \\frac{1}{4}K_0 - K_0 = -\\frac{3}{4}K_0 \\).",
+  q14: "Maximum KE is when potential is minimum. Since \\( U_{min} = 0 \\), \\( KE_{max} = E - 0 = E \\).",
+  q15: "The cubic term \\( bx^3 \\) introduces anharmonicity, so the work is not purely proportional to \\( x^2 \\) and the motion deviates from simple harmonic.",
+  q16: "Non-conservative force acts during first half (distance \\( A \\)), doing work \\( -F A \\). During second half, no non-conservative force acts. Total energy decrease = \\( F A \\).",
+  q17: "Normal force: \\( N = mg \\cos 30° = 2 \\times 9.8 \\times 0.866 = 16.96 \\) N. Friction force: \\( f = \\mu_k N = 0.2 \\times 16.96 = 3.39 \\) N. Work: \\( W = -f \\times d = -3.39 \\times 5 = -16.96 \\) J.",
+  q18: "At maximum displacement, all energy is potential: \\( E = \\frac{1}{2} k x_0^2 \\).",
+  q19: "Integrate \\( F = -dU/dx = -\\alpha x^2 \\): \\( U(x) = \\int \\alpha x^2 dx = \\frac{\\alpha x^3}{3} \\).",
+  q20: "Power \\( P = Fv = mav = mv \\frac{dv}{dt} \\). Integrate: \\( \\int v dv = \\frac{P}{m} \\int dt \\implies \\frac{v^2}{2} = \\frac{P}{m} t \\implies v \\propto \\sqrt{t} \\).",
+  q21: "Applied work: \\( W_{applied} = 30 \\times 10 = 300 \\) J. Friction work: \\( W_{friction} = -\\mu_k mg d = -0.3 \\times 5 \\times 9.8 \\times 10 = -147 \\) J. Net work: \\( 300 - 147 = 153 \\) J.",
+  q22: "In elastic collision, total kinetic energy is conserved. Initial KE: \\( \\frac{1}{2} m v^2 \\), final KE: \\( \\frac{1}{2} m v^2 \\) (same).",
+  q23: "Integrate the force: \\( W = \\int_0^2 (3x^2 - 2x + 1) dx = [x^3 - x^2 + x]_0^2 = 8 - 4 + 2 = 6 \\) J.",
+  q24: "At resonance, power is \\( P = b A^2 \\omega^2 \\) where \\( b \\) is the damping coefficient.",
+  q25: "Work done = change in KE = \\( \\frac{1}{2} \\times 1000 \\times 20^2 = 200,000 \\) J. Power = work/time = \\( 200,000 / 8 = 25,000 \\) W.",
+  q26: "Set gravitational PE equal to spring PE: \\( mgh = \\frac{1}{2}kx^2 \\implies 2 \\times 9.8 \\times 5 = \\frac{1}{2} \\times 800 \\times x^2 \\). Solve: \\( x = \\sqrt{98/400} \\approx 0.5 \\) m.",
+  q27: "For velocity-dependent force, approximate work: \\( W \\approx -k \\times v_{avg} \\times d = -0.6 \\times 4 \\times 5 = -12 \\) J.",
+  q28: "Integrate each component: \\( W = \\int_0^3 2x dx + \\int_0^4 3y dy = [x^2]_0^3 + [\\frac{3}{2}y^2]_0^4 = 9 + 24 = 33 \\) J.",
+  q29: "Total mechanical energy: \\( E = \\frac{1}{2}kA^2 = \\frac{1}{2} \\times 200 \\times (0.1)^2 = 1.0 \\) J.",
+  q30: "Force is negative derivative: \\( F = -dU/dx = -(12x^2 - 12x) \\). At \\( x = 2 \\): \\( F = -12(4) + 12(2) = -24 \\) N."
+};
+
+  function checkAnswers() {
+  let score = 0;
+  for (let i = 1; i <= 30; i++) {
+    const questionName = "q" + i;
+    const options = document.getElementsByName(questionName);
+    let selected = "";
+    options.forEach(opt => {
+      opt.parentElement.style.color = "black"; // Reset color
+      if (opt.checked) selected = opt.value;
+    });
+
+    const feedbackEl = document.getElementById("feedback-" + questionName);
+    if (selected === answers[questionName]) {
+      score++;
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "green";
+      });
+    } else {
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "red";
+        if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+      });
+    }
+
+    // Show feedback
+    if (feedbackEl) {
+      feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+      feedbackEl.style.display = "block";
+    }
+  }
+
+  document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+  
+  if (window.MathJax && window.MathJax.typeset) {
+    window.MathJax.typeset();
+  }
+}
+
+
+  // Attach values a-d to radio buttons
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Types of Forces</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #005f73;
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #0a9396;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #94d2bd;
+      padding-left: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .definition-box {
+      background: #caf0f8;
+      border-left: 5px solid #028090;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
+      color: #05445e;
+    }
+    .example-box {
+      background: #ade8f4;
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      color: #023e8a;
+      font-size: 1.1rem;
+      margin: 2rem 0;
+      box-shadow: 0 6px 15px rgba(2, 48, 71, 0.2);
+    }
+    .interactive-section {
+      background: #e0f7fa;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 3rem;
+      box-shadow: 0 5px 15px rgba(0, 94, 115, 0.25);
+      text-align: center;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      margin: 0.5rem 0.8rem;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    /* Game styles */
+    .game-container {
+      margin-top: 3rem;
+      text-align: left;
+      background: #d0f4de;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 100, 0, 0.2);
+    }
+    .game-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #2d6a4f;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .game-instructions {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #1b4332;
+      text-align: center;
+    }
+    .pairs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+    }
+    .pair-list, .description-list {
+      flex: 1 1 40%;
+      min-width: 280px;
+    }
+    .pair-list button, .description-list button {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      border-radius: 8px;
+      border: 2px solid #40916c;
+      background: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-align: left;
+    }
+    .pair-list button.selected, .description-list button.selected {
+      background: #40916c;
+      color: white;
+      border-color: #1b4332;
+    }
+    .result {
+      margin-top: 1rem;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #1b4332;
+    }
+    .reset-btn {
+      display: block;
+      margin: 2rem auto 0;
+      background: #2d6a4f;
+      border: none;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .reset-btn:hover {
+      background: #1b4332;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .definition-box {
+        font-size: 1rem;
+      }
+      .example-box {
+        font-size: 1rem;
+        padding: 1.2rem 1.5rem;
+      }
+      .pairs {
+        flex-direction: column;
+      }
+      .pair-list, .description-list {
+        flex: 1 1 100%;
+      }
+    }
+    /* Add flip animation for matching game */
+    .flip {
+      transition: transform 0.4s;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  
+  <main class="container" role="main" aria-label="Types of Forces Lesson">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Types of Forces</h1>
+
+    <p>
+      Forces are pushes or pulls that can cause an object to accelerate, slow down, remain in place, or change direction.
+      Understanding the different types of forces helps us analyze how objects interact in the physical world.
+    </p>
+
+    <h2>Fundamental Force Types</h2>
+    <div class="definition-box" aria-label="Definition of force">
+      <strong>Force:</strong> A vector quantity that represents an interaction between objects, measured in Newtons (N).
+    </div>
+
+    <h2>Common Types of Forces You Should Know</h2>
+    <ul>
+      <li><strong>Gravitational Force:</strong> The attractive force between two masses. It gives objects weight.</li>
+      <li><strong>Normal Force:</strong> The support force exerted by a surface perpendicular to the object resting on it.</li>
+      <li><strong>Frictional Force:</strong> The force opposing motion between two surfaces in contact. Comes in static and kinetic forms.</li>
+      <li><strong>Tension Force:</strong> The pulling force transmitted through a string, rope, cable, or wire when it is pulled tight.</li>
+      <li><strong>Applied Force:</strong> Any force applied to an object by a person or another object.</li>
+      <li><strong>Air Resistance (Drag):</strong> A special type of frictional force that acts opposite to motion through air.</li>
+      <li><strong>Spring Force:</strong> The force exerted by a compressed or stretched spring upon any object attached to it.</li>
+    </ul>
+
+    <h2>Strong Nuclear Force (not covered in AP Phyiscs C but interesting to know)</h2>
+    <p>
+      The <strong>Strong Nuclear Force</strong> is one of the four fundamental forces of nature. It acts at the subatomic level, holding protons and neutrons together in an atom's nucleus despite protons repelling each other.
+    </p>
+    <p>
+      Although it operates over a very short range (about the size of an atomic nucleus), it is the strongest force known in nature.
+    </p>
+
+    <h2>How Forces Interact</h2>
+    <p>
+      Forces can act alone or in combination. The net force on an object determines how it moves according to Newton's Second Law.
+      When multiple forces act on an object, they combine vectorially to produce the net force.
+    </p>
+
+    <div class="section">
+    <h2>Common Force Formulas in Dynamics</h2>
+    <p>Here are the formulas you need to know for dynamics (don't worry too much about drag force, they will most likely give you the formula on the test)</p>
+
+    <ul>
+      <li><strong>Gravitational Force:</strong> <span class="formula">F<sub>gravity</sub> = mg</span>  
+        <br><em>Weight of an object near Earth's surface. Depends on mass and gravitational field strength.</em>
+      </li>
+
+      <li><strong>Normal Force:</strong> Varies depending on surface orientation. On a flat surface with no acceleration up or down: 
+        <span class="formula">F<sub>normal</sub> = mg</span> (if no other vertical forces)
+      </li>
+
+      <li><strong>Friction Force:</strong> 
+        <span class="formula">F<sub>friction</sub> = μF<sub>N</sub></span>  
+        <br><em>Resists motion between two surfaces. μ is the coefficient of friction, and F<sub>N</sub> is the normal force.</em>
+      </li>
+
+      <li><strong>Drag Force (Linear):</strong> <span class="formula">F<sub>drag</sub> = -bv</span>  
+        <br><em>Often used at low speeds. b is a drag coefficient, v is velocity.</em>
+      </li>
+
+      <li><strong>Drag Force (Quadratic):</strong> <span class="formula">F<sub>drag</sub> = -cv²</span>  
+        <br><em>Dominates at higher speeds. c is a different drag coefficient.</em>
+      </li>
+
+      <li><strong>Tension Force:</strong> Varies with context, but often just equals the force applied through a taut string, rope, or cable. Often solved with Newton's second law.</li>
+
+      <li><strong>Spring Force (Hooke's law, covered next topic):</strong> <span class="formula">F<sub>s</sub> = -kx</span>  
+        <br><em>The force provided by a spring is equal to -kx where k is the spring constant and x is the displacement from its equilibrium point.</em>
+      </li>
+
+      <li><strong>Net Force:</strong> <span class="formula">F<sub>net</sub> = ma</span>  
+        <br><em>Newton's Second Law – the sum of all forces determines the object's acceleration.</em>
+      </li>
+    </ul>
+  </div>
+
+
+   <div class="section">
+    
+
+    <h3 style="margin-top: 2rem;">Force Comparison Table</h3>
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+        <thead>
+          <tr style="background-color: #e6f2ff; text-align: left;">
+            <th style="padding: 0.75rem; border: 1px solid #ccc;">Force</th>
+            <th style="padding: 0.75rem; border: 1px solid #ccc;">Formula</th>
+            <th style="padding: 0.75rem; border: 1px solid #ccc;">Variables</th>
+            <th style="padding: 0.75rem; border: 1px solid #ccc;">When It Applies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Gravitational</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F = mg</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">m: mass, g: 9.8 m/s²</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Object near Earth's surface</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Normal</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F<sub>N</sub> = F<sub>g</sub> (flat surface)</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">m: mass, g: 9.8 m/s²</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Support force from a surface</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Friction</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F = μF<sub>N</sub></td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">μ: coefficient, N: normal force</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Between contacting surfaces</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Drag (linear)</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F = -bv</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">b: drag constant, v: velocity</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Slow speeds in fluid (air/water)</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Drag (quadratic)</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F = -cv²</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">c: drag constant, v: velocity</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">High-speed motion in fluids</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Tension</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Depends on net force</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Depends on system</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Pull through strings/ropes</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Spring Force</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F<sub>s</sub> = -kx</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">k: spring constant, x: displacement from equilibrium</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Through springs and usually applies to any elastic object</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Net Force</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">F = ma</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">m: mass, a: net acceleration</td>
+            <td style="padding: 0.75rem; border: 1px solid #ccc;">Any system with an acceleration</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <h2>Real-World Examples</h2>
+    <div class="example-box" aria-label="Examples of forces">
+      <p><strong>Gravitational Force:</strong> The Earth pulls you downward, giving you weight.</p>
+      <p><strong>Normal Force:</strong> A book resting on a table experiences an upward normal force balancing gravity.</p>
+      <p><strong>Friction:</strong> When you slide a box across the floor, friction resists its motion.</p>
+      <p><strong>Tension:</strong> A rope holding a hanging swing experiences tension force.</p>
+      <p><strong>Air Resistance:</strong> A skydiver feels air resistance slowing their fall.</p>
+      <p><strong>Strong Nuclear Force:</strong> Protons and neutrons stick together in the nucleus because of this force.</p>
+    </div>
+
+    <h2>Interactive Demo: Select a Force Type</h2>
+    <p>Click the buttons below to learn more about each force type.</p>
+    <section class="interactive-section" aria-label="Types of forces interactive demo">
+      <button id="gravityBtn">Gravitational Force</button>
+      <button id="normalBtn">Normal Force</button>
+      <button id="frictionBtn">Frictional Force</button>
+      <button id="tensionBtn">Tension Force</button>
+      <button id="airBtn">Air Resistance</button>
+      <button id="springBtn">Spring Force</button>
+      <button id="strongBtn">Strong Nuclear Force</button>
+
+      <div id="forceDescription" style="margin-top:1.5rem; font-size:1.15rem; color:#0077b6; min-height:100px;"></div>
+    </section>
+
+    <section class="game-container" aria-label="Force Matching Game">
+      <h3 class="game-title">Fun Force Matching Game</h3>
+      <p class="game-instructions">Match each <strong>Force Name</strong> with its correct <strong>Description</strong>. Click one from the left, then one from the right. Try to match all!</p>
+      
+      <div class="pairs">
+        <div class="pair-list" aria-label="Force names list">
+          <button class="pair-btn" data-pair="gravity">Gravitational Force</button>
+          <button class="pair-btn" data-pair="normal">Normal Force</button>
+          <button class="pair-btn" data-pair="friction">Frictional Force</button>
+          <button class="pair-btn" data-pair="tension">Tension Force</button>
+          <button class="pair-btn" data-pair="air">Air Resistance</button>
+          <button class="pair-btn" data-pair="spring">Spring Force</button>
+          <button class="pair-btn" data-pair="strong">Strong Nuclear Force</button>
+        </div>
+        <div class="description-list" aria-label="Force descriptions list">
+          <button class="desc-btn" data-pair="gravity">Attraction between masses, gives objects weight</button>
+          <button class="desc-btn" data-pair="normal">Support force from a surface perpendicular to an object</button>
+          <button class="desc-btn" data-pair="friction">Opposes motion between surfaces in contact</button>
+          <button class="desc-btn" data-pair="tension">Pulling force through rope, cable, or string</button>
+          <button class="desc-btn" data-pair="air">Friction-like force opposing motion through air</button>
+          <button class="desc-btn" data-pair="spring">Force from compressed or stretched spring</button>
+          <button class="desc-btn" data-pair="strong">Strong force holding nucleus together</button>
+        </div>
+      </div>
+      <div class="result" aria-live="polite"></div>
+      <button class="reset-btn" aria-label="Reset Game">Reset Game</button>
+    </section>
+  </main>
+
+  <script>
+    // Interactive force description buttons
+    const forceDescription = document.getElementById('forceDescription');
+    const forces = {
+      gravityBtn: "Gravitational force is the attraction between any two masses. On Earth, it gives objects their weight and pulls them toward the center of the planet.",
+      normalBtn: "Normal force is the support force from a surface that acts perpendicular to the object resting on it. For example, a table pushing up on a book to support it.",
+      frictionBtn: "Frictional force opposes the motion or attempted motion between two surfaces in contact. Static friction prevents motion, kinetic friction acts during motion.",
+      tensionBtn: "Tension force is the pulling force transmitted along a rope, cable, or string when it is stretched tight between two objects.",
+      airBtn: "Air resistance, or drag, is a type of frictional force that acts opposite to the motion of objects moving through air.",
+      springBtn: "Spring force is exerted by a compressed or stretched spring, trying to return to its original length according to Hooke's Law.",
+      strongBtn: "The strong nuclear force holds protons and neutrons together in the nucleus, overcoming repulsion between protons at extremely short ranges."
+    };
+
+    Object.keys(forces).forEach(id => {
+      document.getElementById(id).addEventListener('click', () => {
+        forceDescription.textContent = forces[id];
+      });
+    });
+
+    // Matching Game Logic
+    let pairButtons = document.querySelectorAll('.pair-btn');
+    let descButtons = document.querySelectorAll('.desc-btn');
+    const resultDiv = document.querySelector('.result');
+    const resetBtn = document.querySelector('.reset-btn');
+
+    let selectedPair = null;
+    let selectedDesc = null;
+    let matches = 0;
+    const totalPairs = pairButtons.length;
+
+    // Store original HTML for shuffling
+    const pairBtnData = Array.from(pairButtons).map(btn => ({pair: btn.dataset.pair, text: btn.textContent}));
+    const descBtnData = Array.from(descButtons).map(btn => ({pair: btn.dataset.pair, text: btn.textContent}));
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function shuffleButtons() {
+      // Shuffle and re-render force names
+      const shuffledPairs = shuffleArray([...pairBtnData]);
+      const shuffledDescs = shuffleArray([...descBtnData]);
+      const pairList = document.querySelector('.pair-list');
+      const descList = document.querySelector('.description-list');
+      pairList.innerHTML = '';
+      descList.innerHTML = '';
+      shuffledPairs.forEach(data => {
+        const btn = document.createElement('button');
+        btn.className = 'pair-btn';
+        btn.dataset.pair = data.pair;
+        btn.textContent = data.text;
+        pairList.appendChild(btn);
+      });
+      shuffledDescs.forEach(data => {
+        const btn = document.createElement('button');
+        btn.className = 'desc-btn';
+        btn.dataset.pair = data.pair;
+        btn.textContent = data.text;
+        descList.appendChild(btn);
+      });
+      // Re-query buttons
+      pairButtons = document.querySelectorAll('.pair-btn');
+      descButtons = document.querySelectorAll('.desc-btn');
+      addGameListeners();
+    }
+
+    function resetSelection() {
+      if(selectedPair) selectedPair.classList.remove('selected', 'flip');
+      if(selectedDesc) selectedDesc.classList.remove('selected', 'flip');
+      selectedPair = null;
+      selectedDesc = null;
+    }
+
+    function checkMatch() {
+      if(selectedPair && selectedDesc) {
+        // Show both as selected for 0.5s before hiding/deselecting
+        setTimeout(() => {
+          if(selectedPair.dataset.pair === selectedDesc.dataset.pair) {
+            // Correct match - hide both
+            selectedPair.style.visibility = 'hidden';
+            selectedDesc.style.visibility = 'hidden';
+            matches++;
+            resultDiv.textContent = `Good job! Matches found: ${matches} / ${totalPairs}`;
+            if(matches === totalPairs) {
+              resultDiv.textContent = "🎉 Congrats! You matched all forces correctly!";
+            }
+          } else {
+            // Wrong match - just deselect
+            resultDiv.textContent = "Try again! Those don't match.";
+          }
+          resetSelection();
+        }, 500);
+      }
+    }
+
+    function addGameListeners() {
+      pairButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if(selectedPair === btn) {
+            btn.classList.remove('selected');
+            selectedPair = null;
+          } else {
+            if(selectedPair) selectedPair.classList.remove('selected');
+            btn.classList.add('selected');
+            selectedPair = btn;
+          }
+          checkMatch();
+        });
+      });
+      descButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if(selectedDesc === btn) {
+            btn.classList.remove('selected');
+            selectedDesc = null;
+          } else {
+            if(selectedDesc) selectedDesc.classList.remove('selected');
+            btn.classList.add('selected');
+            selectedDesc = btn;
+          }
+          checkMatch();
+        });
+      });
+    }
+
+    // Initial listeners
+    shuffleButtons();
+
+    resetBtn.addEventListener('click', () => {
+      // Reset game state
+      matches = 0;
+      resultDiv.textContent = '';
+      shuffleButtons();
+      pairButtons.forEach(btn => {
+        btn.style.visibility = 'visible';
+        btn.disabled = false;
+        btn.classList.remove('selected', 'flip');
+      });
+      descButtons.forEach(btn => {
+        btn.style.visibility = 'visible';
+        btn.disabled = false;
+        btn.classList.remove('selected', 'flip');
+      });
+      resetSelection();
+    });
+  </script>
+</body>
+</html>

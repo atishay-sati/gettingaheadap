@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Definition of Momentum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #e0f2fe;
+      border: 2px solid #3b82f6;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #momentumDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #1e3a8a;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="LinearMomentum.html" class="back-link">← Back to Concepts</a>
+    <h1>Definition of Momentum</h1>
+
+    <p>
+      Momentum is one of the most fundamental and conserved quantities in all of physics. It captures an object's tendency to keep moving, and it forms the backbone of analyzing collisions, explosions, and recoil scenarios.
+    </p>
+
+    <h2>What is Linear Momentum?</h2>
+
+    <div class="formula-box">
+      $$\vec{p} = m\vec{v}$$
+    </div>
+
+    <p>
+      Linear momentum \( \vec{p} \) is defined as the product of an object’s mass \( m \) and its velocity \( \vec{v} \). Linear momentum differs from inertia because intertia <b>only</b> depends on an object’s mass \( m \) <b>not</b> its velocity \( \vec{v} \). Since velocity is a vector, momentum is also a <strong>vector quantity</strong>, meaning it has both magnitude and direction.
+    </p>
+
+    <ul>
+      <li><strong>Mass</strong> is a scalar and must be constant (non-relativistic).</li>
+      <li><strong>Velocity</strong> determines the direction of momentum.</li>
+      <li>Momentum points in the same direction as velocity.</li>
+    </ul>
+
+    <h2>Key Properties of Momentum</h2>
+    <ul>
+      <li><strong>Units:</strong> kg·m/s</li>
+      <li><strong>Momentum is always conserved</strong> in isolated systems with no net external force.</li>
+      <li>Doubling the mass or the speed doubles the momentum.</li>
+    </ul>
+
+    <h2>Total Momentum in Systems</h2>
+
+    <div class="formula-box">
+      $$\vec{p}_{\text{total}} = \sum m_i \vec{v}_i$$
+    </div>
+
+    <p>
+      In a system of multiple particles (like in a collision), total momentum is the vector sum of the individual momenta. This total momentum remains constant if no net external forces act on the system.
+    </p>
+
+    <h2>Momentum and Newton's Second Law</h2>
+
+    <div class="formula-box">
+      $$\vec{F}_{\text{net}} = \dfrac{d\vec{p}}{dt}$$
+    </div>
+
+    <p>
+      Newton’s Second Law, in its most general form, tells us that net force is the time rate of change of momentum. This is valid even when mass changes (like in rocket propulsion). In most AP Physics C problems, mass is constant, so this reduces to:
+    </p>
+
+    <div class="formula-box">
+      $$\vec{F}_{\text{net}} = m \dfrac{d\vec{v}}{dt} = m\vec{a}$$
+    </div>
+
+    <p>
+      This connection between force and momentum is what leads into the concept of <strong>impulse</strong> — the change in momentum due to a net force acting over time.
+    </p>
+
+    <div>
+    <figure>
+      <img src="momentum-image.png" alt="Descriptive Alt Text" class="img-fluid-center">
+      <figcaption>
+        Momentum vector always points in the same direction as velocity.
+      </figcaption>
+    </figure>
+    <h1>Definition of Momentum</h1>
+    </div>
+
+<!-- Simulation Controls -->
+<div class="controls">
+  <div class="control-group">
+    <label>Mass (kg): <span id="massLabel">5</span></label>
+    <input type="range" min="1" max="20" value="5" id="massSlider">
+  </div>
+  <div class="control-group">
+    <label>Velocity (m/s): <span id="velocityLabel">10</span></label>
+    <input type="range" min="-20" max="20" value="10" id="velocitySlider">
+  </div>
+  <div class="control-group">
+    <label><input type="checkbox" id="forceCheck"> Enable Force</label>
+    <div id="forceControl" style="display:none;">
+      <label>Force (N): <span id="forceLabel">0</span></label>
+      <input type="range" min="-10" max="10" value="0" id="forceSlider">
+    </div>
+  </div>
+</div>
+
+<div id="momentumDisplay" style="margin-top:1rem; font-weight:bold;">Momentum: 50.0 kg·m/s</div>
+
+<!-- Car Simulation Canvas -->
+<canvas id="carCanvas" width="720" height="200" style="background-color: #e0f7fa; border-radius: 8px;"></canvas>
+
+<!-- Momentum vs Time Graph -->
+<canvas id="graph" width="720" height="300" style="background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-top: 1.5rem;"></canvas>
+
+<script>
+  const massSlider = document.getElementById("massSlider");
+  const velocitySlider = document.getElementById("velocitySlider");
+  const forceSlider = document.getElementById("forceSlider");
+  const forceCheck = document.getElementById("forceCheck");
+  const forceControl = document.getElementById("forceControl");
+  const massLabel = document.getElementById("massLabel");
+  const velocityLabel = document.getElementById("velocityLabel");
+  const forceLabel = document.getElementById("forceLabel");
+  const momentumDisplay = document.getElementById("momentumDisplay");
+  const canvas = document.getElementById("carCanvas");
+  const ctx = canvas.getContext("2d");
+
+  const graphCanvas = document.getElementById("graph");
+  const gctx = graphCanvas.getContext("2d");
+
+  let momentumHistory = [];
+
+  let car = {
+    x: 50,
+    y: 100,
+    mass: 5,
+    velocity: 10
+  };
+
+  function drawCar() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const size = 20 + car.mass * 2;
+    ctx.fillStyle = "#0077b6";
+    ctx.fillRect(car.x, car.y - size/2, size, size);
+  }
+
+  function drawGraph() {
+    // Clear the graph canvas
+    gctx.clearRect(0, 0, graphCanvas.width, graphCanvas.height);
+
+    // Draw axes
+    gctx.strokeStyle = "#888";
+    gctx.lineWidth = 1;
+    gctx.beginPath();
+    // X axis
+    gctx.moveTo(40, graphCanvas.height - 30);
+    gctx.lineTo(graphCanvas.width - 20, graphCanvas.height - 30);
+    // Y axis
+    gctx.moveTo(40, 20);
+    gctx.lineTo(40, graphCanvas.height - 30);
+    gctx.stroke();
+
+    // Labels
+    gctx.fillStyle = "#333";
+    gctx.font = "12px Roboto, sans-serif";
+    gctx.fillText("Time →", graphCanvas.width - 70, graphCanvas.height - 10);
+    gctx.fillText("Momentum (kg·m/s)", 5, 15);
+
+    if (momentumHistory.length < 2) return;
+
+    // Settings
+    const maxMomentum = 400; // adjust max momentum for y-axis scale
+    const graphHeight = graphCanvas.height - 50;
+    const graphWidth = graphCanvas.width - 60;
+
+    // Draw line graph of momentum
+    gctx.strokeStyle = "#ef476f";
+    gctx.lineWidth = 2;
+    gctx.beginPath();
+
+    momentumHistory.forEach((momentum, index) => {
+      let x = 40 + (index / (momentumHistory.length - 1)) * graphWidth;
+      // Map momentum from -maxMomentum..+maxMomentum to y coordinate
+      let y = graphCanvas.height - 30 - ((momentum + maxMomentum) / (2 * maxMomentum)) * graphHeight;
+      if (index === 0) {
+        gctx.moveTo(x, y);
+      } else {
+        gctx.lineTo(x, y);
+      }
+    });
+
+    gctx.stroke();
+
+    // Draw a horizontal center line at zero momentum
+    gctx.strokeStyle = "#666";
+    gctx.lineWidth = 1;
+    gctx.setLineDash([]);
+    let zeroY = graphCanvas.height - 30 - (maxMomentum / (2 * maxMomentum)) * graphHeight;
+    gctx.beginPath();
+    gctx.moveTo(40, zeroY);
+    gctx.lineTo(graphCanvas.width - 20, zeroY);
+    gctx.stroke();
+    gctx.setLineDash([]);
+  }
+
+  function update() {
+    // Force-enabled velocity update
+    if (forceCheck.checked) {
+      const acceleration = parseFloat(forceSlider.value) / car.mass;
+      car.velocity += acceleration * 0.1; // small time step
+      // Also update velocity slider and label to keep in sync
+      velocitySlider.value = car.velocity.toFixed(2);
+      velocityLabel.textContent = velocitySlider.value;
+    }
+
+    car.x += car.velocity * 0.5;
+    if (car.x > canvas.width) car.x = -50;
+    if (car.x < -50) car.x = canvas.width;
+
+    drawCar();
+
+    const momentum = car.mass * car.velocity;
+    momentumDisplay.textContent = `Momentum: ${momentum.toFixed(2)} kg·m/s`;
+
+    // Update history
+    momentumHistory.push(momentum);
+    if (momentumHistory.length > 200) momentumHistory.shift();
+
+    drawGraph();
+  }
+
+  function animate() {
+    update();
+    requestAnimationFrame(animate);
+  }
+
+  // Event Listeners
+  massSlider.oninput = () => {
+    car.mass = parseFloat(massSlider.value);
+    massLabel.textContent = massSlider.value;
+  };
+
+  velocitySlider.oninput = () => {
+    car.velocity = parseFloat(velocitySlider.value);
+    velocityLabel.textContent = velocitySlider.value;
+  };
+
+  forceSlider.oninput = () => {
+    forceLabel.textContent = forceSlider.value;
+  };
+
+  forceCheck.onchange = () => {
+    forceControl.style.display = forceCheck.checked ? "block" : "none";
+  };
+
+  drawCar();
+  animate();
+</script>
+
+
+  </div>
+</body>
+</html>

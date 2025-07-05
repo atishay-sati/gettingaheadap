@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newton’s Second Law</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #005f73;
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #0a9396;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #94d2bd;
+      padding-left: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .formula {
+      background: #e0f7fa;
+      border-left: 5px solid #028090;
+      padding: 1rem 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
+      color: #05445e;
+      user-select: all;
+    }
+    .example-box {
+      background: #caf0f8;
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      color: #023e8a;
+      font-size: 1.1rem;
+      margin: 2rem 0;
+      box-shadow: 0 6px 15px rgba(2, 48, 71, 0.2);
+    }
+    .interactive-section {
+      background: #ade8f4;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 3rem;
+      box-shadow: 0 5px 15px rgba(0, 94, 115, 0.25);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #0077b6;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 0.6rem;
+      border: 2px solid #00b4d8;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      transition: border-color 0.3s ease;
+    }
+    input[type="number"]:focus {
+      border-color: #0077b6;
+      outline: none;
+    }
+    button {
+      margin-top: 1.5rem;
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      width: 100%;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    .result {
+      margin-top: 1.2rem;
+      font-weight: 700;
+      color: #0077b6;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .formula {
+        font-size: 1.3rem;
+      }
+      .example-box {
+        font-size: 1rem;
+        padding: 1.2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Newton’s Second Law Lesson">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Newton’s Second Law</h1>
+
+    <p>
+      Newton’s Second Law explains the relationship between the force applied to an object, its mass, and the acceleration that results.
+      It forms the cornerstone of classical mechanics by quantifying how objects speed up, slow down, or change direction when forces act upon them.
+    </p>
+
+    <h2>The Law in Mathematical Terms</h2>
+    <div class="formula" aria-label="Force equals mass times acceleration">
+      F = m × a
+    </div>
+    <p>
+      Where:
+    </p>
+    <ul>
+      <li><strong>F</strong> = Net force (Newtons, N)</li>
+      <li><strong>m</strong> = Mass (kilograms, kg)</li>
+      <li><strong>a</strong> = Acceleration (meters per second squared, m/s²)</li>
+    </ul>
+
+    <h2>Interpreting the Equation</h2>
+    <p>
+      This equation tells us that:
+    </p>
+    <ul>
+      <li>Applying a larger force causes greater acceleration.</li>
+      <li>An object with more mass accelerates less for the same force.</li>
+      <li>The acceleration points in the direction of the net force.</li>
+    </ul>
+
+    <h2>Units and Definitions</h2>
+    <p>
+      The Newton (N) is defined as the force needed to accelerate 1 kg of mass by 1 m/s²:
+    </p>
+    <div class="formula" aria-label="One Newton is one kilogram times one meter per second squared">
+      1 N = 1 kg × 1 m/s²
+    </div>
+
+    <h2>Example Problem</h2>
+    <div class="example-box" aria-label="Example problem for Newton’s Second Law">
+      <p><strong>Question:</strong> A 5 kg object is pushed with a net force of 20 N. What is its acceleration?</p>
+      <p><strong>Solution:</strong></p>
+      <p>Use the rearranged formula to solve for acceleration:</p>
+      <div class="formula" aria-label="Acceleration equals force divided by mass">
+        a = F / m = 20 N / 5 kg = 4 m/s²
+      </div>
+      <p>The object accelerates at 4 meters per second squared.</p>
+    </div>
+
+    <h2>Applications in Real Life</h2>
+    <p>Newton’s Second Law explains many everyday phenomena:</p>
+    <ul>
+      <li>Why heavier cars need stronger engines to accelerate.</li>
+      <li>How athletes push off the ground to jump higher.</li>
+      <li>Why astronauts feel weightless when forces balance out in orbit.</li>
+    </ul>
+
+    <h2>Common Confusions</h2>
+    <ul>
+      <li><strong>Force is not the same as acceleration.</strong> Force causes acceleration but they’re distinct physical quantities.</li>
+      <li><strong>Mass and weight differ.</strong> Mass is the amount of matter, weight is gravitational force on that matter.</li>
+      <li><strong>Acceleration direction matters.</strong> It aligns with the net force direction, even if the object slows down.</li>
+    </ul>
+
+    <h2>Try It Yourself: Calculate Force</h2>
+    <p>Input the mass and acceleration below to calculate the net force:</p>
+    <section class="interactive-section" aria-label="Interactive force calculator">
+      <label for="massInput">Mass (kg):</label>
+      <input type="number" id="massInput" placeholder="Enter mass" min="0" step="any" aria-required="true" />
+
+      <label for="accelerationInput">Acceleration (m/s²):</label>
+      <input type="number" id="accelerationInput" placeholder="Enter acceleration" step="any" aria-required="true" />
+
+      <button id="calculateButton" aria-label="Calculate force">Calculate</button>
+
+      <p id="result" class="result" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script>
+    const massInput = document.getElementById('massInput');
+    const accelInput = document.getElementById('accelerationInput');
+    const calculateButton = document.getElementById('calculateButton');
+    const result = document.getElementById('result');
+
+    calculateButton.addEventListener('click', () => {
+      const mass = parseFloat(massInput.value);
+      const acceleration = parseFloat(accelInput.value);
+
+      if (isNaN(mass) || mass <= 0) {
+        result.textContent = 'Please enter a valid positive mass.';
+        result.style.color = '#d62828';
+        return;
+      }
+      if (isNaN(acceleration)) {
+        result.textContent = 'Please enter a valid acceleration.';
+        result.style.color = '#d62828';
+        return;
+      }
+
+      const force = mass * acceleration;
+      result.style.color = '#0077b6';
+      result.textContent = `Net Force: ${force.toFixed(2)} N`;
+    });
+  </script>
+</body>
+</html>

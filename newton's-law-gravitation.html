@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newton’s Law of Universal Gravitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      border-top: 3px solid #3b82f6;
+      padding-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    table thead tr {
+      background-color: #3b82f6;
+      color: white;
+    }
+    table th, table td {
+      padding: 0.6rem;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: middle;
+    }
+    /* Simulator styles */
+    .simulator {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 3px solid #3b82f6;
+    }
+    .simulator h2 {
+      margin-bottom: 1rem;
+    }
+    .controls label {
+      display: block;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .controls input[type="number"] {
+      width: 120px;
+      padding: 0.3rem 0.5rem;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #gravityCanvas {
+      display: block;
+      margin: 1.5rem auto;
+      background: #e0f2fe;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      max-width: 100%;
+      height: 300px;
+    }
+    #forceOutput {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #0077b6;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0077b6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #005f87;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Newton’s Law of Universal Gravitation</h1>
+
+    <p>Before, in dynamics, we only used the formula F = mg. This formula can only be used when we are in the Earth's atmosphere. But what do we use when we exit our atmosphere?</p>
+
+    <p>Newton, along with his other formulas, gave a formula that would be known as the universal gravitational force:</p>
+
+    <div class="formula-box">
+      \[
+      F_g = G \frac{m_1 m_2}{r^2}
+      \]
+    </div>
+
+    <ul>
+      <li>\( F \): gravitational force between two masses</li>
+      <li>\( G = 6.674 \times 10^{-11} \, \text{N} \cdot \text{m}^2/\text{kg}^2 \): universal gravitational constant (always this value)</li>
+      <li>\( m_1, m_2 \): the masses of the objects</li>
+      <li>\( r \): the distance between the centers of mass of the objects</li>
+    </ul>
+
+    <img src="gravitation-force-gif1.gif" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Key Concepts</h2>
+    <p>
+      This law is a cornerstone of classical mechanics. It applies universally — whether you're analyzing falling apples or orbiting satellites. Gravity is a long-range, central force that pulls masses together.
+    </p>
+    <p>
+      It’s an example of an inverse-square law: when distance doubles, gravitational force drops to a quarter. This mathematical pattern appears in electric forces, light intensity, and more.
+    </p>
+
+    <h2>Derivation of \( g = 9.8 \, \text{m/s}^2 \) from Universal Gravitation</h2>
+
+    <p>
+      The acceleration due to gravity \( g \) near the Earth's surface can be derived from Newton's Law of Universal Gravitation.
+      This derivation connects the gravitational force between Earth and an object to the object's acceleration as it falls.
+    </p>
+
+    <h3>Step 1: Newton’s Law of Universal Gravitation</h3>
+    <p>
+      Newton’s Law states that the gravitational force \( F_g \) between two masses \( m_1 \) and \( m_2 \) separated by distance \( r \) is:
+    </p>
+    <div class="formula-box">
+      \[
+      F_g = G \frac{m_1 m_2}{r^2}
+      \]
+    </div>
+    <p>
+      Here, \( G = 6.674 \times 10^{-11} \, \text{N} \cdot \text{m}^2/\text{kg}^2 \) is the universal gravitational constant.
+    </p>
+
+    <h3>Step 2: Force on an object near Earth's surface</h3>
+    <p>
+      Consider an object of mass \( m \) near the Earth's surface, and let Earth's mass be \( M_E \) and radius \( R_E \).
+      The gravitational force pulling the object downward is:
+    </p>
+    <div class="formula-box">
+      \[
+      F_g = G \frac{M_E \cdot m}{R_E^2}
+      \]
+    </div>
+    <p>
+      Since this force causes the object to accelerate downward, by Newton's second law:
+    </p>
+    <div class="formula-box">
+      \[
+      F_g = m \cdot g
+      \]
+    </div>
+
+    <h3>Step 3: Equate the two expressions for \( F_g \)</h3>
+    <p>
+      Setting the gravitational force equal to the force from Newton's second law, we get:
+    </p>
+    <div class="formula-box">
+      \[
+      m \cdot g = G \frac{M_E \cdot m}{R_E^2}
+      \]
+    </div>
+    <p>
+      We can cancel the object mass \( m \) on both sides since it is nonzero:
+    </p>
+    <div class="formula-box">
+      \[
+      g = G \frac{M_E}{R_E^2}
+      \]
+    </div>
+
+    <h3>Step 4: Substitute known values</h3>
+    <p>Using the known values for Earth's mass and radius:</p>
+    <ul>
+      <li>Mass of Earth, \( M_E = 5.972 \times 10^{24} \, \text{kg} \)</li>
+      <li>Radius of Earth, \( R_E = 6.371 \times 10^6 \, \text{m} \)</li>
+    </ul>
+    <p>
+      Substitute into the formula:
+    </p>
+    <div class="formula-box">
+      \[
+      g = (6.674 \times 10^{-11}) \times \frac{5.972 \times 10^{24}}{(6.371 \times 10^{6})^2}
+      \]
+    </div>
+
+    <h3>Step 5: Calculate \( g \)</h3>
+    <p>
+      Calculate the denominator:
+    </p>
+    <div class="formula-box">
+      \[
+      (6.371 \times 10^{6})^2 = 4.058 \times 10^{13}
+      \]
+    </div>
+    <p>Now, compute \( g \):</p>
+    <div class="formula-box">
+      \[
+      g = (6.674 \times 10^{-11}) \times \frac{5.972 \times 10^{24}}{4.058 \times 10^{13}} 
+      = \frac{3.986 \times 10^{14}}{4.058 \times 10^{13}} 
+      = 9.82 \, \text{m/s}^2
+      \]
+    </div>
+    <p class="note">
+      This matches the experimentally measured acceleration due to gravity near the Earth's surface.
+    </p>
+
+    <h2>Direction of Force</h2>
+    <p>
+      Gravity is always attractive and directed along the line connecting the two masses. Unlike electromagnetic forces, which can repel or attract, gravitational force has no repulsive counterpart.
+    </p>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>Calculating planetary or satellite orbits</li>
+      <li>Predicting the motion of celestial bodies</li>
+      <li>Understanding tides and variations in gravitational field strength</li>
+    </ul>
+
+    <h2>Common Misconceptions</h2>
+    <ul>
+      <li><strong>“Gravity only affects large objects.”</strong><br>In reality, gravity acts between all objects with mass, regardless of size. The effect is just extremely weak at small scales.</li>
+      <li><strong>“Gravity doesn’t act in space.”</strong><br>In fact, space is full of gravitational interactions. Orbits, galaxies, and black holes are all governed by gravity.</li>
+      <li><strong>“The Earth’s gravity stops at the atmosphere.”</strong><br>Gravity extends infinitely — it just gets weaker with distance. Even astronauts in orbit are constantly falling toward Earth.</li>
+      <li><strong>“Gravity is the same everywhere on Earth.”</strong><br>Local variations in altitude, geology, and latitude affect the strength of gravity slightly.</li>
+    </ul>
+
+    <h2>Historical Context: Newton’s Discovery Story</h2>
+    <p>
+      The famous story goes that Sir Isaac Newton was inspired to formulate his theory of gravitation after seeing an apple fall from a tree. Sitting in his garden, he wondered why apples always fall straight down instead of sideways or upwards.
+    </p>
+    <p>
+      Newton realized the force pulling the apple downward might also be responsible for keeping the Moon in orbit around Earth. He reasoned that gravity must extend far beyond the Earth’s surface and that its strength decreases with distance.
+    </p>
+    <p>
+      By combining observation, mathematics, and physics, Newton formulated the inverse-square law of gravitation, unifying celestial and terrestrial mechanics into one universal law. This discovery revolutionized science and remains fundamental to physics today.
+    </p>
+
+    <h2>Example Calculation</h2>
+    <p>
+      What is the gravitational force between a 5 kg mass and a 1000 kg mass 2 meters apart?
+    </p>
+    <div class="formula-box">
+      \[
+      F = G \frac{(5)(1000)}{2^2} = (6.674 \times 10^{-11}) \cdot \frac{5000}{4} = 8.34 \times 10^{-8} \, \text{N}
+      \]
+    </div>
+    <p>
+      Although tiny, this force is measurable with sensitive equipment and governs orbits of moons, planets, and satellites.
+    </p>
+    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background-color: #3b82f6; color: white;">
+          <th style="padding: 0.6rem; border: 1px solid #ddd;">Formula</th>
+          <th style="padding: 0.6rem; border: 1px solid #ddd;">Use When</th>
+          <th style="padding: 0.6rem; border: 1px solid #ddd;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.6rem; border: 1px solid #ddd;"><code>F = mg</code></td>
+          <td style="padding: 0.6rem; border: 1px solid #ddd;">Near Earth’s surface or similar large bodies</td>
+          <td style="padding: 0.6rem; border: 1px solid #ddd;">Assumes constant acceleration due to gravity; uniform field</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.6rem; border: 1px solid #ddd;">
+            \[
+            F = G \frac{m_1 m_2}{r^2}
+            \]
+          </td>
+          <td style="padding: 0.6rem; border: 1px solid #ddd;">Any two masses at any distance</td>
+          <td style="padding: 0.6rem; border: 1px solid #ddd;">Exact calculation of gravitational force using actual distance</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="summary">Summary</h2>
+    <p>
+      Newton’s Law of Universal Gravitation states that every mass attracts every other mass with a force proportional to the product of their masses and inversely proportional to the square of the distance between them. This force is always attractive and acts over infinite distances. It underpins much of classical physics and astronomy, explaining motions from falling objects to planetary orbits.
+    </p>
+
+    <!-- Start of Integrated Simulator -->
+    <div class="simulator">
+      <h2>Interactive Gravitational Force Simulator</h2>
+      <p>Adjust masses and distance to see how the gravitational force changes.</p>
+      <div class="controls">
+        <label>Mass 1 (kg): <input type="number" id="mass1" value="10" min="1" max="10000" step="1"></label>
+        <label>Mass 2 (kg): <input type="number" id="mass2" value="10" min="1" max="10000" step="1"></label>
+        <label>Distance (m): <input type="number" id="distance" value="100" min="0.001" max="10000" step="0.001"></label>
+      </div>
+      <canvas id="gravityCanvas" width="600" height="300"></canvas>
+      <p id="forceOutput"></p>
+    </div>
+    <!-- End of Integrated Simulator -->
+
+  </div>
+
+  <script>
+    const G = 6.67430e-11; // gravitational constant
+
+    const canvas = document.getElementById('gravityCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function drawObjects(m1, m2, r, F) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const x1 = 150;
+      const x2 = 450;
+      const y = canvas.height / 2;
+
+      // Mass radius scales logarithmically for better visuals
+      const r1 = 10 + Math.log10(m1 + 1) * 5;
+      const r2 = 10 + Math.log10(m2 + 1) * 5;
+
+      // Draw mass 1
+      ctx.beginPath();
+      ctx.arc(x1, y, r1, 0, Math.PI * 2);
+      ctx.fillStyle = 'blue';
+      ctx.fill();
+      ctx.closePath();
+      ctx.fillStyle = 'black';
+      ctx.fillText(`m1 = ${m1} kg`, x1 - 30, y - r1 - 15);
+
+      // Draw mass 2
+      ctx.beginPath();
+      ctx.arc(x2, y, r2, 0, Math.PI * 2);
+      ctx.fillStyle = 'red';
+      ctx.fill();
+      ctx.closePath();
+      ctx.fillStyle = 'black';
+      ctx.fillText(`m2 = ${m2} kg`, x2 - 30, y - r2 - 15);
+
+      // Draw force arrow between masses (green)
+      ctx.beginPath();
+      ctx.moveTo(x1 + r1, y);
+      ctx.lineTo(x2 - r2, y);
+      ctx.strokeStyle = 'green';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.fillStyle = 'green';
+      ctx.fillText(`F = ${F.toExponential(2)} N`, (x1 + x2) / 2 - 40, y + 20);
+
+      // Calculate arrow length scaled by force (limit max length to 50 px)
+      // Increase max arrow length to 150 px
+const maxArrowLength = 150;
+// Keep logarithmic scaling for smoothness
+const arrowLength = Math.min(maxArrowLength, Math.log10(F + 1) * 30);
+
+      // Draw force vector on mass 1 (orange arrow pointing right)
+      ctx.strokeStyle = 'orange';
+      ctx.fillStyle = 'orange';
+      ctx.beginPath();
+      ctx.moveTo(x1, y);
+      ctx.lineTo(x1 + arrowLength, y);
+      ctx.stroke();
+
+      // Draw arrowhead for mass 1
+      ctx.beginPath();
+      ctx.moveTo(x1 + arrowLength, y);
+      ctx.lineTo(x1 + arrowLength - 7, y - 5);
+      ctx.lineTo(x1 + arrowLength - 7, y + 5);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillText('F→', x1 + arrowLength / 2 - 10, y - 10);
+
+      // Draw force vector on mass 2 (orange arrow pointing left)
+      ctx.beginPath();
+      ctx.moveTo(x2, y);
+      ctx.lineTo(x2 - arrowLength, y);
+      ctx.stroke();
+
+      // Draw arrowhead for mass 2
+      ctx.beginPath();
+      ctx.moveTo(x2 - arrowLength, y);
+      ctx.lineTo(x2 - arrowLength + 7, y - 5);
+      ctx.lineTo(x2 - arrowLength + 7, y + 5);
+      ctx.closePath();
+      ctx.fill();
+
+      ctx.fillText('←F', x2 - arrowLength / 2 - 15, y - 10);
+    }
+
+    function updateSimulation() {
+      // Get inputs and clamp values within specified ranges
+      let m1 = parseFloat(document.getElementById('mass1').value);
+      let m2 = parseFloat(document.getElementById('mass2').value);
+      let r = parseFloat(document.getElementById('distance').value);
+
+      // Clamp inputs to limits
+      m1 = Math.min(Math.max(m1, 1), 10000);
+      m2 = Math.min(Math.max(m2, 1), 10000);
+      r = Math.min(Math.max(r, 0.001), 10000);
+
+      // Update input values to reflect clamping (so user sees updated values)
+      document.getElementById('mass1').value = m1;
+      document.getElementById('mass2').value = m2;
+      document.getElementById('distance').value = r;
+
+      const F = (G * m1 * m2) / (r * r);
+      document.getElementById('forceOutput').innerText = `Gravitational Force: ${F.toExponential(2)} N`;
+      drawObjects(m1, m2, r, F);
+    }
+
+    ['mass1', 'mass2', 'distance'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateSimulation);
+    });
+
+    updateSimulation();
+  </script>
+</body>
+</html>

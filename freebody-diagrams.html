@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Body Diagrams - AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    ol li {
+      margin-bottom: 0.8rem;
+    }
+    figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #1e3a8a;
+    }
+    figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .image-placeholder {
+        height: 220px;
+        font-size: 0.9rem;
+      }
+    }
+    #fbd-game {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  #fbd-game h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fbd-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .fbd-options img {
+    width: 220px;
+    height: auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease;
+  }
+
+  .fbd-options img:hover {
+    transform: scale(1.05);
+    border-color: #0077b6;
+  }
+
+  #fbd-feedback {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #003049;
+    margin-top: 1rem;
+  }
+
+  #fbd-game button {
+    padding: 0.6rem 1.2rem;
+    background-color: #0077b6;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  #fbd-game button:hover {
+    background-color: #005f87;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <script>
+  const questions = [
+    {
+      prompt: "A box is sliding to the right across a rough surface and slowing down due to friction.",
+      correctIndex: 2,
+      options: ["placeholder1.png", "placeholder2.png", "placeholder3.png"]
+    },
+    {
+      prompt: "A mass is hanging vertically by 2 ropes at an angle, in static equilibrium.",
+      correctIndex: 1,
+      options: ["placeholder4.png", "placeholder5.png", "placeholder6.png"]
+    },
+    {
+      prompt: "A block is moving up on a rough inclined ramp.",
+      correctIndex: 0,
+      options: ["placeholder7.png", "placeholder8.png", "placeholder9.png"]
+    },
+    {
+      prompt: "Two blocks are connected by a rope and being pulled to the right (T2 is the rope between mass 1 and mass 2), accelerating on a frictionless surface. FBD on mass 1:",
+      correctIndex: 0,
+      options: ["placeholder10.png", "placeholder11.png", "placeholder12.png"]
+    },
+    {
+      prompt: "A book is being pushed on a wall and remains stationary",
+      correctIndex: 1,
+      options: ["placeholder13.png", "placeholder14.png", "placeholder15.png"]
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+  let answered = false;
+
+  function loadQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById("fbd-question").textContent = q.prompt;
+  const optionsContainer = document.querySelector(".fbd-options");
+
+  // Clear previous images
+  optionsContainer.innerHTML = "";
+
+  // Create new image elements for each option
+  q.options.forEach((src, i) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `Option ${i + 1}`;
+    img.style.cursor = "pointer";
+    img.style.border = "3px solid #ccc";
+    img.style.margin = "10px";
+    img.style.width = "200px"; // adjust size as needed
+    img.style.height = "auto";
+    img.onclick = () => checkAnswer(i);
+    optionsContainer.appendChild(img);
+  });
+
+  document.getElementById("fbd-feedback").textContent = "";
+  document.querySelector("#fbd-game button").style.display = "none";
+  answered = false;
+}
+
+  function checkAnswer(selectedIndex) {
+    if (answered) return;
+    const q = questions[currentQuestion];
+    const feedback = document.getElementById("fbd-feedback");
+    const imgs = document.querySelectorAll(".fbd-options img");
+
+    answered = true;
+
+    if (selectedIndex === q.correctIndex) {
+      feedback.textContent = "✅ Correct!";
+      feedback.style.color = "#2a9d8f";
+      score++;
+      imgs[selectedIndex].style.borderColor = "#2a9d8f";
+    } else {
+      feedback.textContent = "❌ Incorrect. Try the next question.";
+      feedback.style.color = "#e63946";
+      imgs[selectedIndex].style.borderColor = "#e63946";
+      imgs[q.correctIndex].style.borderColor = "#2a9d8f";
+    }
+
+    imgs.forEach(img => img.style.pointerEvents = "none");
+    document.querySelector("#fbd-game button").style.display = "inline-block";
+  }
+
+  function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+    } else {
+      showScore();
+    }
+  }
+  
+
+  function showScore() {
+    document.getElementById("fbd-question").textContent = `🎉 Game Over! You scored ${score} out of ${questions.length}.`;
+    document.querySelector(".fbd-options").innerHTML = "";
+    document.getElementById("fbd-feedback").textContent = "";
+    document.querySelector("#fbd-game button").style.display = "none";
+    document.getElementById("restart-button").style.display = "inline-block";
+    }
+  function restartGame() {
+    currentQuestion = -1;
+    score = 0;
+    document.getElementById("restart-button").style.display = "none";
+    document.getElementById("fbd-feedback").textContent = "";
+    document.querySelector("#fbd-game button").style.display = "inline-block";
+    nextQuestion();
+    }
+
+  window.addEventListener("DOMContentLoaded", loadQuestion);
+</script>
+</head>
+<body>
+    
+  <main class="container">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Free Body Diagrams (FBDs)</h1>
+
+    <p>
+      A <strong>Free Body Diagram</strong> is a visual representation of all the external forces acting on a single object. It helps isolate the object and focus only on the relevant interactions, making it easier to apply Newton's Laws.
+    </p>
+
+    <h2>What is a Free Body Diagram?</h2>
+    <p>
+      A Free Body Diagram shows an object (usually a box or dot) and all the forces acting on it, represented by arrows. Each arrow points in the direction the force acts and is labeled with the type of force (e.g., <em>F<sub>g</sub></em> for gravity, <em>F<sub>N</sub></em> for normal force, etc.).
+    </p>
+
+    <figure>
+      <div>
+        <img src="FBD1.png" alt="Descriptive Alt Text">
+      </div>
+      <figcaption>Example: A box on a flat surface with gravity, normal force, and friction.</figcaption>
+    </figure>
+
+    <h2>Steps to Draw a Free Body Diagram</h2>
+    <ol>
+      <li><strong>Identify the object</strong> you’re focusing on. Isolate it from the rest of the environment.</li>
+      <li><strong>Draw a dot or a simple box</strong> to represent the object.</li>
+      <li><strong>Draw arrows for each external force</strong> acting on the object. Start the arrow at the object.</li>
+      <li><strong>Label each arrow</strong> with the type of force (e.g., <em>F<sub>T</sub></em> for tension, <em>F<sub>f</sub></em> for friction).</li>
+      <li><strong>Ensure directions are accurate</strong>. Arrows must point in the actual direction the force is applied.</li>
+      <li><strong>DO NOT SHOW COMPONENTS UNLESS SPECIFICALLY ASKED</strong></li>
+    </ol>
+
+    <figure>
+      <div>
+        <img src="FBD2.png" alt="Descriptive Alt Text">
+      </div>
+      <figcaption>Example: A box on a ramp — shows components of gravity and normal force for visualization (don't do this on a test).</figcaption>
+    </figure>
+
+    <h2>Tips for Accuracy</h2>
+    <ul>
+      <li>Keep the diagram uncluttered and arrows proportional.</li>
+      <li>Use coordinate axes if needed for breaking forces into components.</li>
+      <li>Ignore internal forces — only draw forces acting **on** the object, not those it exerts.</li>
+    </ul>
+
+    <figure>
+      <div class="image-placeholder">
+        <img src="FBD3.png" alt="Descriptive Alt Text">
+      </div>
+      <figcaption>Example: Masses in a pulley system with tension and gravity. (shows components)</figcaption>
+    </figure>
+
+    <h2>🎮 Free Body Diagram Matching Game</h2>
+    <p>Read the situation below and click on the image that best represents the correct Free Body Diagram.</p>
+
+    <div id="fbd-game">
+    <h3 id="fbd-question">Loading...</h3>
+    <div class="fbd-options">
+        <img src="placeholder1.jpg" alt="Option 1" onclick="checkAnswer(0)">
+        <img src="placeholder2.jpg" alt="Option 2" onclick="checkAnswer(1)">
+        <img src="placeholder3.jpg" alt="Option 3" onclick="checkAnswer(2)">
+    </div>
+    <p id="fbd-feedback"></p>
+    <button onclick="nextQuestion()">Next Question</button>
+    <button id="restart-button" style="display:none;" onclick="restartGame()">🔁 Restart Game</button>
+
+    </div>
+    
+  </main>
+</body>
+</html>

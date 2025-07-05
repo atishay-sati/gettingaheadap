@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torque Definition</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 2rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .example {
+      background-color: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .slider-container {
+      margin-top: 1.5rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type=range] {
+      width: 300px;
+    }
+    .toggle-container {
+      margin-top: 1rem;
+      font-size: 1rem;
+    
+    }
+    #simulation-wrapper {
+  width: 420px; /* a bit wider than canvas + padding */
+  margin: 1rem auto 2rem; /* center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+    button {
+  width: 140px;
+  margin: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+.img-fluid-center {
+  width: 75%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Torque Definition</h1>
+
+    <p>
+      Torque is the rotational equivalent of force. It describes how a force causes an object to rotate about a specific axis or pivot point. The effectiveness of a force in producing rotation depends on the force's magnitude, direction, and where it is applied relative to the axis.
+    </p>
+
+    <img src="torque-with-angle.png" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <div class="formula-box">
+      $\tau = r F \sin \theta$
+    </div>
+
+    <p>Where:</p>
+    <ul>
+      <li>$\tau$ is torque (in N·m)</li>
+      <li>$r$ is the distance from the axis of rotation to the point where the force is applied</li>
+      <li>$F$ is the magnitude of the force</li>
+      <li>$\theta$ is the angle between the position vector and the force vector</li>
+    </ul>
+
+    <h2>Cross Product Form</h2>
+    <p>
+      Torque is more formally defined as the cross product of the position vector $\vec{r}$ and the force vector $\vec{F}$:
+    </p>
+
+    <div class="formula-box">
+      $\vec{\tau} = \vec{r} \times \vec{F}$
+    </div>
+
+    <p>
+      The magnitude of the torque is:
+    </p>
+
+    <div class="formula-box">
+      $|\vec{\tau}| = r F \sin \theta$
+    </div>
+
+    <p>
+      The direction of $\vec{\tau}$ is perpendicular to the plane formed by $\vec{r}$ and $\vec{F}$, determined using the right-hand rule.
+    </p>
+
+    <img src="torque-cross-product.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Lever Arm Form</h2>
+    <p>
+      The lever arm is the perpendicular distance from the axis of rotation to the line of action of the force. Torque can also be calculated using:
+    </p>
+
+    <div class="formula-box">
+      $\tau = r_{\perp} \cdot F$
+    </div>
+
+    <p>
+      This form is especially useful when the perpendicular distance is known or easier to find than the angle.
+    </p>
+
+    <img src="torque-gif.gif" alt="Descriptive Alt Text" class="img-fluid-center">
+    <img src="torque-lever-arm.gif" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Example 1: Force Perpendicular to Lever Arm</h2>
+    <div class="example">
+      A force of 12 N is applied perpendicular to a wrench that is 0.25 m long. What is the torque produced?
+      <br><br>
+      $\theta = 90^\circ \Rightarrow \sin \theta = 1$<br>
+      $\tau = r F \sin \theta = 0.25 \cdot 12 \cdot 1 = 3.0\ \text{N·m}$
+    </div>
+
+    <h2>Example 2: Force at an Angle</h2>
+    <div class="example">
+      A 20 N force is applied at an angle of $60^\circ$ to a door that is 0.5 m wide. What is the torque about the hinge?
+      <br><br>
+      $\tau = r F \sin \theta = 0.5 \cdot 20 \cdot \sin(60^\circ)$<br>
+      $\tau = 10 \cdot 0.866 = 8.66\ \text{N·m}$
+    </div>
+
+    <h2>Example 3: Using Lever Arm</h2>
+    <div class="example">
+      A 15 N force acts on a rod such that the perpendicular distance from the axis of rotation to the line of force is 0.4 m. What is the torque?
+      <br><br>
+      $\tau = r_\perp \cdot F = 0.4 \cdot 15 = 6.0\ \text{N·m}$
+    </div>
+
+    <h2>VERY HELPFUL VIDEO:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jg4e8W44_E4?si=OMQRvNEbPDFsPRlz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Summary and Takeaways</h2>
+    <ul>
+      <li><strong>Torque</strong> quantifies the ability of a force to cause rotation around an axis.</li>
+      <li>It depends on the magnitude of the force, the distance from the axis, and the angle of application.</li>
+      <li>The cross product $\vec{\tau} = \vec{r} \times \vec{F}$ provides the direction and magnitude of torque in vector form.</li>
+      <li>Maximum torque occurs when the force is applied perpendicular to the position vector ($\theta = 90^\circ$).</li>
+      <li>The <strong>lever arm method</strong> simplifies torque calculations when the perpendicular distance is known: $\tau = r_\perp \cdot F$.</li>
+      <li>Use the right-hand rule to determine the direction of torque vectors.</li>
+    </ul>
+
+    <div id="simulation-wrapper">
+
+    
+
+    <h1>Torque Disk Simulation</h1>
+
+  <div id="simulation-wrapper">
+    <canvas id="diskCanvas" width="400" height="400"></canvas>
+
+    <div class="slider-container">
+      <label for="force">Force Magnitude (N): <span id="forceVal">0</span></label><br />
+      <input type="range" id="force" min="0" max="5" step="0.1" value="0" />
+    </div>
+
+    <div class="slider-container">
+      <label for="distance">Distance from Center (m): <span id="distanceVal">0.5</span></label><br />
+      <input type="range" id="distance" min="0" max="1" step="0.01" value="0.5" />
+    </div>
+
+    <div class="slider-container">
+      <label for="angle">Force Angle Relative to Lever Arm (degrees): <span id="angleVal">90</span></label><br />
+      <input type="range" id="angle" min="0" max="360" step="1" value="90" />
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('diskCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 150;
+
+    const forceSlider = document.getElementById('force');
+    const distanceSlider = document.getElementById('distance');
+    const angleSlider = document.getElementById('angle');
+
+    const forceVal = document.getElementById('forceVal');
+    const distanceVal = document.getElementById('distanceVal');
+    const angleVal = document.getElementById('angleVal');
+
+    let force = parseFloat(forceSlider.value);
+    let r = parseFloat(distanceSlider.value);
+    let angleDeg = parseFloat(angleSlider.value);
+
+    forceVal.textContent = force.toFixed(1);
+    distanceVal.textContent = r.toFixed(2);
+    angleVal.textContent = angleDeg.toFixed(0);
+
+    forceSlider.oninput = () => {
+      force = parseFloat(forceSlider.value);
+      forceVal.textContent = force.toFixed(1);
+    };
+
+    distanceSlider.oninput = () => {
+      r = parseFloat(distanceSlider.value);
+      distanceVal.textContent = r.toFixed(2);
+    };
+
+    angleSlider.oninput = () => {
+      angleDeg = parseFloat(angleSlider.value);
+      angleVal.textContent = angleDeg.toFixed(0);
+    };
+
+    const I = 10; // heavy disk moment of inertia
+    let omega = 0; // angular velocity (rad/s)
+    let theta = 0; // angular position (rad)
+    let time = 0;
+
+    function drawArrow(fromX, fromY, toX, toY, color = "red") {
+      const headLength = 10;
+      const dx = toX - fromX;
+      const dy = toY - fromY;
+      const angle = Math.atan2(dy, dx);
+      ctx.beginPath();
+      ctx.moveTo(fromX, fromY);
+      ctx.lineTo(toX, toY);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(toX, toY);
+      ctx.lineTo(toX - headLength * Math.cos(angle - Math.PI / 6), toY - headLength * Math.sin(angle - Math.PI / 6));
+      ctx.lineTo(toX - headLength * Math.cos(angle + Math.PI / 6), toY - headLength * Math.sin(angle + Math.PI / 6));
+      ctx.lineTo(toX, toY);
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+
+    function drawDisk(angleRad) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw disk circle
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+      ctx.fillStyle = '#e0f2fe';
+      ctx.fill();
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = '#3b82f6';
+      ctx.stroke();
+
+      // Draw spokes
+      const numSpokes = 12;
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#1e3a8a';
+      for (let i = 0; i < numSpokes; i++) {
+        const spokeAngle = angleRad + (i * 2 * Math.PI) / numSpokes;
+        const xEnd = centerX + radius * Math.cos(spokeAngle);
+        const yEnd = centerY + radius * Math.sin(spokeAngle);
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(xEnd, yEnd);
+        ctx.stroke();
+      }
+
+      // Lever arm points radially outward from center
+      const leverArmAngle = angleRad - Math.PI / 2;
+      const appX = centerX + radius * r * Math.cos(leverArmAngle);
+      const appY = centerY + radius * r * Math.sin(leverArmAngle);
+
+      // Draw lever arm dotted line
+      ctx.beginPath();
+      ctx.setLineDash([6, 6]);
+      ctx.moveTo(centerX, centerY);
+      ctx.lineTo(appX, appY);
+      ctx.strokeStyle = '#7777aa';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Force vector angle relative to lever arm, flipped 180°
+      const forceAngleRad = leverArmAngle + Math.PI + (angleDeg * Math.PI / 180);
+
+      // Calculate arrow endpoint based on force magnitude
+      const arrowLength = force * 30;
+      const tipX = appX + arrowLength * Math.cos(forceAngleRad);
+      const tipY = appY + arrowLength * Math.sin(forceAngleRad);
+
+      // Draw force arrow
+      drawArrow(appX, appY, tipX, tipY, "red");
+
+      // Calculate torque = r * F * sin(angle between force and lever arm)
+      // angle between lever arm and force is just angleDeg in radians
+      const torque = r * force * Math.sin(angleDeg * Math.PI / 180);
+
+      // Display torque and angular velocity
+      ctx.fillStyle = '#1e3a8a';
+      ctx.font = 'bold 18px Roboto, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(`Torque: ${torque.toFixed(2)} N·m`, centerX, canvas.height - 30);
+      ctx.fillText(`Angular Velocity: ${omega.toFixed(2)} rad/s`, centerX, canvas.height-10);
+    }
+
+    function animate(timestamp) {
+      if (!animate.lastTimestamp) animate.lastTimestamp = timestamp;
+      const dt = (timestamp - animate.lastTimestamp) / 1000;
+      animate.lastTimestamp = timestamp;
+
+      time += dt;
+
+      // Lever arm angle
+      const leverArmAngle = theta - Math.PI / 2;
+
+      // Force angle relative to lever arm, flipped 180°
+      const forceAngleRad = leverArmAngle + Math.PI + (angleDeg * Math.PI / 180);
+
+      // Calculate torque
+      const torque = -r * force * Math.sin(angleDeg * Math.PI / 180);
+
+      // Angular acceleration
+      const alpha = torque / I;
+
+      // Update angular velocity and angle
+      omega += -alpha * dt;
+      theta += -omega * dt;
+
+      drawDisk(theta);
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
+
+  </div>
+</body>
+</html>

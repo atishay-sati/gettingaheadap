@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angular Kinematic Equations (Constant α)</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    #canvas-container {
+  margin: 1rem auto 2rem; /* top auto bottom */
+  width: 400px;           /* match canvas width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  canvas {
+    
+    background: white;
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+  }
+  
+  
+  label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+  }
+  input[type="range"] {
+    width: 100%;
+  }
+  .value-display {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #005a9c;
+  }
+  #simulation-wrapper {
+  width: 420px; /* a bit wider than canvas + padding */
+  margin: 1rem auto 2rem; /* center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-container {
+  width: 100%; /* fill wrapper width */
+  margin: 0.5rem 0;
+}
+
+button {
+  width: 140px;
+  margin: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2563eb;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.6);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #a5b4fc;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Angular Kinematic Equations (Constant \( \alpha \))</h1>
+
+    <p>
+      When angular acceleration \( \alpha \) is constant, we can use a set of equations — known as the angular kinematic equations — to solve problems in rotational motion. These equations are direct analogs of the linear kinematics equations you're familiar with.
+    </p>
+
+    <h2>The Angular Kinematic Equations</h2>
+
+    <div class="formula-box">
+      \( \omega = \omega_0 + \alpha t \)
+    </div>
+    <p>This relates angular velocity to time under constant angular acceleration.</p>
+
+    <div class="formula-box">
+      \( \theta = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2 \)
+    </div>
+    <p>This gives angular displacement based on time, initial angular velocity, and angular acceleration.</p>
+
+    <div class="formula-box">
+      \( \omega^2 = \omega_0^2 + 2 \alpha (\theta - \theta_0) \)
+    </div>
+    <p>This equation connects angular displacement and angular velocity without explicitly involving time.</p>
+
+    <h2>Analogous Linear Forms</h2>
+    <p>These equations are directly analogous to their linear counterparts:</p>
+    <ul>
+      <li>\( v = v_0 + a t \)</li>
+      <li>\( x = x_0 + v_0 t + \frac{1}{2} a t^2 \)</li>
+      <li>\( v^2 = v_0^2 + 2 a (x - x_0) \)</li>
+    </ul>
+    <p>This close connection makes it easier to learn rotational motion by leveraging what you already know from linear motion.</p>
+
+    <h2>Relating Rotational and Linear Quantities</h2>
+    <p>Linear and rotational quantities are linked through the radius \( r \) of the circular path:</p>
+    <ul>
+      <li>Linear displacement \( x \) is related to angular displacement \( \theta \) by \( x = r \theta \)</li>
+      <li>Linear velocity \( v \) is related to angular velocity \( \omega \) by \( v = r \omega \)</li>
+      <li>Linear acceleration \( a \) is related to angular acceleration \( \alpha \) by \( a = r \alpha \)</li>
+    </ul>
+
+    <h2>Example Problem: Rotational to Linear Conversion</h2>
+    <p>
+      A wheel of radius \( r = 0.5 \, \text{m} \) starts from rest and accelerates with a constant angular acceleration \( \alpha = 2 \, \text{rad/s}^2 \). Calculate:
+    </p>
+    <ol>
+      <li>The angular velocity after 4 seconds.</li>
+      <li>The angular displacement after 4 seconds.</li>
+      <li>The linear velocity and linear displacement of a point on the edge of the wheel after 4 seconds.</li>
+    </ol>
+
+    <div class="formula-box">
+      \(\omega = \omega_0 + \alpha t = 0 + 2 \times 4 = 8 \, \text{rad/s}\)
+    </div>
+
+    <div class="formula-box">
+      \(\theta = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2 = 0 + 0 + \frac{1}{2} \times 2 \times 16 = 16 \, \text{rad}\)
+    </div>
+
+    <div class="formula-box">
+      \(v = r \omega = 0.5 \times 8 = 4 \, \text{m/s}\)
+    </div>
+
+    <div class="formula-box">
+      \(x = r \theta = 0.5 \times 16 = 8 \, \text{m}\)
+    </div>
+
+    <p>
+      So after 4 seconds, the point on the edge of the wheel moves with a linear velocity of 4 m/s and has traveled 8 meters along its circular path.
+    </p>
+
+    <h2>Key Takeaway</h2>
+    <p>
+      By relating angular and linear quantities through the radius, you can solve rotational problems and directly find the corresponding linear motion of points on a rotating object.
+    </p>
+    <h1>Spinning Disk Simulation</h1>
+
+<div id="simulation-wrapper">
+  <div id="canvas-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <canvas id="diskCanvas" width="400" height="400"></canvas>
+  </div>
+
+  <div class="slider-container">
+    <label for="omega0">Initial Angular Velocity \( \omega_0 \) (rad/s): <span id="omega0Val">0</span></label>
+    <input type="range" id="omega0" min="-5" max="5" step="0.1" value="0" />
+  </div>
+
+  <div class="slider-container">
+    <label for="alpha">Angular Acceleration \( \alpha \) (rad/s²): <span id="alphaVal">0</span></label>
+    <input type="range" id="alpha" min="-5" max="5" step="0.1" value="0" />
+  </div>
+
+  <button id="resetBtn">Reset Time</button>
+  <button id="resumeBtn" disabled>Resume</button>
+</div>
+
+<script>
+  const canvas = document.getElementById('diskCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const radius = 150;
+  const centerX = canvas.width / 2;
+  const centerY = canvas.height / 2;
+
+  const omega0Slider = document.getElementById('omega0');
+  const alphaSlider = document.getElementById('alpha');
+  const omega0Val = document.getElementById('omega0Val');
+  const alphaVal = document.getElementById('alphaVal');
+  const resetBtn = document.getElementById('resetBtn');
+  const resumeBtn = document.getElementById('resumeBtn');
+
+  let omega0 = parseFloat(omega0Slider.value);
+  let alpha = parseFloat(alphaSlider.value);
+  let time = 0;
+  let animationRunning = true;
+  let omega = 0;
+
+  omega0Val.textContent = omega0.toFixed(1);
+  alphaVal.textContent = alpha.toFixed(1);
+
+  omega0Slider.oninput = () => {
+    omega0 = parseFloat(omega0Slider.value);
+    omega0Val.textContent = omega0.toFixed(1);
+    if (!animationRunning) resumeBtn.disabled = false;
+  };
+
+  alphaSlider.oninput = () => {
+    alpha = parseFloat(alphaSlider.value);
+    alphaVal.textContent = alpha.toFixed(1);
+    if (!animationRunning) resumeBtn.disabled = false;
+  };
+
+  resetBtn.onclick = () => {
+    time = 0;
+    animationRunning = true;
+    resumeBtn.disabled = true;
+    animate.lastTimestamp = null;
+    requestAnimationFrame(animate);
+  };
+
+  resumeBtn.onclick = () => {
+    animationRunning = true;
+    resumeBtn.disabled = true;
+    animate.lastTimestamp = null;
+    requestAnimationFrame(animate);
+  };
+
+  function drawDisk(angle) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw disk circle
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+  ctx.fillStyle = '#90cdf4';
+  ctx.fill();
+  ctx.lineWidth = 4;
+  ctx.strokeStyle = '#3b82f6';
+  ctx.stroke();
+
+  // Draw spokes
+  const numSpokes = 12;
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#1e40af';
+  for (let i = 0; i < numSpokes; i++) {
+    const spokeAngle = angle + (i * 2 * Math.PI) / numSpokes - Math.PI / 2;
+    const xEnd = centerX + radius * Math.cos(spokeAngle);
+    const yEnd = centerY + radius * Math.sin(spokeAngle);
+
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(xEnd, yEnd);
+    ctx.stroke();
+  }
+
+  // Draw center black dot
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, 8, 0, 2 * Math.PI);
+  ctx.fillStyle = 'black';
+  ctx.fill();
+
+  // Draw red dot on rim
+  const redDotAngle = angle - Math.PI / 2;
+  const redX = centerX + radius * Math.cos(redDotAngle);
+  const redY = centerY + radius * Math.sin(redDotAngle);
+
+  ctx.beginPath();
+  ctx.arc(redX, redY, 5, 0, 2 * Math.PI);
+  ctx.fillStyle = 'red';
+  ctx.fill();
+
+  // Draw angular velocity and direction text
+  ctx.fillStyle = '#1e3a8a';
+  ctx.font = 'bold 18px Roboto, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(`Angular Velocity: ${omega.toFixed(2)} rad/s`, centerX, canvas.height - 30);
+
+  const directionText = omega > 0 ? 'Out of the page ↑' : omega < 0 ? 'Into the page ↓' : 'No rotation';
+  ctx.fillText(`Direction: ${directionText}`, centerX, canvas.height - 10);
+}
+
+
+  function animate(timestamp) {
+    if (!animationRunning) return;
+
+    if (!animate.lastTimestamp) animate.lastTimestamp = timestamp;
+    const delta = (timestamp - animate.lastTimestamp) / 1000;
+    animate.lastTimestamp = timestamp;
+
+    time += delta;
+
+    omega = omega0 + alpha * time;
+
+    if (Math.abs(omega) > 20) {
+      animationRunning = false;
+      resumeBtn.disabled = false;
+      return;
+    }
+
+    const theta = omega0 * time + 0.5 * alpha * time * time;
+
+    drawDisk(theta);
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+</script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acceleration-Time Graphs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2 {
+      color: #005a9c;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 1rem auto;
+      background: white;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+   <a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+  <h1>Acceleration-Time Graphs</h1>
+
+  <p>Acceleration-time graphs show how an object's acceleration changes over time. The area under the graph represents the change in velocity. Here are four common types of acceleration:</p>
+
+  <div class="section">
+    <h2>1. Zero Acceleration (Constant Velocity or at Rest)</h2>
+    <p>A horizontal line at zero acceleration indicates either constant velocity (object moving at steady speed) or the object is at rest (not moving at all). In both cases, there is no change in velocity over time.</p>
+    <canvas id="graph1" width="500" height="300"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>2. Constant Positive Acceleration</h2>
+    <p>A horizontal line above the time axis shows constant positive acceleration. The object's velocity increases at a steady rate in the positive direction.</p>
+    <canvas id="graph2" width="500" height="300"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>3. Constant Negative Acceleration</h2>
+    <p>A horizontal line below the time axis indicates constant negative acceleration (deceleration). The object's velocity decreases at a steady rate.</p>
+    <canvas id="graph3" width="500" height="300"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>4. Variable Acceleration</h2>
+    <p>A curved line shows changing acceleration. The slope of the acceleration-time graph represents the rate of change of acceleration (jerk).</p>
+    <canvas id="graph4" width="500" height="300"></canvas>
+  </div>
+
+  <script>
+  function drawGraph(canvasId, points, label) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw axes
+    ctx.strokeStyle = "#999";
+    ctx.beginPath();
+    ctx.moveTo(40, 260);
+    ctx.lineTo(460, 260); // x-axis (time)
+    ctx.moveTo(40, 260);
+    ctx.lineTo(40, 40);   // y-axis (acceleration)
+    ctx.stroke();
+
+    // Draw zero line for acceleration
+    ctx.strokeStyle = "#ccc";
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.moveTo(40, 150);
+    ctx.lineTo(460, 150);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Draw graph line
+    ctx.beginPath();
+    ctx.strokeStyle = "#0074D9";
+    ctx.lineWidth = 2;
+    points.forEach(([x, y], i) => {
+      const px = 40 + x * 40;
+      const py = 150 - y * 20; // Center around y=150 (zero acceleration)
+      if (i === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Draw labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Time (s)", 400, 280);
+    ctx.fillText("Acceleration (m/s²)", 10, 50);
+    ctx.fillText("0", 25, 155);
+  }
+
+  // Zero acceleration (horizontal line at zero)
+  drawGraph("graph1", [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0]], "Zero Acceleration");
+
+  // Constant positive acceleration (horizontal line above zero)
+  drawGraph("graph2", [[0, 2], [1, 2], [2, 2], [3, 2], [4, 2]], "Constant Positive Acceleration");
+
+  // Constant negative acceleration (horizontal line below zero)
+  drawGraph("graph3", [[0, -2], [1, -2], [2, -2], [3, -2], [4, -2]], "Constant Negative Acceleration");
+
+  // Variable acceleration (curved line)
+  const variableAccel = [];
+  for (let t = 0; t <= 4; t += 0.1) {
+    const a = 1 + 0.5 * t; // Linear increase in acceleration
+    variableAccel.push([t, a]);
+  }
+  drawGraph("graph4", variableAccel, "Variable Acceleration");
+</script>
+
+</body>
+</html> 

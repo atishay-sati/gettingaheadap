@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newton’s Third Law</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+  <!-- KaTeX CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+<!-- Auto-render -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ]
+  })">
+</script>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #f5f7fa;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #005f73;
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #0a9396;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #94d2bd;
+      padding-left: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .quote-box {
+      background: #caf0f8;
+      border-left: 5px solid #028090;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
+      color: #05445e;
+    }
+    .example-box {
+      background: #ade8f4;
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      color: #023e8a;
+      font-size: 1.1rem;
+      margin: 2rem 0;
+      box-shadow: 0 6px 15px rgba(2, 48, 71, 0.2);
+    }
+    .interactive-section {
+      background: #e0f7fa;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 3rem;
+      box-shadow: 0 5px 15px rgba(0, 94, 115, 0.25);
+      text-align: center;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .quote-box {
+        font-size: 1rem;
+      }
+      .example-box {
+        font-size: 1rem;
+        padding: 1.2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Newton’s Third Law Lesson">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Newton’s Third Law</h1>
+
+    <p>
+      Newton’s Third Law states that for every action, there is an equal and opposite reaction.
+      This fundamental principle means forces always come in pairs — when one object pushes or pulls another, the second object pushes or pulls back with the same strength but in the opposite direction.
+    </p>
+
+    <h2>The Law in Simple Terms</h2>
+    <div class="quote-box" aria-label="Newton's third law quote">
+      “To every action, there is always opposed an equal reaction.” — Isaac Newton
+    </div>
+
+    <h2>Understanding the Law</h2>
+    <p>
+      The key points are:
+    </p>
+    <ul>
+      <li>Action and reaction forces act on different objects.</li>
+      <li>They are equal in magnitude but opposite in direction.</li>
+      <li>They happen simultaneously.</li>
+    </ul>
+
+    <h2>Examples in Everyday Life</h2>
+    <div class="example-box" aria-label="Examples of Newton's third law">
+      <p><strong>Example 1:</strong> When you jump off a boat, you push the boat backward (action), and the boat pushes you forward (reaction).</p>
+      <p><strong>Example 2:</strong> When you push a wall, the wall pushes back on your hand with equal force.</p>
+      <p><strong>Example 3:</strong> Rockets propel forward by pushing exhaust gases backward at high speed.</p>
+    </div>
+
+    <h2>Common Misconceptions</h2>
+    <ul>
+      <li>Action and reaction forces do not cancel out because they act on different objects.</li>
+      <li>The forces are always present, even if there is no visible motion.</li>
+      <li>Equal and opposite forces mean equal force magnitudes, not necessarily equal effects (acceleration depends on mass).</li>
+    </ul>
+    <h2>Mathematical Expression</h2>
+<p>
+  Newton’s Third Law is expressed as:
+</p>
+<div class="quote-box">
+  $$
+  \vec{F}_{A \to B} = -\vec{F}_{B \to A}
+  $$
+</div>
+<p>
+  This means if object A exerts a force on object B, then object B exerts a force of <strong>equal magnitude and opposite direction</strong> on object A.
+</p>
+
+<h2>Relation to Newton’s Second Law</h2>
+<p>
+  While Newton’s Second Law (\( \vec{F}_{\text{net}} = m\vec{a} \)) deals with the <strong>net force on a single object</strong>, the Third Law deals with <strong>interactions between two objects</strong>. For example, if a car accelerates forward, its tires push backward on the road (action), and the road pushes forward on the tires (reaction), causing acceleration.
+</p>
+
+<h2>Free-Body Diagrams & Forces</h2>
+<ul>
+  <li>Action-reaction pairs never appear on the <em>same</em> free-body diagram.</li>
+  <li>When drawing FBDs, only include forces acting <em>on</em> the object of interest.</li>
+  <li>The presence of an equal and opposite force doesn’t mean an object is in equilibrium—acceleration depends on the net force acting on it.</li>
+</ul>
+
+<h2>Collision Forces</h2>
+<p>
+  During a collision, Newton’s Third Law ensures the forces between the two objects are equal in magnitude and opposite in direction—regardless of their masses:
+</p>
+<div class="quote-box">
+  $$
+  \vec{F}_{A \to B} = -\vec{F}_{B \to A}
+  $$
+</div>
+<p>
+  This principle supports the conservation of momentum: internal forces during collisions cancel out, and only external forces can change the system's momentum.
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZkVU-bj9bDk?si=EOXM3H1BtwOZfaZv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2>Explore Newton’s Third Law with Formulas</h2>
+<section class="interactive-section" aria-label="Formula Interactivity">
+  <p>Click a button to view how Newton’s Third Law applies in equations:</p>
+  <button onclick="showFormula('push')">Wall Push Example</button>
+  <button onclick="showFormula('boat')">Boat Jump Example</button>
+  <button onclick="showFormula('rocket')">Rocket Formula</button>
+  <button onclick="showFormula('collision')">Collision Forces</button>
+
+  <div id="formulaOutput" style="margin-top: 1.5rem; font-size: 1.15rem; color: #0077b6;"></div>
+</section>
+
+    <h2>Interactive Demo: Action-Reaction Force Pairs</h2>
+    <p>Click the buttons below to see examples of action and reaction force pairs and their descriptions.</p>
+    <section class="interactive-section" aria-label="Newton's third law interactive demo">
+      <button id="pushWallBtn" aria-describedby="descPushWall">Push Wall</button>
+      <button id="jumpBoatBtn" aria-describedby="descJumpBoat">Jump Off Boat</button>
+      <button id="rocketBtn" aria-describedby="descRocket">Rocket Propulsion</button>
+
+      <div id="description" style="margin-top:1.5rem; font-size:1.15rem; color:#0077b6;"></div>
+    </section>
+  </main>
+
+  <script>
+    const description = document.getElementById('description');
+    const pushWallBtn = document.getElementById('pushWallBtn');
+    const jumpBoatBtn = document.getElementById('jumpBoatBtn');
+    const rocketBtn = document.getElementById('rocketBtn');
+
+    pushWallBtn.addEventListener('click', () => {
+      description.textContent =
+        'When you push against a wall, the wall pushes back on your hand with an equal and opposite force.';
+    });
+
+    jumpBoatBtn.addEventListener('click', () => {
+      description.textContent =
+        'When you jump off a boat, you push the boat backward (action), and the boat pushes you forward (reaction).';
+    });
+
+    rocketBtn.addEventListener('click', () => {
+      description.textContent =
+        'A rocket moves forward by pushing exhaust gases backward at high speed, producing an equal and opposite reaction force that propels the rocket.';
+    });
+    function showFormula(example) {
+    const output = document.getElementById("formulaOutput");
+    switch (example) {
+      case "push":
+        output.innerHTML = "Pushing on a wall: <br><br><strong>F<sub>hand → wall</sub> = –F<sub>wall → hand</sub></strong>";
+        break;
+      case "boat":
+        output.innerHTML = "Jumping off a boat: <br><br><strong>F<sub>feet → boat</sub> = –F<sub>boat → feet</sub></strong>";
+        break;
+      case "rocket":
+        output.innerHTML = "Rocket propulsion (from conservation of momentum): <br><br><strong>F<sub>thrust</sub> = –v<sub>e</sub> · (dm/dt)</strong><br><em>(Tsiolkovsky rocket equation base)</em>";
+        break;
+      case "collision":
+        output.innerHTML = "Collision between two objects: <br><br><strong>F<sub>1 on 2</sub> = –F<sub>2 on 1</sub></strong><br>Even if m₁ ≠ m₂";
+        break;
+      default:
+        output.innerHTML = "";
+    }
+  }
+  </script>
+</body>
+</html>

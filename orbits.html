@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>4. Orbits and Circular Motion</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+        width: 65%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    canvas {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
+      margin: 1rem auto;
+    }
+    button {
+      margin: 1rem 0.5rem 1rem 0.5rem;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      min-width: 160px;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    .graphs {
+      max-width: 700px;
+      margin: 2rem auto;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .graph-container {
+      flex: 1 1 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back To Concepts</a>
+    <h1>Orbits and Circular Motion</h1>
+
+    <h2>Satellite Motion and Centripetal Force</h2>
+    <p>
+      In uniform circular motion, the gravitational force acts as the centripetal force needed to keep a satellite in orbit. The two are equal:
+    </p>
+    <div class="formula-box">
+      \[
+      \frac{mv^2}{r} = G \frac{Mm}{r^2}
+      \]
+    </div>
+    <p>
+      After simplifying and solving for the orbital speed:
+    </p>
+    <div class="formula-box">
+      \[
+      v = \sqrt{\frac{GM}{r}}
+      \]
+    </div>
+
+    <h2>Orbital Speed, Period, and Total Mechanical Energy</h2>
+    <p><strong>Orbital Speed:</strong> Only depends on the central mass \(M\) and radius \(r\).</p>
+
+    <p><strong>Orbital Period:</strong></p>
+    <div class="formula-box">
+      \[
+      T = 2\pi \sqrt{\frac{r^3}{GM}}
+      \]
+    </div>
+
+    <p><strong>Total Mechanical Energy:</strong></p>
+    <ul>
+      <li>Kinetic: \( K = \frac{1}{2}mv^2 \)</li>
+      <li>Potential: \( U = -\frac{GMm}{r} \)</li>
+      <li>Total: \( E = K + U = -\frac{GMm}{2r} \)</li>
+    </ul>
+
+    <h2>Energy Diagrams: Bound vs. Unbound Orbits</h2>
+    <p>
+      The total mechanical energy determines whether an orbit is bound or unbound.
+    </p>
+    <p>
+        Bound orbits occur when an object, such as a satellite, remains gravitationally tied to a central body like a planet or star. In this case, the total mechanical energy of the system is negative, meaning the object does not have enough energy to escape the gravitational pull. Bound orbits are typically elliptical or circular, and the object continuously moves around the central body without drifting away.
+
+In contrast, unbound orbits happen when the object has enough energy to overcome the gravitational attraction and escape into space. Here, the total mechanical energy is zero or positive, and the object follows a parabolic or hyperbolic trajectory. Unlike bound orbits, unbound objects move away indefinitely and do not return to orbit the central body. This distinction between bound and unbound orbits depends on the balance between kinetic energy and gravitational potential energy.
+    </p>
+    <img src="bound-unbound.png" alt="Descriptive Alt Text" class="img-fluid-center">
+    <figcaption>Bound: \(E &lt; 0\), Unbound: \(E \geq 0\)</figcaption>
+
+    <p>
+      - <strong>Bound orbit:</strong> Negative total energy, typically circular or elliptical<br>
+      - <strong>Unbound orbit:</strong> Zero or positive total energy, escape trajectory
+    </p>
+
+    <h1>Orbital Transfer Simulation</h1>
+  <canvas id="orbitCanvas" width="600" height="600"></canvas>
+  <div>
+    <button onclick="transferToLowerOrbit()">Transfer to Lower Orbit</button>
+    <button onclick="transferToHigherOrbit()">Transfer to Higher Orbit</button>
+  </div>
+
+  <div class="graphs">
+    <div class="graph-container">
+      <h2>Gravitational Potential Energy (GPE)</h2>
+      <canvas id="gpeGraph" width="320" height="180"></canvas>
+    </div>
+    <div class="graph-container">
+      <h2>Kinetic Energy (KE)</h2>
+      
+      <canvas id="keGraph" width="320" height="180"></canvas>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('orbitCanvas');
+    const ctx = canvas.getContext('2d');
+    const gpeCanvas = document.getElementById('gpeGraph');
+    const gpeCtx = gpeCanvas.getContext('2d');
+    const keCanvas = document.getElementById('keGraph');
+    const keCtx = keCanvas.getContext('2d');
+
+    const center = {
+      x: canvas.width / 2,
+      y: canvas.height / 2
+    };
+
+    // Constants
+    const G = 1000;   // Scaled gravitational constant
+    const M = 10000;  // Mass of central body
+    const m = 1000;   // Satellite mass
+
+    // Speed scale to slow down orbit animation
+    const speedScale = 0.005;
+
+    const satellite = {
+      radius: 100,
+      angle: 0,
+      angularSpeed: 0,
+      mass: m
+    };
+
+    const orbits = [100, 150, 200, 250];
+    let currentOrbitIndex = 0;
+
+    let time = 0;
+    const maxDataPoints = 300;
+    const gpeData = [];
+    const keData = [];
+
+    function calculateOrbitalSpeed(r) {
+      const v = Math.sqrt(G * M / r); // linear speed
+      return v / r; // angular speed ω = v / r
+    }
+
+    function updateSatellite() {
+      satellite.angle += satellite.angularSpeed * speedScale;
+      if (satellite.angle > 2 * Math.PI) satellite.angle -= 2 * Math.PI;
+      time += 0.05;
+
+      // Calculate current velocities and energies
+      const v_linear = satellite.angularSpeed * satellite.radius;
+      const gpe = -G * M * m / satellite.radius;
+      const ke = 0.5 * m * v_linear * v_linear;
+
+      // Store data for graph
+      if (gpeData.length > maxDataPoints) {
+        gpeData.shift();
+        keData.shift();
+      }
+      gpeData.push(gpe);
+      keData.push(ke);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw orbits
+      ctx.strokeStyle = '#e2e8f0';
+      ctx.lineWidth = 1;
+      for (let r of orbits) {
+        ctx.beginPath();
+        ctx.arc(center.x, center.y, r, 0, 2 * Math.PI);
+        ctx.stroke();
+      }
+
+      // Draw center planet
+      ctx.fillStyle = '#3b82f6';
+      ctx.beginPath();
+      ctx.arc(center.x, center.y, 20, 0, 2 * Math.PI);
+      ctx.fill();
+
+      // Draw satellite
+      const satX = center.x + satellite.radius * Math.cos(satellite.angle);
+      const satY = center.y + satellite.radius * Math.sin(satellite.angle);
+      ctx.fillStyle = '#ef4444';
+      ctx.beginPath();
+      ctx.arc(satX, satY, 6, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+
+    function transferToHigherOrbit() {
+      if (currentOrbitIndex < orbits.length - 1) {
+        currentOrbitIndex++;
+        satellite.radius = orbits[currentOrbitIndex];
+        satellite.angularSpeed = calculateOrbitalSpeed(satellite.radius);
+      }
+    }
+    
+    function transferToLowerOrbit() {
+      if (currentOrbitIndex > 0) {
+        currentOrbitIndex--;
+        satellite.radius = orbits[currentOrbitIndex];
+        satellite.angularSpeed = calculateOrbitalSpeed(satellite.radius);
+      }
+    }
+
+    // Draw graph with axes, labels, and lines like your example
+    function drawGraph(ctx, data, color, yLabel, isGPE = false) {
+      const w = ctx.canvas.width;
+      const h = ctx.canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      // Draw axes
+      ctx.strokeStyle = "#888";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      // X axis
+      ctx.moveTo(40, h - 30);
+      ctx.lineTo(w - 20, h - 30);
+      // Y axis
+      ctx.moveTo(40, 20);
+      ctx.lineTo(40, h - 30);
+      ctx.stroke();
+
+      // Labels
+      ctx.fillStyle = "#333";
+      ctx.font = "12px Roboto, sans-serif";
+      ctx.fillText("Time →", w - 70, h - 10);
+      ctx.fillText(yLabel, 5, 15);
+
+      if (data.length < 2) return;
+
+      // Y axis scaling parameters
+      let minVal, maxVal;
+      if (isGPE) {
+        // For GPE, fix the scale to show negative values properly
+        maxVal = 0;
+        minVal = Math.min(...data) * 1.1; // a bit more negative
+      } else {
+        minVal = 0;
+        maxVal = Math.max(...data) * 1.1;
+      }
+      const graphHeight = h - 50;
+      const graphWidth = w - 60;
+
+      // Draw line graph
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+
+      data.forEach((val, i) => {
+        const x = 40 + (i / (maxDataPoints - 1)) * graphWidth;
+        // Flip y-axis so bigger values are up
+        const y = h - 30 - ((val - minVal) / (maxVal - minVal)) * graphHeight;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+
+      // For GPE, draw zero line at y-axis if in view
+      if (isGPE && minVal < 0 && maxVal >= 0) {
+        const zeroY = h - 30 - ((0 - minVal) / (maxVal - minVal)) * graphHeight;
+        ctx.strokeStyle = "#999";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(40, zeroY);
+        ctx.lineTo(w - 20, zeroY);
+        ctx.stroke();
+      }
+    }
+
+    function animate() {
+      updateSatellite();
+      draw();
+      drawGraph(gpeCtx, gpeData, "#2563eb", "Gravitational Potential Energy (J)", true);
+      drawGraph(keCtx, keData, "#ef4444", "Kinetic Energy (J)");
+      requestAnimationFrame(animate);
+    }
+
+    // Initial setup
+    satellite.angularSpeed = calculateOrbitalSpeed(satellite.radius);
+    animate();
+  </script>
+
+  </div>
+  
+</body>
+</html>

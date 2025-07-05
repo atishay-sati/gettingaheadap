@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newton’s Second Law for Rotation</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 30%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Newton’s Second Law for Rotation</h1>
+
+    <div class="formula-box">
+      $$\tau_{\text{net}} = I \alpha$$
+    </div>
+
+    <p>This is the rotational analog of Newton’s Second Law of motion. In linear motion, the net force causes linear acceleration. In rotational motion, the <strong>net torque</strong> causes <strong>angular acceleration</strong>.</p>
+
+    <h2>What It Means</h2>
+    <ul>
+      <li>$\tau_{\text{net}}$ is the total torque acting on a rigid object.</li>
+      <li>$I$ is the moment of inertia — a measure of how much the object resists angular acceleration.</li>
+      <li>$\alpha$ is the angular acceleration in radians per second squared.</li>
+    </ul>
+
+    <p>Just like $F = ma$, if you know the torque and the moment of inertia, you can predict how fast something will spin up or slow down. This equation is only valid if $I$ is constant — meaning the mass distribution of the object doesn’t change over time.</p>
+
+    <img src="torque-to-acceleration.jpg" alt="torque-angular-acceleration" class="img-fluid-center">
+
+    <h2>Deriving the Equation</h2>
+    <p>Start with Newton's second law for a small mass on a rotating object:</p>
+    <div class="formula-box">
+      $$F = ma = m r \alpha$$
+    </div>
+    <p>Torque is defined as:</p>
+    <div class="formula-box">
+      $$\tau = r F = r (m r \alpha) = m r^2 \alpha$$
+    </div>
+    <p>For an entire object made of many masses:</p>
+    <div class="formula-box">
+      $$\tau_{\text{net}} = \sum m_i r_i^2 \alpha = \left( \sum m_i r_i^2 \right) \alpha = I \alpha$$
+    </div>
+
+    <h2>Examples</h2>
+
+    <h3>Example 1: Disk with Known Torque</h3>
+    <p>A disk has moment of inertia $I = 0.4 \, \text{kg} \cdot \text{m}^2$ and experiences a net torque of $2 \, \text{N} \cdot \text{m}$.</p>
+    <div class="formula-box">
+      $$\alpha = \frac{\tau_{\text{net}}}{I} = \frac{2}{0.4} = 5 \, \text{rad/s}^2$$
+    </div>
+
+    <h3>Example 2: Torque from Force</h3>
+    <p>A force of $10 \, \text{N}$ is applied tangentially at a radius of $0.2 \, \text{m}$ from the center of a solid wheel with $I = 1.5 \, \text{kg} \cdot \text{m}^2$.</p>
+    <div class="formula-box">
+      $$\tau = rF = 0.2 \cdot 10 = 2 \, \text{N} \cdot \text{m}$$
+      $$\alpha = \frac{2}{1.5} = 1.33 \, \text{rad/s}^2$$
+    </div>
+
+    <h3>Example 3: Uniform Rod Pivoting About End</h3>
+    <p>A uniform rod of mass $3 \, \text{kg}$ and length $2 \, \text{m}$ pivots about one end. A torque of $5 \, \text{N} \cdot \text{m}$ is applied.</p>
+    <p>The moment of inertia for a rod about the end is $I = \frac{1}{3}ML^2$:</p>
+    <div class="formula-box">
+      $$I = \frac{1}{3}(3)(2)^2 = 4 \, \text{kg} \cdot \text{m}^2$$
+      $$\alpha = \frac{5}{4} = 1.25 \, \text{rad/s}^2$$
+    </div>
+
+    <h2>Common Misconceptions</h2>
+    <ul>
+      <li><strong>Torque is not the same as force.</strong> Torque depends on both the force and where it is applied relative to the axis.</li>
+      <li><strong>Moment of inertia is not mass.</strong> It depends on the mass <em>and</em> how that mass is distributed relative to the axis of rotation.</li>
+      <li><strong>Angular acceleration doesn't mean high speed.</strong> A large $\alpha$ means fast change in $\omega$, not necessarily high $\omega$.</li>
+    </ul>
+
+    <h2>Watch this video to see how moment of inertia affects angular acceleration in a race:</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/b44WbCS9xnc?si=2YAIBCVLOO5HX-ru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Summary</h2>
+    <p>Newton’s Second Law for rotation links the net torque on an object to its angular acceleration through the moment of inertia. Just like in linear motion, more torque results in more acceleration — unless the object resists change due to its rotational inertia. This principle governs the motion of spinning wheels, rotating rods, pulleys, and more.</p>
+
+    <h2>Takeaways</h2>
+    <ul>
+      <li>More torque → more angular acceleration.</li>
+      <li>Higher moment of inertia → harder to rotate.</li>
+      <li>$\alpha \propto \tau$, but $\alpha \propto \frac{1}{I}$</li>
+      <li>This equation assumes no slipping and that torque is calculated relative to the axis of rotation.</li>
+    </ul>
+  </div>
+</body>
+</html>

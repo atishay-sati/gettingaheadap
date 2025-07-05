@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gravity Inside a Planet</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.2rem;
+      color: #005f73;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      font-style: italic;
+      user-select: none;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      border-top: 3px solid #3b82f6;
+      padding-top: 1rem;
+    }
+    .img-fluid-center {
+      height: auto;
+      width: 65%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    canvas {
+      display: block;
+      margin: 2rem auto;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border: 3px solid #3b82f6;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Gravity Inside a Planet</h1>
+
+    <h2>1. Gravitational Force on the Surface of a Planet</h2>
+    <p>We begin with Newton’s Law of Universal Gravitation:</p>
+    <div class="formula-box">
+      \( F = \frac{G M m}{R^2} \)
+    </div>
+    <p>This tells us the force between two masses: the planet (mass \( M \)) and an astronaut (mass \( m \)), separated by distance \( R \) from the planet’s center.</p>
+
+    <h3>Step 1: Expressing the planet's mass using density</h3>
+    <p>If we assume the planet has a uniform density \( \rho \), then the planet’s mass is:</p>
+    <div class="formula-box">
+      \( M = \rho \cdot V = \rho \cdot \left( \frac{4}{3} \pi R^3 \right) \)
+    </div>
+
+    <h3>Step 2: Substituting into the force formula</h3>
+    <p>Plug that into Newton's Law:</p>
+    <div class="formula-box">
+      \( F = \frac{G \left( \frac{4}{3} \pi R^3 \rho \right) m}{R^2} \)
+    </div>
+    <p>Simplifying:</p>
+    <div class="formula-box">
+      \( F = \frac{4}{3} \pi G \rho R m \)
+    </div>
+
+    
+
+    <h3>Final Surface Gravity Equation:</h3>
+    <div class="formula-box">
+      \( F_{\text{surface}} = \frac{4}{3} \pi G \rho R m \)
+    </div>
+
+    <p>This is powerful: it means you can find the gravitational force **without knowing the total mass**—just the density and radius.</p>
+
+    <h2>2. Gravity Below the Surface: Shell Theorem</h2>
+    <p>Once underground, something surprising happens: only the mass below the astronaut contributes to gravity. The outer layers cancel out.</p>
+    <p>This is called the <strong>Shell Theorem</strong>.</p>
+
+    <img src="gravityplanetdiagram.jpg" alt = "Descriptive Alt Text" class="img-fluid-center">
+    <figcaption>Only the orange shaded region is providing the gravitational force. The mass above the object is NOT providing to the gravitational force</figcaption>
+    
+    <div class="formula-box">
+      \( F = \frac{G M' m}{R'^2} \)
+    </div>
+    <p>Where \( R' \) is the distance from the planet’s center, and \( M' \) is the mass of the inner sphere of radius \( R' \).</p>
+
+    <h3>Step 1: Find the inner mass \( M' \)</h3>
+    <div class="formula-box">
+      \( M' = \rho \cdot \left( \frac{4}{3} \pi R'^3 \right) \)
+    </div>
+
+    <h3>Step 2: Sub into Newton’s Law</h3>
+    <div class="formula-box">
+      \( F = \frac{G \left( \frac{4}{3} \pi R'^3 \rho \right) m}{R'^2} = \frac{4}{3} \pi G \rho R' m \)
+    </div>
+
+
+    <h3>Key Insight:</h3>
+    <p>Gravity <strong>decreases linearly</strong> as you move toward the center:</p>
+    <img src="gravitygraph.jpg" alt = "Descriptive Alt Text" class="img-fluid-center">
+
+    <figcaption>Gravitational Force increases linearly until the surface is reached. Then it exponentially decreases.</figcaption>
+
+    <h2>3. Gravitational Acceleration</h2>
+    <p>Since \( F = m g \), we divide by mass \( m \) to get acceleration:</p>
+    <h3>On the surface:</h3>
+    <div class="formula-box">
+      \( g = \frac{4}{3} \pi G \rho R \)
+    </div>
+
+    <h3>Inside the planet:</h3>
+    <div class="formula-box">
+      \( g = \frac{4}{3} \pi G \rho R' \)
+    </div>
+
+    <h2>4. Full Example Calculation</h2>
+    <ul>
+      <li>Mass of astronaut: 150 kg</li>
+      <li>Radius of planet: \( 3 \times 10^6 \, \text{m} \)</li>
+      <li>Density: \( 7 \, \text{g/cm}^3 = 7000 \, \text{kg/m}^3 \)</li>
+    </ul>
+
+    <h3>Find surface gravity:</h3>
+    <div class="formula-box">
+      \( g = \frac{4}{3} \pi G \cdot 7000 \cdot 3 \times 10^6 \approx 21.99 \, \text{m/s}^2 \)
+    </div>
+    <p>So the force on the astronaut is:</p>
+    <div class="formula-box">
+      \( F = 150 \cdot 21.99 = 3298.5 \, \text{N} \)
+    </div>
+
+    <h2>5. What Happens If the Astronaut Falls Through a Tunnel?</h2>
+    <p>If the astronaut jumps into a tunnel through the center of the planet, gravity acts like a spring:</p>
+    <div class="formula-box">
+      \( F = -k R' \quad \text{(Simple Harmonic Motion)} \)
+    </div>
+    <p>This means the astronaut oscillates back and forth through the planet in a straight line! We will get more into oscillations later in this unit</p>
+
+    <h2>Oscillation Through a Planet Tunnel</h2>
+  <canvas id="planetCanvas" width="600" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById('planetCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 200;
+    const tunnelGap = 40;
+
+    let y = radius; // Start at edge of the planet
+    let v = 0;
+    const simK = 0.09;
+    const dt = 0.016;
+    const arrowScale = 25;
+
+    function drawPlanet() {
+      ctx.fillStyle = '#93c5fd';
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 3;
+
+      // Right semi-circle
+      ctx.beginPath();
+      ctx.moveTo(centerX + tunnelGap / 2, centerY - radius);
+      ctx.arc(centerX + tunnelGap / 2, centerY, radius, -Math.PI / 2, Math.PI / 2, false);
+      ctx.lineTo(centerX + tunnelGap / 2, centerY + radius);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Left semi-circle
+      ctx.beginPath();
+      ctx.moveTo(centerX - tunnelGap / 2, centerY - radius);
+      ctx.arc(centerX - tunnelGap / 2, centerY, radius, Math.PI / 2, -Math.PI / 2, false);
+      ctx.lineTo(centerX - tunnelGap / 2, centerY - radius);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    }
+
+    function drawBall(yOffset) {
+      const px = centerX;
+      const py = centerY + yOffset;
+
+      // Draw ball
+      ctx.fillStyle = '#ef4444';
+      ctx.beginPath();
+      ctx.arc(px, py, 10, 0, 2 * Math.PI);
+      ctx.fill();
+
+      // Gravity vector
+      const direction = -Math.sign(yOffset || 1);
+      const arrowLength = Math.abs(yOffset * simK * arrowScale);
+      const arrowEndY = py + direction * arrowLength;
+
+      ctx.strokeStyle = '#0ea5e9';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(px, arrowEndY);
+      ctx.stroke();
+
+      // Arrowhead
+      ctx.beginPath();
+      ctx.moveTo(px, arrowEndY);
+      ctx.lineTo(px - 5, arrowEndY - direction * 8);
+      ctx.lineTo(px + 5, arrowEndY - direction * 8);
+      ctx.closePath();
+      ctx.fillStyle = '#0ea5e9';
+      ctx.fill();
+    }
+
+    function updatePhysics() {
+      const a = -simK * y;
+      v += a * dt;
+      y += v * dt;
+      
+    }
+
+    function animate() {
+      updatePhysics();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawPlanet();
+      drawBall(y);
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
+
+    <div class="summary">
+      Summary:
+    </div>
+    <p> Gravity on the surface depends on planet radius and density. Inside a planet, gravity drops linearly with depth. The formula \( F = \frac{4}{3} \pi G \rho R m \) is powerful and arises directly from combining Newton's Law and the geometry of spheres.</p>
+    
+  </div>
+</body>
+</html>

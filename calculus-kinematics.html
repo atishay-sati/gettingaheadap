@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculus in Kinematics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #fefefe;
+      color: #222;
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .formula {
+      background: #f0f4ff;
+      border-left: 5px solid #004080;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.1rem;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .quiz h2 {
+      margin-bottom: 1rem;
+    }
+    .quiz .question {
+      margin-bottom: 1.5rem;
+    }
+    .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #005a9c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    }
+
+    .back-link:hover {
+    text-decoration: underline;
+    transform: scale(1.02);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true }
+        ]
+      });
+    });
+  </script>
+</head>
+<body>
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+<h1>Calculus in Kinematics</h1>
+
+<section>
+  <h2>Position, Velocity, and Acceleration</h2>
+  <p>In kinematics, calculus connects the three main quantities of motion:</p>
+  <ul>
+    <li><strong>Position</strong> function: \( x(t) \)</li>
+    <li><strong>Velocity</strong>: first derivative of position → \( v(t) = \frac{dx}{dt} \)</li>
+    <li><strong>Acceleration</strong>: first derivative of velocity → \( a(t) = \frac{dv}{dt} = \frac{d^2x}{dt^2} \)</li>
+  </ul>
+  <div class="formula">
+    \( v(t) = \frac{dx}{dt} \quad\quad a(t) = \frac{d^2x}{dt^2} \)
+  </div>
+</section>
+
+<section>
+  <h2>Using Integrals in Kinematics</h2>
+  <p>We can also go in reverse using integrals:</p>
+  <ul>
+    <li><strong>From acceleration to velocity:</strong> \( v(t) = \int a(t)\,dt + C \)</li>
+    <li><strong>From velocity to position:</strong> \( x(t) = \int v(t)\,dt + C \)</li>
+  </ul>
+  <div class="formula">
+    \( x(t) = \int \int a(t)\,dt^2 \)
+  </div>
+</section>
+
+<section>
+  <h2>Example 1: Derivative</h2>
+  <p>If \( x(t) = 3t^2 + 2t \), then:</p>
+  <ul>
+    <li>Velocity: \( v(t) = 6t + 2 \)</li>
+    <li>Acceleration: \( a(t) = 6 \)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Example 2: Integral</h2>
+  <p>If \( a(t) = 4 \), and \( v(0) = 3 \):</p>
+  <ul>
+    <li>\( v(t) = 4t + 3 \)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Example 3: Conceptual</h2>
+  <p>If you know the graph of \( x(t) \):</p>
+  <ul>
+    <li><strong>Slope = velocity</strong></li>
+    <li><strong>Curvature = acceleration</strong> (concave up = positive acceleration)</li>
+  </ul>
+  <canvas id="example3Graph" width="500" height="300" style="border: 1px solid #ccc; margin: 1rem auto; display: block; background: white;"></canvas>
+  <p><em>This position-time graph shows: increasing slope (increasing velocity) and concave up shape (positive acceleration)</em></p>
+</section>
+
+<!-- New Section: Basic Calculus Rules -->
+<section>
+  <h2>Basic Calculus Rules</h2>
+  <p>Here are some fundamental calculus rules useful for derivatives and integrals:</p>
+  <ul>
+    <li><strong>Power Rule (Derivative):</strong> \( \frac{d}{dx} x^n = nx^{n-1} \)</li>
+    <li><strong>Reverse Power Rule (Integral):</strong> \( \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1) \)</li>
+    <li><strong>Derivative of Natural Log:</strong> \( \frac{d}{dx} \ln|x| = \frac{1}{x} \)</li>
+    <li><strong>Constant Rule:</strong> Derivative of a constant is zero: \( \frac{d}{dx} c = 0 \)</li>
+    <li><strong>Constant Multiple Rule:</strong> \( \frac{d}{dx} [cf(x)] = c \frac{d}{dx} f(x) \)</li>
+  </ul>
+  <div class="formula">
+    \[
+    \begin{aligned}
+      &\frac{d}{dx} x^n = nx^{n-1} \\
+      &\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \\
+      &\frac{d}{dx} \ln|x| = \frac{1}{x} \\
+      &\frac{d}{dx} c = 0 \\
+      &\frac{d}{dx} [cf(x)] = c \frac{d}{dx} f(x)
+    \end{aligned}
+    \]
+  </div>
+</section>
+
+<!-- Quiz -->
+
+<section class="quiz">
+  <h2>📝 Check for Understanding</h2>
+  <form id="quizForm">
+    <style>
+      .question {
+        background: #f9faff;
+        border: 1px solid #cbdfff;
+        border-left: 5px solid #004080;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .question strong {
+        color: #003060;
+        display: block;
+        margin-bottom: 0.6rem;
+      }
+
+      .question input[type="radio"] {
+        margin-right: 0.5rem;
+      }
+
+      .question label:hover {
+        background-color: #eef4ff;
+        cursor: pointer;
+      }
+
+      .btn-submit {
+        background-color: #004080;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .btn-submit:hover {
+        background-color: #003060;
+      }
+
+      #quizResult {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+      }
+
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+      }
+
+      .choices label {
+        display: block;
+        margin: 0.3rem 0;
+        padding: 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .choices label:hover {
+        background-color: #eef4ff;
+      }
+      .choices input[type="radio"] {
+        margin-right: 0.5rem;
+      }
+    </style>
+
+    <!-- Questions -->
+    <div class="question">
+      <strong>1. What is the derivative of position?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q1" value="a"> A) Acceleration</label>
+        <label><input type="radio" name="q1" value="b"> B) Jerk</label>
+        <label><input type="radio" name="q1" value="c"> C) Velocity</label>
+        <label><input type="radio" name="q1" value="d"> D) Force</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>2. The integral of acceleration gives:</strong>
+      <div class="choices">
+        <label><input type="radio" name="q2" value="a"> A) Position</label>
+        <label><input type="radio" name="q2" value="b"> B) Jerk</label>
+        <label><input type="radio" name="q2" value="c"> C) Force</label>
+        <label><input type="radio" name="q2" value="d"> D) Velocity</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>3. If \( v(t) = 4t + 2 \), what is the acceleration?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q3" value="a"> A) 2</label>
+        <label><input type="radio" name="q3" value="b"> B) 4</label>
+        <label><input type="radio" name="q3" value="c"> C) 6</label>
+        <label><input type="radio" name="q3" value="d"> D) Depends on initial velocity</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>4. Given \( a(t) = 6 \), what is \( v(t) \) if \( v(0) = 2 \)?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q4" value="a"> A) 6t</label>
+        <label><input type="radio" name="q4" value="b"> B) 6t + 6</label>
+        <label><input type="radio" name="q4" value="c"> C) 6t + 2</label>
+        <label><input type="radio" name="q4" value="d"> D) t + 2</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>5. Which function is concave up when acceleration is positive?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q5" value="a"> A) Position</label>
+        <label><input type="radio" name="q5" value="b"> B) Acceleration</label>
+        <label><input type="radio" name="q5" value="c"> C) Time</label>
+        <label><input type="radio" name="q5" value="d"> D) Jerk</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>6. If \( x(t) = 5t^3 \), what is the velocity?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q6" value="a"> A) 10t</label>
+        <label><input type="radio" name="q6" value="b"> B) 15t²</label>
+        <label><input type="radio" name="q6" value="c"> C) 5t²</label>
+        <label><input type="radio" name="q6" value="d"> D) 30t</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>7. Which of these best describes acceleration?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q7" value="a"> A) First derivative of position</label>
+        <label><input type="radio" name="q7" value="b"> B) Second derivative of position</label>
+        <label><input type="radio" name="q7" value="c"> C) Integral of velocity</label>
+        <label><input type="radio" name="q7" value="d"> D) Third derivative of time</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>8. What does the area under an acceleration-time graph represent?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q8" value="a"> A) Displacement</label>
+        <label><input type="radio" name="q8" value="b"> B) Change in velocity</label>
+        <label><input type="radio" name="q8" value="c"> C) Jerk</label>
+        <label><input type="radio" name="q8" value="d"> D) Mass</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>9. Which function's slope equals acceleration?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q9" value="a"> A) Position</label>
+        <label><input type="radio" name="q9" value="b"> B) Velocity</label>
+        <label><input type="radio" name="q9" value="c"> C) Displacement</label>
+        <label><input type="radio" name="q9" value="d"> D) Time</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <strong>10. Which of the following is NOT a correct pair?</strong>
+      <div class="choices">
+        <label><input type="radio" name="q10" value="a"> A) \( v(t) = \frac{dx}{dt} \)</label>
+        <label><input type="radio" name="q10" value="b"> B) \( a(t) = \frac{dv}{dt} \)</label>
+        <label><input type="radio" name="q10" value="c"> C) \( x(t) = \int v(t)\,dt \)</label>
+        <label><input type="radio" name="q10" value="d"> D) \( a(t) = \int v(t)\,dt \)</label>
+      </div>
+    </div>
+
+    <button type="button" class="btn-submit" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="quizResult"></div>
+  </form>
+</section>
+
+
+<script>
+  function checkAnswers() {
+    const answers = {
+      q1: "c",
+      q2: "d",
+      q3: "b",
+      q4: "c",
+      q5: "a",
+      q6: "b",
+      q7: "b",
+      q8: "b",
+      q9: "b",
+      q10: "d"
+    };
+
+    let score = 0;
+    let total = Object.keys(answers).length;
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected && selected.value === answers[q]) {
+        score++;
+      }
+    }
+
+    const result = document.getElementById("quizResult");
+    let feedback = `🎯 You scored ${score} out of ${total}\n\n`;
+    
+    // Detailed feedback for each question
+    const feedbackData = {
+      q1: {
+        correct: "c",
+        explanation: "Velocity is the first derivative of position: v(t) = dx/dt"
+      },
+      q2: {
+        correct: "d", 
+        explanation: "The integral of acceleration gives velocity: v(t) = ∫a(t)dt + C"
+      },
+      q3: {
+        correct: "b",
+        explanation: "Take the derivative of v(t) = 4t + 2: a(t) = 4 (derivative of 4t is 4, derivative of constant 2 is 0)"
+      },
+      q4: {
+        correct: "c",
+        explanation: "Integrate a(t) = 6: v(t) = 6t + C. Use v(0) = 2 to find C = 2, so v(t) = 6t + 2"
+      },
+      q5: {
+        correct: "a",
+        explanation: "When acceleration is positive, the position function is concave up (curving upward)"
+      },
+      q6: {
+        correct: "b",
+        explanation: "Use power rule: derivative of 5t³ is 5 × 3t² = 15t²"
+      },
+      q7: {
+        correct: "b",
+        explanation: "Acceleration is the second derivative of position: a(t) = d²x/dt²"
+      },
+      q8: {
+        correct: "b",
+        explanation: "Area under acceleration-time graph = change in velocity (Δv = ∫a(t)dt)"
+      },
+      q9: {
+        correct: "b",
+        explanation: "The slope of the velocity function equals acceleration: a(t) = dv/dt"
+      },
+      q10: {
+        correct: "d",
+        explanation: "a(t) = ∫v(t)dt is incorrect. The correct relationship is: a(t) = dv/dt (derivative, not integral)"
+      }
+    };
+    
+    // Check each question and provide feedback
+    for (let q in feedbackData) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      if (selected) {
+        if (selected.value === feedbackData[q].correct) {
+          feedback += `✅ Question ${q.slice(1)}: Correct!\n`;
+        } else {
+          feedback += `❌ Question ${q.slice(1)}: Incorrect. ${feedbackData[q].explanation}\n`;
+        }
+      } else {
+        feedback += `⏭️ Question ${q.slice(1)}: Not answered. ${feedbackData[q].explanation}\n`;
+      }
+    }
+    
+    result.innerHTML = feedback.replace(/\n/g, '<br>');
+    result.className = "alert " + (score >= 7 ? "alert-success" : "alert-warning");
+  }
+  
+  // Draw example graph for Example 3
+  function drawExample3Graph() {
+    const canvas = document.getElementById("example3Graph");
+    const ctx = canvas.getContext("2d");
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw grid
+    ctx.strokeStyle = "#f0f0f0";
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 500; i += 50) {
+      ctx.beginPath();
+      ctx.moveTo(i, 0);
+      ctx.lineTo(i, 300);
+      ctx.stroke();
+    }
+    for (let j = 0; j <= 300; j += 50) {
+      ctx.beginPath();
+      ctx.moveTo(0, j);
+      ctx.lineTo(500, j);
+      ctx.stroke();
+    }
+    
+    // Draw axes
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(50, 50);
+    ctx.lineTo(50, 250); // y-axis
+    ctx.moveTo(50, 250);
+    ctx.lineTo(450, 250); // x-axis
+    ctx.stroke();
+    
+    // Draw labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Time (s)", 400, 280);
+    ctx.save();
+    ctx.translate(20, 150);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText("Position (m)", 0, 0);
+    ctx.restore();
+    
+    // Draw position-time graph (parabolic, concave up)
+    ctx.beginPath();
+    ctx.strokeStyle = "#005a9c";
+    ctx.lineWidth = 3;
+    for (let t = 0; t <= 4; t += 0.1) {
+      const x = 50 + t * 80;
+      const y = 250 - 0.5 * t * t * 40; // x(t) = 0.5t²
+      if (t === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+  
+  // Initialize the graph when page loads
+  document.addEventListener("DOMContentLoaded", function() {
+    drawExample3Graph();
+  });
+</script>
+
+</body>
+</html>

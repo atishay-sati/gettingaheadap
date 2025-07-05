@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vector Decomposition and Direction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2 {
+      color: #005a9c;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    .formula {
+      background: #eee;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid #005a9c;
+      font-family: "Courier New", Courier, monospace;
+      margin: 1rem 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+        ]
+      });
+    });
+  </script>
+</head>
+<body>
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+<h1>Vector Decomposition and Direction</h1>
+
+<p>In physics, vectors represent quantities that have both magnitude and direction, such as velocity, acceleration, and force.</p>
+
+<h2>Vector Decomposition</h2>
+<p>To analyze motion in two dimensions, we often break a vector into components along the x and y axes. This is called <strong>vector decomposition</strong>.</p>
+<p>For a vector \( \vec{A} \) with magnitude \( A \) and angle \( \theta \) from the horizontal:</p>
+<div class="formula">
+  \( A_x = A \cos(\theta) \) <br />
+  \( A_y = A \sin(\theta) \)
+</div>
+<p>where:</p>
+<ul>
+  <li>\( A_x \) is the horizontal component</li>
+  <li>\( A_y \) is the vertical component</li>
+</ul>
+
+<h2>Visualizing Vector Decomposition</h2>
+
+<label for="angleSlider">Angle (°): <span id="angleValue">30</span></label>
+<input type="range" id="angleSlider" min="0" max="90" value="30" />
+
+<br /><br />
+
+<label for="magSlider">Magnitude: <span id="magValue">60</span></label>
+<input type="range" id="magSlider" min="10" max="150" value="60" />
+
+<canvas id="vectorCanvas" width="600" height="400"></canvas>
+
+<!-- Math labels outside canvas -->
+<div style="max-width:600px; margin: 0 auto; font-family: Arial, sans-serif; font-size: 1.1rem;">
+  <p><strong>Vector \( \vec{A} \)</strong>: Blue arrow</p>
+  <p><strong>Horizontal component \( A_x = A \cos \theta \)</strong>: Red arrow</p>
+  <p><strong>Vertical component \( A_y = A \sin \theta \)</strong>: Green arrow</p>
+  <p><strong>Angle \( \theta \)</strong>: Between horizontal axis and \( \vec{A} \)</p>
+</div>
+
+<h2>Reconstructing Magnitude and Angle</h2>
+<p>You can reconstruct the magnitude and direction of a vector if you know its components. For example, using velocity components \( v_x \) and \( v_y \):</p>
+<div class="formula">
+  \[
+    v = \sqrt{v_x^2 + v_y^2}
+  \]
+  <br />
+  \[
+    \theta = \tan^{-1}\left(\frac{v_y}{v_x}\right)
+  \]
+</div>
+<p>This same process can be applied to any vector (force, acceleration, displacement, etc.) by replacing the velocity components with the appropriate vector components. This is a very important piece of 2D motion because for many questions, you will first have to break velocity vectors into components and solve for individual components. Later on, the question can ask you to find the magnitude of velocity and the direction, which can be done when finding the component magnitudes</p>
+
+
+<script>
+  const canvas = document.getElementById("vectorCanvas");
+const ctx = canvas.getContext("2d");
+
+const origin = { x: 100, y: 320 }; // slightly lower for bigger arrows
+
+const angleSlider = document.getElementById("angleSlider");
+const magSlider = document.getElementById("magSlider");
+const angleValue = document.getElementById("angleValue");
+const magValue = document.getElementById("magValue");
+
+// Scale factor to visually enlarge vectors
+const scale = 3;
+
+function drawArrow(fromX, fromY, toX, toY, color) {
+  const headlen = 15;
+  const dx = toX - fromX;
+  const dy = toY - fromY;
+  const angle = Math.atan2(dy, dx);
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 3;
+
+  ctx.beginPath();
+  ctx.moveTo(fromX, fromY);
+  ctx.lineTo(toX, toY);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(toX, toY);
+  ctx.lineTo(toX - headlen * Math.cos(angle - Math.PI / 6), toY - headlen * Math.sin(angle - Math.PI / 6));
+  ctx.lineTo(toX - headlen * Math.cos(angle + Math.PI / 6), toY - headlen * Math.sin(angle + Math.PI / 6));
+  ctx.lineTo(toX, toY);
+  ctx.fill();
+}
+
+function drawVectorDiagram(angleDeg, magnitude) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  const angleRad = angleDeg * Math.PI / 180;
+  const magScaled = magnitude * scale;
+
+  const xComp = magScaled * Math.cos(angleRad);
+  const yComp = magScaled * Math.sin(angleRad);
+
+  const endX = origin.x + xComp;
+  const endY = origin.y - yComp;
+
+  // Draw axes
+  ctx.strokeStyle = "#888";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(origin.x, 20);
+  ctx.lineTo(origin.x, origin.y + 20);
+  ctx.moveTo(20, origin.y);
+  ctx.lineTo(origin.x + 300, origin.y);
+  ctx.stroke();
+
+  // Original vector (blue)
+  drawArrow(origin.x, origin.y, endX, endY, "#0074D9");
+  // Label vector A - positioned to avoid overlap
+  ctx.fillStyle = "#0074D9";
+  ctx.font = "18px Arial";
+  const vectorLabelX = (origin.x + endX) / 2 + 15;
+  const vectorLabelY = (origin.y + endY) / 2 - 10;
+  ctx.fillText(`A = ${magnitude.toFixed(2)}`, vectorLabelX, vectorLabelY);
+
+  // Horizontal component (red)
+  drawArrow(origin.x, origin.y, endX, origin.y, "#FF4136");
+  // Label Ax - positioned below the horizontal line to avoid overlap
+  ctx.fillStyle = "#FF4136";
+  const axLabelX = origin.x + xComp / 2;
+  const axLabelY = origin.y + 35;
+  ctx.fillText(`Ax = ${ (magnitude * Math.cos(angleRad)).toFixed(2)}`, axLabelX, axLabelY);
+
+  // Vertical component (green)
+  drawArrow(endX, origin.y, endX, endY, "#2ECC40");
+  // Label Ay - positioned to the right of the vertical line to avoid overlap
+  ctx.fillStyle = "#2ECC40";
+  const ayLabelX = endX + 15;
+  const ayLabelY = origin.y - yComp / 2+10;
+  ctx.fillText(`Ay = ${ (magnitude * Math.sin(angleRad)).toFixed(2)}`, ayLabelX, ayLabelY);
+
+  // Right triangle outline (dashed)
+  ctx.strokeStyle = "#aaa";
+  ctx.setLineDash([6, 4]);
+  ctx.beginPath();
+  ctx.moveTo(origin.x, origin.y);
+  ctx.lineTo(endX, origin.y);
+  ctx.lineTo(endX, endY);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Angle arc
+  ctx.beginPath();
+  ctx.strokeStyle = "#333";
+  ctx.lineWidth = 2;
+  ctx.arc(origin.x, origin.y, 30, -angleRad, 0, true);
+  ctx.stroke();
+
+  // Angle label near arc
+  ctx.fillStyle = "#333";
+  ctx.font = "18px Arial";
+  ctx.fillText(`θ = ${angleDeg}°`, origin.x + 35, origin.y - 5);
+}
+
+function updateDiagram() {
+  const angle = parseFloat(angleSlider.value);
+  const magnitude = parseFloat(magSlider.value);
+  angleValue.textContent = angle;
+  magValue.textContent = magnitude;
+  drawVectorDiagram(angle, magnitude);
+}
+
+angleSlider.addEventListener("input", updateDiagram);
+magSlider.addEventListener("input", updateDiagram);
+
+updateDiagram();
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Identification Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #f5f5f5;
+      min-height: 100vh;
+      color: #333;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    
+    h2 {
+      color: #34495e;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      background: white;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .back-link:hover {
+      background: #f8f9fa;
+      transform: translateY(-1px);
+    }
+    
+    .question {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid #005a9c;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    
+    .question:hover {
+      transform: translateY(-1px);
+    }
+    
+    .question p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    
+    canvas {
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      margin: 1rem auto;
+      display: block;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: white;
+      color: #333;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    
+    select:focus {
+      outline: none;
+      border-color: #005a9c;
+      box-shadow: 0 0 0 3px rgba(0, 90, 156, 0.1);
+    }
+    
+    .submit-btn {
+      background: #005a9c;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: block;
+      margin: 2rem auto;
+      box-shadow: 0 3px 10px rgba(0, 90, 156, 0.2);
+    }
+    
+    .submit-btn:hover {
+      background: #004a8c;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 90, 156, 0.3);
+    }
+    
+    .result {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+    
+    .correct {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .incorrect {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    .score {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <div class="container">
+    <a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+    <h1>Graph Identification Quiz</h1>
+
+    <div class="question">
+      <h2>1. Identify Motion Type</h2>
+      <p>Based on the following position-time graph, what kind of motion is represented?</p>
+      <canvas id="q1Graph" width="500" height="300"></canvas>
+      <select id="q1">
+        <option value="">Select an answer</option>
+        <option value="A">A: Constant velocity</option>
+        <option value="B">B: Constant acceleration</option>
+        <option value="C">C: Oscillatory motion</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>2. Determine Direction Change</h2>
+      <p>From the velocity-time graph, what can you conclude about the object's direction?</p>
+      <canvas id="q2Graph" width="500" height="300"></canvas>
+      <select id="q2">
+        <option value="">Select an answer</option>
+        <option value="A">A: The object never changes direction</option>
+        <option value="B">B: The object changes direction once</option>
+        <option value="C">C: The object changes direction multiple times</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>3. Match to Position-Time</h2>
+      <p>Which velocity-time graph best matches this position-time graph?</p>
+      <canvas id="q3Graph" width="500" height="300"></canvas>
+      <select id="q3">
+        <option value="">Select an answer</option>
+        <option value="A">A: Constant positive velocity</option>
+        <option value="B">B: Constant negative velocity</option>
+        <option value="C">C: Linearly increasing velocity</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>4. Acceleration Analysis</h2>
+      <p>What does this acceleration-time graph tell you about the object's motion?</p>
+      <canvas id="q4Graph" width="500" height="300"></canvas>
+      <select id="q4">
+        <option value="">Select an answer</option>
+        <option value="A">A: The object speeds up and slows down repeatedly</option>
+        <option value="B">B: The object accelerates constantly</option>
+        <option value="C">C: The object does not accelerate</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>5. Real-World Scenario</h2>
+      <p>This velocity-time graph represents which real-world situation?</p>
+      <canvas id="q5Graph" width="500" height="300"></canvas>
+      <select id="q5">
+        <option value="">Select an answer</option>
+        <option value="A">A: A car steadily speeding up</option>
+        <option value="B">B: A runner sprinting then coming to a stop</option>
+        <option value="C">C: A ball thrown upward and caught</option>
+      </select>
+    </div>
+
+    <button class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+    <div id="result" class="result" style="display: none;"></div>
+  </div>
+
+  <script>
+    function drawGraph(canvasId, points, color, xLabel = "Time (s)", yLabel = "Position (m)") {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext("2d");
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw grid
+      ctx.strokeStyle = "#f0f0f0";
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 500; i += 50) {
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, 300);
+        ctx.stroke();
+      }
+      for (let j = 0; j <= 300; j += 50) {
+        ctx.beginPath();
+        ctx.moveTo(0, j);
+        ctx.lineTo(500, j);
+        ctx.stroke();
+      }
+      
+      // Draw axes
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(50, 50);
+      ctx.lineTo(50, 250); // y-axis
+      ctx.moveTo(50, 250);
+      ctx.lineTo(450, 250); // x-axis
+      ctx.stroke();
+      
+      // Draw axis labels
+      ctx.fillStyle = "#333";
+      ctx.font = "14px Arial";
+      ctx.fillText(xLabel, 400, 280);
+      ctx.save();
+      ctx.translate(20, 150);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillText(yLabel, 0, 0);
+      ctx.restore();
+      
+      // Draw graph line
+      ctx.beginPath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 3;
+      points.forEach(([x, y], i) => {
+        const px = 50 + x * 80;
+        const py = 250 - y * 40;
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+    }
+    
+         // Question 1: Parabolic position-time graph (constant acceleration)
+     const q1Points = [];
+     for (let t = 0; t <= 4; t += 0.1) {
+       q1Points.push([t, 0.5 * t * t]);
+     }
+     drawGraph("q1Graph", q1Points, "#005a9c", "Time (s)", "Position (m)");
+     
+     // Question 2: Velocity-time graph with direction change
+     const q2Points = [];
+     for (let t = 0; t <= 4; t += 0.1) {
+       const v = t < 2 ? 2 : -2;
+       q2Points.push([t, v]);
+     }
+     drawGraph("q2Graph", q2Points, "#005a9c", "Time (s)", "Velocity (m/s)");
+     
+     // Question 3: Position-time graph (parabolic)
+     const q3Points = [];
+     for (let t = 0; t <= 4; t += 0.1) {
+       q3Points.push([t, 0.5 * t * t]);
+     }
+     drawGraph("q3Graph", q3Points, "#005a9c", "Time (s)", "Position (m)");
+     
+     // Question 4: Oscillating acceleration
+     const q4Points = [];
+     for (let t = 0; t <= 4; t += 0.1) {
+       q4Points.push([t, Math.sin(t * 2)]);
+     }
+     drawGraph("q4Graph", q4Points, "#005a9c", "Time (s)", "Acceleration (m/s²)");
+     
+     // Question 5: Parabolic velocity-time graph
+     const q5Points = [];
+     for (let t = 0; t <= 4; t += 0.1) {
+       const v = -2 * (t - 2) * (t - 2) + 8;
+       q5Points.push([t, v]);
+     }
+     drawGraph("q5Graph", q5Points, "#005a9c", "Time (s)", "Velocity (m/s)");
+    
+    function checkAnswers() {
+      const answers = {
+        q1: "B",
+        q2: "B", 
+        q3: "C",
+        q4: "A",
+        q5: "B"
+      };
+      
+      let correctCount = 0;
+      let result = "";
+      
+      for (let i = 1; i <= 5; i++) {
+        const selected = document.getElementById(`q${i}`).value;
+        if (selected === answers[`q${i}`]) {
+          result += `Question ${i}: ✅ Correct!\n`;
+          correctCount++;
+        } else {
+          result += `Question ${i}: ❌ Incorrect. The correct answer was ${answers[`q${i}`]}.\n`;
+        }
+      }
+      
+      const score = Math.round((correctCount / 5) * 100);
+      const scoreText = `\n🎯 Your Score: ${correctCount}/5 (${score}%)\n`;
+      
+      if (score >= 80) {
+        result = scoreText + result;
+        document.getElementById("result").className = "result correct";
+      } else {
+        result = scoreText + result;
+        document.getElementById("result").className = "result incorrect";
+      }
+      
+      document.getElementById("result").textContent = result;
+      document.getElementById("result").style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relative Motion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #005a9c;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    .formula {
+      background: #eee;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid #005a9c;
+      font-family: "Courier New", Courier, monospace;
+      margin: 1rem 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 1rem auto 2rem;
+      background: white;
+    }
+    label {
+      font-weight: bold;
+    }
+    .slider-container {
+      margin: 0.5rem 0 1rem 0;
+    }
+    .example, .summary {
+      background: #e7f0fa;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .example h3 {
+      margin-top: 0;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+        ]
+      });
+    });
+  </script>
+</head>
+<body>
+
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+
+<h1>Relative Motion</h1>
+
+<section>
+  <p>
+    <strong>Relative motion</strong> describes how the position and velocity of one object appear from the perspective of another moving object.
+    This means the velocity you observe depends on your own frame of reference.
+  </p>
+
+  <h2>The Concept</h2>
+  <p>
+    Imagine you are on a boat moving across a river, and you throw a ball forward. The speed and direction of the ball you see will depend on both the speed of the boat and the speed at which you throw the ball.
+    To analyze this, we use the concept of relative velocity.
+  </p>
+
+  <h2>Relative Velocity Formula</h2>
+  <div class="formula">
+    \[
+      \vec{v}_{A/B} = \vec{v}_A - \vec{v}_B
+    \]
+  </div>
+  <p>Where:</p>
+  <ul>
+    <li>\( \vec{v}_{A/B} \) is the velocity of object A relative to object B</li>
+    <li>\( \vec{v}_A \) is the velocity of object A with respect to the ground (fixed frame)</li>
+    <li>\( \vec{v}_B \) is the velocity of object B with respect to the ground</li>
+  </ul>
+  <p>
+    The subtraction is vector subtraction, meaning magnitude <em>and</em> direction matter.
+  </p>
+</section>
+
+<section>
+  <h2>Interactive Visualization</h2>
+  <p>Adjust the sliders below to change the velocities and directions of two objects. See how the relative velocity vector changes accordingly.</p>
+
+  <div class="slider-container">
+    <label for="velA">Object A Velocity (m/s): <span id="velAVal">50</span></label><br />
+    <input type="range" id="velA" min="0" max="100" value="50" />
+  </div>
+
+  <div class="slider-container">
+    <label for="dirA">Object A Direction (°): <span id="dirAVal">0</span></label><br />
+    <input type="range" id="dirA" min="0" max="360" value="0" />
+  </div>
+
+  <div class="slider-container">
+    <label for="velB">Object B Velocity (m/s): <span id="velBVal">30</span></label><br />
+    <input type="range" id="velB" min="0" max="100" value="30" />
+  </div>
+
+  <div class="slider-container">
+    <label for="dirB">Object B Direction (°): <span id="dirBVal">90</span></label><br />
+    <input type="range" id="dirB" min="0" max="360" value="90" />
+  </div>
+
+  <canvas id="relativeCanvas" width="600" height="400"></canvas>
+
+  <p><strong>Color legend:</strong></p>
+  <ul>
+    <li><span style="color:#0074D9;">Blue</span> - Object A Velocity \( \vec{v}_A \)</li>
+    <li><span style="color:#FF4136;">Red</span> - Object B Velocity \( \vec{v}_B \)</li>
+    <li><span style="color:#2ECC40;">Green</span> - Relative Velocity of A with respect to B \( \vec{v}_{A/B} \)</li>
+  </ul>
+
+   <h3>Watch this video for a visual explanation of relative motion:</h3>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:2rem;">
+    <iframe 
+      src="https://www.youtube.com/embed/v0gg1F0sz0E" 
+      title="Relative Motion Video" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen
+      style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    </iframe>
+  </div>
+</section>
+
+<section class="example">
+  <h3>Example Problem</h3>
+  <p>
+    A swimmer is swimming at 2 m/s upstream in a river flowing at 3 m/s downstream.
+    What is the swimmer's velocity relative to the ground??
+  </p>
+  <p><strong>Step 1:</strong> Define vectors (choose downstream as positive x-direction):</p>
+  <ul>
+    <li>Velocity of swimmer relative to water, \( \vec{v}_{S/W} = -2\, \text{m/s} \) (upstream = negative direction)</li>
+    <li>Velocity of water relative to ground, \( \vec{v}_{W/G} = +3\, \text{m/s} \) (downstream = positive)</li>
+  </ul>
+  <p><strong>Step 2:</strong> Find velocity of swimmer relative to ground:</p>
+  <div class="formula" style="margin-bottom:0.5rem;">
+    \[
+      \vec{v}_{S/G} = \vec{v}_{S/W} + \vec{v}_{W/G}
+    \]
+  </div>
+  <p><strong>Step 3:</strong> Substitute values:</p>
+  <div class="formula">
+    \[
+      \vec{v}_{S/G} = -2 + 3 = +1\, \text{m/s}
+    \]
+  </div>
+  <p>The swimmer moves upstream relative to the water, but relative to the ground, he is still moving downstream at 1 m/s.</p>
+</section>
+
+<section class="summary">
+  <h3>Summary</h3>
+  <ul>
+    <li>Relative velocity depends on the frame of reference.</li>
+    <li>Use vector subtraction to find the velocity of one object relative to another.</li>
+    <li>Directions and magnitudes both matter — consider vector components carefully.</li>
+    <li>Real-world examples include boats crossing rivers, cars passing each other, and airplanes in wind.</li>
+  </ul>
+</section>
+
+<script>
+  const canvas = document.getElementById("relativeCanvas");
+  const ctx = canvas.getContext("2d");
+
+  const origin = { x: 300, y: 350 };
+
+  const velASlider = document.getElementById("velA");
+  const dirASlider = document.getElementById("dirA");
+  const velBSlider = document.getElementById("velB");
+  const dirBSlider = document.getElementById("dirB");
+
+  const velAVal = document.getElementById("velAVal");
+  const dirAVal = document.getElementById("dirAVal");
+  const velBVal = document.getElementById("velBVal");
+  const dirBVal = document.getElementById("dirBVal");
+
+  const scale = 3; // scale velocities visually
+
+  function drawArrow(fromX, fromY, toX, toY, color, label) {
+    const headlen = 15;
+    const dx = toX - fromX;
+    const dy = toY - fromY;
+    const angle = Math.atan2(dy, dx);
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = 3;
+
+    ctx.beginPath();
+    ctx.moveTo(fromX, fromY);
+    ctx.lineTo(toX, toY);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(toX, toY);
+    ctx.lineTo(toX - headlen * Math.cos(angle - Math.PI / 6), toY - headlen * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(toX - headlen * Math.cos(angle + Math.PI / 6), toY - headlen * Math.sin(angle + Math.PI / 6));
+    ctx.lineTo(toX, toY);
+    ctx.fill();
+
+    if (label) {
+      ctx.fillStyle = color;
+      ctx.font = "16px Arial";
+      ctx.fillText(label, toX + 10, toY - 10);
+    }
+  }
+
+  function toRadians(deg) {
+    return deg * Math.PI / 180;
+  }
+
+  function update() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const vA = parseFloat(velASlider.value);
+    const dA = parseFloat(dirASlider.value);
+    const vB = parseFloat(velBSlider.value);
+    const dB = parseFloat(dirBSlider.value);
+
+    velAVal.textContent = vA;
+    dirAVal.textContent = dA;
+    velBVal.textContent = vB;
+    dirBVal.textContent = dB;
+
+    // Convert directions to radians
+    const radA = toRadians(dA);
+    const radB = toRadians(dB);
+
+    // Calculate endpoint of vectors
+    const vAX = vA * Math.cos(radA) * scale;
+    const vAY = -vA * Math.sin(radA) * scale; // y-axis down so invert y
+
+    const vBX = vB * Math.cos(radB) * scale;
+    const vBY = -vB * Math.sin(radB) * scale;
+
+    // Draw velocity vectors from origin
+    drawArrow(origin.x, origin.y, origin.x + vAX, origin.y + vAY, "#0074D9", `A (${vA} m/s)`);
+    drawArrow(origin.x, origin.y, origin.x + vBX, origin.y + vBY, "#FF4136", `B (${vB} m/s)`);
+
+    // Calculate relative velocity vector components: vA - vB
+    const relX = vAX - vBX;
+    const relY = vAY - vBY;
+
+    drawArrow(origin.x, origin.y, origin.x + relX, origin.y + relY, "#2ECC40", `A relative to B`);
+
+    // Draw axes
+    ctx.strokeStyle = "#888";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(origin.x, 20);
+    ctx.lineTo(origin.x, origin.y + 20);
+    ctx.moveTo(20, origin.y);
+    ctx.lineTo(origin.x + 300, origin.y);
+    ctx.stroke();
+
+    // Axis labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Y", origin.x - 15, 25);
+    ctx.fillText("X", origin.x + 280, origin.y + 20);
+  }
+
+  velASlider.addEventListener("input", update);
+  dirASlider.addEventListener("input", update);
+  velBSlider.addEventListener("input", update);
+  dirBSlider.addEventListener("input", update);
+
+  update();
+</script>
+
+</body>
+</html>

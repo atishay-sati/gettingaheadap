@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Definition of Angular Momentum</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\(', '\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Definition of Angular Momentum</h1>
+
+
+    <div class="formula-box">
+      $$\vec{L} = I \vec{\omega}$$
+    </div>
+
+    <p>Angular momentum is the rotational counterpart to linear momentum. It tells us how much rotational motion an object has and how difficult it is to change that motion. Like linear momentum, angular momentum depends on both a "mass" component and a "velocity" component — in this case, the moment of inertia and angular velocity.</p>
+
+    <ul>
+      <li><strong>$\vec{L}$</strong> is angular momentum, in units of $\text{kg} \cdot \text{m}^2/\text{s}$</li>
+      <li><strong>$I$</strong> is the moment of inertia, a measure of an object’s resistance to rotational acceleration</li>
+      <li><strong>$\vec{\omega}$</strong> is angular velocity, measured in radians per second</li>
+    </ul>
+
+    <p>For a point mass, angular momentum is more generally defined as a vector cross product:</p>
+    <div class="formula-box">
+      $$\vec{L} = \vec{r} \times \vec{p} = \vec{r} \times m\vec{v} = mvrsin(\theta)$$
+    </div>
+
+    <p>This expression tells us that angular momentum depends not just on the magnitude of $r$ and $v$, but also on the angle between them. The cross product captures the idea that only the component of velocity perpendicular to the position vector contributes to rotation.</p>
+
+    
+
+    <p>When $\vec{r}$ and $\vec{v}$ are perpendicular, the magnitude of angular momentum is simply:</p>
+    <div class="formula-box">
+      $$L = mvr$$
+    </div>
+    <p>This alternative form is useful when you know the linear speed and distance from the axis but not the moment of inertia directly. It's especially applicable in orbital motion and point-mass systems.</p>
+
+    <h2>Angular Impulse and Torque Relationship</h2>
+    <p>Just as force applied over time gives an object linear momentum, torque applied over time gives an object angular momentum. This relationship is known as <strong>angular impulse</strong>:</p>
+    <div class="formula-box">
+      $$\tau \Delta t = \Delta L$$
+    </div>
+    <p>Angular impulse is the product of torque and the duration it acts, and it results in a change in angular momentum.</p>
+
+    <p>Taking the derivative of angular momentum gives us the rotational equivalent of Newton's second law:</p>
+    <div class="formula-box">
+      $$\frac{d\vec{L}}{dt} = \vec{\tau}_{\text{net}}$$
+    </div>
+    <p>This directly mirrors the linear case where $\frac{d\vec{p}}{dt} = \vec{F}_{\text{net}}$. In both cases, the rate of change of momentum, linear or angular, equals the net force or net torque applied to the system.</p>
+
+    <img src="angular-momentum-impulse.png" alt="Angular Impulse" class="img-fluid-center">
+
+    <h2>Videos to Deepen Understanding</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MULe4xv3lVk?si=77r7tH_N1jLyMent" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/s9Yn9-P0UvY?si=RFIeWAf9Gw5bXEVt" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Example 1: Solid Cylinder</h2>
+    <p>A solid cylinder of mass $4\,\text{kg}$ and radius $0.5\,\text{m}$ is spinning with angular velocity $6\,\text{rad/s}$ about its central axis.</p>
+    <p>Moment of inertia of a solid cylinder: $I = \frac{1}{2}MR^2$</p>
+    <div class="formula-box">
+      $$I = \frac{1}{2}(4)(0.5)^2 = 0.5 \, \text{kg} \cdot \text{m}^2$$
+      $$L = I \omega = 0.5 \cdot 6 = 3 \, \text{kg} \cdot \text{m}^2/\text{s}$$
+    </div>
+
+    <h2>Example 2: Figure Skater</h2>
+    <p>A figure skater spins with arms extended at $2\,\text{rad/s}$ with $I = 2.5\,\text{kg} \cdot \text{m}^2$. After pulling her arms in, her moment of inertia drops to $1.0\,\text{kg} \cdot \text{m}^2$.</p>
+    <p>Even though this hints at conservation of angular momentum, we’ll focus only on computing angular momentum in each case.</p>
+    <div class="formula-box">
+      $$L_1 = 2.5 \cdot 2 = 5 \, \text{kg} \cdot \text{m}^2/\text{s}$$
+      $$L_2 = 1.0 \cdot \omega_2 \text{ (unknown)}$$
+    </div>
+    <p>We’ll revisit what happens to $\omega_2$ later.</p>
+
+    <h2>Summary</h2>
+    <p>Angular momentum describes how much rotational motion an object has. It depends on both how fast it’s spinning (\omega) and how much mass is distributed far from the axis (I). For point masses or orbiting objects, $\vec{L}$ is defined using the cross product of position and momentum vectors: $\vec{L} = \vec{r} \times m\vec{v}$. When $\vec{r}$ and $\vec{v}$ are perpendicular, this simplifies to $L = mvr$.</p>
+    <p>Angular momentum can be changed by applying torque over time. The angular impulse-momentum theorem (\tau \Delta t = \Delta L) and its derivative form (\frac{d\vec{L}}{dt} = \vec{\tau}_{\text{net}}) closely parallel their linear motion counterparts, reinforcing the deep connection between linear and rotational dynamics.</p>
+
+    <h2>Takeaways</h2>
+    <ul>
+      <li>Angular momentum is given by $\vec{L} = I \vec{\omega}$ for rigid bodies</li>
+      <li>For point masses: $\vec{L} = \vec{r} \times m\vec{v}$</li>
+      <li>Magnitude simplifies to $L = mvr$ when $\vec{r} \perp \vec{v}$</li>
+      <li>Impulse in rotation: $\tau \Delta t = \Delta L$</li>
+      <li>Rate of change: $\frac{d\vec{L}}{dt} = \vec{\tau}_{\text{net}}$</li>
+      <li>These laws mirror linear momentum concepts and deepen our understanding of rotational dynamics</li>
+    </ul>
+  </div>
+</body>
+</html>

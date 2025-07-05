@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projectile Motion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 {
+      color: #005a9c;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .formula {
+      background: #eee;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid #005a9c;
+      font-family: "Courier New", Courier, monospace;
+      margin: 1rem 0;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 360px;
+      margin: 1rem 0;
+      border: none;
+    }
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    input[type="range"] {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .slider-container {
+      margin-bottom: 1rem;
+    }
+    #projectileCanvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 1rem auto 2rem;
+      background: #fff;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+        ]
+      });
+    });
+  </script>
+</head>
+<body>
+
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+
+<h1>Projectile Motion</h1>
+
+<p>Projectile motion is the motion of an object thrown or projected into the air, subject only to the acceleration due to gravity. It moves along a curved path called a trajectory.</p>
+
+<h2>Basic Concepts</h2>
+
+<p>A projectile has both horizontal and vertical components of velocity. These components act independently:</p>
+
+<ul>
+  <li><strong>Horizontal velocity \( v_x \)</strong> stays constant (no acceleration horizontally, ignoring air resistance).</li>
+  <li><strong>Vertical velocity \( v_y \)</strong> changes due to gravity \( g \) acting downward.</li>
+</ul>
+
+<h3>Velocity Components</h3>
+<p>If a projectile is launched at an initial speed \( v_0 \) at an angle \( \theta \) above the horizontal:</p>
+
+<div class="formula">
+  \( v_{0x} = v_0 \cos \theta \) <br />
+  \( v_{0y} = v_0 \sin \theta \)
+</div>
+
+<h2>Horizontal Motion</h2>
+
+<p>Because no horizontal forces act on the projectile (assuming no air resistance), the horizontal velocity remains constant:</p>
+
+<div class="formula">
+  \( v_x = v_{0x} = v_0 \cos \theta \)
+</div>
+
+<p>The horizontal position \( x \) changes linearly with time:</p>
+
+<div class="formula">
+  \( x = v_x t = v_0 \cos \theta \times t \)
+</div>
+
+<h2>Vertical Motion</h2>
+
+<p>Gravity causes a vertical acceleration downward of magnitude \( g \approx 9.8 \, m/s^2 \). The vertical velocity changes with time:</p>
+
+<div class="formula">
+  \( v_y = v_{0y} - g t = v_0 \sin \theta - g t \)
+</div>
+
+<p>The vertical position \( y \) changes as:</p>
+
+<div class="formula">
+  \( y = v_{0y} t - \frac{1}{2} g t^2 = v_0 \sin \theta \times t - \frac{1}{2} g t^2 \)
+</div>
+
+<h2>Key Point: Horizontal Velocity Does NOT Affect Time of Flight</h2>
+
+<p>One important fact about projectile motion is that the time it takes for an object to hit the ground depends <em>only</em> on the vertical motion — specifically, how long it takes to fall from its initial height under gravity.</p>
+
+<p>This means that no matter how fast the projectile moves horizontally, the <strong>time of flight</strong> is the same as if you simply dropped it straight down from the same height.</p>
+
+<p>Mathematically, the time to fall from height \( y_0 \) to ground level \( y = 0 \) (ignoring air resistance) is found by solving:</p>
+
+<div class="formula">
+  \[
+    0 = y_0 + v_{0y} t - \frac{1}{2} g t^2
+  \]
+</div>
+
+<p>If the projectile starts at ground level with vertical launch velocity \( v_{0y} = v_0 \sin \theta \), the total time of flight until it returns to \( y=0 \) is:</p>
+
+<div class="formula">
+  \[
+    t_{flight} = \frac{2 v_0 \sin \theta}{g}
+  \]
+</div>
+
+<p>You do NOT need to memorize this formula. Just remember the range of a projectile is the horizontal component of velocity times the time it takes to fall.</p>
+
+
+
+<p>Notice this formula does not include the horizontal velocity \( v_x \). The horizontal speed does not change how long the projectile stays in the air.</p>
+
+<h2>Range of the Projectile</h2>
+
+<p>The horizontal distance (range) the projectile travels before hitting the ground is:</p>
+
+<div class="formula">
+  \[
+    R = v_x \times t_{flight} = v_0 \cos \theta \times \frac{2 v_0 \sin \theta}{g} = \frac{v_0^2 \sin 2\theta}{g}
+  \]
+</div>
+
+<p>You do NOT need to memorize this formula. Just remember the range of a projectile is the horizontal component of velocity times the time it takes to fall.</p>
+
+<h2>Maximum Height</h2>
+
+<p>The highest point in the projectile's trajectory happens when the vertical velocity becomes zero:</p>
+
+<div class="formula">
+  \[
+    v_y = v_0 \sin \theta - g t = 0 \implies t_{peak} = \frac{v_0 \sin \theta}{g}
+  \]
+</div>
+
+<p>The maximum height is:</p>
+
+<div class="formula">
+  \[
+    y_{max} = v_0 \sin \theta \times t_{peak} - \frac{1}{2} g t_{peak}^2 = \frac{v_0^2 \sin^2 \theta}{2g}
+  \]
+</div>
+
+<p>You do NOT need to memorize this formula either. Just remember that at the max height of a projectile, the vertical velocity is 0 (if thrown above a 0 degree angle). Using this, you can use the formula in the 1st part to get the time. </p>
+
+<h2>Interactive Projectile Visualization</h2>
+
+<div class="slider-container">
+  <label for="speedSlider">Initial Speed (m/s): <span id="speedValue">20</span></label>
+  <input type="range" id="speedSlider" min="1" max="30" value="20" step="1" />
+</div>
+<div class="slider-container">
+  <label for="angleSlider">Launch Angle (°): <span id="angleValue">45</span></label>
+  <input type="range" id="angleSlider" min="1" max="89" value="45" step="1" />
+</div>
+
+<canvas id="projectileCanvas" width="700" height="400"></canvas>
+
+<script>
+  const canvas = document.getElementById('projectileCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const speedSlider = document.getElementById('speedSlider');
+  const angleSlider = document.getElementById('angleSlider');
+  const speedValue = document.getElementById('speedValue');
+  const angleValue = document.getElementById('angleValue');
+
+  // Parameters for scaling the drawing
+  const origin = { x: 50, y: 350 };
+  const scaleX = 6; // horizontal scale
+  const scaleY = 6; // vertical scale
+
+  function drawArrow(fromX, fromY, toX, toY, color) {
+    const headlen = 10;
+    const dx = toX - fromX;
+    const dy = toY - fromY;
+    const angle = Math.atan2(dy, dx);
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = 3;
+
+    ctx.beginPath();
+    ctx.moveTo(fromX, fromY);
+    ctx.lineTo(toX, toY);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(toX, toY);
+    ctx.lineTo(toX - headlen * Math.cos(angle - Math.PI / 6), toY - headlen * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(toX - headlen * Math.cos(angle + Math.PI / 6), toY - headlen * Math.sin(angle + Math.PI / 6));
+    ctx.lineTo(toX, toY);
+    ctx.fill();
+  }
+
+  function drawProjectile(v0, thetaDeg) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const theta = thetaDeg * Math.PI / 180;
+    const v0x = v0 * Math.cos(theta);
+    const v0y = v0 * Math.sin(theta);
+    const g = 9.8;
+
+    // Time of flight
+    const T = (2 * v0y) / g;
+    // Maximum range in meters
+    const maxRange = v0x * T;
+
+    // Draw ground line
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(origin.x, origin.y);
+    ctx.lineTo(origin.x + maxRange * scaleX + 30, origin.y);
+    ctx.stroke();
+
+    // Draw trajectory
+    ctx.strokeStyle = "#0074D9";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    for (let t = 0; t <= T; t += T/200) {
+      const x = v0x * t;
+      const y = v0y * t - 0.5 * g * t * t;
+      const drawX = origin.x + x * scaleX;
+      const drawY = origin.y - y * scaleY;
+
+      if(t === 0) ctx.moveTo(drawX, drawY);
+      else ctx.lineTo(drawX, drawY);
+    }
+    ctx.stroke();
+
+    // Draw initial velocity vector (red) - length proportional to speed
+    const baseArrowLength = 40; // base length for 10 m/s
+    const arrowLength = (v0 / 10) * baseArrowLength; // scale with speed
+    const arrowX = origin.x + arrowLength * Math.cos(theta);
+    const arrowY = origin.y - arrowLength * Math.sin(theta);
+    drawArrow(origin.x, origin.y, arrowX, arrowY, "#FF4136");
+
+    // Draw horizontal component (green) - length proportional to horizontal speed
+    const horizontalLength = (v0x / 10) * baseArrowLength;
+    drawArrow(origin.x, origin.y, origin.x + horizontalLength, origin.y, "#2ECC40");
+    // Draw vertical component (orange) - length proportional to vertical speed
+    const verticalLength = (v0y / 10) * baseArrowLength;
+    drawArrow(origin.x + horizontalLength, origin.y, arrowX, arrowY, "#FF851B");
+
+    // Labels for components
+    ctx.fillStyle = "#2ECC40";
+    ctx.font = "16px Arial";
+    ctx.fillText("v₀ₓ", origin.x + horizontalLength/2 - 10, origin.y - 5);
+
+    ctx.fillStyle = "#FF851B";
+    ctx.fillText("v₀ᵧ", origin.x + horizontalLength + 5, origin.y - verticalLength/2);
+
+    ctx.fillStyle = "#FF4136";
+    ctx.fillText("v₀", arrowX + 5, arrowY - 5);
+
+    // Draw axes labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Horizontal distance (x)", origin.x + maxRange * scaleX / 2, origin.y + 25);
+    ctx.fillText("Vertical height (y)", origin.x - 40, origin.y / 2);
+
+    // Draw time of flight, max height, range info
+    ctx.fillStyle = "#000";
+    ctx.font = "16px Arial";
+    ctx.fillText(`Time of flight: ${T.toFixed(2)} s`, origin.x + maxRange * scaleX + 10, origin.y - 80);
+    ctx.fillText(`Max height: ${(v0y * v0y / (2 * g)).toFixed(2)} m`, origin.x + maxRange * scaleX + 10, origin.y - 55);
+    ctx.fillText(`Range: ${maxRange.toFixed(2)} m`, origin.x + maxRange * scaleX + 10, origin.y - 30);
+  }
+
+  function update() {
+    const v0 = Number(speedSlider.value);
+    const theta = Number(angleSlider.value);
+
+    speedValue.textContent = v0;
+    angleValue.textContent = theta;
+
+    drawProjectile(v0, theta);
+  }
+
+  speedSlider.addEventListener('input', update);
+  angleSlider.addEventListener('input', update);
+
+  update();
+</script>
+
+
+
+<h2>Additional Resources</h2>
+
+<h3>Video Explanation: Time of Flight Independent of Horizontal Velocity</h3>
+<iframe src="https://www.youtube.com/embed/I1srkpFhjxI" title="Horizontal Velocity and Free Fall" allowfullscreen></iframe>
+
+<div class="container mt-5">
+  
+
+  <div class="container mt-5">
+  <h3>Example Problems</h3>
+
+  <div class="mb-4">
+    <strong>1. A soccer ball is kicked with a speed of 20 m/s at an angle of 30° above the horizontal.</strong>
+    <ul>
+      <li><strong>Step 1: Break the velocity into components</strong><br>
+        \( v_{0x} = v_0 \cos(\theta) = 20 \cos(30^\circ) = 17.32\,\text{m/s} \)<br>
+        \( v_{0y} = v_0 \sin(\theta) = 20 \sin(30^\circ) = 10.0\,\text{m/s} \)
+      </li>
+      <li><strong>Step 2: Time to reach max height</strong> using \( v = v_0 + at \):<br>
+        At the top, vertical velocity \( v_y = 0 \)<br>
+        \( 0 = 10 - 9.8t \Rightarrow t = \frac{10}{9.8} = 1.02\,\text{s} \)<br>
+        Total time of flight is double that: \( T = 2t = 2.04\,\text{s} \)
+      </li>
+      <li><strong>Step 3: Max height</strong> using \( y = v_0 t + \frac{1}{2} a t^2 \):<br>
+        \( y = 10(1.02) + \frac{1}{2}(-9.8)(1.02)^2 = 10.2 - 5.1 = 5.1\,\text{m} \)
+      </li>
+      <li><strong>Step 4: Range</strong> using \( x = v_{0x} t \):<br>
+        \( R = 17.32 \cdot 2.04 = 35.36\,\text{m} \)
+      </li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <strong>2. A cannon fires a projectile at 45° with an initial velocity of 28 m/s.</strong>
+    <ul>
+      <li><strong>Step 1: Components</strong><br>
+        \( v_{0x} = 28 \cos(45^\circ) \approx 19.8\,\text{m/s} \)<br>
+        \( v_{0y} = 28 \sin(45^\circ) \approx 19.8\,\text{m/s} \)
+      </li>
+      <li><strong>Step 2: Time to peak</strong> from \( v = v_0 + at \):<br>
+        \( 0 = 19.8 - 9.8t \Rightarrow t = 2.02\,\text{s} \Rightarrow T = 4.04\,\text{s} \)
+      </li>
+      <li><strong>Step 3: Max height</strong> using \( y = v_0 t + \frac{1}{2} a t^2 \):<br>
+        \( y = 19.8(2.02) + \frac{1}{2}(-9.8)(2.02)^2 \approx 39.96 - 20 = 10\,\text{m} \)
+      </li>
+      <li><strong>Step 4: Range</strong> \( R = v_{0x} \cdot T = 19.8 \cdot 4.04 \approx 80\,\text{m} \)</li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <strong>3. A ball is launched horizontally off a cliff that is 80 m high with an initial velocity of 15 m/s. Find the range.</strong>
+    <ul>
+      <li><strong>Step 1: Components</strong><br>
+        \( v_{0x} = 15\,\text{m/s} \) (horizontal launch)<br>
+        \( v_{0y} = 0\,\text{m/s} \) (no initial vertical velocity)
+      </li>
+      <li><strong>Step 2: Time to fall</strong> using \( y = y_0 + v_{0y} t + \frac{1}{2} a t^2 \):<br>
+        \( 0 = 80 + 0 \cdot t + \frac{1}{2}(-9.8)t^2 \)<br>
+        \( 0 = 80 - 4.9t^2 \Rightarrow t^2 = \frac{80}{4.9} = 16.33 \)<br>
+        \( t = \sqrt{16.33} = 4.04\,\text{s} \)
+      </li>
+      <li><strong>Step 3: Range</strong> using \( x = v_{0x} t \):<br>
+        \( R = 15 \cdot 4.04 = 60.6\,\text{m} \)
+      </li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <strong>4. A ball is launched at 30° above the horizontal from the top of a 50 m hill with an initial velocity of 25 m/s. Find the maximum height of the ball above the ground.</strong>
+    <ul>
+      <li><strong>Step 1: Components</strong><br>
+        \( v_{0x} = 25 \cos(30^\circ) = 21.65\,\text{m/s} \)<br>
+        \( v_{0y} = 25 \sin(30^\circ) = 12.5\,\text{m/s} \)
+      </li>
+      <li><strong>Step 2: Time to reach max height</strong> from \( v = v_0 + at \):<br>
+        At the peak, vertical velocity \( v_y = 0 \)<br>
+        \( 0 = 12.5 - 9.8t \Rightarrow t = \frac{12.5}{9.8} = 1.28\,\text{s} \)
+      </li>
+      <li><strong>Step 3: Height gained above launch point</strong> using \( y = v_{0y} t + \frac{1}{2} a t^2 \):<br>
+        \( \Delta y = 12.5(1.28) + \frac{1}{2}(-9.8)(1.28)^2 \)<br>
+        \( \Delta y = 16 - 8 = 8\,\text{m} \)
+      </li>
+      <li><strong>Step 4: Total max height above ground</strong>:<br>
+        \( y_{max} = 50 + 8 = 58\,\text{m} \)
+      </li>
+    </ul>
+  </div>
+
+  <div class="mb-5">
+    <strong>5. A projectile's horizontal position is given by \( x(t) = 15t \) meters and vertical position by \( y(t) = 20t - 4.9t^2 \) meters. Find the velocity at \( t = 1 \) second.</strong>
+    <ul>
+      <li><strong>Step 1: Find horizontal velocity by taking the derivative of x(t)</strong><br>
+        \( v_x(t) = \frac{dx}{dt} = \frac{d}{dt}(15t) = 15\,\text{m/s} \)
+      </li>
+      <li><strong>Step 2: Find vertical velocity by taking the derivative of y(t)</strong><br>
+        \( v_y(t) = \frac{dy}{dt} = \frac{d}{dt}(20t - 4.9t^2) = 20 - 9.8t\,\text{m/s} \)
+      </li>
+      <li><strong>Step 3: Evaluate at \( t = 1 \) second</strong><br>
+        \( v_x(1) = 15\,\text{m/s} \) (constant)<br>
+        \( v_y(1) = 20 - 9.8(1) = 10.2\,\text{m/s} \)
+      </li>
+      <li><strong>Step 4: Find total velocity magnitude</strong><br>
+        \( v = \sqrt{v_x^2 + v_y^2} = \sqrt{15^2 + 10.2^2} = \sqrt{225 + 104} = \sqrt{329} \approx 18.1\,\text{m/s} \)
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <h3>Check for Understanding Quiz</h3>
+  <form id="quizForm">
+    <ol id="quizQuestions">
+      <!-- Questions inserted dynamically -->
+    </ol>
+    <button id="submitBtn" style="
+  background-color: #005a9c;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+">
+  Submit
+</button>
+
+<script>
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.addEventListener("mouseover", () => {
+    submitBtn.style.backgroundColor = "#0074D9";
+    submitBtn.style.transform = "scale(1.05)";
+  });
+  submitBtn.addEventListener("mouseout", () => {
+    submitBtn.style.backgroundColor = "#005a9c";
+    submitBtn.style.transform = "scale(1)";
+  });
+</script>
+  </form>
+  <div id="quizResults" class="mt-4"></div>
+</div>
+
+<script>
+  const quizData = [
+    {
+      q: "What is the shape of a projectile's path (ignoring air resistance)?",
+      options: ["Circular", "Straight line", "Parabola", "Ellipse"],
+      correct: 2,
+      explanation: "The path is parabolic due to constant horizontal velocity and uniformly accelerated vertical motion."
+    },
+    {
+      q: "At the top of the projectile’s path, the vertical velocity is:",
+      options: ["Zero", "Maximum", "Equal to the horizontal velocity", "Equal to the initial vertical velocity"],
+      correct: 0,
+      explanation: "Vertical velocity becomes zero momentarily at the peak."
+    },
+    {
+      q: "What angle gives the maximum range for a projectile on flat ground?",
+      options: ["30°", "45°", "60°", "90°"],
+      correct: 1,
+      explanation: "45° provides the ideal balance of vertical and horizontal components."
+    },
+    {
+      q: "The horizontal velocity of a projectile:",
+      options: ["Increases over time", "Decreases over time", "Remains constant", "Becomes zero at the peak"],
+      correct: 2,
+      explanation: "There is no horizontal acceleration (no air resistance), so horizontal velocity stays constant."
+    },
+    {
+      q: "Which of the following affects time of flight?",
+      options: ["Horizontal velocity only", "Vertical velocity only", "Both components equally", "Neither component"],
+      correct: 1,
+      explanation: "Only the vertical component affects how long the object stays in the air."
+    },
+    {
+      q: "If a projectile lands back at the same height, which statement is true?",
+      options: ["Total vertical displacement is positive", "Initial and final speeds are equal", "Final vertical velocity is zero", "It never reaches the same height"],
+      correct: 1,
+      explanation: "Speed is the same at launch and landing (ignoring air resistance), but direction is reversed."
+    },
+    {
+      q: "Gravity acts on a projectile in which direction?",
+      options: ["Only upward", "Only forward", "Downward", "In the direction of motion"],
+      correct: 2,
+      explanation: "Gravity always acts downward."
+    },
+    {
+      q: "Which equation gives vertical position as a function of time?",
+      options: ["y = v₀t", "y = v₀t - ½gt²", "y = v₀t + gt", "y = v₀t + ½gt²"],
+      correct: 1,
+      explanation: "This is the kinematic equation for uniformly accelerated motion downward."
+    },
+    {
+      q: "Doubling the initial velocity while keeping angle the same will:",
+      options: ["Double the range", "Quadruple the range", "Halve the time of flight", "Have no effect"],
+      correct: 1,
+      explanation: "Range is proportional to the square of initial velocity (v²sin(2θ)/g)."
+    },
+    {
+      q: "What happens to the vertical component of velocity as the projectile rises?",
+      options: ["It increases", "It stays constant", "It decreases", "It becomes horizontal"],
+      correct: 2,
+      explanation: "Vertical velocity decreases due to downward acceleration by gravity."
+    }
+  ];
+
+  const quizContainer = document.getElementById("quizQuestions");
+
+  quizData.forEach((q, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <p>${q.q}</p>
+      ${q.options.map((opt, j) =>
+        `<div><label><input type="radio" name="q${i}" value="${j}"> ${opt}</label></div>`
+      ).join("")}
+    `;
+    quizContainer.appendChild(li);
+  });
+
+  document.getElementById("quizForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    let score = 0;
+    let feedback = "";
+    quizData.forEach((q, i) => {
+      const selected = document.querySelector(`input[name="q${i}"]:checked`);
+      if (!selected) {
+        feedback += `<p><strong>Question ${i + 1}:</strong> Not answered.</p>`;
+        return;
+      }
+      const answer = Number(selected.value);
+      if (answer === q.correct) {
+        score++;
+      } else {
+        feedback += `<p><strong>Question ${i + 1}:</strong> Incorrect. <br>
+        <em>Correct Answer:</em> ${q.options[q.correct]}<br>
+        <em>Explanation:</em> ${q.explanation}</p>`;
+      }
+    });
+    feedback = `<h4>Your Score: ${score} / ${quizData.length}</h4>` + feedback;
+    document.getElementById("quizResults").innerHTML = feedback;
+  });
+</script>
+
+
+</body>
+</html>

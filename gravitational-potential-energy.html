@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gravitational Potential Energy</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: 'Georgia', serif;
+      user-select: text;
+    }
+    ul {
+      padding-left: 1.4rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    .img-fluid-center {
+      height: auto;
+      width: 75%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      border-top: 3px solid #3b82f6;
+      padding-top: 1rem;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Gravitational Potential Energy</h1>
+
+    <h2>1. For Point Masses</h2>
+    <p>The gravitational potential energy <strong>U</strong> between two point masses \( m_1 \) and \( m_2 \) separated by a distance \( r \) is:</p>
+    <div class="formula-box">
+      \( U = -G \frac{m_1 m_2}{r} \)
+    </div>
+    <p>Here, \( G \) is the universal gravitational constant.</p>
+
+    <h2>2. Why is Gravitational Potential Energy Greatest at \( r \to \infty \)?</h2>
+    <p>
+      The formula shows \( U = -G \frac{m_1 m_2}{r} \), which means the potential energy is negative and depends inversely on distance \( r \).
+      As \( r \to \infty \), the denominator becomes very large, so \( U \to 0 \).
+    </p>
+    <p>
+      Although zero might seem "small," remember gravitational potential energy is defined relative to zero at infinite separation. Since \( U \) is negative for any finite \( r \), it means the system is bound.
+      When \( r \to \infty \), the negative potential energy approaches zero from below, which is the <em>highest</em> possible gravitational potential energy value the system can have.
+    </p>
+    <p>
+      In simpler terms, gravitational potential energy is always negative due to the attractive nature of gravity. The zero reference point is set at infinite separation, meaning:
+    </p>
+    <ul>
+      <li>At finite distances, \( U < 0 \) — the objects are bound together.</li>
+      <li>At infinite distance, \( U = 0 \) — the objects are free, unbound, and gravitational interaction is negligible.</li>
+    </ul>
+
+    <img src="universalGravitationalPotentialEnergy.png" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>3. Using Conservation of Energy to Show Kinetic Energy Increases as Distance Decreases</h2>
+    <p>Consider an object of mass \( m \) influenced by a mass \( M \), and two distances \( r_1 \) and \( r_2 \) such that \( r_2 < r_1 \). The gravitational potential energies are:</p>
+    <div class="formula-box">
+      \( U_1 = -G \frac{M m}{r_1} \quad\text{and}\quad U_2 = -G \frac{M m}{r_2} \)
+    </div>
+    <p>Since \( r_2 < r_1 \), it follows that \( |U_2| > |U_1| \) (more negative), so:</p>
+    <div class="formula-box">
+      \( U_2 < U_1 \)
+    </div>
+    <p>Now, assume the object starts at rest infinitely far away where \( U_\infty = 0 \) and kinetic energy \( K_\infty = 0 \), and falls freely inward:</p>
+    <ul>
+      <li>At distance \( r_1 \), kinetic energy \( K_1 = -U_1 = G \frac{M m}{r_1} \)</li>
+      <li>At closer distance \( r_2 \), kinetic energy \( K_2 = -U_2 = G \frac{M m}{r_2} \)</li>
+    </ul>
+    <p>Because \( r_2 < r_1 \), this means:</p>
+    <div class="formula-box">
+      \( K_2 > K_1 \)
+    </div>
+    <p>Thus, the kinetic energy increases as the object gets closer to the mass, converting more gravitational potential energy into kinetic energy.</p>
+
+    <h3>Comparison with Object Starting at Finite Distance</h3>
+    <p>If the object started at rest at \( r_1 \), its kinetic energy would be zero at that position. But if it fell all the way from infinity to \( r_1 \), it would have kinetic energy \( K_1 \) as shown above.</p>
+    <p>This means the object falling from infinity to \( r_1 \) has more kinetic energy than an object simply placed at \( r_1 \) without velocity.</p>
+
+    <h2>4. Relationship to Escape Speed</h2>
+    <p>Escape speed \( v_{esc} \) is the minimum speed an object needs to escape the gravitational field of a body without further propulsion. It can be derived using energy conservation:</p>
+
+    <h3>Derivation of Escape Speed</h3>
+    <p>At the surface of a planet of mass \( M \) and radius \( r \), an object of mass \( m \) has:</p>
+    <ul>
+      <li>Kinetic Energy (KE): \( \frac{1}{2} m v_{esc}^2 \)</li>
+      <li>Gravitational Potential Energy (PE): \( U = - G \frac{M m}{r} \)</li>
+    </ul>
+    <p>To just escape, the total energy at infinity should be zero (no kinetic or potential energy):</p>
+    <div class="formula-box">
+      \[
+        \text{Total Energy at surface} = \text{Total Energy at infinity} = 0
+      \]
+      \[
+        \frac{1}{2} m v_{esc}^2 - G \frac{M m}{r} = 0
+      \]
+    </div>
+
+    <p>Rearranging to solve for \( v_{esc} \):</p>
+    <div class="formula-box">
+      \[
+        \frac{1}{2} m v_{esc}^2 = G \frac{M m}{r}
+      \]
+      \[
+        v_{esc}^2 = \frac{2GM}{r}
+      \]
+      \[
+        \boxed{
+          v_{esc} = \sqrt{\frac{2GM}{r}}
+        }
+      \]
+    </div>
+
+    <h2>5. Comparison to Spring and Near-Earth Potential Energy</h2>
+    <p>Near the Earth's surface, the gravitational potential energy simplifies to:</p>
+    <div class="formula-box">
+      \( U = mgh \)
+    </div>
+    <p>where:</p>
+    <ul>
+      <li><strong>m</strong>: mass of the object</li>
+      <li><strong>g</strong>: acceleration due to gravity (~9.8 m/s²)</li>
+      <li><strong>h</strong>: height above the reference point</li>
+    </ul>
+   
+
+    <p class="summary">
+      <strong>Summary:</strong> 
+    </p>
+    <p>Gravitational potential energy for point masses decreases with distance and is negative, reflecting the bound nature of gravitational attraction. The escape speed formula arises from setting kinetic energy equal to the magnitude of gravitational potential energy, and near the Earth's surface, gravitational potential energy approximates to \( mgh \), similar to the potential energy of a spring.</p>
+  </div>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kinematics in 1D and 2D</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    color: #212529;
+  }
+
+  h1, h2, h5 {
+    font-weight: 700;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0d6efd;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #0b5ed7;
+  }
+
+  .question {
+    margin-bottom: 1.8rem;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .question:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+
+  .options button {
+    margin: 0.25rem 0.35rem 0.25rem 0;
+    min-width: 110px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .options button.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  .options button:hover:not(.active):not(:disabled) {
+    background-color: #e7f1ff;
+  }
+
+  .correct {
+    background-color: #d1e7dd !important;
+    border-color: #badbcc !important;
+    color: #0f5132 !important;
+  }
+  .incorrect {
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+    color: #842029 !important;
+  }
+
+  .feedback {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Top content area */
+  .top-content {
+    min-height: 400px;
+    margin-bottom: 3rem;
+    background: #e3f2fd;
+    border: 2px dashed #90caf9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1565c0;
+    font-size: 1.2rem;
+    font-style: italic;
+    user-select: none;
+  }
+
+  .center-align {
+    
+    text-align: center;
+  }
+
+  /* Container for left/right text + image */
+  .left-half {
+    width: 100%;
+    font-size: 1.15rem;
+    text-align: left;
+    padding: 1rem 2rem 1rem 0;
+    color: #212529;
+  }
+
+  .right-half {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right-half img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+  }
+  .right-half img:hover {
+    transform: scale(1.03);
+  }
+
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  /* Controls container */
+  #controls label {
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  #controls input[type=number] {
+    width: 4.5rem;
+    padding: 0.25rem 0.4rem;
+    margin-left: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  #controls input[type=number]:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+
+  #controls button.btn-success {
+    font-weight: 700;
+    padding: 0.45rem 1.2rem;
+    border-radius: 8px;
+  }
+
+  /* Canvas container styling */
+  #simCanvas {
+    border: 2px solid #90caf9;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    background-color: #a7ffeb;
+  }
+
+  /* Formulas image */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #e0e0e0 !important; /* light gray background */
+    color: black !important; /* black text */
+    border-color: #6c757d !important; /* keep default border */
+  }
+
+  .btn-outline-secondary.active {
+    background-color: #0d6efd !important; /* Bootstrap primary blue */
+    color: white !important;
+  }
+
+  /* Quiz container animation */
+  .quiz-container {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 900px;
+    margin: 0 auto 4rem;
+  }
+
+  /* Back links & other anchors */
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  a:hover {
+    transform: scale(1.1);
+    color: #0a58ca;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Top area for your other content -->
+
+  <!-- Start-->
+
+  <!-- Top area split into two columns -->
+<section class="container mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text -->
+    <div class="col-md-6">
+      <div style="background:#e3f2fd; padding: 1rem; border-radius: 10px;">
+        <h2>Kinematics</h2>
+        <p>Kinematics is roughly around 10%–15% of your AP test. Building a solid foundation for kinematics is essential to understanding later concepts. </p>
+        <p>Now let's get into it!</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Cannon Simulation -->
+    <div class="col-md-6 text-center">
+      <div id="controls" style="margin-bottom: 1rem;">
+        <label>Angle (degrees): <input type="number" id="angle" value="45"></label>
+        <label>Velocity (m/s): <input type="number" id="velocity" value="10"></label>
+        <button class="btn btn-success" onclick="fire()">Fire!</button>
+      </div>
+      <canvas id="simCanvas" width="400" height="300"></canvas>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const canvas = document.getElementById("simCanvas");
+  const ctx = canvas.getContext("2d");
+
+  let angleDeg = 45;
+  let velocity = 10;
+  let time = 0;
+  let displacement = 0;
+  let fired = false;
+  let gravity = 9.8;
+  let groundLevel = 250;
+  let x = 50, y = groundLevel;
+  let vx, vy0;
+
+  function fire() {
+    angleDeg = parseFloat(document.getElementById("angle").value);
+    velocity = parseFloat(document.getElementById("velocity").value);
+    let angleRad = angleDeg * Math.PI / 180;
+    vx = velocity * Math.cos(angleRad);
+    vy0 = velocity * Math.sin(angleRad);
+    time = 0;
+    x = 50;
+    y = groundLevel;
+    fired = true;
+    pathPoints = [];
+    nextMark = 0.15;
+  }
+
+  let pathPoints = []; // Store trajectory points
+  let nextMark = 0.15;  // Time for the next dot
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Sky and ground
+    ctx.fillStyle = "#a7ffeb";
+    ctx.fillRect(0, 0, canvas.width, groundLevel);
+    ctx.fillStyle = "#4caf50";
+    ctx.fillRect(0, groundLevel, canvas.width, canvas.height - groundLevel);
+
+    // Launcher
+    ctx.fillStyle = "#555";
+    ctx.fillRect(40, groundLevel - 20, 20, 20);
+    ctx.beginPath();
+    ctx.moveTo(50, groundLevel - 10);
+    ctx.lineTo(
+      50 + 30 * Math.cos(angleDeg * Math.PI / 180),
+      groundLevel - 10 - 30 * Math.sin(angleDeg * Math.PI / 180)
+    );
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 6;
+    ctx.stroke();
+
+    if (fired) {
+      time += 0.016;
+      let vy = vy0 - gravity * time;
+      let newX = 50 + vx * time * 10;
+      let newY = groundLevel - (vy0 * time - 0.5 * gravity * time * time) * 10;
+
+      displacement = (newX - 50) / 10;
+
+      // Save a dot every 0.15s
+      if (time >= nextMark) {
+        pathPoints.push({ x: newX, y: newY });
+        nextMark += 0.15;
+      }
+
+      if (newY >= groundLevel) {
+        fired = false;
+        newY = groundLevel;
+      }
+
+      x = newX;
+      y = newY;
+    }
+
+    // Draw the projectile
+    ctx.beginPath();
+    ctx.arc(x, y - 10, 5, 0, Math.PI * 2);
+    ctx.fillStyle = "red";
+    ctx.fill();
+
+    // Draw vectors only while in motion
+    if (fired) {
+      let vy = vy0 - gravity * time;
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 2;
+
+      // Horizontal vector
+      ctx.beginPath();
+      ctx.moveTo(x, y - 10);
+      ctx.lineTo(x + vx * 5, y - 10);
+      ctx.stroke();
+
+      // Vertical vector
+      ctx.beginPath();
+      ctx.moveTo(x, y - 10);
+      ctx.lineTo(x, y - 10 - vy * 5);
+      ctx.stroke();
+
+      // Labels
+      ctx.fillStyle = "black";
+      ctx.font = "12px Arial";
+      ctx.fillText(`vx = ${vx.toFixed(1)}`, x + vx * 2.5, y - 15);
+      ctx.fillText(`vy = ${vy.toFixed(1)}`, x - 40, y - 10 - vy * 2.5);
+    }
+
+    // Draw the parabolic path points
+    ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
+    pathPoints.forEach(pt => {
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y - 10, 3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // Stats
+    ctx.fillStyle = "black";
+    ctx.font = "14px Arial";
+    ctx.fillText(`Displacement: ${displacement.toFixed(2)} m`, canvas.width - 350, 30);
+    ctx.fillText(`Time: ${time.toFixed(2)} s`, canvas.width - 120, 30);
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+</script>
+
+  <!--Stop-->
+
+  <!-- Hello World Text Box -->
+  <div class="container my-4 d-flex justify-content-between align-items-center">
+    <div class="left-half">
+      Kinematics is the study of motion (specifically, how objects move in space and time) without analyzing the forces that cause this motion. In AP Physics C: Mechanics, kinematics is taught using calculus, making it more precise and dynamic than algebra-based physics. This foundational topic sets the stage for everything from Newton's laws to orbital mechanics, which will be covered in later units.
+    </div>
+    <div class="right-half">
+      <img src="./CarsRacing.jpg" alt="Descriptive Alt Text" class="img-fluid" />
+    </div>
+  </div>
+
+  <h1>
+    <p>Relevant Formulas On Equation Sheet:</p>
+  </h1>
+  <div>
+    <img src = "./EquationSheetKinematics.jpg" alt="Descriptive Alt Text" class="img-fluid-center"/>
+  </div>
+
+  <h1>Concept 1: Motion in One Dimension</h1>
+
+  <div class = "center-align">
+    <p><a href="scalars-vectors.html">Key Topic 1: Scalars vs Vectors</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="average-vs-instantaneous.html">Key Topic 2: Average vs Instantaneous Quantities</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="position-displacement.html">Key Topic 3: Position, Displacement, Velocity, and Acceleration</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="calculus-kinematics.html">Key Topic 4: Calculus for Kinematics</a></p>
+  </div>
+
+  <h1>Concept 2: 2D Motion</h1>
+
+  <div class = "center-align">
+    <p><a href="vector-decomposition.html">Key Topic 1: Vector Decomposition</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="relative-motion.html">Key Topic 2: Relative Motion</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="projectile-motion2d.html">Key Topic 3: Projectile Motion (IMPORTANT)</a></p>
+  </div>
+
+  <h1>Concept 3: Motion Graphs</h1>
+
+  <div class = "center-align">
+    <p><a href="position-time-graph.html">Key Topic 1: Position vs Time</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="velocity-time-graph.html">Key Topic 2:Velocity vs Time</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="acceleration-time-graph.html">Key Topic 3: Acceleration vs Time</a></p>
+  </div>
+
+  <div class = "center-align">
+    <p><a href="graph-quiz.html">Graph Practice</a></p>
+  </div>
+
+  <h1>Practice Tests</h1>
+
+<div class="center-align">
+  <p><a href="practiceKinematics1.html">Practice Test 1: Kinematics</a></p>
+</div>
+
+<div class="center-align">
+  <p><a href="practiceKinematics2.html">Practice Test 2: Kinematics </a></p>
+</div>
+
+
+  
+  
+
+  
+  
+
+
+  
+  <!-- Quiz Section -->
+  <section class="quiz-container container">
+    <h1>🧭 Kinematics: Check for Understanding</h1>
+    <div id="quiz"></div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+      <div id="scoreDisplay" class="mt-3 fw-bold"></div>
+    </div>
+  </section>
+
+  <script>
+    const questions = [
+      {
+        q: "1. What is the derivative of position with respect to time?",
+        options: ["Displacement", "Acceleration", "Velocity", "Jerk"],
+        correct: 2
+      },
+      {
+        q: "2. A car accelerates from rest at 4 m/s². What is its velocity after 5 seconds?",
+        options: ["10 m/s", "15 m/s", "20 m/s", "25 m/s"],
+        correct: 2
+      },
+      {
+        q: "3. Which quantity is the area under a velocity-time graph?",
+        options: ["Displacement", "Acceleration", "Speed", "Force"],
+        correct: 0
+      },
+      {
+        q: "4. The second derivative of position is:",
+        options: ["Velocity", "Jerk", "Acceleration", "Snap"],
+        correct: 2
+      },
+      {
+        q: "5. To increase the displacment of a projectile being launched, what should be done:",
+        options: ["Launched vertically", "Launched horizontally", "Angle is 45°", "Speed is minimized"],
+        correct: 2
+      },
+      {
+        q: "6. At the top of its flight, a projectile’s vertical velocity is:",
+        options: ["Zero", "Maximized", "Negative", "Equal to acceleration"],
+        correct: 0
+      },
+      {
+        q: "7. Which equation is not a kinematic equation?",
+        options: ["v = v₀ + at", "x = x₀ + v₀t + 0.5at²", "F = ma", "v² = v₀² + 2a(x − x₀)"],
+        correct: 2
+      },
+      {
+        q: "8. If acceleration is zero, the object’s motion is:",
+        options: ["Constant velocity", "Speeding up", "Slowing down", "Changing direction"],
+        correct: 0
+      },
+      {
+        q: "9. What is the integral of acceleration with respect to time?",
+        options: ["Velocity", "Displacement", "Position", "Force"],
+        correct: 0
+      },
+      {
+        q: "10. A particle moves such that x(t) = 5t². What is the velocity at t = 3s?",
+        options: ["15 m/s", "30 m/s", "45 m/s", "60 m/s"],
+        correct: 1
+      },
+      {
+        q: "11. Which of the following is a vector quantity?",
+        options: ["Speed", "Distance", "Displacement", "Time"],
+        correct: 2
+      },
+      {
+        q: "12. A negative acceleration means:",
+        options: ["Speed is increasing", "Direction is always left", "The object is speeding up or slowing down depending on velocity", "Velocity is negative"],
+        correct: 2
+      },
+      {
+        q: "13. An object is launched at 30 degrees above the horizontal at a velocity of 30 m/s, how far away from the launch point is the object after it reaches the ground?",
+        options: ["45.9 m", "90 m", "22.5", "79.5 m"],
+        correct: 3
+      },
+      {
+        q: "14. A ball is thrown straight up. Its acceleration at the peak is:",
+        options: ["Zero", "9.8 m/s² up", "9.8 m/s² down", "Variable"],
+        correct: 2
+      },
+      {
+        q: "15. x(t) = 3t³. What is the acceleration at t = 2s?",
+        options: ["12 m/s²", "24 m/s²", "36 m/s²", "48 m/s²"],
+        correct: 1
+      }
+    ];
+
+    let userAnswers = Array(questions.length).fill(null);
+
+    function renderQuiz() {
+      const quizDiv = document.getElementById("quiz");
+      questions.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "question";
+        qDiv.id = `question-${index}`;
+        let html = `<h5>Q${index + 1}: ${q.q}</h5><div class="options">`;
+        q.options.forEach((choice, i) => {
+          html += `<button type="button" class="btn btn-outline-secondary" onclick="selectAnswer(${index}, ${i}, this)">${choice}</button> `;
+        });
+        html += `</div><div class="feedback" id="feedback-${index}"></div>`;
+        qDiv.innerHTML = html;
+        quizDiv.appendChild(qDiv);
+      });
+    }
+
+    function selectAnswer(qIndex, aIndex, button) {
+      userAnswers[qIndex] = aIndex;
+      const options = document.querySelectorAll(`#question-${qIndex} .options button`);
+      options.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questions.forEach((q, i) => {
+        const selected = userAnswers[i];
+        const feedback = document.getElementById(`feedback-${i}`);
+        const buttons = document.querySelectorAll(`#question-${i} .options button`);
+
+        buttons.forEach((btn, j) => {
+          btn.disabled = true;
+          btn.classList.remove("correct", "incorrect");
+          if (j === q.correct) btn.classList.add("correct");
+          if (j === selected && selected !== q.correct) btn.classList.add("incorrect");
+        });
+
+        if (selected === q.correct) {
+          score++;
+          feedback.innerHTML = "✅ Correct";
+        } else {
+          feedback.innerHTML = `❌ Incorrect (Correct: ${q.options[q.correct]})`;
+        }
+      });
+      document.getElementById("scoreDisplay").innerText = `Your Score: ${score} / ${questions.length}`;
+    }
+
+    renderQuiz();
+  </script>
+</body>
+</html>

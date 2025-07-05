@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gravitational and Elastic Potential Energy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+        width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    .img-fluid-left {
+        width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    .img-fluid-right {
+    
+     
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    /* Simulation styles */
+    #sim-container {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    #canvas {
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      background: #e0f2fe;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+    .slider-container {
+      margin: 1rem auto;
+      max-width: 400px;
+      text-align: left;
+      font-size: 1rem;
+      color: #003049;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range] {
+      width: 100%;
+      margin-top: 0.3rem;
+    }
+    #info {
+      font-size: 1.1rem;
+      color: #1e3a8a;
+      margin-top: 0.5rem;
+    }
+
+    .column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="Energy.html">← Work, Energy & Power</a>
+    <h1>Gravitational and Elastic Potential Energy</h1>
+
+    <p><strong>Potential energy</strong> is stored energy due to position or configuration. The two main forms discussed in mechanics are gravitational potential energy and elastic (spring) potential energy.</p>
+
+    <h2>Gravitational Potential Energy</h2>
+    <p>This is the energy stored in an object due to its height in a gravitational field:</p>
+    <div class="formula-box">
+      \[
+      U_g = mgh
+      \]
+    </div>
+    <ul>
+      <li><strong>m</strong>: mass (kg)</li>
+      <li><strong>g</strong>: acceleration due to gravity (9.8 m/s²)</li>
+      <li><strong>h</strong>: height above a reference point (m)</li>
+    </ul>
+
+    <p>Gravitational potential depends on the point of reference. There is possible to have a negative potential if the point of reference is above the point you are calculating. For example, if you take the gravitational potential energy on a table to be 0, the potential energy on the ground will be negative. </p>
+
+    <h2>Elastic (Spring) Potential Energy</h2>
+    <p>This is the energy stored in a spring when it is compressed or stretched:</p>
+    <div class="formula-box">
+      \[
+      U_s = \frac{1}{2} k x^2
+      \]
+    </div>
+    <ul>
+      <li><strong>k</strong>: spring constant (N/m)</li>
+      <li><strong>x</strong>: displacement from equilibrium (m)</li>
+    </ul>
+
+    <h2>Conceptual Notes</h2>
+    <ul>
+      <li>Gravitational potential increases with height.</li>
+      <li>Elastic potential energy is always positive, increasing with compression/stretch.</li>
+      <li>Both forms can convert to kinetic energy and back in systems like pendulums or spring-mass oscillators.</li>
+    </ul>
+
+    <h2>Example Problem</h2>
+    <p>A 2 kg object is lifted to a height of 5 meters. What is its gravitational potential energy?</p>
+    <div class="formula-box">
+      \[
+      U_g = mgh = 2 \times 9.8 \times 5 = 98 \, \text{J}
+      \]
+    </div>
+
+    <h2>Graphical Representation</h2>
+
+    <div class = "row">
+        <div class = "column">
+            <img src="./EPEGraph.png" alt="Descriptive Alt Text" class="img-fluid-left" />
+        </div>
+        <div class = "column">
+            <img src="./GPEGraph.png" alt="Descriptive Alt Text" class="img-fluid-left" />
+        </div>
+    </div>
+    <figure>
+      
+      <figcaption>Gravitational PE increases linearly with height; Elastic PE increases quadratically with displacement.</figcaption>
+    </figure>
+
+    <!-- Simulation Section -->
+    <div id="sim-container">
+      <h2>Interactive Simulation: Potential Energy</h2>
+      <canvas id="canvas" width="700" height="300"></canvas>
+      <div class="slider-container">
+        <label for="massSlider">Mass (kg): <span id="massVal">2</span></label>
+        <input type="range" id="massSlider" min="0.5" max="10" step="0.1" value="2" />
+      </div>
+      <div class="slider-container">
+        <label for="heightSlider">Height (m): <span id="heightVal">5</span></label>
+        <input type="range" id="heightSlider" min="0" max="20" step="0.1" value="5" />
+      </div>
+      <div class="slider-container">
+        <label for="kSlider">Spring Constant k (N/m): <span id="kVal">100</span></label>
+        <input type="range" id="kSlider" min="10" max="500" step="10" value="100" />
+      </div>
+      <div class="slider-container">
+        <label for="xSlider">Displacement x (m): <span id="xVal">0.2</span></label>
+        <input type="range" id="xSlider" min="0" max="2" step="0.01" value="0.2" />
+      </div>
+      <div id="info"></div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const massSlider = document.getElementById('massSlider');
+    const heightSlider = document.getElementById('heightSlider');
+    const kSlider = document.getElementById('kSlider');
+    const xSlider = document.getElementById('xSlider');
+
+    const massVal = document.getElementById('massVal');
+    const heightVal = document.getElementById('heightVal');
+    const kVal = document.getElementById('kVal');
+    const xVal = document.getElementById('xVal');
+    const info = document.getElementById('info');
+
+    function drawBar(x, y, width, height, color, label, value) {
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y, width, height);
+      ctx.fillStyle = '#003049';
+      ctx.font = '16px Montserrat, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(label, x + width / 2, y - 10);
+      ctx.fillText(value.toFixed(2), x + width / 2, y + height + 20);
+    }
+
+    function update() {
+      const m = parseFloat(massSlider.value);
+      const h = parseFloat(heightSlider.value);
+      const k = parseFloat(kSlider.value);
+      const x = parseFloat(xSlider.value);
+
+      massVal.textContent = m.toFixed(1);
+      heightVal.textContent = h.toFixed(1);
+      kVal.textContent = k.toFixed(0);
+      xVal.textContent = x.toFixed(2);
+
+      const Ug = m * 9.8 * h;
+      const Us = 0.5 * k * x * x;
+
+      info.innerHTML = `
+        <strong>Gravitational PE:</strong> ${Ug.toFixed(2)} J<br/>
+        <strong>Elastic PE:</strong> ${Us.toFixed(2)} J
+      `;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const scale = 500 / Math.max(Ug, Us, 1);
+      drawBar(100, 60, Ug * scale, 50, '#f59e0b', 'Gravitational PE', Ug);
+      drawBar(100, 140, Us * scale, 50, '#8b5cf6', 'Elastic PE', Us);
+    }
+
+    massSlider.addEventListener('input', update);
+    heightSlider.addEventListener('input', update);
+    kSlider.addEventListener('input', update);
+    xSlider.addEventListener('input', update);
+
+    update();
+  </script>
+</body>
+</html>

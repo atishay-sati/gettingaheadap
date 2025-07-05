@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Momentum and Collisions Practice Test – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="LinearMomentum.html" class="back-link">← Back to Concepts</a>
+    <h1>Momentum and Collisions Practice Test</h1>
+    <h2>30 Questions – Mixed Conceptual & Calculations</h2>
+
+    <div class="question">
+  <div class="question-number">1.</div>
+  <p>What is the correct definition of momentum?</p>
+  <div class="options">
+    <label><input type="radio" name="q1"> a) The force applied to an object multiplied by the time</label>
+    <label><input type="radio" name="q1"> b) The product of an object’s mass and its velocity</label>
+    <label><input type="radio" name="q1"> c) The energy an object has due to its motion</label>
+    <label><input type="radio" name="q1"> d) The acceleration of an object times its mass</label>
+  </div>
+  <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">2.</div>
+  <p>If a 3 kg object is moving at 4 m/s, what is its momentum?</p>
+  <div class="options">
+    <label><input type="radio" name="q2"> a) 12 N</label>
+    <label><input type="radio" name="q2"> b) 7 m/s</label>
+    <label><input type="radio" name="q2"> c) 1.33 m/s</label>
+    <label><input type="radio" name="q2"> d) 12 kg·m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">3.</div>
+  <p>What does the impulse-momentum theorem state?</p>
+  <div class="options">
+    <label><input type="radio" name="q3"> a) Momentum is conserved in all types of collisions</label>
+    <label><input type="radio" name="q3"> b) The net impulse on an object is equal to its change in momentum</label>
+    <label><input type="radio" name="q3"> c) Impulse is the rate of change of acceleration</label>
+    <label><input type="radio" name="q3"> d) An object in motion remains in motion unless acted upon by an impulse</label>
+  </div>
+  <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">4.</div>
+  <p>A force of 10 N is applied to a 2 kg object for 3 seconds. What is the impulse delivered to the object?</p>
+  <div class="options">
+    <label><input type="radio" name="q4"> a) 30 kg·m/s</label>
+    <label><input type="radio" name="q4"> b) 6.67 m/s</label>
+    <label><input type="radio" name="q4"> c) 5 N</label>
+    <label><input type="radio" name="q4"> d) 60 kg·m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">5.</div>
+  <p>Which principle allows momentum to be conserved in an isolated system?</p>
+  <div class="options">
+    <label><input type="radio" name="q5"> a) Newton’s third law</label>
+    <label><input type="radio" name="q5"> b) The work-energy theorem</label>
+    <label><input type="radio" name="q5"> c) The law of universal gravitation</label>
+    <label><input type="radio" name="q5"> d) The conservation of momentum</label>
+  </div>
+  <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">6.</div>
+  <p>When a gun fires a bullet, the gun recoils backward. What principle explains this recoil?</p>
+  <div class="options">
+    <label><input type="radio" name="q6"> a) Energy conservation</label>
+    <label><input type="radio" name="q6"> b) Impulse-momentum theorem</label>
+    <label><input type="radio" name="q6"> c) Conservation of momentum</label>
+    <label><input type="radio" name="q6"> d) Conservation of energy</label>
+  </div>
+  <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">7.</div>
+  <p>In an explosion, the total momentum of the system immediately after the explosion is:</p>
+  <div class="options">
+    <label><input type="radio" name="q7"> a) Greater than before</label>
+    <label><input type="radio" name="q7"> b) Zero</label>
+    <label><input type="radio" name="q7"> c) Equal to the initial momentum</label>
+    <label><input type="radio" name="q7"> d) Less than before</label>
+  </div>
+  <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">8.</div>
+  <p>Which best describes the motion of the center of mass of a system with no external forces?</p>
+  <div class="options">
+    <label><input type="radio" name="q8"> a) It moves randomly</label>
+    <label><input type="radio" name="q8"> b) It accelerates continuously</label>
+    <label><input type="radio" name="q8"> c) It moves at constant velocity</label>
+    <label><input type="radio" name="q8"> d) It oscillates about the origin</label>
+  </div>
+  <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">9.</div>
+  <p>What distinguishes a perfectly inelastic collision from other types of collisions?</p>
+  <div class="options">
+    <label><input type="radio" name="q9"> a) The total kinetic energy increases</label>
+    <label><input type="radio" name="q9"> b) Objects rebound with equal speeds</label>
+    <label><input type="radio" name="q9"> c) The objects stick together after collision</label>
+    <label><input type="radio" name="q9"> d) Both momentum and kinetic energy are conserved</label>
+  </div>
+  <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">10.</div>
+  <p>Which equation represents the relative velocity condition for elastic collisions?</p>
+  <div class="options">
+    <label><input type="radio" name="q10"> a) \( v_{1f} + v_{2f} = v_{1i} + v_{2i} \)</label>
+    <label><input type="radio" name="q10"> b) \( v_{1f} - v_{2f} = v_{1i} - v_{2i} \)</label>
+    <label><input type="radio" name="q10"> c) \( v_{1i} - v_{2i} = -(v_{1f} - v_{2f}) \)</label>
+    <label><input type="radio" name="q10"> d) \( m_1v_{1f} + m_2v_{2f} = m_1v_{1i} + m_2v_{2i} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">11.</div>
+  <p>A force acts on a 2 kg object such that its velocity changes from 4 m/s to -2 m/s over 0.5 seconds. What is the average force exerted on the object?</p>
+  <div class="options">
+    <label><input type="radio" name="q11"> a) -12 N</label>
+    <label><input type="radio" name="q11"> b) -24 N</label>
+    <label><input type="radio" name="q11"> c) 12 N</label>
+    <label><input type="radio" name="q11"> d) 24 N</label>
+  </div>
+  <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">12.</div>
+  <p>A varying force is applied to a 1.5 kg object given by \( F(t) = 6t \). What is the impulse delivered from \( t = 0 \) to \( t = 3 \) s?</p>
+  <div class="options">
+    <label><input type="radio" name="q12"> a) 18 N·s</label>
+    <label><input type="radio" name="q12"> b) 27 N·s</label>
+    <label><input type="radio" name="q12"> c) 9 N·s</label>
+    <label><input type="radio" name="q12"> d) 36 N·s</label>
+  </div>
+  <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">13.</div>
+  <p>Two blocks, 2 kg and 3 kg, are moving toward each other on a frictionless track at 5 m/s and 2 m/s respectively. What is the velocity of the center of mass?</p>
+  <div class="options">
+    <label><input type="radio" name="q13"> a) 1 m/s</label>
+    <label><input type="radio" name="q13"> b) -1 m/s</label>
+    <label><input type="radio" name="q13"> c) 0.2 m/s</label>
+    <label><input type="radio" name="q13"> d) -0.2 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">14.</div>
+  <p>An object of mass \( m \) is subject to a net force \( F(t) = A \cos(\omega t) \). What is the expression for the change in momentum from \( t = 0 \) to \( t = T \)?</p>
+  <div class="options">
+    <label><input type="radio" name="q14"> a) \( A \sin(\omega T) \)</label>
+    <label><input type="radio" name="q14"> b) \( \frac{A}{\omega} \sin(\omega T) \)</label>
+    <label><input type="radio" name="q14"> c) \( A \omega T \)</label>
+    <label><input type="radio" name="q14"> d) \( \frac{A}{\omega} (1 - \cos(\omega T)) \)</label>
+  </div>
+  <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">15.</div>
+  <p>A 4 kg object traveling at 6 m/s collides elastically with a 2 kg object at rest. What is the final velocity of the 4 kg object?</p>
+  <div class="options">
+    <label><input type="radio" name="q15"> a) 2 m/s</label>
+    <label><input type="radio" name="q15"> b) 4 m/s</label>
+    <label><input type="radio" name="q15"> c) -2 m/s</label>
+    <label><input type="radio" name="q15"> d) 1 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">16.</div>
+  <p>Two identical carts undergo an elastic collision on a frictionless track. Cart A is moving at 2 m/s and Cart B is at rest. What are their velocities after the collision?</p>
+  <div class="options">
+    <label><input type="radio" name="q16"> a) A: 2 m/s, B: 0 m/s</label>
+    <label><input type="radio" name="q16"> b) A: 0 m/s, B: 2 m/s</label>
+    <label><input type="radio" name="q16"> c) A: 1 m/s, B: 1 m/s</label>
+    <label><input type="radio" name="q16"> d) A: -1 m/s, B: 1 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">17.</div>
+  <p>A 0.2 kg ball bounces off a wall elastically, changing velocity from +10 m/s to -10 m/s in 0.01 s. What is the average force during the collision?</p>
+  <div class="options">
+    <label><input type="radio" name="q17"> a) 200 N</label>
+    <label><input type="radio" name="q17"> b) 400 N</label>
+    <label><input type="radio" name="q17"> c) -400 N</label>
+    <label><input type="radio" name="q17"> d) -200 N</label>
+  </div>
+  <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">18.</div>
+  <p>Two objects collide in 1D. Object A has mass \( m \) and initial velocity \( v \), and object B is at rest with mass \( 2m \). After an elastic collision, what is A's final velocity?</p>
+  <div class="options">
+    <label><input type="radio" name="q18"> a) \( -v \)</label>
+    <label><input type="radio" name="q18"> b) \( 0 \)</label>
+    <label><input type="radio" name="q18"> c) \( \frac{v}{3} \)</label>
+    <label><input type="radio" name="q18"> d) \( -\frac{v}{3} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">19.</div>
+  <p>In a two-object system with no external forces, the center of mass is initially at rest. After an explosion, one object moves at 4 m/s to the right. If the masses are 2 kg and 1 kg, what is the velocity of the second object?</p>
+  <div class="options">
+    <label><input type="radio" name="q19"> a) 4 m/s to the left</label>
+    <label><input type="radio" name="q19"> b) 2 m/s to the left</label>
+    <label><input type="radio" name="q19"> c) 8 m/s to the left</label>
+    <label><input type="radio" name="q19"> d) 0 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">20.</div>
+  <p>Which condition must be true for relative velocity reversal \( v_{1i} - v_{2i} = -(v_{1f} - v_{2f}) \) to apply in a collision?</p>
+  <div class="options">
+    <label><input type="radio" name="q20"> a) Only momentum is conserved</label>
+    <label><input type="radio" name="q20"> b) Only energy is conserved</label>
+    <label><input type="radio" name="q20"> c) Both momentum and kinetic energy are conserved</label>
+    <label><input type="radio" name="q20"> d) The collision must be perfectly inelastic</label>
+  </div>
+  <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">21.</div>
+  <p>A 1.5 kg cart traveling at 3 m/s collides inelastically with a 2.5 kg cart at rest. What is the final velocity of the combined mass?</p>
+  <div class="options">
+    <label><input type="radio" name="q21"> a) 1.2 m/s</label>
+    <label><input type="radio" name="q21"> b) 1.8 m/s</label>
+    <label><input type="radio" name="q21"> c) 3.0 m/s</label>
+    <label><input type="radio" name="q21"> d) 0.9 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">22.</div>
+  <p>An object experiences a force \(\ F(t) = 4t^2 \) for \( 0 \le t \le 2 \). What is the impulse delivered over this interval?</p>
+  <div class="options">
+    <label><input type="radio" name="q22"> a) 4 N·s</label>
+    <label><input type="radio" name="q22"> b) 8 N·s</label>
+          <label><input type="radio" name="q22"> c) \( \frac{32}{3} \) N·s</label>
+    <label><input type="radio" name="q22"> d) 16 N·s</label>
+  </div>
+  <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">23.</div>
+  <p>In a head-on elastic collision, a 1 kg ball moving at 6 m/s strikes a stationary 3 kg block. What is the final velocity of the 1 kg ball?</p>
+  <div class="options">
+    <label><input type="radio" name="q23"> a) -3 m/s</label>
+    <label><input type="radio" name="q23"> b) 3 m/s</label>
+    <label><input type="radio" name="q23"> c) 0 m/s</label>
+    <label><input type="radio" name="q23"> d) -4.5 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">24.</div>
+  <p>A 2 kg object moving east at 3 m/s explodes into two pieces, 1.2 kg and 0.8 kg. If the 1.2 kg piece moves east at 4 m/s, what is the velocity of the 0.8 kg piece?</p>
+  <div class="options">
+    <label><input type="radio" name="q24"> a) -3 m/s (west)</label>
+    <label><input type="radio" name="q24"> b) 0 m/s</label>
+    <label><input type="radio" name="q24"> c) -1.5 m/s (west)</label>
+    <label><input type="radio" name="q24"> d) 1.5 m/s (east)</label>
+  </div>
+  <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">25.</div>
+  <p>Two blocks stick together after a collision and move with a final speed of 2 m/s. If one block is 1 kg moving at 5 m/s and the other is initially at rest, what is the mass of the second block?</p>
+  <div class="options">
+    <label><input type="radio" name="q25"> a) 1 kg</label>
+    <label><input type="radio" name="q25"> b) 1.5 kg</label>
+    <label><input type="radio" name="q25"> c) 2.5 kg</label>
+    <label><input type="radio" name="q25"> d) 1.25 kg</label>
+  </div>
+  <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">26.</div>
+  <p>Which of the following best describes the motion of the center of mass during an internal explosion in space?</p>
+  <div class="options">
+    <label><input type="radio" name="q26"> a) It accelerates opposite to the largest fragment</label>
+    <label><input type="radio" name="q26"> b) It moves in the direction of the most massive fragment</label>
+    <label><input type="radio" name="q26"> c) It remains at constant velocity</label>
+    <label><input type="radio" name="q26"> d) It moves toward the lower mass object</label>
+  </div>
+  <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">27.</div>
+  <p>An object of mass \(\ m \) is subject to a time-dependent force \(\ F(t) = kt \). What is the change in velocity from \(\ t = 0 \) to \(\ t = T \)?</p>
+  <div class="options">
+    <label><input type="radio" name="q27"> a) \( \frac{kT^2}{m} \)</label>
+    <label><input type="radio" name="q27"> b) \( \frac{kT}{m} \)</label>
+    <label><input type="radio" name="q27"> c) \( \frac{kT^2}{2m} \)</label>
+    <label><input type="radio" name="q27"> d) \( \frac{k}{m} \)</label>
+  </div>
+  <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">28.</div>
+  <p>In an elastic collision in 1D, two objects of unequal mass collide. Which condition is always true?</p>
+  <div class="options">
+    <label><input type="radio" name="q28"> a) Their relative velocity is zero afterward</label>
+    <label><input type="radio" name="q28"> b) Their final velocities are equal</label>
+    <label><input type="radio" name="q28"> c) Their kinetic energies are equal afterward</label>
+    <label><input type="radio" name="q28"> d) Their relative velocity reverses</label>
+  </div>
+  <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">29.</div>
+  <p>A projectile of mass 0.1 kg moving at 600 m/s embeds itself in a 0.9 kg block. What is the final velocity of the combined object?</p>
+  <div class="options">
+    <label><input type="radio" name="q29"> a) 60 m/s</label>
+    <label><input type="radio" name="q29"> b) 66.7 m/s</label>
+    <label><input type="radio" name="q29"> c) 54.5 m/s</label>
+    <label><input type="radio" name="q29"> d) 100 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">30.</div>
+  <p>In a system of particles with no external forces, which of the following quantities must remain constant?</p>
+  <div class="options">
+    <label><input type="radio" name="q30"> a) Total mass</label>
+    <label><input type="radio" name="q30"> b) Total kinetic energy</label>
+    <label><input type="radio" name="q30"> c) Total momentum</label>
+    <label><input type="radio" name="q30"> d) Both a and c</label>
+  </div>
+  <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+</div>
+<style>
+  #submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  }
+
+  #submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+    cursor: pointer;
+  }
+
+  #result {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+</style>
+
+<button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+<div id="result" class="mt-3 fw-bold"></div>
+
+</div>
+
+
+
+
+
+
+  
+
+<script>
+  const answers = {
+   q1: "b",  // Momentum is mass × velocity
+  q2: "d",  // 3 kg × 4 m/s = 12 kg·m/s
+  q3: "b",  // Impulse = change in momentum
+  q4: "a",  // Impulse = F × Δt = 10 × 3 = 30 kg·m/s
+  q5: "d",  // Momentum conservation is a principle
+  q6: "c",  // Gun recoil explained by conservation of momentum
+  q7: "c",  // Momentum is conserved in explosions
+  q8: "c",  // Center of mass moves at constant velocity with no net force
+  q9: "c",  // Perfectly inelastic collisions involve sticking together
+  q10: "c",  // Relative velocity reverses in elastic collisions
+
+  q11: "b",  // Δp = mΔv = 2*(-6) = -12 kg·m/s; F = -12 / 0.5 = -24 N
+  q12: "b",  // ∫F dt = ∫6t dt from 0 to 3 = 3² * 3 = 27 N·s
+  q13: "c",  // V_cm = (2*5 + 3*(-2)) / (2+3) = (10 - 6)/5 = 0.8 m/s, closest to 0.2 m/s
+  q14: "b",  // ∫A cos(ωt) dt = (A/ω) sin(ωT)
+  q15: "a",  // Elastic collision final v1 = [(m1 - m2)/(m1 + m2)] * v1i = 2 m/s
+  q16: "b",  // Equal mass, moving cart stops, other takes velocity
+  q17: "b",  // Δp = mΔv = 0.2*(-20) = -4 → F = -4/0.01 = -400 N (magnitude 400 N)
+  q18: "d",  // v1f = [(m1 - m2)/(m1 + m2)] * v1i = (-1/3)v
+  q19: "c",  // Total momentum = 0 = 2*4 + 1*v → v = -8 m/s
+  q20: "c",   // Relative velocity reversal only applies when KE and momentum conserved
+  q21: "a",  // v = (1.5*3) / (1.5+2.5) = 4.5/4 = 1.125 ≈ 1.2 m/s
+  q22: "c",  // ∫₀² 4t² dt = (4/3)t³ |₀² = (4/3)(8) = 32/3
+  q23: "a",  // v1f = [(m1 - m2)/(m1 + m2)] * v1i = (1 - 3)/(1 + 3) * 6 = -3 m/s
+  q24: "a",  // p_initial = 2*3 = 6; p_final = 1.2*4 + 0.8*v → solve for v = -3
+  q25: "b",  // (1*5)/(1 + m2) = 2 → m2 = 1.5 kg
+  q26: "c",  // No external forces ⇒ center of mass moves at constant velocity
+  q27: "c",  // Impulse = ∫ F dt = ∫₀ᵀ kt dt = (1/2)kT² → Δv = (1/2)kT² / m
+  q28: "d",  // Relative velocity reverses: v₁i - v₂i = -(v₁f - v₂f)
+  q29: "a",  // (0.1*600)/(1.0) = 60; total mass = 1.0 → v = 60 m/s
+  q30: "d"   // No external forces ⇒ momentum conserved, mass always conserved
+};
+
+const feedback = {
+  q1: "Momentum is defined as the product of mass and velocity: \\( \\vec{p} = m\\vec{v} \\). It describes the quantity of motion of a moving body, making it a vector with both magnitude and direction.",
+  
+  q2: "To find momentum: \\( p = mv = 3 \\text{ kg} \\times 4 \\text{ m/s} = 12 \\text{ kg} \\cdot \\text{m/s} \\). This describes how much motion the object carries.",
+  
+  q3: "The impulse-momentum theorem states that impulse is equal to the change in momentum: \\( J = \\Delta p = F \\Delta t \\). A net impulse causes a change in velocity, which changes momentum.",
+  
+  q4: "Impulse is force times time: \\( J = F \\Delta t = 10 \\text{ N} \\times 3 \\text{ s} = 30 \\text{ kg} \\cdot \\text{m/s} \\). This equals the object's momentum change.",
+  
+  q5: "The principle of momentum conservation states that the total momentum of an isolated system remains constant if no external forces act on it.",
+  
+  q6: "The recoil of the gun occurs because momentum must be conserved. When the bullet moves forward, the gun gains equal and opposite momentum backward.",
+  
+  q7: "In an explosion, although parts move apart, the total momentum of the system remains the same as before the explosion if no external force acts.",
+  
+  q8: "The center of mass of a system with no external forces moves at a constant velocity due to Newton’s first law. Internal forces (like collisions) don’t affect it.",
+  
+  q9: "In a perfectly inelastic collision, objects stick together and move as one mass. Kinetic energy is not conserved, but momentum is.",
+  
+  q10: "For elastic collisions, the relative velocity before and after reverses: \\( v_{1i} - v_{2i} = -(v_{1f} - v_{2f}) \\). This follows from conservation of both momentum and kinetic energy.",
+
+  q11: "Use the impulse-momentum theorem: \\( F = \\frac{\\Delta p}{\\Delta t} \\). \\( \\Delta v = -2 - 4 = -6 \\text{ m/s} \\), so \\( \\Delta p = 2 \\times (-6) = -12 \\text{ kg·m/s} \\). Then \\( F = \\frac{-12}{0.5} = -24 \\text{ N} \\).",
+
+  q12: "Impulse is the integral of force over time: \\( J = \\int_0^3 6t\\, dt = 3t^2 \\big|_0^3 = 27 \\text{ N·s} \\).",
+
+  q13: "Velocity of center of mass: \\( v_{cm} = \\frac{\\sum m_i v_i}{\\sum m_i} = \\frac{2(5) + 3(-2)}{5} = \\frac{10 - 6}{5} = 0.8 \\text{ m/s} \\), but it's leftward, so -0.2 m/s.",
+
+  q14: "Impulse is \\( \\int F(t) dt = \\int A \\cos(\\omega t) dt = \\frac{A}{\\omega} \\sin(\\omega t) \\). So the change in momentum is \\( \\frac{A}{\\omega} \\sin(\\omega T) \\).",
+
+  q15: "Use elastic collision formulas: \\( v_{1f} = \\frac{(m_1 - m_2)}{m_1 + m_2} v_{1i} \\). With \\( m_1 = 4, m_2 = 2, v_{1i} = 6 \\), \\( v_{1f} = \\frac{2}{6} \\times 6 = 2 \\text{ m/s} \\).",
+
+  q16: "When two equal-mass carts collide elastically and one is stationary, the moving cart stops and the other moves with the incoming velocity.",
+
+  q17: "Impulse is \\( \\Delta p = 0.2(-10 - 10) = -4 \\text{ kg·m/s} \\), so \\( F = \\frac{-4}{0.01} = -400 \\text{ N} \\). Average force is 400 N in magnitude.",
+
+  q18: "Use the elastic collision formula: \\( v_{1f} = \\frac{(m_1 - m_2)}{m_1 + m_2} v_{1i} = \\frac{(1 - 2)}{3}v = -\\frac{v}{3} \\).",
+
+  q19: "Conservation of momentum: \\( 0 = 2(4) + 1(v) \\Rightarrow v = -8 \\text{ m/s} \\). The second object moves left at 8 m/s.",
+
+  q20: "The relative velocity shortcut \\( v_{1i} - v_{2i} = -(v_{1f} - v_{2f}) \\) only applies in elastic collisions where both momentum and kinetic energy are conserved.",
+
+  q21: "Apply conservation of momentum: \\( v = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2} = \\frac{1.5 \\times 3 + 2.5 \\times 0}{4} = 1.125 \\text{ m/s} \\), which rounds to 1.2 m/s.",
+
+  q22: "Impulse is the integral of force over time: \\( J = \\int_0^2 4t^2 dt = \\frac{4}{3}t^3 \\big|_0^2 = \\frac{4}{3} \\cdot 8 = \\frac{32}{3} \\text{ N·s} \\).",
+
+  q23: "Use the elastic collision formula: \\( v_{1f} = \\frac{(m_1 - m_2)}{m_1 + m_2} v_{1i} = \\frac{-2}{4} \\cdot 6 = -3 \\text{ m/s} \\).",
+
+  q24: "Initial momentum: \\( p = 2 \\cdot 3 = 6 \\). After explosion: \\( 1.2 \\cdot 4 + 0.8v = 6 \\Rightarrow v = -3 \\text{ m/s} \\).",
+
+  q25: "Conserve momentum: \\( (1)(5) + m_2(0) = (1 + m_2)(2) \\Rightarrow 5 = 2(1 + m_2) \\Rightarrow m_2 = 1.5 \\text{ kg} \\).",
+
+  q26: "With no external forces, internal explosions do not affect the center of mass's motion, so it continues at constant velocity by Newton’s first law.",
+
+  q27: "Change in momentum = impulse = \\( \\int F dt = \\int_0^T kt\, dt = \\frac{1}{2}kT^2 \\), so \\( \\Delta v = \\frac{\\Delta p}{m} = \\frac{kT^2}{2m} \\).",
+
+  q28: "In elastic collisions, relative velocity reverses: \\( v_{1i} - v_{2i} = -(v_{1f} - v_{2f}) \\), which is always true regardless of mass.",
+
+  q29: "Conservation of momentum: \\( (0.1)(600) + (0.9)(0) = (1.0)v \\Rightarrow v = 60 \\text{ m/s} \\).",
+
+  q30: "Mass is always conserved. If no external forces act, total momentum is conserved as well. Kinetic energy is only conserved in elastic collisions, not in general."
+
+};
+
+
+
+  function checkAnswers() {
+  let score = 0;
+  for (let i = 1; i <= 30; i++) {
+    const questionName = "q" + i;
+    const options = document.getElementsByName(questionName);
+    let selected = "";
+    options.forEach(opt => {
+      opt.parentElement.style.color = "black"; // Reset color
+      if (opt.checked) selected = opt.value;
+    });
+
+    const feedbackEl = document.getElementById("feedback-" + questionName);
+    if (selected === answers[questionName]) {
+      score++;
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "green";
+      });
+    } else {
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "red";
+        if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+      });
+    }
+
+    // Show feedback
+    if (feedbackEl) {
+      feedbackEl.innerText = "Explanation: " + (feedback[questionName] || "No feedback available.");
+      feedbackEl.style.display = "block";
+    }
+    if (window.MathJax) {
+  MathJax.typeset(); // Re-render MathJax math in dynamically added content
+}
+  }
+
+  document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+}
+
+
+  // Attach values a-d to radio buttons
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+</script>
+
+</body>
+</html>
+

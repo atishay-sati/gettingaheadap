@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolling Without Slipping</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #005a9c;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 220px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .example {
+      background-color: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .example p {
+      margin-bottom: 0.8rem;
+    }
+    .example p:last-child {
+      margin-bottom: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      width: 90%;
+      background: #f8fafc;
+      font-size: 1.05rem;
+    }
+    th, td {
+      border: 1px solid #b6c6e3;
+      padding: 0.7rem 1rem;
+      text-align: center;
+    }
+    th {
+      background: #dbeafe;
+      color: #003049;
+    }
+    .simulation-container {
+      background: #f8fafc;
+      border: 2px solid #3b82f6;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-canvas {
+      border: 2px solid #1e3a8a;
+      border-radius: 10px;
+      background: white;
+      margin: 1rem auto;
+      display: block;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .control-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    .control-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .control-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-group .value-display {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .energy-display {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+    }
+    .energy-display strong {
+      color: #1e40af;
+    }
+    .key-concept {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .key-concept h3 {
+      color: white;
+      margin-top: 0;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Rolling Without Slipping</h1>
+    
+
+    <div class="formula-box">
+      <h3>The Fundamental Condition</h3>
+      $$v = \omega R$$
+      <p><strong>This equation links translational and rotational motion in rolling without slipping.</strong></p>
+    </div>
+
+    <p>
+      When an object rolls without slipping, there's a perfect relationship between its translational velocity ($v$) and its angular velocity ($\omega$). This condition ensures that the point of contact with the surface has zero velocity relative to the surface—meaning no sliding or skidding occurs.
+    </p>
+
+    <h2>Physical Understanding</h2>
+    <p>
+      <strong>Rolling without slipping</strong> means the object moves forward exactly as much as it rotates. For every complete rotation ($2\pi$ radians), the object moves forward by its circumference ($2\pi R$). This creates the relationship $v = \omega R$.
+    </p>
+
+    <h3>Velocity at Different Points on the Wheel</h3>
+    <p>
+      When a wheel rolls without slipping, different points on the wheel have different velocities relative to the ground. This is because each point has both translational velocity ($v$) and rotational velocity ($\omega R$).
+    </p>
+
+    <div class="example">
+      <p><strong>At the Bottom (Point of Contact):</strong></p>
+      <p>Translational velocity: $+v$ (forward)</p>
+      <p>Rotational velocity: $-v$ (backward, since the wheel is rotating)</p>
+      <p><strong>Total velocity: $v - v = 0$</strong></p>
+      <p>This is why the wheel doesn't slip—the point touching the ground has zero velocity relative to the ground.</p>
+    </div>
+
+    <div class="example">
+      <p><strong>At the Top:</strong></p>
+      <p>Translational velocity: $+v$ (forward)</p>
+      <p>Rotational velocity: $+v$ (forward, since the top is moving forward)</p>
+      <p><strong>Total velocity: $v + v = 2v$</strong></p>
+      <p>The top of the wheel moves twice as fast as the center!</p>
+    </div>
+
+    <div class="example">
+      <p><strong>At the Center:</strong></p>
+      <p>Translational velocity: $+v$ (forward)</p>
+      <p>Rotational velocity: $0$ (no rotational motion at the center)</p>
+      <p><strong>Total velocity: $v + 0 = v$</strong></p>
+      <p>The center moves at the translational velocity.</p>
+    </div>
+
+    <div class="example">
+      <p><strong>At the Sides:</strong></p>
+      <p>Translational velocity: $+v$ (forward)</p>
+      <p>Rotational velocity: $\pm v$ (perpendicular to forward motion)</p>
+      <p><strong>Total velocity: $\sqrt{v^2 + v^2} = v\sqrt{2}$</strong></p>
+      <p>The sides move at $v\sqrt{2}$ at 45° angles.</p>
+    </div>
+
+    <img src="2v-v-0.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Don't believe me? Watch this!</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/r_yqJ2HXoC0?si=n1XZtxVj94Vq13h3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Why This Condition Matters</h2>
+    <ul>
+      <li><strong>No Energy Loss:</strong> Rolling without slipping is energy-conserving—no kinetic energy is lost to friction</li>
+      <li><strong>Predictable Motion:</strong> Once you know either $v$ or $\omega$, you can find the other</li>
+      <li><strong>Real-World Applications:</strong> Wheels, gears, and many mechanical systems rely on this condition</li>
+      <li><strong>Physics Problems:</strong> This relationship is crucial for solving rolling motion problems</li>
+    </ul>
+
+    <h2>Interactive Simulation: Rolling Without Slipping</h2>
+    <div class="simulation-container">
+      <p>Explore how translational and rotational motion are linked in rolling without slipping.</p>
+      
+      <canvas id="rollingCanvas" class="simulation-canvas" width="800" height="200"></canvas>
+      
+      <div class="controls">
+        <div class="control-group">
+          <label for="radiusSlider">Radius (0.5-2.0 m):</label>
+          <input type="range" id="radiusSlider" min="0.5" max="2.0" step="0.1" value="1.0">
+          <div class="value-display">Current: <span id="radiusValue">1.0</span> m</div>
+        </div>
+        
+        <div class="control-group">
+          <label for="velocitySlider">Translational Velocity (1-5 m/s):</label>
+          <input type="range" id="velocitySlider" min="1" max="5" step="0.1" value="2.0">
+          <div class="value-display">Current: <span id="velocityValue">2.0</span> m/s</div>
+        </div>
+        
+        <div class="control-group">
+          <label for="massSlider">Mass (1-10 kg):</label>
+          <input type="range" id="massSlider" min="1" max="10" step="0.1" value="5.0">
+          <div class="value-display">Current: <span id="massValue">5.0</span> kg</div>
+        </div>
+      </div>
+      
+      <div class="energy-display">
+        <strong>Rolling Without Slipping Calculations:</strong><br>
+        Angular Velocity: <span id="angularVelocity">2.0</span> rad/s<br>
+        Condition Check: <span id="conditionCheck">v = ωR ✓</span><br>
+        Total Kinetic Energy: <span id="totalEnergy">15.0</span> J<br>
+        <small>Note: The wheel rolls without slipping, maintaining v = ωR</small>
+      </div>
+    </div>
+
+    <h2>Mathematical Derivation</h2>
+    <p>
+      Let's derive the condition $v = \omega R$ step by step:
+    </p>
+    
+    <div class="example">
+      <p><strong>Step 1:</strong> In rolling without slipping, the point of contact has zero velocity relative to the surface.</p>
+      <p><strong>Step 2:</strong> The velocity of any point on the wheel is the sum of translational velocity ($v$) and rotational velocity ($\omega R$).</p>
+      <p><strong>Step 3:</strong> At the point of contact: $v_{\text{contact}} = v - \omega R = 0$</p>
+      <p><strong>Step 4:</strong> Therefore: $v = \omega R$</p>
+    </div>
+
+    <h2>Energy in Rolling Motion</h2>
+    <p>
+      When an object rolls without slipping, it has both translational and rotational kinetic energy:
+    </p>
+    
+    <div class="formula-box">
+      $$K_{\text{total}} = K_{\text{trans}} + K_{\text{rot}} = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$$
+    </div>
+
+    <p>
+      Using the rolling condition $v = \omega R$ and moment of inertia $I = k m R^2$ (where $k$ depends on the shape), we can express the total kinetic energy in terms of just the translational velocity:
+    </p>
+
+    <div class="formula-box">
+      $$K_{\text{total}} = \frac{1}{2}mv^2 + \frac{1}{2}(k m R^2)\left(\frac{v}{R}\right)^2 = \frac{1}{2}mv^2(1 + k)$$
+    </div>
+
+    <h2>Common Values of k (Shape Factor)</h2>
+    <table>
+      <tr>
+        <th>Shape</th>
+        <th>Moment of Inertia</th>
+        <th>k Value</th>
+        <th>Total Energy Factor</th>
+      </tr>
+      <tr>
+        <td>Solid Sphere</td>
+        <td>$I = \frac{2}{5}mR^2$</td>
+        <td>0.4</td>
+        <td>1.4</td>
+      </tr>
+      <tr>
+        <td>Solid Cylinder</td>
+        <td>$I = \frac{1}{2}mR^2$</td>
+        <td>0.5</td>
+        <td>1.5</td>
+      </tr>
+      <tr>
+        <td>Hollow Cylinder</td>
+        <td>$I = mR^2$</td>
+        <td>1.0</td>
+        <td>2.0</td>
+      </tr>
+      <tr>
+        <td>Solid Disk</td>
+        <td>$I = \frac{1}{2}mR^2$</td>
+        <td>0.5</td>
+        <td>1.5</td>
+      </tr>
+    </table>
+
+    <h2>Example 1: Car Tire Rolling</h2>
+    <div class="example">
+      <p>A car tire with radius $0.3\,\text{m}$ is rolling at $20\,\text{m/s}$. What is its angular velocity?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Using $v = \omega R$:</p>
+      <p>$\omega = \frac{v}{R} = \frac{20}{0.3} = 66.7\,\text{rad/s}$</p>
+      <p>This is about 637 RPM (revolutions per minute).</p>
+    </div>
+
+    <h3>Example 2: Rolling Down an Incline</h3>
+    <div class="example">
+      <p>A solid sphere of mass $2\,\text{kg}$ and radius $0.1\,\text{m}$ rolls down a hill. If it reaches a speed of $5\,\text{m/s}$, what is its total kinetic energy?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>For a solid sphere, $k = 0.4$</p>
+      <p>$K_{\text{total}} = \frac{1}{2}mv^2(1 + k) = \frac{1}{2} \times 2 \times 5^2 \times 1.4 = 35\,\text{J}$</p>
+      <p>Note: Only 71% of the energy is translational, 29% is rotational.</p>
+    </div>
+
+    <h3>Example 3: Comparing Rolling Objects</h3>
+    <div class="example">
+      <p>Two objects with the same mass and radius roll down the same incline: a solid sphere and a hollow cylinder. Which reaches the bottom first?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Solid sphere: $k = 0.4$, so more energy goes to translation</p>
+      <p>Hollow cylinder: $k = 1.0$, so more energy goes to rotation</p>
+      <p><strong>Answer:</strong> The solid sphere reaches the bottom first because it has a lower moment of inertia and thus more translational kinetic energy.</p>
+    </div>
+
+    
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li><b>Automotive Engineering:</b> Tire design and vehicle dynamics rely on rolling without slipping</li>
+      <li><b>Sports Equipment:</b> Balls, wheels, and other rolling objects in sports</li>
+      <li><b>Industrial Machinery:</b> Conveyors, rollers, and mechanical systems</li>
+      <li><b>Transportation:</b> Trains, bicycles, and other wheeled vehicles</li>
+      <li><b>Physics Experiments:</b> Rolling motion is used to study energy conservation and rotational dynamics</li>
+    </ul>
+
+    <img src="rolling-manufacturing.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Common Misconceptions</h2>
+    <ul>
+      <li><strong>Myth:</strong> "Rolling objects only have translational energy"</li>
+      <li><strong>Reality:</strong> Rolling objects have both translational and rotational kinetic energy</li>
+      <li><strong>Myth:</strong> "All rolling objects behave the same way"</li>
+      <li><strong>Reality:</strong> Shape affects the distribution of energy between translation and rotation</li>
+      <li><strong>Myth:</strong> "Rolling friction is the same as sliding friction"</li>
+      <li><strong>Reality:</strong> Rolling friction is typically much smaller than sliding friction</li>
+    </ul>
+
+    <h2>Advanced Concepts</h2>
+    <h3>Rolling with Slipping</h3>
+    <p>
+      When $v \neq \omega R$, the object is either skidding or spinning in place. This creates kinetic friction that acts to restore the rolling condition.
+    </p>
+
+    <h3>Rolling Resistance</h3>
+    <p>
+      Even in rolling without slipping, there's still some energy loss due to deformation of the rolling object and the surface. This is called rolling resistance.
+    </p>
+
+    <h2>Summary / Takeaways</h2>
+    <ul>
+      <li>The condition $v = \omega R$ defines rolling without slipping</li>
+      <li>This condition ensures no energy loss to sliding friction</li>
+      <li>Rolling objects have both translational and rotational kinetic energy</li>
+      <li>The shape of the object affects how energy is distributed</li>
+      <li>Understanding rolling motion is crucial for many engineering applications</li>
+      <li>The relationship between $v$ and $\omega$ is fundamental to rotational dynamics</li>
+    </ul>
+  </div>
+
+  <script>
+    // Rolling Without Slipping Simulation
+    class RollingSimulation {
+      constructor() {
+        this.canvas = document.getElementById('rollingCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.radius = 1.0;
+        this.velocity = 2.0;
+        this.mass = 5.0;
+        this.x = 50;
+        this.y = this.canvas.height - 50;
+        this.angle = 0;
+        this.time = 0;
+        
+        this.initializeControls();
+        this.startAnimation();
+      }
+      
+      initializeControls() {
+        const radiusSlider = document.getElementById('radiusSlider');
+        const velocitySlider = document.getElementById('velocitySlider');
+        const massSlider = document.getElementById('massSlider');
+        
+        radiusSlider.addEventListener('input', (e) => {
+          this.radius = parseFloat(e.target.value);
+          document.getElementById('radiusValue').textContent = this.radius.toFixed(1);
+          this.updateCalculations();
+        });
+        
+        velocitySlider.addEventListener('input', (e) => {
+          this.velocity = parseFloat(e.target.value);
+          document.getElementById('velocityValue').textContent = this.velocity.toFixed(1);
+          this.updateCalculations();
+        });
+        
+        massSlider.addEventListener('input', (e) => {
+          this.mass = parseFloat(e.target.value);
+          document.getElementById('massValue').textContent = this.mass.toFixed(1);
+          this.updateCalculations();
+        });
+        
+        this.updateCalculations();
+      }
+      
+      updateCalculations() {
+        // Angular velocity from rolling condition: ω = v/R
+        const angularVelocity = this.velocity / this.radius;
+        
+        // Total kinetic energy: K = (1/2)mv²(1 + k) where k = 0.5 for solid cylinder
+        const k = 0.5; // Solid cylinder
+        const totalEnergy = 0.5 * this.mass * this.velocity * this.velocity * (1 + k);
+        
+        document.getElementById('angularVelocity').textContent = angularVelocity.toFixed(1);
+        document.getElementById('conditionCheck').textContent = `v = ωR ✓ (${this.velocity.toFixed(1)} = ${angularVelocity.toFixed(1)} × ${this.radius.toFixed(1)})`;
+        document.getElementById('totalEnergy').textContent = totalEnergy.toFixed(1);
+      }
+      
+             drawWheel() {
+         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+         
+         // Adaptive scale factor to keep wheel within canvas
+         const maxRadius = Math.min(this.canvas.width / 4, this.canvas.height / 3);
+         const scale = Math.min(30, maxRadius / this.radius);
+         const pixelRadius = this.radius * scale;
+         
+         // Adjust y position to keep wheel within canvas
+         const adjustedY = Math.min(this.canvas.height - pixelRadius - 20, this.y);
+         
+         // Draw ground
+         this.ctx.strokeStyle = '#666';
+         this.ctx.lineWidth = 3;
+         this.ctx.beginPath();
+         this.ctx.moveTo(0, adjustedY + pixelRadius + 10);
+         this.ctx.lineTo(this.canvas.width, adjustedY + pixelRadius + 10);
+         this.ctx.stroke();
+        
+                 // Draw wheel
+         this.ctx.fillStyle = '#fb8500';
+         this.ctx.beginPath();
+         this.ctx.arc(this.x, adjustedY, pixelRadius, 0, 2 * Math.PI);
+         this.ctx.fill();
+         this.ctx.strokeStyle = '#023047';
+         this.ctx.lineWidth = 3;
+         this.ctx.stroke();
+         
+         // Draw spokes
+         const numSpokes = 8;
+         for (let i = 0; i < numSpokes; i++) {
+           const spokeAngle = this.angle + (i * 2 * Math.PI / numSpokes);
+           const endX = this.x + (pixelRadius - 5) * Math.cos(spokeAngle);
+           const endY = adjustedY + (pixelRadius - 5) * Math.sin(spokeAngle);
+           
+           this.ctx.beginPath();
+           this.ctx.moveTo(this.x, adjustedY);
+           this.ctx.lineTo(endX, endY);
+           this.ctx.strokeStyle = '#ffffff';
+           this.ctx.lineWidth = 2;
+           this.ctx.stroke();
+         }
+        
+                 // Draw velocity vectors
+         // Translational velocity (red arrow)
+         const vArrowLength = this.velocity * 20;
+         this.ctx.strokeStyle = '#dc2626';
+         this.ctx.lineWidth = 3;
+         this.ctx.beginPath();
+         this.ctx.moveTo(this.x, adjustedY);
+         this.ctx.lineTo(this.x + vArrowLength, adjustedY);
+         this.ctx.stroke();
+         
+         // Angular velocity (blue curved arrow)
+         const omegaArrowRadius = pixelRadius + 15;
+         const omegaArrowAngle = this.angle + Math.PI/4;
+         const omegaArrowLength = Math.min(Math.abs(this.velocity / this.radius) * 0.5, Math.PI/2);
+         
+         this.ctx.strokeStyle = '#3b82f6';
+         this.ctx.lineWidth = 3;
+         this.ctx.beginPath();
+         this.ctx.arc(this.x, adjustedY, omegaArrowRadius, omegaArrowAngle, omegaArrowAngle + omegaArrowLength, false);
+         this.ctx.stroke();
+         
+         // Labels - positioned to avoid overlap
+         this.ctx.fillStyle = '#dc2626';
+         this.ctx.font = 'bold 12px Arial';
+         this.ctx.textAlign = 'center';
+         this.ctx.fillText(`v = ${this.velocity.toFixed(1)} m/s`, this.x + vArrowLength + 15, adjustedY + 5);
+         
+         this.ctx.fillStyle = '#3b82f6';
+         this.ctx.fillText(`ω = ${(this.velocity / this.radius).toFixed(1)} rad/s`, this.x, adjustedY - pixelRadius - 30);
+         
+         this.ctx.fillStyle = '#023047';
+         this.ctx.fillText(`R = ${this.radius.toFixed(1)} m`, this.x-75, adjustedY + pixelRadius - 15);
+
+         // Draw velocity at top (2v)
+         const topX = this.x;
+         const topY = adjustedY - pixelRadius;
+         const topArrowLength = this.velocity * 40; // 2v = 2 * velocity * 20
+         
+         this.ctx.strokeStyle = '#059669';
+         this.ctx.lineWidth = 4;
+         this.ctx.beginPath();
+         this.ctx.moveTo(topX, topY);
+         this.ctx.lineTo(topX + topArrowLength, topY);
+         this.ctx.stroke();
+         
+         // Arrow head for top velocity
+         this.ctx.beginPath();
+         this.ctx.moveTo(topX + topArrowLength, topY);
+         this.ctx.lineTo(topX + topArrowLength - 10, topY - 6);
+         this.ctx.moveTo(topX + topArrowLength, topY);
+         this.ctx.lineTo(topX + topArrowLength - 10, topY + 6);
+         this.ctx.stroke();
+         
+         // Label for top velocity - positioned to avoid overlap
+         this.ctx.fillStyle = '#059669';
+         this.ctx.font = 'bold 11px Arial';
+         this.ctx.fillText(`2v = ${(2 * this.velocity).toFixed(1)} m/s`, topX + topArrowLength + 8, topY + -15);
+
+         // Draw zero velocity dot at bottom (point of contact)
+         const bottomX = this.x;
+         const bottomY = adjustedY + pixelRadius;
+         
+         this.ctx.fillStyle = '#dc2626';
+         this.ctx.beginPath();
+         this.ctx.arc(bottomX, bottomY, 6, 0, 2 * Math.PI);
+         this.ctx.fill();
+         this.ctx.strokeStyle = '#ffffff';
+         this.ctx.lineWidth = 2;
+         this.ctx.stroke();
+         
+         // Label for zero velocity - positioned to avoid overlap
+         this.ctx.fillStyle = '#dc2626';
+         this.ctx.font = 'bold 11px Arial';
+         this.ctx.fillText(`0 m/s`, bottomX, bottomY + 18);
+      }
+      
+      animate() {
+        // Update position and angle
+        this.x += this.velocity * 0.05 * 20; // Scale for visualization
+        this.angle += (this.velocity / this.radius) * 0.05;
+        
+        // Reset position when wheel goes off screen
+        if (this.x > this.canvas.width + 50) {
+          this.x = -50;
+        }
+        
+        this.drawWheel();
+        this.time += 0.05;
+        requestAnimationFrame(() => this.animate());
+      }
+      
+      startAnimation() {
+        this.animate();
+      }
+    }
+    
+    // Initialize simulation when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      new RollingSimulation();
+    });
+  </script>
+</body>
+</html>

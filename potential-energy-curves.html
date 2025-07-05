@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Potential Energy Curves</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #002b5c;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: #006494;
+      margin-top: 2rem;
+    }
+    .formula-box {
+      background-color: #e0f2fe;
+      border-left: 6px solid #0284c7;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #cfeffd;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #1e3a8a;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .important {
+      background: #fff4e6;
+      border-left: 5px solid #f97316;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+    .img-fluid-center {
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #sim-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    #canvas {
+      border: 2px solid #0284c7;
+      border-radius: 10px;
+      background: #f0f9ff;
+      margin-bottom: 1rem;
+    }
+    .slider-container {
+      max-width: 400px;
+      margin: 1rem auto;
+      text-align: left;
+    }
+    label {
+      font-weight: bold;
+      color: #002b5c;
+    }
+    input[type=range] {
+      width: 100%;
+    }
+    #info {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #1e3a8a;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Energy.html" class="back-link">← Back to Concepts</a>
+    <h1>Potential Energy Curves</h1>
+
+    <p>
+      A <strong>Potential Energy Curve</strong> graphically shows how potential energy \( U(x) \) changes with respect to position \( x \). These curves help us predict motion, equilibrium points, and energy conservation in systems with conservative forces.
+    </p>
+
+    <h2>Understanding the Curve</h2>
+    <ul>
+      <li>The vertical axis represents potential energy \( U(x) \).</li>
+      <li>The horizontal axis represents position \( x \).</li>
+      <li>Where the slope \( \frac{dU}{dx} \) is zero, the force is zero.</li>
+      <li>A steeper slope implies a larger force, since \( F = -\frac{dU}{dx} \).</li>
+      <li>Total energy \( E = U + K \) remains constant in conservative systems.</li>
+    </ul>
+
+    <img src="./PEgraphexample.jpeg" alt="Descriptive Alt Text" class="img-fluid-center" />
+    <p>Solid line is <b>potential energy.</b>Dotted line is <b>kinetic energy.</b></p>
+
+    <h2>Key Formulas</h2>
+<div class="formula-box">
+  <p><strong>Potential Energy Function:</strong></p>
+  <p style="text-align: center;">\( U(x) \)</p>
+
+  <p><strong>Force from Potential Energy:</strong></p>
+  <p style="text-align: center;">\( F(x) = -\frac{dU}{dx} \)</p>
+  <p style="text-align: center; font-size: 0.95rem; color: #444;">
+    (The force is the negative slope of the potential energy curve)
+  </p>
+
+  <p><strong>Change in Potential Energy:</strong></p>
+  <p style="text-align: center;">
+    \( \Delta U = -\int_{x_a}^{x_b} F(x) \, dx \)
+  </p>
+  <p>
+  This integral shows that the <strong>area under the force vs. position curve</strong> gives the change in potential energy (with a negative sign). This is especially useful when analyzing non-constant forces.
+</p>
+
+  
+</div>
+<h2>Worked Examples</h2>
+
+<h3>Example 1: Using \( F(x) = -\frac{dU}{dx} \) to Find Force</h3>
+<p><strong>Problem:</strong> Suppose the potential energy of a particle is given by:</p>
+<p style="text-align: center;">\( U(x) = 3x^2 \) (in joules, with \( x \) in meters)</p>
+<p>Find the expression for the force acting on the particle as a function of \( x \).</p>
+
+<h4>Solution:</h4>
+<p>We use the formula:</p>
+<p style="text-align: center;">\( F(x) = -\frac{dU}{dx} \)</p>
+<p>Take the derivative of \( U(x) \):</p>
+<p style="text-align: center;">\( \frac{dU}{dx} = 6x \)</p>
+<p>Then apply the negative sign:</p>
+<p style="text-align: center;">\( F(x) = -6x \)</p>
+<p><strong>Answer:</strong> The force acting on the particle is \( F(x) = -6x \). This is a restoring force, like a spring!</p>
+
+<hr style="margin: 2rem 0;">
+
+<h3>Example 2: Using \( \Delta U = -\int_{x_a}^{x_b} F(x)\, dx \) to Find Change in Potential Energy</h3>
+<p><strong>Problem:</strong> A particle experiences a force \( F(x) = 4x \) (in newtons). Calculate the change in potential energy as it moves from \( x = 1 \, \text{m} \) to \( x = 3 \, \text{m} \).</p>
+
+<h4>Solution:</h4>
+<p>Use the formula:</p>
+<p style="text-align: center;">\( \Delta U = -\int_{1}^{3} 4x \, dx \)</p>
+<p>First, compute the definite integral:</p>
+<p style="text-align: center;">
+  \( \int_{1}^{3} 4x \, dx = 4 \cdot \left[ \frac{x^2}{2} \right]_1^3 = 4 \cdot \left( \frac{9}{2} - \frac{1}{2} \right) = 4 \cdot 4 = 16 \)
+</p>
+<p>Apply the negative sign:</p>
+<p style="text-align: center;">\( \Delta U = -16 \, \text{J} \)</p>
+<p><strong>Answer:</strong> The potential energy decreased by 16 joules.</p>
+
+<div class="formula-box" style="background-color:#fef3c7; border-left:6px solid #fbbf24;">
+  <strong>Key Insight:</strong> When force and displacement are in the same direction, potential energy decreases.
+</div>
+
+<h2>Equilibrium Points</h2>
+
+<h3>Stable Equilibrium</h3>
+<p>
+  A particle is in <strong>stable equilibrium</strong> when it sits at a <strong>local minimum</strong> of the potential energy curve. If the particle is slightly displaced, a restoring force pushes it back toward the equilibrium point.
+</p>
+<div class="formula-box">
+  <p style="text-align: center;">
+    At \( x = x_0 \), if \( \frac{dU}{dx} = 0 \) and \( \frac{d^2U}{dx^2} > 0 \), it's a stable equilibrium.
+  </p>
+</div>
+<p>
+  Example: A mass on a spring at the center of its motion — displacing it left or right results in a force pulling it back.
+</p>
+
+
+
+<h3>Unstable Equilibrium</h3>
+<p>
+  A particle is in <strong>unstable equilibrium</strong> when it sits at a <strong>local maximum</strong> of the potential energy curve. Any small displacement leads to motion away from the point — it cannot return on its own.
+</p>
+<div class="formula-box">
+  <p style="text-align: center;">
+    At \( x = x_0 \), if \( \frac{dU}{dx} = 0 \) and \( \frac{d^2U}{dx^2} < 0 \), it's an unstable equilibrium.
+  </p>
+</div>
+<p>
+  Example: A pencil balanced on its tip — even a tiny disturbance causes it to fall over.
+</p>
+
+<h2>Looking at it Graphically</h2>
+<img src="./stable-nonstable-equilibrium.png" alt="Descriptive Alt Text" class="img-fluid-center" />
+
+<h2>Looking at it Visually:</h2>
+<iframe width="800" height="400" src="https://www.youtube.com/embed/4rG9u478X1Q?si=d5oYN1uDURGsai63" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Interpreting the Curve</h2>
+    <ul>
+    
+      <li><strong>Turning Points:</strong> Where total energy \( E \) intersects the potential curve \( U(x) \); here, kinetic energy is zero.</li>
+      <li><strong>Bound Motion:</strong> When the particle remains trapped between two turning points.</li>
+      <li><strong>Escape Energy:</strong> The minimum energy required to escape the potential well.</li>
+    </ul>
+
+
+    
+
+    
+
+    <h2>Example: Particle in a Potential Well</h2>
+    <p>
+      Consider a particle in a bowl-shaped potential energy curve. It moves back and forth between two turning points. When it reaches the bottom of the well (minimum \( U \)), it has maximum kinetic energy. At the edges (where \( E = U \)), it momentarily stops.
+    </p>
+
+    <img src="./PEgraph1.png" alt="Descriptive Alt Text" class="img-fluid-center" />
+    <img src="./PEgraph2.png" alt="Descriptive Alt Text" class="img-fluid-center" />
+    <figcaption>A typical potential well showing a bound particle oscillating between two turning points.</figcaption>
+
+    <h2>Types of Potential Energy Curves</h2>
+    <ul>
+      <li><strong>Harmonic Potential:</strong> \( U(x) = \frac{1}{2}kx^2 \) (spring systems)</li>
+      <li><strong>Gravitational Potential:</strong> \( U(y) = mgy \)</li>
+      <li><strong>Electric Potential (covered in E & M):</strong> \( U(r) = k\frac{q_1q_2}{r} \)</li>
+     
+    </ul>
+
+    <h2>Total Energy and Motion</h2>
+    <p>
+      In a conservative system:
+    </p>
+    <ul>
+      <li>Total Energy \( E \) is constant.</li>
+      <li>At any point: \( E = U(x) + K(x) \).</li>
+      <li>Where \( U(x) = E \), kinetic energy is zero (turning point).</li>
+      <li>If \( U(x) > E \), motion is not allowed (classically forbidden region).</li>
+    </ul>
+
+    <div class="formula-box">
+      <p><strong>Kinetic Energy from Potential:</strong></p>
+      <p style="text-align: center;">\( K(x) = E - U(x) \)</p>
+    </div>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>Analyzing oscillatory systems (springs, pendulums)</li>
+      <li>Predicting stability of equilibrium points in mechanical systems</li>
+      <li>Understanding escape velocities in orbital mechanics</li>
+      <li>Modeling atomic and molecular interactions in chemistry and quantum physics</li>
+    </ul>
+
+    <div class="important">
+      <strong>Concept Check:</strong> If a particle has total energy \( E \) and is moving in a potential curve \( U(x) \), where can it exist?
+      <br><em>Answer:</em> Only where \( U(x) \leq E \)
+    </div>
+
+    <h2>Challenge Questions</h2>
+    <ol>
+      <li>If a particle starts at rest at a local maximum of \( U(x) \), what will happen?</li>
+      <li>How do you determine the direction of force from the graph?</li>
+      <li>Can a particle move through a point where \( U(x) > E \)? Why or why not?</li>
+    </ol>
+
+    <h2>Watch this video for a better understanding of potential energy curves:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jHdLgvAP1aM?si=l1E3rUBEJV9t60nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Watch this video for a visual demonstration of potential energy curves:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MWCJz5oDUE8?si=n9KFphHUlBrUjsfJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <h2>Conclusion</h2>
+    <p>
+      Potential energy curves provide deep insight into the motion of objects under conservative forces. By analyzing the shape of the curve and total mechanical energy, we can determine motion, equilibrium, and system behavior.
+    </p>
+    <h2>Interactive Simulation: Potential Energy Curve</h2>
+    <div id="sim-container">
+      <canvas id="canvas" width="700" height="300"></canvas>
+
+
+      <div class="slider-container">
+        <label for="energySlider">Total Mechanical Energy (J): <span id="energyVal">20</span></label>
+        <input type="range" id="energySlider" min="5" max="100" step="1" value="20" />
+      </div>
+      <div class="slider-container">
+        <label for="xSlider">Position \(x\): <span id="xVal">0</span></label>
+        <input type="range" id="xSlider" min="-10" max="10" step="0.1" value="0" />
+      </div>
+
+      <button id="startBtn" class="btn btn-primary" style="margin-bottom:1rem;">Start</button>
+
+      <div id="info"></div>
+    </div>
+  </div>
+
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const energySlider = document.getElementById('energySlider');
+    const xSlider = document.getElementById('xSlider');
+    const energyVal = document.getElementById('energyVal');
+    const xVal = document.getElementById('xVal');
+    const info = document.getElementById('info');
+    const startBtn = document.getElementById('startBtn');
+
+    function potentialEnergy(x) {
+      return 2 * x * x; // Simple parabolic well: U(x) = 2x^2
+    }
+
+    let animating = false;
+    let animationFrame;
+    let t = 0;
+    let direction = 1;
+    let xMin = 0, xMax = 0;
+
+    function draw() {
+  const totalE = parseFloat(energySlider.value);
+
+  // Find x-range where U(x) ≤ totalE for U(x) = 2x^2
+  const maxX = Math.sqrt(totalE / 2);
+  xSlider.min = (-maxX).toFixed(2);
+  xSlider.max = maxX.toFixed(2);
+
+  // Clamp xSlider value if it's out of range
+  let x = parseFloat(xSlider.value);
+  if (x < -maxX) x = -maxX;
+  if (x > maxX) x = maxX;
+  xSlider.value = x;
+
+  const U = potentialEnergy(x);
+  const K = Math.max(0, totalE - U);
+
+  energyVal.textContent = totalE;
+  xVal.textContent = x.toFixed(1);
+
+  info.innerHTML = `
+    <strong>Potential Energy:</strong> ${U.toFixed(2)} J<br/>
+    <strong>Kinetic Energy:</strong> ${K.toFixed(2)} J<br/>
+    <strong>Total Energy:</strong> ${totalE.toFixed(2)} J
+  `;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw axes
+  ctx.beginPath();
+  ctx.moveTo(50, 250);
+  ctx.lineTo(650, 250);
+  ctx.moveTo(350, 20);
+  ctx.lineTo(350, 280);
+  ctx.strokeStyle = "#555";
+  ctx.stroke();
+
+  // Draw potential energy curve
+  ctx.beginPath();
+  for (let px = -150; px <= 150; px++) {
+    const xVal = px / 15;
+    const U = potentialEnergy(xVal);
+    const py = 250 - U * 2;
+    if (px === -150) {
+      ctx.moveTo(350 + px, py);
+    } else {
+      ctx.lineTo(350 + px, py);
+    }
+  }
+  ctx.strokeStyle = "#0284c7";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // Draw total energy line
+  ctx.beginPath();
+  ctx.moveTo(50, 250 - totalE * 2);
+  ctx.lineTo(650, 250 - totalE * 2);
+  ctx.strokeStyle = "#16a34a";
+  ctx.setLineDash([6, 4]);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Draw particle
+  const px = 350 + x * 15;
+  const py = 250 - U * 2;
+  ctx.beginPath();
+  ctx.arc(px, py, 8, 0, 2 * Math.PI);
+  ctx.fillStyle = "#f97316";
+  ctx.fill();
+  ctx.strokeStyle = "#333";
+  ctx.stroke();
+}
+
+    function animateBall() {
+      const totalE = parseFloat(energySlider.value);
+      const maxX = Math.sqrt(totalE / 2);
+      // Harmonic oscillator period: T = 2pi*sqrt(m/k), here U=2x^2 so k=4, m=1, T=pi
+      const period = Math.PI;
+      t += 0.016 * direction;
+      // x(t) = A cos(omega t), omega = sqrt(k/m) = 2
+      const omega = 2;
+      let x = maxX * Math.cos(omega * t);
+      xSlider.value = x;
+      draw();
+      if (animating) {
+        animationFrame = requestAnimationFrame(animateBall);
+      }
+    }
+
+    startBtn.addEventListener('click', function() {
+      if (!animating) {
+        animating = true;
+        startBtn.textContent = 'Stop';
+        energySlider.disabled = true;
+        xSlider.disabled = true;
+        // Set up for animation
+        t = 0;
+        direction = 1;
+        animationFrame = requestAnimationFrame(animateBall);
+      } else {
+        animating = false;
+        startBtn.textContent = 'Start';
+        energySlider.disabled = false;
+        xSlider.disabled = false;
+        cancelAnimationFrame(animationFrame);
+      }
+    });
+
+    energySlider.addEventListener('input', draw);
+    energySlider.addEventListener('input', () => {
+  draw();
+  xSlider.dispatchEvent(new Event('input'));
+});
+    xSlider.addEventListener('input', draw);
+
+    draw();
+  </script>
+
+  </div>
+  
+  
+</body>
+</html>

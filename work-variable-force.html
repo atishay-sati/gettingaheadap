@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work – Variable Force</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\(", right: "\\)", display: false },
+        ],
+      });
+    });
+  </script>
+  <style>
+    body {
+      background-color: #fdfdfd;
+    }
+    .content-container {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    .formula-box {
+      background-color: #f1f3f5;
+      padding: 1rem;
+      border-left: 5px solid #0d6efd;
+      margin: 1rem 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .example-box {
+      background-color: #e9f7ef;
+      padding: 1rem;
+      border-left: 5px solid #28a745;
+      margin: 1rem 0;
+    }
+    .concept-box {
+      background-color: #fff3cd;
+      padding: 1rem;
+      border-left: 5px solid #ffc107;
+      margin: 1rem 0;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .content-container-summary {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+      font-size: 24px;
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <a class="back-link" href="Energy.html">← Back to Work, Energy & Power</a>
+    <h1>Work Done by a Variable Force</h1>
+    <p>
+      When a force changes with position, the simple formula \( W = Fd\cos\theta \) no longer applies. Instead, we must consider the work done over infinitesimal displacements and sum (integrate) the results.
+    </p>
+
+    <h2>The Calculus-Based Definition of Work</h2>
+    <p>
+      If the force varies with position, we define work using the dot product of force and an infinitesimal displacement:
+    </p>
+    <div class="formula-box">
+      $$ W = \int_{x_i}^{x_f} \vec{F}(x) \cdot d\vec{r} $$
+    </div>
+    <p>
+      For motion along a straight line in the \( x \)-direction:
+    </p>
+    <div class="formula-box">
+      $$ W = \int_{x_i}^{x_f} F(x) \, dx $$
+    </div>
+
+    <h2>Understanding This Equation</h2>
+    <ul>
+      <li>You're summing up the small amounts of work over each tiny step of motion.</li>
+      <li>Each tiny step contributes \( dW = F(x) \cdot dx \).</li>
+      <li>This is conceptually similar to finding the area under a force vs. position graph.</li>
+    </ul>
+
+    <div class="concept-box">
+      <strong>Concept:</strong> For variable force, work is the <b>area under the force-position graph</b>.
+    </div>
+
+    <h2>Units and Sign</h2>
+    <p>
+      Units remain in joules (J), and:
+      <ul>
+        <li>Positive work → force is in the direction of motion.</li>
+        <li>Negative work → force opposes motion.</li>
+      </ul>
+    </p>
+
+    <h2>Graphical Interpretation</h2>
+    <p>
+      If you are given a graph of \( F(x) \) vs. \( x \), the total work is the net <b>signed area</b> under the curve between \( x_i \) and \( x_f \). Negative area means negative work being done.
+    </p>
+
+    <img src="./forcevsxgraph.png" alt="Descriptive Alt Text" class="img-fluid-center" />
+
+    <h2>Example 1 – Linearly Increasing Force</h2>
+    <div class="example-box">
+      <strong>Problem:</strong> A force increases with position as \( F(x) = 4x \) (in N), from \( x = 0 \) to \( x = 3 \) meters. Find the work done.
+
+      <br><br>
+
+      <strong>Solution:</strong>
+      $$ W = \int_0^3 4x \, dx = 4 \int_0^3 x \, dx = 4 \left[\frac{x^2}{2}\right]_0^3 = 4 \cdot \frac{9}{2} = 18 \, \text{J} $$
+    </div>
+
+    <h2>Example 2 – Piecewise Force Graph</h2>
+    <div class="example-box">
+      <strong>Problem:</strong> A force graph shows \( F = 5 \, \text{N} \) from \( x = 0 \) to \( x = 2 \), and \( F = -3 \, \text{N} \) from \( x = 2 \) to \( x = 4 \). What is the net work done?
+
+      <br><br>
+
+      <strong>Solution:</strong>
+      <ul>
+        <li>Work from 0 to 2: \( W_1 = 5 \cdot 2 = 10 \, \text{J} \)</li>
+        <li>Work from 2 to 4: \( W_2 = (-3) \cdot 2 = -6 \, \text{J} \)</li>
+        <li>Total work: \( 10 - 6 = 4 \, \text{J} \)</li>
+      </ul>
+    </div>
+
+    <h2>Common Functions You Might See</h2>
+    <ul>
+      <li>Linear: \( F(x) = ax + b \)</li>
+      <li>Quadratic: \( F(x) = ax^2 \)</li>
+      <li>Inverse: \( F(x) = \frac{1}{x^2} \) → like gravity or electrostatics</li>
+      <li>Spring Force: \( F(x) = -kx \) → leads to potential energy! (covered later in this unit)</li>
+    </ul>
+
+    <h2>Conceptual Questions</h2>
+    <ul>
+      <li>What does a negative area under a force graph mean physically?</li>
+      <li>How would you compute work from a non-linear force function?</li>
+      <li>How can you estimate work from a graph if the function isn't known?</li>
+    </ul>
+
+    
+      <strong>Check your answers:</strong>
+      <button id="showAnswersBtn" class="btn btn-primary mt-2">Show Suggested Answers</button>
+      <div id="suggestedAnswers" style="display:none; margin-top:1rem; background:#e9f7ef; border-left:4px solid #28a745; padding:1rem; border-radius:6px;">
+        <ul style="margin-bottom:0;">
+          <li><b>Negative area under a force graph:</b> This means the force is doing negative work (opposing the motion), so energy is being taken away from the object.</li>
+          <li><b>Work from a non-linear force function:</b> Integrate the force function over the displacement: \( W = \int F(x)\,dx \).</li>
+          <li><b>Estimate work from a graph:</b> Approximate the area under the curve using geometric shapes (rectangles, trapezoids) or count squares if it's on graph paper.</li>
+        </ul>
+      </div>
+    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('showAnswersBtn').addEventListener('click', function() {
+          document.getElementById('suggestedAnswers').style.display = 'block';
+          this.disabled = true;
+        });
+      });
+    </script>
+
+    <h2>Summary</h2>
+    <div class = "content-container-summary">
+      <li>For non-constant forces, work is computed using integrals.</li>
+      <li>It's the signed area under a force-vs-position graph.</li>
+      <li>Examples include springs, variable thrust, or any changing field force.</li>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Physical and Torsional Pendulums</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+        width: 65%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    canvas {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
+      margin: 1rem auto;
+    }
+    button {
+      margin: 1rem 0.5rem 1rem 0.5rem;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      min-width: 160px;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    .graphs {
+      max-width: 700px;
+      margin: 2rem auto;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .graph-container {
+      flex: 1 1 300px;
+    }
+    .simulation-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: #f8fafc;
+      border-radius: 10px;
+      border-left: 4px solid #3b82f6;
+    }
+    .controls {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .parameter-control {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      text-align: center;
+    }
+    .parameter-control label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #374151;
+    }
+    .parameter-control input {
+      width: 100px;
+      padding: 0.3rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back To Concepts</a>
+
+    
+    <h1>Physical and Torsional Pendulums</h1>
+
+    <p><b>Before you get stressed out, this is NOT a major part of the test. You might get 1 or 2 questions on this so it's best to be prepared.</b></p>
+
+    <h2>Physical Pendulum</h2>
+    <p>
+      A physical pendulum is any rigid body that oscillates about a horizontal axis that does not pass through its center of mass. Unlike a simple pendulum, the mass distribution affects the period of oscillation.
+    </p>
+
+    <img src="physical-pendulum.gif" alt="Physical Pendulum" class="img-fluid-center">
+    
+    <div class="formula-box">
+      <strong>Period of a Physical Pendulum:</strong><br>
+      \[
+      T = 2\pi \sqrt{\frac{I}{mgd}}
+      \]
+      <div class="summary">
+        Where:<br>
+        • \(I\) = moment of inertia about the pivot point<br>
+        • \(m\) = mass of the object<br>
+        • \(g\) = acceleration due to gravity<br>
+        • \(d\) = distance from pivot to center of mass
+      </div>
+    </div>
+
+    <p>
+      The moment of inertia depends on the shape and mass distribution of the object. For common shapes:
+    </p>
+    <ul>
+      <li><strong>Thin rod about end:</strong> \(I = \frac{1}{3}mL^2\)</li>
+      <li><strong>Thin rod about center:</strong> \(I = \frac{1}{12}mL^2\)</li>
+      <li><strong>Solid disk about center:</strong> \(I = \frac{1}{2}mR^2\)</li>
+      <li><strong>Solid sphere about center:</strong> \(I = \frac{2}{5}mR^2\)</li>
+    </ul>
+
+    <div class="simulation-section">
+      <h2>Physical Pendulum Simulation</h2>
+      <canvas id="physicalPendulumCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <div class="parameter-control">
+          <label for="rodLength">Rod Length (m)</label>
+          <input type="range" id="rodLength" min="0.5" max="2" step="0.1" value="1">
+          <span id="rodLengthValue">1.0</span>
+        </div>
+        <div class="parameter-control">
+          <label for="rodMass">Rod Mass (kg)</label>
+          <input type="range" id="rodMass" min="0.1" max="2" step="0.1" value="0.5">
+          <span id="rodMassValue">0.5</span>
+        </div>
+        <div class="parameter-control">
+          <label for="sphereRadius">Sphere Radius (m)</label>
+          <input type="range" id="sphereRadius" min="0.05" max="0.3" step="0.01" value="0.1">
+          <span id="sphereRadiusValue">0.10</span>
+        </div>
+        <div class="parameter-control">
+          <label for="sphereMass">Sphere Mass (kg)</label>
+          <input type="range" id="sphereMass" min="0.1" max="3" step="0.1" value="1">
+          <span id="sphereMassValue">1.0</span>
+        </div>
+        <div class="parameter-control">
+          <label for="gravity">Gravity (m/s²)</label>
+          <input type="range" id="gravity" min="1" max="20" step="0.5" value="9.8">
+          <span id="gravityValue">9.8</span>
+        </div>
+        <div class="parameter-control">
+          <label for="amplitude">Angular Displacement (rad)</label>
+          <input type="range" id="amplitude" min="0.1" max="1.5" step="0.1" value="0.5">
+          <span id="amplitudeValue">0.5</span>
+        </div>
+      </div>
+      <button onclick="resetPhysicalPendulum()">Reset</button>
+      <button onclick="togglePhysicalPendulum()">Pause/Resume</button>
+      <button onclick="togglePhysicalSphere()">Toggle Sphere</button>
+    </div>
+
+    <div class="graphs">
+      <div class="graph-container">
+        <h3>Angular Position vs Time</h3>
+        <canvas id="physicalPositionGraph" width="320" height="180"></canvas>
+      </div>
+      <div class="graph-container">
+        <h3>Angular Velocity vs Time</h3>
+        <canvas id="physicalVelocityGraph" width="320" height="180"></canvas>
+      </div>
+    </div>
+
+    <h2>Torsional Pendulum</h2>
+    <p>
+      A torsional pendulum consists of a disk or other object suspended by a wire or fiber that twists when the object rotates. The restoring torque is proportional to the angular displacement.
+    </p>
+
+    <img src="torsional-pendulum.png" alt="Torsional Pendulum" class="img-fluid-center">
+
+    <div class="formula-box">
+      <strong>Period of a Torsional Pendulum:</strong><br>
+      \[
+      T = 2\pi \sqrt{\frac{I}{\kappa}}
+      \]
+      <div class="summary">
+        Where:<br>
+        • \(I\) = moment of inertia of the oscillating object<br>
+        • \(\kappa\) = torsional constant (torque per unit angular displacement)
+      </div>
+    </div>
+
+    <p>
+      The torsional constant \(\kappa\) depends on the material properties of the wire and its geometry:
+    </p>
+    <div class="formula-box">
+      \[
+      \kappa = \frac{\pi G r^4}{2L}
+      \]
+      <div class="summary">
+        Where:<br>
+        • \(G\) = shear modulus of the wire material<br>
+        • \(r\) = radius of the wire<br>
+        • \(L\) = length of the wire
+      </div>
+    </div>
+
+    <div class="simulation-section">
+      <h2>Torsional Pendulum Simulation</h2>
+      <canvas id="torsionalPendulumCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <div class="parameter-control">
+          <label for="diskRadius">Disk Radius (m)</label>
+          <input type="range" id="diskRadius" min="0.2" max="1" step="0.1" value="0.5">
+          <span id="diskRadiusValue">0.5</span>
+        </div>
+        <div class="parameter-control">
+          <label for="diskMass">Disk Mass (kg)</label>
+          <input type="range" id="diskMass" min="0.5" max="3" step="0.1" value="1">
+          <span id="diskMassValue">1.0</span>
+        </div>
+        <div class="parameter-control">
+          <label for="torsionalConstant">Torsional Constant (N⋅m/rad)</label>
+          <input type="range" id="torsionalConstant" min="0.1" max="2" step="0.1" value="0.5">
+          <span id="torsionalConstantValue">0.5</span>
+        </div>
+        <div class="parameter-control">
+          <label for="torsionalAmplitude">Angular Displacement (rad)</label>
+          <input type="range" id="torsionalAmplitude" min="0.1" max="2" step="0.1" value="1">
+          <span id="torsionalAmplitudeValue">1.0</span>
+        </div>
+      </div>
+      <button onclick="resetTorsionalPendulum()">Reset</button>
+      <button onclick="toggleTorsionalPendulum()">Pause/Resume</button>
+    </div>
+
+    <div class="graphs">
+      <div class="graph-container">
+        <h3>Angular Position vs Time</h3>
+        <canvas id="torsionalPositionGraph" width="320" height="180"></canvas>
+      </div>
+      <div class="graph-container">
+        <h3>Angular Velocity vs Time</h3>
+        <canvas id="torsionalVelocityGraph" width="320" height="180"></canvas>
+      </div>
+    </div>
+
+    <h2>Comparison and Applications</h2>
+    <p>
+      <strong>Physical Pendulums:</strong> Used in clocks, metronomes, and measuring devices. The period depends on the mass distribution and can be used to determine the moment of inertia of irregular objects.
+    </p>
+    <p>
+      <strong>Torsional Pendulums:</strong> Used in sensitive measuring instruments like galvanometers, seismometers, and torsion balances. They can measure very small forces and are used in precision experiments like the Cavendish experiment to measure gravitational constant.
+    </p>
+
+    <div class="formula-box">
+      <strong>Key Differences:</strong><br>
+      • Physical pendulum: Period depends on gravity and mass distribution<br>
+      • Torsional pendulum: Period independent of gravity, depends only on moment of inertia and torsional constant<br>
+      • Physical pendulum: Restoring force from gravity<br>
+      • Torsional pendulum: Restoring torque from twisted wire
+    </div>
+
+    <script>
+      // Physical Pendulum Simulation
+      const physicalCanvas = document.getElementById('physicalPendulumCanvas');
+      const physicalCtx = physicalCanvas.getContext('2d');
+      const physicalPosCanvas = document.getElementById('physicalPositionGraph');
+      const physicalPosCtx = physicalPosCanvas.getContext('2d');
+      const physicalVelCanvas = document.getElementById('physicalVelocityGraph');
+      const physicalVelCtx = physicalVelCanvas.getContext('2d');
+
+      let physicalPendulum = {
+        angle: 0.5,
+        angularVelocity: 0,
+        angularAcceleration: 0,
+        length: 1,
+        rodMass: 0.5,
+        sphereRadius: 0.1,
+        sphereMass: 1,
+        sphereAttached: true,
+        gravity: 9.8,
+        amplitude: 0.5,
+        time: 0,
+        isRunning: true
+      };
+
+      let physicalPosData = [];
+      let physicalVelData = [];
+      const maxDataPoints = 200;
+
+      // Torsional Pendulum Simulation
+      const torsionalCanvas = document.getElementById('torsionalPendulumCanvas');
+      const torsionalCtx = torsionalCanvas.getContext('2d');
+      const torsionalPosCanvas = document.getElementById('torsionalPositionGraph');
+      const torsionalPosCtx = torsionalPosCanvas.getContext('2d');
+      const torsionalVelCanvas = document.getElementById('torsionalVelocityGraph');
+      const torsionalVelCtx = torsionalVelCanvas.getContext('2d');
+
+      let torsionalPendulum = {
+        angle: 1,
+        angularVelocity: 0,
+        angularAcceleration: 0,
+        radius: 0.5,
+        mass: 1,
+        torsionalConstant: 0.5,
+        amplitude: 1,
+        time: 0,
+        isRunning: true
+      };
+
+      let torsionalPosData = [];
+      let torsionalVelData = [];
+
+      // Control functions
+      function updatePhysicalPendulumControls() {
+        document.getElementById('rodLength').value = physicalPendulum.length;
+        document.getElementById('rodLengthValue').textContent = physicalPendulum.length.toFixed(1);
+        document.getElementById('rodMass').value = physicalPendulum.rodMass;
+        document.getElementById('rodMassValue').textContent = physicalPendulum.rodMass.toFixed(1);
+        document.getElementById('sphereRadius').value = physicalPendulum.sphereRadius;
+        document.getElementById('sphereRadiusValue').textContent = physicalPendulum.sphereRadius.toFixed(2);
+        document.getElementById('sphereMass').value = physicalPendulum.sphereMass;
+        document.getElementById('sphereMassValue').textContent = physicalPendulum.sphereMass.toFixed(1);
+        document.getElementById('gravity').value = physicalPendulum.gravity;
+        document.getElementById('gravityValue').textContent = physicalPendulum.gravity.toFixed(1);
+        document.getElementById('amplitude').value = physicalPendulum.amplitude;
+        document.getElementById('amplitudeValue').textContent = physicalPendulum.amplitude.toFixed(1);
+      }
+
+      function updateTorsionalPendulumControls() {
+        document.getElementById('diskRadius').value = torsionalPendulum.radius;
+        document.getElementById('diskRadiusValue').textContent = torsionalPendulum.radius.toFixed(1);
+        document.getElementById('diskMass').value = torsionalPendulum.mass;
+        document.getElementById('diskMassValue').textContent = torsionalPendulum.mass.toFixed(1);
+        document.getElementById('torsionalConstant').value = torsionalPendulum.torsionalConstant;
+        document.getElementById('torsionalConstantValue').textContent = torsionalPendulum.torsionalConstant.toFixed(1);
+        document.getElementById('torsionalAmplitude').value = torsionalPendulum.amplitude;
+        document.getElementById('torsionalAmplitudeValue').textContent = torsionalPendulum.amplitude.toFixed(1);
+      }
+
+      // Event listeners for controls
+      document.getElementById('rodLength').addEventListener('input', function() {
+        physicalPendulum.length = parseFloat(this.value);
+        document.getElementById('rodLengthValue').textContent = this.value;
+        resetPhysicalPendulum();
+      });
+
+      document.getElementById('rodMass').addEventListener('input', function() {
+        physicalPendulum.rodMass = parseFloat(this.value);
+        document.getElementById('rodMassValue').textContent = this.value;
+        resetPhysicalPendulum();
+      });
+
+      document.getElementById('sphereRadius').addEventListener('input', function() {
+        physicalPendulum.sphereRadius = parseFloat(this.value);
+        document.getElementById('sphereRadiusValue').textContent = this.value;
+        resetPhysicalPendulum();
+      });
+
+      document.getElementById('sphereMass').addEventListener('input', function() {
+        physicalPendulum.sphereMass = parseFloat(this.value);
+        document.getElementById('sphereMassValue').textContent = this.value;
+        resetPhysicalPendulum();
+      });
+
+      document.getElementById('gravity').addEventListener('input', function() {
+        physicalPendulum.gravity = parseFloat(this.value);
+        document.getElementById('gravityValue').textContent = this.value;
+        resetPhysicalPendulum();
+      });
+
+      document.getElementById('amplitude').addEventListener('input', function() {
+        physicalPendulum.amplitude = parseFloat(this.value);
+        document.getElementById('amplitudeValue').textContent = this.value;
+        resetPhysicalPendulum();
+      });
+
+      document.getElementById('diskRadius').addEventListener('input', function() {
+        torsionalPendulum.radius = parseFloat(this.value);
+        document.getElementById('diskRadiusValue').textContent = this.value;
+        resetTorsionalPendulum();
+      });
+
+      document.getElementById('diskMass').addEventListener('input', function() {
+        torsionalPendulum.mass = parseFloat(this.value);
+        document.getElementById('diskMassValue').textContent = this.value;
+        resetTorsionalPendulum();
+      });
+
+      document.getElementById('torsionalConstant').addEventListener('input', function() {
+        torsionalPendulum.torsionalConstant = parseFloat(this.value);
+        document.getElementById('torsionalConstantValue').textContent = this.value;
+        resetTorsionalPendulum();
+      });
+
+      document.getElementById('torsionalAmplitude').addEventListener('input', function() {
+        torsionalPendulum.amplitude = parseFloat(this.value);
+        document.getElementById('torsionalAmplitudeValue').textContent = this.value;
+        resetTorsionalPendulum();
+      });
+
+      function resetPhysicalPendulum() {
+        physicalPendulum.angle = physicalPendulum.amplitude;
+        physicalPendulum.angularVelocity = 0;
+        physicalPendulum.time = 0;
+        physicalPosData = [];
+        physicalVelData = [];
+      }
+
+      function togglePhysicalSphere() {
+        physicalPendulum.sphereAttached = !physicalPendulum.sphereAttached;
+        resetPhysicalPendulum();
+      }
+
+      function resetTorsionalPendulum() {
+        torsionalPendulum.angle = torsionalPendulum.amplitude;
+        torsionalPendulum.angularVelocity = 0;
+        torsionalPendulum.time = 0;
+        torsionalPosData = [];
+        torsionalVelData = [];
+      }
+
+      function togglePhysicalPendulum() {
+        physicalPendulum.isRunning = !physicalPendulum.isRunning;
+      }
+
+      function toggleTorsionalPendulum() {
+        torsionalPendulum.isRunning = !torsionalPendulum.isRunning;
+      }
+
+      // Physics calculations
+      function updatePhysicalPendulum(dt) {
+        if (!physicalPendulum.isRunning) return;
+
+        // Calculate total moment of inertia and center of mass
+        let totalI = 0;
+        let totalMass = 0;
+        let weightedSum = 0; // for center of mass calculation
+        
+        // Rod contribution
+        const rodI = (1/3) * physicalPendulum.rodMass * physicalPendulum.length * physicalPendulum.length;
+        totalI += rodI;
+        totalMass += physicalPendulum.rodMass;
+        weightedSum += physicalPendulum.rodMass * (physicalPendulum.length / 2); // rod COM at center
+        
+        // Sphere contribution (if attached)
+        if (physicalPendulum.sphereAttached) {
+          const sphereI = (2/5) * physicalPendulum.sphereMass * physicalPendulum.sphereRadius * physicalPendulum.sphereRadius;
+          const sphereDistance = physicalPendulum.length; // sphere at end of rod
+          const sphereParallelAxis = physicalPendulum.sphereMass * sphereDistance * sphereDistance;
+          totalI += sphereI + sphereParallelAxis;
+          totalMass += physicalPendulum.sphereMass;
+          weightedSum += physicalPendulum.sphereMass * sphereDistance;
+        }
+        
+        // Calculate center of mass distance from pivot
+        const d = weightedSum / totalMass;
+        
+        // Angular acceleration: τ = Iα, τ = -mgd sin(θ)
+        physicalPendulum.angularAcceleration = -(totalMass * physicalPendulum.gravity * d * Math.sin(physicalPendulum.angle)) / totalI;
+        
+        // Update angular velocity and angle
+        physicalPendulum.angularVelocity += physicalPendulum.angularAcceleration * dt;
+        physicalPendulum.angle += physicalPendulum.angularVelocity * dt;
+        physicalPendulum.time += dt;
+
+        // Store data for graphs
+        if (physicalPosData.length > maxDataPoints) {
+          physicalPosData.shift();
+          physicalVelData.shift();
+        }
+        physicalPosData.push(physicalPendulum.angle);
+        physicalVelData.push(physicalPendulum.angularVelocity);
+      }
+
+      function updateTorsionalPendulum(dt) {
+        if (!torsionalPendulum.isRunning) return;
+
+        // Moment of inertia for solid disk
+        const I = (1/2) * torsionalPendulum.mass * torsionalPendulum.radius * torsionalPendulum.radius;
+        
+        // Angular acceleration: τ = Iα, τ = -κθ
+        torsionalPendulum.angularAcceleration = -torsionalPendulum.torsionalConstant * torsionalPendulum.angle / I;
+        
+        // Update angular velocity and angle
+        torsionalPendulum.angularVelocity += torsionalPendulum.angularAcceleration * dt;
+        torsionalPendulum.angle += torsionalPendulum.angularVelocity * dt;
+        torsionalPendulum.time += dt;
+
+        // Store data for graphs
+        if (torsionalPosData.length > maxDataPoints) {
+          torsionalPosData.shift();
+          torsionalVelData.shift();
+        }
+        torsionalPosData.push(torsionalPendulum.angle);
+        torsionalVelData.push(torsionalPendulum.angularVelocity);
+      }
+
+      // Drawing functions
+      function drawPhysicalPendulum() {
+        const centerX = physicalCanvas.width / 2;
+        const centerY = 50;
+        const scale = 150; // pixels per meter
+
+        physicalCtx.clearRect(0, 0, physicalCanvas.width, physicalCanvas.height);
+
+        // Draw pivot point
+        physicalCtx.fillStyle = '#374151';
+        physicalCtx.beginPath();
+        physicalCtx.arc(centerX, centerY, 8, 0, 2 * Math.PI);
+        physicalCtx.fill();
+
+        // Draw rod
+        const endX = centerX + scale * physicalPendulum.length * Math.sin(physicalPendulum.angle);
+        const endY = centerY + scale * physicalPendulum.length * Math.cos(physicalPendulum.angle);
+        
+        // Rod thickness scales with mass (2-8 pixels)
+        const rodThickness = Math.max(2, Math.min(8, 2 + physicalPendulum.rodMass * 3));
+        
+        physicalCtx.strokeStyle = '#3b82f6';
+        physicalCtx.lineWidth = rodThickness;
+        physicalCtx.beginPath();
+        physicalCtx.moveTo(centerX, centerY);
+        physicalCtx.lineTo(endX, endY);
+        physicalCtx.stroke();
+
+        // Draw sphere at end (if attached)
+        if (physicalPendulum.sphereAttached) {
+          // Sphere size scales with mass (minimum radius + mass scaling)
+          const sphereSize = Math.max(scale * physicalPendulum.sphereRadius, 8 + physicalPendulum.sphereMass * 10);
+          
+          physicalCtx.fillStyle = '#ef4444';
+          physicalCtx.beginPath();
+          physicalCtx.arc(endX, endY, sphereSize, 0, 2 * Math.PI);
+          physicalCtx.fill();
+          
+          // Draw sphere outline
+          physicalCtx.strokeStyle = '#dc2626';
+          physicalCtx.lineWidth = 2;
+          physicalCtx.stroke();
+        }
+
+        // Calculate center of mass for period calculation
+        let totalMass = physicalPendulum.rodMass;
+        let weightedSum = physicalPendulum.rodMass * (physicalPendulum.length / 2);
+        
+        if (physicalPendulum.sphereAttached) {
+          totalMass += physicalPendulum.sphereMass;
+          weightedSum += physicalPendulum.sphereMass * physicalPendulum.length;
+        }
+        
+        const comDistance = weightedSum / totalMass;
+
+        // Calculate period
+        let totalI = (1/3) * physicalPendulum.rodMass * physicalPendulum.length * physicalPendulum.length;
+        if (physicalPendulum.sphereAttached) {
+          const sphereI = (2/5) * physicalPendulum.sphereMass * physicalPendulum.sphereRadius * physicalPendulum.sphereRadius;
+          const sphereDistance = physicalPendulum.length;
+          const sphereParallelAxis = physicalPendulum.sphereMass * sphereDistance * sphereDistance;
+          totalI += sphereI + sphereParallelAxis;
+        }
+        const period = 2 * Math.PI * Math.sqrt(totalI / (totalMass * physicalPendulum.gravity * comDistance));
+
+        // Draw info
+        physicalCtx.fillStyle = '#374151';
+        physicalCtx.font = '16px Roboto';
+        physicalCtx.fillText(`Angle: ${(physicalPendulum.angle * 180 / Math.PI).toFixed(1)}°`, 10, 30);
+        physicalCtx.fillText(`Period: ${period.toFixed(2)}s`, 10, 50);
+        physicalCtx.fillText(`Sphere: ${physicalPendulum.sphereAttached ? 'Attached' : 'Detached'}`, 10, 70);
+        physicalCtx.fillText(`Total I: ${totalI.toFixed(3)} kg⋅m²`, 10, 90);
+      }
+
+      function drawTorsionalPendulum() {
+        const centerX = torsionalCanvas.width / 2;
+        const centerY = torsionalCanvas.height / 2;
+        const scale = 100; // pixels per meter
+
+        torsionalCtx.clearRect(0, 0, torsionalCanvas.width, torsionalCanvas.height);
+
+        // Draw wire
+        torsionalCtx.strokeStyle = '#6b7280';
+        torsionalCtx.lineWidth = 2;
+        torsionalCtx.beginPath();
+        torsionalCtx.moveTo(centerX, 50);
+        torsionalCtx.lineTo(centerX, centerY - scale * torsionalPendulum.radius);
+        torsionalCtx.stroke();
+
+        // Draw disk
+        torsionalCtx.save();
+        torsionalCtx.translate(centerX, centerY);
+        torsionalCtx.rotate(torsionalPendulum.angle);
+        
+        torsionalCtx.strokeStyle = '#3b82f6';
+        torsionalCtx.lineWidth = 3;
+        torsionalCtx.beginPath();
+        torsionalCtx.arc(0, 0, scale * torsionalPendulum.radius, 0, 2 * Math.PI);
+        torsionalCtx.stroke();
+
+        // Draw disk spokes
+        torsionalCtx.strokeStyle = '#1e40af';
+        torsionalCtx.lineWidth = 2;
+        for (let i = 0; i < 4; i++) {
+          const angle = (i * Math.PI) / 2;
+          torsionalCtx.beginPath();
+          torsionalCtx.moveTo(0, 0);
+          torsionalCtx.lineTo(scale * torsionalPendulum.radius * Math.cos(angle), scale * torsionalPendulum.radius * Math.sin(angle));
+          torsionalCtx.stroke();
+        }
+
+        torsionalCtx.restore();
+
+        // Draw info
+        torsionalCtx.fillStyle = '#374151';
+        torsionalCtx.font = '16px Roboto';
+        torsionalCtx.fillText(`Angle: ${(torsionalPendulum.angle * 180 / Math.PI).toFixed(1)}°`, 10, 30);
+        torsionalCtx.fillText(`Period: ${(2 * Math.PI * Math.sqrt((1/2) * torsionalPendulum.mass * torsionalPendulum.radius * torsionalPendulum.radius / torsionalPendulum.torsionalConstant)).toFixed(2)}s`, 10, 50);
+      }
+
+      function drawGraph(ctx, data, color, yLabel, isPosition = true) {
+        const w = ctx.canvas.width;
+        const h = ctx.canvas.height;
+        ctx.clearRect(0, 0, w, h);
+
+        // Draw axes
+        ctx.strokeStyle = "#888";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(40, h - 30);
+        ctx.lineTo(w - 20, h - 30);
+        ctx.moveTo(40, 20);
+        ctx.lineTo(40, h - 30);
+        ctx.stroke();
+
+        // Labels
+        ctx.fillStyle = "#333";
+        ctx.font = "12px Roboto, sans-serif";
+        ctx.fillText("Time →", w - 70, h - 10);
+        ctx.fillText(yLabel, 5, 15);
+
+        if (data.length < 2) return;
+
+        // Y axis scaling
+        const maxVal = Math.max(...data.map(Math.abs)) * 1.1;
+        const minVal = -maxVal;
+        const graphHeight = h - 50;
+        const graphWidth = w - 60;
+
+        // Draw zero line
+        const zeroY = h - 30 - ((0 - minVal) / (maxVal - minVal)) * graphHeight;
+        ctx.strokeStyle = "#999";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(40, zeroY);
+        ctx.lineTo(w - 20, zeroY);
+        ctx.stroke();
+
+        // Draw line graph
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+
+        data.forEach((val, i) => {
+          const x = 40 + (i / (maxDataPoints - 1)) * graphWidth;
+          const y = h - 30 - ((val - minVal) / (maxVal - minVal)) * graphHeight;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+      }
+
+      function animate() {
+        const dt = 0.016; // 60 FPS
+
+        updatePhysicalPendulum(dt);
+        updateTorsionalPendulum(dt);
+
+        drawPhysicalPendulum();
+        drawTorsionalPendulum();
+
+        drawGraph(physicalPosCtx, physicalPosData, "#3b82f6", "θ (rad)", true);
+        drawGraph(physicalVelCtx, physicalVelData, "#ef4444", "ω (rad/s)", false);
+        drawGraph(torsionalPosCtx, torsionalPosData, "#8b5cf6", "θ (rad)", true);
+        drawGraph(torsionalVelCtx, torsionalVelData, "#f59e0b", "ω (rad/s)", false);
+
+        requestAnimationFrame(animate);
+      }
+
+      // Initialize
+      updatePhysicalPendulumControls();
+      updateTorsionalPendulumControls();
+      animate();
+    </script>
+
+  </div>
+</body>
+</html>

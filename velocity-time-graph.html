@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velocity-Time Graphs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2 {
+      color: #005a9c;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+<body>
+  <h1>Velocity-Time Graphs</h1>
+
+  <h2>1. Constant Positive Velocity</h2>
+  <p>A horizontal line above the time axis represents constant positive velocity — the object is moving at a steady speed.</p>
+  <canvas id="graph1" width="500" height="300"></canvas>
+
+  <h2>2. Constant Negative Velocity</h2>
+  <p>A horizontal line below the time axis shows constant negative velocity — steady motion in the opposite direction.</p>
+  <canvas id="graph2" width="500" height="300"></canvas>
+
+  <h2>3. Positive Acceleration</h2>
+  <p>A line sloping upward from left to right indicates increasing velocity — the object is speeding up.</p>
+  <canvas id="graph3" width="500" height="300"></canvas>
+
+  <h2>4. Negative Acceleration (Deceleration)</h2>
+  <p>A line sloping downward indicates decreasing velocity — the object is slowing down, then reaches 0, then accelerates in the opposite direction.</p>
+  <canvas id="graph4" width="500" height="300"></canvas>
+
+  <script>
+    function drawGraph(canvasId, drawFunction) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = "#ccc";
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height / 2);
+      ctx.lineTo(canvas.width, canvas.height / 2); // time axis
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(50, 0);
+      ctx.lineTo(50, canvas.height); // vertical axis
+      ctx.stroke();
+      drawFunction(ctx, canvas);
+    }
+
+    function drawConstantPositive(ctx, canvas) {
+      ctx.strokeStyle = "#0074D9";
+      ctx.beginPath();
+      ctx.moveTo(50, 120);
+      ctx.lineTo(canvas.width - 20, 120);
+      ctx.stroke();
+    }
+
+    function drawConstantNegative(ctx, canvas) {
+      ctx.strokeStyle = "#FF4136";
+      ctx.beginPath();
+      ctx.moveTo(50, 180);
+      ctx.lineTo(canvas.width - 20, 180);
+      ctx.stroke();
+    }
+
+    function drawPositiveAccel(ctx, canvas) {
+      ctx.strokeStyle = "#2ECC40";
+      ctx.beginPath();
+      ctx.moveTo(50, 150);
+      ctx.lineTo(canvas.width - 20, 80);
+      ctx.stroke();
+    }
+
+    function drawNegativeAccel(ctx, canvas) {
+      ctx.strokeStyle = "#FF851B";
+      ctx.beginPath();
+      ctx.moveTo(50, 100);
+      ctx.lineTo(canvas.width - 20, 200);
+      ctx.stroke();
+    }
+
+    drawGraph("graph1", drawConstantPositive);
+    drawGraph("graph2", drawConstantNegative);
+    drawGraph("graph3", drawPositiveAccel);
+    drawGraph("graph4", drawNegativeAccel);
+  </script>
+</body>
+</html>

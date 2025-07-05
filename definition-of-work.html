@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work – Definition</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\(", right: "\\)", display: false },
+        ],
+      });
+    });
+  </script>
+  <style>
+    body {
+      background-color: #fdfdfd;
+    }
+    .content-container {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    .formula-box {
+      background-color: #f1f3f5;
+      padding: 1rem;
+      border-left: 5px solid #0d6efd;
+      margin: 1rem 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .example-box {
+      background-color: #e9f7ef;
+      padding: 1rem;
+      border-left: 5px solid #28a745;
+      margin: 1rem 0;
+    }
+    .concept-box {
+      background-color: #fff3cd;
+      padding: 1rem;
+      border-left: 5px solid #ffc107;
+      margin: 1rem 0;
+    }
+    .concept-box {
+      background-color: #fff3cd;
+      padding: 1rem;
+      border-left: 5px solid #ffc107;
+      margin: 1rem 0;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .content-container-summary {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+      font-size: 24px;
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <a class="back-link" href="Energy.html">← Back to Work, Energy & Power</a>
+    <h1>Work – Definition and Conceptual Understanding</h1>
+    <p>
+      In physics, **work** has a very specific meaning. Unlike the everyday use of the word, **work is only done when a force causes a displacement** in the direction of that force.
+    </p>
+
+    <h2>Formal Definition of Work</h2>
+    <p>
+      The work \( W \) done by a constant force \( \vec{F} \) on an object that undergoes a displacement \( \vec{d} \) is defined as:
+    </p>
+    <div class="formula-box">
+      $$ W = \vec{F} \cdot \vec{d} = Fd\cos\theta $$
+    </div>
+    <p>
+      Where:
+      <ul>
+        <li>\( F \) is the magnitude of the applied force</li>
+        <li>\( d \) is the displacement of the object</li>
+        <li>\( \theta \) is the angle between the force vector and displacement vector</li>
+      </ul>
+    </p>
+
+    <h2>Understanding the Dot Product</h2>
+    <p>
+      The dot product \( \vec{F} \cdot \vec{d} \) captures how much of the force is **in the direction of displacement**. If the force is perpendicular to the motion (\( \theta = 90^\circ \)), no work is done!
+    </p>
+
+    <div class="concept-box">
+      <strong>Concept:</strong> A force only does work when it has a component in the direction of motion.
+    </div>
+
+    <div>
+        <img src="./workanglediagram.png" alt="Descriptive Alt Text" class="img-fluid-center" />
+    </div>
+
+    <p>
+        In this case, the x component of the tension force is doing work as well as the friction force. The normal force and gravitational force are <b>NOT</b> doing work because they are perpendicular to the object's velocity. The friction force would be doing negative work because it is opposing direction of motion (cos(180) = -1).
+    </p>
+
+    <h2>Units of Work</h2>
+    <ul>
+      <li>Force is in newtons (N)</li>
+      <li>Displacement is in meters (m)</li>
+      <li>Work is in joules (J):</li>
+    </ul>
+    <div class="formula-box">
+      $$ 1 \, \text{J} = 1 \, \text{N} \cdot \text{m} $$
+    </div>
+
+    <h2>Signs of Work</h2>
+    <ul>
+      <li><strong>Positive Work:</strong> Force helps motion (e.g., pushing something forward).</li>
+      <li><strong>Negative Work:</strong> Force opposes motion (e.g., friction slowing something down).</li>
+      <li><strong>Zero Work:</strong> No displacement, or force is perpendicular (e.g., carrying a bag horizontally while gravity acts vertically).</li>
+    </ul>
+
+    <h2>Example Problem</h2>
+    <div class="example-box">
+      <strong>Problem:</strong> A person pulls a sled with a 100 N force at an angle of 30° above the horizontal. The sled moves 20 meters forward. How much work is done?
+
+      <br><br>
+
+      <strong>Solution:</strong>
+      $$ W = Fd\cos\theta = (100)(20)\cos(30^\circ) = 2000 \cdot \frac{\sqrt{3}}{2} \approx 1732 \, \text{J} $$
+    </div>
+
+    <h2>Conceptual Questions</h2>
+    <ul>
+      <li>Is work being done if you hold a weight still above your head?</li>
+      <li>Can work be negative? What does that physically mean?</li>
+      <li>Why does walking while holding a bag not count as work against gravity?</li>
+    </ul>
+
+    <h2>Calculus-Based Work (Preview)</h2>
+    <p>
+      For non-constant forces, we use an integral:
+    </p>
+    <div class="formula-box">
+      $$ W = \int \vec{F} \cdot d\vec{r} $$
+    </div>
+    <p>
+      You’ll see this more in later topics when we cover variable forces like springs or position-dependent electric forces.
+    </p>
+
+    <h2>Summary</h2>
+    <div class = "content-container-summary">
+      <li>Work measures energy transferred via force and displacement.</li>
+      <li>Direction matters — use dot product to project force onto motion.</li>
+      <li>The units of work are joules. Work can be positive, negative, or zero.</li>
+    
+    </div>
+    
+      
+  </div>
+</body>
+</html>

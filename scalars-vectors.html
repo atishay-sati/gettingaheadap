@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scalars vs Vectors</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 2rem;
+      font-size: 1.25rem;
+    }
+    .content-box {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    .example {
+      background-color: #e8f0fe;
+      border-left: 5px solid #0d6efd;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin: 1rem 0;
+      color: #005a9c;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 2rem; /* increased font size */
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    input,
+    select,
+    button {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+    }
+
+    label {
+      font-weight: 500;
+      margin-right: 0.5rem;
+    }
+
+    canvas {
+      width: 700px !important;
+      height: 700px !important;
+      display: block;
+      margin: 2rem auto;
+    }
+    #hoverLabel {
+      position: absolute;
+      pointer-events: none;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      white-space: nowrap;
+      display: none;
+      transform: translate(10px, 10px);
+      z-index: 1000;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id="hoverLabel"></div>
+  
+  <div class="content-box">
+    <a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+    <h1>Scalars vs Vectors</h1>
+
+    <p>In physics, we categorize quantities based on whether they include direction. This gives us two types of quantities:</p>
+
+    <h2>Scalar Quantities</h2>
+    <p>Scalars are quantities that have only magnitude (a numerical value) and no direction.</p>
+    <div class="example">
+      <strong>Examples:</strong> Distance, speed, mass, temperature, energy
+    </div>
+
+    <h2>Vector Quantities</h2>
+    <p>
+      Vectors have both magnitude and direction. They are often represented by arrows, where the length indicates magnitude and the arrow points in the direction.
+    </p>
+    <div class="example">
+      <strong>Examples:</strong> Displacement, velocity, acceleration, force
+    </div>
+
+    <h2>Visual Example</h2>
+    <p>
+      Consider a person walking 5 meters east. That's a <strong>vector</strong> quantity. But if you only care about how far they walked, regardless of direction, that's a <strong>scalar</strong>.
+    </p>
+    <img src="./ScalarsVectorsImage.jpg" alt="Vector example diagram" />
+
+    <h2>Vector Notation</h2>
+    <p>
+      In physics, vectors can be written in multiple ways:
+    </p>
+    <ul>
+      <li><strong>Arrow notation:</strong> \( \vec{v} \)</li>
+      <li><strong>Boldface:</strong> <b>v</b></li>
+      <li><strong>Component form:</strong> \( \vec{v} = \langle 3, 4 \rangle \)</li>
+      <li><strong>Unit vector form:</strong>  \( \vec{v} = 3\hat{\imath} + 4\hat{\jmath} \) (where \( \hat{\imath} \) is the unit vector in the +x direction, \( \hat{\jmath} \) is the unit vector in the +y direction, and \( \hat{\mathbf{k}} \) is the unit vector in the +z direction) </li>
+    </ul>
+    <div class="example">
+      <strong>Example:</strong> \( \vec{v} = 5\hat{\imath} - 2\hat{\jmath} + 7\hat{k} \)
+    </div>
+
+    <h2>Vector Operations</h2>
+    <p>Vectors can be added, subtracted, and multiplied by scalars. For example:</p>
+    <ul>
+      <li><strong>Addition:</strong> \( \vec{a} + \vec{b} = \langle a_x + b_x, a_y + b_y \rangle \)</li>
+      <li><strong>Subtraction:</strong> \( \vec{a} - \vec{b} = \langle a_x - b_x, a_y - b_y \rangle \)</li>
+      <li><strong>Scalar multiplication:</strong> \( 2\vec{v} = \langle 2v_x, 2v_y \rangle \)</li>
+    </ul>
+
+    <h2>Applications in Physics</h2>
+    <p>Vectors are everywhere in physics. Here are a few examples:</p>
+    <ul>
+      <li><strong>Displacement:</strong> Moving from one point to another</li>
+      <li><strong>Velocity:</strong> Speed with direction</li>
+      <li><strong>Acceleration:</strong> Changing velocity over time</li>
+      <li><strong>Force (next unit):</strong> Combines magnitude and direction to determine motion</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Vectors have both magnitude and direction</li>
+      <li>They can be represented using arrows, components, or unit vectors</li>
+      <li>They're essential in understanding real-world motion and forces</li>
+    </ul>
+
+    
+  </div>
+
+  <div class="content-box">
+    <h2>Interactive Vector Addition</h2>
+    <p>Enter the x and y components of two vectors to see their sum visually.</p>
+
+    <div class="mb-3">
+      <label>Vector A (x, y):</label>
+      <input type="number" id="ax" placeholder="Ax" />
+      <input type="number" id="ay" placeholder="Ay" />
+    </div>
+
+    <div class="mb-3">
+      <label>Vector B (x, y):</label>
+      <input type="number" id="bx" placeholder="Bx" />
+      <input type="number" id="by" placeholder="By" />
+    </div>
+
+    <div class="mb-3">
+      <label>Operation:</label>
+      <select id="operation" onchange="document.getElementById('scalar-group').style.display = this.value === 'scalar' ? 'block' : 'none'">
+        <option value="add">A + B</option>
+        <option value="subtract">A - B</option>
+        <option value="scalar">Scalar × A</option>
+      </select>
+    </div>
+
+    <div class="mb-3" id="scalar-group" style="display: none;">
+      <label>Scalar Value:</label>
+      <input type="number" id="scalar" placeholder="e.g. 2" />
+    </div>
+
+    <button onclick="drawVectors()" class="btn btn-primary mb-3">Draw Vectors</button>
+
+    <canvas id="vectorCanvas" width="700" height="700" style="border:1px solid #ccc;"></canvas>
+  </div>
+
+
+  
+
+  <script>
+    function animateArrow(ctx, x1, y1, x2, y2, color, label = "", callback = () => {}) {
+      const totalFrames = 30;
+      let frame = 0;
+
+      function animate() {
+        const t = frame / totalFrames;
+        const currX = x1 + (x2 - x1) * t;
+        const currY = y1 + (y2 - y1) * t;
+
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(currX, currY);
+        ctx.stroke();
+
+        frame++;
+        if (frame <= totalFrames) {
+          requestAnimationFrame(animate);
+        } else {
+          // Draw arrowhead at end
+          const angle = Math.atan2(y2 - y1, x2 - x1);
+          const headlen = 10;
+          ctx.fillStyle = color;
+          ctx.beginPath();
+          ctx.moveTo(x2, y2);
+          ctx.lineTo(x2 - headlen * Math.cos(angle - Math.PI / 6), y2 - headlen * Math.sin(angle - Math.PI / 6));
+          ctx.lineTo(x2 - headlen * Math.cos(angle + Math.PI / 6), y2 - headlen * Math.sin(angle + Math.PI / 6));
+          ctx.closePath();
+          ctx.fill();
+
+          vectorRegions.push({ x1, y1, x2, y2, label });
+          callback();
+        }
+      }
+
+      animate();
+    }
+
+    function drawGrid(ctx) {
+      const w = ctx.canvas.width;
+      const h = ctx.canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.strokeStyle = "#eee";
+
+      const spacing = 20;
+      for (let x = 0; x <= w; x += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, h);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= h; y += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+      }
+
+      // Draw axes
+      ctx.strokeStyle = "#ccc";
+      ctx.beginPath();
+      ctx.moveTo(w / 2, 0);
+      ctx.lineTo(w / 2, h);
+      ctx.moveTo(0, h / 2);
+      ctx.lineTo(w, h / 2);
+      ctx.stroke();
+    }
+
+    let vectorRegions = [];
+
+    function drawVectors() {
+      const ax = parseFloat(document.getElementById("ax").value);
+      const ay = parseFloat(document.getElementById("ay").value);
+      const bx = parseFloat(document.getElementById("bx").value);
+      const by = parseFloat(document.getElementById("by").value);
+      const op = document.getElementById("operation").value;
+      const scalar = parseFloat(document.getElementById("scalar").value) || 1;
+
+      const canvas = document.getElementById("vectorCanvas");
+      const ctx = canvas.getContext("2d");
+      const w = canvas.width;
+      const h = canvas.height;
+      const centerX = w / 2;
+      const centerY = h / 2;
+
+      let resultX = 0;
+      let resultY = 0;
+
+      let A = { x: ax, y: ay };
+      let B = { x: bx, y: by };
+
+      if (op === "add") {
+        resultX = ax + bx;
+        resultY = ay + by;
+      } else if (op === "subtract") {
+        resultX = ax - bx;
+        resultY = ay - by;
+      } else if (op === "scalar") {
+        resultX = ax * scalar;
+        resultY = ay * scalar;
+        B = { x: 0, y: 0 }; // hide B
+      }
+
+      const maxComponent = Math.max(
+        Math.abs(ax), Math.abs(ay),
+        Math.abs(bx), Math.abs(by),
+        Math.abs(resultX), Math.abs(resultY)
+      );
+      const margin = 40;
+      const scale = (Math.min(w, h) / 2 - margin) / Math.max(1, maxComponent);
+
+      vectorRegions = []; // reset
+      drawGrid(ctx);
+
+      const axEndX = centerX + ax * scale;
+      const axEndY = centerY - ay * scale;
+
+      const bxStartX = axEndX;
+      const bxStartY = axEndY;
+      const bxEndX = bxStartX + B.x * scale;
+      const bxEndY = bxStartY - B.y * scale;
+
+      const resultEndX = centerX + resultX * scale;
+      const resultEndY = centerY - resultY * scale;
+
+      if (op === "scalar") {
+        // Draw original A in red
+        animateArrow(ctx, centerX, centerY, axEndX, axEndY, "red", `A = <${ax}, ${ay}>`, () => {
+          // Draw scaled result in green
+          animateArrow(ctx, centerX, centerY, resultEndX, resultEndY, "green", `Result = <${resultX}, ${resultY}>`);
+        });
+      } else {
+        animateArrow(ctx, centerX, centerY, axEndX, axEndY, "red", `A = <${A.x}, ${A.y}>`, () => {
+          animateArrow(ctx, bxStartX, bxStartY, bxEndX, bxEndY, "blue", `B = <${B.x}, ${B.y}>`, () => {
+            animateArrow(ctx, centerX, centerY, resultEndX, resultEndY, "green", `Result = <${resultX}, ${resultY}>`);
+          });
+        });
+      }
+    }
+
+    document.getElementById("vectorCanvas").addEventListener("mousemove", function (e) {
+      const canvas = this;
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const hoverLabel = document.getElementById("hoverLabel");
+      let found = false;
+
+      for (const region of vectorRegions) {
+        const { x1, y1, x2, y2, label } = region;
+
+        const dx = x2 - x1;
+        const dy = y2 - y1;
+        const lengthSq = dx * dx + dy * dy;
+
+        const t = ((x - x1) * dx + (y - y1) * dy) / lengthSq;
+        if (t < 0 || t > 1) continue;
+
+        const projX = x1 + t * dx;
+        const projY = y1 + t * dy;
+        const dist = Math.sqrt((x - projX) ** 2 + (y - projY) ** 2);
+
+        if (dist < 10) {
+          // Show hover label near mouse
+          hoverLabel.style.left = (e.pageX + 10) + "px";
+          hoverLabel.style.top = (e.pageY + 10) + "px";
+          hoverLabel.textContent = label;
+          hoverLabel.style.display = "block";
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
+        hoverLabel.style.display = "none";
+      }
+    });
+  </script>
+
+
+</body>
+</html>

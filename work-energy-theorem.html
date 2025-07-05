@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work-Energy Theorem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+        width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    /* Simulation styles */
+    #sim-container {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    #canvas {
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      background: #e0f2fe;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+    .slider-container {
+      margin: 1rem auto;
+      max-width: 400px;
+      text-align: left;
+      font-size: 1rem;
+      color: #003049;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    label {
+      font-weight: 600;
+    }
+    input[type=range] {
+      width: 100%;
+      margin-top: 0.3rem;
+    }
+    #info {
+      font-size: 1.1rem;
+      color: #1e3a8a;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="Energy.html">← Back to Work, Energy & Power</a>
+    <h1>Work-Energy Theorem</h1>
+
+    <p>The <strong>Work-Energy Theorem</strong> connects the concepts of work and kinetic energy. It states that the net work done by all forces acting on an object equals the change in its kinetic energy.</p>
+
+    <h2>Statement and Formula</h2>
+    <div class="formula-box">
+      \[
+      W_{\text{net}} = \Delta K = K_f - K_i = \frac{1}{2} m v_f^2 - \frac{1}{2} m v_i^2
+      \]
+    </div>
+
+    <p>Where:</p>
+    <ul>
+      <li><strong>W<sub>net</sub></strong> is the net work done on the object (in joules)</li>
+      <li><strong>K<sub>i</sub></strong> and <strong>K<sub>f</sub></strong> are the initial and final kinetic energies</li>
+      <li><strong>m</strong> is the mass of the object (in kilograms)</li>
+      <li><strong>v<sub>i</sub></strong> and <strong>v<sub>f</sub></strong> are the initial and final velocities (in meters per second)</li>
+    </ul>
+
+    <h2>Conceptual Understanding</h2>
+    <ul>
+      <li>If net work done on an object is positive, its kinetic energy increases and it speeds up.</li>
+      <li>If net work is negative, kinetic energy decreases and the object slows down.</li>
+      <li>If no net work is done, kinetic energy remains constant (constant speed).</li>
+      <li>This theorem links forces acting over distances to changes in motion energy.</li>
+    </ul>
+
+    <h2>Derivation using Calculus</h2>
+    <p>Starting with the definition of work:</p>
+    <div class="formula-box">
+      \[
+      W = \int \vec{F} \cdot d\vec{x}
+      \]
+      \[
+      = \int m \frac{d\vec{v}}{dt} \cdot d\vec{x}
+      \]
+      \[
+      = \int m \vec{v} \cdot d\vec{v} = \frac{1}{2} m v^2 \Big|_{v_i}^{v_f}
+      \]
+    </div>
+    <p>Therefore:</p>
+    <div class="formula-box">
+      \[
+      W_{\text{net}} = \Delta K
+      \]
+    </div>
+
+    <h2>Example Problem</h2>
+    <p>A 3 kg object moving at 2 m/s is pushed by a net force, increasing its velocity to 5 m/s. Calculate the net work done.</p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula-box">
+      \[
+      W_{\text{net}} = \frac{1}{2} \times 3 \times 5^2 - \frac{1}{2} \times 3 \times 2^2 = \frac{1}{2} \times 3 \times (25 - 4) = 33.75 \, \text{J}
+      \]
+    </div>
+
+    <h2>Graphical Interpretation</h2>
+    
+      <img src="./work-kineticenergy-graph.png" alt="Descriptive Alt Text" class="img-fluid-center" />
+    <figcaption>Work done on the object corresponds to the change in its kinetic energy.</figcaption>
+    
+
+    <h2>Quick Practice</h2>
+    <p><strong>Question:</strong> A 5 kg object’s velocity changes from 4 m/s to 6 m/s. What is the net work done?</p>
+    <ul>
+      <li>a) 50 J</li>
+      <li>b) 55 J</li>
+      <li><strong>c) 65 J</strong></li>
+      <li>d) 75 J</li>
+    </ul>
+    <p><strong>Answer:</strong></p>
+    <div class="formula-box">
+      \[
+      W_{\text{net}} = \frac{1}{2} \times 5 \times (6^2 - 4^2) = \frac{1}{2} \times 5 \times (36 - 16) = 50 \, \text{J}
+      \]
+    </div>
+    <p>Correct answer: <strong>a)</strong></p>
+
+    <!-- Simulation Section -->
+    <h2>Interactive Simulation</h2>
+    <p>Adjust the sliders to change mass, initial velocity, and final velocity. Observe the changes in kinetic energies and net work done represented by the vertical bars.</p>
+
+    <label for="mass">Mass (kg): <span id="massVal">3</span></label>
+    <input type="range" id="mass" min="0.1" max="10" step="0.1" value="3" />
+
+    <label for="vInitial">Initial Velocity (m/s): <span id="vInitialVal">2</span></label>
+    <input type="range" id="vInitial" min="0" max="20" step="0.1" value="2" />
+
+    <label for="vFinal">Final Velocity (m/s): <span id="vFinalVal">6</span></label>
+    <input type="range" id="vFinal" min="0" max="20" step="0.1" value="6" />
+
+    <canvas id="canvas" width="700" height="300"></canvas>
+
+    <div class="info" id="info"></div>
+  </div>
+
+  <script>
+    const massSlider = document.getElementById('mass');
+    const vInitialSlider = document.getElementById('vInitial');
+    const vFinalSlider = document.getElementById('vFinal');
+
+    const massVal = document.getElementById('massVal');
+    const vInitialVal = document.getElementById('vInitialVal');
+    const vFinalVal = document.getElementById('vFinalVal');
+
+    const info = document.getElementById('info');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    function drawVerticalBar(x, y, width, height, color, label, value) {
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y - height, width, height);
+      ctx.fillStyle = '#003049';
+      ctx.font = '16px Montserrat, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(label, x + width / 2, y + 25);
+      ctx.fillText(value.toFixed(1), x + width / 2, y - height - 10);
+    }
+
+    function update() {
+      const m = parseFloat(massSlider.value);
+      const vi = parseFloat(vInitialSlider.value);
+      const vf = parseFloat(vFinalSlider.value);
+
+      massVal.textContent = m.toFixed(1);
+      vInitialVal.textContent = vi.toFixed(1);
+      vFinalVal.textContent = vf.toFixed(1);
+
+      const Ki = 0.5 * m * vi * vi;
+      const Kf = 0.5 * m * vf * vf;
+      const Wnet = Kf - Ki;
+
+      info.innerHTML = `
+        <strong>Initial Kinetic Energy:</strong> ${Ki.toFixed(2)} J<br/>
+        <strong>Final Kinetic Energy:</strong> ${Kf.toFixed(2)} J<br/>
+        <strong>Net Work Done (W<sub>net</sub>):</strong> ${Wnet.toFixed(2)} J
+      `;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const maxEnergy = Math.max(Ki, Kf, Math.abs(Wnet), 1);
+      const scale = 200 / maxEnergy;
+
+      const barWidth = 100;
+      const baseY = 250;
+
+      drawVerticalBar(100, baseY, barWidth, Ki * scale, '#3b82f6', 'Initial KE', Ki);
+      drawVerticalBar(300, baseY, barWidth, Kf * scale, '#16a34a', 'Final KE', Kf);
+      const Wcolor = Wnet >= 0 ? '#16a34a' : '#ef4444';
+      drawVerticalBar(500, baseY, barWidth, Math.abs(Wnet) * scale, Wcolor, 'Net Work', Wnet);
+    }
+
+    massSlider.addEventListener('input', update);
+    vInitialSlider.addEventListener('input', update);
+    vFinalSlider.addEventListener('input', update);
+
+    update();
+  </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drag Force | AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2, h3 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, li {
+      font-size: 1.1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+    .equation {
+      font-family: 'Courier New', monospace;
+      background-color: #e0f2fe;
+      padding: 6px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: #1e3a8a;
+    }
+    canvas {
+      display: block;
+      margin: 1rem auto;
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    .controls {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .controls label {
+      font-weight: bold;
+    }
+    .form-select, .form-range {
+      max-width: 300px;
+      width: 100%;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Drag Force</h1>
+    <p>
+      Drag force is the resistive force experienced by objects moving through a fluid such as air or water. It's essential for understanding motion with resistance, especially at high speeds or in fluid environments.
+    </p>
+
+    <h2>Formulas</h2>
+    <ul>
+    <li><span class="equation">F<sub>d</sub> = -bv</span> — Linear drag (low-speed motion)</li>
+    <li><span class="equation">F<sub>d</sub> = -cv<sup>2</sup></span> — Quadratic drag (high-speed motion)</li>
+    <li><span class="equation">F<sub>d</sub> = (1/2) C<sub>d</sub> ρ A v<sup>2</sup></span> — General form</li>
+    </ul>
+
+
+    <h2>Key Variables</h2>
+    <ul>
+    <li><strong>F<sub>drag</sub></strong> — Drag force (N)</li>
+    <li><strong>v</strong> — Velocity of object (m/s)</li>
+    <li><strong>b, c</strong> — Drag coefficients</li>
+    <li><strong>C<sub>d</sub></strong> — Dimensionless drag coefficient</li>
+    <li><strong>ρ</strong> — Fluid density (kg/m³)</li>
+    <li><strong>A</strong> — Cross-sectional area (m²)</li>
+    </ul>
+
+    <h2>Conceptual Overview</h2>
+    <p>
+    Drag force increases with velocity. At low speeds, linear drag dominates. At high speeds, like skydiving or car racing, quadratic drag becomes significant. When drag balances out the force of gravity, objects reach <strong>terminal velocity</strong>. In some circumstances, such as deploying a parachute, your drag force can exceed the gravitational force until it reaches its terminal velocity.
+    </p>
+
+    <img src="dragforce.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+
+
+    <h2>Real-World Examples</h2>
+    <ul>
+      <li>Skydiver reaching terminal velocity</li>
+      <li>Cyclists using aerodynamic helmets to reduce <span class="equation">C<sub>d</sub></span></li>
+      <li>Spacecraft reentry using drag to decelerate</li>
+    </ul>
+
+    <h2>Graph: Drag vs Velocity</h2>
+    <canvas id="dragGraph" width="500" height="300"></canvas>
+
+    <h2>Interactive Simulation</h2>
+    <p>Adjust the drag coefficient and type to observe how an object falls with drag applied.</p>
+    <canvas id="simCanvas" width="500" height="300"></canvas>
+
+    <div class="controls">
+      <label for="dragType">Drag Type:</label>
+      <select id="dragType" class="form-select">
+        <option value="linear">Linear (-bv)</option>
+        <option value="quadratic" selected>Quadratic (-cv²)</option>
+      </select>
+
+      <label for="coefficient">Drag Coefficient:</label>
+      <input type="range" min="0.01" max="1" step="0.01" value="0.1" id="coefficient" class="form-range">
+    </div>
+  </div>
+
+  <script>
+    // Drag vs Velocity Graph
+    const dragCtx = document.getElementById("dragGraph").getContext("2d");
+    const drawDragGraph = () => {
+      dragCtx.clearRect(0, 0, 500, 300);
+      // Quadratic
+      dragCtx.beginPath();
+      for (let v = 0; v <= 100; v++) {
+        let y = 300 - 0.05 * v * v;
+        dragCtx.lineTo(v * 5, y);
+      }
+      dragCtx.strokeStyle = 'blue';
+      dragCtx.lineWidth = 2;
+      dragCtx.stroke();
+      dragCtx.fillStyle = 'blue';
+      dragCtx.fillText("Quadratic: F = -cv²", 300, 30);
+
+      // Linear
+      dragCtx.beginPath();
+      for (let v = 0; v <= 100; v++) {
+        let y = 300 - 0.3 * v;
+        dragCtx.lineTo(v * 5, y);
+      }
+      dragCtx.strokeStyle = 'green';
+      dragCtx.lineWidth = 2;
+      dragCtx.stroke();
+      dragCtx.fillStyle = 'green';
+      dragCtx.fillText("Linear: F = -bv", 300, 50);
+    };
+    drawDragGraph();
+
+    // Simulation
+    const simCanvas = document.getElementById("simCanvas");
+    const simCtx = simCanvas.getContext("2d");
+    let y = 0, v = 0, a = 0, dt = 0.1, mass = 1;
+    let dragType = "quadratic";
+    let coefficient = 0.1;
+
+    function simulateStep() {
+      simCtx.clearRect(0, 0, 500, 300);
+      let dragForce = 0;
+      if (dragType === "linear") dragForce = -coefficient * v;
+      else dragForce = -coefficient * v * Math.abs(v);
+      let gravity = 9.8 * mass;
+      let netForce = gravity + dragForce;
+      a = netForce / mass;
+      v += a * dt;
+      y += v * dt;
+      if (y > 270) {
+        y = 270;
+        v = 0;
+      }
+      simCtx.beginPath();
+      simCtx.arc(250, y, 15, 0, 2 * Math.PI);
+      simCtx.fillStyle = "crimson";
+      simCtx.fill();
+      requestAnimationFrame(simulateStep);
+    }
+
+    document.getElementById("dragType").addEventListener("change", (e) => {
+      dragType = e.target.value;
+      y = 0; v = 0;
+    });
+    document.getElementById("coefficient").addEventListener("input", (e) => {
+      coefficient = parseFloat(e.target.value);
+      y = 0; v = 0;
+    });
+
+    simulateStep();
+  </script>
+</body>
+</html>

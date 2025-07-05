@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Total Mechanical Energy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #002b5c;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: #006494;
+      margin-top: 2rem;
+    }
+    .formula-box {
+      background-color: #e0f2fe;
+      border-left: 6px solid #0284c7;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1rem auto;
+      background-color: #cfeffd;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #1e3a8a;
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <a href="Energy.html" class="back-link">← Back to Concepts</a>
+
+    <h1>Total Mechanical Energy</h1>
+
+    <p>
+      In a system where only <strong>conservative forces</strong> (like gravity or spring forces) act, the total mechanical energy stays constant. This is a core idea in energy-based problem solving for AP Physics.
+    </p>
+
+    <h2>What Is Mechanical Energy?</h2>
+    <div class="formula-box">
+      <p style="text-align: center;">\( E = K + U \)</p>
+      <p style="text-align: center; font-size: 0.95rem; color: #444;">
+        Total Energy = Kinetic Energy + Potential Energy
+      </p>
+    </div>
+
+    <p>
+      The mechanical energy of a system includes the energy of motion (kinetic energy) and stored energy due to position (potential energy). As long as no external non-conservative forces (like friction or air drag) do work, the total mechanical energy doesn’t change.
+    </p>
+
+    <h2>Conservation of Energy</h2>
+    <div class="formula-box">
+      <p style="text-align: center;">\( E_i = E_f \quad \text{or} \quad K_i + U_i = K_f + U_f \)</p>
+      <p style="text-align: center; font-size: 0.95rem; color: #444;">
+        Energy at the beginning equals energy at the end.
+      </p>
+    </div>
+
+    <p>This equation is powerful because it allows us to:</p>
+    <ul>
+      <li>Skip kinematic formulas</li>
+      <li>Solve for speed or height without time</li>
+      <li>Track how energy shifts between forms</li>
+    </ul>
+
+    <h2>Where to Use This</h2>
+    <ul>
+      <li>Objects dropped or thrown in a gravitational field</li>
+      <li>Masses on ramps (frictionless)</li>
+      <li>Oscillating springs or pendulums</li>
+    </ul>
+
+    <h2>Energy Bar Chart</h2>
+
+    <img src="energybarchart.jpg" alt="Descriptive Alt Text" class="img-fluid-center ">
+
+    <p>Things to note: The <b>TOTAL</b> mechanical energy is <b>NOT</b> changing because there are only conservative forces and no non-conservative forces. As potential energy increases, kinetic energy decreases and vice versa.</p>
+
+    <h2>Worked Example 1</h2>
+    <p><strong>Problem:</strong> A 3 kg ball is dropped from a height of 4 m. What is its speed just before hitting the ground?</p>
+
+    <div class="formula-box">
+      <p><strong>At the top:</strong> \( K_i = 0 \), \( U_i = mgh = 3 \cdot 9.8 \cdot 4 = 117.6 \ \text{J} \)</p>
+      <p><strong>At the bottom:</strong> \( U_f = 0 \), \( K_f = \frac{1}{2}mv^2 \)</p>
+      <p>Set energies equal: \( K_i + U_i = K_f + U_f \)</p>
+      <p>\( 0 + 117.6 = \frac{1}{2} \cdot 3 \cdot v^2 \Rightarrow v^2 = 78.4 \Rightarrow v \approx 8.85 \ \text{m/s} \)</p>
+    </div>
+
+    <h2>Worked Example 2</h2>
+    <p><strong>Problem:</strong>A ball is on a hill, 3 meters above the ground. It then rolls down a ramp and enters the loop. What is its velocity at point P?</p>
+    <img src="conservationpractice1.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+    <div class="formula-box">
+  <p><strong>Step 1: Use conservation of energy.</strong></p>
+  <p>At the top: kinetic energy + potential energy = total energy</p>
+  <p>\( E_i = E_f \)</p>
+  <p>\( mgh_i = \frac{1}{2}mv^2 + mgh_f \)</p>
+
+  <p><strong>Step 2: Plug in known values:</strong></p>
+  <p>\( m \cdot 9.8 \cdot 3 = \frac{1}{2}m v^2 + m \cdot 9.8 \cdot 2 \)</p>
+
+  <p><strong>Step 3: Cancel mass \( m \):</strong></p>
+  <p>\( 9.8 \cdot 3 = \frac{1}{2} v^2 + 9.8 \cdot 2 \)</p>
+  <p>\( 29.4 = \frac{1}{2} v^2 + 19.6 \)</p>
+
+  <p><strong>Step 4: Solve for \( v \):</strong></p>
+  <p>\( 29.4 - 19.6 = \frac{1}{2}v^2 \Rightarrow 9.8 = \frac{1}{2}v^2 \)</p>
+  <p>\( v^2 = 19.6 \Rightarrow v = \sqrt{19.6} \approx 4.43 \ \text{m/s} \)</p>
+
+  <p><strong>✅ Final Answer:</strong> The velocity of the ball at the top of the loop is approximately <strong>4.43 m/s</strong>.</p>
+</div>
+
+    
+
+    <h2>Tips for Success</h2>
+    <ul>
+      <li>Define a consistent zero point for potential energy.</li>
+      <li>Don't forget to check units: all energy is in joules (J).</li>
+      <li>This method does not give time — only positions and speeds.</li>
+    </ul>
+    <h2>Check Your Understanding</h2>
+<form id="quizForm" style="margin-top: 2rem;">
+  <ol>
+    <li>
+      <p>A 2 kg ball is dropped from a height of 5 m. What is its speed just before hitting the ground?</p>
+      <label><input type="radio" name="q1" value="A"> A) 8.9 m/s</label><br>
+      <label><input type="radio" name="q1" value="B"> B) 9.9 m/s</label><br>
+      <label><input type="radio" name="q1" value="C"> C) 6.3 m/s</label><br>
+      <label><input type="radio" name="q1" value="D"> D) 7.5 m/s</label>
+      <div class="feedback" id="f1"></div>
+    </li>
+
+    <li>
+      <p>A 4 kg object is at rest on a 6 m high platform. What is its total mechanical energy?</p>
+      <label><input type="radio" name="q2" value="A"> A) 235.2 J</label><br>
+      <label><input type="radio" name="q2" value="B"> B) 196 J</label><br>
+      <label><input type="radio" name="q2" value="C"> C) 117.6 J</label><br>
+      <label><input type="radio" name="q2" value="D"> D) 78.4 J</label>
+      <div class="feedback" id="f2"></div>
+    </li>
+
+    <li>
+      <p>A 5 kg object has 100 J of kinetic energy and 50 J of potential energy. What is the total mechanical energy?</p>
+      <label><input type="radio" name="q3" value="A"> A) 100 J</label><br>
+      <label><input type="radio" name="q3" value="B"> B) 50 J</label><br>
+      <label><input type="radio" name="q3" value="C"> C) 150 J</label><br>
+      <label><input type="radio" name="q3" value="D"> D) 0 J</label>
+      <div class="feedback" id="f3"></div>
+    </li>
+
+    <li>
+      <p>An object starts with 200 J of potential energy and no kinetic energy. It falls and ends up with 50 J of potential energy. What is its kinetic energy now?</p>
+      <label><input type="radio" name="q4" value="A"> A) 150 J</label><br>
+      <label><input type="radio" name="q4" value="B"> B) 250 J</label><br>
+      <label><input type="radio" name="q4" value="C"> C) 50 J</label><br>
+      <label><input type="radio" name="q4" value="D"> D) 100 J</label>
+      <div class="feedback" id="f4"></div>
+    </li>
+
+    <li>
+      <p>Why does total mechanical energy remain constant when only conservative forces act?</p>
+      <label><input type="radio" name="q5" value="A"> A) Because energy is created</label><br>
+      <label><input type="radio" name="q5" value="B"> B) Because non-conservative forces do work</label><br>
+      <label><input type="radio" name="q5" value="C"> C) Because energy shifts between KE and PE</label><br>
+      <label><input type="radio" name="q5" value="D"> D) Because time is constant</label>
+      <div class="feedback" id="f5"></div>
+    </li>
+  </ol>
+
+  <button type="button" onclick="gradeQuiz()" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 16px; background-color: #0284c7; color: white; border: none; border-radius: 6px; cursor: pointer;">Submit</button>
+</form>
+
+<h3 id="scoreDisplay" style="margin-top:1.5rem;"></h3>
+
+<script>
+  function gradeQuiz() {
+    const answers = {
+      q1: "B",
+      q2: "A",
+      q3: "C",
+      q4: "A",
+      q5: "C"
+    };
+
+    const feedbackCorrect = {
+      q1: "Correct! Use \( v = \sqrt{2gh} = \sqrt{2 \\cdot 9.8 \\cdot 5} \approx 9.9 \ \\text{m/s} \).",
+      q2: "Correct! PE = mgh = 4 × 9.8 × 6 = 235.2 J (no KE, so TME = PE).",
+      q3: "Correct! KE + PE = 100 + 50 = 150 J.",
+      q4: "Correct! 200 J = KE + 50 J → KE = 150 J.",
+      q5: "Correct! KE and PE change, but total E stays constant in conservative-only systems."
+    };
+
+    const feedbackIncorrect = {
+      q1: "Incorrect. Since energy is conserved, U<sub>i</sub> + K<sub>i</sub> = U<sub>f</sub> + K<sub>f</sub>. The initial kinetic energy is 0 because it has no velocity. The final potential energy is 0 because all the potential energy has been converted to kinetic energy. This leads to U<sub>i</sub>=K<sub>f</sub>. Substituting: mgy = 1/2 * m * v^2. v = &radic;(2gy), plugging in values gives 9.9 [m/s]",
+      q2: "Incorrect. Mechanical Energy is the amount of kinetic and potential energy an object has. Since the object is stationary, there is no kinetic energy. There is gravitational potential enevery, however, because it is at an elevation to a point of reference (the ground). PE = mgh = 4 × 9.8 × 6 = 235.2 J.",
+      q3: "Incorrect. Since mechanical energy is the sum of kinetic and pottential energy, add kinetic and potential energy: 100 + 50 = 150 J.",
+      q4: "Incorrect. Since energy is conserved U<sub>i</sub> + K<sub>i</sub> = U<sub>f</sub> + K<sub>f</sub>. The inital kinetic energy is given as 0 J and the inital potential energy is 200 J. The final potential energy is 150 J. Plugging it into the equation: 200 + 0 = 150 + K<sub>f</sub>. Energy lost in PE becomes KE: 200 - 50 = 150 J.",
+      q5: "Incorrect. The correct reason is that energy shifts between KE and PE when only conservative forces act."
+    };
+
+    let score = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      const answer = document.querySelector(`input[name="q${i}"]:checked`);
+      const fb = document.getElementById(`f${i}`);
+      if (answer) {
+        if (answer.value === answers[`q${i}`]) {
+          fb.innerHTML = `<span style="color:green;">✔ ${feedbackCorrect[`q${i}`]}</span>`;
+          score++;
+        } else {
+          fb.innerHTML = `<span style="color:red;">✘ ${feedbackIncorrect[`q${i}`]}</span>`;
+        }
+      } else {
+        fb.innerHTML = `<span style="color:red;">✘ No answer selected.</span>`;
+      }
+    }
+
+    document.getElementById("scoreDisplay").innerHTML =
+      `<strong>Your Score: ${score}/5</strong>`;
+  }
+</script>
+    
+    
+
+
+</body>
+</html>

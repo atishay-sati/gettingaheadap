@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Position-Time Graphs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2 {
+      color: #005a9c;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 1rem auto;
+      background: white;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+   <a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+  <h1>Position-Time Graphs</h1>
+
+  <p>Position-time graphs show how an object's position changes over time. The slope of the graph represents velocity. Here are four common types of motion:</p>
+
+  <div class="section">
+    <h2>1. Constant Positive Velocity</h2>
+    <p>The position increases linearly over time. This means the object moves in a positive direction at a constant rate. The slope of the graph is positive and constant.</p>
+    <canvas id="graph1" width="500" height="300"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>2. Constant Negative Velocity</h2>
+    <p>The position decreases linearly over time. This indicates motion in the negative direction with constant speed. The slope is negative and constant.</p>
+    <canvas id="graph2" width="500" height="300"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>3. Positive Acceleration</h2>
+    <p>The graph is a curve that gets steeper with time. The object's velocity is increasing in the positive direction, so the slope is increasing.</p>
+    <canvas id="graph3" width="500" height="300"></canvas>
+  </div>
+
+  <div class="section">
+    <h2>4. Negative Acceleration</h2>
+    <p>The graph is a curve that becomes flatter with time. This means the object is slowing down while moving in the positive direction, or accelerating in the negative direction.</p>
+    <canvas id="graph4" width="500" height="300"></canvas>
+  </div>
+
+  <script>
+  function drawGraph(canvasId, points, label) {
+    const canvas = document.getElementById(canvasId);
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw axes
+    ctx.strokeStyle = "#999";
+    ctx.beginPath();
+    ctx.moveTo(40, 260);
+    ctx.lineTo(460, 260); // x-axis
+    ctx.moveTo(40, 260);
+    ctx.lineTo(40, 40);   // y-axis
+    ctx.stroke();
+
+    // Draw graph line
+    ctx.beginPath();
+    ctx.strokeStyle = "#0074D9";
+    ctx.lineWidth = 2;
+    points.forEach(([x, y], i) => {
+      const px = 40 + x * 40;
+      const py = 260 - y * 40;
+      if (i === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Draw labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Time (s)", 400, 280);
+    ctx.fillText("Position (m)", 10, 50);
+  }
+
+  // Constant velocities (linear)
+  drawGraph("graph1", [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]], "Constant Positive Velocity");
+  drawGraph("graph2", [[0, 4], [1, 3], [2, 2], [3, 1], [4, 0]], "Constant Negative Velocity");
+
+  // Positive acceleration (parabolic curve, smoother)
+  const positiveAccel = [];
+  for (let t = 0; t <= 3.6; t += 0.2) {
+    const x = 0.5 * 1 * t * t; // x = 0.5at² with a = 1 m/s²
+    positiveAccel.push([t, x]);
+  }
+  drawGraph("graph3", positiveAccel, "Positive Acceleration");
+
+  // Negative acceleration (parabolic curve, decelerating)
+  const negativeAccel = [];
+  for (let t = 0; t <= 3.21; t += 0.21) {
+    const x = 5 - 0.5 * 1 * t * t; // Starts high and curves downward
+    negativeAccel.push([t, x]);
+  }
+  drawGraph("graph4", negativeAccel, "Negative Acceleration");
+</script>
+
+</body>
+</html>

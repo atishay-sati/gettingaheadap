@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Graphical Analysis of Energy in SHM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .graph-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: 250px;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      margin: 1.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    #pendulumCanvas {
+      display: block;
+      margin: 2rem auto 1rem auto;
+      background: #e0f2fe;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .energy-bars {
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    .energy-bar {
+      background: #ddd;
+      border-radius: 8px;
+      height: 25px;
+      margin: 0.7rem 0;
+      position: relative;
+    }
+    .energy-fill {
+      height: 100%;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      line-height: 25px;
+      padding-left: 10px;
+      white-space: nowrap;
+      transition: width 0.2s ease;
+    }
+    #keBar {
+      background-color: #3b82f6;
+      width: 0%;
+    }
+    #gpeBar {
+      background-color: #f59e0b;
+      width: 0%;
+    }
+    #totalBar {
+      background-color: #16a34a;
+      width: 100%;
+    }
+    .controls {
+      max-width: 600px;
+      margin: 1rem auto 2rem auto;
+      background: #dbeafe;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      color: #1e3a8a;
+    }
+    label {
+      display: block;
+      margin-top: 0.8rem;
+      font-weight: 600;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    #angleValue, #lengthValue {
+      font-weight: 700;
+      color: #003049;
+    }
+    #applyBtn {
+      margin-top: 1.5rem;
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Graphical Analysis of Energy in SHM</h1>
+
+    <p>Graphs of kinetic energy (KE), potential energy (PE), and total energy (E) over time help visualize how energy shifts in Simple Harmonic Motion (SHM).</p>
+
+    <h2>Identifying Maximum Speed and Turning Points</h2>
+    <p>
+      - Maximum speed occurs as the object passes through the equilibrium point, where kinetic energy is highest and potential energy is lowest.<br />
+      - Turning points correspond to the maximum displacement, where potential energy peaks and kinetic energy is zero.
+    </p>
+
+    <h2>Energy Graph Placeholders</h2>
+    <div class="graph-placeholder">[Graph of Kinetic Energy vs Time]</div>
+    <div class="graph-placeholder">[Graph of Potential Energy vs Time]</div>
+    <div class="graph-placeholder">[Graph of Total Energy vs Time]</div>
+
+    <h2>Live Pendulum Simulation with Energy Bars</h2>
+
+    <div class="controls">
+      <label for="angleSlider">Initial Angle (degrees, max 15°): <span id="angleValue">15</span>°</label>
+      <input type="range" id="angleSlider" min="1" max="15" step="0.1" value="15">
+
+      <label for="lengthSlider">Pendulum Length (meters, max 0.5 m): <span id="lengthValue">0.5</span> m</label>
+      <input type="range" id="lengthSlider" min="0.1" max="0.5" step="0.01" value="0.5">
+
+      <button id="applyBtn">Apply Changes</button>
+    </div>
+
+    <canvas id="pendulumCanvas" width="600" height="400"></canvas>
+
+    <div class="energy-bars">
+      <div>Kinetic Energy (KE)</div>
+      <div class="energy-bar"><div id="keBar" class="energy-fill">0 J</div></div>
+
+      <div>Gravitational Potential Energy (GPE)</div>
+      <div class="energy-bar"><div id="gpeBar" class="energy-fill">0 J</div></div>
+
+      <div>Total Mechanical Energy (E)</div>
+      <div class="energy-bar"><div id="totalBar" class="energy-fill">-- J</div></div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('pendulumCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    const originX = width / 2;
+    const originY = 100;
+
+    const angleSlider = document.getElementById('angleSlider');
+    const lengthSlider = document.getElementById('lengthSlider');
+    const angleValueDisplay = document.getElementById('angleValue');
+    const lengthValueDisplay = document.getElementById('lengthValue');
+    const applyBtn = document.getElementById('applyBtn');
+
+    const keBar = document.getElementById('keBar');
+    const gpeBar = document.getElementById('gpeBar');
+    const totalBar = document.getElementById('totalBar');
+
+    const g = 9.81;
+    const mass = 1;
+
+    let angle = angleSlider.value * Math.PI / 180;
+    let length = parseFloat(lengthSlider.value);
+    let angularVelocity = 0;
+    let angularAcceleration = 0;
+    const dt = 0.02;
+
+    let totalEnergy = computeTotalEnergy(angle, length);
+
+    let pendingAngle = angle;
+    let pendingLength = length;
+
+    angleSlider.addEventListener('input', () => {
+      pendingAngle = angleSlider.value * Math.PI / 180;
+      angleValueDisplay.textContent = parseFloat(angleSlider.value).toFixed(1);
+    });
+
+    lengthSlider.addEventListener('input', () => {
+      pendingLength = parseFloat(lengthSlider.value);
+      lengthValueDisplay.textContent = pendingLength.toFixed(2);
+    });
+
+    applyBtn.addEventListener('click', () => {
+      angle = pendingAngle;
+      length = pendingLength;
+      angularVelocity = 0;
+      totalEnergy = computeTotalEnergy(angle, length);
+    });
+
+    function computeTotalEnergy(angle, length) {
+      return mass * g * length * (1 - Math.cos(angle));
+    }
+
+    function drawPendulum(theta) {
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.beginPath();
+      ctx.arc(originX, originY, 10, 0, Math.PI * 2);
+      ctx.fillStyle = '#003049';
+      ctx.fill();
+
+      const maxLengthPx = 200;
+      const scale = maxLengthPx / 0.5;
+      const lengthPx = length * scale;
+
+      const bobX = originX + lengthPx * Math.sin(theta);
+      const bobY = originY + lengthPx * Math.cos(theta);
+
+      ctx.beginPath();
+      ctx.moveTo(originX, originY);
+      ctx.lineTo(bobX, bobY);
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = '#3b82f6';
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(bobX, bobY, 25, 0, Math.PI * 2);
+      ctx.fillStyle = '#f59e0b';
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#b45309';
+      ctx.stroke();
+    }
+
+    function updateEnergyBars(KE, GPE, E) {
+      const kePercent = (KE / E) * 100;
+      const gpePercent = (GPE / E) * 100;
+
+      keBar.style.width = kePercent + '%';
+      keBar.textContent = KE.toFixed(3) + ' J';
+
+      gpeBar.style.width = gpePercent + '%';
+      gpeBar.textContent = GPE.toFixed(3) + ' J';
+
+      totalBar.style.width = '100%';
+      totalBar.textContent = E.toFixed(3) + ' J';
+    }
+
+    function animate() {
+      angularAcceleration = -(g / length) * Math.sin(angle);
+      angularVelocity += angularAcceleration * dt;
+      angle += angularVelocity * dt;
+
+      drawPendulum(angle);
+
+      const height = length * (1 - Math.cos(angle));
+      const GPE = mass * g * height;
+      const KE = totalEnergy - GPE;
+
+      updateEnergyBars(KE, GPE, totalEnergy);
+
+      requestAnimationFrame(animate);
+    }
+
+    angleValueDisplay.textContent = angleSlider.value;
+    lengthValueDisplay.textContent = lengthSlider.value;
+
+    animate();
+  </script>
+</body>
+</html>

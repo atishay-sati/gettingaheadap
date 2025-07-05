@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Position, Displacement, Velocity, and Acceleration (1D Motion)</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #fdfdfd;
+    color: #222;
+  }
+  h1, h2 {
+    color: #004080;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  ul {
+    margin-left: 1.2rem;
+  }
+  .formula {
+    background: #f0f4ff;
+    border-left: 5px solid #004080;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #005a9c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    }
+
+    .back-link:hover {
+    text-decoration: underline;
+    transform: scale(1.02);
+    }
+  canvas {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 1.5rem auto;
+  }
+  /* Styles for the simulation container */
+  #simContainer {
+    position: relative;
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+    background: #e0f0ff;
+    height: 150px;
+  }
+  #simCanvas {
+    background: #d0e7ff;
+    display: block;
+    margin: 0 auto;
+  }
+  #info {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255 255 255 / 0.85);
+    border: 1px solid #aaa;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-family: monospace;
+    min-width: 180px;
+    text-align: right;
+    box-shadow: 0 0 8px #ccc;
+  }
+  label {
+    display: inline-block;
+    width: 160px;
+    font-weight: bold;
+  }
+  input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    margin-right: 1rem;
+  }
+  button {
+    padding: 6px 14px;
+    font-size: 1rem;
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  button:disabled {
+    background-color: #ccc;
+    cursor: default;
+  }
+  #controls {
+    margin-top: 1rem;
+    text-align: center;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ]
+    });
+  });
+</script>
+</head>
+<body>
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+<h1>Position, Displacement, Velocity, and Acceleration (1D Motion)</h1>
+
+<section>
+  <h2>Position (\(x\))</h2>
+  <p>Position is the location of an object along a straight line (1D). It is measured relative to an origin and can be positive or negative depending on the direction.</p>
+  <p>Example: \( x = +5\, m \) means 5 meters to the right of the origin; \( x = -3\, m \) means 3 meters to the left.</p>
+</section>
+
+<section>
+  <h2>Displacement (\( \Delta x \))</h2>
+  <p>Displacement is the change in position of an object. It is a vector quantity and can be positive or negative.</p>
+  <div class="formula">
+    \( \Delta x = x_{final} - x_{initial} \)
+  </div>
+  <p>Example: If an object moves from \( x = 2\, m \) to \( x = 7\, m \), then displacement is \( \Delta x = 7 - 2 = +5\, m \).</p>
+  <p>If it moves from \( x = 7\, m \) to \( x = 3\, m \), then \( \Delta x = 3 - 7 = -4\, m \).</p>
+</section>
+
+<section>
+  <h2>Velocity (\(v\))</h2>
+  <p>Velocity is the rate of change of position with respect to time. It is a vector quantity with magnitude and direction.</p>
+  <div class="formula">
+    \( v = \frac{\Delta x}{\Delta t} \)
+  </div>
+  <p>Units: meters per second (m/s)</p>
+  <p>Example: If displacement is \( +10\, m \) in \( 5\, s \), velocity is \( v = \frac{10\, m}{5\, s} = 2\, m/s \) to the right.</p>
+</section>
+
+<section>
+  <h2>Acceleration (\(a\))</h2>
+  <p>Acceleration is the rate of change of velocity with respect to time. It is a vector quantity.</p>
+  <div class="formula">
+    \( a = \frac{\Delta v}{\Delta t} \)
+  </div>
+  <p>Units: meters per second squared (m/s²)</p>
+  <p>Example: If velocity changes from \( 2\, m/s \) to \( 6\, m/s \) in \( 2\, s \), acceleration is \( a = \frac{6 - 2}{2} = 2\, m/s^2 \) in the positive direction.</p>
+</section>
+
+<h2>Visualizing 1D Motion</h2>
+<p>Below is a position vs time graph showing an object moving with constant acceleration. This graph helps visualize how position changes over time.</p>
+
+<canvas id="motionCanvas" width="600" height="250"></canvas>
+
+<div style="background: #f0f4ff; padding: 1rem; margin: 1rem 0; border-left: 4px solid #005a9c; border-radius: 4px;">
+  <h3>Graph Explanation:</h3>
+  <p><strong>What the graph shows:</strong></p>
+  <ul>
+    <li><strong>X-axis:</strong> Time (0 to 10 seconds)</li>
+    <li><strong>Y-axis:</strong> Position (0 to 50 meters)</li>
+    <li><strong>Blue curve:</strong> Shows how an object's position changes over time</li>
+  </ul>
+  
+  <p><strong>The motion represented:</strong></p>
+  <p>This graph shows an object moving with <strong>constant acceleration</strong>. The position function is:</p>
+  <div style="text-align: center; font-family: 'Courier New', monospace; font-size: 1.1rem; margin: 0.5rem 0;">
+    x(t) = 2t² + 5t + 3
+  </div>
+  
+  <p><strong>This represents:</strong></p>
+  <ul>
+    <li><strong>Initial position:</strong> 3 meters (at t = 0)</li>
+    <li><strong>Initial velocity:</strong> 5 m/s (coefficient of t term)</li>
+    <li><strong>Acceleration:</strong> 4 m/s² (2 × coefficient of t² term)</li>
+  </ul>
+  
+  <p><strong>Key features:</strong></p>
+  <ul>
+    <li><strong>Curved shape:</strong> The parabolic curve indicates constant acceleration</li>
+    <li><strong>Increasing slope:</strong> The curve gets steeper over time, showing the object is speeding up</li>
+    <li><strong>Positive acceleration:</strong> The upward curvature means the object is accelerating in the positive direction</li>
+  </ul>
+  
+  <p><strong>Important relationships:</strong></p>
+  <ul>
+    <li>The <strong>slope at any point</strong> represents the instantaneous velocity at that time</li>
+    <li>The <strong>curvature</strong> indicates the acceleration</li>
+    <li>A straight line would represent constant velocity (no acceleration)</li>
+  </ul>
+</div>
+
+<script>
+  const canvas = document.getElementById("motionCanvas");
+  const ctx = canvas.getContext("2d");
+  const width = canvas.width;
+  const height = canvas.height;
+
+  function drawAxes() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.strokeStyle = "#999";
+    ctx.lineWidth = 1;
+
+    // x-axis: time (0 to 10 s)
+    ctx.beginPath();
+    ctx.moveTo(50, height - 40);
+    ctx.lineTo(width - 20, height - 40);
+    ctx.stroke();
+
+    // y-axis: position (0 to 50 m)
+    ctx.beginPath();
+    ctx.moveTo(50, height - 40);
+    ctx.lineTo(50, 20);
+    ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Time (s)", width - 90, height - 15);
+    ctx.fillText("Position (m)", 60, 30);
+
+    // Time ticks every 2 seconds
+    for(let t = 0; t <= 10; t += 2) {
+      const x = 50 + ((width - 70) * t) / 10;
+      ctx.beginPath();
+      ctx.moveTo(x, height - 40);
+      ctx.lineTo(x, height - 35);
+      ctx.stroke();
+      ctx.fillText(t, x - 5, height - 20);
+    }
+
+    // Position ticks every 10 m
+    for(let p = 0; p <= 50; p += 10) {
+      const y = height - 40 - ((height - 60) * p) / 50;
+      ctx.beginPath();
+      ctx.moveTo(50, y);
+      ctx.lineTo(55, y);
+      ctx.stroke();
+      ctx.fillText(p, 20, y + 5);
+    }
+  }
+
+  function position(t) {
+    // Example: object moving with constant acceleration: x = 2t² + 5t + 3
+    return 2 * t * t + 5 * t + 3;
+  }
+
+  function drawGraph() {
+    drawAxes();
+
+    ctx.strokeStyle = "#005a9c";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+
+    for(let t = 0; t <= 10; t += 0.1) {
+      const x = 50 + ((width - 70) * t) / 10;
+      const y = height - 40 - ((height - 60) * position(t)) / 50;
+      if(t === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    ctx.fillStyle = "#005a9c";
+    ctx.font = "16px Arial";
+    ctx.fillText("Position vs Time", width / 2 - 40, 20);
+  }
+
+  drawGraph();
+</script>
+
+<section>
+  <h2>5 Kinematic Formulas for Constant Acceleration</h2>
+  <p>These formulas relate displacement, velocity, acceleration, and time when acceleration is constant. <b>(formulas 4 and 5 aren't given on the equation sheet)</b></p>
+
+  <ol>
+    <li>
+      <div class="formula">\[
+        v = v_0 + a t
+      \]</div>
+      <p><strong>Meaning:</strong> Final velocity equals initial velocity plus acceleration times time.</p>
+      <p><strong>Use:</strong> Find the final velocity after a certain time when acceleration is constant.</p>
+      <p><strong>Example:</strong> If a car starts at 5 m/s and accelerates at 2 m/s² for 3 seconds, what is its final velocity?</p>
+      <p>Solution: \( v = 5 + 2 \times 3 = 11 \, m/s \)</p>
+    </li>
+
+    <li>
+      <div class="formula">\[
+        x = x_0 + v_0 t + \frac{1}{2} a t^2
+      \]</div>
+      <p><strong>Meaning:</strong> Displacement equals initial position plus initial velocity times time plus half acceleration times time squared.</p>
+      <p><strong>Use:</strong> Find position after time \(t\) with known initial velocity and acceleration.</p>
+      <p><strong>Example:</strong> A car starts at 5 m/s at position 10 m and accelerates at 3 m/s² horizontally. Where is it after 4 seconds?</p>
+      <p>Solution: \( x = 10 + 5 \times 4 + \frac{1}{2} \times 3 \times 4^2 = 10 + 20 + 24 = 54 \, m \)</p>
+    </li>
+
+    <li>
+      <div class="formula">\[
+        v^2 = v_0^2 + 2 a (x - x_0)
+      \]</div>
+      <p><strong>Meaning:</strong> Final velocity squared equals initial velocity squared plus twice acceleration times displacement.</p>
+      <p><strong>Use:</strong> Find final velocity when you know displacement and acceleration but not time.</p>
+      <p><strong>Example:</strong> A car accelerates from rest at 3 m/s² over 100 m. What is its final velocity?</p>
+      <p>Solution: \( v^2 = 0 + 2 \times 3 \times 100 = 600 \Rightarrow v = \sqrt{600} \approx 24.5 \, m/s \)</p>
+    </li>
+
+    <li>
+      <div class="formula">\[
+        x = x_0 + v_0 t
+      \]</div>
+      <p><strong>Meaning:</strong> Displacement equals initial position plus the inital velocity times time <b>IF</b> there is no acceleration.</p>
+      <p><strong>Use:</strong> Calculate displacement when you know initial and final velocities and time.</p>
+      <p><strong>Example:</strong> A bike is going at a constant 6 m/s over 4 seconds. How far does it travel?</p>
+      <p>Solution: \( x = 0 + 6 \times 4 = 6 \times 4 = 24 \, m \)</p>
+    </li>
+
+    <li>
+      <div class="formula">\[
+        x = x_0 + v t - \frac{1}{2} a t^2
+      \]</div>
+      <p><strong>Meaning:</strong> Similar to formula 2 but used when acceleration acts opposite to velocity direction.</p>
+      <p><strong>Use:</strong> Calculate displacement when object slows down due to acceleration opposite to velocity.</p>
+      <p><strong>Example:</strong> A ball thrown upward at 10 m/s slows down due to gravity -9.8 m/s². What is its position after 1 second?</p>
+      <p>Solution: \( x = 0 + 10 \times 1 - \frac{1}{2} \times 9.8 \times 1^2 = 10 - 4.9 = 5.1 \, m \)</p>
+    </li>
+  </ol>
+
+  
+</section>
+
+
+<!-- START: Car Simulation -->
+<h2>Interactive 1D Motion Simulation</h2>
+
+<div id="controls">
+  <label for="velocity">Initial Velocity (m/s):</label>
+  <input type="number" id="velocity" value="10" step="0.1" />
+  <label for="acceleration">Acceleration (m/s²):</label>
+  <input type="number" id="acceleration" value="0" step="0.1" />
+  <button id="startBtn">Start</button>
+  <button id="resetBtn" disabled>Reset</button>
+</div>
+
+<div id="simContainer">
+  <canvas id="simCanvas" width="700" height="150"></canvas>
+  <div id="info">
+    Displacement: 0.00 m<br />
+    Time: 0.00 s
+  </div>
+</div>
+
+<script>
+  const simCanvas = document.getElementById("simCanvas");
+  const simCtx = simCanvas.getContext("2d");
+  const infoBox = document.getElementById("info");
+  const startBtn = document.getElementById("startBtn");
+  const resetBtn = document.getElementById("resetBtn");
+
+  const carWidth = 60;
+  const carHeight = 30;
+  const canvasWidth = simCanvas.width;
+  const canvasHeight = simCanvas.height;
+
+  // Initial position: quarter distance from left edge
+  const initialX = canvasWidth * 0.25;
+
+  let velocityInput = document.getElementById("velocity");
+  let accelerationInput = document.getElementById("acceleration");
+
+  let animationId;
+  let startTime;
+  let displacement = 0;
+  let positionX = initialX;
+  let velocity = 0;
+  let acceleration = 0;
+  let running = false;
+
+  function drawCar(x) {
+    simCtx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    // Draw track line
+    simCtx.strokeStyle = "#666";
+    simCtx.lineWidth = 2;
+    simCtx.beginPath();
+    simCtx.moveTo(0, canvasHeight / 2 + carHeight / 2 + 10);
+    simCtx.lineTo(canvasWidth, canvasHeight / 2 + carHeight / 2 + 10);
+    simCtx.stroke();
+
+    // Car body (simple rectangle)
+    simCtx.fillStyle = "#0077cc";
+    simCtx.fillRect(x, canvasHeight / 2 - carHeight / 2, carWidth, carHeight);
+
+    // Car wheels
+    simCtx.fillStyle = "#333";
+    const wheelRadius = 7;
+    simCtx.beginPath();
+    simCtx.arc(x + 15, canvasHeight / 2 + carHeight / 2 + 3, wheelRadius, 0, Math.PI * 2);
+    simCtx.arc(x + carWidth - 15, canvasHeight / 2 + carHeight / 2 + 3, wheelRadius, 0, Math.PI * 2);
+    simCtx.fill();
+  }
+
+  function update() {
+    const currentTime = (performance.now() - startTime) / 1000; // seconds
+    // Position with constant acceleration formula:
+    // x = x0 + v0 * t + (1/2) * a * t^2
+    displacement = velocity * currentTime + 0.5 * acceleration * currentTime * currentTime;
+    positionX = initialX + displacement;
+
+   
+
+    drawCar(positionX);
+
+    // Update info box (displacement relative to initial position, time)
+    infoBox.innerHTML =
+      `Displacement: ${displacement.toFixed(2)} m<br />` +
+      `Time: ${currentTime.toFixed(2)} s`;
+
+    if (running) {
+      animationId = requestAnimationFrame(update);
+    }
+  }
+
+  function startAnimation() {
+    if (running) return;
+
+    velocity = parseFloat(velocityInput.value);
+    acceleration = parseFloat(accelerationInput.value);
+    if (isNaN(velocity) || isNaN(acceleration)) {
+      alert("Please enter valid numbers for velocity and acceleration.");
+      return;
+    }
+
+    running = true;
+    startBtn.disabled = true;
+    resetBtn.disabled = false;
+    velocityInput.disabled = true;
+    accelerationInput.disabled = true;
+
+    startTime = performance.now();
+    displacement = 0;
+    positionX = initialX;
+    update();
+  }
+
+  function stopAnimation() {
+    running = false;
+    startBtn.disabled = false;
+    resetBtn.disabled = true;
+    velocityInput.disabled = false;
+    accelerationInput.disabled = false;
+
+    if (animationId) cancelAnimationFrame(animationId);
+  }
+
+  function resetSimulation() {
+    stopAnimation();
+    displacement = 0;
+    positionX = initialX;
+    drawCar(positionX);
+    infoBox.innerHTML = "Displacement: 0.00 m<br />Time: 0.00 s";
+  }
+
+  startBtn.addEventListener("click", startAnimation);
+  resetBtn.addEventListener("click", resetSimulation);
+
+  // Initial draw
+  drawCar(initialX);
+</script>
+
+<!-- END: Car Simulation -->
+
+
+</body>
+</html>

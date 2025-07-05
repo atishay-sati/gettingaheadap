@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instantaneous vs Average Velocity</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #f9f9f9;
+    color: #222;
+  }
+  h1, h2 {
+    color: #005a9c;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .formula {
+    background: #eee;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid #005a9c;
+    font-family: "Courier New", Courier, monospace;
+    margin: 1rem 0;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #005a9c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    }
+
+    .back-link:hover {
+    text-decoration: underline;
+    transform: scale(1.02);
+    }
+  canvas {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 1rem auto;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ]
+    });
+  });
+</script>
+</head>
+<body>
+<a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+<h1>Instantaneous vs Average Velocity</h1>
+
+<p><strong>Velocity</strong> tells us how fast an object is moving and in which direction. There are two common ways to describe velocity:</p>
+
+<h2>Average Velocity</h2>
+<p>The <em>average velocity</em> over a time interval is the total displacement divided by the total time taken:</p>
+<div class="formula">
+  \( \vec{v}_{avg} = \frac{\Delta \vec{x}}{\Delta t} \)
+</div>
+<p>where:</p>
+<ul>
+  <li>\( \Delta \vec{x} = \) displacement vector (final position − initial position)</li>
+  <li>\( \Delta t = \) elapsed time interval</li>
+</ul>
+<p>Average velocity gives a general idea of how fast and in what direction the object moved during the whole time period.</p>
+
+<h2>Instantaneous Velocity</h2>
+<p>The <em>instantaneous velocity</em> is the velocity at a specific moment in time. It is the limit of the average velocity as the time interval approaches zero:</p>
+<div class="formula">
+  \( \vec{v} = \lim_{\Delta t \to 0} \frac{\Delta \vec{x}}{\Delta t} = \frac{d\vec{x}}{dt} \)
+</div>
+<p>In simpler terms, instantaneous velocity is the derivative of position with respect to time — how fast the position is changing at that exact instant.</p>
+
+<h2>Example</h2>
+<p>Suppose a car travels from 0 m to 100 m in 20 seconds.</p>
+<ul>
+  <li>The average velocity is: \( \frac{100\, m - 0\, m}{20\, s} = 5\, m/s \)</li>
+  <li>But at any instant, the car’s velocity could be different (for example, accelerating from 0 to 10 m/s).</li>
+</ul>
+
+<h2>Visualizing Instantaneous vs Average Velocity</h2>
+<canvas id="velocityCanvas" width="600" height="300"></canvas>
+
+<script>
+  // Simple canvas animation to visualize position-time graph with average velocity and instantaneous velocity
+  
+  const canvas = document.getElementById("velocityCanvas");
+  const ctx = canvas.getContext("2d");
+  const w = canvas.width;
+  const h = canvas.height;
+
+  // Draw axes
+  function drawAxes() {
+    ctx.clearRect(0, 0, w, h);
+    ctx.strokeStyle = "#aaa";
+    ctx.lineWidth = 1;
+    
+    // x-axis (time)
+    ctx.beginPath();
+    ctx.moveTo(40, h - 40);
+    ctx.lineTo(w - 20, h - 40);
+    ctx.stroke();
+    
+    // y-axis (position)
+    ctx.beginPath();
+    ctx.moveTo(40, h - 40);
+    ctx.lineTo(40, 20);
+    ctx.stroke();
+
+    // labels
+    ctx.fillStyle = "#333";
+    ctx.font = "14px Arial";
+    ctx.fillText("Time (s)", w - 80, h - 20);
+    ctx.fillText("Position (m)", 50, 30);
+
+    // ticks for time (0 to 20s)
+    for(let t = 0; t <= 20; t += 5) {
+      const x = 40 + ((w - 60) * t) / 20;
+      ctx.beginPath();
+      ctx.moveTo(x, h - 40);
+      ctx.lineTo(x, h - 35);
+      ctx.stroke();
+      ctx.fillText(t, x - 5, h - 20);
+    }
+
+    // ticks for position (0 to 120m)
+    for(let p = 0; p <= 120; p += 30) {
+      const y = h - 40 - ((h - 60) * p) / 120;
+      ctx.beginPath();
+      ctx.moveTo(40, y);
+      ctx.lineTo(45, y);
+      ctx.stroke();
+      ctx.fillText(p, 5, y + 5);
+    }
+  }
+
+  function positionFunction(t) {
+    // Let's use a quadratic function: s = 0.25 * t^2, meaning acceleration (position growing faster)
+    return 0.25 * t * t;
+  }
+
+  function drawGraph() {
+    drawAxes();
+    
+    ctx.strokeStyle = "#0074D9"; // blue curve
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+
+    for(let t = 0; t <= 20; t += 0.1) {
+      const x = 40 + ((w - 60) * t) / 20;
+      const y = h - 40 - ((h - 60) * positionFunction(t)) / 120;
+      if(t === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // Draw average velocity line from t=0 to t=20
+    ctx.strokeStyle = "#FF4136"; // red line
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    const x0 = 40;
+    const y0 = h - 40;
+    const x20 = 40 + ((w - 60) * 20) / 20;
+    const y20 = h - 40 - ((h - 60) * positionFunction(20)) / 120;
+    ctx.moveTo(x0, y0);
+    ctx.lineTo(x20, y20);
+    ctx.stroke();
+
+    ctx.fillStyle = "#FF4136";
+    ctx.fillText("Average Velocity", x20 - 140, y20 - 10);
+
+    // Draw instantaneous velocity tangent line at t = 10
+    const tInstant = 10;
+    const slope = (positionFunction(tInstant + 0.01) - positionFunction(tInstant - 0.01)) / 0.02; // derivative approx
+    const xInstant = 40 + ((w - 60) * tInstant) / 20;
+    const yInstant = h - 40 - ((h - 60) * positionFunction(tInstant)) / 120;
+
+    ctx.strokeStyle = "#2ECC40"; // green tangent
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    // Tangent line equation: y = slope * (t - tInstant) + positionFunction(tInstant)
+    // We'll draw tangent 5 seconds before and after tInstant
+    let t1 = tInstant - 5;
+    let t2 = tInstant + 5;
+    if (t1 < 0) t1 = 0;
+    if (t2 > 20) t2 = 20;
+
+    const x1 = 40 + ((w - 60) * t1) / 20;
+    const y1 = yInstant + slope * ((h - 60) / 120) * (tInstant - t1) * (w - 60) / 20; // careful with scale
+    
+    const y1_corrected = yInstant + slope * (t1 - tInstant) * (h - 60) / 120 * -1 * (w - 60) / 20;
+    // Actually, better to compute in pixels:
+    // We want tangent line in canvas coords: pixel y = yInstant - slope * scaleX * (t - tInstant)
+    // scaleX = (w-60)/20 in pixels per second
+    // scaleY = (h-60)/120 in pixels per meter
+
+    
+    // slope in m/s, scaleX in px/s, scaleY in px/m
+    const scaleX = (w - 60) / 20;
+    const scaleY = (h - 60) / 120;
+
+    // tangent y = yInstant - slope * scaleX * (t - tInstant) * scaleY 
+    // Wait, actually slope is meters per second (ds/dt)
+    // So vertical pixel difference = slope * (t - tInstant) * scaleY
+    // Pixel coords y decrease upwards, so subtract from yInstant
+
+    const y1_final = yInstant - slope * (t1 - tInstant) * scaleX * (scaleY / scaleX);
+    const y2_final = yInstant - slope * (t2 - tInstant) * scaleX * (scaleY / scaleX);
+
+    ctx.moveTo(x1, y1_final);
+    const x2 = 40 + ((w - 60) * t2) / 20;
+    ctx.lineTo(x2, y2_final);
+    ctx.stroke();
+
+    ctx.fillStyle = "#2ECC40";
+    ctx.fillText("Instantaneous Velocity (t=10s)", xInstant - 150, yInstant - 30);
+  }
+
+  drawGraph();
+</script>
+
+</body>
+</html>

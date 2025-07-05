@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explosions and Recoil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-fluid-rocket {
+    height: auto;
+    border-radius: 12px;
+    width: 50%;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  canvas {
+      display: block;
+      margin: 1.5rem auto;
+      background: #e0f2fe;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .output {
+      margin-top: 1rem;
+      font-size: 1rem;
+      background: #dbeafe;
+      padding: 1rem;
+      border-radius: 8px;
+      white-space: pre-line;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    .example-box {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="LinearMomentum.html">← Back to Concepts</a>
+    <h1>Explosions and Recoil</h1>
+
+    <h2>Key Concept</h2>
+    <p>
+      Explosions are reverse collisions: a single object breaks into multiple pieces. Even though there may be violent internal forces (like an explosion), the total momentum of the system remains conserved—if no external force acts on it.
+    </p>
+
+    <h2>System at Rest Before Explosion</h2>
+    <p>
+      If a system starts at rest, then total momentum is zero before the explosion (no velocity). After the explosion, the individual momenta of all parts must still sum to zero. Each part goes off in a different direction, but since momentum is a vector quantity, everything will sum to zero.
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{p}_{\text{initial}} = \vec{p}_{\text{final}} \quad \Rightarrow \quad 0 = \sum \vec{p}_f
+      \]
+    </div>
+    <div class="summary">
+      Even in violent explosions, momentum is conserved: \( p_i = p_f \).
+    </div>
+
+    
+
+    <h2>Example: Gun Recoil</h2>
+    <p>
+      When a bullet is fired, the gun recoils in the opposite direction. The chemical explosion of the gunpowder is an <strong>internal force</strong> within the gun-bullet system. According to Newton's 3rd Law, the bullet and gun exert equal and opposite forces on each other.
+    </p>
+    <div class="formula-box">
+      \[
+      0 = m_b v_b + m_g v_g
+      \]
+    </div>
+    <div class="summary">
+      Recoil happens because the internal force (gunpowder explosion) pushes bullet and gun apart equally. Total momentum stays zero: \( p_i = p_f \).
+    </div>
+
+    <img src="gun-recoil-actual.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+    <img src="gun-recoil-diagram.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Example: Rocket Propulsion</h2>
+    <p>
+      Rockets move by expelling hot gas backward. The explosion inside the combustion chamber is also an <strong>internal force</strong>. Since the rocket starts at rest and no external forces act, the rocket gains forward momentum equal and opposite to the gas it expels.
+    </p>
+    <div class="formula-box">
+      \[
+      0 = m_r v_r + m_e v_e
+      \]
+    </div>
+    <div class="summary">
+      The rocket moves because of internal forces only. Momentum is conserved: \( p_i = p_f \).
+    </div>
+
+    <img src="rocket-propulsion.jpg" alt="Descriptive Alt Text" class="img-fluid-rocket">
+
+    <h2>2D Explosions</h2>
+    <p>
+      In two-dimensional explosions, you must conserve momentum in both the \( x \)- and \( y \)-directions:
+    </p>
+    <div class="formula-box">
+      \[
+      \sum p_{x,i} = \sum p_{x,f}, \quad \sum p_{y,i} = \sum p_{y,f}
+      \]
+    </div>
+    <div class="summary">
+      Break vectors into components to apply momentum conservation in multiple directions.
+    </div>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Total momentum is conserved if no net external force acts on the system.</li>
+      <li>Internal forces like chemical explosions or springs cannot change total momentum.</li>
+      <li>When starting at rest, final momentum of all pieces must add to zero.</li>
+      <li>Gun recoil, rocket thrust, and fragment motion are all explained by conservation of momentum.</li>
+      <li>Always use vector components in 2D problems.</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+    <div class="example-box">
+      <b>Example 1: Gun Recoil</b><br>
+      <b>Problem:</b> A 2.0 kg rifle fires a 0.020 kg bullet at 400 m/s. What is the recoil velocity of the rifle?
+      <br><b>Solution:</b><br>
+      Before firing, both are at rest: \( p_{\text{initial}} = 0 \)<br>
+      After firing, by conservation of momentum:
+      \[
+      0 = m_b v_b + m_g v_g \\
+      0 = (0.020)(400) + (2.0)v_g \\
+      0 = 8 + 2.0v_g \\
+      v_g = -4.0 \text{ m/s}
+      \]
+      <b>Answer:</b> The rifle recoils at 4.0 m/s in the opposite direction to the bullet.
+    </div>
+    <div class="example-box">
+      <b>Example 2: Rocket Propulsion</b><br>
+      <b>Problem:</b> A 1000 kg rocket in deep space expels 10 kg of gas at 2000 m/s backward. What is the rocket's velocity after the gas is expelled, if it started at rest?
+      <br><b>Solution:</b><br>
+      Initial momentum: \( p_{\text{initial}} = 0 \)<br>
+      After expelling gas:
+      \[
+      0 = m_r v_r + m_e v_e \\
+      0 = (990)v_r + (10)(-2000) \\
+      0 = 990v_r - 20000 \\
+      990v_r = 20000 \\
+      v_r = \frac{20000}{990} \approx 20.2 \text{ m/s}
+      \]
+      <b>Answer:</b> The rocket moves forward at approximately 20.2 m/s.
+    </div>
+    <div class="example-box">
+      <b>Example 3: Two-Piece Explosion</b><br>
+      <b>Problem:</b> A 3.0 kg object at rest explodes into two pieces: a 1.0 kg piece moves right at 6 m/s. What is the velocity of the 2.0 kg piece?
+      <br><b>Solution:</b><br>
+      Initial momentum: \( p_{\text{initial}} = 0 \)<br>
+      After explosion:
+      \[
+      0 = m_1 v_1 + m_2 v_2 \\
+      0 = (1.0)(6) + (2.0)v_2 \\
+      0 = 6 + 2.0v_2 \\
+      2.0v_2 = -6 \\
+      v_2 = -3.0 \text{ m/s}
+      \]
+      <b>Answer:</b> The 2.0 kg piece moves left at 3.0 m/s.
+    </div>
+
+    <div class="container">
+    <h1>Explosion and Conservation of Momentum Simulation</h1>
+    <label for="forceSlider">Explosion Force: <span id="forceVal">15</span> N</label>
+    <input type="range" id="forceSlider" min="5" max="50" value="15" />
+    <canvas id="explosionCanvas" width="800" height="400"></canvas>
+    <div class="output" id="momentumOutput">
+      Click the canvas to trigger an explosion.
+    </div>
+    <div class="buttons">
+      <button onclick="resetSimulation()">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('explosionCanvas');
+    const ctx = canvas.getContext('2d');
+    const forceSlider = document.getElementById('forceSlider');
+    const forceVal = document.getElementById('forceVal');
+    const momentumOutput = document.getElementById('momentumOutput');
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const angles = [0, 120, 240].map(deg => deg * Math.PI / 180);
+    const mass = 1;
+
+    let exploded = false;
+    let pieces = [];
+    let showExplosion = false;
+    let explosionTimer = 32;
+    let canMovePieces = false;
+
+    const rockImg = new Image();
+    const pieceImgs = [new Image(), new Image(), new Image()];
+    const explosionImg = new Image();
+
+    rockImg.src = 'Background.png';
+    pieceImgs[0].src = 'Layer2.png';
+    pieceImgs[1].src = 'Layer1.png';
+    pieceImgs[2].src = 'Layer3.png';
+    explosionImg.src = 'explosion-simulation-removebg-preview.png';
+
+    forceSlider.oninput = () => forceVal.textContent = forceSlider.value;
+
+    canvas.addEventListener('click', () => {
+      if (exploded) return;
+      exploded = true;
+      showExplosion = true;
+      canMovePieces = false;
+      explosionTimer = 32;
+      pieces = [];
+
+      const force = +forceSlider.value;
+      const initialOffset = 32;
+
+      angles.forEach((angle, i) => {
+        const offsetX = initialOffset * Math.cos(angle);
+        const offsetY = initialOffset * Math.sin(angle);
+
+        let xAdjustment = 0;
+        let yAdjustment = 0;
+
+        if (i === 0) { // Right piece
+          yAdjustment = 21;
+          xAdjustment = 15;
+        }
+
+        if (i === 2) { // Top/left piece
+          yAdjustment = 10;
+          xAdjustment = 21;
+        }
+
+        if (i === 1) { // Left piece
+          yAdjustment = 0;
+          xAdjustment = 0;
+        }
+
+        pieces.push({
+          x: centerX + offsetX + xAdjustment,
+          y: centerY + offsetY + yAdjustment,
+          vx: (force / mass) * Math.cos(angle),
+          vy: (force / mass) * Math.sin(angle),
+          img: pieceImgs[i],
+          mass
+        });
+      });
+
+      updateMomentumOutput();
+    });
+
+    function resetSimulation() {
+      exploded = false;
+      showExplosion = false;
+      canMovePieces = false;
+      pieces = [];
+      momentumOutput.textContent = 'Click the canvas to trigger an explosion.';
+    }
+
+    function updateMomentumOutput() {
+      let totalPx = 0, totalPy = 0;
+      let output = 'Individual Momenta:\n';
+      pieces.forEach((p, i) => {
+        const px = (p.mass * p.vx).toFixed(2);
+        const py = (p.mass * p.vy).toFixed(2);
+        totalPx += +px;
+        totalPy += +py;
+        output += `Piece ${i + 1}: px = ${px}, py = ${py}\n`;
+      });
+      output += `\nTotal: px = ${totalPx.toFixed(2)}, py = ${totalPy.toFixed(2)} → pᵢ = p_f`;
+      momentumOutput.textContent = output;
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (!exploded) {
+        if (rockImg.complete) {
+          ctx.drawImage(rockImg, centerX - rockImg.width / 2, centerY - rockImg.height / 2);
+        }
+      } else {
+        if (canMovePieces) {
+          pieces.forEach(p => {
+            p.x += p.vx * 0.2;
+            p.y += p.vy * 0.2;
+            if (p.img.complete) {
+              ctx.drawImage(p.img, p.x - p.img.width / 2, p.y - p.img.height / 2);
+            }
+          });
+        } else {
+          pieces.forEach(p => {
+            if (p.img.complete) {
+              ctx.drawImage(p.img, p.x - p.img.width / 2, p.y - p.img.height / 2);
+            }
+          });
+        }
+
+        // 🔥 Explosion now drawn AFTER pieces → on top
+        if (showExplosion && explosionImg.complete) {
+          ctx.globalAlpha = 0.9;
+          const scale = 0.4;
+          const w = explosionImg.width * scale;
+          const h = explosionImg.height * scale;
+          ctx.drawImage(explosionImg, centerX - w / 2+20, centerY - h / 2, w, h);
+          ctx.globalAlpha = 1.0;
+          explosionTimer--;
+          if (explosionTimer <= 0) {
+            showExplosion = false;
+            canMovePieces = true;
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>

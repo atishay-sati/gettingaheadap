@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relative Velocity in Elastic Collisions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa; color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #e0f2fe;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .step {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="LinearMomentum.html">← Back to Concepts</a>
+    <h1>Relative Velocity in Elastic Collisions</h1>
+
+    <p class="summary">In one-dimensional elastic collisions, a useful shortcut is the relative velocity reversal equation:</p>
+
+    <div class="formula-box">
+      \[
+      v_{1i} - v_{2i} = - (v_{1f} - v_{2f})
+      \]
+    </div>
+
+    <p>This means the relative velocity between two objects before the collision is equal in magnitude and opposite in direction to the relative velocity after the collision. This equation greatly simplifies the math when paired with conservation of momentum.</p>
+
+    <h2>When to Use This Shortcut</h2>
+    <ul>
+      <li>The collision must be <strong>elastic</strong>.</li>
+      <li>The motion must be <strong>one-dimensional</strong>.</li>
+      <li>Use this along with <strong>momentum conservation</strong>.</li>
+    </ul>
+
+    <h2>Common Mistakes</h2>
+    <ul>
+      <li><strong>Using it for inelastic collisions</strong>: This only works when kinetic energy is conserved.</li>
+      <li><strong>Getting the sign wrong</strong>: Make sure directions are consistent. If left is negative, stay consistent throughout.</li>
+      <li><strong>Forgetting to apply momentum conservation too</strong>: This equation alone is not enough to solve for two unknowns.</li>
+    </ul>
+
+    <h2>Worked Example 1</h2>
+    <div class="example-box">
+      <p><strong>Problem:</strong> A 2 kg cart moving at 4 m/s collides elastically with a 1 kg cart at rest. Find the final velocities.</p>
+
+      <div class="step">Step 1: Use conservation of momentum</div>
+      <div class="formula-box">
+        \[
+        2(4) + 1(0) = 2v_{1f} + 1v_{2f} \Rightarrow 8 = 2v_{1f} + v_{2f}
+        \]
+      </div>
+
+      <div class="step">Step 2: Use relative velocity equation</div>
+      <div class="formula-box">
+        \[
+        4 - 0 = - (v_{1f} - v_{2f}) \Rightarrow v_{2f} - v_{1f} = 4
+        \]
+      </div>
+
+      <div class="step">Step 3: Solve the system</div>
+      <p>Substitute \( v_{2f} = v_{1f} + 4 \) into the momentum equation:</p>
+      <div class="formula-box">
+        \[
+        8 = 2v_{1f} + (v_{1f} + 4)
+        \]
+      </div>
+      <p>Now solve for \( v_{1f} \):</p>
+      <div class="formula-box">
+        \[
+        8 = 3v_{1f} + 4 \Rightarrow v_{1f} = \frac{4}{3}
+        \]
+      </div>
+      <p>Then find \( v_{2f} \):</p>
+      <div class="formula-box">
+        \[
+        v_{2f} = v_{1f} + 4 = \frac{4}{3} + 4 = \frac{16}{3}
+        \]
+      </div>
+
+      <p><strong>Answer:</strong></p>
+      <ul>
+        <li>Cart 1: \( v_{1f} = \frac{4}{3} \, \text{m/s} \)</li>
+        <li>Cart 2: \( v_{2f} = \frac{16}{3} \, \text{m/s} \)</li>
+      </ul>
+    </div>
+
+    <h2>Worked Example 2</h2>
+    <div class="example-box">
+      <p><strong>Problem:</strong> A 3 kg ball moving at 6 m/s to the right collides elastically with a 2 kg ball moving at 2 m/s to the left. Find their velocities after the collision.</p>
+
+      <div class="step">Step 1: Set positive direction</div>
+      <p>Take right as positive:</p>
+      <ul>
+        <li>\( v_{1i} = +6 \, \text{m/s} \)</li>
+        <li>\( v_{2i} = -2 \, \text{m/s} \)</li>
+      </ul>
+
+      <div class="step">Step 2: Conservation of momentum</div>
+      <div class="formula-box">
+        \[
+        3(6) + 2(-2) = 3v_{1f} + 2v_{2f}
+        \]
+        \[
+        18 - 4 = 3v_{1f} + 2v_{2f}
+        \]
+        \[
+        14 = 3v_{1f} + 2v_{2f} \quad \text{(Equation 1)}
+        \]
+      </div>
+
+      <div class="step">Step 3: Relative velocity equation</div>
+      <div class="formula-box">
+        \[
+        v_{1i} - v_{2i} = - (v_{1f} - v_{2f})
+        \]
+        \[
+        6 - (-2) = - (v_{1f} - v_{2f}) \Rightarrow 8 = -(v_{1f} - v_{2f})
+        \]
+        \[
+        v_{2f} - v_{1f} = 8 \quad \text{(Equation 2)}
+        \]
+      </div>
+
+      <div class="step">Step 4: Solve the system</div>
+      <p>Substitute Equation 2 into Equation 1:</p>
+      <div class="formula-box">
+        \[
+        14 = 3v_{1f} + 2(v_{1f} + 8)
+        \]
+        \[
+        14 = 3v_{1f} + 2v_{1f} + 16
+        \]
+        \[
+        14 = 5v_{1f} + 16
+        \]
+        \[
+        v_{1f} = \frac{-2}{5} = -0.4 \, \text{m/s}
+        \]
+      </div>
+      <p>Find \( v_{2f} \):</p>
+      <div class="formula-box">
+        \[
+        v_{2f} = v_{1f} + 8 = -0.4 + 8 = 7.6 \, \text{m/s}
+        \]
+      </div>
+
+      <p><strong>Answer:</strong></p>
+      <ul>
+        <li>3 kg ball: \( -0.4 \, \text{m/s} \) (to the left)</li>
+        <li>2 kg ball: \( 7.6 \, \text{m/s} \) (to the right)</li>
+      </ul>
+    </div>
+
+    <h2>Why It Works</h2>
+    <p>In elastic collisions, both momentum and kinetic energy are conserved. The relative velocity equation is derived from these conservation laws and provides a shortcut to find final velocities quickly.</p>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>Use the relative velocity shortcut to save time in elastic collision problems.</li>
+      <li>Always pair it with momentum conservation.</li>
+      <li>Be mindful of signs and directions.</li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conservative vs Non-Conservative Forces</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, li {
+      font-size: 1.1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      margin: auto;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    #sim-container {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    canvas {
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      background: #e0f2fe;
+      margin-bottom: 1rem;
+    }
+    .slider-container {
+      max-width: 400px;
+      margin: 0.5rem auto;
+      text-align: left;
+    }
+    label {
+      font-weight: bold;
+      color: #003049;
+    }
+    input[type=range] {
+      width: 100%;
+      margin-top: 0.3rem;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    #info {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="Energy.html">← Back to Concepts</a>
+    <h1>Conservative vs Non-Conservative Forces</h1>
+
+    <p>Forces can be classified as <strong>conservative</strong> or <strong>non-conservative</strong> based on how they affect the mechanical energy of a system.</p>
+
+    <h2>Conservative Forces</h2>
+    <p>Conservative forces store energy that can be fully recovered. The work done by these forces is path-independent (only the displacement matters, not distance) and depends only on initial and final positions.</p>
+
+    <ul>
+      <li>Examples: gravity, spring force, electrostatic force</li>
+      <li>Work done around a closed loop is zero</li>
+    </ul>
+
+    <div class="formula-box">
+      \[
+      W_{\text{closed}} = 0 \quad \text{(for conservative forces)}
+      \]
+    </div>
+
+    <h2>Non-Conservative Forces</h2>
+    <p>Non-conservative forces cause energy dissipation (e.g., as heat or sound). Work done by them depends on the path taken.</p>
+
+    <ul>
+      <li>Examples: friction, air resistance, applied force</li>
+      <li>Mechanical energy is not conserved in their presence</li>
+    </ul>
+
+    <div class="formula-box">
+      \[
+      \Delta E_{\text{mechanical}} = W_{\text{non-conservative}}
+      \]
+    </div>
+
+    <h2>Comparison Table</h2>
+    <ul>
+      <li><strong>Conservative:</strong> Converts between KE and PE; total ME constant</li>
+      <li><strong>Non-Conservative:</strong> Reduces total ME; energy lost as heat, etc.</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>A pendulum swinging without air resistance is under conservative forces. If air resistance is introduced, the system becomes non-conservative, and the pendulum eventually stops.</p>
+
+    <h2>Graphical Representation</h2>
+    
+      <img src="conservative-nonconservative-graph.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+      <figcaption>Total mechanical energy remains constant for conservative systems but decreases in non-conservative ones.</figcaption>
+    
+
+     <h1>Energy Loss from Friction</h1>
+  <canvas id="simCanvas" width="800" height="250"></canvas>
+
+  <div class="slider-container">
+    <label for="friction">Friction Coefficient: <span id="muLabel">0.05</span></label>
+    <input type="range" id="friction" min="0" max="0.3" step="0.01" value="0.05" />
+  </div>
+
+  <div id="info"></div>
+
+  <script>
+    const canvas = document.getElementById("simCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const muSlider = document.getElementById("friction");
+    const muLabel = document.getElementById("muLabel");
+    const info = document.getElementById("info");
+
+    let x = 50;
+    let v = 5; // initial velocity in px/frame
+    const m = 2; // mass (kg)
+    const g = 9.8;
+    let thermal = 0;
+
+    let lastTime = -1;
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Ground
+      ctx.fillStyle = "#0284c7";
+      ctx.fillRect(0, 200, canvas.width, 5);
+
+      // Block
+      ctx.fillStyle = "#0ea5e9";
+      ctx.fillRect(x, 170, 40, 30);
+
+      // Bars
+      const KE = 0.5 * m * v * v;
+      const total = 0.5 * 5 * 5; // fixed initial total
+      const TE = thermal;
+
+      ctx.fillStyle = "#10b981";
+      ctx.fillRect(100, 80, KE * 10, 20);
+      ctx.fillText("Kinetic Energy", 100, 75);
+
+      ctx.fillStyle = "#f87171";
+      ctx.fillRect(100, 110, TE * 10, 20);
+      ctx.fillText("Thermal Energy (Energy Dissapated)", 100, 145);
+
+      info.innerHTML = `
+        <strong>Velocity:</strong> ${v.toFixed(2)} m/s<br>
+        <strong>Kinetic Energy:</strong> ${KE.toFixed(2)} J<br>
+        <strong>Thermal Energy (lost):</strong> ${TE.toFixed(2)} J<br>
+        <strong>Total Energy:</strong> ${(KE + TE).toFixed(2)} J
+      `;
+    }
+
+    function update(time) {
+      const dt = (time - (lastTime || time)) / 1000;
+      lastTime = time;
+
+      const mu = parseFloat(muSlider.value);
+      muLabel.textContent = mu.toFixed(2);
+
+      const frictionForce = mu * m * g;
+      const accel = frictionForce / m;
+
+      if (v > 0) {
+        v -= accel * dt;
+        if (v < 0) v = 0;
+        x += v * 30 * dt; // scaled for screen
+        thermal += frictionForce * v * dt;
+      }
+
+      draw();
+      requestAnimationFrame(update);
+    }
+
+    muSlider.addEventListener("input", () => {
+      // reset
+      x = 50;
+      v = 5;
+      thermal = 0;
+    });
+
+    requestAnimationFrame(update);
+  </script>
+</body>
+</html>

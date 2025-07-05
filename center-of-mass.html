@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Center of Mass and System Motion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+     canvas {
+      display: block;
+      margin: 1.5rem auto;
+      background: #e0f2fe;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    input[type="range"],
+    input[type="number"] {
+      width: 100%;
+      padding: 4px;
+      font-size: 1rem;
+    }
+    .output {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      background: #dbeafe;
+      padding: 1rem;
+      border-radius: 8px;
+      white-space: pre-line;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    canvas {
+      display: block;
+      margin: 1.5rem auto;
+      background: #e0f2fe;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="LinearMomentum.html">← Back to Concepts</a>
+    <h1>Center of Mass and System Motion</h1>
+
+    <p class="summary">The center of mass is the point where an object's mass is effectively concentrated for purposes of analyzing motion. It is a powerful simplification tool for analyzing systems of particles and extended bodies.</p>
+
+    <h2>Defining the Center of Mass</h2>
+    <p>In one dimension, for discrete masses, the center of mass is given by:</p>
+    <div class="formula-box">
+      \[
+      x_{\text{cm}} = \frac{m_1x_1 + m_2x_2 + \cdots + m_nx_n}{m_1 + m_2 + \cdots + m_n}
+      \]
+    </div>
+    <p>In vector form for three dimensions:</p>
+    <div class="formula-box">
+      \[
+      \vec{R}_{\text{cm}} = \frac{\sum m_i \vec{r}_i}{\sum m_i}
+      \]
+    </div>
+    <p>This formula holds for both particles and continuous mass distributions. For a rigid body, the center of mass is fixed relative to the body, while for systems of particles it may move dynamically.</p>
+
+    <h2>System Motion and Newton’s Second Law</h2>
+    <p>Applying Newton’s Second Law to a system of particles leads to a fundamental result:</p>
+    <div class="formula-box">
+      \[
+      \vec{F}_{\text{net, external}} = M \vec{a}_{\text{cm}}
+      \]
+    </div>
+    <p>Here, \( M \) is the total mass of the system and \( \vec{a}_{\text{cm}} \) is the acceleration of the center of mass. Internal forces between parts of the system cancel due to Newton’s Third Law and do not affect the motion of the center of mass.</p>
+
+    <h2>Conservation of Momentum and COM</h2>
+    <p>If the net external force on a system is zero, the total momentum is conserved and the center of mass moves at constant velocity:</p>
+    <div class="formula-box">
+      \[
+      \vec{v}_{\text{cm}} = \text{constant} \quad \text{(if } \vec{F}_{\text{ext}} = 0 \text{)}
+      \]
+    </div>
+
+    <h2>Applications and Deeper Insights</h2>
+    <ul>
+      <li><strong>Projectile Motion of Systems:</strong> For any system in free fall (like an object breaking apart midair), the center of mass follows a parabolic trajectory.</li>
+      <li><strong>Explosions and Collisions:</strong> The internal explosion of a system (e.g. a firework) doesn’t change the motion of the center of mass. It still obeys conservation laws.</li>
+      <li><strong>Variable Mass Systems:</strong> In rocket motion, although the rocket loses mass, we can still track the system's center of mass to understand its motion.</li>
+      <li><strong>Torque and Rotation (covered in later unit):</strong> For torque calculations, the center of mass is the natural pivot for translation-rotation separation. Torque about the COM determines angular acceleration.</li>
+      <li><strong>Stability:</strong> An object is stable if a vertical line from the COM lies within its base. This is crucial in biomechanics and structural engineering.</li>
+    </ul>
+
+    <p>Don't believe me about projectile motion? Watch this:</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eka0I3kyD20?si=PvEKHmaA2nmkQ1Eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    
+    <h2>Example: Object Breaking in Midair</h2>
+    <p>Imagine a rock exploding into pieces while flying through the air. Each piece flies off in a different direction. Despite this, the COM of the system (all the fragments) still follows the original parabolic trajectory as if the explosion never occurred.</p>
+    <canvas id="explosionCanvas" width="800" height="500"></canvas>
+    <div class="buttons">
+      <button onclick="runExplosionSimulation()">Reset</button>
+    </div>
+
+    <script>
+      (function() {
+        const canvas = document.getElementById("explosionCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const g = 9.8, fps = 60, dt = 1 / fps, xScale = 10, yScale = 10;
+        const startX = 5, startY = 5, vx0 = 12, vy0 = 18;
+        let t, exploded, fragments, COM_positions, running, comFrozen;
+
+        function toCanvas(x, y) {
+          return { x: x * xScale, y: canvas.height - y * yScale };
+        }
+
+        function getIdealCOM(t) {
+          return {
+            x: startX + vx0 * t,
+            y: startY + vy0 * t - 0.5 * g * t * t
+          };
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          let currentCOM = getIdealCOM(t);
+          if (!comFrozen) COM_positions.push(currentCOM);
+
+          if (exploded) {
+            let allStopped = true;
+            for (let frag of fragments) {
+              if (!frag.stopped) {
+                frag.x += frag.vx * dt;
+                frag.y += frag.vy * dt - 0.5 * g * dt * dt;
+                frag.vy -= g * dt;
+                if (frag.y <= startY) frag.stopped = true;
+                else allStopped = false;
+              }
+              const p = toCanvas(frag.x, frag.y);
+              ctx.fillStyle = "#ef4444";
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, 6, 0, Math.PI * 2);
+              ctx.fill();
+            }
+
+            if (currentCOM.y <= startY && !comFrozen) comFrozen = true;
+            if (allStopped && comFrozen) running = false;
+          } else {
+            const x = startX + vx0 * t;
+            const y = startY + vy0 * t - 0.5 * g * t * t;
+            const objPos = toCanvas(x, y);
+            ctx.fillStyle = "#444";
+            ctx.beginPath();
+            ctx.arc(objPos.x, objPos.y, 14, 0, Math.PI * 2);
+            ctx.fill();
+
+            const currentVy = vy0 - g * t;
+            if (currentVy < 0.5 && !exploded) {
+              exploded = true;
+              const massTotal = 3;
+              const masses = [1, 1, 1];
+              const directions = [Math.PI / 4, Math.PI / 2, (3 * Math.PI) / 4];
+              fragments = directions.map((angle, i) => {
+                const vfx = vx0 + 2 * Math.cos(angle);
+                const vfy = currentVy + 2 * Math.sin(angle);
+                return { x, y, vx: vfx, vy: vfy, stopped: false };
+              });
+            }
+          }
+
+          ctx.strokeStyle = "#1e3a8a";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          for (let i = 0; i < COM_positions.length - 1; i++) {
+            const a = toCanvas(COM_positions[i].x, COM_positions[i].y);
+            const b = toCanvas(COM_positions[i + 1].x, COM_positions[i + 1].y);
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+          }
+          ctx.stroke();
+
+          const comCanvas = toCanvas(COM_positions[COM_positions.length - 1].x, COM_positions[COM_positions.length - 1].y);
+          ctx.fillStyle = "#3b82f6";
+          ctx.beginPath();
+          ctx.arc(comCanvas.x, comCanvas.y, 8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        function loop() {
+          if (!running) return;
+          draw();
+          t += dt;
+          requestAnimationFrame(loop);
+        }
+
+        window.runExplosionSimulation = function() {
+          t = 0;
+          exploded = false;
+          fragments = [];
+          COM_positions = [];
+          running = true;
+          comFrozen = false;
+          loop();
+        };
+
+        runExplosionSimulation();
+      })();
+    </script>
+    <figcaption>The blue ball signifies CoM.</figcaption>
+    
+    <h2>Example: Skaters Pushing Off</h2>
+    <p>Consider two ice skaters at rest who push off each other. Even though they move in opposite directions, the center of mass of the system remains stationary because no external force acts horizontally.</p>
+    <img src="figureskaters.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+    <figcaption>Red dot is the center of mass of the system (the 2 figure skaters). Center of mass stays fixed in an isolated system with no net external force.</figcaption>
+
+    
+
+
+    
+
+    <h2>Example: A Rocket Launching</h2>
+    <p>As a rocket ejects fuel downward, it loses mass. But the motion of the system (rocket + ejected fuel) still conserves total momentum. The COM accelerates smoothly even though the rocket’s mass changes continuously.</p>
+
+    <h2>Rotating and Translating Objects</h2>
+    <p>When analyzing objects that rotate and translate (e.g. rolling wheels), the translational motion of the COM is often separated from the rotational motion about the COM. This separation makes energy and force analysis much easier.</p>
+
+        <h2>Practice Example 1: Two-Mass System</h2>
+    <p><strong>Problem:</strong> A 3 kg block is at position \( x = 0 \, \text{m} \), and a 5 kg block is at \( x = 4 \, \text{m} \). What is the position of the center of mass?</p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula-box">
+      \[
+      x_{\text{cm}} = \frac{m_1x_1 + m_2x_2}{m_1 + m_2} = \frac{3(0) + 5(4)}{3 + 5} = \frac{20}{8} = 2.5 \, \text{m}
+      \]
+    </div>
+    <p><strong>Answer:</strong> The center of mass is at \( x = 2.5 \, \text{m} \).</p>
+
+    <h2>Practice Example 2: Explosion Problem</h2>
+    <p><strong>Problem:</strong> A 6 kg object at rest explodes into two fragments. A 2 kg piece flies off to the left at 12 m/s. What is the velocity of the 4 kg piece so that the center of mass continues at rest?</p>
+    <p><strong>Solution:</strong></p>
+    <p>Use conservation of momentum. The total momentum before and after must be zero:</p>
+    <div class="formula-box">
+      \[
+      m_1v_1 + m_2v_2 = 0 \quad \Rightarrow \quad 2(-12) + 4v = 0
+      \]
+      \[
+      -24 + 4v = 0 \quad \Rightarrow \quad v = 6 \, \text{m/s}
+      \]
+    </div>
+    <p><strong>Answer:</strong> The 4 kg piece must move at \( 6 \, \text{m/s} \) to the right.</p>
+
+
+    <h2>Summary</h2>
+    <p>The center of mass acts as a simplified model point for real-world objects and complex systems. Understanding the COM allows us to apply Newton’s laws, conservation laws, and rotational dynamics far more easily. Whether studying rockets, collisions, or rolling motion, tracking the COM turns a difficult system into a manageable physics problem.</p>
+
+    <div class="container">
+    <h1>2D Center of Mass Simulator</h1>
+
+    <label>
+      <input type="checkbox" id="movingToggle" />
+      Enable Moving Objects
+    </label>
+
+    <div class="controls">
+      <div>
+        <h2>Object 1</h2>
+        <label>Mass: <input type="range" id="mass1" min="1" max="100" value="50" /></label>
+        <label>Position X: <input type="range" id="pos1x" min="0" max="10" step="0.1" value="2" /></label>
+        <label>Position Y: <input type="range" id="pos1y" min="0" max="5" step="0.1" value="2" /></label>
+        <div class="vel-angle" style="display:none">
+          <label>Velocity X: <input type="number" id="vel1x" min="-10" max="10" step="0.1" value="1" /></label>
+          <label>Velocity Y: <input type="number" id="vel1y" min="-10" max="10" step="0.1" value="0" /></label>
+        </div>
+      </div>
+      <div>
+        <h2>Object 2</h2>
+        <label>Mass: <input type="range" id="mass2" min="1" max="100" value="50" /></label>
+        <label>Position X: <input type="range" id="pos2x" min="0" max="10" step="0.1" value="8" /></label>
+        <label>Position Y: <input type="range" id="pos2y" min="0" max="5" step="0.1" value="3" /></label>
+        <div class="vel-angle" style="display:none">
+          <label>Velocity X: <input type="number" id="vel2x" min="-10" max="10" step="0.1" value="-1" /></label>
+          <label>Velocity Y: <input type="number" id="vel2y" min="-10" max="10" step="0.1" value="0" /></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn" style="display:none">Start</button>
+      <button id="resetBtn" style="display:none">Reset</button>
+    </div>
+
+    <p class="output" id="output">Center of Mass:</p>
+    <canvas id="comCanvas" width="700" height="300"></canvas>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("comCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const mass1 = document.getElementById("mass1");
+    const pos1x = document.getElementById("pos1x");
+    const pos1y = document.getElementById("pos1y");
+    const vel1x = document.getElementById("vel1x");
+    const vel1y = document.getElementById("vel1y");
+
+    const mass2 = document.getElementById("mass2");
+    const pos2x = document.getElementById("pos2x");
+    const pos2y = document.getElementById("pos2y");
+    const vel2x = document.getElementById("vel2x");
+    const vel2y = document.getElementById("vel2y");
+
+    const output = document.getElementById("output");
+    const toggle = document.getElementById("movingToggle");
+    const startBtn = document.getElementById("startBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const velAngleControls = document.querySelectorAll(".vel-angle");
+
+    let animId, t = 0;
+    let start1, start2, v1, v2;
+
+    function drawObjects(p1, m1, p2, m2, com) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const scale = 50;
+
+      const r1 = 5 + m1 / 5;
+      const r2 = 5 + m2 / 5;
+      const rCOM = 10;
+
+      ctx.beginPath();
+      ctx.fillStyle = "#3b82f6";
+      ctx.arc(p1.x * scale, canvas.height - p1.y * scale, r1, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = "#ef4444";
+      ctx.arc(p2.x * scale, canvas.height - p2.y * scale, r2, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = "#10b981";
+      ctx.arc(com.x * scale, canvas.height - com.y * scale, rCOM, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = "#000";
+      ctx.font = "14px Roboto";
+      ctx.fillText("Mass 1", p1.x * scale - 20, canvas.height - p1.y * scale - 20);
+      ctx.fillText("Mass 2", p2.x * scale - 20, canvas.height - p2.y * scale - 20);
+      ctx.fillText("COM", com.x * scale - 15, canvas.height - com.y * scale + 20);
+    }
+
+    function computeCOM(p1, m1, p2, m2) {
+      return {
+        x: (p1.x * m1 + p2.x * m2) / (m1 + m2),
+        y: (p1.y * m1 + p2.y * m2) / (m1 + m2)
+      };
+    }
+
+    function updateStatic() {
+      const p1 = { x: parseFloat(pos1x.value), y: parseFloat(pos1y.value) };
+      const p2 = { x: parseFloat(pos2x.value), y: parseFloat(pos2y.value) };
+      const m1 = parseFloat(mass1.value);
+      const m2 = parseFloat(mass2.value);
+      const com = computeCOM(p1, m1, p2, m2);
+      drawObjects(p1, m1, p2, m2, com);
+      output.textContent = `Center of Mass (stationary):\nX: ${com.x.toFixed(2)} m\nY: ${com.y.toFixed(2)} m`;
+    }
+
+    function animate() {
+      const dt = 0.05;
+      t += dt;
+
+      const p1 = { x: start1.x + v1.x * t, y: start1.y + v1.y * t };
+      const p2 = { x: start2.x + v2.x * t, y: start2.y + v2.y * t };
+      const m1 = parseFloat(mass1.value);
+      const m2 = parseFloat(mass2.value);
+      const com = computeCOM(p1, m1, p2, m2);
+      drawObjects(p1, m1, p2, m2, com);
+      output.textContent = `Center of Mass (moving):\nX: ${com.x.toFixed(2)} m\nY: ${com.y.toFixed(2)} m`;
+      animId = requestAnimationFrame(animate);
+    }
+
+    function startMotion() {
+      cancelAnimationFrame(animId);
+      t = 0;
+      start1 = { x: parseFloat(pos1x.value), y: parseFloat(pos1y.value) };
+      start2 = { x: parseFloat(pos2x.value), y: parseFloat(pos2y.value) };
+      v1 = { x: parseFloat(vel1x.value), y: parseFloat(vel1y.value) };
+      v2 = { x: parseFloat(vel2x.value), y: parseFloat(vel2y.value) };
+      animate();
+    }
+
+    function resetMotion() {
+      cancelAnimationFrame(animId);
+      updateStatic();
+    }
+
+    // Event bindings
+    [mass1, mass2, pos1x, pos1y, pos2x, pos2y, vel1x, vel1y, vel2x, vel2y].forEach(input =>
+      input.addEventListener("input", () => {
+        if (!toggle.checked) updateStatic();
+      })
+    );
+
+    toggle.addEventListener("change", () => {
+      const show = toggle.checked;
+      velAngleControls.forEach(el => el.style.display = show ? "block" : "none");
+      startBtn.style.display = show ? "inline-block" : "none";
+      resetBtn.style.display = show ? "inline-block" : "none";
+      resetMotion();
+    });
+
+    startBtn.addEventListener("click", startMotion);
+    resetBtn.addEventListener("click", resetMotion);
+
+    updateStatic();
+  </script>
+  </div>
+  
+</body>
+</html>

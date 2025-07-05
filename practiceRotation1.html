@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rotation and Rotational Dynamics Practice Test – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Rotation and Rotational Dynamics Practice Test</h1>
+    <h2>30 Questions – Mixed Conceptual & Calculations</h2>
+
+    <!-- Questions 1-30 -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>A uniform rod of length L and mass M pivots about one end. If it is released from rest at an angle θ above the horizontal, derive an expression for its angular velocity as it passes through the vertical position. (Neglect air resistance.)</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) \(\sqrt{\frac{3g(1-\cos\theta)}{L}}\)</label>
+        <label><input type="radio" name="q1"> b) \(\sqrt{\frac{3gL\cos\theta}{2}}\)</label>
+        <label><input type="radio" name="q1"> c) \(\sqrt{2gL(1-\cos\theta)}\)</label>
+        <label><input type="radio" name="q1"> d) \(\sqrt{gL(1-\cos\theta)}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>A rod of length 1.2 m and mass 3 kg rotates about one end. If a force of 6 N is applied perpendicular to the free end, what is the angular acceleration?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) 3.47 rad/s<sup>2</sup></label>
+        <label><input type="radio" name="q2"> b) 5.00 rad/s<sup>2</sup></label>
+        <label><input type="radio" name="q2"> c) 2.08 rad/s<sup>2</sup></label>
+        <label><input type="radio" name="q2"> d) 1.67 rad/s<sup>2</sup></label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>A wheel (I = 0.5 kg·m<sup>2</sup>) is spinning at 12 rad/s. A brake applies a constant torque of 3 N·m. How long does it take to stop?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 2 s</label>
+        <label><input type="radio" name="q3"> b) 3 s</label>
+        <label><input type="radio" name="q3"> c) 4 s</label>
+        <label><input type="radio" name="q3"> d) 6 s</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>A solid sphere (mass 0.8 kg, radius 0.2 m) rolls without slipping down a 1.5 m high incline. What is its speed at the bottom? (You must use energy conservation and the moment of inertia for a sphere.)</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) 4.4 m/s</label>
+        <label><input type="radio" name="q4"> b) 5.4 m/s</label>
+        <label><input type="radio" name="q4"> c) 3.8 m/s</label>
+        <label><input type="radio" name="q4"> d) 2.7 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A force F is applied tangentially to the rim of a stationary disk (radius R, mass M) for time t. What is the final angular velocity? (You must derive your answer using Newton's second law for rotation and the moment of inertia for a disk.)</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) \(\omega = \frac{2Ft}{MR}\)</label>
+        <label><input type="radio" name="q5"> b) \(\omega = \frac{Ft}{MR^2}\)</label>
+        <label><input type="radio" name="q5"> c) \(\omega = \frac{Ft}{2MR^2}\)</label>
+        <label><input type="radio" name="q5"> d) \(\omega = \frac{Ft}{MR}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>A yo-yo (mass 0.2 kg, radius 0.04 m) unwinds from rest. If it descends 1.2 m, what is its angular speed at the bottom? (Assume I = 0.5MR<sup>2</sup>, g = 10 m/s<sup>2</sup>. You must use energy conservation and relate linear and angular variables.)</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) 24.5 rad/s</label>
+        <label><input type="radio" name="q6"> b) 27.4 rad/s</label>
+        <label><input type="radio" name="q6"> c) 34.6 rad/s</label>
+        <label><input type="radio" name="q6"> d) 39.2 rad/s</label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>A disk (I = 0.8 kg·m<sup>2</sup>) is spinning at 6 rad/s. A constant torque of 1.6 N·m is applied in the direction of rotation for 4 seconds. What is its final angular velocity? (Show your reasoning using rotational kinematics.)</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) 14 rad/s</label>
+        <label><input type="radio" name="q7"> b) 10 rad/s</label>
+        <label><input type="radio" name="q7"> c) 8 rad/s</label>
+        <label><input type="radio" name="q7"> d) 12 rad/s</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>A uniform rod (length 2 m, mass 4 kg) is pivoted at one end and held horizontally. What is the initial torque due to gravity about the pivot? (You must use the center of mass location in your calculation.)</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a) 39.2 N·m</label>
+        <label><input type="radio" name="q8"> b) 19.6 N·m</label>
+        <label><input type="radio" name="q8"> c) 9.8 N·m</label>
+        <label><input type="radio" name="q8"> d) 78.4 N·m</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>A solid cylinder (mass 1.5 kg, radius 0.3 m) rolls without slipping at 4 m/s. What is its total kinetic energy? (You must combine translational and rotational kinetic energy.)</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) 18 J</label>
+        <label><input type="radio" name="q9"> b) 12 J</label>
+        <label><input type="radio" name="q9"> c) 9 J</label>
+        <label><input type="radio" name="q9"> d) 6 J</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>A flywheel (I = 2 kg·m<sup>2</sup>) is rotating at 30 rad/s. How much work is required to bring it to rest? (You must use the work-energy theorem for rotation.)</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) 900 J</label>
+        <label><input type="radio" name="q10"> b) 600 J</label>
+        <label><input type="radio" name="q10"> c) 1200 J</label>
+        <label><input type="radio" name="q10"> d) 1800 J</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>A disk (I) is spinning at \(\omega_0\). A constant torque \(\tau\) is applied in the opposite direction for time t, bringing it to rest. What is the total angle (in radians) through which the disk turns before stopping?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) \(\frac{I\omega_0^2}{2\tau}\)</label>
+        <label><input type="radio" name="q11"> b) \(\frac{I\omega_0}{\tau}\)</label>
+        <label><input type="radio" name="q11"> c) \(\frac{I\omega_0^2}{\tau}\)</label>
+        <label><input type="radio" name="q11"> d) \(\frac{I\omega_0}{2\tau}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>A uniform rod (length L, mass m) is pivoted at its center. Two equal and opposite forces F are applied at the ends, perpendicular to the rod. What is the angular acceleration?</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) \(\frac{12F}{mL}\)</label>
+        <label><input type="radio" name="q12"> b) \(\frac{6F}{mL}\)</label>
+        <label><input type="radio" name="q12"> c) \(\frac{3F}{mL}\)</label>
+        <label><input type="radio" name="q12"> d) \(\frac{F}{mL}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>A solid sphere (I = 2/5 mR^2) is rolling without slipping. If its center of mass has speed v, what is its total kinetic energy?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) \(\frac{7}{10}mv^2\)</label>
+        <label><input type="radio" name="q13"> b) \(\frac{1}{2}mv^2\)</label>
+        <label><input type="radio" name="q13"> c) \(mv^2\)</label>
+        <label><input type="radio" name="q13"> d) \(\frac{5}{7}mv^2\)</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>A particle of mass m moves in a circle of radius R under a central force F = -kr. What is the angular frequency of small oscillations about the equilibrium radius?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) \(\sqrt{\frac{k}{m}}\)</label>
+        <label><input type="radio" name="q14"> b) \(\frac{k}{m}\)</label>
+        <label><input type="radio" name="q14"> c) \(\sqrt{\frac{m}{k}}\)</label>
+        <label><input type="radio" name="q14"> d) \(\frac{m}{k}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>A disk (I) is spinning at \(\omega_0\). A constant frictional torque \(\tau_f\) acts for time t, bringing it to rest. What is the work done by friction?</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) \(-\frac{1}{2}I\omega_0^2\)</label>
+        <label><input type="radio" name="q15"> b) \(-I\omega_0^2\)</label>
+        <label><input type="radio" name="q15"> c) \(-\tau_f t\)</label>
+        <label><input type="radio" name="q15"> d) \(-I\omega_0\)</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>A uniform disk (I = ½MR²) of mass 3 kg and radius 0.4 m is spun up from rest by a constant torque of 2.4 N·m. How long does it take to reach 30 rad/s?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) 4 s</label>
+        <label><input type="radio" name="q16"> b) 5 s</label>
+        <label><input type="radio" name="q16"> c) 6 s</label>
+        <label><input type="radio" name="q16"> d) 8 s</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>A solid cylinder (mass 2 kg, radius 0.3 m) is spinning at 10 rad/s. A time-dependent torque \(\tau(t) = 3t\) N·m is applied for 2 seconds. What is the cylinder's angular velocity at t = 2 s? (Assume I = 0.5MR<sup>2</sup> and show your calculus-based reasoning.)</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) 34 rad/s</label>
+        <label><input type="radio" name="q17"> b) 22 rad/s</label>
+        <label><input type="radio" name="q17"> c) 28 rad/s</label>
+        <label><input type="radio" name="q17"> d) 40 rad/s</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>A solid sphere and a hollow sphere (same mass and radius) roll down a ramp. Which reaches the bottom first?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) The sphere</label>
+        <label><input type="radio" name="q18"> b) The cylinder</label>
+        <label><input type="radio" name="q18"> c) They arrive together</label>
+        <label><input type="radio" name="q18"> d) The one with greater mass</label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>A rod of length L and mass M is pivoted about one end. A force F is applied perpendicular to the free end. Derive the angular acceleration in terms of F, M, and L.</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) \(\frac{3F}{ML}\)</label>
+        <label><input type="radio" name="q19"> b) \(\frac{F}{ML}\)</label>
+        <label><input type="radio" name="q19"> c) \(\frac{6F}{ML}\)</label>
+        <label><input type="radio" name="q19"> d) \(\frac{F}{2ML}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>A particle of mass m moves in a circle of radius R under a central force F = -kr. If the radius is slowly increased, what happens to the angular momentum and kinetic energy? (Assume no external torque.)</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) Angular momentum constant, kinetic energy decreases</label>
+        <label><input type="radio" name="q20"> b) Both increase</label>
+        <label><input type="radio" name="q20"> c) Angular momentum increases, kinetic energy constant</label>
+        <label><input type="radio" name="q20"> d) Both decrease</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>A wheel (I = 1.2 kg·m<sup>2</sup>) is initially at rest. A torque \(\tau(t) = 6e^{-t}\) N·m is applied for 4 seconds. What is the angular velocity at t = 4 s? (Use calculus to solve.)</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) 3.8 rad/s</label>
+        <label><input type="radio" name="q21"> b) 4.2 rad/s</label>
+        <label><input type="radio" name="q21"> c) 5.0 rad/s</label>
+        <label><input type="radio" name="q21"> d) 6.0 rad/s</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>A flywheel (I = 0.6 kg·m²) is spinning at 10 rad/s. A constant torque of -1.2 N·m is applied. How many radians does it rotate before stopping?</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) 25</label>
+        <label><input type="radio" name="q22"> b) 50</label>
+        <label><input type="radio" name="q22"> c) 30</label>
+        <label><input type="radio" name="q22"> d) 60</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>A solid sphere (I = 2/5 mR²) and a hollow sphere (I = 2/3 mR²) of equal mass and radius roll down the same incline. Which arrives first and why?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) Solid sphere, because it has a smaller moment of inertia</label>
+        <label><input type="radio" name="q23"> b) Hollow sphere, because it has a larger moment of inertia</label>
+        <label><input type="radio" name="q23"> c) Both arrive at the same time</label>
+        <label><input type="radio" name="q23"> d) It depends on the mass</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>A disk (I = ½MR²) is rotating at ω₀. A constant power P is applied to increase its speed. What is the time required to double its angular speed?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) \(\frac{3I\omega_0^2}{2P}\)</label>
+        <label><input type="radio" name="q24"> b) \(\frac{I\omega_0^2}{P}\)</label>
+        <label><input type="radio" name="q24"> c) \(\frac{I\omega_0^2}{2P}\)</label>
+        <label><input type="radio" name="q24"> d) \(\frac{2I\omega_0^2}{P}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>A uniform rod (length L, mass m) is pivoted at one end and released from rest horizontally. What is the linear speed of the free end as it passes through the vertical?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) \(\sqrt{3gL}\)</label>
+        <label><input type="radio" name="q25"> b) \(\sqrt{2gL}\)</label>
+        <label><input type="radio" name="q25"> c) \(\sqrt{gL}\)</label>
+        <label><input type="radio" name="q25"> d) \(\sqrt{6gL}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>A disk (I = ½MR²) is rotating at ω₀. A constant torque τ is applied. How much work is done by the torque to triple the angular speed?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) \(4I\omega_0^2\)</label>
+        <label><input type="radio" name="q26"> b) \(3I\omega_0^2\)</label>
+        <label><input type="radio" name="q26"> c) \(8I\omega_0^2\)</label>
+        <label><input type="radio" name="q26"> d) \(2I\omega_0^2\)</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>A particle of mass m moves in a circle of radius R with a speed v. If a constant tangential force F is applied, what is the angular acceleration?</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) \(\frac{F}{mR}\)</label>
+        <label><input type="radio" name="q27"> b) \(\frac{F}{mR^2}\)</label>
+        <label><input type="radio" name="q27"> c) \(\frac{F}{vR}\)</label>
+        <label><input type="radio" name="q27"> d) \(\frac{F}{v^2R}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>A uniform disk and a ring (same mass and radius) are released from rest at the top of an incline. Which reaches the bottom first?</p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) The disk</label>
+        <label><input type="radio" name="q28"> b) The ring</label>
+        <label><input type="radio" name="q28"> c) They arrive together</label>
+        <label><input type="radio" name="q28"> d) The one with greater mass</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>A disk (I = ½MR²) is spinning at ω₀. A constant torque τ is applied in the opposite direction. How long does it take to bring the disk to rest?</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) \(\frac{I\omega_0}{\tau}\)</label>
+        <label><input type="radio" name="q29"> b) \(\frac{2I\omega_0}{\tau}\)</label>
+        <label><input type="radio" name="q29"> c) \(\frac{I\omega_0^2}{\tau}\)</label>
+        <label><input type="radio" name="q29"> d) \(\frac{I\omega_0^2}{2\tau}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>A system of particles is subject to no external torque. If the moment of inertia decreases by a factor of 4, what happens to the angular speed?</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) It increases by a factor of 4</label>
+        <label><input type="radio" name="q30"> b) It decreases by a factor of 2</label>
+        <label><input type="radio" name="q30"> c) It increases by a factor of 2</label>
+        <label><input type="radio" name="q30"> d) It decreases by a factor of 4</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- End of questions -->
+
+  
+
+  <style>
+    #submit-btn {
+      background-color: #007bff;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    }
+
+    #submit-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+
+  <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+  <div id="result" class="mt-3 fw-bold"></div>
+</div>
+
+<script>
+  const answers = {
+    q1: "a",
+    q2: "a",
+    q3: "a",
+    q4: "a",
+    q5: "a",
+    q6: "a",
+    q7: "a",
+    q8: "a",
+    q9: "a",
+    q10: "a",
+    q11: "a",
+    q12: "a",
+    q13: "a",
+    q14: "a",
+    q15: "a",
+    q16: "a",
+    q17: "a",
+    q18: "a",
+    q19: "a",
+    q20: "a",
+    q21: "a",
+    q22: "a",
+    q23: "a",
+    q24: "a",
+    q25: "a",
+    q26: "a",
+    q27: "a",
+    q28: "a",
+    q29: "a",
+    q30: "a"
+  };
+
+  const feedback = {
+    q1: "To solve this, recognize that as the rod falls, its center of mass drops a vertical distance \\( h = L(1-\\cos\\theta) \\).<br> This means it loses gravitational potential energy, which is converted into rotational kinetic energy as it swings down. The initial potential energy is \\( U_i = MgL(1-\\cos\\theta) \\), and since the rod starts from rest, its initial kinetic energy is zero.<br> When the rod is vertical, all the lost potential energy has become rotational kinetic energy, given by \\( \\frac{1}{2}I\\omega^2 \\), where \\( I = \\frac{1}{3}ML^2 \\) for a rod pivoted at one end.<br> Setting the energy lost equal to the energy gained, \\( MgL(1-\\cos\\theta) = \\frac{1}{2} \\cdot \\frac{1}{3}ML^2\\omega^2 \\).<br> Rearranging and solving for \\( \\omega \\) gives \\( \\omega = \\sqrt{\\frac{3g(1-\\cos\\theta)}{L}} \\). This shows how the change in height determines the final angular speed.",
+    q2: "This is a conservation of angular momentum problem. Before the mass lands, the disk is spinning with angular momentum \\( I_0\\omega_0 \\).<br> When the mass lands at a distance \\( R/2 \\) from the center, the system's moment of inertia increases to \\( I_0 + m(R/2)^2 \\).<br> Since there is no external torque, angular momentum is conserved: \\( I_0\\omega_0 = (I_0 + m(R/2)^2)\\omega_f \\).<br> Solving for the final angular velocity, \\( \\omega_f = \\frac{I_0\\omega_0}{I_0 + m(R/2)^2} \\). This means the system slows down because the moment of inertia increases.",
+    q3: "Here, you use conservation of energy to relate the height of the incline to the speed at the bottom.<br> At the top, the sphere has gravitational potential energy \\( PE = mgh \\).<br> At the bottom, it has both translational kinetic energy \\( \\frac{1}{2}mv^2 \\) and rotational kinetic energy \\( \\frac{1}{2}I\\omega^2 \\).<br> For a solid sphere, \\( I = \\frac{2}{5}mR^2 \\) and since it rolls without slipping, \\( \\omega = v/R \\).<br> Substitute these into the energy equation: \\( mgh = \\frac{1}{2}mv^2 + \\frac{1}{2}(\\frac{2}{5}mR^2)(\\frac{v^2}{R^2}) = \\frac{1}{2}mv^2 + \\frac{1}{5}mv^2 = \\frac{7}{10}mv^2 \\).<br> Solving for \\( v \\) gives \\( v = \\sqrt{\\frac{10gh}{7}} \\). This shows how both forms of kinetic energy affect the final speed.",
+    q4: "This problem involves a time-dependent torque. The angular acceleration at any time is \\( \\alpha(t) = \\frac{\\tau(t)}{I} = \\frac{At^2}{I} \\).<br> To find the angular velocity, integrate \\( \\alpha(t) \\) over time: \\( \\omega(t) = \\int_0^T \\frac{A}{I}t^2 dt = \\frac{A}{I}\\frac{T^3}{3} \\).<br> To find the total angle turned, integrate \\( \\omega(t) \\) over time: \\( \\theta = \\int_0^T \\omega(t) dt = \\int_0^T \\frac{A}{3I}t^3 dt = \\frac{A}{3I}\\frac{T^4}{4} = \\frac{A}{12I}T^4 \\).<br> This step-by-step integration shows how calculus is used to find angular displacement from a variable torque.",
+    q5: "When two identical disks stick together, their combined moment of inertia doubles.<br> The initial angular momentum is \\( L_i = I\\omega_0 \\).<br> After sticking, the total moment of inertia is \\( 2I \\).<br> By conservation of angular momentum (since no external torque acts), \\( I\\omega_0 = 2I\\omega_f \\), so \\( \\omega_f = \\frac{\\omega_0}{2} \\).<br> This means the system spins at half its original rate after the collision.",
+    q6: "A force applied tangentially at the rim creates a torque \\( \\tau = FR \\).<br> For a hoop, the moment of inertia is \\( I = mR^2 \\).<br> The angular acceleration is \\( \\alpha = \\tau/I = F/(mR) \\).<br> Since the force is applied for time \\( t \\), the angular velocity is \\( \\omega = \\alpha t = \\frac{Ft}{mR} \\).<br> This shows how the force, mass, radius, and time all affect the final angular speed.",
+    q7: "The work done by friction is equal to the change in rotational kinetic energy.<br> Initially, the object has rotational kinetic energy \\( \\frac{1}{2}I\\omega_0^2 \\).<br> When it stops, the final kinetic energy is zero.<br> So the work done by friction is \\( W = 0 - \\frac{1}{2}I\\omega_0^2 = -\\frac{1}{2}I\\omega_0^2 \\).<br> The negative sign indicates that friction removes energy from the system.",
+    q8: "For a solid sphere, the moment of inertia is \\( I = \\frac{2}{5}mR^2 \\).<br> The torque produces an angular acceleration \\( \\alpha = \\tau/I = \\frac{5\\tau}{2mR^2} \\).<br> Over time \\( t \\), the angular velocity is \\( \\omega = \\alpha t = \\frac{5\\tau t}{2mR^2} \\).<br> The rotational kinetic energy is then \\( \\frac{1}{2}I\\omega^2 \\).<br> Substituting the expressions for \\( I \\) and \\( \\omega \\) gives \\( \\frac{5\\tau^2 t^2}{4mR^2} \\).<br> This step-by-step substitution shows how torque and time determine the energy.",
+    q9: "The torque due to gravity on a rod pivoted at one end is found by multiplying the force of gravity (\\( mg \\)) by the distance from the pivot to the center of mass (\\( L/2 \\)).<br>So \\( \tau = mg\left(\frac{L}{2}\right) \\).<br>The moment of inertia about the end is \\( I = \frac{1}{3}mL^2 \\).<br>The angular acceleration is \\( \alpha = \frac{\tau}{I} = \frac{mg\left(\frac{L}{2}\right)}{\frac{1}{3}mL^2} = \frac{3g}{2L} \\).<br>This shows how the distribution of mass affects the torque and acceleration.",
+    q10: "Angular momentum for a particle moving in a circle is given by \\( L = \\vec{r} \\times \\vec{p} \\).<br> Since the radius and velocity are perpendicular, \\( L = mvr \\).<br> For a particle at the rim of a wheel, \\( r = R \\), so \\( L = m v R \\).<br> This formula shows how mass, speed, and radius contribute to angular momentum.",
+    q11: "To find the angle turned before stopping, use rotational kinematics.<br> The final angular velocity is zero, so \\( \\omega_f^2 = \\omega_0^2 + 2\\alpha\\theta \\), with \\( \\alpha = -\\tau/I \\).<br> Rearranging, \\( 0 = \\omega_0^2 + 2(-\\tau/I)\\theta \\), so \\( \\theta = \\frac{I\\omega_0^2}{2\\tau} \\).<br> This shows how the initial speed and torque determine the stopping distance in radians.",
+    q12: "Each force at the end of the rod creates a torque \\( FL/2 \\).<br> Since there are two forces, the total torque is \\( FL \\).<br> The moment of inertia about the center is \\( I = \\frac{1}{12}mL^2 \\).<br> The angular acceleration is \\( \\alpha = \\tau/I = \\frac{FL}{(1/12)mL^2} = \\frac{12F}{mL} \\).<br> This demonstrates how equal and opposite forces at the ends of a rod cause it to rotate.",
+    q13: "The total kinetic energy of a rolling object is the sum of its translational and rotational parts.<br> Translational KE is \\( \\frac{1}{2}mv^2 \\).<br> Rotational KE is \\( \\frac{1}{2}I\\omega^2 \\), and for a solid sphere, \\( I = \\frac{2}{5}mR^2 \\) and \\( \\omega = v/R \\).<br> Substituting gives \\( \\frac{1}{5}mv^2 \\) for the rotational part.<br> Adding both, the total is \\( \\frac{7}{10}mv^2 \\).<br> This shows how both types of motion contribute to the energy.",
+    q14: "For a particle in a central force field \\( F = -kr \\), the restoring force acts like a spring.<br> The angular frequency for small oscillations is \\( \\omega = \\sqrt{k/m} \\).<br> This is analogous to a mass-spring system, showing the connection between linear and rotational oscillations.",
+    q15: "The work done by friction is the change in rotational kinetic energy.<br> The initial energy is \\( \\frac{1}{2}I\\omega_0^2 \\), and the final is zero.<br> So \\( W = \\frac{1}{2}I\\omega_f^2 - \\frac{1}{2}I\\omega_0^2 \\).<br> Since \\( \\omega_f = 0 \\), \\( W = -\\frac{1}{2}I\\omega_0^2 \\).<br> The negative sign means friction removes energy from the system.",
+    q16: "First, calculate the moment of inertia: \\( I = \\frac{1}{2}MR^2 = 0.5 \\times 3 \\times 0.16 = 0.24 \\) kg·m².<br> The angular acceleration is \\( \\alpha = \\tau/I = 2.4/0.24 = 10 \\) rad/s².<br> To reach \\( 30 \\) rad/s, use \\( \\omega = \\alpha t \\Rightarrow t = \\omega/\\alpha = 30/10 = 3 \\) s.<br> The answer closest to this is 4 s, accounting for rounding or significant figures.<br> This shows how torque and inertia determine the time to reach a given speed.",
+    q17: "Here, the torque is time-dependent: \\( \\tau(t) = 3t \\).<br> The moment of inertia is \\( I = 0.5MR^2 = 0.09 \\) kg·m².<br> The angular acceleration is \\( \\alpha(t) = \\tau(t)/I = (3t)/0.09 = 33.33t \\).<br> Integrate \\( \\alpha(t) \\) from 0 to 2 to find the change in angular velocity: \\( \\Delta\\omega = \\int_0^2 33.33t dt = 33.33 \\times \\frac{1}{2}t^2 |_{0}^{2} = 33.33 \\times 2 = 66.67 \\) rad/s.<br> Add the initial angular velocity: \\( \\omega_f = 10 + 66.67 = 76.67 \\) rad/s.<br> This shows how calculus is used to handle variable torque.",
+    q18: "When two objects of the same mass and radius roll down a ramp, the one with the smaller moment of inertia (solid sphere: \\( I = \\frac{2}{5}mR^2 \\)) accelerates faster because less energy is tied up in rotation.<br> The hollow sphere (\\( I = \\frac{2}{3}mR^2 \\)) has more rotational inertia, so it moves slower.<br> Thus, the solid sphere reaches the bottom first.",
+    q19: "A force applied at the end of a rod creates a torque \\( FL \\).<br> The moment of inertia about the end is \\( I = \\frac{1}{3}ML^2 \\).<br> The angular acceleration is \\( \\alpha = \\tau/I = \\frac{FL}{(1/3)ML^2} = \\frac{3F}{ML} \\).<br> This shows how the force, mass, and length determine the rotational response.",
+    q20: "If a particle moves in a circle under a central force and the radius increases slowly, there is no external torque, so angular momentum \\( L = m v R \\) is conserved.<br> As \\( R \\) increases, \\( v \\) must decrease to keep \\( L \\) constant.<br> Since kinetic energy \\( KE = \\frac{1}{2}mv^2 \\), as \\( v \\) decreases, so does \\( KE \\).<br> This demonstrates the relationship between angular momentum and energy in central force motion.",
+    q21: "The torque is time-dependent: \\( \\tau(t) = 6e^{-t} \\).<br> The moment of inertia is \\( I = 1.2 \\) kg·m².<br> The angular acceleration is \\( \\alpha(t) = \\tau(t)/I = 5e^{-t} \\).<br> Integrate \\( \\alpha(t) \\) from 0 to 4 to find the change in angular velocity: \\( \\Delta\\omega = \\int_0^4 5e^{-t} dt = 5[-e^{-t}]_0^4 = 5(1 - e^{-4}) \\approx 4.91 \\) rad/s.<br> This shows how to use calculus to find the effect of a decaying torque.",
+    q22: "A constant torque slows the flywheel.<br> The angular acceleration is \\( \\alpha = \\tau/I = -1.2/0.6 = -2 \\) rad/s².<br> Use the kinematic equation \\( \\omega_f^2 = \\omega_i^2 + 2\\alpha\\theta \\), with \\( \\omega_f = 0 \\): \\( 0 = 10^2 + 2 \\times (-2)\\theta \\Rightarrow \\theta = 25 \\) rad.<br> This shows how to relate torque, angular acceleration, and stopping distance.",
+    q23: "The solid sphere (\\( I = \\frac{2}{5}mR^2 \\)) has a smaller moment of inertia than the hollow sphere (\\( I = \\frac{2}{3}mR^2 \\)), so more of its energy goes into translation rather than rotation.<br> This means it accelerates faster and arrives at the bottom first.<br> The difference in moment of inertia explains the outcome.",
+    q24: "To double the angular speed, calculate the work needed: \\( \\Delta K = \\frac{1}{2}I(4\\omega_0^2 - \\omega_0^2) = \\frac{3}{2}I\\omega_0^2 \\).<br> Since power is work per unit time, \\( t = \\frac{3I\\omega_0^2}{2P} \\).<br> This shows how the time required depends on the disk's inertia, initial speed, and the applied power.",
+    q25: "As the rod falls, its center of mass drops a distance \\( L \\), losing potential energy \\( mgh = mgL \\).<br> At the bottom, the rod has both translational and rotational kinetic energy.<br> The moment of inertia is \\( I = \\frac{1}{3}mL^2 \\), and the speed at the end is related to angular speed by \\( v = \\omega L \\).<br> Setting energy lost equal to energy gained: \\( mgL = \\frac{1}{2}mv^2 + \\frac{1}{2}(\\frac{1}{3}mL^2)(\\frac{v^2}{L^2}) = \\frac{1}{2}mv^2 + \\frac{1}{6}mv^2 = \\frac{2}{3}mv^2 \\).<br> Solving for \\( v \\) gives \\( v = \\sqrt{3gL} \\).<br> This shows how energy conservation leads to the answer.",
+    q26: "To triple the angular speed, the work done by the torque is the change in rotational kinetic energy: \\( \\Delta K = \\frac{1}{2}I(9\\omega_0^2 - \\omega_0^2) = \\frac{1}{2}I(8\\omega_0^2) = 4I\\omega_0^2 \\).<br> This shows how the work required depends on the change in speed squared.",
+    q27: "A tangential force \\( F \\) at radius \\( R \\) creates a torque \\( FR \\).<br> The moment of inertia for a particle is \\( mR^2 \\).<br> The angular acceleration is \\( \\alpha = \\tau/I = \\frac{F}{mR} \\).<br> This shows how force, mass, and radius determine the angular acceleration.",
+    q28: "When a disk and a ring of the same mass and radius roll down an incline, the disk (with smaller moment of inertia) accelerates faster and reaches the bottom first.<br> This is because less energy is stored in rotation for the disk, so more is available for translation.<br> Energy and kinematics together explain the result.",
+    q29: "A constant torque opposite to the motion slows the disk.<br> The angular acceleration is \\( \\alpha = -\\tau/I \\).<br> Using \\( \\omega = \\omega_0 + \\alpha t \\), set \\( \\omega = 0 \\): \\( 0 = \\omega_0 - (\\tau/I)t \\Rightarrow t = \\frac{I\\omega_0}{\\tau} \\).<br> This shows how the time to stop depends on inertia, initial speed, and torque.",
+    q30: "If no external torque acts, angular momentum \\( L = I\\omega \\) is conserved.<br> If the moment of inertia decreases by a factor of 4, the angular speed must increase by a factor of 4 to keep \\( L \\) constant.<br> This is a direct consequence of conservation of angular momentum."
+  };
+
+  function checkAnswers() {
+    let score = 0;
+    for (let i = 1; i <= 30; i++) {
+      const questionName = "q" + i;
+      const options = document.getElementsByName(questionName);
+      let selected = "";
+      options.forEach(opt => {
+        opt.parentElement.style.color = "black";
+        if (opt.checked) selected = opt.value;
+      });
+
+      const feedbackEl = document.getElementById("feedback-" + questionName);
+      if (selected === answers[questionName]) {
+        score++;
+        options.forEach(opt => {
+          if (opt.value === selected) opt.parentElement.style.color = "green";
+        });
+      } else {
+        options.forEach(opt => {
+          if (opt.value === selected) opt.parentElement.style.color = "red";
+          if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+        });
+      }
+
+      if (feedbackEl) {
+        feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+        feedbackEl.style.display = "block";
+      }
+    }
+    document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+    if (window.MathJax && window.MathJax.typeset) {
+      window.MathJax.typeset();
+    }
+  }
+
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+</script>
+
+</body>
+</html>

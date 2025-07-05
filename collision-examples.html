@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collision Examples - Off-center Impact and Billiard Ball Spin</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #005a9c;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 220px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .example {
+      background-color: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .example p {
+      margin-bottom: 0.8rem;
+    }
+    .example p:last-child {
+      margin-bottom: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      width: 90%;
+      background: #f8fafc;
+      font-size: 1.05rem;
+    }
+    th, td {
+      border: 1px solid #b6c6e3;
+      padding: 0.7rem 1rem;
+      text-align: center;
+    }
+    th {
+      background: #dbeafe;
+      color: #003049;
+    }
+    .simulation-container {
+      background: #f8fafc;
+      border: 2px solid #3b82f6;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-canvas {
+      border: 2px solid #1e3a8a;
+      border-radius: 10px;
+      background: white;
+      margin: 1rem auto;
+      display: block;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .control-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    .control-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .control-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-group .value-display {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .checkbox-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      text-align: left;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #374151;
+      cursor: pointer;
+    }
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+    .energy-display {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+    }
+    .energy-display strong {
+      color: #1e40af;
+    }
+    .energy-bar {
+      width: 100%;
+      height: 20px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    .energy-bar-fill {
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+    .potential-fill {
+      background: linear-gradient(90deg, #10b981, #059669);
+    }
+    .kinetic-fill {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+    }
+    .rotational-fill {
+      background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+    }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+    button:active {
+      background: #1d4ed8;
+      transform: translateY(0);
+    }
+    
+    select {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+    
+    select:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+    
+    select:focus {
+      background: #1d4ed8;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    }
+    
+    select option {
+      background: #3b82f6;
+      color: white;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+        <h1>Collision Examples</h1>
+        
+        <p>
+            Collisions can be complex when they involve both translational and rotational motion. 
+            Off-center impacts and spin-inducing collisions demonstrate how angular momentum and 
+            linear momentum interact during collisions.
+        </p>
+
+        <h2>Off-center Impact on a Rod</h2>
+        
+        <p>
+            When a particle strikes a rod off-center, the collision transfers both linear momentum 
+            and angular momentum to the rod. This creates a combination of translational and 
+            rotational motion.
+        </p>
+
+        <div class="formula-box">
+            <strong>Key Equations:</strong><br>
+            Linear momentum conservation: \(m_1 v_{1i} = m_1 v_{1f} + m_2 v_{2f}\)<br>
+            Angular momentum conservation: \(m_1 v_{1i} d = m_1 v_{1f} d + I_2 \omega_2\)<br>
+            Rod moment of inertia: \(I = \frac{1}{12}ML^2\) (about center)<br>
+            Kinetic energy: \(K = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2\)
+        </div>
+
+        <div class="simulation-container">
+            <h3>Off-center Impact Simulation</h3>
+            <canvas id="rodCanvas" class="simulation-canvas" width="800" height="400"></canvas>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="particleMassSlider">Particle Mass (kg):</label>
+                    <input type="range" id="particleMassSlider" min="0.1" max="2.0" step="0.1" value="0.5">
+                    <div class="value-display">Current: <span id="particleMassValue">0.5</span> kg</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="particleVelocitySlider">Particle Velocity (m/s):</label>
+                    <input type="range" id="particleVelocitySlider" min="5" max="20" step="1" value="10">
+                    <div class="value-display">Current: <span id="particleVelocityValue">10</span> m/s</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="impactPositionSlider">Impact Position:</label>
+                    <input type="range" id="impactPositionSlider" min="0.1" max="0.9" step="0.1" value="0.3">
+                    <div class="value-display">Current: <span id="impactPositionValue">0.3</span> (fraction of rod length)</div>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button id="fireButton">Fire Particle</button>
+                <button id="resetButton">Reset</button>
+            </div>
+            
+            <div class="energy-display">
+                <strong>Collision Analysis:</strong><br>
+                Initial Momentum: <span id="initialMomentum">5.0</span> kg⋅m/s<br>
+                Final Linear Velocity: <span id="finalVelocity">0.0</span> m/s<br>
+                Final Angular Velocity: <span id="finalAngularVelocity">0.0</span> rad/s<br>
+                <br>
+                <strong>Energy Distribution:</strong><br>
+                <div>Translational Kinetic: <span id="translationalEnergy">0.0</span> J</div>
+                <div>Rotational Kinetic: <span id="rotationalEnergy">0.0</span> J</div>
+            </div>
+        </div>
+
+        <h3>Example: Off-center Impact Calculation</h3>
+        <div class="example">
+            <p>A 0.5 kg particle moving at 10 m/s strikes a 2 kg rod (length 1 m) at 0.3 of its length from the center. 
+            What are the final velocities?</p>
+            
+            <p><strong>Solution:</strong></p>
+            <p>Momentum conservation: \(0.5 \times 10 = 0.5 v_{1f} + 2 v_{2f}\)</p>
+            <p>Angular momentum conservation: \(0.5 \times 10 \times 0.3 = 0.5 v_{1f} \times 0.3 + \frac{1}{12} \times 2 \times 1^2 \times \omega\)</p>
+            <p>Solving: \(v_{2f} = 2.4\) m/s, \(\omega = 18\) rad/s</p>
+        </div>
+
+        <h2>Billiard Ball Spin</h2>
+        
+        <p>
+            When a billiard ball is struck off-center, it acquires both translational velocity 
+            and angular velocity (spin). The spin affects the ball's trajectory and collision behavior.
+        </p>
+
+        <div class="formula-box">
+            <strong>Key Equations:</strong><br>
+            Linear momentum: \(p = mv\)<br>
+            Angular momentum: \(L = I\omega = \frac{2}{5}mr^2\omega\) (solid sphere)<br>
+            Rolling condition: \(v = \omega r\) (when rolling without slipping)<br>
+            Kinetic energy: \(K = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2\)
+        </div>
+
+        <div class="simulation-container">
+            <h3>Billiard Ball Spin Simulation</h3>
+            <canvas id="billiardCanvas" class="simulation-canvas" width="800" height="400"></canvas>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="cueVelocitySlider">Cue Velocity (m/s):</label>
+                    <input type="range" id="cueVelocitySlider" min="2" max="15" step="0.5" value="8">
+                    <div class="value-display">Current: <span id="cueVelocityValue">8.0</span> m/s</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="spinTypeSelect">Spin Type:</label>
+                    <select id="spinTypeSelect">
+                        <option value="none">No Spin</option>
+                        <option value="top">Top Spin</option>
+                        <option value="back">Back Spin</option>
+                        <option value="right">Right Side Spin</option>
+                        <option value="left">Left Side Spin</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="spinIntensitySlider">Spin Intensity:</label>
+                    <input type="range" id="spinIntensitySlider" min="0" max="1" step="0.1" value="0.5">
+                    <div class="value-display">Current: <span id="spinIntensityValue">0.5</span> (0=no spin, 1=max spin)</div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="frictionSlider">Table Friction:</label>
+                    <input type="range" id="frictionSlider" min="0.1" max="0.9" step="0.1" value="0.3">
+                    <div class="value-display">Current: <span id="frictionValue">0.3</span></div>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button id="shootButton">Shoot Ball</button>
+                <button id="resetBilliardButton">Reset</button>
+            </div>
+            
+            <div class="energy-display">
+                <strong>Ball Motion Analysis:</strong><br>
+                Linear Velocity: <span id="ballVelocity">0.0</span> m/s<br>
+                Angular Velocity: <span id="ballAngularVelocity">0.0</span> rad/s<br>
+                Spin Type: <span id="spinType">None</span><br>
+                <br>
+                <strong>Energy Distribution:</strong><br>
+                <div>Translational Kinetic: <span id="ballTranslationalEnergy">0.0</span> J</div>
+                <div>Rotational Kinetic: <span id="ballRotationalEnergy">0.0</span> J</div>
+            </div>
+        </div>
+
+        <h3>Types of Billiard Ball Spin</h3>
+        <table>
+            <tr>
+                <th>Spin Type</th>
+                <th>Description</th>
+                <th>Effect on Motion</th>
+                <th>Application</th>
+            </tr>
+            <tr>
+                <td>Top Spin</td>
+                <td>Forward rotation</td>
+                <td>Ball rolls faster, longer distance</td>
+                <td>Power shots, long distance</td>
+            </tr>
+            <tr>
+                <td>Back Spin</td>
+                <td>Backward rotation</td>
+                <td>Ball slows down, may reverse direction</td>
+                <td>Control shots, stopping</td>
+            </tr>
+            <tr>
+                <td>Side Spin</td>
+                <td>Lateral rotation</td>
+                <td>Ball curves sideways</td>
+                <td>Angle shots, banking</td>
+            </tr>
+            <tr>
+                <td>No Spin</td>
+                <td>Pure translation</td>
+                <td>Ball slides, then rolls</td>
+                <td>Straight shots</td>
+            </tr>
+        </table>
+
+        <h3>Example: Billiard Ball Spin Calculation</h3>
+        <div class="example">
+            <p>A billiard ball (mass 0.17 kg, radius 0.028 m) is struck with a cue at 8 m/s with 30% spin factor. 
+            What are the initial translational and angular velocities?</p>
+            
+            <p><strong>Solution:</strong></p>
+            <p>Translational velocity: \(v = 8\) m/s</p>
+            <p>Angular velocity: \(\omega = \frac{v \times \text{spin factor}}{r} = \frac{8 \times 0.3}{0.028} = 85.7\) rad/s</p>
+            <p>Translational energy: \(K_t = \frac{1}{2} \times 0.17 \times 8^2 = 5.44\) J</p>
+            <p>Rotational energy: \(K_r = \frac{1}{2} \times \frac{2}{5} \times 0.17 \times 0.028^2 \times 85.7^2 = 0.98\) J</p>
+        </div>
+
+        <h2>Real-World Applications</h2>
+        <ul>
+            <li><b>Sports:</b> Understanding spin in tennis, golf, and billiards</li>
+            <li><b>Automotive:</b> Tire grip and vehicle stability</li>
+            <li><b>Engineering:</b> Gear design and mechanical systems</li>
+            <li><b>Physics Research:</b> Particle collisions and angular momentum conservation</li>
+        </ul>
+
+        
+
+        <h2>Summary / Takeaways</h2>
+        <ul>
+            <li>Off-center collisions transfer both linear and angular momentum</li>
+            <li>Spin affects the trajectory and behavior of rolling objects</li>
+            <li>Energy is distributed between translational and rotational motion</li>
+            <li>Friction plays a crucial role in converting sliding to rolling motion</li>
+            <li>Understanding spin is essential for many sports and engineering applications</li>
+        </ul>
+    </div>
+
+    <script>
+        // Off-center Impact on Rod Simulation
+        class RodImpactSimulation {
+            constructor() {
+                this.canvas = document.getElementById('rodCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                
+                // Rod properties
+                this.rodLength = 200;
+                this.rodMass = 2.0;
+                this.rodX = this.canvas.width / 2;
+                this.rodY = this.canvas.height / 2;
+                this.rodAngle = 0;
+                this.rodVelocity = 0;
+                this.rodAngularVelocity = 0;
+                
+                // Particle properties
+                this.particleMass = 0.5;
+                this.particleVelocity = 10;
+                this.particleX = 50;
+                this.particleY = this.rodY;
+                this.particleRadius = 8;
+                this.particleActive = false;
+                this.particleAttached = false;
+                this.attachedImpactDistance = 0;
+                
+                // Impact properties
+                this.impactPosition = 0.3; // Fraction of rod length
+                
+                this.initializeControls();
+                this.updateDisplay();
+                this.draw();
+            }
+            
+            initializeControls() {
+                const particleMassSlider = document.getElementById('particleMassSlider');
+                const particleVelocitySlider = document.getElementById('particleVelocitySlider');
+                const impactPositionSlider = document.getElementById('impactPositionSlider');
+                const fireButton = document.getElementById('fireButton');
+                const resetButton = document.getElementById('resetButton');
+                
+                particleMassSlider.addEventListener('input', (e) => {
+                    this.particleMass = parseFloat(e.target.value);
+                    document.getElementById('particleMassValue').textContent = this.particleMass.toFixed(1);
+                });
+                
+                particleVelocitySlider.addEventListener('input', (e) => {
+                    this.particleVelocity = parseFloat(e.target.value);
+                    document.getElementById('particleVelocityValue').textContent = this.particleVelocity;
+                });
+                
+                impactPositionSlider.addEventListener('input', (e) => {
+                    this.impactPosition = parseFloat(e.target.value);
+                    document.getElementById('impactPositionValue').textContent = this.impactPosition.toFixed(1);
+                });
+                
+                fireButton.addEventListener('click', () => {
+                    this.fireParticle();
+                });
+                
+                resetButton.addEventListener('click', () => {
+                    this.reset();
+                });
+            }
+            
+            fireParticle() {
+                this.particleActive = true;
+                this.particleX = 50;
+                this.particleY = this.rodY + (this.impactPosition - 0.5) * this.rodLength;
+            }
+            
+            reset() {
+                this.particleActive = false;
+                this.particleAttached = false;
+                this.rodVelocity = 0;
+                this.rodAngularVelocity = 0;
+                this.rodAngle = 0;
+                this.particleX = 50;
+                this.particleY = this.rodY + (this.impactPosition - 0.5) * this.rodLength;
+                this.updateDisplay();
+            }
+            
+            stickParticleToRod() {
+                // Calculate impact distance from rod center
+                const impactDistance = (this.impactPosition - 0.5) * this.rodLength;
+                
+                // Rod stays fixed at center - no linear motion
+                this.rodVelocity = 0;
+                
+                // All linear momentum converts to angular momentum about the fixed center
+                const initialAngularMomentum = this.particleMass * this.particleVelocity * impactDistance;
+                const rodMomentOfInertia = (1/12) * this.rodMass * this.rodLength * this.rodLength;
+                const particleMomentOfInertia = this.particleMass * impactDistance * impactDistance;
+                const totalMomentOfInertia = rodMomentOfInertia + particleMomentOfInertia;
+                this.rodAngularVelocity = -initialAngularMomentum / totalMomentOfInertia;
+                
+                // Particle is now attached to rod
+                this.particleAttached = true;
+                this.attachedImpactDistance = impactDistance;
+                this.particleActive = false;
+                
+                this.updateDisplay();
+            }
+            
+            updateDisplay() {
+                // Since rod is fixed, all energy goes to rotation
+                let rotationalEnergy = 0;
+                if (this.particleAttached) {
+                    const rodMomentOfInertia = (1/12) * this.rodMass * this.rodLength * this.rodLength;
+                    const particleMomentOfInertia = this.particleMass * this.attachedImpactDistance * this.attachedImpactDistance;
+                    const totalMomentOfInertia = rodMomentOfInertia + particleMomentOfInertia;
+                    rotationalEnergy = 0.5 * totalMomentOfInertia * this.rodAngularVelocity * this.rodAngularVelocity;
+                } else {
+                    rotationalEnergy = 0.5 * (1/12) * this.rodMass * this.rodLength * this.rodLength * this.rodAngularVelocity * this.rodAngularVelocity;
+                }
+                
+                document.getElementById('initialMomentum').textContent = (this.particleMass * this.particleVelocity).toFixed(1);
+                document.getElementById('finalVelocity').textContent = '0.00';
+                document.getElementById('finalAngularVelocity').textContent = this.rodAngularVelocity.toFixed(1);
+                document.getElementById('translationalEnergy').textContent = '0.00';
+                document.getElementById('rotationalEnergy').textContent = rotationalEnergy.toFixed(2);
+            }
+            
+            animate() {
+                if (this.particleActive && !this.particleAttached) {
+                    this.particleX += this.particleVelocity * 2;
+                    
+                    // Check if particle reaches the rod's x position
+                    if (this.particleX >= this.rodX - this.particleRadius) {
+                        this.stickParticleToRod();
+                    }
+                    
+                    // Stop if particle goes off screen
+                    if (this.particleX > this.canvas.width) {
+                        this.particleActive = false;
+                    }
+                }
+                
+                // Update rod motion - only rotation, no translation
+                this.rodAngle += this.rodAngularVelocity * 0.1;
+                
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+            
+            draw() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Draw background
+                this.ctx.fillStyle = '#ecf0f1';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Draw rod (vertical)
+                this.ctx.save();
+                this.ctx.translate(this.rodX, this.rodY);
+                this.ctx.rotate(this.rodAngle);
+                
+                this.ctx.strokeStyle = '#2c3e50';
+                this.ctx.lineWidth = 8;
+                this.ctx.beginPath();
+                this.ctx.moveTo(0, -this.rodLength/2);
+                this.ctx.lineTo(0, this.rodLength/2);
+                this.ctx.stroke();
+                
+                // Draw center point
+                this.ctx.fillStyle = '#e74c3c';
+                this.ctx.beginPath();
+                this.ctx.arc(0, 0, 5, 0, 2 * Math.PI);
+                this.ctx.fill();
+                
+                // Draw impact point
+                const impactY = (this.impactPosition - 0.5) * this.rodLength;
+                this.ctx.fillStyle = '#f39c12';
+                this.ctx.beginPath();
+                this.ctx.arc(0, impactY, 8, 0, 2 * Math.PI);
+                this.ctx.fill();
+                
+                this.ctx.restore();
+                
+                // Draw particle
+                if (this.particleActive) {
+                    this.ctx.fillStyle = '#3498db';
+                    this.ctx.beginPath();
+                    this.ctx.arc(this.particleX, this.particleY, this.particleRadius, 0, 2 * Math.PI);
+                    this.ctx.fill();
+                    
+                    // Draw particle velocity vector
+                    this.ctx.strokeStyle = '#e74c3c';
+                    this.ctx.lineWidth = 3;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.particleX, this.particleY);
+                    this.ctx.lineTo(this.particleX + this.particleVelocity * 3, this.particleY);
+                    this.ctx.stroke();
+                }
+                
+                // Draw attached particle
+                if (this.particleAttached) {
+                    this.ctx.save();
+                    this.ctx.translate(this.rodX, this.rodY);
+                    this.ctx.rotate(this.rodAngle);
+                    
+                    // Draw attached particle with different color to show it's stuck
+                    this.ctx.fillStyle = '#e67e22';
+                    this.ctx.beginPath();
+                    this.ctx.arc(0, this.attachedImpactDistance, this.particleRadius, 0, 2 * Math.PI);
+                    this.ctx.fill();
+                    
+                    // Draw border to show it's attached
+                    this.ctx.strokeStyle = '#d35400';
+                    this.ctx.lineWidth = 2;
+                    this.ctx.stroke();
+                    
+                    this.ctx.restore();
+                    
+                    // Draw "STUCK" label
+                    this.ctx.fillStyle = '#e67e22';
+                    this.ctx.font = 'bold 12px Arial';
+                    this.ctx.textAlign = 'center';
+                    this.ctx.fillText('STUCK', this.rodX + 40, this.rodY + this.attachedImpactDistance);
+                }
+                
+                // Draw labels
+                this.ctx.fillStyle = '#2c3e50';
+                this.ctx.font = 'bold 14px Arial';
+                this.ctx.textAlign = 'center';
+                this.ctx.fillText('Rod', this.rodX, this.rodY - this.rodLength/2 - 20);
+                this.ctx.fillText('Impact Point', this.rodX + 20, this.rodY + (this.impactPosition - 0.5) * this.rodLength);
+                
+                // Draw angular velocity indicator (no linear velocity since rod is fixed)
+                if (Math.abs(this.rodAngularVelocity) > 0.1) {
+                    this.ctx.fillStyle = '#8e44ad';
+                    this.ctx.fillText(`ω = ${this.rodAngularVelocity.toFixed(1)} rad/s`, this.rodX + 30, this.rodY);
+                }
+            }
+            
+            start() {
+                this.animate();
+            }
+        }
+
+        // Billiard Ball Spin Simulation
+        class BilliardSimulation {
+            constructor() {
+                this.canvas = document.getElementById('billiardCanvas');
+                this.ctx = this.canvas.getContext('2d');
+                
+                // Ball properties
+                this.ballRadius = 15;
+                this.ballMass = 0.17;
+                this.ballX = 100;
+                this.ballY = this.canvas.height / 2;
+                this.ballVelocity = 0;
+                this.ballAngularVelocity = 0;
+                this.ballAngle = 0;
+                this.ballVelocityY = 0; // Vertical velocity for side spin
+                
+                // Cue properties
+                this.cueVelocity = 8;
+                this.spinType = 'none';
+                this.spinIntensity = 0.5;
+                this.friction = 0.3;
+                
+                // Simulation state
+                this.ballActive = false;
+                this.rolling = false;
+                this.cueActive = false;
+                this.cueX = 50;
+                this.cueY = this.canvas.height / 2;
+                
+                this.initializeControls();
+                this.draw();
+            }
+            
+            initializeControls() {
+                const cueVelocitySlider = document.getElementById('cueVelocitySlider');
+                const spinTypeSelect = document.getElementById('spinTypeSelect');
+                const spinIntensitySlider = document.getElementById('spinIntensitySlider');
+                const frictionSlider = document.getElementById('frictionSlider');
+                const shootButton = document.getElementById('shootButton');
+                const resetButton = document.getElementById('resetBilliardButton');
+                
+                cueVelocitySlider.addEventListener('input', (e) => {
+                    this.cueVelocity = parseFloat(e.target.value);
+                    document.getElementById('cueVelocityValue').textContent = this.cueVelocity.toFixed(1);
+                });
+                
+                spinTypeSelect.addEventListener('change', (e) => {
+                    this.spinType = e.target.value;
+                });
+                
+                spinIntensitySlider.addEventListener('input', (e) => {
+                    this.spinIntensity = parseFloat(e.target.value);
+                    document.getElementById('spinIntensityValue').textContent = this.spinIntensity.toFixed(1);
+                });
+                
+                frictionSlider.addEventListener('input', (e) => {
+                    this.friction = parseFloat(e.target.value);
+                    document.getElementById('frictionValue').textContent = this.friction.toFixed(1);
+                });
+                
+                shootButton.addEventListener('click', () => {
+                    this.shootBall();
+                });
+                
+                resetButton.addEventListener('click', () => {
+                    this.reset();
+                });
+            }
+            
+            shootBall() {
+                this.cueActive = true;
+                this.cueX = this.ballX - 50;
+                this.cueY = this.ballY;
+            }
+            
+            reset() {
+                this.ballActive = false;
+                this.cueActive = false;
+                this.ballVelocity = 0;
+                this.ballVelocityY = 0;
+                this.ballAngularVelocity = 0;
+                this.ballAngle = 0;
+                this.ballX = 100;
+                this.ballY = this.canvas.height / 2;
+                this.cueX = 50;
+                this.rolling = false;
+                this.updateDisplay();
+            }
+            
+            updateDisplay() {
+                let spinType = 'None';
+                if (Math.abs(this.ballAngularVelocity) > 0.1) {
+                    if (this.ballAngularVelocity > 0) {
+                        spinType = this.spinType === 'right' ? 'Right Side Spin' : 'Top Spin';
+                    } else {
+                        spinType = this.spinType === 'left' ? 'Left Side Spin' : 'Back Spin';
+                    }
+                }
+                
+                const translationalEnergy = 0.5 * this.ballMass * this.ballVelocity * this.ballVelocity;
+                const rotationalEnergy = 0.5 * (2/5) * this.ballMass * this.ballRadius * this.ballRadius * this.ballAngularVelocity * this.ballAngularVelocity;
+                
+                document.getElementById('ballVelocity').textContent = Math.abs(this.ballVelocity) < 0.1 ? '0.00' : this.ballVelocity.toFixed(2);
+                document.getElementById('ballAngularVelocity').textContent = this.ballAngularVelocity.toFixed(1);
+                document.getElementById('spinType').textContent = spinType;
+                document.getElementById('ballTranslationalEnergy').textContent = translationalEnergy.toFixed(2);
+                document.getElementById('ballRotationalEnergy').textContent = rotationalEnergy.toFixed(2);
+            }
+            
+            animate() {
+                if (this.cueActive) {
+                    // Move cue toward ball
+                    this.cueX += 3;
+                    
+                    // Check for cue-ball collision
+                    if (this.cueX >= this.ballX - this.ballRadius) {
+                        // Transfer momentum from cue to ball
+                        this.ballVelocity = this.cueVelocity * 0.3; // Scale down velocity
+                        this.ballVelocityY = 0; // Reset vertical velocity
+                        
+                        // Apply spin based on type and intensity
+                        const spinMagnitude = this.cueVelocity * this.spinIntensity * 0.3 / this.ballRadius;
+                        switch (this.spinType) {
+                            case 'top':
+                                this.ballAngularVelocity = spinMagnitude; // Forward rotation
+                                break;
+                            case 'back':
+                                this.ballAngularVelocity = -spinMagnitude; // Backward rotation
+                                break;
+                            case 'right':
+                                this.ballAngularVelocity = spinMagnitude; // Right side rotation
+                                this.ballVelocityY = spinMagnitude * 2.0; // Move down - much stronger
+                                break;
+                            case 'left':
+                                this.ballAngularVelocity = -spinMagnitude; // Left side rotation
+                                this.ballVelocityY = -spinMagnitude * 2.0; // Move up - much stronger
+                                break;
+                            default:
+                                this.ballAngularVelocity = 0; // No spin
+                        }
+                        
+                        this.ballActive = true;
+                        this.cueActive = false;
+                        this.rolling = false;
+                    }
+                }
+                
+                if (this.ballActive) {
+                    // Apply friction (less friction on Y velocity for side spin)
+                    this.ballVelocity *= (1 - this.friction * 0.02);
+                    if (this.spinType === 'right' || this.spinType === 'left') {
+                        this.ballVelocityY *= (1 - this.friction * 0.005); // Much less friction for side spin
+                    } else {
+                        this.ballVelocityY *= (1 - this.friction * 0.02);
+                    }
+                    this.ballAngularVelocity *= (1 - this.friction * 0.01);
+                    
+                    // Backspin reversal - simple and direct
+                    if (this.spinType === 'back' && this.ballVelocity < 0.5) {
+                        this.ballVelocity = -Math.abs(this.ballAngularVelocity) * this.ballRadius * 0.3;
+                    }
+                    
+                    // Check for rolling condition (skip for backspin)
+                    if (this.spinType !== 'back') {
+                        const rollingVelocity = this.ballAngularVelocity * this.ballRadius;
+                        if (Math.abs(this.ballVelocity - rollingVelocity) < 0.1 && !this.rolling) {
+                            this.rolling = true;
+                            this.ballVelocity = rollingVelocity;
+                        }
+                    }
+                    
+                    // Update position and angle
+                    this.ballX += this.ballVelocity * 1.5;
+                    this.ballY += this.ballVelocityY * 1.5;
+                    this.ballAngle += this.ballAngularVelocity * 0.1;
+                    
+                    // Keep ball within canvas bounds
+                    if (this.ballY < this.ballRadius) this.ballY = this.ballRadius;
+                    if (this.ballY > this.canvas.height - this.ballRadius) this.ballY = this.canvas.height - this.ballRadius;
+                    
+                    // Stop if ball goes off screen or stops
+                    if (this.ballX > this.canvas.width || this.ballX < 0 || (Math.abs(this.ballVelocity) < 0.1 && Math.abs(this.ballAngularVelocity) < 0.1)) {
+                        this.ballActive = false;
+                    }
+                    
+                    this.updateDisplay();
+                }
+                
+                this.draw();
+                requestAnimationFrame(() => this.animate());
+            }
+            
+            draw() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Draw table
+                this.ctx.fillStyle = '#27ae60';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Draw pool cue
+                if (this.cueActive) {
+                    // Draw cue shaft (wood brown)
+                    this.ctx.strokeStyle = '#8B4513';
+                    this.ctx.lineWidth = 4;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.cueX, this.cueY);
+                    this.ctx.lineTo(this.cueX - 60, this.cueY);
+                    this.ctx.stroke();
+                    
+                    // Draw white stripe near the end
+                    this.ctx.strokeStyle = '#ffffff';
+                    this.ctx.lineWidth = 6;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.cueX - 15, this.cueY);
+                    this.ctx.lineTo(this.cueX - 25, this.cueY);
+                    this.ctx.stroke();
+                    
+                    // Draw blue tip
+                    this.ctx.fillStyle = '#0066cc';
+                    this.ctx.beginPath();
+                    this.ctx.arc(this.cueX, this.cueY, 6, 0, 2 * Math.PI);
+                    this.ctx.fill();
+                }
+                
+                // Draw ball
+                this.ctx.save();
+                this.ctx.translate(this.ballX, this.ballY);
+                this.ctx.rotate(this.ballAngle);
+                
+                this.ctx.fillStyle = '#ffffff';
+                this.ctx.beginPath();
+                this.ctx.arc(0, 0, this.ballRadius, 0, 2 * Math.PI);
+                this.ctx.fill();
+                this.ctx.strokeStyle = '#000000';
+                this.ctx.lineWidth = 2;
+                this.ctx.stroke();
+                
+                // Draw ball pattern
+                this.ctx.fillStyle = '#e74c3c';
+                this.ctx.beginPath();
+                this.ctx.arc(0, 0, this.ballRadius * 0.3, 0, 2 * Math.PI);
+                this.ctx.fill();
+                
+                this.ctx.restore();
+                
+                // Draw velocity vector
+                if (this.ballActive && this.ballVelocity > 0.1) {
+                    const arrowLength = this.ballVelocity * 3;
+                    this.ctx.strokeStyle = '#e74c3c';
+                    this.ctx.lineWidth = 3;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.ballX, this.ballY);
+                    this.ctx.lineTo(this.ballX + arrowLength, this.ballY);
+                    this.ctx.stroke();
+                }
+                
+                // Draw angular velocity arrow
+                if (this.ballActive && Math.abs(this.ballAngularVelocity) > 0.1) {
+                    const arrowRadius = this.ballRadius + 20;
+                    const arrowLength = this.ballAngularVelocity * 2;
+                    const startAngle = 0;
+                    const endAngle = Math.min(Math.abs(arrowLength), Math.PI/2) * Math.sign(this.ballAngularVelocity);
+                    
+                    this.ctx.strokeStyle = '#f39c12';
+                    this.ctx.lineWidth = 3;
+                    this.ctx.beginPath();
+                    this.ctx.arc(this.ballX, this.ballY, arrowRadius, startAngle, endAngle, false);
+                    this.ctx.stroke();
+                }
+                
+                // Draw labels
+                this.ctx.fillStyle = '#ffffff';
+                this.ctx.font = 'bold 14px Arial';
+                this.ctx.textAlign = 'center';
+                this.ctx.fillText('Billiard Ball', this.ballX, this.ballY - this.ballRadius - 10);
+                
+               
+            }
+            
+            start() {
+                this.animate();
+            }
+        }
+
+        // Initialize simulations when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const rodSim = new RodImpactSimulation();
+            const billiardSim = new BilliardSimulation();
+            
+            rodSim.start();
+            billiardSim.start();
+        });
+    </script>
+</body>
+</html> 

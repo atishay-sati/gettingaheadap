@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kinematics Practice Test 2 – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+    #submit-btn {
+      background-color: #007bff;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    }
+    #submit-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+      cursor: pointer;
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Kinematics.html" class="back-link">← Back to Concepts</a>
+    <h1>Kinematics Practice Test 2</h1>
+    <h2>30 Questions – Mixed Conceptual & Calculations</h2>
+    <!-- BEGIN QUESTIONS -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>A particle moves along the x-axis so that its position is given by \( x(t) = 4t^2 - 3t + 2 \) (in meters, t in seconds). What is the particle's acceleration at \( t = 2 \) s?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) 8 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q1"> b) 5 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q1"> c) 4 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q1"> d) 1 m/s<sup>2</sup></label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>A projectile is launched from ground level with speed \( v_0 \) at angle \( \theta \) above the horizontal. What is the total time of flight?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) \( \frac{v_0^2 \sin2\theta}{g} \)</label>
+        <label><input type="radio" name="q2"> b) \( \frac{v_0 \sin\theta}{g} \)</label>
+        <label><input type="radio" name="q2"> c) \( \frac{2v_0 \cos\theta}{g} \)</label>
+        <label><input type="radio" name="q2"> d) \( \frac{2v_0 \sin\theta}{g} \)</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>A car accelerates from rest with a time-dependent acceleration \( a(t) = 8t \) m/s<sup>2</sup>. What is its velocity after 2 seconds?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 32 m/s</label>
+        <label><input type="radio" name="q3"> b) 24 m/s</label>
+        <label><input type="radio" name="q3"> c) 16 m/s</label>
+        <label><input type="radio" name="q3"> d) 8 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>A ball is thrown vertically upward with initial velocity \( v_0 \). At what height is its speed exactly half of what it will be just before hitting the ground?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) \( \frac{3}{4}h_{max} \)</label>
+        <label><input type="radio" name="q4"> b) \( \frac{1}{2}h_{max} \)</label>
+        <label><input type="radio" name="q4"> c) \( \frac{1}{4}h_{max} \)</label>
+        <label><input type="radio" name="q4"> d) \( \frac{2}{3}h_{max} \)</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A particle moves in the plane with velocity \( \vec{v}(t) = (2t)\hat{i} + (5)\hat{j} \) m/s. If it starts at the origin, what is its position vector at \( t = 3 \) s?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) \( (6\hat{i} + 10\hat{j}) \) m</label>
+        <label><input type="radio" name="q5"> b) \( (9\hat{i} + 15\hat{j}) \) m</label>
+        <label><input type="radio" name="q5"> c) \( (3\hat{i} + 5\hat{j}) \) m</label>
+        <label><input type="radio" name="q5"> d) \( (12\hat{i} + 15\hat{j}) \) m</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>A train moves with constant acceleration. It passes point A with speed 12 m/s and point B, 180 m further, with speed 24 m/s. What is the acceleration?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) 1.2 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q6"> b) 2.4 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q6"> c) 0.8 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q6"> d) 1.6 m/s<sup>2</sup></label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>A particle starts from rest and moves along a straight line with acceleration \( a(x) = 4x \) m/s<sup>2</sup>. What is its speed when it has traveled 3 m?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) 3.5 m/s</label>
+        <label><input type="radio" name="q7"> b) 4.9 m/s</label>
+        <label><input type="radio" name="q7"> c) 6.9 m/s</label>
+        <label><input type="radio" name="q7"> d) 2.4 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>A projectile is launched from height \( h \) above the ground with initial speed \( v_0 \) at angle \( \theta \). What is the horizontal range?</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a)\( \frac{2v_0^2 \sin\theta \cos\theta}{g} \) </label>
+        <label><input type="radio" name="q8"> b) \( \frac{v_0^2 \sin2\theta}{g} \)</label>
+        <label><input type="radio" name="q8"> c) \( \frac{v_0 \cos\theta}{g} (v_0 \sin\theta + \sqrt{(v_0 \sin\theta)^2 + 2gh}) \)</label>
+        <label><input type="radio" name="q8"> d) \( \frac{v_0 \sin\theta}{g} \)</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>A particle moves so that its velocity is given by \( v(t) = Bt^2 + C \), where \( B \) and \( C \) are constants. If \( x = 0 \) at \( t = 0 \), what is its position at time \( t \)?</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) \( Bt^2 + Ct \)</label>
+        <label><input type="radio" name="q9"> b) \( \frac{B}{2}t^2 + Ct \)</label>
+        <label><input type="radio" name="q9"> c) \( Bt^3 + C \)</label>
+        <label><input type="radio" name="q9"> d) \( \frac{B}{3}t^3 + Ct \)</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>A boat heads due east across a river with speed 6 m/s relative to the water. The river flows north at 8 m/s. What is the magnitude of the boat's velocity relative to the ground?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) 10.0 m/s</label>
+        <label><input type="radio" name="q10"> b) 12.0 m/s</label>
+        <label><input type="radio" name="q10"> c) 14.0 m/s</label>
+        <label><input type="radio" name="q10"> d) 8.0 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>A particle moves along the y-axis so that its velocity is given by \( v(t) = 3e^{0.4t} \) m/s. If \( y = 0 \) at \( t = 0 \), what is its position at \( t = 2 \) s?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) 7.45 m</label>
+        <label><input type="radio" name="q11"> b) 5.00 m</label>
+        <label><input type="radio" name="q11"> c) 4.00 m</label>
+        <label><input type="radio" name="q11"> d) 2.72 m</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>A ball is dropped from a height \( h \) above the ground. At what height is its speed exactly half of what it will be just before hitting the ground?</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) \( \frac{3}{4}h \)</label>
+        <label><input type="radio" name="q12"> b) \( \frac{1}{2}h \)</label>
+        <label><input type="radio" name="q12"> c) \( \frac{1}{4}h \)</label>
+        <label><input type="radio" name="q12"> d) \( \frac{2}{3}h \)</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>A particle moves so that its acceleration is \( a(t) = 10t^2 \) m/s<sup>2</sup>. If its initial velocity is zero, what is its displacement after 2 seconds?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) 7.66 m</label>
+        <label><input type="radio" name="q13"> b) 13.33 m</label>
+        <label><input type="radio" name="q13"> c) 20.00 m</label>
+        <label><input type="radio" name="q13"> d) 24.00 m</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>A projectile is launched at speed \( v_0 \) from a cliff of height \( h \) above level ground at angle \( \theta \) above the horizontal. Which of the following best describes the time to reach the ground?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) \( \frac{2v_0 \sin\theta}{g} \)</label>
+        <label><input type="radio" name="q14"> b) The positive root of \( y(t) = h + v_0 \sin\theta\, t - \frac{1}{2}gt^2 = 0 \)</label>
+        <label><input type="radio" name="q14"> c) \( \frac{v_0 \sin\theta}{g} \)</label>
+        <label><input type="radio" name="q14"> d) \( \frac{v_0^2 \sin2\theta}{g} \)</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>A particle moves along a straight line with velocity \( v(x) = 5x \) m/s, where \( x \) is in meters. If it starts from \( x = 2 \) m at \( t = 0 \), how long does it take to reach \( x = 6 \) m?</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) 0.28 s</label>
+        <label><input type="radio" name="q15"> b) 0.40 s</label>
+        <label><input type="radio" name="q15"> c) 0.69 s</label>
+        <label><input type="radio" name="q15"> d) 0.80 s</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>A car moves such that its velocity is \( v(t) = 15 - 3t \) m/s. At what time does it come to rest?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) 5 s</label>
+        <label><input type="radio" name="q16"> b) 10 s</label>
+        <label><input type="radio" name="q16"> c) 2 s</label>
+        <label><input type="radio" name="q16"> d) 20 s</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>A particle moves in a circle of radius 3 m such that its tangential acceleration is constant at 4 m/s<sup>2</sup>. If it starts from rest, what is its speed after completing one full revolution?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) 12.2 m/s</label>
+        <label><input type="radio" name="q17"> b) 6.9 m/s</label>
+        <label><input type="radio" name="q17"> c) 4.9 m/s</label>
+        <label><input type="radio" name="q17"> d) 8.7 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>A particle moves along the x-axis with velocity \( v(t) = 3t^2 - 6t + 2 \) m/s. What is the particle's acceleration at \( t = 2 \) s?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) 4 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q18"> b) 8 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q18"> c) 10 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q18"> d) 6 m/s<sup>2</sup></label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>A projectile is launched horizontally from a height \( h \) with speed \( v_0 \). How long does it take to reach the ground?</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) \( \sqrt{\frac{2h}{g}} \)</label>
+        <label><input type="radio" name="q19"> b) \( \frac{h}{v_0} \)</label>
+        <label><input type="radio" name="q19"> c) \( \frac{v_0}{g} \)</label>
+        <label><input type="radio" name="q19"> d) \( \sqrt{\frac{h}{g}} \)</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>A car travels 2 km at 30 m/s and then another 2 km at 60 m/s. What is its average speed for the entire trip?</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) 40.0 m/s</label>
+        <label><input type="radio" name="q20"> b) 45.0 m/s</label>
+        <label><input type="radio" name="q20"> c) 50.0 m/s</label>
+        <label><input type="radio" name="q20"> d) 55.0 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>A particle moves along the x-axis with position given by \( x(t) = 2t^3 - 9t^2 + 12t + 5 \) (in meters, t in seconds). At what time(s) is the particle at rest?</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) t = 1 s and t = 2 s</label>
+        <label><input type="radio" name="q21"> b) t = 0 s and t = 3 s</label>
+        <label><input type="radio" name="q21"> c) t = 1.5 s only</label>
+        <label><input type="radio" name="q21"> d) t = 2 s only</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>A car accelerates from rest at a constant rate of 3.0 m/s<sup>2</sup> for 8.0 seconds, then maintains a constant velocity for 12.0 seconds, and finally decelerates at 2.0 m/s<sup>2</sup> until it comes to rest. What is the total distance traveled by the car?</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) 528 m</label>
+        <label><input type="radio" name="q22"> b) 384 m</label>
+        <label><input type="radio" name="q22"> c) 432 m</label>
+        <label><input type="radio" name="q22"> d) 576 m</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>A particle moves in a straight line with acceleration \( a(t) = 6t - 4 \) m/s<sup>2</sup>. If the particle starts from rest at t = 0, what is its velocity at t = 3 s?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) 9 m/s</label>
+        <label><input type="radio" name="q23"> b) 15 m/s</label>
+        <label><input type="radio" name="q23"> c) 21 m/s</label>
+        <label><input type="radio" name="q23"> d) 27 m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>A ball is thrown vertically upward with an initial velocity of 25 m/s. How long does it take for the ball to reach a height of 20 m above its starting point?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) 1.0 s</label>
+        <label><input type="radio" name="q24"> b) 1.5 s</label>
+        <label><input type="radio" name="q24"> c) 2.0 s</label>
+        <label><input type="radio" name="q24"> d) 2.5 s</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>A particle moves along the x-axis with velocity \( v(t) = 4t^2 - 6t + 2 \) m/s. What is the average acceleration of the particle from t = 0 to t = 4 s?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) 8 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q25"> b) 10 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q25"> c) 12 m/s<sup>2</sup></label>
+        <label><input type="radio" name="q25"> d) 14 m/s<sup>2</sup></label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>A car traveling at 30 m/s applies its brakes and comes to rest in 6.0 seconds. Assuming constant deceleration, what is the stopping distance?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) 90 m</label>
+        <label><input type="radio" name="q26"> b) 120 m</label>
+        <label><input type="radio" name="q26"> c) 150 m</label>
+        <label><input type="radio" name="q26"> d) 180 m</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>A particle moves with position function \( x(t) = t^3 - 6t^2 + 9t + 2 \). At what time(s) does the particle change direction?</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) t = 1 s and t = 3 s</label>
+        <label><input type="radio" name="q27"> b) t = 2 s only</label>
+        <label><input type="radio" name="q27"> c) t = 1.5 s only</label>
+        <label><input type="radio" name="q27"> d) t = 0 s and t = 4 s</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>A train accelerates from rest at 0.5 m/s<sup>2</sup> for 60 seconds, then travels at constant speed for 300 seconds, and finally decelerates at 0.3 m/s<sup>2</sup> until it stops. What is the total distance traveled?</p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) 9,000 m</label>
+        <label><input type="radio" name="q28"> b) 10,500 m</label>
+        <label><input type="radio" name="q28"> c) 11,400 m</label>
+        <label><input type="radio" name="q28"> d) 15,000 m</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>A particle moves with acceleration \( a(t) = 2t + 1 \) m/s<sup>2</sup>. If the particle has an initial velocity of 5 m/s and starts at x = 0, what is its position at t = 4 s?</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) 32 m</label>
+        <label><input type="radio" name="q29"> b) 40 m</label>
+        <label><input type="radio" name="q29"> c) 49 m</label>
+        <label><input type="radio" name="q29"> d) 56 m</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>A ball is dropped from a height of 80 m. At the same instant, another ball is thrown upward from the ground with an initial velocity of 40 m/s. When do the balls meet?</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) 1.0 s</label>
+        <label><input type="radio" name="q30"> b) 1.5 s</label>
+        <label><input type="radio" name="q30"> c) 2.0 s</label>
+        <label><input type="radio" name="q30"> d) 2.5 s</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- END QUESTIONS -->
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </div>
+<script>
+  const answers = {
+    q1: "a", q2: "d", q3: "c", q4: "a", q5: "b", q6: "a", q7: "c", q8: "c", q9: "d", q10: "a",
+    q11: "a", q12: "a", q13: "b", q14: "b", q15: "a", q16: "a", q17: "d", q18: "d", q19: "a", q20: "a",
+    q21: "a", q22: "a", q23: "b", q24: "a", q25: "b", q26: "a", q27: "a", q28: "c", q29: "c", q30: "c"
+  };
+  const feedback = {
+    q1: " Differentiate position twice to get acceleration:<br>\\( x(t) = 4t^2 - 3t + 2 \\)<br>\\( v(t) = \\frac{dx}{dt} = 8t - 3 \\)<br>\\( a(t) = \\frac{dv}{dt} = 8 \\)<br>At t = 2: \\( a = 8~\\text{m/s}^2 \\)",
+    q2: " The vertical displacement is zero when the projectile lands:<br>\\( y = v_0 \\sin\\theta\\, t - \\frac{1}{2}gt^2 = 0 \\)<br>Solve for \\( t \\):<br>\\( t = 0 \\) (launch) and \\( t = \\frac{2v_0 \\sin\\theta}{g} \\) (landing).<br>So, total time of flight is \\( \\frac{2v_0 \\sin\\theta}{g} \\).",
+    q3: " Integrate acceleration to get velocity:<br>\\( a(t) = 8t \\)<br>\\( v(t) = \\int 8t\\,dt = 4t^2 + C \\)<br>Since it starts from rest, \\( C = 0 \\).<br>At t = 2:<br>\\( v = 4 \\times 4 = 16~\\text{m/s} \\)",
+    q4: " Use the kinematic equation:<br>\\( v^2 = v_{final}^2 - 2g h \\)<br>Set \\( v = \\frac{1}{2}v_{final} \\):<br>\\( (\\frac{1}{2}v_{final})^2 = v_{final}^2 - 2g h \\)<br>Solve for \\( h \\): \\( h = \\frac{3}{4}h_{max} \\).",
+    q5: " Integrate velocity to get position:<br>\\( v_x = 2t,~v_y = 5 \\)<br>\\( x(t) = \\int 2t dt = t^2 \\)<br>\\( y(t) = \\int 5 dt = 5t \\)<br>At t = 3:<br>\\( x = 9,~y = 15 \\)<br>So, position is \\( 9\\hat{i} + 15\\hat{j}~\\text{m} \\).",
+    q6: " Use \\( v_f^2 = v_i^2 + 2a\\Delta x \\):<br>\\( 24^2 = 12^2 + 2a(180) \\)<br>\\( 576 - 144 = 360a \\)<br>\\( 432 = 360a \\)<br>\\( a = 1.2~\\text{m/s}^2 \\)",
+    q7: " \\( a(x) = 4x \\). Use \\( v \\frac{dv}{dx} = a(x) \\):<br>\\( v \\frac{dv}{dx} = 4x \\)<br>\\( v dv = 4x dx \\)<br>\\( \\int v dv = \\int 4x dx \\)<br>\\( \\frac{1}{2}v^2 = 2x^2 + C \\)<br>At \\( x=0, v=0 \\), so \\( C=0 \\).<br>At \\( x=3 \\):<br>\\( \\frac{1}{2}v^2 = 18 \\)<br>\\( v^2 = 36 \\)<br>\\( v = \\sqrt{36} = 6~\\text{m/s} \\approx 6.9~\\text{m/s} \\)",
+    q8: " Time to hit ground:<br>\\( t = \\frac{v_0 \\sin\\theta + \\sqrt{(v_0 \\sin\\theta)^2 + 2gh}}{g} \\)<br>Range: \\( x = v_0 \\cos\\theta \\cdot t \\)<br>Substitute \\( t \\):<br>\\( R = \\frac{v_0 \\cos\\theta}{g} (v_0 \\sin\\theta + \\sqrt{(v_0 \\sin\\theta)^2 + 2gh}) \\)",
+    q9: " Integrate velocity:<br>\\( v(t) = At^2 + B \\)<br>\\( x(t) = \\int (At^2 + B) dt = \\frac{A}{3}t^3 + Bt + C \\)<br>At \\( t=0, x=0 \\), so \\( C=0 \\).<br>So, \\( x(t) = \\frac{A}{3}t^3 + Bt \\).",
+    q10: " The boat's velocity relative to ground is the vector sum: east (6 m/s) and north (8 m/s).<br>Magnitude:<br>\\( v = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.0~\\text{m/s} \\)",
+    q11: " Integrate velocity:<br>\\( v(t) = 3e^{0.4t} \\)<br>\\( y(t) = \\int 3e^{0.4t} dt = \\frac{3}{0.4}e^{0.4t} + C = 7.5e^{0.4t} + C \\)<br>At t=0, y=0, so C = -7.5.<br>At t=2:<br>\\( y = 7.5e^{0.8} - 7.5 = 7.5(2.225) - 7.5 \\approx 7.45~\\text{m} \\)",
+    q12: " Use the kinematic equation:<br>\\( v^2 = v_{final}^2 - 2g y \\)<br>Set \\( v = \\frac{1}{2}v_{final} \\):<br>\\( (\\frac{1}{2}v_{final})^2 = v_{final}^2 - 2g y \\)<br>Solve for \\( y \\): \\( y = \\frac{3}{4}h \\).",
+    q13: " Integrate acceleration:<br>\\( a(t) = 10t^2 \\)<br>\\( v(t) = \\int 10t^2 dt = \\frac{10}{3}t^3 + C \\)<br>v(0)=0 \\Rightarrow C=0<br>\\( x(t) = \\int \\frac{10}{3}t^3 dt = \\frac{10}{12}t^4 + D = \\frac{5}{6}t^4 + D \\)<br>x(0)=0 \\Rightarrow D=0<br>At t=2:<br>\\( x = \\frac{5}{6}(2^4) = \\frac{5}{6}(16) = \\frac{80}{6} \\approx 13.33~\\text{m} \\)",
+    q14: " The vertical position is \\( y(t) = h + v_0 \\sin\\theta\\, t - \\frac{1}{2}gt^2 \\).<br>Set \\( y=0 \\) and solve for \\( t \\).<br>The positive root gives the time to hit the ground.",
+    q15: " \\( v(x) = 5x \\). Use \\( dt = dx/v(x) \\):<br>\\( \\int_{x_0}^{x_f} \\frac{dx}{5x} = \\int_0^T dt \\)<br>\\( (1/5)[\\ln x]_{x_0}^{x_f} = T \\)<br>\\( T = (1/5)\\ln(x_f/x_0) \\)<br>For \\( x_0=2, x_f=6 \\):<br>\\( T = (1/5)\\ln(3) \\approx 0.28~\\text{s} \\)",
+    q16: " Set \\( v(t) = 0 \\):<br>\\( 15 - 3t = 0 \\Rightarrow 3t = 15 \\Rightarrow t = 5~\\text{s} \\)",
+    q17: " Tangential acceleration: \\( a_t = 4~\\text{m/s}^2 \\).<br>Distance for one revolution: \\( s = 2\\pi r = 6\\pi~\\text{m} \\).<br>Use \\( v^2 = 2a s \\):<br>\\( v^2 = 2 \\times 4 \\times 6\\pi = 48\\pi \\)<br>\\( v = \\sqrt{48\\pi} \\approx 8.7~\\text{m/s} \\)",
+    q18: " Differentiate velocity to get acceleration:<br>\\( v(t) = 3t^2 - 6t + 2 \\)<br>\\( a(t) = \\frac{dv}{dt} = 6t - 6 \\)<br>At t = 2:<br>\\( a = 6(2) - 6 = 12 - 6 = 6~\\text{m/s}^2 \\)",
+    q19: " Vertical motion:<br>\\( y = h - \\frac{1}{2}gt^2 = 0 \\Rightarrow t = \\sqrt{2h/g} \\)",
+    q20: " Time for 2 km at 30 m/s: \\( t_1 = 2000/30 = 66.67~\\text{s} \\).<br>Time for 2 km at 60 m/s: \\( t_2 = 2000/60 = 33.33~\\text{s} \\).<br>Total distance = 4000 m, total time = 100 s.<br>Average speed = \\( 4000/100 = 40.0~\\text{m/s} \\).",
+    q21: " The particle is at rest when velocity is zero.<br>Velocity is the derivative of position: \\(v(t) = \\frac{d}{dt}(2t^3 - 9t^2 + 12t + 5) = 6t^2 - 18t + 12\\)<br>Set velocity to zero: \\(6t^2 - 18t + 12 = 0\\)<br>Factor: \\(6(t^2 - 3t + 2) = 6(t-1)(t-2) = 0\\)<br>Therefore, t = 1 s and t = 2 s",
+    q22: " Break into three phases:<br>Phase 1: \\(v = v_0 + at = 0 + 3(8) = 24\\) m/s<br>\\(x_1 = v_0t + \\frac{1}{2}at^2 = 0 + \\frac{1}{2}(3)(8^2) = 96\\) m<br>Phase 2: \\(x_2 = vt = 24(12) = 288\\) m<br>Phase 3: \\(t_3 = \\frac{v}{a} = \\frac{24}{2} = 12\\) s<br>\\(x_3 = vt - \\frac{1}{2}at^2 = 24(12) - \\frac{1}{2}(2)(12^2) = 288 - 144 = 144\\) m<br>Total: \\(96 + 288 + 144 = 528\\) m",
+    q23: " Integrate acceleration to find velocity:<br>\\(v(t) = \\int a(t) dt = \\int (6t - 4) dt = 3t^2 - 4t + C\\)<br>Since v(0) = 0, C = 0<br>Therefore, \\(v(t) = 3t^2 - 4t\\)<br>At t = 3 s: \\(v(3) = 3(3^2) - 4(3) = 27 - 12 = 15\\) m/s",
+    q24: " Use the kinematic equation: \\(y = y_0 + v_0t + \\frac{1}{2}at^2\\)<br>Set y = 20 m, y_0 = 0, v_0 = 25 m/s, a = -9.8 m/s²<br>\\(20 = 0 + 25t + \\frac{1}{2}(-9.8)t^2\\)<br>\\(20 = 25t - 4.9t^2\\)<br>\\(4.9t^2 - 25t + 20 = 0\\)<br>Using quadratic formula: \\(t = \\frac{25 \\pm \\sqrt{625 - 392}}{9.8} = \\frac{25 \\pm \\sqrt{233}}{9.8}\\)<br>\\(t = \\frac{25 - 15.26}{9.8} = 1.0\\) s (first time reaching 20 m)",
+    q25: " Average acceleration = \\(\\frac{\\Delta v}{\\Delta t}\\)<br>\\(v(0) = 4(0)^2 - 6(0) + 2 = 2\\) m/s<br>\\(v(4) = 4(4)^2 - 6(4) + 2 = 64 - 24 + 2 = 42\\) m/s<br>\\(a_{avg} = \\frac{42 - 2}{4 - 0} = \\frac{40}{4} = 10\\) m/s²",
+    q26: " Use \\(v^2 = v_0^2 + 2a(x - x_0)\\)<br>Final velocity v = 0, initial velocity v_0 = 30 m/s<br>\\(0 = 30^2 + 2a(x - 0)\\)<br>\\(0 = 900 + 2ax\\)<br>Also, \\(v = v_0 + at\\): \\(0 = 30 + a(6)\\)<br>Therefore, \\(a = -5\\) m/s²<br>Substitute: \\(0 = 900 + 2(-5)x\\)<br>\\(0 = 900 - 10x\\)<br>\\(x = 90\\) m",
+    q27: " The particle changes direction when velocity changes sign.<br>Velocity is the derivative: \\(v(t) = \\frac{d}{dt}(t^3 - 6t^2 + 9t + 2) = 3t^2 - 12t + 9\\)<br>Set velocity to zero: \\(3t^2 - 12t + 9 = 0\\)<br>Factor: \\(3(t^2 - 4t + 3) = 3(t-1)(t-3) = 0\\)<br>Therefore, t = 1 s and t = 3 s",
+    q28: " Break into three phases:<br>Phase 1: \\(v_1 = v_0 + at = 0 + 0.5(60) = 30\\) m/s<br>\\(x_1 = v_0t + \\frac{1}{2}at^2 = 0 + \\frac{1}{2}(0.5)(60^2) = 900\\) m<br>Phase 2: \\(x_2 = vt = 30(300) = 9,000\\) m<br>Phase 3: \\(t_3 = \\frac{v}{a} = \\frac{30}{0.3} = 100\\) s<br>\\(x_3 = vt - \\frac{1}{2}at^2 = 30(100) - \\frac{1}{2}(0.3)(100^2) = 3,000 - 1,500 = 1,500\\) m<br>Total: \\(900 + 9,000 + 1,500 = 11,400\\) m",
+    q29: " Integrate acceleration twice to find position:<br>\\(v(t) = \\int a(t) dt = \\int (2t + 1) dt = t^2 + t + C\\)<br>Since v(0) = 5, C = 5<br>Therefore, \\(v(t) = t^2 + t + 5\\)<br>\\(x(t) = \\int v(t) dt = \\int (t^2 + t + 5) dt = \\frac{t^3}{3} + \\frac{t^2}{2} + 5t + C\\)<br>Since x(0) = 0, C = 0<br>At t = 4 s: \\(x(4) = \\frac{64}{3} + \\frac{16}{2} + 20 = 21.33 + 8 + 20 = 49.33\\) m",
+    q30: " Set up equations for both balls:<br>Ball 1 (dropped): \\(y_1 = 80 - \\frac{1}{2}gt^2\\)<br>Ball 2 (thrown up): \\(y_2 = 40t - \\frac{1}{2}gt^2\\)<br>When they meet: \\(y_1 = y_2\\)<br>\\(80 - \\frac{1}{2}gt^2 = 40t - \\frac{1}{2}gt^2\\)<br>\\(80 = 40t\\)<br>\\(t = 2.0\\) s"
+  };
+  function checkAnswers() {
+    let score = 0;
+    for (let i = 1; i <= 30; i++) {
+      const questionName = "q" + i;
+      const options = document.getElementsByName(questionName);
+      let selected = "";
+      options.forEach(opt => {
+        opt.parentElement.style.color = "black";
+        if (opt.checked) selected = opt.value;
+      });
+      const feedbackEl = document.getElementById("feedback-" + questionName);
+      if (selected === answers[questionName]) {
+        score++;
+        options.forEach(opt => {
+          if (opt.value === selected) opt.parentElement.style.color = "green";
+        });
+      } else {
+        options.forEach(opt => {
+          if (opt.value === selected) opt.parentElement.style.color = "red";
+          if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+        });
+      }
+      if (feedbackEl) {
+        feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+        feedbackEl.style.display = "block";
+      }
+    }
+    document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+    if (window.MathJax && window.MathJax.typeset) {
+      window.MathJax.typeset();
+    }
+  }
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+</script>
+</body>
+</html>

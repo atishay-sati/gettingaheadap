@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oscillations & Gravitation Practice Test 2/title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .feedback {
+      display: none;
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #0077b6;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    #submit-btn {
+      background-color: #007bff;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    #submit-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #0077b6;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">&larr; Back to Concepts</a>
+    <h1>Oscillations & Gravitation Practice Test – Set B</h1>
+    <h2>10 Questions – New Mix of Conceptual & Calculations</h2>
+
+    <!-- Questions 1 to 10 -->
+    <!-- Question format: <div class="question">...</div> with .feedback div inside each -->
+
+    <!-- Sample with updated format for question 1 -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>A spring-mass system oscillates with total mechanical energy \(E\). What is the kinetic energy when the displacement is half the amplitude?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a" /> a) \(\frac{1}{4}E\)</label>
+        <label><input type="radio" name="q1" value="b" /> b) \(\frac{3}{4}E\)</label>
+        <label><input type="radio" name="q1" value="c" /> c) \(\frac{1}{2}E\)</label>
+        <label><input type="radio" name="q1" value="d" /> d) \(\frac{1}{8}E\)</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display:none; margin-top:8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>A planet orbits a star in a perfect circle. What provides the centripetal force?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" /> a) Planet's inertia</label>
+        <label><input type="radio" name="q2" /> b) Gravitational force</label>
+        <label><input type="radio" name="q2" /> c) Electromagnetic force</label>
+        <label><input type="radio" name="q2" /> d) Normal force</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display:none; margin-top:8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>The time period of a mass \(m\) on a spring is \(T\). If the spring constant is doubled, what happens to the period?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" /> a) \(T\sqrt{2}\)</label>
+        <label><input type="radio" name="q3" /> b) Halves</label>
+        <label><input type="radio" name="q3" /> c) \(\frac{T}{\sqrt{2}}\) </label>
+        <label><input type="radio" name="q3" /> d) Doubles</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display:none; margin-top:8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>For a planet orbiting the Sun, what is the relationship between orbital period \(T\) and orbital radius \(r\)?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" /> a) \(T \propto r\)</label>
+        <label><input type="radio" name="q4" /> b) \(T^2 \propto r\)</label>
+        <label><input type="radio" name="q4" /> c) \(T \propto r^2\)</label>
+        <label><input type="radio" name="q4" /> d) \(T^2 \propto r^3\)</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display:none; margin-top:8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A mass is dropped from rest and oscillates on a vertical spring. What is the equilibrium position relative to the unstretched spring?</p>
+      <div class="options">
+        <label><input type="radio" name="q5" /> a) \(mg\)</label>
+        <label><input type="radio" name="q5" /> b) \(\frac{mg}{k}\)</label>
+        <label><input type="radio" name="q5" /> c) \(\frac{k}{mg}\)</label>
+        <label><input type="radio" name="q5" /> d) \(\sqrt{\frac{mg}{k}}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display:none; margin-top:8px;"></div>
+    </div>
+
+    <!-- Continue similarly with Q2 to Q10 -->
+    <!-- New questions (6–10) -->
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>Which of the following increases the period of a simple pendulum?</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a" /> a) Increasing the mass</label>
+        <label><input type="radio" name="q6" value="b" /> b) Increasing the amplitude</label>
+        <label><input type="radio" name="q6" value="c" /> c) Increasing the length</label>
+        <label><input type="radio" name="q6" value="d" /> d) Going to a planet with a greater gravitational acceleration</label>
+      </div>
+      <div class="feedback" id="feedback-q6">Period of a pendulum is \(T = 2\pi\sqrt{L/g}\), so increasing length increases period.</div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>A 2-kg mass attached to a vertical spring stretches it by 0.2 m. What is the spring constant?</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="a" /> a) 5 N/m</label>
+        <label><input type="radio" name="q7" value="b" /> b) 10 N/m</label>
+        <label><input type="radio" name="q7" value="c" /> c) 20 N/m</label>
+        <label><input type="radio" name="q7" value="d" /> d) 100 N/m</label>
+      </div>
+      <div class="feedback" id="feedback-q7">\(F = kx \Rightarrow k = \frac{mg}{x} = \frac{2\cdot 9.8}{0.2} = 98 \approx 100 \text{ N/m}\)</div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>What is the phase difference between displacement and acceleration in SHM?</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="a" /> a) 0 radians</label>
+        <label><input type="radio" name="q8" value="b" /> b) \(\pi/4\)</label>
+        <label><input type="radio" name="q8" value="c" /> c) \(\pi/2\)</label>
+        <label><input type="radio" name="q8" value="d" /> d) \(\pi\)</label>
+      </div>
+      <div class="feedback" id="feedback-q8">Acceleration is \(180^\circ\) or \(\pi\) radians out of phase with displacement in SHM.</div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>What is the gravitational field strength on the surface of a planet of mass \(M\) and radius \(R\)?</p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="a" /> a) \(\frac{GM}{R}\)</label>
+        <label><input type="radio" name="q9" value="b" /> b) \(\frac{GM}{R^2}\)</label>
+        <label><input type="radio" name="q9" value="c" /> c) \(\frac{G}{MR^2}\)</label>
+        <label><input type="radio" name="q9" value="d" /> d) \(\frac{M}{GR^2}\)</label>
+      </div>
+      <div class="feedback" id="feedback-q9">Field strength \(g = \frac{GM}{R^2}\), derived from Newton’s Law.</div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>How does the total energy in SHM change as the system oscillates?</p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="a" /> a) It increases</label>
+        <label><input type="radio" name="q10" value="b" /> b) It decreases</label>
+        <label><input type="radio" name="q10" value="c" /> c) It stays constant</label>
+        <label><input type="radio" name="q10" value="d" /> d) It oscillates with position</label>
+      </div>
+      <div class="feedback" id="feedback-q10">In ideal SHM, energy is conserved: total energy stays constant, only form changes between KE and PE.</div>
+    </div>
+
+    <div class="question">
+  <div class="question-number">11.</div>
+  <p>What is the maximum speed \(v_{max}\) of a mass-spring oscillator with amplitude \(A\) and angular frequency \(\omega\)?</p>
+  <div class="options">
+    <label><input type="radio" name="q11" /> a) \(A / \omega\)</label>
+    <label><input type="radio" name="q11" /> b) \(\omega A\)</label>
+    <label><input type="radio" name="q11" /> c) \(A \omega^2\)</label>
+    <label><input type="radio" name="q11" /> d) \(1 / (\omega A)\)</label>
+  </div>
+  <div class="feedback" id="feedback-q11" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">12.</div>
+  <p>In gravitational potential energy \(U = -\frac{GMm}{r}\), what does the negative sign indicate?</p>
+  <div class="options">
+    <label><input type="radio" name="q12" /> a) Energy increases with decreasing \(r\)</label>
+    <label><input type="radio" name="q12" /> b) Energy is always positive</label>
+    <label><input type="radio" name="q12" /> c) Work must be done to separate masses to infinity</label>
+    <label><input type="radio" name="q12" /> d) No work is needed to bring masses together</label>
+  </div>
+  <div class="feedback" id="feedback-q12" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">13.</div>
+  <p>A mass is oscillating with frequency \(f\). What happens to the period if frequency doubles?</p>
+  <div class="options">
+    <label><input type="radio" name="q13" /> a) Period doubles</label>
+    <label><input type="radio" name="q13" /> b) Period halves</label>
+    <label><input type="radio" name="q13" /> c) Period quadruples</label>
+    <label><input type="radio" name="q13" /> d) Period stays the same</label>
+  </div>
+  <div class="feedback" id="feedback-q13" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">14.</div>
+  <p>The acceleration of a mass in SHM is given by \(a = -\omega^2 x\). What is the significance of the negative sign?</p>
+  <div class="options">
+    <label><input type="radio" name="q14" /> a) Acceleration is always negative</label>
+    <label><input type="radio" name="q14" /> b) Acceleration opposes displacement</label>
+    <label><input type="radio" name="q14" /> c) Velocity decreases over time</label>
+    <label><input type="radio" name="q14" /> d) Displacement is negative</label>
+  </div>
+  <div class="feedback" id="feedback-q14" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">15.</div>
+  <p>A satellite orbits Earth in a circular orbit. What happens to orbital speed if the radius doubles?</p>
+  <div class="options">
+    <label><input type="radio" name="q15" /> a) Speed doubles</label>
+    <label><input type="radio" name="q15" /> b) Speed halves</label>
+    <label><input type="radio" name="q15" /> c) Speed decreases by factor \(1/\sqrt{2}\)</label>
+    <label><input type="radio" name="q15" /> d) Speed decreases by factor \(1/\sqrt{2}\)</label>
+  </div>
+  <div class="feedback" id="feedback-q15" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">16.</div>
+  <p>For a mass \(m\) on a spring, if the amplitude is doubled, what happens to the total mechanical energy?</p>
+  <div class="options">
+    <label><input type="radio" name="q16" /> a) It doubles</label>
+    <label><input type="radio" name="q16" /> b) It quadruples</label>
+    <label><input type="radio" name="q16" /> c) It halves</label>
+    <label><input type="radio" name="q16" /> d) It stays the same</label>
+  </div>
+  <div class="feedback" id="feedback-q16" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">17.</div>
+  <p>Which expression gives the gravitational potential energy of a two-mass system separated by distance \(r\)?</p>
+  <div class="options">
+    <label><input type="radio" name="q17" /> a) \(\frac{GMm}{r}\)</label>
+    <label><input type="radio" name="q17" /> b) \(-\frac{GMm}{r}\)</label>
+    <label><input type="radio" name="q17" /> c) \(\frac{GM}{r^2}\)</label>
+    <label><input type="radio" name="q17" /> d) \(-\frac{GM}{r^2}\)</label>
+  </div>
+  <div class="feedback" id="feedback-q17" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">18.</div>
+  <p>If a pendulum clock is taken to the Moon (where \(g\) is smaller), what happens to its period?</p>
+  <div class="options">
+    <label><input type="radio" name="q18" /> a) Period increases</label>
+    <label><input type="radio" name="q18" /> b) Period decreases</label>
+    <label><input type="radio" name="q18" /> c) Period remains unchanged</label>
+    <label><input type="radio" name="q18" /> d) Period becomes zero</label>
+  </div>
+  <div class="feedback" id="feedback-q18" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">19.</div>
+  <p>The restoring force in SHM is proportional to:</p>
+  <div class="options">
+    <label><input type="radio" name="q19" /> a) Velocity</label>
+    <label><input type="radio" name="q19" /> b) Acceleration</label>
+    <label><input type="radio" name="q19" /> c) Displacement</label>
+    <label><input type="radio" name="q19" /> d) Mass</label>
+  </div>
+  <div class="feedback" id="feedback-q19" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">20.</div>
+  <p>If the mass in a mass-spring system is quadrupled, what happens to the period?</p>
+  <div class="options">
+    <label><input type="radio" name="q20" /> a) Period doubles</label>
+    <label><input type="radio" name="q20" /> b) Period quadruples</label>
+    <label><input type="radio" name="q20" /> c) Period halves</label>
+    <label><input type="radio" name="q20" /> d) Period stays the same</label>
+  </div>
+  <div class="feedback" id="feedback-q20" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">21.</div>
+  <p>A 0.5 kg mass attached to a spring with \(k = 200\,N/m\) oscillates with amplitude 0.1 m. What is the maximum speed?</p>
+  <div class="options">
+    <label><input type="radio" name="q21" /> a) 2 m/s</label>
+    <label><input type="radio" name="q21" /> b) 1 m/s</label>
+    <label><input type="radio" name="q21" /> c) 0.5 m/s</label>
+    <label><input type="radio" name="q21" /> d) 4 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q21" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">22.</div>
+  <p>A pendulum of length 1.5 m swings on Earth (\(g = 9.8\,m/s^2\)). What is the period?</p>
+  <div class="options">
+    <label><input type="radio" name="q22" /> a) 1.55 s</label>
+    <label><input type="radio" name="q22" /> b) 2.45 s</label>
+    <label><input type="radio" name="q22" /> c) 2.45 s</label>
+    <label><input type="radio" name="q22" /> d) 3.10 s</label>
+  </div>
+  <div class="feedback" id="feedback-q22" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">23.</div>
+  <p>A planet has mass \(6 \times 10^{24}\) kg and radius \(6.4 \times 10^6\) m. What is the gravitational acceleration at its surface?</p>
+  <div class="options">
+    <label><input type="radio" name="q23" /> a) 5.0 m/s²</label>
+    <label><input type="radio" name="q23" /> b) 8.0 m/s²</label>
+    <label><input type="radio" name="q23" /> c) 9.8 m/s²</label>
+    <label><input type="radio" name="q23" /> d) 12.0 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q23" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">24.</div>
+  <p>A mass-spring oscillator has amplitude 0.3 m and angular frequency 5 rad/s. What is the maximum acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q24" /> a) 1.5 m/s²</label>
+    <label><input type="radio" name="q24" /> b) 5 m/s²</label>
+    <label><input type="radio" name="q24" /> c) 7.5 m/s²</label>
+    <label><input type="radio" name="q24" /> d) 7.5 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q24" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">25.</div>
+  <p>An object in circular orbit has orbital radius \(2 \times 10^7\) m and speed \(3 \times 10^3\) m/s. What is the centripetal acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q25" /> a) 0.15 m/s²</label>
+    <label><input type="radio" name="q25" /> b) 0.45 m/s²</label>
+    <label><input type="radio" name="q25" /> c) 0.90 m/s²</label>
+    <label><input type="radio" name="q25" /> d) 1.5 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q25" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">26.</div>
+  <p>A 3 kg mass attached to a horizontal spring oscillates with frequency 2 Hz. What is the spring constant?</p>
+  <div class="options">
+    <label><input type="radio" name="q26" /> a) 150 N/m</label>
+    <label><input type="radio" name="q26" /> b) 474 N/m</label>
+    <label><input type="radio" name="q26" /> c) 947 N/m</label>
+    <label><input type="radio" name="q26" /> d) 1894 N/m</label>
+  </div>
+  <div class="feedback" id="feedback-q26" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">27.</div>
+  <p>The potential energy of a spring compressed by 0.05 m with \(k = 300 N/m\) is:</p>
+  <div class="options">
+    <label><input type="radio" name="q27" /> a) 0.375 J</label>
+    <label><input type="radio" name="q27" /> b) 0.5 J</label>
+    <label><input type="radio" name="q27" /> c) 1.25 J</label>
+    <label><input type="radio" name="q27" /> d) 3.75 J</label>
+  </div>
+  <div class="feedback" id="feedback-q27" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">28.</div>
+  <p>An object of mass 5 kg oscillates with amplitude 0.2 m and frequency 1 Hz. What is the total energy?</p>
+  <div class="options">
+    <label><input type="radio" name="q28" /> a) 1.97 J</label>
+    <label><input type="radio" name="q28" /> b) 3.95 J</label>
+    <label><input type="radio" name="q28" /> c) 7.9 J</label>
+    <label><input type="radio" name="q28" /> d) 15.8 J</label>
+  </div>
+  <div class="feedback" id="feedback-q28" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">29.</div>
+  <p>If the period of a mass-spring system is 0.5 s, what is its angular frequency?</p>
+  <div class="options">
+    <label><input type="radio" name="q29" /> a) \(\pi\) rad/s</label>
+    <label><input type="radio" name="q29" /> b) \(2\pi\) rad/s</label>
+    <label><input type="radio" name="q29" /> c) \(4\pi\) rad/s</label>
+    <label><input type="radio" name="q29" /> d) \(8\pi\) rad/s</label>
+  </div>
+  <div class="feedback" id="feedback-q29" style="display:none; margin-top:8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">30.</div>
+  <p>A planet of mass \(6 \times 10^{24}\) kg orbits at radius \(4.2 \times 10^7\) m. What is the gravitational potential energy of a 1 kg satellite there?</p>
+  <div class="options">
+    <label><input type="radio" name="q30" /> a) \(-1.0 \times 10^8\) J</label>
+    <label><input type="radio" name="q30" /> b) \(-9.5 \times 10^8\) J</label>
+    <label><input type="radio" name="q30" /> c) \(-1.0 \times 10^9\) J</label>
+    <label><input type="radio" name="q30" /> d) \(-9.5 \times 10^9\) J</label>
+  </div>
+  <div class="feedback" id="feedback-q30" style="display:none; margin-top:8px;"></div>
+</div>
+
+
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b",
+      q2: "b",
+      q3: "c",
+      q4: "d",
+      q5: "b",
+      q6: "c",
+      q7: "d",
+      q8: "d",
+      q9: "b",
+      q10: "c",
+      q11: "b",
+  q12: "c",
+  q13: "b",
+  q14: "b",
+  q15: "c",
+  q16: "b",
+  q17: "b",
+  q18: "a",
+  q19: "c",
+  q20: "a",
+  q21: "a",
+  q22: "c",
+  q23: "c",
+  q24: "d",
+  q25: "b",
+  q26: "b",
+  q27: "a",
+  q28: "b",
+  q29: "c",
+  q30: "b"
+    };
+
+
+    const feedback= {
+          q1: "The total mechanical energy of the system can be given as \\( \\frac{1}{2}kA^2 \\). When the displacement is \\( \\frac{A}{2} \\), the elastic potential energy is \\( \\frac{1}{2}k\\left(\\frac{A}{2}\\right)^2 = \\frac{1}{8}kA^2 \\). This is one fourth of the total mechanical energy in the system. Using conservation of energy, the other three fourths come from kinetic energy.",
+
+  q2: "The gravitational force points toward the center (the star) and provides the centripetal acceleration.",
+
+  q3: "Using the formula \\( T = 2\\pi \\sqrt{\\frac{m}{k}} \\), if the spring constant \\(k\\) is doubled, the period becomes \\( T = 2\\pi \\sqrt{\\frac{m}{2k}} = \\frac{1}{\\sqrt{2}} T \\).",
+
+  q4: "According to Kepler's third law, \\( T^2 \\propto r^3 \\), so the square of the orbital period is proportional to the cube of the radius.",
+
+  q5: "At equilibrium, the net force is zero: \\( mg = kx \\). Solving for \\(x\\) gives \\( x = \\frac{mg}{k} \\).",
+
+  q6: "Using the formula \\( T = 2\\pi \\sqrt{\\frac{l}{g}} \\), increasing \\(l\\) increases the period.",
+
+  q7: "At equilibrium, \\( mg = kx \\). Solving: \\( k = \\frac{mg}{x} = \\frac{2 \\times 9.8}{0.2} = 98 \\approx 100\\,\\text{N/m} \\).",
+
+  q8: "In simple harmonic motion, the acceleration is always \\( \\pi \\) radians (180°) out of phase with the displacement, meaning it points in the opposite direction.",
+
+  q9: "Setting gravitational force \\( F = \\frac{GMm}{R^2} \\) equal to \\(mg\\) and solving for \\(g\\) gives \\( g = \\frac{GM}{R^2} \\).",
+
+  q10: "In SHM, the total energy remains constant and continuously transforms between kinetic and potential energy.",
+
+  q11: "Maximum speed in SHM is given by \\(v_{max} = \\omega A\\), where \\(\\omega\\) is angular frequency and \\(A\\) is amplitude; this represents the point where all energy is kinetic.",
+  
+  q12: "The negative sign in gravitational potential energy \\(U = -\\frac{GMm}{r}\\) shows that work must be done to move masses from separation \\(r\\) to infinity, reflecting the attractive nature of gravity.",
+  
+  q13: "Frequency and period are inversely related: \\(T = 1/f\\). If frequency doubles, period halves.",
+  
+  q14: "In SHM, acceleration \\(a = -\\omega^2 x\\) always opposes displacement, restoring the mass toward equilibrium (the negative sign shows direction is opposite to \\(x\\)).",
+  
+  q15: "Orbital speed is \\(v = \\sqrt{\\frac{GM}{r}}\\). Doubling radius means \\(v\\) decreases by \\(1/\\sqrt{2}\\) (since \\(v \\propto 1/\\sqrt{r}\\)).",
+  
+  q16: "Total mechanical energy in SHM is \\(E = \\frac{1}{2}kA^2\\). If amplitude doubles, energy increases by factor 4 because \\(A^2\\) quadruples.",
+  
+  q17: "Gravitational potential energy between two masses is \\(U = -\\frac{GMm}{r}\\), negative because gravitational force is attractive.",
+  
+  q18: "On the Moon, \\(g\\) is smaller, so \\(T = 2\\pi\\sqrt{\\frac{L}{g}}\\) increases; thus, the period increases.",
+  
+  q19: "The restoring force is proportional to displacement: \\(F = -kx\\), the defining feature of SHM.",
+  
+  q20: "Period of a mass-spring oscillator is \\(T = 2\\pi\\sqrt{m/k}\\). Quadrupling \\(m\\) makes \\(T\\) double since \\(\\sqrt{4} = 2\\).",
+
+  q21: "The maximum speed in SHM is given by \\(v_{max} = \\omega A\\), where \\(\\omega = \\sqrt{\\frac{k}{m}} = \\sqrt{\\frac{200}{0.5}} = 20\\,rad/s\\). So \\(v_{max} = 20 \\times 0.1 = 2\\,m/s\\).",
+
+  q22: "The period of a pendulum is \\(T = 2\\pi \\sqrt{\\frac{L}{g}} = 2\\pi \\sqrt{\\frac{1.5}{9.8}} \\approx 2.45\\,s\\).",
+
+  q23: "Using \\(g = \\frac{GM}{R^2}\\), \\(G = 6.67 \\times 10^{-11}\\). Substituting: \\(g = \\frac{6.67e-11 * 6e24}{(6.4e6)^2} \\approx 9.8\\,m/s^2\\).",
+
+  q24: "Maximum acceleration is \\(a_{max} = \\omega^2 A = 5^2 * 0.3 = 25 *0.3 =7.5\\,m/s^2\\).",
+
+  q25: "Centripetal acceleration: \\(a = \\frac{v^2}{r} = \\frac{(3e3)^2}{2e7} = \\frac{9e6}{2e7} =0.45\\,m/s^2\\).",
+
+  q26: "Frequency \\(f=2Hz\\), \\(\\omega=2\\pi f=4\\pi\\). Then \\(k=m \\omega^2=3*(4\\pi)^2=3*16\\pi^2 \\approx 474\\,N/m\\).",
+
+  q27: "Potential energy: \\(U=\\frac{1}{2}kx^2=0.5*300*0.0025=0.375J\\).",
+
+  q28: "Energy: \\(E=\\frac{1}{2}kA^2\\). First, \\(\\omega=2\\pi f=2\\pi\\), \\(k=m \\omega^2=5*(2\\pi)^2=5*4\\pi^2\\approx197\\). \\(E=0.5*197*0.04\\approx3.95J\\).",
+
+  q29: "Angular frequency: \\(\\omega=\\frac{2\\pi}{T}=\\frac{2\\pi}{0.5}=4\\pi\\,rad/s\\).",
+
+  q30: "Potential energy: \\(U=-\\frac{GMm}{r}\\). \\(G=6.67e-11\\), \\(M=6e24\\), \\(r=4.2e7\\). \\(U=-(6.67e-11*6e24)/4.2e7 = -9.5e8J\\)."
+
+  
+     
+
+    }
+
+    function checkAnswers() {
+  let score = 0;
+  for (let i = 1; i <= 30; i++) {
+    const questionName = "q" + i;
+    const options = document.getElementsByName(questionName);
+    let selected = "";
+    options.forEach(opt => {
+      opt.parentElement.style.color = "black"; // Reset color
+      if (opt.checked) selected = opt.value;
+    });
+
+    const feedbackEl = document.getElementById("feedback-" + questionName);
+    if (selected === answers[questionName]) {
+      score++;
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "green";
+      });
+    } else {
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "red";
+        if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+      });
+    }
+
+    // Show feedback
+    if (feedbackEl) {
+      feedbackEl.innerText = "Explanation: " + (feedback[questionName] || "No feedback available.");
+      feedbackEl.style.display = "block";
+    }
+    if (window.MathJax) {
+  MathJax.typeset(); // Re-render MathJax math in dynamically added content
+}
+  }
+
+  document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+}
+
+
+  // Attach values a-d to radio buttons
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+  </script>
+</body>
+</html>

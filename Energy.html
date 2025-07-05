@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work, Energy, & Power</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    color: #212529;
+  }
+
+  h1, h2, h5 {
+    font-weight: 700;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0d6efd;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #0b5ed7;
+  }
+
+  .question {
+    margin-bottom: 1.8rem;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .question:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+
+  .options button {
+    margin: 0.25rem 0.35rem 0.25rem 0;
+    min-width: 110px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .options button.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  .options button:hover:not(.active):not(:disabled) {
+    background-color: #e7f1ff;
+  }
+
+  .correct {
+    background-color: #d1e7dd !important;
+    border-color: #badbcc !important;
+    color: #0f5132 !important;
+  }
+  .incorrect {
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+    color: #842029 !important;
+  }
+
+  .feedback {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Top content area */
+  .top-content {
+    min-height: 400px;
+    margin-bottom: 3rem;
+    background: #e3f2fd;
+    border: 2px dashed #90caf9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1565c0;
+    font-size: 1.2rem;
+    font-style: italic;
+    user-select: none;
+  }
+
+  .center-align {
+    
+    text-align: center;
+  }
+
+  /* Container for left/right text + image */
+  .left-half {
+    width: 100%;
+    font-size: 1.15rem;
+    text-align: left;
+    padding: 1rem 2rem 1rem 0;
+    color: #212529;
+  }
+
+  .right-half {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right-half img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+  }
+  .right-half img:hover {
+    transform: scale(1.03);
+  }
+
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  /* Controls container */
+  #controls label {
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  #controls input[type=number] {
+    width: 4.5rem;
+    padding: 0.25rem 0.4rem;
+    margin-left: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  #controls input[type=number]:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+
+  #controls button.btn-success {
+    font-weight: 700;
+    padding: 0.45rem 1.2rem;
+    border-radius: 8px;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #e0e0e0 !important; /* light gray background */
+    color: black !important; /* black text */
+    border-color: #6c757d !important; /* keep default border */
+  }
+
+  .btn-outline-secondary.active {
+    background-color: #0d6efd !important; /* Bootstrap primary blue */
+    color: white !important;
+  }
+
+  /* Canvas container styling */
+  #simCanvas {
+    border: 2px solid #90caf9;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    background-color: #a7ffeb;
+  }
+
+  /* Formulas image */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-fluid-isacc {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    transform: scale(1.5);
+  }
+
+  /* Quiz container animation */
+  .quiz-container {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 900px;
+    margin: 0 auto 4rem;
+  }
+
+  /* Back links & other anchors */
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  a:hover {
+    transform: scale(1.1);
+    color: #0a58ca;
+  }
+  .img-fluid-center-equations {
+    height: auto;
+    width: 20%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Top area for your other content -->
+
+  <!-- Start-->
+
+  <!-- Top area split into two columns -->
+<section class="container mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text -->
+    <div class="col-md-6">
+      <div style="background:#e3f2fd; padding: 1rem; border-radius: 10px;">
+        <h2>Work, Energy, & Power</h2>
+        <p>Work, Energy, and Power is around 14–18% of your AP test. This unit builds on dynamics by focusing on how forces cause motion through energy. Understanding work, kinetic and potential energy, and power will help you solve a wide range of physics problems. Mastery of energy makes tough problems much easier.</p>
+        <p>Now let's get into it!</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Cannon Simulation -->
+    <div class="col-md-6 text-center">
+      <img src="./energypagepicture.jpg" alt="Descriptive Alt Text" class="img-fluid-isacc" />
+  </div>
+</section>
+
+
+
+
+  <!--Stop-->
+
+  <!-- Hello World Text Box -->
+  <div class="container my-4 d-flex justify-content-between align-items-center">
+    <div class="left-half">
+      Work, Energy, and Power is the study of how forces transfer energy and how that energy is stored, used, or lost in a system. In AP Physics C: Mechanics, this unit builds on dynamics by introducing the Work-Energy Theorem, potential and kinetic energy, and the concept of power. It focuses on how work is done by forces, how energy is conserved or transformed, and how to approach systems where forces may be unknown or difficult to calculate. Mastery of work and energy gives you powerful shortcuts and insights, especially in complex problems involving motion, springs, gravity, or collisions.
+    </div>
+    <div class="right-half">
+      <img src="./alberteinstein.jpg" alt="Descriptive Alt Text" class="img-fluid" />
+    </div>
+  </div>
+
+  <h1>
+    <p>Relevant Formulas On Equation Sheet:</p>
+  </h1>
+  <div>
+    <img src = "./EquationSheetEnergy.png" alt="Descriptive Alt Text" class="img-fluid-center"/>
+    <img src = "./EquationSheetEnergy2.png" alt="Descriptive Alt Text" class="img-fluid-center-equations"/>
+  </div>
+
+ 
+<h1>Concept 1: Work</h1>
+<div class="center-align">
+  <p><a href="definition-of-work.html">Key Topic 1: Definition of Work</a></p>
+</div>
+<div class="center-align">
+  <p><a href="work-variable-force.html">Key Topic 2: Calculating Work</a></p>
+</div>
+
+
+<h1>Concept 2: Kinetic Energy and the Work–Energy Theorem</h1>
+<div class="center-align">
+  <p><a href="kinetic-energy.html">Key Topic 1: Kinetic Energy</a></p>
+</div>
+<div class="center-align">
+  <p><a href="work-energy-theorem.html">Key Topic 2: Work-Energy Theorem</a></p>
+</div>
+
+<h1>Concept 3: Potential Energy</h1>
+<div class ="center-align">
+    <p><a href="gravitational-elastic-potential-energy.html">Key Topic 1: Gravitational and Elastic Potential Energy</a></p>
+</div>
+<div class ="center-align">
+    <p><a href="conservative-nonconservative-forces.html">Key Topic 2: Conservative and Non-Conservative Forces</a></p>
+</div>
+<div class ="center-align">
+    <p><a href="potential-energy-curves.html">Key Topic 3: Potential Energy Curves</a></p>
+</div>
+
+<h1>Concept 4: Conservation of Mechanical Energy</h1>
+<div class ="center-align">
+    <p><a href="conservation-conservative.html">Key Topic 1: Conservation of Total Mechanical Energy</a></p>
+</div>
+<div class ="center-align">
+    <p><a href="conservation-nonconservative.html">Key Topic 2: Mechanical Energy with Non-Conservative Work</a></p>
+</div>
+
+<h1>Concept 5: Power</h1>
+<div class ="center-align">
+    <p><a href="power-definition.html">Key Topic 1: Definition of Power</a></p>
+</div>
+<div class ="center-align">
+    <p><a href="power-mechanics-problems.html">Key Topic 2: Power in Mechanics Problems</a></p>
+</div>
+
+<h1>Practice Tests</h1>
+<div class ="center-align">
+    <p><a href="practiceWEP1.html">Practice Test 1: Work, Energy, and Power</a></p>
+</div>
+<div class ="center-align">
+    <p><a href="practiceWEP2.html">Practice Test 2: Work, Energy, and Power</a></p>
+</div>
+
+
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+  <!-- Quiz Section -->
+  <section class="quiz-container container">
+    <h1>🧭 Work, Energy, and Power: Check for Understanding</h1>
+    <div id="quiz"></div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+      <div id="scoreDisplay" class="mt-3 fw-bold"></div>
+    </div>
+  </section>
+
+  <script>
+  const questions = [
+    {
+      q: "1. What is the definition of work in physics?",
+      options: ["Force applied over time", "Change in kinetic energy", "Force times displacement in the direction of force", "Energy stored in an object"],
+      correct: 2
+    },
+    {
+      q: "2. What is the unit of work in the SI system?",
+      options: ["Watt", "Newton", "Joule", "Pascal"],
+      correct: 2
+    },
+    {
+      q: "3. A constant force of 10 N moves an object 5 m in the direction of the force. How much work is done?",
+      options: ["50 J", "15 J", "5 J", "0 J"],
+      correct: 0
+    },
+    {
+      q: "4. If the angle between force and displacement is 90°, the work done is:",
+      options: ["Maximum", "Minimum", "Zero", "Infinite"],
+      correct: 2
+    },
+    {
+      q: "5. What is the formula for kinetic energy?",
+      options: ["KE = mv²", "KE = 0.5mv", "KE = 0.5mv²", "KE = mgh"],
+      correct: 2
+    },
+    {
+      q: "6. A 2 kg mass is moving at 3 m/s. What is its kinetic energy?",
+      options: ["6 J", "9 J", "3 J", "18 J"],
+      correct: 1
+    },
+    {
+      q: "7. What is the work-energy theorem?",
+      options: ["Work equals mass times acceleration", "Work equals net force", "Work done equals change in kinetic energy", "Work is conserved"],
+      correct: 2
+    },
+    {
+      q: "8. A spring with k = 200 N/m is compressed 0.1 m. What is the stored energy?",
+      options: ["1 J", "0.5 J", "2 J", "0.05 J"],
+      correct: 1
+    },
+    {
+      q: "9. What type of energy is associated with an object's position in a gravitational field?",
+      options: ["Elastic potential energy", "Thermal energy", "Gravitational potential energy", "Chemical energy"],
+      correct: 2
+    },
+    {
+      q: "10. A block slides down a frictionless ramp. Which energy conversion occurs?",
+      options: ["Kinetic to thermal", "Thermal to potential", "Potential to kinetic", "Elastic to kinetic"],
+      correct: 2
+    },
+    {
+      q: "11. What is power in physics?",
+      options: ["Force per time", "Work per unit mass", "Work done per unit time", "Energy lost to friction"],
+      correct: 2
+    },
+    {
+      q: "12. What is the unit of power?",
+      options: ["Newton", "Watt", "Joule", "Ampere"],
+      correct: 1
+    },
+    {
+      q: "13. A 100 W bulb runs for 10 seconds. How much energy does it use?",
+      options: ["1000 J", "10 J", "110 J", "0.1 J"],
+      correct: 0
+    },
+    {
+      q: "14. If the net work done on an object is negative, what happens to its kinetic energy?",
+      options: ["Increases", "Stays the same", "Becomes zero", "Decreases"],
+      correct: 3
+    },
+    {
+      q: "15. Two identical blocks are lifted to the same height. One is lifted quickly, the other slowly. Which statement is true?",
+      options: ["Both require same work but different power", "Both require same power and work", "Faster one needs more work", "Slower one has more energy"],
+      correct: 0
+    }
+  ];
+
+  let userAnswers = Array(questions.length).fill(null);
+
+  function renderQuiz() {
+    const quizDiv = document.getElementById("quiz");
+    questions.forEach((q, index) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.id = `question-${index}`;
+      let html = `<h5>Q${index + 1}: ${q.q}</h5><div class="options">`;
+      q.options.forEach((choice, i) => {
+        html += `<button type="button" class="btn btn-outline-secondary" onclick="selectAnswer(${index}, ${i}, this)">${choice}</button> `;
+      });
+      html += `</div><div class="feedback" id="feedback-${index}"></div>`;
+      qDiv.innerHTML = html;
+      quizDiv.appendChild(qDiv);
+    });
+  }
+
+  function selectAnswer(qIndex, aIndex, button) {
+    userAnswers[qIndex] = aIndex;
+    const options = document.querySelectorAll(`#question-${qIndex} .options button`);
+    options.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  }
+
+  function submitQuiz() {
+    let score = 0;
+    questions.forEach((q, i) => {
+      const selected = userAnswers[i];
+      const feedback = document.getElementById(`feedback-${i}`);
+      const buttons = document.querySelectorAll(`#question-${i} .options button`);
+
+      buttons.forEach((btn, j) => {
+        btn.disabled = true;
+        btn.classList.remove("correct", "incorrect");
+        if (j === q.correct) btn.classList.add("correct");
+        if (j === selected && selected !== q.correct) btn.classList.add("incorrect");
+      });
+
+      if (selected === q.correct) {
+        score++;
+        feedback.innerHTML = "✅ Correct";
+      } else {
+        feedback.innerHTML = `❌ Incorrect (Correct: ${q.options[q.correct]})`;
+      }
+    });
+    document.getElementById("scoreDisplay").innerText = `Your Score: ${score} / ${questions.length}`;
+  }
+
+  renderQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moment of Inertia Definition and Significance</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul, ol {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.3rem;
+    }
+    ol {
+      padding-left: 1.3rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Moment of Inertia Definition and Significance</h1>
+
+    <p>
+      You’re already familiar with <strong>mass</strong> — it’s a measure of how much matter is in an object and how hard it is to change its linear motion (like speeding up a rolling ball). Now, when objects spin or rotate, their resistance to changes in rotational motion depends not just on how much mass they have, but also on how that mass is spread out around the axis they’re spinning about. This is what the <strong>moment of inertia</strong> measures.
+    </p>
+
+    <h2>What Is Moment of Inertia?</h2>
+    <p>
+      Moment of inertia, symbolized as <code>I</code>, tells us how “hard” it is to spin an object faster or slower. The bigger the moment of inertia, the more effort (torque) it takes to change the rotational speed.
+    </p>
+    <p>
+      Unlike mass alone, moment of inertia depends heavily on <em>where</em> the mass is located relative to the rotation axis. Mass far from the axis contributes much more to the moment of inertia than mass close to it.
+    </p>
+
+    <img src="moment-of-inertia-diagram.jpg" alt = "Descriptive Alt Text" class = "img-fluid-center">
+
+    <h2>Mathematical Definition for Discrete Masses</h2>
+    <p>For an object made of many small pieces (or particles), each with mass \( m_i \) at distance \( r_i \) from the axis, the total moment of inertia is:</p>
+
+    <div class="formula-box">
+      \( I = \sum m_i r_i^2 \)
+    </div>
+
+    <h2>Example Problem</h2>
+    <p>
+      Imagine two small masses connected by a light, rigid rod 2 meters long. The system rotates about an axis through the center of the rod, perpendicular to its length.
+    </p>
+    <p>Each mass is 3 kg, located at the rod’s ends.</p>
+    <p><strong>Calculate the moment of inertia \( I \) of this system about the given axis.</strong></p>
+
+    <div class="formula-box">
+      \( I = \sum m_i r_i^2 = m_1 r_1^2 + m_2 r_2^2 \)
+    </div>
+
+    <p>Since the axis passes through the center, each mass is exactly 1 meter away:</p>
+
+    <div class="formula-box">
+      \( I = 3 \times (1)^2 + 3 \times (1)^2 = 3 + 3 = 6 \, \text{kg·m}^2 \)
+    </div>
+
+    <p>
+      So the total moment of inertia of the system is <strong>6 kg·m²</strong>.
+    </p>
+
+    <h2>Calculus Definition for Continuous Mass Distribution</h2>
+    <p>
+      For objects with mass distributed continuously (like rods, disks, spheres), we use an integral instead of a sum:
+    </p>
+
+    <div class="formula-box">
+      \( I = \int r^2 \, dm \)
+    </div>
+
+    <p>Here, \( dm \) is an infinitesimally small piece of mass at a distance \( r \) from the axis.</p>
+
+    <h2>Example: Moment of Inertia of a Uniform Thin Rod About Its Center</h2>
+    <p>
+      Consider a thin rod of length \( L \) and total mass \( M \). We want to find its moment of inertia when it rotates about an axis through its center, perpendicular to its length.
+    </p>
+
+    <p>
+      Since the rod is uniform, its mass per unit length (linear mass density) is:
+    </p>
+
+    <div class="formula-box">
+      \( \lambda = \frac{M}{L} \)
+    </div>
+
+    <p>We take the rod along the x-axis from \(-\frac{L}{2}\) to \(+\frac{L}{2}\). A small element of length \( dx \) at position \( x \) has mass:</p>
+
+    <div class="formula-box">
+      \( dm = \lambda \, dx = \frac{M}{L} \, dx \)
+    </div>
+
+    <p>The distance from the rotation axis (at \( x=0 \)) is simply \( |x| \), so:</p>
+
+    <div class="formula-box">
+      \( I = \int_{-\frac{L}{2}}^{\frac{L}{2}} x^2 \, dm = \int_{-\frac{L}{2}}^{\frac{L}{2}} x^2 \cdot \frac{M}{L} \, dx \)
+    </div>
+
+    <p>Evaluating the integral:</p>
+
+    <div class="formula-box">
+      \( I = \frac{M}{L} \int_{-\frac{L}{2}}^{\frac{L}{2}} x^2 \, dx = \frac{M}{L} \left[ \frac{x^3}{3} \right]_{-\frac{L}{2}}^{\frac{L}{2}} \)
+    </div>
+
+    <div class="formula-box">
+      \( I = \frac{M}{L} \left( \frac{(L/2)^3}{3} - \frac{(-L/2)^3}{3} \right) = \frac{M}{L} \cdot \frac{2}{3} \cdot \left(\frac{L}{2}\right)^3 \)
+    </div>
+
+    <p>Simplifying:</p>
+
+    <div class="formula-box">
+      \( I = \frac{M}{L} \cdot \frac{2}{3} \cdot \frac{L^3}{8} = \frac{M L^2}{12} \)
+    </div>
+
+    <p><strong>Answer:</strong> The moment of inertia of a uniform thin rod about its center is:</p>
+
+    <div class="formula-box">
+      \( \boxed{ I = \frac{1}{12} M L^2 } \)
+    </div>
+
+    <p>Now for any given values of mass and length, we can solve for the moment of inertia. For example, if the rod was 2 kg and was 6 m long. The moment of inertia would be 6 kg·m²</p>
+
+    <h2>Visualizing the Rod Example</h2>
+    <img src="rod-moment-of-inertia.jpg" alt = "Descriptive Alt Text" class = "img-fluid-center">
+
+
+    <h2>Summary</h2>
+    <p>
+      - The moment of inertia generalizes mass to rotational motion and depends on how mass is distributed.<br>
+      - The further the mass is distributed from the axis of rotation, the greater the value for moment of inertia will be, making it harder to rotate.<br>
+      - For discrete masses, it’s a sum of \( m_i r_i^2 \).<br>
+      - For continuous distributions, it’s an integral \( \int r^2 \, dm \).<br>
+      - Calculus allows finding moments of inertia for real objects like rods and disks.<br>
+      - The rod example shows the moment of inertia depends on length squared and total mass.
+    </p>
+  </div>
+</body>
+</html>

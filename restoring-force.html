@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restoring Forces and Conditions for SHM</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.25rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    canvas {
+      display: block;
+      margin: 1rem auto;
+      background: #e0f2fe;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    label {
+      display: inline-block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: 500;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .controls {
+      margin-top: 1.5rem;
+    }
+    #omegaDisplay {
+      margin-top: 1.2rem;
+      font-size: 1.15rem;
+      color: #1e3a8a;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Restoring Forces and Conditions for SHM</h1>
+
+    <p>Oscillations arise when an object is subject to a force that acts to restore it to an equilibrium position. This type of force is called a <strong>restoring force</strong>.</p>
+
+    <h2>Definition</h2>
+    <p>A <strong>restoring force</strong> is a force that is always directed toward the system's equilibrium position and is proportional to the displacement from that position.</p>
+
+    <div class="formula-box">$$F = -kx$$</div>
+
+    <p>This is known as <strong>Hooke's Law</strong>, and it describes the restoring force in an ideal mass-spring system. The negative sign indicates that the force is directed opposite the displacement.</p>
+
+    <h2>Pendulum as a Restoring Force System</h2>
+    <p>A simple pendulum provides another excellent example of a restoring force system. When a pendulum is displaced from its equilibrium position, gravity creates a restoring force that brings it back.</p>
+
+    <div class="formula-box">$$F = -mg \sin(\theta)$$</div>
+
+    <p>Where:</p>
+    <ul>
+      <li>$F$ is the restoring force</li>
+      <li>$m$ is the mass of the pendulum bob</li>
+      <li>$g$ is the acceleration due to gravity</li>
+      <li>$\theta$ is the angular displacement from equilibrium</li>
+    </ul>
+
+    <p>For small angles ($\theta < 15°$), we can approximate $\sin(\theta) \approx \theta$, giving us:</p>
+    <div class="formula-box">$$F \approx -mg\theta$$</div>
+
+    <p>This shows that the restoring force is proportional to the displacement (angle), which is the key characteristic of simple harmonic motion.</p>
+
+    <h2>Mathematical Form of SHM for Pendulum</h2>
+    <p>For a simple pendulum, we can derive the mathematical form of simple harmonic motion. The restoring force component along the arc of motion is:</p>
+
+    <div class="formula-box">$$F = -mg \sin(\theta)$$</div>
+
+    <p>For small angles, $\sin(\theta) \approx \theta$, so:</p>
+    <div class="formula-box">$$F \approx -mg\theta$$</div>
+
+    <p>The displacement along the arc is $s = L\theta$, where $L$ is the length of the pendulum. Therefore:</p>
+    <div class="formula-box">$$\theta = \frac{s}{L}$$</div>
+
+    <p>Substituting this into the force equation:</p>
+    <div class="formula-box">$$F \approx -mg\frac{s}{L} = -\frac{mg}{L}s$$</div>
+
+    <p>This has the form $F = -ks$ where $k = \frac{mg}{L}$. Using Newton's Second Law:</p>
+    <div class="formula-box">$$m\frac{d^2s}{dt^2} = -\frac{mg}{L}s$$</div>
+
+    <p>Which simplifies to:</p>
+    <div class="formula-box">$$\frac{d^2s}{dt^2} = -\frac{g}{L}s$$</div>
+
+    <p>Defining $\omega = \sqrt{\frac{g}{L}}$, we get:</p>
+    <div class="formula-box">$$\frac{d^2s}{dt^2} = -\omega^2 s$$</div>
+
+    <p>This is the same form as the spring oscillator, confirming that a pendulum exhibits simple harmonic motion for small angles.</p>
+
+    <img src="pendulum-shm.png" alt="Descriptive Alt Text" class="img-fluid-center">
+    <figcaption>Figure 1: A spring exerts a restoring force directed toward equilibrium.</figcaption>
+
+    
+
+    <h2>Mathematical Form of SHM for Spring-Block Oscillator</h2>
+    
+
+    <p>Combining Hooke's Law with Newton's Second Law gives:</p>
+
+    <div class="formula-box">$$m\frac{d^2x}{dt^2} = -kx$$</div>
+
+    <p>Which simplifies to:</p>
+
+    <div class="formula-box">$$\frac{d^2x}{dt^2} = -\frac{k}{m}x$$</div>
+
+    <p>Defining $\omega = \sqrt{\frac{k}{m}}$, we write:</p>
+
+    <div class="formula-box">$$\frac{d^2x}{dt^2} = -\omega^2 x$$</div>
+
+    <p>This differential equation defines SHM: the acceleration is proportional to and opposite the displacement.</p>
+
+    <img src="shmspring.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+    <figcaption>Figure: Acceleration in SHM increases with displacement and always points toward equilibrium.</figcaption>
+
+    <h2>Key Characteristics</h2>
+    <ul>
+      <li>The force is <strong>proportional to displacement</strong>: more displacement → stronger force.</li>
+      <li>The force acts in the <strong>opposite direction</strong> of displacement.</li>
+      <li>These two conditions lead to <strong>simple harmonic motion</strong> (SHM).</li>
+    </ul>
+    <h2>Summary of SHM Conditions</h2>
+    <ul>
+      <li>The net force is proportional to the displacement: $F = -kx$</li>
+      <li>The motion follows $\frac{d^2x}{dt^2} = -\omega^2 x$</li>
+      <li>The system exhibits sinusoidal oscillations (if undamped)</li>
+    </ul>
+
+    <h2>Spring-Block Oscillator Simulation</h2>
+    <canvas id="springCanvas" width="800" height="300"></canvas>
+
+    <div class="controls">
+      <label for="massSlider">Mass (kg): <span id="massVal">1.0</span></label>
+      <input type="range" id="massSlider" min="0.5" max="5" step="0.1" value="1.0">
+
+      <label for="kSlider">Spring Constant (N/m): <span id="kVal">10</span></label>
+      <input type="range" id="kSlider" min="1" max="50" step="1" value="10">
+    </div>
+
+    <div id="omegaDisplay">Angular Frequency (ω): 3.16 rad/s</div>
+
+    <h2>Pendulum Simulation</h2>
+    <p>Explore how the pendulum's motion depends on its length, mass, and initial displacement:</p>
+    
+    <canvas id="pendulumCanvas" width="600" height="400"></canvas>
+    
+    <div class="controls">
+      <label for="lengthSlider">Length (m): <span id="lengthVal">1.0</span></label>
+      <input type="range" id="lengthSlider" min="0.5" max="2" step="0.1" value="1.0">
+
+      <label for="pendulumMassSlider">Mass (kg): <span id="pendulumMassVal">1.0</span></label>
+      <input type="range" id="pendulumMassSlider" min="0.5" max="3" step="0.1" value="1.0">
+
+      <label for="amplitudeSlider">Amplitude (deg): <span id="amplitudeVal">20</span></label>
+      <input type="range" id="amplitudeSlider" min="5" max="45" step="5" value="20">
+    </div>
+
+    <div id="pendulumOmegaDisplay">Angular Frequency (ω): 3.13 rad/s | Period (T): 2.01 s</div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('springCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let mass = 1.0;
+    let k = 10;
+    let A = 80;
+    let t = 0;
+    let dt = 0.016;
+    const origin = 150;
+    const x_eq = origin + 200;
+
+    const massSlider = document.getElementById("massSlider");
+    const kSlider = document.getElementById("kSlider");
+    const massVal = document.getElementById("massVal");
+    const kVal = document.getElementById("kVal");
+    const omegaDisplay = document.getElementById("omegaDisplay");
+
+    massSlider.addEventListener("input", () => {
+      mass = parseFloat(massSlider.value);
+      massVal.textContent = mass.toFixed(1);
+      updateOmega();
+    });
+
+    kSlider.addEventListener("input", () => {
+      k = parseFloat(kSlider.value);
+      kVal.textContent = k.toFixed(0);
+      updateOmega();
+    });
+
+    function updateOmega() {
+      const omega = Math.sqrt(k / mass);
+      omegaDisplay.textContent = `Angular Frequency (ω): ${omega.toFixed(2)} rad/s`;
+    }
+
+    function drawZigZagSpring(xStart, xEnd, y, coils = 10, amplitude = 10) {
+      const dx = (xEnd - xStart) / coils;
+      ctx.beginPath();
+      ctx.moveTo(xStart, y);
+      for (let i = 1; i < coils; i++) {
+        const x = xStart + dx * i;
+        const yOffset = i % 2 === 0 ? -amplitude : amplitude;
+        ctx.lineTo(x, y + yOffset);
+      }
+      ctx.lineTo(xEnd, y);
+      ctx.strokeStyle = "#1e3a8a";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+    }
+
+    function drawSpringBlock(x) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#555";
+      ctx.fillRect(origin - 20, 100, 20, 100);
+
+      drawZigZagSpring(origin, x, 150, 12, 10);
+
+      ctx.fillStyle = "#3b82f6";
+      ctx.fillRect(x, 120, 50, 60);
+
+      ctx.setLineDash([5, 5]);
+      ctx.beginPath();
+      ctx.moveTo(x_eq + 25, 100);
+      ctx.lineTo(x_eq + 25, 220);
+      ctx.strokeStyle = "#f59e0b";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = "#f59e0b";
+      ctx.font = "14px Roboto";
+      ctx.fillText("Equilibrium", x_eq - 30, 95);
+    }
+
+    function animate() {
+      const omega = Math.sqrt(k / mass);
+      const displacement = A * Math.cos(omega * t);
+      const x = x_eq + displacement;
+
+      drawSpringBlock(x);
+      t += dt;
+      requestAnimationFrame(animate);
+    }
+
+    updateOmega();
+    animate();
+
+    // Pendulum Simulation
+    const pendulumCanvas = document.getElementById('pendulumCanvas');
+    const pendulumCtx = pendulumCanvas.getContext('2d');
+    const lengthSlider = document.getElementById('lengthSlider');
+    const pendulumMassSlider = document.getElementById('pendulumMassSlider');
+    const amplitudeSlider = document.getElementById('amplitudeSlider');
+    const lengthVal = document.getElementById('lengthVal');
+    const pendulumMassVal = document.getElementById('pendulumMassVal');
+    const amplitudeVal = document.getElementById('amplitudeVal');
+    const pendulumOmegaDisplay = document.getElementById('pendulumOmegaDisplay');
+    
+    // Physics constants
+    const g = 9.8;
+    const scale = 100; // pixels per meter
+    
+    // Pendulum state
+    let pendulum = {
+      length: 1.0,
+      mass: 1.0,
+      amplitude: 20 * Math.PI / 180, // radians
+      theta: 0,
+      omega: 0,
+      t: 0
+    };
+    
+    let isAnimatingPendulum = true;
+    let pendulumAnimationId;
+    
+    lengthSlider.addEventListener("input", () => {
+      pendulum.length = parseFloat(lengthSlider.value);
+      lengthVal.textContent = pendulum.length.toFixed(1);
+      updatePendulumOmega();
+    });
+
+    pendulumMassSlider.addEventListener("input", () => {
+      pendulum.mass = parseFloat(pendulumMassSlider.value);
+      pendulumMassVal.textContent = pendulum.mass.toFixed(1);
+    });
+
+    amplitudeSlider.addEventListener("input", () => {
+      pendulum.amplitude = parseFloat(amplitudeSlider.value) * Math.PI / 180;
+      amplitudeVal.textContent = (pendulum.amplitude * 180 / Math.PI).toFixed(0);
+    });
+    
+    function updatePendulumOmega() {
+      const omega = Math.sqrt(g / pendulum.length);
+      const period = 2 * Math.PI * Math.sqrt(pendulum.length / g);
+      pendulumOmegaDisplay.textContent = `Angular Frequency (ω): ${omega.toFixed(2)} rad/s | Period (T): ${period.toFixed(2)} s`;
+    }
+    
+    function updatePendulum() {
+      const omega = Math.sqrt(g / pendulum.length);
+      pendulum.theta = pendulum.amplitude * Math.cos(omega * pendulum.t);
+      pendulum.omega = -pendulum.amplitude * omega * Math.sin(omega * pendulum.t);
+      pendulum.t += 0.016; // 60 FPS
+    }
+    
+    function drawPendulum() {
+      pendulumCtx.clearRect(0, 0, pendulumCanvas.width, pendulumCanvas.height);
+      
+      const centerX = pendulumCanvas.width / 2;
+      const centerY = 50;
+      const bobX = centerX + pendulum.length * scale * Math.sin(pendulum.theta);
+      const bobY = centerY + pendulum.length * scale * Math.cos(pendulum.theta);
+      
+      // Draw pivot point
+      pendulumCtx.fillStyle = '#374151';
+      pendulumCtx.beginPath();
+      pendulumCtx.arc(centerX, centerY, 5, 0, 2 * Math.PI);
+      pendulumCtx.fill();
+      
+      // Draw string
+      pendulumCtx.strokeStyle = '#6b7280';
+      pendulumCtx.lineWidth = 2;
+      pendulumCtx.beginPath();
+      pendulumCtx.moveTo(centerX, centerY);
+      pendulumCtx.lineTo(bobX, bobY);
+      pendulumCtx.stroke();
+      
+      // Draw bob
+      const bobRadius = 10 + pendulum.mass * 5;
+      pendulumCtx.fillStyle = '#3b82f6';
+      pendulumCtx.beginPath();
+      pendulumCtx.arc(bobX, bobY, bobRadius, 0, 2 * Math.PI);
+      pendulumCtx.fill();
+      
+      // Draw velocity vector
+      const velScale = 1;
+      const velX = pendulum.omega * pendulum.length * scale * Math.cos(pendulum.theta) * velScale;
+      const velY = -pendulum.omega * pendulum.length * scale * Math.sin(pendulum.theta) * velScale;
+      
+      pendulumCtx.strokeStyle = '#ef4444';
+      pendulumCtx.lineWidth = 3;
+      pendulumCtx.beginPath();
+      pendulumCtx.moveTo(bobX, bobY);
+      pendulumCtx.lineTo(bobX + velX, bobY + velY);
+      pendulumCtx.stroke();
+      
+      // Draw info
+      pendulumCtx.fillStyle = '#374151';
+      pendulumCtx.font = '14px Arial';
+      pendulumCtx.textAlign = 'left';
+      pendulumCtx.fillText(`θ = ${(pendulum.theta * 180 / Math.PI).toFixed(1)}°`, 10, 30);
+      pendulumCtx.fillText(`ω = ${(pendulum.omega * 180 / Math.PI).toFixed(1)}°/s`, 10, 50);
+      pendulumCtx.fillText(`T = ${(2 * Math.PI * Math.sqrt(pendulum.length / g)).toFixed(2)}s`, 10, 70);
+    }
+    
+    function animatePendulum() {
+      if (!isAnimatingPendulum) return;
+      
+      updatePendulum();
+      drawPendulum();
+      pendulumAnimationId = requestAnimationFrame(animatePendulum);
+    }
+    
+    updatePendulumOmega();
+    animatePendulum();
+  </script>
+</body>
+</html>

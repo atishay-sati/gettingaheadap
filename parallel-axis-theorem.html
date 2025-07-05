@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parallel Axis Theorem</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    #simulation-wrapper {
+  width: 420px; /* a bit wider than canvas + padding */
+  margin: 1rem auto 2rem; /* center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+     .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #ffffff;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    label, input, button {
+      font-size: 1rem;
+      margin: 0.3rem;
+    }
+    button {
+  width: 140px;
+  margin: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Parallel Axis Theorem</h1>
+
+    <p>
+      Sometimes, we know an object's moment of inertia about an axis through its center of mass (COM), but we need to calculate it about another axis, typically one that's parallel and offset by a distance \( d \). That's when the <strong>Parallel Axis Theorem</strong> becomes essential. In other words, we use the parralel axis to calculate around a different axis rather than the center of mass.
+    </p>
+
+    <h2>Theorem Statement</h2>
+    <div class="formula-box">
+      \( I = I_{\text{cm}} + Md^2 \)
+    </div>
+    <p>
+      Where:
+    </p>
+    <ul>
+      <li>\( I_{\text{cm}} \): moment of inertia through the center of mass</li>
+      <li>\( M \): total mass of the object</li>
+      <li>\( d \): perpendicular distance from COM axis to the new axis</li>
+    </ul>
+
+    <h2>Why It Works</h2>
+    <p>
+      The moment of inertia depends on both the amount of mass and how far that mass is from the axis. When you shift the axis, all the mass is, on average, farther away. The extra \( Md^2 \) accounts for that increased resistance to rotation.
+    </p>
+
+    <img src="parallel-axis-theorem-diagram.jpg" alt = "Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Example 1: Thin Rod, Axis at the End</h2>
+    <p>
+      For a thin rod of mass \( M \) and length \( L \), the moment of inertia about the center is:
+    </p>
+    <div class="formula-box">
+      \( I_{\text{cm}} = \frac{1}{12}ML^2 \)
+    </div>
+    <p>
+      To find \( I \) about one end, the axis is shifted by \( d = \frac{L}{2} \).
+    </p>
+    <div class="formula-box">
+      \( I = \frac{1}{12}ML^2 + M\left(\frac{L}{2}\right)^2 = \frac{1}{12}ML^2 + \frac{1}{4}ML^2 = \frac{1}{3}ML^2 \)
+    </div>
+
+    <img src="parallel-axis-theorem-rod.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Example 2: Rod + Sphere (Composite Object)</h2>
+    <p>
+      Suppose we have a uniform rod of mass \( M_r \) and length \( L \), with a solid sphere of mass \( M_s \) and radius \( R \) attached at one end. We want the moment of inertia of the system about the opposite end of the rod.
+    </p>
+
+    <h3>Step 1: Rod's Contribution</h3>
+    <p>
+      The rod's own moment of inertia about the far end is:
+    </p>
+    <div class="formula-box">
+      \( I_{\text{rod}} = \frac{1}{3} M_r L^2 \)
+    </div>
+
+    <h3>Step 2: Sphere's Contribution</h3>
+    <p>
+      The sphere rotates about the same axis, but its center is at distance \( L + R \) from the axis.
+    </p>
+    <p>
+      Moment of inertia of a solid sphere about its center:
+    </p>
+    <div class="formula-box">
+      \( I_{\text{sphere, cm}} = \frac{2}{5} M_s R^2 \)
+    </div>
+    <p>
+      Apply parallel axis theorem to move axis to end of rod:
+    </p>
+    <div class="formula-box">
+      \( I_{\text{sphere}} = \frac{2}{5} M_s R^2 + M_s (L + R)^2 \)
+    </div>
+
+    <h3>Total Moment of Inertia</h3>
+    <div class="formula-box">
+      \( I_{\text{total}} = I_{\text{rod}} + I_{\text{sphere}} = \frac{1}{3} M_r L^2 + \left( \frac{2}{5} M_s R^2 + M_s (L + R)^2 \right) \)
+    </div>
+
+    <img src="rod-sphere.png" alt = "Descriptive Alt Text" class = "img-fluid-center">
+
+    <h2>Tips for Using the Theorem</h2>
+    <ul>
+      <li>Always use the object’s center-of-mass moment of inertia as your starting point.</li>
+      <li>Use this theorem when the new axis is parallel to the original one.</li>
+      <li>Great for composite objects, like pendulums or rotating beams.</li>
+    </ul>
+
+    <h2>Common Use Cases</h2>
+    <ul>
+      <li>Pendulums: rods or disks swinging about a pivot</li>
+      <li>Gears mounted off-center</li>
+      <li>Compound systems with multiple bodies</li>
+    </ul>
+
+    <h2>Summary</h2>
+    <p>
+      The Parallel Axis Theorem allows you to easily shift known moments of inertia to new axes and combine them for complex systems. It’s a key tool for analyzing rotational motion beyond idealized center-of-mass setups.
+    </p>
+        <h1>Disk + Blob Inertia Simulation </h1>
+
+      <div id="simulation-wrapper">
+
+  <canvas id="canvas" width="500" height="300"></canvas>
+
+  <div>
+    <label for="blobMass">Blob Mass (kg):</label>
+    <input type="number" id="blobMass" value="1" min="0.1" max="10" step="0.1">
+    <label for="blobDistance">Distance from Center (m):</label>
+    <input type="range" id="blobDistance" min="0" max="2" step="0.01" value="1">
+    <span id="distanceLabel">1.00 m</span>
+    <button onclick="dropBlob()">Drop Blob</button>
+  </div>
+
+  <div class="formula-box" id="inertiaResult">
+    Moment of Inertia: —
+  </div>
+
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const diskRadiusMeters = 2;
+    const diskMass = 2; // kg
+    const scale = 100; // pixels per meter
+
+    const blobMassInput = document.getElementById('blobMass');
+    const blobDistanceInput = document.getElementById('blobDistance');
+    const distanceLabel = document.getElementById('distanceLabel');
+    const resultBox = document.getElementById('inertiaResult');
+
+    let d = 1; // meters from center
+    let m = 1; // kg
+    let blobY = 0;
+    let falling = false;
+
+    function drawAngledView(blobOnDisk = false) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const diskX = 50;
+      const diskY = 180;
+      const diskWidth = diskRadiusMeters * 2 * scale;
+      const diskHeight = 20;
+      const ellipseHeight = 10;
+
+      // Draw angled top ellipse
+      ctx.beginPath();
+      ctx.ellipse(diskX + diskWidth / 2, diskY, diskWidth / 2, ellipseHeight, 0, 0, 2 * Math.PI);
+      ctx.fillStyle = '#cce5ff';
+      ctx.fill();
+      ctx.stroke();
+
+      // Draw disk side
+      ctx.fillRect(diskX, diskY, diskWidth, diskHeight);
+      ctx.strokeRect(diskX, diskY, diskWidth, diskHeight);
+
+      // Draw bottom ellipse to give 3D appearance
+      ctx.beginPath();
+      ctx.ellipse(diskX + diskWidth / 2, diskY + diskHeight, diskWidth / 2, ellipseHeight, 0, 0, Math.PI);
+      ctx.stroke();
+
+      // Draw the blob
+      if (blobOnDisk || falling) {
+        const blobX = diskX + scale * (diskRadiusMeters + d);
+        const blobDrawY = blobOnDisk ? diskY - 10 : blobY;
+        ctx.beginPath();
+        ctx.arc(blobX, blobDrawY, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = '#ff5e78';
+        ctx.fill();
+        ctx.stroke();
+      }
+    }
+
+    function dropBlob() {
+      if (falling) return;
+      d = parseFloat(blobDistanceInput.value);
+      m = parseFloat(blobMassInput.value);
+      if (d > diskRadiusMeters) d = diskRadiusMeters;
+      blobY = 0;
+      falling = true;
+      animateDrop();
+    }
+
+    function animateDrop() {
+      if (!falling) return;
+      drawAngledView(false);
+      blobY += 5;
+      if (blobY >= 170) {
+        falling = false;
+        drawAngledView(true);
+        calculateInertia();
+        return;
+      }
+      requestAnimationFrame(animateDrop);
+    }
+
+    function calculateInertia() {
+      const I_disk = 0.5 * diskMass * Math.pow(diskRadiusMeters, 2);
+      const I_blob = m * Math.pow(d, 2);
+      const I_total = I_disk + I_blob;
+      resultBox.innerHTML = `
+  <strong>Moment of Inertia:</strong><br>
+  $I_{\\text{disk}} = \\frac{1}{2} \\cdot 2 \\cdot (2)^2 = ${I_disk.toFixed(2)}\\;\\text{kg} \\cdot \\text{m}^2$<br>
+  $I_{\\text{blob}} = ${m.toFixed(2)} \\cdot (${d.toFixed(2)})^2 = ${I_blob.toFixed(2)}\\;\\text{kg} \\cdot \\text{m}^2$<br>
+  <strong>$I_{\\text{total}} = I_{\\text{disk}} + m d^2 (I_{\\text{blob}}) = ${I_total.toFixed(2)}\\;\\text{kg} \\cdot \\text{m}^2$</strong>
+`;
+MathJax.typesetPromise([resultBox]);
+
+    }
+
+    blobDistanceInput.addEventListener('input', () => {
+      distanceLabel.textContent = parseFloat(blobDistanceInput.value).toFixed(2) + ' m';
+    });
+
+    drawAngledView();
+  </script>
+
+  </div>
+</body>
+</html>

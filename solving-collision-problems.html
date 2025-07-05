@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solving Collision Problems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa; color: #333;
+      line-height: 1.6;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 { font-family: 'Montserrat', sans-serif; color: #003049; }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 { margin-top: 2rem; color: #0077b6; }
+    p { font-size: 1.1rem; margin-bottom: 1.2rem; }
+    ul { padding-left: 1.2rem; }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .img-fluid-center {
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .step { font-weight: bold; margin-top: 1rem; }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="LinearMomentum.html">← Back to Concepts</a>
+    <h1>Solving Collision Problems</h1>
+    <p class="summary">Solving collision problems involves applying the principle of momentum conservation—and sometimes kinetic energy conservation—depending on the type of collision.</p>
+
+    <h2>General Strategy</h2>
+    <ul>
+      <li>Identify the type of collision: elastic, inelastic, or perfectly inelastic</li>
+      <li>Apply conservation of momentum: \( m_1v_{1,i} + m_2v_{2,i} = m_1v_{1,f} + m_2v_{2,f} \)</li>
+      <li>Use kinetic energy conservation <strong>only</strong> if the collision is elastic</li>
+      <li>Solve algebraically or plug in values if known</li>
+    </ul>
+
+    <h2>Example 1: Perfectly Inelastic Collision</h2>
+    <p><strong>Problem:</strong> A 1.5 kg cart moving at 2 m/s collides with a 0.5 kg cart at rest. They stick together. What is their final velocity?</p>
+
+    <div class="step">Step 1: Identify the type</div>
+    <p>Perfectly inelastic – objects stick together, momentum conserved, KE not.</p>
+
+    <div class="step">Step 2: Apply conservation of momentum</div>
+    <div class="formula-box">
+      \[
+      v_f = \frac{m_1v_{1,i} + m_2v_{2,i}}{m_1 + m_2}
+      \]
+    </div>
+
+    <div class="step">Step 3: Plug in values</div>
+    <div class="formula-box">
+      \[
+      v_f = \frac{1.5(2) + 0.5(0)}{1.5 + 0.5} = \frac{3}{2} = 1.5 \, \text{m/s}
+      \]
+    </div>
+
+    <p><strong>Answer:</strong> They move together at 1.5 m/s.</p>
+
+    <h2>Example 2: Elastic Collision (Equal Masses)</h2>
+    <p><strong>Problem:</strong> A 0.6 kg ball moving at 3 m/s hits a stationary 0.6 kg ball. What are the final velocities?</p>
+
+    <div class="step">Step 1: Elastic collision with equal masses</div>
+    <p>In 1D, identical masses simply swap velocities in an elastic collision.</p>
+
+    <div class="step">Step 2: Final velocities</div>
+    <div class="formula-box">
+      \[
+      v_{1,f} = 0 \quad v_{2,f} = 3 \, \text{m/s}
+      \]
+    </div>
+    <p><strong>Answer:</strong> First ball stops; second ball moves at 3 m/s.</p>
+
+    <h2>Example 3: Elastic Collision (Unequal Masses)</h2>
+    <p><strong>Problem:</strong> A 2 kg cart moving at 4 m/s hits a 1 kg stationary cart. What are the final velocities if the collision is elastic?</p>
+
+    <div class="step">Step 1: Use momentum and kinetic energy conservation</div>
+    <div class="formula-box">
+      \[
+      v_{1,f} = \frac{m_1 - m_2}{m_1 + m_2} v_{1,i} + \frac{2m_2}{m_1 + m_2} v_{2,i}
+      \]
+      \[
+      v_{2,f} = \frac{2m_1}{m_1 + m_2} v_{1,i} + \frac{m_2 - m_1}{m_1 + m_2} v_{2,i}
+      \]
+    </div>
+
+    <div class="step">Step 2: Plug in values</div>
+    <div class="formula-box">
+      \[
+      v_{1,f} = \frac{2 - 1}{3} \cdot 4 = \frac{1}{3} \cdot 4 = 1.33 \, \text{m/s}
+      \]
+      \[
+      v_{2,f} = \frac{2 \cdot 2}{3} \cdot 4 = \frac{4}{3} \cdot 4 = 5.33 \, \text{m/s}
+      \]
+    </div>
+
+    <p><strong>Answer:</strong> Cart 1: 1.33 m/s, Cart 2: 5.33 m/s</p>
+
+    <h2>Example 4: Inelastic but Not Perfectly</h2>
+    <p><strong>Problem:</strong> A 3 kg object moving at 6 m/s hits a 2 kg object moving at 2 m/s. After colliding, they bounce off with different velocities. Final velocity of object 2 is 4 m/s. What is object 1’s final velocity?</p>
+
+    <div class="step">Step 1: Use momentum conservation</div>
+    <div class="formula-box">
+      \[
+      m_1v_{1,i} + m_2v_{2,i} = m_1v_{1,f} + m_2v_{2,f}
+      \]
+    </div>
+
+    <div class="step">Step 2: Plug in knowns</div>
+    <div class="formula-box">
+      \[
+      3(6) + 2(2) = 3v_{1,f} + 2(4)
+      \Rightarrow 18 + 4 = 3v_{1,f} + 8
+      \Rightarrow 22 - 8 = 3v_{1,f}
+      \Rightarrow v_{1,f} = \frac{14}{3} \approx 4.67 \, \text{m/s}
+      \]
+    </div>
+
+    <p><strong>Answer:</strong> Object 1’s final velocity is approximately 4.67 m/s</p>
+
+    <h2>Example 5: Kinetic Energy Loss</h2>
+    <p><strong>Problem:</strong> A 2 kg object moving at 3 m/s collides with a 2 kg object at rest. They stick together. How much kinetic energy is lost?</p>
+
+    <div class="step">Step 1: Initial Kinetic Energy</div>
+    <div class="formula-box">
+      \[
+      KE_i = \frac{1}{2} m v^2 = \frac{1}{2}(2)(3)^2 = 9 \text{ J}
+      \]
+    </div>
+
+    <div class="step">Step 2: Final Velocity</div>
+    <div class="formula-box">
+      \[
+      v_f = \frac{2(3) + 2(0)}{4} = 1.5 \text{ m/s}
+      \]
+    </div>
+
+    <div class="step">Step 3: Final Kinetic Energy</div>
+    <div class="formula-box">
+      \[
+      KE_f = \frac{1}{2}(4)(1.5)^2 = \frac{1}{2}(4)(2.25) = 4.5 \text{ J}
+      \]
+    </div>
+
+    <div class="step">Step 4: Energy Lost</div>
+    <div class="formula-box">
+      \[
+      \Delta KE = KE_f - KE_i = 4.5 - 9 = -4.5 \text{ J}
+      \]
+    </div>
+
+    <p><strong>Answer:</strong> 4.5 J of kinetic energy is lost.</p>
+
+    <h2>Example 6: Percent KE Loss</h2>
+    <p><strong>Problem:</strong> In the previous example, what percent of the initial kinetic energy is lost?</p>
+
+    <div class="formula-box">
+      \[
+      \% \text{ Loss} = \frac{|KE_f - KE_i|}{KE_i} \times 100 = \frac{4.5}{9} \times 100 = 50\%
+      \]
+    </div>
+    <p><strong>Answer:</strong> 50% of the initial kinetic energy was lost in the collision.</p>
+
+    <h2>Example 7: Ballistic Pendulum</h2>
+    <img src="ballistic-pendulum.png" alt = "Descriptive Alt Text" class = "img-fluid-center">
+    <p><strong>Problem:</strong> A 0.02 kg bullet traveling at 300 m/s embeds into a 1 kg wooden block hanging from a string. How high does the block-bullet system rise after the collision?</p>
+
+    <div class="step">Step 1: Use conservation of momentum to find velocity after collision</div>
+    <div class="formula-box">
+      \[
+      v_f = \frac{m_1v_{1,i}}{m_1 + m_2} = \frac{(0.02)(300)}{1.02} \approx 5.88 \text{ m/s}
+      \]
+    </div>
+
+    <div class="step">Step 2: Use conservation of energy to find height</div>
+    <div class="formula-box">
+      \[
+      KE = PE \Rightarrow \frac{1}{2}(1.02)(5.88)^2 = (1.02)(9.8)h
+      \Rightarrow h \approx \frac{17.6}{9.996} \approx 1.76 \text{ m}
+      \]
+    </div>
+
+    <p><strong>Answer:</strong> The system rises approximately 1.76 meters.</p>
+
+    <h2>Key Tips for Solving</h2>
+    <ul>
+      <li>Always write the momentum conservation equation first</li>
+      <li>If elastic, write the kinetic energy equation or use special formulas</li>
+      <li>For perfectly inelastic, use the combined mass final velocity formula</li>
+      <li>Draw before/after diagrams to visualize motion</li>
+    </ul>
+
+    <h2>Summary</h2>
+    <p>Collision problems are highly solvable with momentum conservation. The collision type tells you whether you can also use kinetic energy conservation. Practice identifying types and setting up equations systematically!</p>
+  </div>
+</body>
+</html>

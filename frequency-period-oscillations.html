@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Angular Frequency and Period</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: normal;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Angular Frequency and Period</h1>
+
+    <h2>Understanding Oscillation Timing</h2>
+    <p>
+      When an object undergoes simple harmonic motion (SHM), it repeats its motion in a regular cycle. We quantify this timing using three related values:
+    </p>
+    <ul>
+      <li><strong>Angular Frequency</strong> \( \omega \): How fast the object oscillates in radians per second.</li>
+      <li><strong>Frequency</strong> \( f \): How many full cycles it completes per second (measured in hertz, Hz).</li>
+      <li><strong>Period</strong> \( T \): How long it takes to complete one full cycle (measured in seconds).</li>
+    </ul>
+
+    <div class="formula-box">
+      \[
+      \omega = 2\pi f \quad \text{and} \quad T = \frac{1}{f} = \frac{2\pi}{\omega}
+      \]
+    </div>
+
+    <h2>Mass-Spring Systems</h2>
+    <p>
+      For both horizontal and vertical spring systems (assuming no damping and friction), the motion follows Hooke’s Law: \( F = -kx \). This produces SHM when the mass is displaced from equilibrium.
+    </p>
+
+    <h3>Formulas for a Mass-Spring System</h3>
+    <div class="formula-box">
+      \[
+      \omega = \sqrt{\frac{k}{m}}, \quad
+      f = \frac{1}{2\pi} \sqrt{\frac{k}{m}}, \quad
+      T = 2\pi \sqrt{\frac{m}{k}}
+      \]
+    </div>
+
+    <p>
+      - \( k \): Spring constant (N/m)  
+      - \( m \): Mass (kg)  
+      - These equations apply to **horizontal** spring systems directly.  
+      - For **vertical springs**, the equilibrium position shifts due to gravity, but the formulas remain the same for small oscillations.
+    </p>
+
+    <h2>Simple Pendulum</h2>
+    <p>
+      A simple pendulum consists of a mass suspended from a light, inextensible string. When displaced slightly from equilibrium, it undergoes SHM due to the restoring force of gravity.
+    </p>
+
+    <h3>Formulas for a Simple Pendulum</h3>
+    <div class="formula-box">
+      \[
+      \omega = \sqrt{\frac{g}{L}}, \quad
+      f = \frac{1}{2\pi} \sqrt{\frac{g}{L}}, \quad
+      T = 2\pi \sqrt{\frac{L}{g}}
+      \]
+    </div>
+
+    <p>
+      - \( g \): Acceleration due to gravity (≈ 9.8 m/s²)  
+      - \( L \): Length of the pendulum (from pivot to center of mass)  
+      - These equations are valid only for **small angles** (typically \( \theta < 15^\circ \)) where the restoring force is proportional to displacement.
+    </p>
+
+    <img src="spring-vs-pendulum.jpg" alt="Spring vs Pendulum" class="img-fluid-center">
+   
+      
+
+    <figcaption>Comparing oscillatory systems: Mass-Spring vs. Pendulum</figcaption>
+
+    <h2>Which Variables Affect the Period?</h2>
+    <ul>
+      <li>Increasing mass in a spring system slows down the oscillation (larger \( T \)).</li>
+      <li>Increasing spring stiffness (larger \( k \)) makes the motion faster (smaller \( T \)).</li>
+      <li>For pendulums, longer strings increase the period (slower swing).</li>
+      <li>The mass of the pendulum bob does not affect the period at all!</li>
+    </ul>
+
+    <h2>Key Takeaway</h2>
+    <p>
+      All of these systems obey the same basic differential equation:
+    </p>
+    <div class="formula-box">
+      \[
+      \frac{d^2x}{dt^2} = -\omega^2 x
+      \]
+    </div>
+    <p>
+      This equation guarantees that the system’s motion is sinusoidal, with angular frequency \( \omega \) determined by system parameters like mass, spring constant, or pendulum length.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hooke's Law - Dynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: linear-gradient(to right, #f9f9f9, #eef2f3);
+      color: #222;
+      line-height: 1.8;
+    }
+
+    h1 {
+      color: #00264d;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #003366;
+      border-left: 5px solid #007acc;
+      padding-left: 0.6rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      color: #004c99;
+      margin-top: 1.2rem;
+    }
+
+    .section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: #002f6c;
+    }
+
+    .formula {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #d63384;
+      margin: 1.2rem 0;
+    }
+
+    iframe {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .answer {
+      background: #e6f2ff;
+      padding: 0.7rem 1rem;
+      border-left: 4px solid #007acc;
+      margin-top: 0.5rem;
+      border-radius: 6px;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    .sim-section-title {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .sim-section-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      color: #0077b6;
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .sim-dropdown-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.2rem;
+      margin: 1.2rem 0 1.5rem 0;
+      background: #f0f6fa;
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      justify-content: center;
+    }
+    .sim-dropdown-group label {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      margin-right: 0.5rem;
+      font-family: 'Roboto', sans-serif;
+    }
+    .sim-styled-select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: #fff url('data:image/svg+xml;utf8,<svg fill="%230077b6" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.7rem center/1.2em;
+      border: 2px solid #0077b6;
+      border-radius: 8px;
+      padding: 0.5rem 2.2rem 0.5rem 1rem;
+      font-size: 1.1rem;
+      font-family: inherit;
+      color: #003049;
+      font-weight: 500;
+      transition: border 0.2s;
+      outline: none;
+      min-width: 200px;
+      margin-right: 1.2rem;
+    }
+    .sim-styled-select:focus {
+      border-color: #d63384;
+    }
+    .sim-dropdown-group input[type="number"] {
+      border: 1.5px solid #bbb;
+      border-radius: 6px;
+      padding: 0.3rem 0.7rem;
+      font-size: 1rem;
+      width: 80px;
+      margin-left: 0.3rem;
+      margin-right: 0.7rem;
+    }
+    .sim-controls-row {
+      display:flex;align-items:center;gap:1.2rem;margin-bottom:1.2rem;flex-wrap:wrap;justify-content:center;
+    }
+    .sim-btn {
+      padding: 0.6rem 1.2rem;
+      background-color: #0077b6;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .sim-btn:disabled {
+      background: #b5d3e7;
+      color: #fff;
+      cursor: not-allowed;
+    }
+    .sim-btn:hover:not(:disabled) {
+      background-color: #005f87;
+    }
+    .sim-slider-label {
+      font-weight:500;
+      font-family: 'Roboto', sans-serif;
+    }
+    .sim-slider {
+      width:220px;vertical-align:middle;
+      accent-color: #0077b6;
+    }
+    .sim-svg-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .sim-values {
+      margin-top:1rem;
+      text-align:center;
+      font-size:1.1rem;
+      font-family: 'Roboto', sans-serif;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 0.3rem;
+      }
+      .sim-section-title {
+        font-size: 1.3rem;
+      }
+      .sim-dropdown-group, .sim-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.7rem;
+      }
+      .sim-styled-select {
+        min-width: 100%;
+        margin-right: 0;
+      }
+      .sim-svg-wrap {
+        width: 100%;
+      }
+    }
+  </style>
+  <!-- MathJax for beautiful equations -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    
+  <h1>Hooke's Law in Dynamics</h1>
+  <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+
+  <div class="section">
+    
+    <h2>Introduction to Hooke's Law</h2>
+    <p>Hooke's Law describes how elastic materials behave when stretched or compressed. Formulated by Robert Hooke, it states that the restoring force exerted by a spring is proportional to the displacement from equilibrium.</p>
+    <p class="formula">F = -kx</p>
+    <ul>
+      <li><strong>F</strong>: Restoring force (N)</li>
+      <li><strong>k</strong>: Spring constant (N/m)</li>
+      <li><strong>x</strong>: Displacement from equilibrium (m)</li>
+      <li>Negative sign shows the force is opposite to displacement</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Physical Meaning and Implications</h2>
+    <p>A stretched or compressed spring stores potential energy and exerts a force that returns it to its original shape. The <strong>spring constant</strong> determines how stiff the spring is. The law holds true only within the material's elastic limit.</p>
+    <img src="springforce.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+  </div>
+
+  <div class="section">
+    <h2>Applications of Hooke's Law in Dynamics</h2>
+    <p>In dynamics, Hooke's Law models forces affecting motion, such as a block compressing a spring. The spring slows the object, stops it, and then pushes it back. Newton's second law is used alongside Hooke's Law to solve these problems.</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Points to Remember</h2>
+    <ul>
+      <li>Applies within the elastic limit of a material</li>
+      <li>Force is opposite to displacement</li>
+      <li><strong>k</strong> indicates stiffness</li>
+      <li>Essential for oscillations, vibrations, and spring-based technology</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Springs in Series and Parallel</h2>
+    <p>When multiple springs are combined, their overall stiffness (spring constant) changes depending on how they are connected:</p>
+    <ul>
+      <li><strong>Series:</strong> Springs are connected end-to-end. The equivalent spring constant is:
+        <div class="formula">\[ \frac{1}{k_{eq}} = \frac{1}{k_1} + \frac{1}{k_2} \]</div>
+        <p>Series springs are <em>softer</em> than either spring alone.</p>
+      </li>
+      <li><strong>Parallel:</strong> Springs are connected side-by-side. The equivalent spring constant is:
+        <div class="formula">\[ k_{eq} = k_1 + k_2 \]</div>
+        <p>Parallel springs are <em>stiffer</em> than either spring alone.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2 class="sim-section-title">Interactive Simulation: Series vs Parallel Springs</h2>
+      <div class="sim-section-subtitle">Explore how two springs behave in series or parallel. Adjust the spring constants and displacement, then observe the force and equivalent spring constant.</div>
+      <div class="sim-dropdown-group">
+        <label for="spring-mode">Choose configuration:</label>
+        <select id="spring-mode" class="sim-styled-select">
+          <option value="series">2 Springs in Series</option>
+          <option value="parallel">2 Springs in Parallel</option>
+        </select>
+        <label>Spring 1 (k₁): <input type="number" id="k1" value="200" min="10" max="1000" step="10"> N/m</label>
+        <label>Spring 2 (k₂): <input type="number" id="k2" value="100" min="10" max="1000" step="10"> N/m</label>
+      </div>
+      <div class="sim-controls-row">
+        <button id="sim-toggle" class="sim-btn">Start</button>
+        <label class="sim-slider-label">Displacement (x):
+          <input type="range" id="disp-slider" min="-0.15" max="0.15" step="0.001" value="0" class="sim-slider" disabled>
+          <span id="slider-val">0.00</span> m
+        </label>
+      </div>
+      <div class="sim-svg-wrap">
+        <svg id="spring-sim" width="500" height="140" style="background: #f7faff; border-radius: 10px;"></svg>
+      </div>
+      <div class="sim-values">
+        <strong>Block Displacement (x):</strong> <span id="disp">0.00</span> m<br>
+        <strong>Equivalent Spring Constant (k<sub>eq</sub>):</strong> <span id="keq">0</span> N/m<br>
+        <strong>Restoring Force (F):</strong> <span id="force">0.00</span> N
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Example Questions and Solutions</h2>
+
+    <h3>Example 1: Finding Spring Force</h3>
+    <p><strong>Question:</strong> A spring is stretched by 0.2 m. If <strong>k = 300 N/m</strong>, what is the force?</p>
+    <p><strong>Solution:</strong> F = -kx = -(300)(0.2) = -60 N</p>
+    <div class="answer"><strong>Answer:</strong> 60 N directed opposite to displacement</div>
+
+    <h3>Example 2: Finding Spring Constant</h3>
+    <p><strong>Question:</strong> A force of 10 N stretches a spring 5 cm. Find <strong>k</strong>.</p>
+    <p><strong>Solution:</strong> Convert 5 cm to meters: 0.05 m. k = F / x = 10 / 0.05 = 200 N/m</p>
+    <div class="answer"><strong>Answer:</strong> 200 N/m</div>
+
+    <h3>Example 3: Block Sliding into a Spring</h3>
+    <p><strong>Question:</strong> A 1.5 kg block moving at 2 m/s compresses a spring (k = 500 N/m). How far?</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+      <li>Energy: ½mv² = ½kx² → mv² = kx²</li>
+      <li>(1.5)(2²) = 500x² → 6 = 500x²</li>
+      <li>x² = 0.012 → x = √0.012 ≈ 0.11 m</li>
+    </ul>
+    <div class="answer"><strong>Answer:</strong> 11 cm</div>
+
+    <h3>Example 4: Direction of Force</h3>
+    <p><strong>Question:</strong> A spring is compressed 0.1 m, and k = 150 N/m. Find the force direction and magnitude.</p>
+    <p><strong>Solution:</strong> F = -kx = -150 × 0.1 = -15 N</p>
+    <div class="answer"><strong>Answer:</strong> 15 N opposite to compression</div>
+  </div>
+
+  <div class="section">
+    <h2>Visual Explanation</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WI68aKq0wWQ?si=9WYUx4eEAxJIzklt" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+</body>
+</html>

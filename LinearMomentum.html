@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linear Momentum</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    color: #212529;
+  }
+
+  h1, h2, h5 {
+    font-weight: 700;
+  }
+  
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0d6efd;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #0b5ed7;
+  }
+
+  .question {
+    margin-bottom: 1.8rem;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .question:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+
+  .options button {
+    margin: 0.25rem 0.35rem 0.25rem 0;
+    min-width: 110px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .options button.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  .options button:hover:not(.active):not(:disabled) {
+    background-color: #e7f1ff;
+  }
+
+  .correct {
+    background-color: #d1e7dd !important;
+    border-color: #badbcc !important;
+    color: #0f5132 !important;
+  }
+  .incorrect {
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+    color: #842029 !important;
+  }
+
+  .feedback {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Top content area */
+  .top-content {
+    min-height: 400px;
+    margin-bottom: 3rem;
+    background: #e3f2fd;
+    border: 2px dashed #90caf9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1565c0;
+    font-size: 1.2rem;
+    font-style: italic;
+    user-select: none;
+  }
+
+  .center-align {
+    
+    text-align: center;
+  }
+
+  /* Container for left/right text + image */
+  .left-half {
+    width: 100%;
+    font-size: 1.15rem;
+    text-align: left;
+    padding: 1rem 2rem 1rem 0;
+    color: #212529;
+  }
+
+  .right-half {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right-half img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+  }
+  .right-half img:hover {
+    transform: scale(1.03);
+  }
+
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  /* Controls container */
+  #controls label {
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  #controls input[type=number] {
+    width: 4.5rem;
+    padding: 0.25rem 0.4rem;
+    margin-left: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  #controls input[type=number]:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+
+  #controls button.btn-success {
+    font-weight: 700;
+    padding: 0.45rem 1.2rem;
+    border-radius: 8px;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #e0e0e0 !important; /* light gray background */
+    color: black !important; /* black text */
+    border-color: #6c757d !important; /* keep default border */
+  }
+
+  .btn-outline-secondary.active {
+    background-color: #0d6efd !important; /* Bootstrap primary blue */
+    color: white !important;
+  }
+
+  /* Canvas container styling */
+  #simCanvas {
+    border: 2px solid #90caf9;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    background-color: #a7ffeb;
+  }
+
+  /* Formulas image */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .img-fluid-center {
+    height: auto;
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-fluid-isacc {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    transform: scale(1.5);
+  }
+
+  /* Quiz container animation */
+  .quiz-container {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 900px;
+    margin: 0 auto 4rem;
+  }
+
+  /* Back links & other anchors */
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  a:hover {
+    transform: scale(1.1);
+    color: #0a58ca;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Top area for your other content -->
+
+  <!-- Start-->
+
+  <!-- Top area split into two columns -->
+<section class="container mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text -->
+    <div class="col-md-6">
+      <div style="background:#e3f2fd; padding: 1rem; border-radius: 10px;">
+        <h2>Linear Momentum</h2>
+        <p>Linear momentum is around 10%–20% of your AP test. This unit focuses on how motion is conserved and transferred during collisions. Understanding linear momentum and impulse helps solve problems involving interacting objects.</p>
+        <p>Now let's get into it!</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Cannon Simulation -->
+    <div class="col-md-6 text-center">
+      <img src="./momentumpage1.jpg" alt="Descriptive Alt Text" class="img-fluid-isacc" />
+  </div>
+</section>
+
+
+
+
+  <!--Stop-->
+
+  <!-- Hello World Text Box -->
+  <div class="container my-4 d-flex justify-content-between align-items-center">
+    <div class="left-half">
+      Linear Momentum is the study of how motion is conserved and transferred between objects. In AP Physics C: Mechanics, this unit builds on dynamics by introducing momentum, impulse, and the conservation of momentum principle. It focuses on how forces affect the motion of interacting objects, especially during collisions and explosions. Mastery of linear momentum helps simplify complex problems involving collisions, rebounds, and systems with multiple objects.
+    </div>
+    <div class="right-half">
+      <img src="./momentumpage2.png" alt="Descriptive Alt Text" class="img-fluid" />
+    </div>
+  </div>
+
+  <h1>
+    <p>Relevant Formulas On Equation Sheet:</p>
+  </h1>
+  <div>
+    <img src = "./EquationSheetMomentum.png" alt="Descriptive Alt Text" class="img-fluid-center"/>
+  </div>
+
+ 
+<h1>Concept 1: Momentum and Impulse</h1>
+<div class="center-align">
+  <p><a href="momentum-definition.html">Key Topic 1: Definition of Momentum</a></p>
+</div>
+<div class="center-align">
+  <p><a href="impulse-momentum-theorem.html">Key Topic 2: Impulse-Momentum Theorem</a></p>
+</div>
+
+<h1>Concept 2: Conservation of Momentum</h1>
+<div class="center-align">
+  <p><a href="momentum-conservation-principle.html">Key Topic 1: Momentum Conservation Principle</a></p>
+</div>
+<div class="center-align">
+  <p><a href="explosions-recoil.html">Key Topic 2: Explosions and Recoil</a></p>
+</div>
+<div class="center-align">
+  <p><a href="center-of-mass.html">Key Topic 3: Center of Mass and System Motion</a></p>
+</div>
+
+<h1>Concept 3: Collisions</h1>
+
+<div class="center-align">
+  <p><a href="types-of-collisions.html">Key Topic 1: Types of Collisions</a></p>
+</div>
+<div class="center-align">
+  <p><a href="solving-collision-problems.html">Key Topic 2: Solving Collision Problems</a></p>
+</div>
+<div class="center-align">
+  <p><a href="relative-velocity-elastic.html">Key Topic 3: Relative Velocity in Elastic Collisions</a></p>
+</div>
+
+<h1>Practice Tests</h1>
+
+<div class="center-align">
+  <p><a href="practiceMomentum1.html">Practice Test 1: Linear Momentum</a></p>
+</div>
+
+<div class="center-align">
+  <p><a href="practiceMomentum2.html">Practice Test 2: Linear Momentum</a></p>
+</div>
+
+
+
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+  <!-- Quiz Section -->
+  <section class="quiz-container container">
+    <h1>🧭 Linear Momentum: Check for Understanding</h1>
+    <div id="quiz"></div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+      <div id="scoreDisplay" class="mt-3 fw-bold"></div>
+    </div>
+  </section>
+
+  <script>
+  const questions = [
+  {
+    q: "1. What is the formula for linear momentum?",
+    options: ["p = F × t", "p = mv", "p = mgh", "p = v/t"],
+    correct: 1
+  },
+  {
+    q: "2. What are the SI units of momentum?",
+    options: ["N·s", "kg·m/s", "kg·m²/s²", "m/s"],
+    correct: 1
+  },
+  {
+    q: "3. A 4 kg object moves at 2 m/s. What is its momentum?",
+    options: ["2 kg·m/s", "8 N", "6 kg·m/s", "8 kg·m/s"],
+    correct: 3
+  },
+  {
+    q: "4. What does the impulse-momentum theorem state?",
+    options: ["Impulse equals force times displacement", "Impulse equals change in kinetic energy", "Impulse equals change in momentum", "Impulse is always conserved"],
+    correct: 2
+  },
+  {
+    q: "5. If a force of 10 N acts for 0.2 seconds, what is the impulse?",
+    options: ["0.2 N·s", "2 N·s", "5 N·s", "20 N·s"],
+    correct: 1
+  },
+  {
+    q: "6. What is conserved in a closed, isolated system during a collision?",
+    options: ["Kinetic energy", "Momentum", "Potential energy", "Work"],
+    correct: 1
+  },
+  {
+    q: "7. Two ice skaters push off each other. What principle does this demonstrate?",
+    options: ["Impulse-momentum", "Energy conservation", "Newton's first law", "Conservation of momentum"],
+    correct: 3
+  },
+  {
+    q: "8. A 3 kg object moving at 4 m/s collides with a stationary 2 kg object. What is the system's total momentum before the collision?",
+    options: ["6 kg·m/s", "12 kg·m/s", "20 kg·m/s", "8 kg·m/s"],
+    correct: 1
+  },
+  {
+    q: "9. A firework explodes into two fragments. Which is true?",
+    options: ["Total mass increases", "Total momentum is conserved", "Kinetic energy is always conserved", "Both pieces must stop"],
+    correct: 1
+  },
+  {
+    q: "10. The recoil of a gun after firing a bullet is due to:",
+    options: ["Newton’s second law", "Kinetic energy conservation", "Momentum conservation", "Energy transfer to heat"],
+    correct: 2
+  },
+  {
+    q: "11. What is the velocity of the center of mass of a system affected by?",
+    options: ["External forces", "Internal forces", "Collision angle", "Elasticity"],
+    correct: 0
+  },
+  {
+    q: "12. For an isolated system, the center of mass moves:",
+    options: ["In a straight line with constant speed", "In a circular path", "Randomly", "With increasing acceleration"],
+    correct: 0
+  },
+  {
+    q: "13. In a perfectly inelastic collision:",
+    options: ["Kinetic energy is conserved", "Objects stick together", "Momentum is not conserved", "Objects bounce apart"],
+    correct: 1
+  },
+  {
+    q: "14. A bullet embeds into a block. This is an example of:",
+    options: ["Elastic collision", "Perfectly elastic", "Perfectly inelastic", "Explosive recoil"],
+    correct: 2
+  },
+  {
+    q: "15. What is the relative velocity equation for elastic collisions?",
+    options: ["v₁i - v₂i = v₁f + v₂f", "v₁i + v₂i = v₁f + v₂f", "v₁i - v₂i = -(v₁f - v₂f)", "v₁i × v₂i = v₁f × v₂f"],
+    correct: 2
+  }
+];
+
+  let userAnswers = Array(questions.length).fill(null);
+
+  function renderQuiz() {
+    const quizDiv = document.getElementById("quiz");
+    questions.forEach((q, index) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.id = `question-${index}`;
+      let html = `<h5>Q${index + 1}: ${q.q}</h5><div class="options">`;
+      q.options.forEach((choice, i) => {
+        html += `<button type="button" class="btn btn-outline-secondary" onclick="selectAnswer(${index}, ${i}, this)">${choice}</button> `;
+      });
+      html += `</div><div class="feedback" id="feedback-${index}"></div>`;
+      qDiv.innerHTML = html;
+      quizDiv.appendChild(qDiv);
+    });
+  }
+
+  function selectAnswer(qIndex, aIndex, button) {
+    userAnswers[qIndex] = aIndex;
+    const options = document.querySelectorAll(`#question-${qIndex} .options button`);
+    options.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  }
+
+  function submitQuiz() {
+    let score = 0;
+    questions.forEach((q, i) => {
+      const selected = userAnswers[i];
+      const feedback = document.getElementById(`feedback-${i}`);
+      const buttons = document.querySelectorAll(`#question-${i} .options button`);
+
+      buttons.forEach((btn, j) => {
+        btn.disabled = true;
+        btn.classList.remove("correct", "incorrect");
+        if (j === q.correct) btn.classList.add("correct");
+        if (j === selected && selected !== q.correct) btn.classList.add("incorrect");
+      });
+
+      if (selected === q.correct) {
+        score++;
+        feedback.innerHTML = "✅ Correct";
+      } else {
+        feedback.innerHTML = `❌ Incorrect (Correct: ${q.options[q.correct]})`;
+      }
+    });
+    document.getElementById("scoreDisplay").innerText = `Your Score: ${score} / ${questions.length}`;
+  }
+
+  renderQuiz();
+</script>
+</body>
+</html>

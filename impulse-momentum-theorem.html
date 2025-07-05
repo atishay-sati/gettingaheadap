@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impulse-Momentum Theorem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .controls {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .control-group {
+    margin-bottom: 1rem;
+  }
+  label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  input[type="range"] {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+  #impulseOutput {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  #momentumDisplay {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  canvas {
+    width: 100%;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-top: 1.5rem;
+  }
+  #barContainer {
+    margin-top: 1.5rem;
+  }
+  #impulseBarBackground {
+    background: #ddd;
+    border-radius: 6px;
+    height: 30px;
+    overflow: hidden;
+  }
+  #impulseBar {
+    background: #fb8500;
+    height: 100%;
+    width: 0%;
+    transition: width 0.15s ease-in-out;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="LinearMomentum.html" class="back-link">← Back to Concepts</a>
+    <h1>Impulse-Momentum Theorem</h1>
+
+    <h2>Conceptual Definition</h2>
+    <p>
+      Impulse is the effect of a force acting over time. Think of impulse like hitting a baseball coming at you. To redirect the baseball, you have to hit it and change it's momentum. The contact might look instantantaneous, but there is still a duration of contact (even if its in miliseconds). When a force acts on an object, it changes the object's momentum. This leads to the impulse-momentum theorem:
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{J} = \Delta \vec{p} = m \Delta \vec{v}
+      \]
+    </div>
+
+    <h2>Impulse as a Time Integral</h2>
+    <p>
+      For forces that vary with time, impulse is the <em>integral</em> of force with respect to time:
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{J} = \int_{t_1}^{t_2} \vec{F}(t) \, dt
+      \]
+    </div>
+    <p>As you can see from this formula, impulse does <b>NOT</b> depend on position, only the force and time.</p>
+    <div>
+        <img src="force-time-graph.png" alt="Descriptive Alt Text" class="img-fluid-center">
+    </div>
+    <figcaption>Figure: The shaded area under the curve equals the impulse.</figcaption>
+    <p>
+      This integral represents the area under a force-time graph. For constant force, this simplifies to:
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{J} = \vec{F} \cdot \Delta t
+      \]
+    </div>
+
+    
+
+    <h2>Calculus-Based Derivation</h2>
+    <p>
+      Starting from Newton’s Second Law in vector form:
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}
+      \]
+    </div>
+    <p>
+      Integrate both sides over time:
+    </p>
+    <div class="formula-box">
+      \[
+      \int_{t_1}^{t_2} \vec{F}_{\text{net}} \, dt = \int_{t_1}^{t_2} \frac{d\vec{p}}{dt} \, dt = \vec{p}_f - \vec{p}_i = \Delta \vec{p}
+      \]
+    </div>
+    <p>
+      Therefore:
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{J} = \Delta \vec{p}
+      \]
+    </div>
+
+    <h2>Units and Direction</h2>
+    <p>
+      Impulse has the same units as momentum: \(\text{kg} \cdot \text{m/s} = \text{N} \cdot \text{s}\). It is a <strong>vector</strong> quantity — its direction is the same as the direction of the net force.
+    </p>
+
+    <div>
+        <img src="impulse-force.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+    </div>
+    <figcaption>Figure: Impulse vector aligns with force vector direction.</figcaption>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>In collisions, impulse tells us how much momentum is transferred.</li>
+      <li>Airbags increase time of impact, reducing force via the same impulse.</li>
+      <li>In rockets, momentum changes due to impulse from exhaust force over time.</li>
+    </ul>
+
+    <div>
+        <img src="airbags.jpg" alt = "Descriptive Alt Text" class="img-fluid-center">
+    </div>
+
+    <h2>Example (Calculus)</h2>
+    <p>
+      A particle experiences a force described by \( F(t) = 6t \) N for \( 0 \leq t \leq 3 \) s. Find the impulse delivered.
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{J} = \int_0^3 6t \, dt = \left[3t^2\right]_0^3 = 3(9) - 0 = 27 \, \text{N·s}
+      \]
+    </div>
+    <p>
+      If the particle has mass 3 kg and was initially at rest, its final velocity is:
+    </p>
+    <div class="formula-box">
+      \[
+      \vec{J} = m\vec{v}_f \Rightarrow \vec{v}_f = \frac{27}{3} = 9 \, \text{m/s}
+      \]
+    </div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>Impulse is the <strong>integral</strong> of force with respect to time.</li>
+      <li>Impulse changes momentum: \( \vec{J} = \Delta \vec{p} \)</li>
+      <li>Force-time graphs provide a powerful visualization tool for impulse.</li>
+      <li>Use vector and integral notation for full AP Physics C analysis.</li>
+    </ul>
+
+    <h2>Key Comparisons</h2>
+<table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1.05rem;">
+  <thead style="background-color: #3b82f6; color: white;">
+    <tr>
+      <th style="padding: 0.75rem; border: 1px solid #ccc;">Quantity</th>
+      <th style="padding: 0.75rem; border: 1px solid #ccc;">Definition</th>
+      <th style="padding: 0.75rem; border: 1px solid #ccc;">Units</th>
+      <th style="padding: 0.75rem; border: 1px solid #ccc;">Formula</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #f0f4ff;">
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">Impulse \( \vec{J} \)</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">Change in momentum or area under \( \vec{F}(t) \) curve</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">\( \text{N·s} = \text{kg·m/s} \)</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">\( \vec{J} = \int \vec{F}(t)\,dt \)</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">Momentum \( \vec{p} \)</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">Product of mass and velocity</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">\( \text{kg·m/s} \)</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">\( \vec{p} = m\vec{v} \)</td>
+    </tr>
+    <tr style="background-color: #f0f4ff;">
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">Force \( \vec{F} \)</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">Time rate of change of momentum</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">\( \text{N} = \text{kg·m/s}^2 \)</td>
+      <td style="padding: 0.75rem; border: 1px solid #ccc;">\( \vec{F} = \frac{d\vec{p}}{dt} \)</td>
+    </tr>
+  </tbody>
+</table>
+    <h1>Impulse-Momentum Theorem Simulation</h1>
+    <figcaption>(graph rescales after impulse duration is over)</figcaption>
+
+
+<div class="controls">
+  <div class="control-group">
+    <label>Mass (kg): <span id="massLabel">5.0</span></label>
+    <input type="range" id="massSlider" min="1" max="20" step="0.1" value="5" />
+  </div>
+  <div class="control-group">
+    <label>Initial Velocity (m/s): <span id="velocityLabel">10.0</span></label>
+    <input type="range" id="velocitySlider" min="-20" max="20" step="0.1" value="10" />
+  </div>
+  <div class="control-group">
+    <label>Impulse Force (N): <span id="forceLabel">0</span></label>
+    <input type="range" id="forceSlider" min="-50" max="50" step="1" value="0" />
+  </div>
+  <div class="control-group">
+    <label>Impulse Duration (s): <span id="durationLabel">1.0</span></label>
+    <input type="range" id="durationSlider" min="0.1" max="5" step="0.1" value="1" />
+  </div>
+</div>
+
+
+<div id="impulseOutput">Impulse: 0 Ns</div>
+<div id="momentumDisplay">Momentum: 50.0 kg·m/s</div>
+
+
+<!-- Simulation canvas -->
+<canvas id="impulseCanvas" width="900" height="150"></canvas>
+
+
+<!-- Impulse vs Time graph -->
+<canvas id="impulseGraph" width="900" height="150"></canvas>
+
+
+<div id="barContainer">
+  <strong>Impulse Bar:</strong>
+  <div id="impulseBarBackground">
+    <div id="impulseBar"></div>
+  </div>
+</div>
+
+
+<script>
+  const massSlider = document.getElementById('massSlider');
+  const velocitySlider = document.getElementById('velocitySlider');
+  const forceSlider = document.getElementById('forceSlider');
+  const durationSlider = document.getElementById('durationSlider');
+
+
+  const massLabel = document.getElementById('massLabel');
+  const velocityLabel = document.getElementById('velocityLabel');
+  const forceLabel = document.getElementById('forceLabel');
+  const durationLabel = document.getElementById('durationLabel');
+
+
+  const impulseOutput = document.getElementById('impulseOutput');
+  const momentumDisplay = document.getElementById('momentumDisplay');
+  const impulseBar = document.getElementById('impulseBar');
+
+
+  const impulseCanvas = document.getElementById('impulseCanvas');
+  const ctx = impulseCanvas.getContext('2d');
+
+
+  const impulseGraphCanvas = document.getElementById('impulseGraph');
+  const graphCtx = impulseGraphCanvas.getContext('2d');
+
+
+  let mass = parseFloat(massSlider.value);
+  let velocity = parseFloat(velocitySlider.value);
+  let force = parseFloat(forceSlider.value);
+  let duration = parseFloat(durationSlider.value);
+
+
+  // Impulse = Force * Duration
+  let impulse = force * duration;
+
+
+  // Momentum changes according to impulse-momentum theorem:
+  // final momentum = initial momentum + impulse
+
+
+  // History for impulse graph
+  let impulseHistory = [];
+  let momentumHistory = [];
+
+
+  // Simulation parameters
+  let time = 0;
+  let dt = 0.05; // time step in seconds
+
+
+  // Particle position for visualization
+  let posX = 50;
+  let posY = impulseCanvas.height / 2;
+
+
+  // Initialize particle velocity and momentum
+  let currentVelocity = velocity;
+  let initialMomentum = mass * velocity;
+  let currentMomentum = initialMomentum;
+
+
+  function updateValues() {
+    mass = parseFloat(massSlider.value);
+    velocity = parseFloat(velocitySlider.value);
+    force = parseFloat(forceSlider.value);
+    duration = parseFloat(durationSlider.value);
+
+
+    massLabel.textContent = mass.toFixed(1);
+    velocityLabel.textContent = velocity.toFixed(1);
+    forceLabel.textContent = force.toFixed(0);
+    durationLabel.textContent = duration.toFixed(1);
+
+
+    impulse = force * duration;
+    impulseOutput.textContent = `Impulse: ${impulse.toFixed(2)} Ns`;
+
+
+    // Reset simulation values on input change
+    time = 0;
+    posX = 50;
+    currentVelocity = velocity;
+    initialMomentum = mass * velocity;
+    currentMomentum = initialMomentum;
+    impulseHistory = [];
+    momentumHistory = [];
+  }
+
+
+  function drawParticle() {
+    ctx.clearRect(0, 0, impulseCanvas.width, impulseCanvas.height);
+
+
+    // Draw track line
+    ctx.strokeStyle = '#ddd';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(0, posY + 15);
+    ctx.lineTo(impulseCanvas.width, posY + 15);
+    ctx.stroke();
+
+
+    // Draw particle
+    const size = 20 + mass * 1.5;
+    ctx.fillStyle = '#fb8500';
+    ctx.beginPath();
+    ctx.arc(posX, posY, size/2, 0, Math.PI * 2);
+    ctx.fill();
+
+
+    // Draw velocity vector arrow
+    const arrowLength = currentVelocity * 5;
+    ctx.strokeStyle = '#023047';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(posX, posY);
+    ctx.lineTo(posX + arrowLength, posY);
+    ctx.stroke();
+
+
+    // Arrow head
+    ctx.beginPath();
+    ctx.moveTo(posX + arrowLength, posY);
+    ctx.lineTo(posX + arrowLength - 8, posY - 5);
+    ctx.lineTo(posX + arrowLength - 8, posY + 5);
+    ctx.closePath();
+    ctx.fillStyle = '#023047';
+    ctx.fill();
+  }
+
+
+  function drawImpulseGraph() {
+  graphCtx.clearRect(0, 0, impulseGraphCanvas.width, impulseGraphCanvas.height);
+
+  // Axis settings
+  const leftPadding = 40;
+  const bottomPadding = 30;
+  const topPadding = 20;
+  const graphHeight = impulseGraphCanvas.height - topPadding - bottomPadding;
+  const graphWidth = impulseGraphCanvas.width - leftPadding - 20;
+
+  // Calculate max absolute momentum for y-scaling
+  const maxAbsMomentum = Math.max(...momentumHistory.map(p => Math.abs(p))) * 1.2 || 50;
+
+  // Y origin for 0 momentum (middle if we have both neg and pos)
+  const yZero = topPadding + graphHeight / 2;
+
+  // Draw axes
+  graphCtx.strokeStyle = '#888';
+  graphCtx.lineWidth = 1;
+  graphCtx.beginPath();
+  // x-axis at yZero
+  graphCtx.moveTo(leftPadding, yZero);
+  graphCtx.lineTo(impulseGraphCanvas.width - 20, yZero);
+  // y-axis
+  graphCtx.moveTo(leftPadding, topPadding);
+  graphCtx.lineTo(leftPadding, impulseGraphCanvas.height - bottomPadding);
+  graphCtx.stroke();
+
+  // Labels
+  graphCtx.fillStyle = '#333';
+  graphCtx.font = '12px Roboto, sans-serif';
+  graphCtx.fillText('Time (s) →', impulseGraphCanvas.width - 80, impulseGraphCanvas.height - 10);
+  graphCtx.fillText('Momentum (kg·m/s)', 5, 15);
+
+  if (momentumHistory.length < 2) return;
+
+  graphCtx.strokeStyle = '#fb8500';
+  graphCtx.lineWidth = 2;
+  graphCtx.beginPath();
+
+  momentumHistory.forEach((p, i) => {
+    const x = leftPadding + (i / (momentumHistory.length - 1)) * graphWidth;
+    const y = yZero - (p / maxAbsMomentum) * (graphHeight / 2);
+    if (i === 0) graphCtx.moveTo(x, y);
+    else graphCtx.lineTo(x, y);
+  });
+
+  graphCtx.stroke();
+}
+
+
+  function updateImpulseBar() {
+    // Bar width is relative to impulse magnitude, max 200 Ns for scaling
+    const percent = Math.min(Math.abs(impulse) / 200 * 100, 100);
+    impulseBar.style.width = `${percent}%`;
+    impulseBar.style.backgroundColor = impulse >= 0 ? '#fb8500' : '#d00000';
+  }
+
+
+  function animate() {
+    // Apply impulse force only during impulse duration
+    if (time < duration) {
+      // acceleration = force / mass
+      const acceleration = force / mass;
+      currentVelocity += acceleration * dt;
+    }
+
+
+    currentMomentum = mass * currentVelocity;
+    momentumDisplay.textContent = `Momentum: ${currentMomentum.toFixed(2)} kg·m/s`;
+
+
+    // Move particle for visualization (scaled)
+    posX += currentVelocity * dt * 10;
+    if (posX > impulseCanvas.width) posX = 0;
+    if (posX < 0) posX = impulseCanvas.width;
+
+
+    // Update history arrays
+    impulseHistory.push(time < duration ? impulse : 0);
+    momentumHistory.push(currentMomentum);
+    if (momentumHistory.length > 200) momentumHistory.shift();
+    if (impulseHistory.length > 200) impulseHistory.shift();
+
+
+    drawParticle();
+    drawImpulseGraph();
+    updateImpulseBar();
+
+
+    time += dt;
+    requestAnimationFrame(animate);
+  }
+
+
+  // Event listeners for inputs
+  [massSlider, velocitySlider, forceSlider, durationSlider].forEach(input => {
+    input.addEventListener('input', updateValues);
+  });
+
+
+  // Initialize
+  updateValues();
+  animate();
+</script>
+
+
+
+  </div>
+</body>
+</html>

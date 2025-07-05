@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Circular Motion – Dynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .table th, .table td {
+      border: 1px solid #ccc;
+      padding: 0.8rem;
+      text-align: left;
+    }
+    .table th {
+      background-color: #e0f2fe;
+      color: #003049;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    .img-fluid-center {
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .img-fluid-center2 {
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Circular Motion</h1>
+    <p>Circular motion occurs when an object moves along a circular path with a constant speed. Even if the speed is constant, the object is accelerating due to the continuous change in direction of velocity. This acceleration is called <strong>centripetal acceleration</strong>.</p>
+
+    <h2>Key Concepts</h2>
+    <ul>
+      <li><strong>Centripetal force</strong> is the net force that causes an object to move in a circle.</li>
+      <li>This force always points toward the center of the circle.</li>
+      <li>There is no outward "centrifugal" force acting on the object (that's a fictitious force).</li>
+    </ul>
+
+    <div>
+      <img src="centripitaldiagram.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+    </div>
+
+    <div class="formula-box">
+      <strong>Formulas:</strong><br>
+      Centripetal acceleration: <strong>a<sub>c</sub> = v² / r = rω² |  where a<sub>c</sub> is the centripital (radial) acceleration, v is the tangental velocity, and ω is the angular velocity (ω=v/r) </strong><br>
+      Centripetal force: <strong>F<sub>c</sub> = mv² / r</strong><br>
+      Period of motion (amount of time to complete one revolution): <strong>T = 2πr / v</strong>
+    </div>
+
+    <h2>Common Units</h2>
+    <table class="table">
+      <tr>
+        <th>Quantity</th>
+        <th>Symbol</th>
+        <th>Unit</th>
+      </tr>
+      <tr>
+        <td>Velocity</td>
+        <td>v</td>
+        <td>m/s</td>
+      </tr>
+      <tr>
+        <td>Radius</td>
+        <td>r</td>
+        <td>m</td>
+      </tr>
+      <tr>
+        <td>Mass</td>
+        <td>m</td>
+        <td>kg</td>
+      </tr>
+      <tr>
+        <td>Acceleration</td>
+        <td>a<sub>c</sub></td>
+        <td>m/s²</td>
+      </tr>
+      <tr>
+        <td>Force</td>
+        <td>F<sub>c</sub></td>
+        <td>N</td>
+      </tr>
+    </table>
+
+    <h2>Example Problems</h2>
+    <p><strong>Question:</strong> A 2 kg object moves in a circle of radius 4 m at a speed of 6 m/s. What is the centripetal force acting on it?</p>
+    <p><strong>Solution:</strong></p>
+    <p>Use <strong>F<sub>c</sub> = mv² / r</strong>:</p>
+    <p>F<sub>c</sub> = (2)(6²)/4 = 72/4 = <strong>18 N</strong></p>
+
+    <p><strong>Question:</strong> A car is driving on a circular race track and is driving at a velocity of 30 m/s. If the coefficient of static friction is 0.7, what is the minimum radius the circular track can have?</p>
+    <p><strong>Solution:</strong></p>
+    <img src="carcentripital.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+    <p>R = 30²/(9.8*0.7) = <strong>131.2 m</strong></p>
+
+
+    <p><strong>Question:</strong> A ball is attached to a string that is at an angle of θ degrees. If the ball weighs 10 kg and the radius of the circle that its traveling on is 4m at a velocity of 5m/s, find the force of tension in the string and the angle.</p>
+    <img src="ballonstringcentripital.png" alt="Descriptive Alt Text" class="img-fluid-center2 ">
+    <p><strong>Solution:</strong></p>
+    <p>1. T<sub>y</sub> = Tcosθ=mg = 10*9.8 = 98 [N] </p>
+    <p>2. T<sub>x</sub> = Tsinθ = mv² / r = 10*5² / 4 = 62.5 [N]</p>
+    <p>3. &#8730;(T<sub>x</sub>² + T<sub>y</sub>²) = T</p>
+    <p>4. T = &#8730;(98)²+(62.5)² = <strong>116.23</strong></p>
+    <p>5. θ = tan<sup>-1</sup>(T<sub>x</sub>/T<sub>y</sub>) = <strong>32.5 degrees</strong></p>
+
+    <section class="container">
+  <h2>Banked Curves</h2>
+  <p>
+    When a car turns on a flat road, the frictional force between the tires and the road provides the
+    necessary <strong>centripetal force</strong> to keep the car moving in a circle. However, if the road is banked
+    (tilted at an angle), the situation becomes more interesting.
+  </p>
+
+  <h2>Why Banked Curves Help</h2>
+  <p>
+    On a banked curve, the <strong>normal force</strong> — which is perpendicular to the surface of the road —
+    has a component that can help supply the <strong>centripetal force</strong> needed for circular motion. This reduces
+    the reliance on <strong>friction</strong> alone.
+  </p>
+  <img src="busoncurve.jpg" alt="Descriptive Alt Text" class="img-fluid-center2 ">
+  <p>
+    If the banking angle is ideal for a certain speed, a car can round the curve with <em>no friction at all</em>,
+    relying solely on the horizontal component of the <strong>normal force</strong> to provide the necessary
+    <strong>centripetal force</strong>.
+  </p>
+
+  <div class="formula-box">
+    <strong>Formula (ideal banked curve):</strong><br>
+    <span style="font-size: 1.1rem;">
+      tan(θ) = v² / (r·g)
+    </span><br>
+    where:
+    <ul>
+      <li><strong>θ</strong> = banking angle</li>
+      <li><strong>v</strong> = speed of the object</li>
+      <li><strong>r</strong> = radius of the curve</li>
+      <li><strong>g</strong> = acceleration due to gravity</li>
+    </ul>
+  </div>
+
+  <h2>Forces at Work</h2>
+  <ul>
+    <li><strong>Normal Force (N)</strong>: Acts perpendicular to the banked surface; its horizontal component provides part (or all) of the centripetal force.</li>
+    <li><strong>Frictional Force (f)</strong>: Acts parallel to the surface; it can help or oppose the centripetal direction depending on speed.</li>
+    <li><strong>Centripetal Force (F<sub>c</sub>)</strong>: Required to keep the car in circular motion; directed toward the center of the curve.</li>
+  </ul>
+
+  <figure>
+    <div>Banked curve diagram</div>
+    <img src="bankedcurve.png" alt="Descriptive Alt Text" class="img-fluid-center2 ">
+    <figcaption>Diagram showing normal force, friction force, and centripetal direction on a banked turn. The x components of friction and normal force are both providing the normal force</figcaption>
+  </figure>
+</section>
+
+
+    <h2>Important to Note</h2>
+    <ul>
+      <li>If the centripital force is removed, the object will continue in a path that is tangent to the circle.</li>
+      <li>In other words it won't keep going in a circle and exit going in the direction that was tangent to the circle.</li>
+      
+    </ul>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/B22446MeVTg?si=sFmp4-UzUxiD4Mje" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    
+   
+</body>
+</html>

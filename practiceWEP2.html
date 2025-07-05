@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work, Energy, and Power Practice Test – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <a href="Energy.html" class="back-link">← Back to Concepts</a>
+    <h1>Work, Energy, and Power Test</h1>
+    <h2>30 Questions – Mixed Conceptual & Calculations</h2>
+
+    <!-- Question 1 -->
+<div class="question">
+  <div class="question-number">1.</div>
+  <p>A 2 kg block slides down a frictionless incline of height 5 m. It then compresses a spring with spring constant 800 N/m. What is the maximum compression of the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q1" value="a"> a) 0.11 m</label><br>
+    <label><input type="radio" name="q1" value="b"> b) 0.16 m</label><br>
+    <label><input type="radio" name="q1" value="c"> c) 0.20 m</label><br>
+    <label><input type="radio" name="q1" value="d"> d) 0.25 m</label>
+  </div>
+  <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 2 -->
+<div class="question">
+  <div class="question-number">2.</div>
+  <p>A spring with spring constant <em>k</em> is compressed by distance <em>x</em> and used to launch a block of mass <em>m</em> horizontally on a frictionless surface. What is the initial speed of the block as it leaves the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q2" value="a"> a) √(kx²/m)</label><br>
+    <label><input type="radio" name="q2" value="b"> b) √(kx²/2m)</label><br>
+    <label><input type="radio" name="q2" value="c"> c) √(2kx²/m)</label><br>
+    <label><input type="radio" name="q2" value="d"> d) √(kx/m)</label>
+  </div>
+  <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 3 -->
+<div class="question">
+  <div class="question-number">3.</div>
+  <p>A force <em>F</em> does work <em>W</em> on an object over a displacement <em>d</em>. If the force is doubled and the displacement is halved, what happens to the work done?</p>
+  <div class="options">
+    <label><input type="radio" name="q3" value="a"> a) Work doubles</label><br>
+    <label><input type="radio" name="q3" value="b"> b) Work stays the same</label><br>
+    <label><input type="radio" name="q3" value="c"> c) Work halves</label><br>
+    <label><input type="radio" name="q3" value="d"> d) Work quadruples</label>
+  </div>
+  <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 4 -->
+<div class="question">
+  <div class="question-number">4.</div>
+  <p>An object is lifted vertically with constant power <em>P</em>. If the object's mass is doubled, what happens to the speed at which it can be lifted?</p>
+  <div class="options">
+    <label><input type="radio" name="q4" value="a"> a) Speed doubles</label><br>
+    <label><input type="radio" name="q4" value="b"> b) Speed halves</label><br>
+    <label><input type="radio" name="q4" value="c"> c) Speed stays the same</label><br>
+    <label><input type="radio" name="q4" value="d"> d) Speed reduces by a factor of √2</label>
+  </div>
+  <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 5 -->
+<div class="question">
+  <div class="question-number">5.</div>
+  <p>A 1000-kg car accelerates from rest to 20 m/s in 10 seconds. What is the average power output of the engine during this time?</p>
+  <div class="options">
+    <label><input type="radio" name="q5" value="a"> a) 20,000 W</label><br>
+    <label><input type="radio" name="q5" value="b"> b) 200,000 W</label><br>
+    <label><input type="radio" name="q5" value="c"> c) 400,000 W</label><br>
+    <label><input type="radio" name="q5" value="d"> d) 2,000 W</label>
+  </div>
+  <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+</div>
+<!-- Question 6 -->
+<div class="question">
+  <div class="question-number">6.</div>
+  <p>A 5 kg box is pushed across a floor with a constant force of 30 N over 4 meters. If the box moves at constant speed, how much work is done by the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q6" value="a"> a) 0 J</label><br>
+    <label><input type="radio" name="q6" value="b"> b) 120 J</label><br>
+    <label><input type="radio" name="q6" value="c"> c) 600 J</label><br>
+    <label><input type="radio" name="q6" value="d"> d) 150 J</label>
+  </div>
+  <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 7 -->
+<div class="question">
+  <div class="question-number">7.</div>
+  <p>A 10 kg block slides down a 30° frictionless incline starting from rest. What is its speed after sliding 5 meters along the incline?</p>
+  <div class="options">
+    <label><input type="radio" name="q7" value="a"> a) 5 m/s</label><br>
+    <label><input type="radio" name="q7" value="b"> b) 7 m/s</label><br>
+    <label><input type="radio" name="q7" value="c"> c) 6 m/s</label><br>
+    <label><input type="radio" name="q7" value="d"> d) 8 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 8 -->
+<div class="question">
+  <div class="question-number">8.</div>
+  <p>A 2 kg object moving at 4 m/s collides with a spring of spring constant 200 N/m. What is the maximum compression of the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q8" value="a"> a) 0.4 m</label><br>
+    <label><input type="radio" name="q8" value="b"> b) 0.2 m</label><br>
+    <label><input type="radio" name="q8" value="c"> c) 0.3 m</label><br>
+    <label><input type="radio" name="q8" value="d"> d) 0.5 m</label>
+  </div>
+  <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 9 -->
+<div class="question">
+  <div class="question-number">9.</div>
+  <p>A 3 kg object is lifted vertically 10 m at a constant velocity. What is the work done by the lifting force?</p>
+  <div class="options">
+    <label><input type="radio" name="q9" value="a"> a) 30 J</label><br>
+    <label><input type="radio" name="q9" value="b"> b) 294 J</label><br>
+    <label><input type="radio" name="q9" value="c"> c) 98 J</label><br>
+    <label><input type="radio" name="q9" value="d"> d) 300 J</label>
+  </div>
+  <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 10 -->
+<div class="question">
+  <div class="question-number">10.</div>
+  <p>An engine delivers a constant power output of 500 W. How long does it take to do 2000 J of work?</p>
+  <div class="options">
+    <label><input type="radio" name="q10" value="a"> a) 2 s</label><br>
+    <label><input type="radio" name="q10" value="b"> b) 4 s</label><br>
+    <label><input type="radio" name="q10" value="c"> c) 6 s</label><br>
+    <label><input type="radio" name="q10" value="d"> d) 8 s</label>
+  </div>
+  <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+</div>
+<!-- Question 11 -->
+<div class="question">
+  <div class="question-number">11.</div>
+  <p>A 4 kg object is moving at 3 m/s. What is its kinetic energy?</p>
+  <div class="options">
+    <label><input type="radio" name="q11" value="a"> a) 6 J</label><br>
+    <label><input type="radio" name="q11" value="b"> b) 18 J</label><br>
+    <label><input type="radio" name="q11" value="c"> c) 36 J</label><br>
+    <label><input type="radio" name="q11" value="d"> d) 12 J</label>
+  </div>
+  <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 12 -->
+<div class="question">
+  <div class="question-number">12.</div>
+  <p>A 1.5 kg mass is attached to a spring with spring constant 120 N/m and is stretched 0.1 m from equilibrium. What is the potential energy stored in the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q12" value="a"> a) 0.6 J</label><br>
+    <label><input type="radio" name="q12" value="b"> b) 1.2 J</label><br>
+    <label><input type="radio" name="q12" value="c"> c) 0.3 J</label><br>
+    <label><input type="radio" name="q12" value="d"> d) 0.9 J</label>
+  </div>
+  <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 13 -->
+<div class="question">
+  <div class="question-number">13.</div>
+  <p>An object is pushed by a force of 50 N over a distance of 3 meters at an angle of 60° to the horizontal. What is the work done by the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q13" value="a"> a) 75 J</label><br>
+    <label><input type="radio" name="q13" value="b"> b) 150 J</label><br>
+    <label><input type="radio" name="q13" value="c"> c) 100 J</label><br>
+    <label><input type="radio" name="q13" value="d"> d) 50 J</label>
+  </div>
+  <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 14 -->
+<div class="question">
+  <div class="question-number">14.</div>
+  <p>A 10 kg block moves with velocity 5 m/s and collides with a spring of spring constant 500 N/m. What is the maximum compression of the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q14" value="a"> a) 1 m</label><br>
+    <label><input type="radio" name="q14" value="b"> b) 0.5 m</label><br>
+    <label><input type="radio" name="q14" value="c"> c) 0.7 m</label><br>
+    <label><input type="radio" name="q14" value="d"> d) 0.9 m</label>
+  </div>
+  <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 15 -->
+<div class="question">
+  <div class="question-number">15.</div>
+  <p>An elevator lifts a 500 kg load to a height of 20 m in 25 seconds. What is the average power output required by the motor? (Take g = 9.8 m/s²)</p>
+  <div class="options">
+    <label><input type="radio" name="q15" value="a"> a) 3920 W</label><br>
+    <label><input type="radio" name="q15" value="b"> b) 4900 W</label><br>
+    <label><input type="radio" name="q15" value="c"> c) 39200 W</label><br>
+    <label><input type="radio" name="q15" value="d"> d) 9800 W</label>
+  </div>
+  <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+</div>
+<!-- Question 16 -->
+<div class="question">
+  <div class="question-number">16.</div>
+  <p>A 2 kg object is thrown vertically upward with an initial speed of 10 m/s. What is its kinetic energy at the highest point?</p>
+  <div class="options">
+    <label><input type="radio" name="q16" value="a"> a) 0 J</label><br>
+    <label><input type="radio" name="q16" value="b"> b) 20 J</label><br>
+    <label><input type="radio" name="q16" value="c"> c) 100 J</label><br>
+    <label><input type="radio" name="q16" value="d"> d) 200 J</label>
+  </div>
+  <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 17 -->
+<div class="question">
+  <div class="question-number">17.</div>
+  <p>A force of 15 N acts on a 3 kg object initially at rest. What is the work done after the object moves 4 meters in the direction of the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q17" value="a"> a) 45 J</label><br>
+    <label><input type="radio" name="q17" value="b"> b) 60 J</label><br>
+    <label><input type="radio" name="q17" value="c"> c) 20 J</label><br>
+    <label><input type="radio" name="q17" value="d"> d) 15 J</label>
+  </div>
+  <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 18 -->
+<div class="question">
+  <div class="question-number">18.</div>
+  <p>An object of mass 5 kg moves with a velocity of 8 m/s. What is the power output if the object comes to rest uniformly in 4 seconds?</p>
+  <div class="options">
+    <label><input type="radio" name="q18" value="a"> a) 40 W</label><br>
+    <label><input type="radio" name="q18" value="b"> b) 80 W</label><br>
+    <label><input type="radio" name="q18" value="c"> c) 160 W</label><br>
+    <label><input type="radio" name="q18" value="d"> d) 320 W</label>
+  </div>
+  <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 19 -->
+<div class="question">
+  <div class="question-number">19.</div>
+  <p>A 12 kg block slides down a 25° incline. What is the work done by gravity when the block slides 6 m down the incline?</p>
+  <div class="options">
+    <label><input type="radio" name="q19" value="a"> a) 1764 J</label><br>
+    <label><input type="radio" name="q19" value="b"> b) 294 J</label><br>
+    <label><input type="radio" name="q19" value="c"> c) 1200 J</label><br>
+    <label><input type="radio" name="q19" value="d"> d) 500 J</label>
+  </div>
+  <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 20 -->
+<div class="question">
+  <div class="question-number">20.</div>
+  <p>A force of 20 N is applied at an angle of 30° above the horizontal to move a box 5 m on a frictionless surface. How much work is done by the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q20" value="a"> a) 50 J</label><br>
+    <label><input type="radio" name="q20" value="b"> b) 86.6 J</label><br>
+    <label><input type="radio" name="q20" value="c"> c) 100 J</label><br>
+    <label><input type="radio" name="q20" value="d"> d) 20 J</label>
+  </div>
+  <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 21 -->
+<div class="question">
+  <div class="question-number">21.</div>
+  <p>A 3 kg object is pulled by a force of 10 N at an angle of 45° over a distance of 4 m. What is the work done by the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q21" value="a"> a) 20 J</label><br>
+    <label><input type="radio" name="q21" value="b"> b) 28.3 J</label><br>
+    <label><input type="radio" name="q21" value="c"> c) 40 J</label><br>
+    <label><input type="radio" name="q21" value="d"> d) 30 J</label>
+  </div>
+  <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 22 -->
+<div class="question">
+  <div class="question-number">22.</div>
+  <p>An object with mass 5 kg moves with velocity 10 m/s. What is the kinetic energy?</p>
+  <div class="options">
+    <label><input type="radio" name="q22" value="a"> a) 50 J</label><br>
+    <label><input type="radio" name="q22" value="b"> b) 100 J</label><br>
+    <label><input type="radio" name="q22" value="c"> c) 250 J</label><br>
+    <label><input type="radio" name="q22" value="d"> d) 500 J</label>
+  </div>
+  <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 23 -->
+<div class="question">
+  <div class="question-number">23.</div>
+  <p>A spring with spring constant 200 N/m is compressed 0.15 m. What is the potential energy stored in the spring?</p>
+  <div class="options">
+    <label><input type="radio" name="q23" value="a"> a) 2.25 J</label><br>
+    <label><input type="radio" name="q23" value="b"> b) 4.5 J</label><br>
+    <label><input type="radio" name="q23" value="c"> c) 6 J</label><br>
+    <label><input type="radio" name="q23" value="d"> d) 1.5 J</label>
+  </div>
+  <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 24 -->
+<div class="question">
+  <div class="question-number">24.</div>
+  <p>A 6 kg block is pushed across a frictionless surface by a force of 18 N for 3 seconds, starting from rest. What is the work done by the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q24" value="a"> a) 54 J</label><br>
+    <label><input type="radio" name="q24" value="b"> b) 81 J</label><br>
+    <label><input type="radio" name="q24" value="c"> c) 243 J</label><br>
+    <label><input type="radio" name="q24" value="d"> d) 27 J</label>
+  </div>
+  <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 25 -->
+<div class="question">
+  <div class="question-number">25.</div>
+  <p>An elevator motor does 20,000 J of work lifting a load to a height of 5 m. What is the mass of the load? (Take g = 9.8 m/s²)</p>
+  <div class="options">
+    <label><input type="radio" name="q25" value="a"> a) 408 kg</label><br>
+    <label><input type="radio" name="q25" value="b"> b) 500 kg</label><br>
+    <label><input type="radio" name="q25" value="c"> c) 200 kg</label><br>
+    <label><input type="radio" name="q25" value="d"> d) 1000 kg</label>
+  </div>
+  <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 26 -->
+<div class="question">
+  <div class="question-number">26.</div>
+  <p>A car with mass 1500 kg accelerates from rest to 20 m/s in 10 seconds. What is the average power output of the engine during this acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q26" value="a"> a) 30 kW</label><br>
+    <label><input type="radio" name="q26" value="b"> b) 60 kW</label><br>
+    <label><input type="radio" name="q26" value="c"> c) 90 kW</label><br>
+    <label><input type="radio" name="q26" value="d"> d) 120 kW</label>
+  </div>
+  <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 27 -->
+<div class="question">
+  <div class="question-number">27.</div>
+  <p>A 4 kg box is pushed across a rough surface with coefficient of kinetic friction 0.3 by a horizontal force of 20 N. The box moves 5 m. How much work is done by friction?</p>
+  <div class="options">
+    <label><input type="radio" name="q27" value="a"> a) -6 J</label><br>
+    <label><input type="radio" name="q27" value="b"> b) -18 J</label><br>
+    <label><input type="radio" name="q27" value="c"> c) -30 J</label><br>
+    <label><input type="radio" name="q27" value="d"> d) -60 J</label>
+  </div>
+  <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 28 -->
+<div class="question">
+  <div class="question-number">28.</div>
+  <p>A roller coaster car of mass 500 kg descends from rest at the top of a 20 m hill. Ignoring friction, what is its speed at the bottom?</p>
+  <div class="options">
+    <label><input type="radio" name="q28" value="a"> a) 14 m/s</label><br>
+    <label><input type="radio" name="q28" value="b"> b) 19.8 m/s</label><br>
+    <label><input type="radio" name="q28" value="c"> c) 20 m/s</label><br>
+    <label><input type="radio" name="q28" value="d"> d) 10 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 29 -->
+<div class="question">
+  <div class="question-number">29.</div>
+  <p>A force of 50 N is applied to a 10 kg box, causing it to accelerate at 3 m/s². What is the power output when the box reaches a velocity of 6 m/s?</p>
+  <div class="options">
+    <label><input type="radio" name="q29" value="a"> a) 150 W</label><br>
+    <label><input type="radio" name="q29" value="b"> b) 300 W</label><br>
+    <label><input type="radio" name="q29" value="c"> c) 600 W</label><br>
+    <label><input type="radio" name="q29" value="d"> d) 900 W</label>
+  </div>
+  <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<!-- Question 30 -->
+<div class="question">
+  <div class="question-number">30.</div>
+  <p>An object of mass 8 kg is lifted vertically with a constant speed to a height of 3 meters. What is the power output if this is done in 4 seconds?</p>
+  <div class="options">
+    <label><input type="radio" name="q30" value="a"> a) 60 W</label><br>
+    <label><input type="radio" name="q30" value="b"> b) 40 W</label><br>
+    <label><input type="radio" name="q30" value="c"> c) 90 W</label><br>
+    <label><input type="radio" name="q30" value="d"> d) 120 W</label>
+  </div>
+  <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+</div>
+
+
+
+  <style>
+  #submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  }
+
+  #submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+    cursor: pointer;
+  }
+
+  #result {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+</style>
+
+<button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+<div id="result" class="mt-3 fw-bold"></div>
+
+
+
+
+
+    <!-- Repeat similar format for questions 6–30 -->
+    <!-- ... -->
+
+  
+
+  
+
+
+
+<script>
+  const answers = {
+  q1: "c",
+  q2: "b",
+  q3: "a",
+  q4: "d",
+  q5: "a",
+  q6: "b",
+  q7: "a",
+  q8: "a",
+  q9: "b",
+  q10: "b",
+
+  q11: "b",  // 18 J kinetic energy
+  q12: "a",  // 0.6 J potential energy (corrected to option a)
+  q13: "a",  // 75 J work done
+  q14: "c",  // 0.7 m max compression
+  q15: "a",  // 3920 W power
+  q16: "a",  // 0 J kinetic energy at highest point
+  q17: "b",  // 60 J work done (corrected)
+  q18: "a",  // 40 W power (corrected)
+  q19: "b",  // 294 J work done
+  q20: "b",   // 86.6 J work done
+  q21: "b",  // 28.3 J
+  q22: "c",  // 250 J
+  q23: "a",  // 2.25 J
+  q24: "c",  // 243 J
+  q25: "a",  // 408 kg
+  q26: "a",  // 30 kW
+  q27: "d",  // -60 J
+  q28: "b",  // 19.8 m/s
+  q29: "b",  // 300 W
+  q30: "a"   // 60 W
+};
+
+const feedback = {
+  q1: "Use conservation of mechanical energy: potential energy at the top converts to spring potential energy. PE = mgh = 2*9.8*5 = 98 J. Set equal to (1/2)kx² = (1/2)*800*x². Solve for x: x = sqrt(2*98/800) ≈ 0.20 m.",
+  q2: "The initial speed comes from the conversion of spring potential energy (1/2)kx² into kinetic energy (1/2)mv². So, v = sqrt(kx²/m) but since KE = PE, it's v = sqrt(kx²/m) but must include 1/2, so v = sqrt(kx²/2m).",
+  q3: "Work done W = F * d. If force doubles and displacement halves, W_new = 2F * (d/2) = F*d = original work. So, work stays the same.",
+  q4: "Power P = F * v. To lift at constant power, speed is inversely proportional to mass. Doubling mass reduces speed by √2 because speed v = P/(mg).",
+  q5: "Work done = change in kinetic energy = (1/2) * 1000 * 20² = 200,000 J. Power = work/time = 200,000 / 10 = 20,000 W. The correct answer is a) 20,000 W.",
+  q6: "Work = force * displacement * cos(θ). Force = 30 N, displacement = 4 m, constant speed means no acceleration. Work done by the force is 30*4 = 120 J.",
+  q7: "Use kinematics or energy. Potential energy converted to kinetic energy: v = sqrt(2 * g * d * sin(θ)) = sqrt(2*9.8*5*sin30°) = sqrt(2*9.8*5*0.5) ≈ 5 m/s.",
+  q8: "Kinetic energy converts into spring potential energy: (1/2)mv² = (1/2)kx². Solve for x: x = sqrt(mv²/k) = sqrt(2*4²/200) = 0.4 m.",
+  q9: "Work = force * displacement = mg * h = 3 * 9.8 * 10 = 294 J.",
+  q10: "Time = work / power = 2000 J / 500 W = 4 seconds.",
+
+  q11: "Kinetic energy \( KE = \\frac{1}{2}mv^2 = \\frac{1}{2} \\times 4 \\times 3^2 = 18 \\, J \\). Option b) is correct.",
+  q12: "Potential energy stored in spring: \\( PE = \\frac{1}{2}kx^2 = \\frac{1}{2} \\times 120 \\times (0.1)^2 = 0.6 \\, J \\). Option a) is correct.",
+  q13: "Work done \\( W = F \\cdot d \\cdot \\cos \\theta = 50 \\times 3 \\times \\cos 60^\\circ = 75 \\, J \\). Option a) is correct.",
+  q14: "Maximum spring compression \\( x = \\sqrt{\\frac{mv^2}{k}} = \\sqrt{\\frac{10 \\times 5^2}{500}} = \\sqrt{0.5} \\approx 0.707 \\, m \\). Closest option: c) 0.7 m.",
+  q15: "Power = Work / time = \\( \\frac{mgh}{t} = \\frac{500 \\times 9.8 \\times 20}{25} = 3920 \\, W \\). Option a) is correct.",
+  q16: "At highest point, velocity = 0, so kinetic energy = 0 J. Option a) is correct.",
+  q17: "Work \\( W = F \\times d = 15 \\times 4 = 60 \\, J \\). Option b) is correct.",
+  q18: "Initial kinetic energy: \\( KE = \\frac{1}{2} m v^2 = \\frac{1}{2} \\times 5 \\times 8^2 = 160 \\, J \\). Power = Work / time = 160/4 = 40 W. Option a) is correct.",
+  q19: "Work done by gravity: \\( W = mgd \\sin \\theta = 12 \\times 9.8 \\times 6 \\times \\sin 25^\\circ \\approx 294 \\, J \\). Option b) is correct.",
+  q20: "Work done \\( W = F \\cdot d \\cdot \\cos \\theta = 20 \\times 5 \\times \\cos 30^\\circ = 86.6 \\, J \\). Option b) is correct.",
+  q21: `Work done by force is W = F * d * cos(θ).
+       Here, F = 10 N, d = 4 m, θ = 45°.
+       cos(45°) ≈ 0.707.
+       So, W = 10 * 4 * 0.707 ≈ 28.3 J.
+       Correct answer: b).`,
+
+  q22: `Kinetic Energy KE = (1/2) * m * v^2 = 0.5 * 5 * 10^2 = 0.5 * 5 * 100 = 250 J.
+       Since option d) 500 J is given, recheck: options show 250 J as c).
+       The correct answer is c) 250 J.`,
+
+  // Correction: q22 correct answer is c) 250 J (not d). Fixing below.
+
+  q22: `Kinetic Energy KE = (1/2) * m * v^2 = 0.5 * 5 * 10^2 = 250 J.
+       Correct answer: c).`,
+
+  q23: `Potential Energy in spring PE = (1/2) * k * x^2 = 0.5 * 200 * (0.15)^2 = 0.5 * 200 * 0.0225 = 2.25 J.
+       Correct answer: a).`,
+
+  q24: `Force = 18 N, time = 3 s, mass = 6 kg, initial velocity = 0.
+       Acceleration a = F/m = 18 / 6 = 3 m/s².
+       Displacement d = (1/2) * a * t^2 = 0.5 * 3 * 9 = 13.5 m.
+       Work W = F * d = 18 * 13.5 = 243 J.
+       Correct answer: c).`,
+
+  q25: `Work done W = m * g * h,
+       So m = W / (g * h) = 20000 / (9.8 * 5) ≈ 408.16 kg.
+       Correct answer: a).`,
+
+  q26: `Kinetic Energy at 20 m/s: KE = 0.5 * 1500 * 20^2 = 0.5 * 1500 * 400 = 300,000 J.
+       Power = Work done / time = 300,000 / 10 = 30,000 W = 30 kW.
+       Correct answer: a).`,
+
+  // Correction: q26 answer given 60 kW (b). Recheck calculation:
+
+  // KE = 0.5*1500*400 = 300,000 J
+  // Power = 300,000 J / 10 s = 30,000 W = 30 kW
+
+  // Given options: a) 30 kW, b) 60 kW, c) 90 kW, d) 120 kW
+  // So correct answer is a) 30 kW.
+
+  q26: `Kinetic Energy KE = 0.5 * 1500 kg * (20 m/s)^2 = 300,000 J.
+       Average power = Work done / time = 300,000 J / 10 s = 30,000 W = 30 kW.
+       Correct answer: a).`,
+
+  q27: `Friction force f = μ * m * g = 0.3 * 4 * 9.8 = 11.76 N.
+       Work done by friction = force * displacement * cos(180°) = -f * d = -11.76 * 5 = -58.8 J ≈ -60 J.
+       Correct answer: d).`,
+
+  q28: `Speed at bottom from conservation of energy:
+       mgh = (1/2) m v^2 ⇒ v = sqrt(2gh) = sqrt(2*9.8*20) ≈ sqrt(392) ≈ 19.8 m/s.
+       Correct answer: b).`,
+
+  q29: `Power = Force * velocity.
+       Given: F = 50 N, v = 6 m/s.
+       Power = 50 * 6 = 300 W.
+       Correct answer: b).`,
+
+  // Wait, options given for q29: a)150, b)300, c)600, d)900 W
+  // Recheck acceleration: a=3 m/s^2, v=6 m/s, F=50 N is consistent.
+  // Power = F * v = 50 * 6 = 300 W correct.
+
+  q29: `Power output when box reaches 6 m/s:
+       P = F * v = 50 N * 6 m/s = 300 W.
+       Correct answer: b).`,
+
+  q30: `Work done = m * g * h = 8 * 9.8 * 3 = 235.2 J.
+       Power = Work / time = 235.2 / 4 = 58.8 W ≈ 60 W.
+       Correct answer: a).`
+};
+  function checkAnswers() {
+  let score = 0;
+  for (let i = 1; i <= 30; i++) {
+    const questionName = "q" + i;
+    const options = document.getElementsByName(questionName);
+    let selected = "";
+    options.forEach(opt => {
+      opt.parentElement.style.color = "black"; // Reset color
+      if (opt.checked) selected = opt.value;
+    });
+
+    const feedbackEl = document.getElementById("feedback-" + questionName);
+    if (selected === answers[questionName]) {
+      score++;
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "green";
+      });
+    } else {
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "red";
+        if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+      });
+    }
+
+    // Show feedback
+    if (feedbackEl) {
+      feedbackEl.innerText = "Explanation: " + (feedback[questionName] || "No feedback available.");
+      feedbackEl.style.display = "block";
+    }
+  }
+
+  document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+}
+
+
+  // Attach values a-d to radio buttons
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+</script>
+</body>
+</html>

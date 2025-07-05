@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rotational Kinetic Energy</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #005a9c;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 220px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .example {
+      background-color: #fef9c3;
+      border-left: 6px solid #eab308;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .example p {
+      margin-bottom: 0.8rem;
+    }
+    .example p:last-child {
+      margin-bottom: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1.5rem auto;
+      width: 90%;
+      background: #f8fafc;
+      font-size: 1.05rem;
+    }
+    th, td {
+      border: 1px solid #b6c6e3;
+      padding: 0.7rem 1rem;
+      text-align: center;
+    }
+    th {
+      background: #dbeafe;
+      color: #003049;
+    }
+    .simulation-container {
+      background: #f8fafc;
+      border: 2px solid #3b82f6;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-canvas {
+      border: 2px solid #1e3a8a;
+      border-radius: 10px;
+      background: white;
+      margin: 1rem auto;
+      display: block;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .control-group {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+    }
+    .control-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .control-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-group .value-display {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .energy-display {
+      background: #dbeafe;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+    }
+    .energy-display strong {
+      color: #1e40af;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-fluid-earth {
+      width: 60%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { 
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Rotational Kinetic Energy</h1>
+    
+
+    <p>
+      Just as moving objects have kinetic energy due to their linear motion, rotating objects have <strong>rotational kinetic energy</strong> due to their spinning motion. This energy depends on both how much mass is distributed away from the axis (moment of inertia) and how fast the object is spinning (angular velocity).
+    </p>
+
+    <div class="formula-box">
+      $$K_{\text{rot}} = \frac{1}{2}I\omega^2$$
+    </div>
+
+    <ul>
+      <li><strong>$K_{\text{rot}}$</strong>: Rotational kinetic energy (Joules, J)</li>
+      <li><strong>$I$</strong>: Moment of inertia (kg·m²)</li>
+      <li><strong>$\omega$</strong>: Angular velocity (rad/s)</li>
+    </ul>
+
+    <img src="rotation-kinetic-diagram.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Interactive Simulation: Spinning Circle</h2>
+    <div class="simulation-container">
+      <p>Explore how radius, mass, and angular velocity affect rotational kinetic energy with this interactive simulation.</p>
+      
+      <canvas id="spinningCircle" class="simulation-canvas" width="400" height="400"></canvas>
+      
+      <div class="controls">
+        <div class="control-group">
+          <label for="radiusSlider">Radius (1-5 m):</label>
+          <input type="range" id="radiusSlider" min="1" max="5" step="0.1" value="2">
+          <div class="value-display">Current: <span id="radiusValue">2.0</span> m</div>
+        </div>
+        
+        <div class="control-group">
+          <label for="massSlider">Mass (1-10 kg):</label>
+          <input type="range" id="massSlider" min="1" max="10" step="0.1" value="3">
+          <div class="value-display">Current: <span id="massValue">3.0</span> kg</div>
+        </div>
+        
+        <div class="control-group">
+          <label for="angularVelocitySlider">Angular Velocity (1-5 rad/s):</label>
+          <input type="range" id="angularVelocitySlider" min="1" max="5" step="0.1" value="2">
+          <div class="value-display">Current: <span id="angularVelocityValue">2.0</span> rad/s</div>
+        </div>
+      </div>
+      
+      <div class="energy-display">
+        <strong>Calculations:</strong><br>
+        Moment of Inertia (I): <span id="momentOfInertia">6.0</span> kg·m²<br>
+        Rotational Kinetic Energy: <span id="rotationalEnergy">12.0</span> J<br>
+        
+      </div>
+    </div>
+
+    <h2>Physical Meaning</h2>
+    <p>
+      The more mass an object has, and the farther that mass is from the axis of rotation, the greater its moment of inertia. The faster it spins, the more rotational kinetic energy it has. This is why a spinning flywheel or a rotating planet stores a lot of energy.
+    </p>
+
+    <img src="spinning-planet.gif" alt="Descriptive Alt Text" class="img-fluid-earth">
+
+    <h2>Compare: Linear vs. Rotational Kinetic Energy</h2>
+    <table>
+      <tr>
+        <th>Linear</th>
+        <th>Rotational</th>
+      </tr>
+      <tr>
+        <td>$K = \frac{1}{2}mv^2$</td>
+        <td>$K_{\text{rot}} = \frac{1}{2}I\omega^2$</td>
+      </tr>
+      <tr>
+        <td>Mass ($m$)</td>
+        <td>Moment of inertia ($I$)</td>
+      </tr>
+      <tr>
+        <td>Speed ($v$)</td>
+        <td>Angular speed ($\omega$)</td>
+      </tr>
+      <tr>
+        <td>Translational motion</td>
+        <td>Rotational motion</td>
+      </tr>
+    </table>
+
+    <h2>Example 1: Rotational Kinetic Energy of a Spinning Disk</h2>
+    <div class="example">
+      <p>A solid disk of mass $2\,\text{kg}$ and radius $0.5\,\text{m}$ spins at $10\,\text{rad/s}$. What is its rotational kinetic energy?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>Moment of inertia for a solid disk: $I = \frac{1}{2}MR^2$</p>
+      <p>$I = \frac{1}{2} \times 2 \times (0.5)^2 = 0.25\,\text{kg} \cdot \text{m}^2$</p>
+      <p>$K_{\text{rot}} = \frac{1}{2} \times 0.25 \times (10)^2 = 12.5\,\text{J}$</p>
+    </div>
+
+    <h3>Example 2: Comparing Two Objects</h3>
+    <div class="example">
+      <p>A solid sphere and a thin hoop both have mass $1\,\text{kg}$ and radius $0.4\,\text{m}$, spinning at $5\,\text{rad/s}$. Which has more rotational kinetic energy?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <p>For the sphere: $I_{\text{sphere}} = \frac{2}{5}MR^2 = \frac{2}{5} \times 1 \times (0.4)^2 = 0.064\,\text{kg} \cdot \text{m}^2$</p>
+      <p>$K_{\text{rot, sphere}} = \frac{1}{2} \times 0.064 \times 25 = 0.8\,\text{J}$</p>
+      <p>For the hoop: $I_{\text{hoop}} = MR^2 = 1 \times (0.4)^2 = 0.16\,\text{kg} \cdot \text{m}^2$</p>
+      <p>$K_{\text{rot, hoop}} = \frac{1}{2} \times 0.16 \times 25 = 2.0\,\text{J}$</p>
+      <p><strong>Conclusion:</strong> The hoop stores more rotational kinetic energy because its mass is farther from the axis.</p>
+    </div>
+
+    
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li><b>Flywheels:</b> Used in engines and energy storage to maintain steady rotation and store energy.</li>
+      <li><b>Figure Skaters:</b> Pulling in arms reduces $I$ and increases $\omega$, but $K_{\text{rot}}$ can change if work is done.</li>
+      <li><b>Planets and Stars:</b> Rotational kinetic energy is a major part of their total energy budget.</li>
+      <li><b>Amusement Park Rides:</b> Rotating rides use and dissipate large amounts of rotational kinetic energy.</li>
+    </ul>
+
+    <img src="rotating-amusement.jpg" alt="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Summary / Takeaways</h2>
+    <ul>
+      <li>Rotational kinetic energy is stored in spinning objects.</li>
+      <li>It depends on both the moment of inertia and the square of angular velocity.</li>
+      <li>Objects with more mass farther from the axis (higher $I$) store more energy for the same $\omega$.</li>
+      <li>This concept is crucial in engineering (flywheels, turbines), astronomy (planets, stars), and everyday life (wheels, gears).</li>
+      <li>Comparing $K_{\text{rot}}$ for different shapes shows the importance of mass distribution.</li>
+    </ul>
+  </div>
+
+  <script>
+    // Spinning Circle Simulation
+    class SpinningCircleSimulation {
+      constructor() {
+        this.canvas = document.getElementById('spinningCircle');
+        this.ctx = this.canvas.getContext('2d');
+        this.centerX = this.canvas.width / 2;
+        this.centerY = this.canvas.height / 2;
+        this.angle = 0;
+        this.animationId = null;
+        
+        // Parameters
+        this.radius = 2;
+        this.mass = 3;
+        this.angularVelocity = 2;
+        
+        this.initializeControls();
+        this.startAnimation();
+      }
+      
+      initializeControls() {
+        const radiusSlider = document.getElementById('radiusSlider');
+        const massSlider = document.getElementById('massSlider');
+        const angularVelocitySlider = document.getElementById('angularVelocitySlider');
+        
+        radiusSlider.addEventListener('input', (e) => {
+          this.radius = parseFloat(e.target.value);
+          document.getElementById('radiusValue').textContent = this.radius.toFixed(1);
+          this.updateCalculations();
+        });
+        
+        massSlider.addEventListener('input', (e) => {
+          this.mass = parseFloat(e.target.value);
+          document.getElementById('massValue').textContent = this.mass.toFixed(1);
+          this.updateCalculations();
+        });
+        
+        angularVelocitySlider.addEventListener('input', (e) => {
+          this.angularVelocity = parseFloat(e.target.value);
+          document.getElementById('angularVelocityValue').textContent = this.angularVelocity.toFixed(1);
+          this.updateCalculations();
+        });
+        
+        this.updateCalculations();
+      }
+      
+      updateCalculations() {
+        // Moment of inertia for a solid disk: I = (1/2) * M * R^2
+        const momentOfInertia = 0.5 * this.mass * this.radius * this.radius;
+        
+        // Rotational kinetic energy: K_rot = (1/2) * I * ω^2
+        const rotationalEnergy = 0.5 * momentOfInertia * this.angularVelocity * this.angularVelocity;
+        
+        document.getElementById('momentOfInertia').textContent = momentOfInertia.toFixed(1);
+        document.getElementById('rotationalEnergy').textContent = rotationalEnergy.toFixed(1);
+      }
+      
+      drawCircle() {
+        // Clear canvas
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Calculate scale factor (convert meters to pixels)
+        const scale = 30; // 30 pixels per meter
+        const pixelRadius = this.radius * scale;
+        
+        // Calculate density-based color (sky blue for low density, navy blue for high density)
+        const density = this.mass / (Math.PI * this.radius * this.radius);
+        const minDensity = 1 / (Math.PI * 5 * 5); // Minimum density (mass 1, radius 5)
+        const maxDensity = 10 / (Math.PI * 1 * 1); // Maximum density (mass 10, radius 1)
+        const densityRatio = (density - minDensity) / (maxDensity - minDensity);
+        const clampedRatio = Math.max(0, Math.min(1, densityRatio)); // Clamp between 0 and 1
+        
+        const red = Math.round(135 + clampedRatio * 0); // Start at 135 (sky blue), stay at 135
+        const green = Math.round(206 - clampedRatio * 100); // Start at 206 (sky blue), end at 106 (navy blue)
+        const blue = Math.round(235 - clampedRatio * 100); // Start at 235 (sky blue), end at 135 (navy blue)
+        const blueColor = `rgb(${red}, ${green}, ${blue})`;
+        
+        // Draw the circle
+        this.ctx.beginPath();
+        this.ctx.arc(this.centerX, this.centerY, pixelRadius, 0, 2 * Math.PI);
+        this.ctx.fillStyle = blueColor;
+        this.ctx.fill();
+        this.ctx.strokeStyle = '#1e3a8a';
+        this.ctx.lineWidth = 3;
+        this.ctx.stroke();
+        
+        // Draw radial lines (8 lines)
+        const numLines = 8;
+        for (let i = 0; i < numLines; i++) {
+          const lineAngle = this.angle + (i * 2 * Math.PI / numLines);
+          const endX = this.centerX + pixelRadius * Math.cos(lineAngle);
+          const endY = this.centerY + pixelRadius * Math.sin(lineAngle);
+          
+          this.ctx.beginPath();
+          this.ctx.moveTo(this.centerX, this.centerY);
+          this.ctx.lineTo(endX, endY);
+          this.ctx.strokeStyle = '#ffffff';
+          this.ctx.lineWidth = 2;
+          this.ctx.stroke();
+        }
+        
+        // Draw rotation arrow
+        const arrowLength = pixelRadius + 20;
+        const arrowAngle = this.angle + Math.PI / 4;
+        const arrowX = this.centerX + arrowLength * Math.cos(arrowAngle);
+        const arrowY = this.centerY + arrowLength * Math.sin(arrowAngle);
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(arrowX, arrowY);
+        this.ctx.lineTo(arrowX - 15 * Math.cos(arrowAngle - 0.3), arrowY - 15 * Math.sin(arrowAngle - 0.3));
+        this.ctx.moveTo(arrowX, arrowY);
+        this.ctx.lineTo(arrowX - 15 * Math.cos(arrowAngle + 0.3), arrowY - 15 * Math.sin(arrowAngle + 0.3));
+        this.ctx.strokeStyle = '#dc2626';
+        this.ctx.lineWidth = 3;
+        this.ctx.stroke();
+        
+        // Draw angular velocity label
+        this.ctx.fillStyle = '#dc2626';
+        this.ctx.font = 'bold 16px Arial';
+        this.ctx.textAlign = 'center';
+        this.ctx.fillText(`ω = ${this.angularVelocity} rad/s`, arrowX, arrowY - 10);
+      }
+      
+      animate() {
+        // Update angle based on angular velocity
+        this.angle += this.angularVelocity * 0.05; // Slow down animation for visibility
+        
+        this.drawCircle();
+        this.animationId = requestAnimationFrame(() => this.animate());
+      }
+      
+      startAnimation() {
+        if (this.animationId) {
+          cancelAnimationFrame(this.animationId);
+        }
+        this.animate();
+      }
+    }
+    
+    // Initialize simulation when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      new SpinningCircleSimulation();
+    });
+  </script>
+</body>
+</html>

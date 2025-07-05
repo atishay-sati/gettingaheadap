@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shell Theorem</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    h3 {
+      margin-top: 1.2rem;
+      color: #005f73;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      font-style: italic;
+      user-select: none;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      border-top: 3px solid #3b82f6;
+      padding-top: 1rem;
+    }
+    .img-fluid-center {
+    height: auto;
+    width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Shell Theorem</h1>
+    
+
+    <p>
+      The Shell Theorem, formulated by Isaac Newton, describes how spherical mass distributions affect the gravitational field. It is particularly important in understanding gravitational interactions inside and outside uniform spheres like planets and stars.
+    </p>
+
+    <h2>The Two Main Results of the Shell Theorem</h2>
+    <ul>
+      <li><strong>Outside a uniform spherical shell:</strong> The gravitational force acts as if all the mass were concentrated at the center.</li>
+      <li><strong>Inside a uniform spherical shell:</strong> The net gravitational force at any point inside is zero.</li>
+    </ul>
+
+    
+
+    <h2>Gravitational Force Outside the Shell</h2>
+    <p>
+      If a point mass \( m \) is located a distance \( r \) from the center of a uniform spherical shell (or solid sphere) of mass \( M \), and \( r \geq R \) (outside the shell), then:
+    </p>
+    <div class="formula-box">
+      \( F = \frac{GMm}{r^2} \)
+    </div>
+    <p>This is identical to the force from a point mass located at the center of the sphere.</p>
+
+    <img src="shelltheorem2.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Gravitational Force Inside the Shell</h2>
+    <p>
+      If the point mass is located <em>inside</em> a uniform spherical shell (i.e., \( r &lt; R \)), the shell’s gravitational pull cancels out symmetrically in all directions:
+    </p>
+    <div class="formula-box">
+      \( F = 0 \)
+    </div>
+    <p>Thus, the shell exerts no net gravitational force on the object inside it.</p>
+
+    <img src="shelltheorem1.png" alt = "Descriptive Alt Text" class="img-fluid-center">
+
+    
+
+    <h2>Applications of Shell Theorem</h2>
+    <ul>
+      <li>Justifies treating planets as point masses in orbital calculations</li>
+      <li>Important in gravitational field mapping and geophysics</li>
+      <li>Used in cosmology to study spherically symmetric mass distributions</li>
+    </ul>
+
+    <p class="summary">
+        Summary:
+    </p>
+    <p>      The Shell Theorem is essential for simplifying gravitational calculations involving spheres and helps explain many real-world and astronomical phenomena with elegant precision.</p>
+  </div>
+</body>
+</html>

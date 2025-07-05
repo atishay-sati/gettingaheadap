@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamics Practice Test – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #0077b6;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <a href="Dynamics.html" class="back-link">← Back to Concepts</a>
+    <h1>Dynamics Practice Test</h1>
+    <h2>30 Questions – Mixed Conceptual & Calculations</h2>
+
+    <!-- Example questions 1-3 shown. You can expand to 30 following this format. -->
+
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>A 5 kg block is pulled across a horizontal surface with a force of 20 N. If the coefficient of kinetic friction is 0.3, what is the acceleration of the block?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) 1.2 m/s²</label>
+        <label><input type="radio" name="q1"> b) 2.0 m/s²</label>
+        <label><input type="radio" name="q1"> c) 3.4 m/s²</label>
+        <label><input type="radio" name="q1"> d) 4.0 m/s²</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>Which of the following best describes Newton's Third Law?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) An object in motion stays in motion.</label>
+        <label><input type="radio" name="q2"> b) Net force equals mass times acceleration.</label>
+        <label><input type="radio" name="q2"> c) For every action, there is an equal and opposite reaction.</label>
+        <label><input type="radio" name="q2"> d) Objects fall at the same rate in vacuum.</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>An object of mass 2 kg is suspended by a string and remains at rest. What is the tension in the string?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 9.8 N</label>
+        <label><input type="radio" name="q3"> b) 4.9 N</label>
+        <label><input type="radio" name="q3"> c) 19.6 N</label>
+        <label><input type="radio" name="q3"> d) 0 N</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Add remaining questions 4–30 below this pattern -->
+    
+    <!-- Example Conceptual Question -->
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>When a car accelerates forward, what is the direction of the frictional force on the tires?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) Backward</label>
+        <label><input type="radio" name="q4"> b) Forward</label>
+        <label><input type="radio" name="q4"> c) Upward</label>
+        <label><input type="radio" name="q4"> d) Downward</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A 10 kg object is falling through air and reaches terminal velocity. What is true about the net force on the object?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) It is equal to the object's weight.</label>
+        <label><input type="radio" name="q5"> b) It is greater than the air resistance.</label>
+        <label><input type="radio" name="q5"> c) It is zero.</label>
+        <label><input type="radio" name="q5"> d) It is negative.</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <div class="question">
+  <div class="question-number">6.</div>
+  <p>A 2 kg object is dropped from rest. What is the force acting on it due to gravity?</p>
+  <div class="options">
+    <label><input type="radio" name="q6"> a) 9.8 N</label>
+    <label><input type="radio" name="q6"> b) 4.9 N</label>
+    <label><input type="radio" name="q6"> c) 19.6 N</label>
+    <label><input type="radio" name="q6"> d) 2.0 N</label>
+  </div>
+  <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">7.</div>
+  <p>Which of the following is not a fundamental force in nature?</p>
+  <div class="options">
+    <label><input type="radio" name="q7"> a) Gravitational</label>
+    <label><input type="radio" name="q7"> b) Electromagnetic</label>
+    <label><input type="radio" name="q7"> c) Frictional</label>
+    <label><input type="radio" name="q7"> d) Strong nuclear</label>
+  </div>
+  <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">8.</div>
+  <p>A force of 50 N acts on a 25 kg object. What is its acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q8"> a) 0.5 m/s²</label>
+    <label><input type="radio" name="q8"> b) 2.0 m/s²</label>
+    <label><input type="radio" name="q8"> c) 1.5 m/s²</label>
+    <label><input type="radio" name="q8"> d) 5.0 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">9.</div>
+  <p>If the net force on an object is zero, the object must:</p>
+  <div class="options">
+    <label><input type="radio" name="q9"> a) Be moving with constant velocity</label>
+    <label><input type="radio" name="q9"> b) Be accelerating</label>
+    <label><input type="radio" name="q9"> c) Be moving with decreasing velocity</label>
+    <label><input type="radio" name="q9"> d) Have increasing speed</label>
+  </div>
+  <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">10.</div>
+  <p>What is the net force on a 10 kg object accelerating at 3 m/s²?</p>
+  <div class="options">
+    <label><input type="radio" name="q10"> a) 10 N</label>
+    <label><input type="radio" name="q10"> b) 13 N</label>
+    <label><input type="radio" name="q10"> c) 30 N</label>
+    <label><input type="radio" name="q10"> d) 3.3 N</label>
+  </div>
+  <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">11.</div>
+  <p>An object is moving in a circle at constant speed. What type of acceleration does it experience?</p>
+  
+  <div class="options">
+    <label><input type="radio" name="q11"> a) No acceleration</label>
+    <label><input type="radio" name="q11"> b) Tangential acceleration</label>
+    <label><input type="radio" name="q11"> c) Radial (centripetal) acceleration</label>
+    <label><input type="radio" name="q11"> d) Angular acceleration</label>
+  </div>
+  <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">12.</div>
+  <p>A 3 kg block experiences a net force of 12 N. What is its acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q12"> a) 3 m/s²</label>
+    <label><input type="radio" name="q12"> b) 4 m/s²</label>
+    <label><input type="radio" name="q12"> c) 6 m/s²</label>
+    <label><input type="radio" name="q12"> d) 9 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">13.</div>
+  <p>An object is going counter clockwise in a circle. Suddenly the ground turns to ice and there is no friction between the ice. What describes the path at point Z where the track turned to ice.</p>
+  <img src="circlequestion.png" alt="Descriptive Alt Text" class="img-fluid-center ">
+  <div class="options">
+    <label><input type="radio" name="q13"> a) A</label>
+    <label><input type="radio" name="q13"> b) B</label>
+    <label><input type="radio" name="q13"> c) C</label>
+    <label><input type="radio" name="q13"> d) D</label>
+  </div>
+  <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">14.</div>
+  <p>A 10 kg crate is pulled with a force of 40 N on a surface with a coefficient of kinetic friction of 0.2. What is the net force?</p>
+  <div class="options">
+    <label><input type="radio" name="q14"> a) 20 N</label>
+    <label><input type="radio" name="q14"> b) 0 N</label>
+    <label><input type="radio" name="q14"> c) 10 N</label>
+    <label><input type="radio" name="q14"> d) 30 N</label>
+  </div>
+  <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">15.</div>
+  <p>What is the direction of the frictional force relative to motion?</p>
+  <div class="options">
+    <label><input type="radio" name="q15"> a) Same direction as motion</label>
+    <label><input type="radio" name="q15"> b) Perpendicular to motion</label>
+    <label><input type="radio" name="q15"> c) Opposite to the direction of motion</label>
+    <label><input type="radio" name="q15"> d) In the direction of the net force</label>
+  </div>
+  <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">16.</div>
+  <p>A 4 kg object is acted on by two horizontal forces: 30 N to the right and 10 N to the left. What is the object's acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q16"> a) 2.0 m/s²</label>
+    <label><input type="radio" name="q16"> b) 5.0 m/s²</label>
+    <label><input type="radio" name="q16"> c) 7.5 m/s²</label>
+    <label><input type="radio" name="q16"> d) 10.0 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">17.</div>
+  <p>An elevator is moving upward and slowing down. What is the direction of the net force?</p>
+  <div class="options">
+    <label><input type="radio" name="q17"> a) Upward</label>
+    <label><input type="radio" name="q17"> b) Downward</label>
+    <label><input type="radio" name="q17"> c) Zero</label>
+    <label><input type="radio" name="q17"> d) Depends on the weight</label>
+  </div>
+  <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">18.</div>
+  <p>A block is sliding down a frictionless incline at 30°. What is its acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q18"> a) 4.9 m/s²</label>
+    <label><input type="radio" name="q18"> b) 6.3 m/s²</label>
+    <label><input type="radio" name="q18"> c) 8.5 m/s²</label>
+    <label><input type="radio" name="q18"> d) 9.8 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">19.</div>
+  <p>If a 12 N net force is applied to a 3 kg object initially at rest, what is its velocity after 4 seconds?</p>
+  <div class="options">
+    <label><input type="radio" name="q19"> a) 8 m/s</label>
+    <label><input type="radio" name="q19"> b) 12 m/s</label>
+    <label><input type="radio" name="q19"> c) 16 m/s</label>
+    <label><input type="radio" name="q19"> d) 20 m/s</label>
+  </div>
+  <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">20.</div>
+  <p>A 6 kg box is pulled by a string at an angle of 30° above the horizontal with a tension of 60 N. What is the horizontal component of the force?</p>
+  <div class="options">
+    <label><input type="radio" name="q20"> a) 30 N</label>
+    <label><input type="radio" name="q20"> b) 45 N</label>
+    <label><input type="radio" name="q20"> c) 52 N</label>
+    <label><input type="radio" name="q20"> d) 60 N</label>
+  </div>
+  <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">21.</div>
+  <p>A net force causes an object to accelerate. If the mass of the object is doubled, the acceleration will:</p>
+  <div class="options">
+    <label><input type="radio" name="q21"> a) Double</label>
+    <label><input type="radio" name="q21"> b) Halve</label>
+    <label><input type="radio" name="q21"> c) Remain the same</label>
+    <label><input type="radio" name="q21"> d) Quadruple</label>
+  </div>
+  <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">22.</div>
+  <p>A 50 N object is suspended from two ropes at equal angles of 60° from the ceiling. What is the tension in each rope?</p>
+  <div class="options">
+    <label><input type="radio" name="q22"> a) 25 N</label>
+    <label><input type="radio" name="q22"> b) 29 N</label>
+    <label><input type="radio" name="q22"> c) 50 N</label>
+    <label><input type="radio" name="q22"> d) 58 N</label>
+  </div>
+  <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">23.</div>
+  <p>What is the purpose of a free-body diagram in dynamics?</p>
+  <div class="options">
+    <label><input type="radio" name="q23"> a) To calculate energy</label>
+    <label><input type="radio" name="q23"> b) To represent all forces acting on an object</label>
+    <label><input type="radio" name="q23"> c) To show velocity vectors</label>
+    <label><input type="radio" name="q23"> d) To display acceleration direction</label>
+  </div>
+  <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">24.</div>
+  <p>A 3 kg object on a frictionless table is connected to a 2 kg hanging mass by a string over a pulley. What is the acceleration of the system?</p>
+  <div class="options">
+    <label><input type="radio" name="q24"> a) 2.0 m/s²</label>
+    <label><input type="radio" name="q24"> b) 3.9 m/s²</label>
+    <label><input type="radio" name="q24"> c) 5.4 m/s²</label>
+    <label><input type="radio" name="q24"> d) 6.5 m/s²</label>
+  </div>
+  <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">25.</div>
+  <p>The function of velocity is given as v(t) = 4t² and there is a mass of 5 [kg]. what is the force at t=2?</p>
+  <div class="options">
+    <label><input type="radio" name="q25"> a) 16 </label>
+    <label><input type="radio" name="q25"> b) 10 </label>
+    <label><input type="radio" name="q25"> c) 0 </label>
+    <label><input type="radio" name="q25"> d) 80</label>
+  </div>
+  <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">26.</div>
+  <p>A block of mass m is pushed with a force F up a frictionless incline. What is the expression for its acceleration?</p>
+  <div class="options">
+    <label><input type="radio" name="q26"> a) F/m</label>
+    <label><input type="radio" name="q26"> b) (F - mg)/m</label>
+    <label><input type="radio" name="q26"> c) (F - mg sinθ)/m</label>
+    <label><input type="radio" name="q26"> d) (F - mg cosθ)/m</label>
+  </div>
+  <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">27.</div>
+  <p>If two objects interact via Newton’s Third Law, which of the following is always true?</p>
+  <div class="options">
+    <label><input type="radio" name="q27"> a) They cancel each other</label>
+    <label><input type="radio" name="q27"> b) They are equal and opposite</label>
+    <label><input type="radio" name="q27"> c) They only exist in contact</label>
+    <label><input type="radio" name="q27"> d) The larger object experiences more force</label>
+  </div>
+  <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">28.</div>
+  <p>What happens to the normal force when an object is on a frictionless incline compared to a flat surface?</p>
+  <div class="options">
+    <label><input type="radio" name="q28"> a) It increases</label>
+    <label><input type="radio" name="q28"> b) It stays the same</label>
+    <label><input type="radio" name="q28"> c) It decreases</label>
+    <label><input type="radio" name="q28"> d) It becomes zero</label>
+  </div>
+  <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">29.</div>
+  <p>Which force is responsible for centripetal acceleration in a car in circular motion with a bank thats not ideal?</p>
+  <div class="options">
+    <label><input type="radio" name="q29"> a) Normal force and Friction</label>
+    <label><input type="radio" name="q29"> b) Friction</label>
+    <label><input type="radio" name="q29"> c) Normal Force</label>
+    <label><input type="radio" name="q29"> d) Centrifugal force</label>
+  </div>
+  <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+</div>
+
+<div class="question">
+  <div class="question-number">30.</div>
+  <p>A 4 kg object moving at 6 m/s hits a wall and stops in 0.2 seconds. Acceleration was constant during the whole trip. What is the force that was applied?</p>
+  <div class="options">
+    <label><input type="radio" name="q30"> a) 12 N</label>
+    <label><input type="radio" name="q30"> b) 60 N</label>
+    <label><input type="radio" name="q30"> c) 120 N</label>
+    <label><input type="radio" name="q30"> d) 200 N</label>
+  </div>
+  <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+  <style>
+  #submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  }
+
+  #submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+    cursor: pointer;
+  }
+
+  #result {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+</style>
+
+<button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+<div id="result" class="mt-3 fw-bold"></div>
+
+
+
+
+
+    <!-- Repeat similar format for questions 6–30 -->
+    <!-- ... -->
+
+  
+
+  
+
+
+
+<script>
+  const answers = {
+    q1: "a",
+    q2: "c",
+    q3: "c",
+    q4: "b",
+    q5: "c",
+    q6: "c",
+    q7: "c",
+    q8: "b",
+    q9: "a",
+    q10: "c",
+    q11: "c",
+    q12: "b",
+    q13: "a",
+    q14: "a",
+    q15: "c",
+    q16: "b",
+    q17: "b",
+    q18: "a",
+    q19: "c",
+    q20: "c",
+    q21: "b",
+    q22: "b",
+    q23: "b",
+    q24: "b",
+    q25: "d",
+    q26: "c",
+    q27: "b",
+    q28: "c",
+    q29: "b",
+    q30: "c"
+  };
+
+  const feedback = {
+    q1: "Use \\\\( F_{net} = F_{applied} - F_{friction} \\\\). \\\\( F_{friction} = \\\\mu_k mg = 0.3 \\\\times 5 \\\\times 9.8 = 14.7 \\\\text{ N} \\\\). \\\\( F_{net} = 20 - 14.7 = 5.3 \\\\text{ N} \\\\). \\\\( a = \\\\frac{F_{net}}{m} = \\\\frac{5.3}{5} = 1.06 \\\\text{ m/s}^2 \\\\), closest to 1.2 m/s².",
+      q2: "Newton's Third Law states that for every action, there is an equal and opposite reaction. This means when object A exerts a force on object B, object B exerts an equal force back on object A.",
+      q3: "When an object is at rest, the tension in the string equals the weight of the object. \\\\( T = mg = 2 \\\\times 9.8 = 19.6 \\\\text{ N} \\\\).",
+      q4: "When a car accelerates forward, the tires push backward on the road. By Newton's Third Law, the road pushes forward on the tires, providing the forward frictional force needed for acceleration.",
+      q5: "At terminal velocity, the object is no longer accelerating, so the net force must be zero. The gravitational force is balanced by the air resistance force.",
+  q6: "Rocket propulsion relies on Newton’s 3rd law: expelling gas backward pushes the rocket forward.",
+      q7: "Friction is not a fundamental force. The four fundamental forces are gravitational, electromagnetic, strong nuclear, and weak nuclear.",
+      q8: "Use Newton's Second Law: \\\\( a = \\\\frac{F}{m} = \\\\frac{50}{25} = 2.0 \\\\text{ m/s}^2 \\\\).",
+  q9: "No acceleration means net force is zero, per Newton’s First Law.",
+      q10: "Use Newton's Second Law: \\\\( F = ma = 10 \\\\times 3 = 30 \\\\text{ N} \\\\).",
+  q11: "Even with constant speed, circular motion involves centripetal (radial) acceleration toward the center.",
+      q12: "Use Newton's Second Law: \\\\( a = \\\\frac{F}{m} = \\\\frac{12}{3} = 4 \\\\text{ m/s}^2 \\\\).",
+  q13: "When friction disappears, the object moves tangentially to the circle—choice A.",
+      q14: "\\\\( F_{friction} = \\\\mu_k mg = 0.2 \\\\times 10 \\\\times 9.8 = 19.6 \\\\text{ N} \\\\). \\\\( F_{net} = F_{applied} - F_{friction} = 40 - 19.6 = 20.4 \\\\text{ N} \\\\), closest to 20 N.",
+  q15: "Friction always opposes the direction of motion or attempted motion.",
+      q16: "\\\\( F_{net} = 30 - 10 = 20 \\\\text{ N} \\\\). \\\\( a = \\\\frac{F_{net}}{m} = \\\\frac{20}{4} = 5 \\\\text{ m/s}^2 \\\\).",
+  q17: "If it's moving up and slowing down, acceleration is downward → net force is downward.",
+      q18: "\\\\( a = g \\\\sin(\\\\theta) = 9.8 \\\\times \\\\sin(30°) = 9.8 \\\\times 0.5 = 4.9 \\\\text{ m/s}^2 \\\\).",
+      q19: "\\\\( a = \\\\frac{F}{m} = \\\\frac{12}{3} = 4 \\\\text{ m/s}^2 \\\\). \\\\( v = v_0 + at = 0 + 4 \\\\times 4 = 16 \\\\text{ m/s} \\\\).",
+      q20: "\\\\( F_{horizontal} = F \\\\cos(\\\\theta) = 60 \\\\cos(30°) = 60 \\\\times 0.866 = 52 \\\\text{ N} \\\\).",
+  q21: "Acceleration is inversely proportional to mass. Doubling the mass halves the acceleration.",
+  q22: "Use vertical force balance: 2Tsin(60°) = 50 N. Solving gives T ≈ 29 N.",
+  q23: "A free-body diagram shows all forces acting on an object, crucial for analyzing dynamics.",
+  q24: "Total mass is 5 kg, net force is 2g → acceleration is 2g/5 = 3.9 m/s².",
+  q25: "Acceleration is derivative of velocity. a = 8t, so at t = 2, a = 16; F = ma = 80 N.",
+  q26: "Net force is F - mgsinθ. Divide by m to get a = (F - mg sinθ)/m.",
+  q27: "Newton's 3rd law: Every action has an equal and opposite reaction.",
+  q28: "On an incline, normal force = mgcosθ, which is less than mg.",
+  q29: "When banking is not ideal, friction provides (or assists) centripetal acceleration.",
+      q30: "\\\\( v_f = v_i + at \\\\Rightarrow 0 = 6 + a(0.2) \\\\Rightarrow a = -30 \\\\text{ m/s}^2 \\\\). \\\\( F = ma = 4 \\\\times 30 = 120 \\\\text{ N} \\\\)."
+};
+
+  function checkAnswers() {
+  let score = 0;
+  for (let i = 1; i <= 30; i++) {
+    const questionName = "q" + i;
+    const options = document.getElementsByName(questionName);
+    let selected = "";
+    options.forEach(opt => {
+      opt.parentElement.style.color = "black"; // Reset color
+      if (opt.checked) selected = opt.value;
+    });
+
+    const feedbackEl = document.getElementById("feedback-" + questionName);
+    if (selected === answers[questionName]) {
+      score++;
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "green";
+      });
+    } else {
+      options.forEach(opt => {
+        if (opt.value === selected) opt.parentElement.style.color = "red";
+        if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+      });
+    }
+
+    // Show feedback
+    if (feedbackEl) {
+      feedbackEl.innerText = "Explanation: " + (feedback[questionName] || "No feedback available.");
+      feedbackEl.style.display = "block";
+    }
+  }
+
+  document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+}
+
+
+  // Attach values a-d to radio buttons
+  window.onload = () => {
+    for (let i = 1; i <= 30; i++) {
+      const options = document.getElementsByName("q" + i);
+      const letters = ["a", "b", "c", "d"];
+      options.forEach((opt, idx) => {
+        opt.value = letters[idx];
+      });
+    }
+  };
+</script>
+</body>
+</html>

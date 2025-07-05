@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conditions for SHM</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      overflow-x: auto;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    canvas {
+      display: block;
+      margin: 1rem auto;
+      background: #e0f2fe;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    label {
+      display: inline-block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: 500;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .controls {
+      margin-top: 1.5rem;
+    }
+    #omegaDisplay {
+      margin-top: 1.2rem;
+      font-size: 1.15rem;
+      color: #1e3a8a;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>Conditions for Simple Harmonic Motion</h1>
+
+    <p>
+      Simple Harmonic Motion (SHM) describes a type of oscillatory motion where the restoring force acting on an object is both directed toward the equilibrium position and proportional to the object’s displacement from that position.
+    </p>
+
+    <p>
+      This type of force leads to smooth, sinusoidal motion, and occurs commonly in systems like springs and pendulums under ideal conditions.
+    </p>
+
+    <h2>Restoring Force and Motion</h2>
+
+    <p>
+      According to Hooke’s Law, the restoring force in a spring system is:
+    </p>
+
+    <div class="formula-box">
+      \( F = -kx \)
+    </div>
+
+    <p>
+      Combining this with Newton’s Second Law \( F = ma \) and recognizing that acceleration is the second derivative of position, we get:
+    </p>
+
+    <div class="formula-box">
+      \( m\frac{d^2x}{dt^2} = -kx \)
+    </div>
+
+    <p>
+      Dividing both sides by \( m \) leads to:
+    </p>
+
+    <div class="formula-box">
+      \( \frac{d^2x}{dt^2} = -\frac{k}{m}x \)
+    </div>
+
+    <p>
+      The term \( \frac{k}{m} \) represents the <b>square</b> of the angular frequency \( \omega \), so we write:
+    </p>
+
+
+    <div class="formula-box">
+      \( \omega = \sqrt{\frac{k}{m}} \quad \Rightarrow \quad \frac{d^2x}{dt^2} = a =  -\omega^2 x \)
+    </div>
+
+    <p>This will be discussed more in the other key topics</p>
+
+    <h2>Physical Meaning</h2>
+
+    <p>
+      This differential equation tells us that the object’s acceleration is always directed opposite to its displacement and becomes larger as the object moves further from equilibrium. That’s the essence of a “restoring” force—it tries to pull the object back to the center.
+    </p>
+
+    <p>
+      The linear nature of the force-displacement relationship is what makes the motion simple and harmonic. Nonlinear restoring forces lead to more complex motion patterns and are not considered SHM.
+    </p>
+
+    <img src="shmspring.jpg" alt ="Descriptive Alt Text" class = "img-fluid-center">
+    <figcaption>Figure: Acceleration in SHM increases with displacement and always points toward equilibrium.</figcaption>
+
+    <h2>Summary</h2>
+
+    <p>
+      A system exhibits simple harmonic motion when:
+    </p>
+    <ul>
+      <li>The net force is proportional to the displacement: \( F \propto -x \)</li>
+      <li>The motion follows a second-order differential equation: \( \frac{d^2x}{dt^2} = -\omega^2 x \)</li>
+      <li>The solution results in sinusoidal oscillations with a constant period and amplitude (if undamped)</li>
+    </ul>
+
+    <p>
+      These conditions provide the mathematical and physical foundation for analyzing oscillatory systems across physics.
+    </p>
+    <div class="container">
+    <h1>Spring-Block Oscillator</h1>
+    <canvas id="springCanvas" width="800" height="300"></canvas>
+
+    <div class="controls">
+      <label for="massSlider">Mass (kg): <span id="massVal">1.0</span></label>
+      <input type="range" id="massSlider" min="0.5" max="5" step="0.1" value="1.0">
+
+      <label for="kSlider">Spring Constant (N/m): <span id="kVal">10</span></label>
+      <input type="range" id="kSlider" min="1" max="50" step="1" value="10">
+    </div>
+
+    <div id="omegaDisplay">Angular Frequency (ω): 3.16 rad/s</div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('springCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let mass = 1.0;
+    let k = 10;
+    let A = 80;
+    let t = 0;
+    let dt = 0.016;
+    const origin = 150;
+    const x_eq = origin + 200;
+
+    const massSlider = document.getElementById("massSlider");
+    const kSlider = document.getElementById("kSlider");
+    const massVal = document.getElementById("massVal");
+    const kVal = document.getElementById("kVal");
+    const omegaDisplay = document.getElementById("omegaDisplay");
+
+    massSlider.addEventListener("input", () => {
+      mass = parseFloat(massSlider.value);
+      massVal.textContent = mass.toFixed(1);
+      updateOmega();
+    });
+
+    kSlider.addEventListener("input", () => {
+      k = parseFloat(kSlider.value);
+      kVal.textContent = k.toFixed(0);
+      updateOmega();
+    });
+
+    function updateOmega() {
+      const omega = Math.sqrt(k / mass);
+      omegaDisplay.textContent = `Angular Frequency (ω): ${omega.toFixed(2)} rad/s`;
+    }
+
+    function drawZigZagSpring(xStart, xEnd, y, coils = 10, amplitude = 10) {
+      const dx = (xEnd - xStart) / coils;
+      ctx.beginPath();
+      ctx.moveTo(xStart, y);
+      for (let i = 1; i < coils; i++) {
+        const x = xStart + dx * i;
+        const yOffset = i % 2 === 0 ? -amplitude : amplitude;
+        ctx.lineTo(x, y + yOffset);
+      }
+      ctx.lineTo(xEnd, y);
+      ctx.strokeStyle = "#1e3a8a";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+    }
+
+    function drawSpringBlock(x) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw wall
+      ctx.fillStyle = "#555";
+      ctx.fillRect(origin - 20, 100, 20, 100);
+
+      // Draw zigzag spring
+      drawZigZagSpring(origin, x, 150, 12, 10);
+
+      // Draw block
+      ctx.fillStyle = "#3b82f6";
+      ctx.fillRect(x, 120, 50, 60);
+
+      // Draw equilibrium marker
+      ctx.setLineDash([5, 5]);
+      ctx.beginPath();
+      ctx.moveTo(x_eq + 25, 100);
+      ctx.lineTo(x_eq + 25, 220);
+      ctx.strokeStyle = "#f59e0b";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Label equilibrium
+      ctx.fillStyle = "#f59e0b";
+      ctx.font = "14px Roboto";
+      ctx.fillText("Equilibrium", x_eq - 30, 95);
+    }
+
+    function animate() {
+      const omega = Math.sqrt(k / mass);
+      const displacement = A * Math.cos(omega * t);
+      const x = x_eq + displacement;
+
+      drawSpringBlock(x);
+      t += dt;
+      requestAnimationFrame(animate);
+    }
+
+    updateOmega();
+    animate();
+  </script>
+  </div>
+</body>
+</html>

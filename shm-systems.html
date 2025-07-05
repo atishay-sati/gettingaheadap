@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHM Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      margin-top: -0.5rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.25rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Oscillatons-Gravitation.html" class="back-link">← Back to Concepts</a>
+    <h1>SHM Systems</h1>
+
+    <p>
+      There are several physical systems that exhibit simple harmonic motion (SHM) under specific conditions. Understanding these systems helps us apply SHM equations and analyze real-world oscillations.
+    </p>
+
+    <h2>1. Horizontal and Vertical Spring-Mass Systems</h2>
+    <p>
+      In these systems, a mass is attached to a spring either on a frictionless horizontal surface or hanging vertically under gravity. Both setups can undergo SHM if the restoring force is proportional to displacement from equilibrium:
+    </p>
+
+    <div class="formula-box">
+      \( F = -kx \quad \Rightarrow \quad a = -\frac{k}{m}x \)
+    </div>
+
+    <p>
+      This leads to motion described by the differential equation for SHM:
+    </p>
+
+    <div class="formula-box">
+      \( \frac{d^2x}{dt^2} = -\omega^2 x \quad \text{where} \quad \omega = \sqrt{\frac{k}{m}} \)
+    </div>
+
+    <p>
+      For vertical systems, the gravitational force shifts the equilibrium point but doesn’t affect the oscillatory motion as long as we measure displacement from the new equilibrium.
+    </p>
+
+    <img src="verticalspring.jpeg" alt ="Descriptive Alt Text" class = "img-fluid-center">
+    <figcaption>Figure: A block on a spring moving in SHM. Vertical systems oscillate around a shifted equilibrium.</figcaption>
+
+    <p>Watch this video for better understanding:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CYyOHGOPTXc?si=6Hl9Z6Co7ksEt0Mh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>2. Simple Pendulum (for small angles)</h2>
+    <p>
+      A simple pendulum is a mass hanging from a string of fixed length. When displaced by a small angle and released, it oscillates back and forth due to the component of gravity acting as a restoring force.
+    </p>
+
+    <p>
+      The restoring torque leads to SHM only when the angle is small (\( \theta \lesssim 15^\circ \)), so the approximation \( \sin\theta \approx \theta \) holds true.
+    </p>
+
+    <div class="formula-box">
+      \( \frac{d^2\theta}{dt^2} = -\frac{g}{L} \theta \quad \Rightarrow \quad \omega = \sqrt{\frac{g}{L}} \)
+    </div>
+
+  
+
+    <img src="Oscillating_pendulum.gif" alt ="Descriptive Alt Text" class = "img-fluid-center">
+    <figcaption>Figure: At small angles, the pendulum approximates SHM.</figcaption>
+
+    <h2>Summary of Common SHM Systems</h2>
+    <ul>
+      <li><strong>Horizontal Spring:</strong> Ideal SHM when friction is negligible.</li>
+      <li><strong>Vertical Spring:</strong> SHM about new equilibrium point under gravity.</li>
+      <li><strong>Pendulum:</strong> SHM if angle is small enough for \( \sin\theta \approx \theta \).</li>
+    </ul>
+
+    <p>
+      These ideal systems help us explore SHM concepts, predict motion, and connect theory to experimental setups.
+    </p>
+  </div>
+</body>
+</html>

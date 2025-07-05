@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Types of Collisions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .summary {
+      font-weight: bold;
+      color: #003049;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    /* Simulation styles */
+    .simulation-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+      border-top: 2px solid #3b82f6;
+      padding-top: 2rem;
+    }
+    .simulation-controls > div {
+      min-width: 180px;
+    }
+    .momentum {
+      font-family: monospace;
+      font-size: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #003049;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      display: block;
+      margin: 10px auto 20px auto;
+      border-radius: 8px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #3b82f6;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      padding: 0.3rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="LinearMomentum.html">← Back to Concepts</a>
+    <h1>Types of Collisions</h1>
+
+    <p class="summary">Collisions are categorized based on whether kinetic energy is conserved. All collisions conserve momentum, but only some conserve kinetic energy.</p>
+
+    <h2>Momentum Conservation</h2>
+    <p>All collisions, regardless of type, conserve linear momentum when no external forces act on the system:</p>
+    <div class="formula-box">
+      \[
+      m_1v_{1,i} + m_2v_{2,i} = m_1v_{1,f} + m_2v_{2,f}
+      \]
+    </div>
+    <p>This is the fundamental starting point for any collision analysis.</p>
+
+    <h2>Elastic Collisions</h2>
+    <p>In an elastic collision, <strong>both momentum and kinetic energy are conserved</strong>.</p>
+    <div class="formula-box">
+      \[
+      \frac{1}{2}m_1v_{1,i}^2 + \frac{1}{2}m_2v_{2,i}^2 = \frac{1}{2}m_1v_{1,f}^2 + \frac{1}{2}m_2v_{2,f}^2
+      \]
+    </div>
+    <p>This type of collision is idealized. Real-world examples include collisions between gas particles or steel ball bearings. Velocities after an elastic collision can be calculated using both conservation laws or the relative velocity approach.</p>
+
+    <img src="collisionanimated.gif" alt="Description of the GIF" class="img-fluid-center">
+
+    <h2>Inelastic Collisions</h2>
+    <p>In inelastic collisions, <strong>momentum is conserved but kinetic energy is not</strong>. Some energy is converted to heat, sound, or deformation.</p>
+    <p>In most everyday collisions (cars, sports, etc.), the collision is inelastic because some kinetic energy is lost.</p>
+
+    <img src="inelastic-example.jpg" alt ="Descriptive Alt Text" class="img-fluid-center">
+
+    <h2>Perfectly Inelastic Collisions</h2>
+    <p>A perfectly inelastic collision is a special case of an inelastic collision in which the two objects stick together after colliding and move as one mass:</p>
+    <img src="perfectly-inelastic-diagram.png" alt ="Descriptive Alt Text" class="img-fluid-center">
+    <div class="formula-box">
+      \[
+      v_f = \frac{m_1v_{1,i} + m_2v_{2,i}}{m_1 + m_2}
+      \]
+    </div>
+    <p>This type of collision maximizes the kinetic energy lost while still conserving momentum.</p>
+
+    <p>You CANNOT put this equation down on a FRQ without first deriving it. The deriation is as follows:</p>
+
+    <h3>Derivation</h3>
+    <p><strong>Assume:</strong></p>
+    <ul>
+      <li>\( m_1 \) and \( m_2 \) are the masses</li>
+      <li>\( v_{1,i} \) and \( v_{2,i} \) are their initial velocities</li>
+      <li>They stick together and move with final velocity \( v_f \)</li>
+    </ul>
+
+    <p><strong>Step 1: Apply conservation of momentum</strong> (total momentum before = total momentum after):</p>
+
+    <div class="formula-box">
+      \[
+      m_1v_{1,i} + m_2v_{2,i} = m_1v_{1,f} + m_2v_{2,f}
+      \]
+    </div>
+
+    <p><strong>Step 2: Since they are stuck together, they have the same final velocity. Using algebra...</strong></p>
+    <div class="formula-box">
+      \[
+      m_1 v_{1,i} + m_2 v_{2,i} = (m_1 + m_2) v_f
+      \]
+    </div>
+
+    <p><strong>Step 3: Solve for \( v_f \)</strong>:</p>
+    <div class="formula-box">
+      \[
+      v_f = \frac{m_1v_{1,i} + m_2v_{2,i}}{m_1 + m_2}
+      \]
+    </div>
+
+    <p>This is the final velocity of the combined mass after collision. It is a mass-weighted average of the initial momenta.</p>
+
+    <h2>Energy Consideration</h2>
+    <p>Kinetic energy is <strong>not conserved</strong> in <b>inelastic collisions</b> (including perfectly inelastic). Some of the initial mechanical energy is transformed into thermal energy, sound, and internal deformation.</p>
+    <p>Perfectly inelastic collisions lose the most KE: Usually most of the Kinetic Energy is lost</p>
+
+    <div class="formula-box">
+      \[
+      \Delta KE = KE_{\text{final}} - KE_{\text{initial}} < 0
+      \]
+    </div>
+
+    <p>Kinetic energy is conserved in <b>elastic collisions</b>, however. No energy is lost in the system</p>
+    <div class="formula-box">
+      \[
+      \Delta KE = KE_{\text{final}} - KE_{\text{initial}} = 0
+      \]
+    </div>
+
+    
+
+    <h2>Comparing Collision Types</h2>
+    <table style="width:100%; margin-top:1rem; border-collapse: collapse;">
+      <thead>
+        <tr style="background-color:#dbeafe;">
+          <th style="border:1px solid #3b82f6; padding: 0.5rem;">Collision Type</th>
+          <th style="border:1px solid #3b82f6; padding: 0.5rem;">Momentum Conserved?</th>
+          <th style="border:1px solid #3b82f6; padding: 0.5rem;">Kinetic Energy Conserved?</th>
+          <th style="border:1px solid #3b82f6; padding: 0.5rem;">Objects Stick Together?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border:1px solid #3b82f6; padding: 0.5rem;">Elastic</td>
+          <td style="text-align:center;">✔</td>
+          <td style="text-align:center;">✔</td>
+          <td style="text-align:center;">✘</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #3b82f6; padding: 0.5rem;">Inelastic</td>
+          <td style="text-align:center;">✔</td>
+          <td style="text-align:center;">✘</td>
+          <td style="text-align:center;">✘</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #3b82f6; padding: 0.5rem;">Perfectly Inelastic</td>
+          <td style="text-align:center;">✔</td>
+          <td style="text-align:center;">✘</td>
+          <td style="text-align:center;">✔</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li><strong>Elastic:</strong> Billiard balls, atomic collisions, Newton’s cradle</li>
+      <li><strong>Inelastic:</strong> Car crashes, baseball bat hitting a ball</li>
+      <li><strong>Perfectly Inelastic:</strong> Two rail cars coupling and moving together</li>
+    </ul>
+
+    <h2>Watch this video for a better understanding of types of collisions:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/M2xnGcaaAi4?si=Cjjgs8u67lUzYE2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Summary</h2>
+    <p>All collisions conserve momentum, but only elastic collisions conserve kinetic energy. Perfectly inelastic collisions represent the extreme case of energy loss. Understanding the type of collision helps determine which quantities remain constant and how to solve problems involving multiple bodies.</p>
+
+    <!-- ==== BEGIN COLLISION SIMULATION ==== -->
+    <h2>Interactive Collision Simulation</h2>
+
+    <div class="simulation-controls">
+      <div>
+        <h4>Object A</h4>
+        <label for="vx1">Velocity (Vx):</label>
+        <input type="number" id="vx1" value="2" min="-5" max="5" step="0.5" />
+        <label for="mass1">Mass:</label>
+        <input type="number" id="mass1" value="1" min="0.1" max="10" step="0.1" />
+      </div>
+      <div>
+        <h4>Object B</h4>
+        <label for="vx2">Velocity (Vx):</label>
+        <input type="number" id="vx2" value="-2" min="-5" max="5" step="0.5" />
+        <label for="mass2">Mass:</label>
+        <input type="number" id="mass2" value="1" min="0.1" max="10" step="0.1" />
+      </div>
+      <div>
+        <h4>Collision Type</h4>
+        <select id="collisionType">
+          <option value="elastic">Elastic</option>
+          <option value="inelastic">Inelastic</option>
+          <option value="perfectlyInelastic">Perfectly Inelastic</option>
+        </select>
+      </div>
+      <div style="align-self:center;">
+        <button onclick="startSim()">Start</button>
+        <button onclick="resetSim()">Reset</button>
+      </div>
+    </div>
+
+    <canvas id="simCanvas" width="600" height="400"></canvas>
+    <h3>Kinetic Energy Graph</h3>
+    <canvas id="keCanvas" width="600" height="200"></canvas>
+
+    <div class="momentum" id="momentumReadout">
+      <!-- Momentum and KE lost values injected here -->
+    </div>
+
+  </div>
+
+  <script>
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const keCanvas = document.getElementById("keCanvas");
+    const keCtx = keCanvas.getContext("2d");
+
+    const momentumReadout = document.getElementById("momentumReadout");
+
+    let radius = 20;
+    let objA, objB;
+    let animation;
+    let collided = false;
+    let initialKE = 0;
+
+    let keHistory = [];
+    const maxKEPoints = 300;
+    const maxVelocity = 5;
+
+    function clamp(val, min, max) {
+      return Math.max(min, Math.min(max, val));
+    }
+
+    function createObjects() {
+      const vx1 = clamp(parseFloat(document.getElementById('vx1').value), -maxVelocity, maxVelocity);
+      const vx2 = clamp(parseFloat(document.getElementById('vx2').value), -maxVelocity, maxVelocity);
+      const m1 = clamp(parseFloat(document.getElementById('mass1').value), 0.1, 10);
+      const m2 = clamp(parseFloat(document.getElementById('mass2').value), 0.1, 10);
+
+      objA = { x: 150, y: 200, vx: vx1, vy: 0, mass: m1, color: "red" };
+      objB = { x: 450, y: 200, vx: vx2, vy: 0, mass: m2, color: "blue" };
+
+      keHistory = [];
+    }
+
+    function drawObjects() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      [objA, objB].forEach(obj => {
+        ctx.beginPath();
+        ctx.arc(obj.x, obj.y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = obj.color;
+        ctx.fill();
+        ctx.closePath();
+      });
+    }
+
+    function updatePositions() {
+      objA.x += objA.vx;
+      objB.x += objB.vx;
+    }
+
+    function detectCollision() {
+      const dx = objA.x - objB.x;
+      const dist = Math.abs(dx);
+      return dist <= 2 * radius;
+    }
+
+    function resolveCollision(type) {
+      const m1 = objA.mass;
+      const m2 = objB.mass;
+      const v1 = objA.vx;
+      const v2 = objB.vx;
+
+      if (type === "perfectlyInelastic") {
+        const vf = (m1 * v1 + m2 * v2) / (m1 + m2);
+        objA.vx = objB.vx = vf;
+      } else {
+        const e = (type === "elastic") ? 1 : 0.6;
+
+        const v1Final = ((m1 - e * m2) * v1 + (1 + e) * m2 * v2) / (m1 + m2);
+        const v2Final = ((m2 - e * m1) * v2 + (1 + e) * m1 * v1) / (m1 + m2);
+
+        objA.vx = v1Final;
+        objB.vx = v2Final;
+      }
+    }
+
+    function totalKineticEnergy() {
+      return 0.5 * objA.mass * objA.vx ** 2 + 0.5 * objB.mass * objB.vx ** 2;
+    }
+
+    function drawKEGraph() {
+      keCtx.clearRect(0, 0, keCanvas.width, keCanvas.height);
+
+      // Axes
+      keCtx.strokeStyle = "#aaa";
+      keCtx.beginPath();
+      keCtx.moveTo(40, 10);
+      keCtx.lineTo(40, keCanvas.height - 20);
+      keCtx.lineTo(keCanvas.width - 10, keCanvas.height - 20);
+      keCtx.stroke();
+
+      keCtx.fillStyle = "#333";
+      keCtx.font = "12px sans-serif";
+      keCtx.fillText("Time →", keCanvas.width - 60, keCanvas.height - 5);
+      keCtx.fillText("Kinetic Energy (J)", 5, 15);
+
+      if (keHistory.length < 2) return;
+
+      // Dynamically scale max KE with 10% buffer
+      let dynamicMaxKE = Math.max(...keHistory) * 1.1;
+      let maxKEValue = Math.max(dynamicMaxKE, 1); // avoid zero division
+
+      const graphWidth = keCanvas.width - 50;
+      const graphHeight = keCanvas.height - 40;
+
+      keCtx.strokeStyle = "#16a34a";
+      keCtx.beginPath();
+      keHistory.forEach((ke, i) => {
+        const x = 40 + (i / (maxKEPoints - 1)) * graphWidth;
+        const y = keCanvas.height - 20 - (ke / maxKEValue) * graphHeight;
+        if (i === 0) keCtx.moveTo(x, y);
+        else keCtx.lineTo(x, y);
+      });
+      keCtx.stroke();
+
+      // Draw max KE label on Y axis
+      keCtx.fillStyle = "#555";
+      keCtx.font = "10px monospace";
+      keCtx.fillText(maxKEValue.toFixed(1), 5, 30);
+      keCtx.fillText("0", 25, keCanvas.height - 25);
+    }
+
+    function updateMomentumReadout() {
+      const pA = objA.mass * objA.vx;
+      const pB = objB.mass * objB.vx;
+      const totalP = pA + pB;
+
+      const currentKE = totalKineticEnergy();
+      // Only show KE lost if initialKE is set (nonzero)
+      const keLost = initialKE ? (initialKE - currentKE) : 0;
+
+      momentumReadout.innerHTML = `
+        <strong>Momentum (scalar):</strong><br>
+        Object A: ${pA.toFixed(2)} kg·m/s<br>
+        Object B: ${pB.toFixed(2)} kg·m/s<br>
+        <strong>Total: ${totalP.toFixed(2)} kg·m/s</strong><br><br>
+        <strong>Kinetic Energy Lost:</strong> ${keLost.toFixed(2)} J
+      `;
+    }
+
+    function simulate() {
+      animation = requestAnimationFrame(simulate);
+      drawObjects();
+      updatePositions();
+
+      if (!collided && detectCollision()) {
+        collided = true;
+        resolveCollision(document.getElementById("collisionType").value);
+      }
+
+      const currentKE = totalKineticEnergy();
+      keHistory.push(currentKE);
+      if (keHistory.length > maxKEPoints) keHistory.shift();
+      drawKEGraph();
+      updateMomentumReadout();
+    }
+
+    function startSim() {
+      cancelAnimationFrame(animation);
+      createObjects();
+      collided = false;
+      initialKE = totalKineticEnergy();  // Save initial KE before collision
+      keHistory = [initialKE];            // Reset history with initial KE
+      simulate();
+    }
+
+    function resetSim() {
+      cancelAnimationFrame(animation);
+      createObjects();
+      collided = false;
+      drawObjects();
+      drawKEGraph();
+      updateMomentumReadout();
+    }
+
+    // Initialize on load
+    createObjects();
+    drawObjects();
+    drawKEGraph();
+    updateMomentumReadout();
+  </script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conservation of Angular Momentum Simulation</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      color: #003049;
+    }
+    canvas {
+      background: #ffffff;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      display: block;
+      margin: 1rem auto;
+    }
+    label, input, button {
+      margin: 0.3rem;
+      font-size: 1rem;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:disabled {
+      background: #a5b8e0;
+      cursor: not-allowed;
+    }
+    .formula-box {
+      background: #dbeafe;
+      border-left: 4px solid #3b82f6;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+<div class="container">
+  <h1>Conservation of Angular Momentum</h1>
+  <canvas id="canvas" width="500" height="300"></canvas>
+
+  <div>
+    <label for="blobMass">Blob Mass (kg):</label>
+    <input type="number" id="blobMass" value="1" min="0.1" max="10" step="0.1">
+
+    <label for="blobDistance">Distance from Center (m):</label>
+    <input type="range" id="blobDistance" min="0" max="2" step="0.01" value="1">
+    <span id="distanceLabel">1.00 m</span>
+
+    <label for="initialOmega">Initial Angular Velocity (rad/s):</label>
+    <input type="range" id="initialOmega" min="0.1" max="20" step="0.1" value="2">
+    <span id="omegaLabel">2.0 rad/s</span>
+
+    <button id="dropBtn" onclick="dropBlob()">Drop Blob</button>
+    <button id="resetBtn" onclick="resetSim()" disabled>Reset</button>
+  </div>
+
+  <div class="formula-box" id="resultsBox">
+    —
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const diskRadius = 2; // meters
+  const diskMass = 2; // kg
+  const scale = 100; // pixels per meter
+
+  const blobMassInput = document.getElementById('blobMass');
+  const blobDistanceInput = document.getElementById('blobDistance');
+  const distanceLabel = document.getElementById('distanceLabel');
+  const initialOmegaInput = document.getElementById('initialOmega');
+  const omegaLabel = document.getElementById('omegaLabel');
+  const resultsBox = document.getElementById('resultsBox');
+
+  const dropBtn = document.getElementById('dropBtn');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let d = 1;
+  let m = 1;
+  let omegaBefore = 2;
+  let omegaAfter = 2;
+  let angle = 0;
+  let blobY = 0;
+  let falling = false;
+  let blobLanded = false;
+  let blobLandingAngle = 0;  // New: angle where blob lands relative to disk center
+
+  function safeMathJaxTypeset(element) {
+    if (window.MathJax) {
+      if (MathJax.typesetPromise) {
+        MathJax.typesetPromise([element]);
+      } else if (MathJax.typeset) {
+        MathJax.typeset();
+      } else if (MathJax.Hub && MathJax.Hub.Queue) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, element]);
+      }
+    }
+  }
+
+  function drawDisk() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(angle);
+
+    // Disk circle
+    ctx.beginPath();
+    ctx.arc(0, 0, diskRadius * scale, 0, 2 * Math.PI);
+    ctx.fillStyle = "#cce5ff";
+    ctx.fill();
+    ctx.stroke();
+
+    // Radial spokes for rotation visualization
+    ctx.strokeStyle = "#003049";
+    ctx.lineWidth = 2;
+    const spokes = 8;
+    for (let i = 0; i < spokes; i++) {
+      const theta = (i * 2 * Math.PI) / spokes;
+      const x = Math.cos(theta) * diskRadius * scale;
+      const y = Math.sin(theta) * diskRadius * scale;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+
+    // Draw the blob, outside rotation transform so it doesn't spin while falling
+    if (falling) {
+      const blobX = cx + d * scale;
+      ctx.beginPath();
+      ctx.arc(blobX, blobY, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = "#ff5e78";
+      ctx.fill();
+      ctx.stroke();
+    } else if (blobLanded) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(angle);
+
+      const blobX = d * scale * Math.cos(blobLandingAngle);
+      const blobYOnDisk = d * scale * Math.sin(blobLandingAngle);
+
+      ctx.beginPath();
+      ctx.arc(blobX, blobYOnDisk, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = "#ff5e78";
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  // Enforce mass cap on input
+  blobMassInput.addEventListener('input', () => {
+    if (parseFloat(blobMassInput.value) > 10) {
+      blobMassInput.value = 10;
+    }
+    if (!falling && !blobLanded) showInitialInertia();
+  });
+
+  function dropBlob() {
+    if (falling) return;
+    d = parseFloat(blobDistanceInput.value);
+    m = parseFloat(blobMassInput.value);
+    if (m > 10) m = 10;  // Cap mass at 10
+    omegaBefore = parseFloat(initialOmegaInput.value);
+    blobY = 0;
+    falling = true;
+    blobLanded = false;
+
+    dropBtn.disabled = true;
+    resetBtn.disabled = false;
+
+    blobMassInput.disabled = true;
+    blobDistanceInput.disabled = true;
+    initialOmegaInput.disabled = true;
+  }
+
+  function resetSim() {
+    falling = false;
+    blobLanded = false;
+    angle = 0;
+    omegaAfter = omegaBefore;
+
+    dropBtn.disabled = false;
+    resetBtn.disabled = true;
+
+    blobMassInput.disabled = false;
+    blobDistanceInput.disabled = false;
+    initialOmegaInput.disabled = false;
+
+    showInitialInertia();
+  }
+
+  function animateDrop() {
+    if (!falling) return;
+    drawDisk();
+    blobY += 5;
+    if (blobY >= canvas.height / 2 - 10) {
+      falling = false;
+      blobLanded = true;
+
+      // Calculate blob landing angle relative to disk center
+      const cx = canvas.width / 2;
+      const blobX = cx + d * scale;
+      // y is at disk center line, so angle = 0 on right side always
+      blobLandingAngle = 0; // Since we drop straight down at fixed horizontal position
+
+      calculateConservation();
+    }
+  }
+
+  function calculateConservation() {
+    const I_disk = 0.5 * diskMass * diskRadius ** 2;
+    const I_blob = m * d ** 2;
+    const I_total = I_disk + I_blob;
+
+    const L = I_disk * omegaBefore;
+    omegaAfter = L / I_total;
+
+    resultsBox.innerHTML = `
+    <strong>After blob lands:</strong><br>
+    $I_{disk} = ${I_disk.toFixed(2)}$ kg·m²<br>
+    $I_{blob} = ${I_blob.toFixed(2)}$ kg·m²<br>
+    $I_{total} = ${I_total.toFixed(2)}$ kg·m²<br>
+    $\\omega_{before} = ${omegaBefore.toFixed(2)}$ rad/s<br>
+    $L = I_{disk} \\times \\omega_{before} = ${L.toFixed(2)}$ kg·m²/s<br>
+    $\\omega_{after} = \\frac{L}{I_{total}} = ${omegaAfter.toFixed(2)}$ rad/s
+    `;
+    safeMathJaxTypeset(resultsBox);
+  }
+
+  function showInitialInertia() {
+    const I_disk = 0.5 * diskMass * diskRadius ** 2;
+    resultsBox.innerHTML = `
+    <strong>Initial State:</strong><br>
+    $I_{disk} = ${I_disk.toFixed(2)}$ kg·m²<br>
+    $\\omega_{initial} = ${omegaBefore.toFixed(2)}$ rad/s
+    `;
+    safeMathJaxTypeset(resultsBox);
+  }
+
+  function animate() {
+    if (falling) {
+      animateDrop();
+    }
+    if (blobLanded) {
+      angle += omegaAfter * 0.02;
+    } else {
+      angle += omegaBefore * 0.02;
+    }
+    drawDisk();
+    requestAnimationFrame(animate);
+  }
+
+  // Event Listeners
+  blobDistanceInput.addEventListener('input', () => {
+    distanceLabel.textContent = parseFloat(blobDistanceInput.value).toFixed(2) + " m";
+  });
+
+  initialOmegaInput.addEventListener('input', () => {
+    omegaBefore = parseFloat(initialOmegaInput.value);
+    omegaLabel.textContent = omegaBefore.toFixed(1) + " rad/s";
+    if (!falling && !blobLanded) {
+      omegaAfter = omegaBefore;
+      showInitialInertia();
+    }
+  });
+
+  blobMassInput.addEventListener('input', () => {
+    if (parseFloat(blobMassInput.value) > 10) {
+      blobMassInput.value = 10;
+    }
+    if (!falling && !blobLanded) showInitialInertia();
+  });
+
+  // Initialize
+  showInitialInertia();
+  animate();
+</script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinetic Energy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="Energy.html">← Work, Energy & Power</a>
+    <h1>Kinetic Energy</h1>
+
+    <p><strong>Kinetic energy</strong> is the energy of motion. Any object that is moving has kinetic energy, which depends on its mass and velocity. In AP Physics C, kinetic energy plays a central role in work-energy analysis and mechanical systems.</p>
+
+    <h2>Definition and Formula</h2>
+    <div class="formula-box">
+      \[
+      K = \frac{1}{2}mv^2
+      \]
+    </div>
+    <p>Where:</p>
+    <ul>
+      <li><strong>K</strong> is the kinetic energy (in joules)</li>
+      <li><strong>m</strong> is the mass of the object (in kilograms)</li>
+      <li><strong>v</strong> is the velocity (in meters per second)</li>
+    </ul>
+    <p>Kinetic energy is a scalar quantity, meaning it has magnitude but no direction. It always has a positive value (unless the object is at rest, in which case it’s zero).</p>
+
+    <h2>Conceptual Understanding</h2>
+    <ul>
+      <li>Doubling the velocity results in <strong>four times</strong> the kinetic energy, since velocity is squared.</li>
+      <li>If two objects have the same kinetic energy but different masses, the one with less mass must be moving faster.</li>
+      <li>Kinetic energy is frame-dependent: it changes with the observer’s frame of reference.</li>
+    </ul>
+
+    <h2>Calculus & Work-Energy</h2>
+    <p>In AP Physics C, you’re expected to derive kinetic energy using calculus. If a net force \( F = ma \) acts on a particle over a displacement \( dx \), then:</p>
+    <div class="formula-box">
+      \[
+      W = \int F \, dx = \int ma \, dx
+      \]
+      \[
+      = \int m \frac{dv}{dt} dx = \int m v \, dv = \frac{1}{2}mv^2
+      \]
+    </div>
+    <p>This shows that the <strong>work done</strong> by a net force on an object is equal to the change in its kinetic energy:</p>
+    <div class="formula-box">
+      \[
+      W_{\text{net}} = \Delta K
+      \]
+    </div>
+
+    <h2>Example</h2>
+    <p>A 2 kg object moves at 3 m/s. What is its kinetic energy?</p>
+    <p><strong>Solution:</strong></p>
+    <div class="formula-box">
+      \[
+      K = \frac{1}{2}(2)(3)^2 = 9 \, \text{J}
+      \]
+    </div>
+
+    <h2>Interactive Kinetic Energy Mini-Lab</h2>
+<div style="background-color: #eef6fb; padding: 1.5rem; border-radius: 10px; margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+
+  <label for="massSlider"><strong>Mass (kg):</strong> <span id="massVal">2</span></label>
+  <input type="range" id="massSlider" min="0.5" max="10" value="2" step="0.1" style="width: 100%;" />
+
+  <label for="velocitySlider" style="margin-top: 1rem;"><strong>Velocity (m/s):</strong> <span id="velocityVal">3</span></label>
+  <input type="range" id="velocitySlider" min="0" max="20" value="3" step="0.1" style="width: 100%;" />
+
+  <label for="frictionToggle" style="display: block; margin-top: 1rem; font-weight: bold; cursor: pointer;">
+    <input type="checkbox" id="frictionToggle" /> Apply Friction (KE loss)
+  </label>
+
+  <button id="pauseBtn" style="margin-top: 1rem; padding: 0.5rem 1rem; font-weight: bold; background-color: #0077b6; color: white; border: none; border-radius: 6px; cursor: pointer;">
+    Pause
+  </button>
+
+  <div id="keOutput" style="margin-top: 1rem; font-size: 1.2rem; font-weight: bold; color: #003049;">
+    Kinetic Energy: 9.00 J
+  </div>
+
+  <!-- Track Canvas -->
+  <canvas id="trackCanvas" width="900" height="120" style="width: 100%; background-color: #dbeafe; border-radius: 8px; display: block; margin-top: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></canvas>
+
+  <!-- Energy bar -->
+  <div style="margin-top: 1.5rem;">
+    <strong>Energy Bar:</strong>
+    <div style="background: #ddd; height: 30px; border-radius: 6px; overflow: hidden;">
+      <div id="energyBar" style="height: 100%; background: #3b82f6; width: 0%; transition: width 0.1s ease-in-out;"></div>
+    </div>
+  </div>
+
+  <!-- KE over time chart -->
+  <canvas id="keChart" width="900" height="150" style="width: 100%; margin-top: 2rem; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);"></canvas>
+</div>
+
+<script>
+  const canvas = document.getElementById("trackCanvas");
+  const ctx = canvas.getContext("2d");
+
+  const keChartCanvas = document.getElementById("keChart");
+  const keChartCtx = keChartCanvas.getContext("2d");
+
+  const massSlider = document.getElementById("massSlider");
+  const velocitySlider = document.getElementById("velocitySlider");
+  const frictionToggle = document.getElementById("frictionToggle");
+  const pauseBtn = document.getElementById("pauseBtn");
+
+  const massVal = document.getElementById("massVal");
+  const velocityVal = document.getElementById("velocityVal");
+  const keOutput = document.getElementById("keOutput");
+  const energyBar = document.getElementById("energyBar");
+
+  let paused = false;
+
+  let block = {
+    x: 50,
+    y: 40,
+    size: 40,
+    mass: 2,
+    velocity: 3,
+    direction: 1,
+    color: "#3b82f6",
+    trail: []
+  };
+
+  // KE history for chart
+  let keHistory = [];
+
+  function updateInputs() {
+    block.mass = parseFloat(massSlider.value);
+    block.velocity = parseFloat(velocitySlider.value);
+    block.size = 30 + block.mass * 4;
+    massVal.textContent = block.mass.toFixed(1);
+    velocityVal.textContent = block.velocity.toFixed(1);
+  }
+
+  function calcKE() {
+    return 0.5 * block.mass * block.velocity * block.velocity;
+  }
+
+  function updateKEOutput() {
+    const ke = calcKE();
+    keOutput.textContent = `Kinetic Energy: ${ke.toFixed(2)} J`;
+
+    // Update bar percentage (max 200 J)
+    const percent = Math.min((ke / 200) * 100, 100);
+    energyBar.style.width = `${percent}%`;
+
+    // Add to history
+    if (keHistory.length > 200) keHistory.shift();
+    keHistory.push(ke);
+  }
+
+  function drawBlock() {
+    // Draw trail
+    ctx.fillStyle = 'rgba(59, 130, 246, 0.3)';
+    block.trail.forEach(pos => {
+      ctx.beginPath();
+      ctx.arc(pos.x + block.size/2, pos.y + block.size/2, block.size/3, 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    // Draw main block
+    ctx.fillStyle = block.color;
+    ctx.beginPath();
+    ctx.roundRect(block.x, block.y, block.size, block.size, 8);
+    ctx.fill();
+  }
+
+  function clearCanvas() {
+    ctx.fillStyle = "#dbeafe";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
+  // Polyfill for roundRect if needed
+  if (!CanvasRenderingContext2D.prototype.roundRect) {
+    CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+      this.beginPath();
+      this.moveTo(x + r, y);
+      this.lineTo(x + w - r, y);
+      this.quadraticCurveTo(x + w, y, x + w, y + r);
+      this.lineTo(x + w, y + h - r);
+      this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+      this.lineTo(x + r, y + h);
+      this.quadraticCurveTo(x, y + h, x, y + h - r);
+      this.lineTo(x, y + r);
+      this.quadraticCurveTo(x, y, x + r, y);
+      this.closePath();
+    };
+  }
+
+  function drawKEChart() {
+    // Clear
+    keChartCtx.clearRect(0, 0, keChartCanvas.width, keChartCanvas.height);
+
+    // Draw axes
+    keChartCtx.strokeStyle = "#888";
+    keChartCtx.lineWidth = 1;
+    keChartCtx.beginPath();
+    // X axis
+    keChartCtx.moveTo(40, keChartCanvas.height - 30);
+    keChartCtx.lineTo(keChartCanvas.width - 20, keChartCanvas.height - 30);
+    // Y axis
+    keChartCtx.moveTo(40, 20);
+    keChartCtx.lineTo(40, keChartCanvas.height - 30);
+    keChartCtx.stroke();
+
+    // Labels
+    keChartCtx.fillStyle = "#333";
+    keChartCtx.font = "12px Roboto, sans-serif";
+    keChartCtx.fillText("Time →", keChartCanvas.width - 70, keChartCanvas.height - 10);
+    keChartCtx.fillText("Kinetic Energy (J)", 5, 15);
+
+    // Draw line graph of KE
+    if (keHistory.length < 2) return;
+
+    const maxKE = 200;
+    const graphHeight = keChartCanvas.height - 50;
+    const graphWidth = keChartCanvas.width - 60;
+
+    keChartCtx.strokeStyle = "#3b82f6";
+    keChartCtx.lineWidth = 2;
+    keChartCtx.beginPath();
+
+    keHistory.forEach((ke, index) => {
+      let x = 40 + (index / (keHistory.length - 1)) * graphWidth;
+      let y = keChartCanvas.height - 30 - (ke / maxKE) * graphHeight;
+      if (index === 0) {
+        keChartCtx.moveTo(x, y);
+      } else {
+        keChartCtx.lineTo(x, y);
+      }
+    });
+    keChartCtx.stroke();
+  }
+
+  function animate() {
+    if (!paused) {
+      clearCanvas();
+
+      // Move block
+      block.x += block.direction * block.velocity;
+
+      // Bounce off edges
+      if (block.x + block.size >= canvas.width) {
+        block.direction = -1;
+        block.x = canvas.width - block.size;
+      }
+      if (block.x <= 0) {
+        block.direction = 1;
+        block.x = 0;
+      }
+
+      // Apply friction if enabled
+      if (frictionToggle.checked) {
+        // Decay velocity slightly
+        block.velocity *= 0.995;
+        // Keep velocity positive but close to zero if very slow
+        if (block.velocity < 0.05) block.velocity = 0;
+        // Update velocity slider to reflect decay
+        velocitySlider.value = block.velocity.toFixed(2);
+        velocityVal.textContent = block.velocity.toFixed(2);
+      }
+
+      // Update trail (store last 10 positions)
+      block.trail.push({ x: block.x, y: block.y });
+      if (block.trail.length > 10) block.trail.shift();
+
+      drawBlock();
+      updateKEOutput();
+      drawKEChart();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  // Events
+  massSlider.addEventListener("input", () => {
+    updateInputs();
+  });
+
+  velocitySlider.addEventListener("input", () => {
+    updateInputs();
+  });
+
+  frictionToggle.addEventListener("change", () => {
+    if (!frictionToggle.checked) {
+      // Reset velocity to slider value if friction off
+      block.velocity = parseFloat(velocitySlider.value);
+    }
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    paused = !paused;
+    pauseBtn.textContent = paused ? "Resume" : "Pause";
+  });
+
+  updateInputs();
+  animate();
+</script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angular Displacement, Velocity, and Acceleration</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Angular Displacement, Velocity, and Acceleration</h1>
+
+    <p>This topic introduces the angular equivalents of displacement, velocity, and acceleration, which describe rotational motion in the same way their linear counterparts describe straight-line motion.</p>
+
+    <h2>Key Definitions</h2>
+    <ul>
+      <li><strong>Angular Displacement</strong> (\( \theta \)) — total angle through which an object rotates (in radians)</li>
+      <li><strong>Angular Velocity</strong> (\( \omega \)) — rate of change of angular displacement: \( \omega = \frac{d\theta}{dt} \)</li>
+      <li><strong>Angular Acceleration</strong> (\( \alpha \)) — rate of change of angular velocity: \( \alpha = \frac{d\omega}{dt} \)</li>
+    </ul>
+
+    <div class="formula-box">
+      \( \theta, \quad \omega = \frac{d\theta}{dt}, \quad \alpha = \frac{d\omega}{dt} \)
+    </div>
+
+    <h2>Units</h2>
+    <ul>
+      <li>Angular Displacement: radians (rad)</li>
+      <li>Angular Velocity: radians per second (rad/s)</li>
+      <li>Angular Acceleration: radians per second squared (rad/s²)</li>
+    </ul>
+
+    <h2>Physical Meaning</h2>
+    <p>
+      Just as linear velocity tells you how fast and in what direction an object moves along a path, angular velocity tells you how fast and in which direction an object rotates. A positive value typically represents counterclockwise rotation, while a negative value represents clockwise rotation.
+    </p>
+
+    <img src = "angular-acceleration-and-angular-velocity.png" alt = "Descriptive Alt Text" class = "img-fluid-center">
+
+    <figcaption>Figure: A disk rotating about its center. Arrows indicate direction of angular velocity and acceleration.</figcaption>
+
+
+    <p>The angular velocity vector is perpendicular to the plane of rotation because it shows which axis the object is spinning around. When something rotates, like a spinning disk, every point on it moves in a circle in the flat plane of the disk. But to describe the rotation fully, we need to know not only how fast it spins but also the direction of the spin axis. That’s why we use a vector pointing straight along the axis the object is rotating around. The direction is set by the right-hand rule</p>
+    <h2>Vector Nature of Angular Quantities</h2>
+    <p>
+      Angular velocity and angular acceleration are vectors. Their directions follow the right-hand rule: if you curl the fingers of your right hand in the direction of rotation, your thumb points in the direction of the angular vector.
+    </p>
+
+    <img src = "right-hand-rule.gif" alt = "Descriptive Alt Text" class = "img-fluid-center">
+    <figcaption>Figure: Right-hand rule for determining direction of angular velocity vector.</figcaption>
+
+    <h2>Example</h2>
+<p>
+  Suppose an object's angular velocity is given by the function \( \omega(t) = 3t^2 + 2 \), where \( \omega \) is in rad/s and \( t \) is in seconds.
+</p>
+<p>
+  Find:
+</p>
+<ol>
+  <li>The angular displacement \( \theta \) from \( t = 0 \) to \( t = 3 \, \text{s} \)</li>
+  <li>The angular acceleration \( \alpha(t) \) at \( t = 3 \, \text{s} \)</li>
+</ol>
+
+<div class="formula-box">
+  1. \( \theta = \int_0^3 \omega(t) \, dt = \int_0^3 (3t^2 + 2) \, dt \)
+</div>
+
+<div class="formula-box">
+  \( \theta = \left[ t^3 + 2t \right]_0^3 = (27 + 6) - 0 = 33 \, \text{rad} \)
+</div>
+
+<div class="formula-box">
+  2. \( \alpha(t) = \frac{d\omega}{dt} = \frac{d}{dt}(3t^2 + 2) = 6t \quad \Rightarrow \quad \alpha(3) = 18 \, \text{rad/s}^2 \)
+</div>
+
+<p>
+  So between 0 and 3 seconds, the object rotates through 33 radians, and its angular acceleration at \( t = 3 \, \text{s} \) is \( 18 \, \text{rad/s}^2 \).
+</p>
+
+    <h2>Key Takeaway</h2>
+    <p>
+      Understanding angular displacement, velocity, and acceleration is essential for describing rotational motion. These variables form the foundation for all rotational dynamics.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Momentum Conservation Principle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1rem;
+      margin: 1.5rem 0 0.3rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      white-space: nowrap;
+      overflow-x: auto;
+      text-align: center;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+    .summary {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0b3d91;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 2rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    th, td {
+      border: 1px solid #3b82f6;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+    th {
+      background-color: #3b82f6;
+      color: white;
+    }
+    .summary-table {
+      margin-bottom: 3rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .back-link-small {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .back-link-small:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      height: auto;
+      width: 75%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    
+    canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #3a86ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.4);
+    background: #e9f0ff;
+  }
+
+  .input-section {
+    margin-bottom: 25px;
+  }
+
+  .input-section h3 {
+    margin-top: 0;
+    color: #1a1a1a;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+
+  label {
+    font-weight: 600;
+    color: #444;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .input-group label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+  }
+
+  input[type=number] {
+    margin-top: 4px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1.8px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+    transition: border-color 0.3s ease;
+  }
+
+  input[type=number]:focus {
+    outline: none;
+    border-color: #3a86ff;
+    box-shadow: 0 0 6px #3a86ffaa;
+  }
+
+  button {
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.25s ease;
+  }
+
+  button:hover {
+    background-color: #2c64cc;
+  }
+
+  button:disabled {
+    background-color: #8ab8ff;
+    cursor: not-allowed;
+  }
+
+  #momentumTracker {
+    margin-top: 20px;
+    background: #e1eaff;
+    padding: 15px 20px;
+    border-radius: 7px;
+    color: #172a4d;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: inset 0 0 6px #3a86ff44;
+    user-select: none;
+    max-width: 680px;
+  }
+
+  @media (max-width: 600px) {
+    .input-group {
+      flex-direction: column;
+    }
+
+    input[type=number] {
+      width: 100%;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="LinearMomentum.html">← Back to Concepts</a>
+    <h1>Momentum Conservation Principle</h1>
+
+    <h2>What is Momentum Conservation?</h2>
+    <p>Momentum conservation is a fundamental principle of physics stating that in an isolated system, the total momentum remains constant if no net external force acts on it. This principle is crucial in analyzing collisions, explosions, and any interactions involving moving bodies. In simple terms, this formula is:</p>
+
+    <div class="formula-box">
+      \( m_1 v_{i1} + m_2 v_{i2} = m_1 v_{f1} + m_2 v_{f2} \)
+    </div>
+    <div class="summary">This equation expresses the principle: <strong>\( p_i = p_f \)</strong>.</div>
+
+    <p>Even though momentum is conserved, it does not mean that kinetic energy is conserved. We will go more in depth on this later in this unit.</p>
+
+    <h2>Why does no net external force imply conservation?</h2>
+    <p>Newton's 2nd law states the rate of change of momentum equals the net external force:</p>
+    <div class="formula-box">
+      \( \vec{F}_{\text{net}} = \frac{d\vec{p}}{dt} \)
+    </div>
+    <div class="summary">If \( \vec{F}_{\text{net}} = 0 \), then \( \frac{d\vec{p}}{dt} = 0 \Rightarrow \vec{p} = \text{constant} \), or <strong>\( p_i = p_f \)</strong>.</div>
+    <p>This means total momentum does not change in time when no external forces act.</p>
+
+    <h2>Vector Nature: Conservation in 1D and 2D</h2>
+    <p>Since momentum is a vector, conservation applies independently to each component:</p>
+    <div class="formula-box">
+      \[
+        p_{x,\text{initial}} = p_{x,\text{final}} \quad \text{and} \quad p_{y,\text{initial}} = p_{y,\text{final}}
+      \]
+    </div>
+    <div class="summary">Again, this means <strong>\( p_i = p_f \)</strong> for each direction separately.</div>
+    <p>This is important for 2D collisions where vector decomposition is necessary.</p>
+
+    <img src="momentum-2d-collision.png" alt="Momentum 2D Collision" class="img-fluid-center">
+
+    <h2>Internal Forces Cancel (Newton's 3rd Law)</h2>
+    <p>For any two interacting bodies inside the system (e.g. Tension force of a string in a 2-block system), internal forces come in action-reaction pairs:</p>
+    <div class="formula-box">
+      \[
+        \vec{F}_{12} = -\vec{F}_{21}
+      \]
+    </div>
+    <div class="summary">Internal forces cancel in the total system sum, so they do not change total momentum: <strong>\( \sum \vec{F}_{\text{internal}} = 0 \Rightarrow p_i = p_f \)</strong>.</div>
+    <div>
+      <p style="display: inline; margin-right: 0.3em;">For more review of Newton's 3rd Law:</p>
+      <a class="back-link-small" href="newton3.html">Newton's 3rd Law</a>
+    </div>
+    
+    
+
+    <h2>Calculus Derivation of Momentum Conservation</h2>
+    <p>The total momentum \( \vec{P} \) of a system of particles is:</p>
+    <div class="formula-box">
+      \( \vec{P} = \sum_i m_i \vec{v}_i \)
+    </div>
+    <div class="summary">Thus, total momentum changes only due to net external forces, confirming <strong>\( p_i = p_f \)</strong> if \( \vec{F}_{\text{net}} = 0 \).</div>
+    <p>Newton's second law for each particle: \( m_i \frac{d\vec{v}_i}{dt} = \vec{F}_{i,\text{external}} + \sum \vec{F}_{i,\text{internal}} \)</p>
+    <p>Summing over all particles and canceling internal forces yields:</p>
+    <div class="formula-box">
+      \[
+        \frac{d\vec{P}}{dt} = \vec{F}_{\text{net external}}
+      \]
+    </div>
+    <div class="summary">If \( \vec{F}_{\text{net external}} = 0 \), then \( \frac{d\vec{P}}{dt} = 0 \), so \( \vec{P} \) is constant, i.e., <strong>\( p_i = p_f \)</strong>.</div>
+
+    <h2>Example: 1D Collision of Two Objects</h2>
+    <p>Two objects with masses \( m_1, m_2 \) and initial velocities \( v_{1i}, v_{2i} \) collide in one dimension.</p>
+    <p>Since no external force acts, total momentum before and after satisfies:</p>
+    <div class="formula-box">
+      \[
+        m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f}
+      \]
+    </div>
+    <div class="summary">This equation reflects <strong>\( p_i = p_f \)</strong> in 1D.</div>
+
+    
+
+    <h2>Example: 2D Collision with Momentum Conservation</h2>
+    <p>In two dimensions, apply conservation separately for each component:</p>
+    <div class="formula-box">
+      \[
+        m_1 v_{1i,x} + m_2 v_{2i,x} = m_1 v_{1f,x} + m_2 v_{2f,x}
+      \]
+      \[
+        m_1 v_{1i,y} + m_2 v_{2i,y} = m_1 v_{1f,y} + m_2 v_{2f,y}
+      \]
+    </div>
+    <div class="summary">Both equations uphold the vector form of <strong>\( p_i = p_f \)</strong>.</div>
+
+    
+
+    <h2>Common Misconceptions</h2>
+    <ul>
+      <li><strong>Momentum is always conserved:</strong> Only true if the system is isolated (no external forces).</li>
+      <li><strong>Internal forces change total momentum:</strong> Internal forces always cancel and do not change total momentum.</li>
+      <li><strong>Momentum is scalar:</strong> Momentum is a vector; direction matters.</li>
+    </ul>
+
+    <h2>Watch this video for a better understanding of momentum conservation:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gF0ScwHp7SY?si=fjLKCARsLUCtQ67_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Summary Table</h2>
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Explanation</th>
+          <th>Mathematical Expression</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No Net External Force</td>
+          <td>Total momentum remains constant</td>
+          <td>\( p_i = p_f \)</td>
+        </tr>
+        <tr>
+          <td>Momentum Conservation</td>
+          <td>Initial total momentum = final total momentum</td>
+          <td>\( p_i = p_f \)</td>
+        </tr>
+        <tr>
+          <td>Vector Components</td>
+          <td>Conservation applies separately in each direction</td>
+          <td>\( p_{i,x} = p_{f,x}, \quad p_{i,y} = p_{f,y} \)</td>
+        </tr>
+        <tr>
+          <td>Internal Forces</td>
+          <td>Cancel out and don't affect total momentum</td>
+          <td>\( \sum \vec{F}_{\text{internal}} = 0 \)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><em>Use this principle to solve a wide variety of collision and explosion problems in AP Physics C.</em></p>
+    <h2 style="text-align:center;">2D Ball Collision Simulation</h2>
+
+  <div class="input-section">
+    <h3>Ball 1</h3>
+    <div class="radio-group">
+      <label><input type="radio" id="b1Vector" name="b1InputType" value="vector" checked> Vector form (vx, vy)</label>
+      <label><input type="radio" id="b1MagDir" name="b1InputType" value="magdir"> Magnitude & Direction (°)</label>
+    </div>
+
+    <div id="b1VectorInputs" class="input-group">
+      <label>Velocity X (vx):
+        <input type="number" id="b1Vx" value="2" step="0.1" />
+      </label>
+      <label>Velocity Y (vy):
+        <input type="number" id="b1Vy" value="1" step="0.1" />
+      </label>
+    </div>
+    <div id="b1MagDirInputs" class="input-group" style="display:none;">
+      <label>Magnitude:
+        <input type="number" id="b1Mag" value="2.24" step="0.1" />
+      </label>
+      <label>Direction (degrees):
+        <input type="number" id="b1Dir" value="26.57" step="0.1" />
+      </label>
+    </div>
+  </div>
+
+  <div class="input-section">
+    <h3>Ball 2</h3>
+    <div class="radio-group">
+      <label><input type="radio" id="b2Vector" name="b2InputType" value="vector" checked> Vector form (vx, vy)</label>
+      <label><input type="radio" id="b2MagDir" name="b2InputType" value="magdir"> Magnitude & Direction (°)</label>
+    </div>
+
+    <div id="b2VectorInputs" class="input-group">
+      <label>Velocity X (vx):
+        <input type="number" id="b2Vx" value="-1" step="0.1" />
+      </label>
+      <label>Velocity Y (vy):
+        <input type="number" id="b2Vy" value="0" step="0.1" />
+      </label>
+    </div>
+    <div id="b2MagDirInputs" class="input-group" style="display:none;">
+      <label>Magnitude:
+        <input type="number" id="b2Mag" value="1" step="0.1" />
+      </label>
+      <label>Direction (degrees):
+        <input type="number" id="b2Dir" value="180" step="0.1" />
+      </label>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <button id="startBtn">Start Simulation</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <div id="momentumTracker" aria-live="polite" aria-atomic="true">
+    <div id="momentumBall1">Blue ball momentum = (0, 0), magnitude = 0</div>
+    <div id="momentumBall2">Red ball momentum = (0, 0), magnitude = 0</div>
+    <div id="momentumTotal">Total system momentum = (0, 0), magnitude = 0</div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const radius = 20;
+const width = canvas.width;
+const height = canvas.height;
+
+const mass1 = 1;
+const mass2 = 1;
+
+let ball1 = {
+  x: 150,
+  y: 200,
+  vx: 2,
+  vy: 1,
+  radius: radius,
+  color: '#3a86ff'  // blue
+};
+
+let ball2 = {
+  x: 450,
+  y: 200,
+  vx: -1,
+  vy: 0,
+  radius: radius,
+  color: '#ff595e'  // red
+};
+
+let animationId = null;
+let running = false;
+
+const momentumBall1 = document.getElementById('momentumBall1');
+const momentumBall2 = document.getElementById('momentumBall2');
+const momentumTotal = document.getElementById('momentumTotal');
+
+function setupInputToggle() {
+  const b1VectorRadio = document.getElementById('b1Vector');
+  const b1MagDirRadio = document.getElementById('b1MagDir');
+  const b1VectorInputs = document.getElementById('b1VectorInputs');
+  const b1MagDirInputs = document.getElementById('b1MagDirInputs');
+
+  b1VectorRadio.addEventListener('change', () => {
+    b1VectorInputs.style.display = 'flex';
+    b1MagDirInputs.style.display = 'none';
+  });
+  b1MagDirRadio.addEventListener('change', () => {
+    b1VectorInputs.style.display = 'none';
+    b1MagDirInputs.style.display = 'flex';
+  });
+
+  const b2VectorRadio = document.getElementById('b2Vector');
+  const b2MagDirRadio = document.getElementById('b2MagDir');
+  const b2VectorInputs = document.getElementById('b2VectorInputs');
+  const b2MagDirInputs = document.getElementById('b2MagDirInputs');
+
+  b2VectorRadio.addEventListener('change', () => {
+    b2VectorInputs.style.display = 'flex';
+    b2MagDirInputs.style.display = 'none';
+  });
+  b2MagDirRadio.addEventListener('change', () => {
+    b2VectorInputs.style.display = 'none';
+    b2MagDirInputs.style.display = 'flex';
+  });
+}
+
+function getVelocityFromInputs(ballNum) {
+  if (ballNum === 1) {
+    const isVector = document.getElementById('b1Vector').checked;
+    if (isVector) {
+      return {
+        vx: parseFloat(document.getElementById('b1Vx').value),
+        vy: parseFloat(document.getElementById('b1Vy').value)
+      };
+    } else {
+      const mag = parseFloat(document.getElementById('b1Mag').value);
+      const dirDeg = parseFloat(document.getElementById('b1Dir').value);
+      const dirRad = dirDeg * Math.PI / 180;
+      return {
+        vx: mag * Math.cos(dirRad),
+        vy: mag * Math.sin(dirRad)
+      };
+    }
+  } else {
+    const isVector = document.getElementById('b2Vector').checked;
+    if (isVector) {
+      return {
+        vx: parseFloat(document.getElementById('b2Vx').value),
+        vy: parseFloat(document.getElementById('b2Vy').value)
+      };
+    } else {
+      const mag = parseFloat(document.getElementById('b2Mag').value);
+      const dirDeg = parseFloat(document.getElementById('b2Dir').value);
+      const dirRad = dirDeg * Math.PI / 180;
+      return {
+        vx: mag * Math.cos(dirRad),
+        vy: mag * Math.sin(dirRad)
+      };
+    }
+  }
+}
+
+function drawBall(ball) {
+  ctx.beginPath();
+  ctx.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI);
+  ctx.fillStyle = ball.color;
+  ctx.fill();
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#0f0f0f22';
+  ctx.stroke();
+}
+
+function detectCollision(b1, b2) {
+  const dx = b2.x - b1.x;
+  const dy = b2.y - b1.y;
+  const distance = Math.hypot(dx, dy);
+  return distance < b1.radius + b2.radius;
+}
+
+function resolveCollision(b1, b2) {
+  const dx = b2.x - b1.x;
+  const dy = b2.y - b1.y;
+  const dist = Math.hypot(dx, dy);
+  const minDist = b1.radius + b2.radius;
+
+  if (dist === 0) {
+    return;
+  }
+
+  const nx = dx / dist;
+  const ny = dy / dist;
+
+  const tx = -ny;
+  const ty = nx;
+
+  const v1n = b1.vx * nx + b1.vy * ny;
+  const v1t = b1.vx * tx + b1.vy * ty;
+  const v2n = b2.vx * nx + b2.vy * ny;
+  const v2t = b2.vx * tx + b2.vy * ty;
+
+  const v1nAfter = v2n;
+  const v2nAfter = v1n;
+
+  b1.vx = v1nAfter * nx + v1t * tx;
+  b1.vy = v1nAfter * ny + v1t * ty;
+  b2.vx = v2nAfter * nx + v2t * tx;
+  b2.vy = v2nAfter * ny + v2t * ty;
+
+  const overlap = minDist - dist;
+  b1.x -= (overlap / 2) * nx;
+  b1.y -= (overlap / 2) * ny;
+  b2.x += (overlap / 2) * nx;
+  b2.y += (overlap / 2) * ny;
+}
+
+function isOutOfBounds(ball) {
+  return (
+    ball.x + ball.radius < 0 ||
+    ball.x - ball.radius > width ||
+    ball.y + ball.radius < 0 ||
+    ball.y - ball.radius > height
+  );
+}
+
+function updateMomentumTracker() {
+  const p1x = mass1 * ball1.vx;
+  const p1y = mass1 * ball1.vy;
+  const p2x = mass2 * ball2.vx;
+  const p2y = mass2 * ball2.vy;
+
+  const magP1 = Math.hypot(p1x, p1y);
+  const magP2 = Math.hypot(p2x, p2y);
+
+  const totalPx = p1x + p2x;
+  const totalPy = p1y + p2y;
+  const magTotal = Math.hypot(totalPx, totalPy);
+
+  momentumBall1.textContent = `Blue ball momentum = (${p1x.toFixed(2)}, ${p1y.toFixed(2)}), magnitude = ${magP1.toFixed(2)}`;
+  momentumBall2.textContent = `Red ball momentum = (${p2x.toFixed(2)}, ${p2y.toFixed(2)}), magnitude = ${magP2.toFixed(2)}`;
+  momentumTotal.textContent = `Total system momentum = (${totalPx.toFixed(2)}, ${totalPy.toFixed(2)}), magnitude = ${magTotal.toFixed(2)}`;
+}
+
+function update() {
+  ball1.x += ball1.vx;
+  ball1.y += ball1.vy;
+  ball2.x += ball2.vx;
+  ball2.y += ball2.vy;
+
+  // Removed bounceOffWalls calls here
+
+  if (detectCollision(ball1, ball2)) {
+    resolveCollision(ball1, ball2);
+  }
+
+  
+
+  updateMomentumTracker();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+  drawBall(ball1);
+  drawBall(ball2);
+}
+
+function loop() {
+  if (!running) return;
+  update();
+  draw();
+  animationId = requestAnimationFrame(loop);
+}
+
+function startSimulation() {
+  const v1 = getVelocityFromInputs(1);
+  const v2 = getVelocityFromInputs(2);
+
+  ball1.vx = v1.vx;
+  ball1.vy = v1.vy;
+  ball2.vx = v2.vx;
+  ball2.vy = v2.vy;
+
+  running = true;
+  loop();
+}
+
+function resetSimulation() {
+  running = false;
+  cancelAnimationFrame(animationId);
+
+  ball1.x = 150;
+  ball1.y = 200;
+  ball2.x = 450;
+  ball2.y = 200;
+
+  const v1 = getVelocityFromInputs(1);
+  const v2 = getVelocityFromInputs(2);
+
+  ball1.vx = v1.vx;
+  ball1.vy = v1.vy;
+  ball2.vx = v2.vx;
+  ball2.vy = v2.vy;
+
+  draw();
+  updateMomentumTracker();
+}
+
+document.getElementById('startBtn').addEventListener('click', () => {
+  if (!running) startSimulation();
+});
+document.getElementById('resetBtn').addEventListener('click', resetSimulation);
+
+setupInputToggle();
+resetSimulation();
+
+</script>
+  </div>
+</body>
+</html>

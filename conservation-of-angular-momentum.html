@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conservation of Angular Momentum</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #003049;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .formula-box {
+      background-color: #dbeafe;
+      border-left: 6px solid #3b82f6;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-family: 'Courier New', Courier, monospace;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      margin: 1.5rem auto;
+      background-color: #dbeafe;
+      border: 3px dashed #3b82f6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e3a8a;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+    button {
+  width: 140px;
+  margin: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+#simulation-wrapper {
+  width: 600px; /* a bit wider than canvas + padding */
+  margin: 1rem auto 2rem; /* center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  gap: 1.2rem;
+}
+.back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #005a9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+.back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+  }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <a href="Rotation.html" class="back-link">← Back to Concepts</a>
+    <h1>Conservation of Angular Momentum</h1>
+
+    <p>Conservation of angular momentum is a foundational concept in rotational dynamics. It tells us that if no external torque acts on a system, its total angular momentum remains constant over time. This principle has broad applications in mechanics, astrophysics, and engineering.</p>
+
+    <h2>Mathematical Statement</h2>
+    <div class="formula-box">
+      $$\tau_{\text{net}} = \frac{d\vec{L}}{dt}$$
+    </div>
+    <p>This is the rotational analog of Newton’s second law. If the net external torque is zero, then the derivative is zero, and angular momentum is constant:</p>
+    <div class="formula-box">
+      $$\tau_{\text{net}} = 0 \Rightarrow \vec{L}_{\text{initial}} = \vec{L}_{\text{final}}$$
+    </div>
+
+    <h2>What It Means</h2>
+    <p>Just like conservation of linear momentum, this law implies that without an external influence (torque), the rotational motion of a system cannot spontaneously change. The moment of inertia and angular velocity may vary within a system, but their product remains constant if $I\omega = \text{constant}$.</p>
+
+    <h2>Example 1: Figure Skater Pulling In Arms</h2>
+    <p>A figure skater spinning with arms extended decreases her moment of inertia by pulling her arms inward. Since no external torque acts, her spin rate increases to conserve angular momentum:</p>
+    <div class="formula-box">
+      $$I_1\omega_1 = I_2\omega_2$$
+    </div>
+    <p>This demonstrates how internal changes can affect rotational speed without violating conservation laws.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/M6PuutIm5h4?si=VSGmch1zl8b64q_d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Example 2: Collapsing Star</h2>
+    <p>As a star collapses into a neutron star, its radius shrinks drastically, which reduces its moment of inertia. To conserve angular momentum, its angular velocity increases. This is why pulsars rotate so rapidly:</p>
+    <div class="formula-box">
+      $$L = I \omega = \text{constant}$$
+    </div>
+    <p>Even though its mass stays roughly the same, the reduction in radius makes $I$ much smaller, so $\omega$ becomes very large.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lDP-GhaXASU?si=-Hb_sVk2QQJz52df" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Example 3: Spinning Bicycle Wheel Demonstration</h2>
+    <p><strong>Setup:</strong> A person sits on a frictionless rotating platform (or swivel chair) while holding a spinning bicycle wheel by its axle. The wheel’s axis is initially horizontal, and the wheel is spinning rapidly.</p>
+    <p><strong>Observation:</strong> When the person tries to flip the wheel so the axis is vertical, they experience resistance and the platform begins to rotate in the opposite direction.</p>
+    <p><strong>Explanation:</strong> The spinning wheel has angular momentum $\vec{L}$ directed along its axis of rotation. When the person attempts to change the wheel’s orientation, they are trying to change the direction of $\vec{L}$. But since no external torque acts on the system (assuming negligible friction), the total angular momentum of the system must be conserved.</p>
+    <p>Therefore, to counter the change in direction of the wheel’s angular momentum, the platform and person begin to rotate in the opposite direction to maintain the same net angular momentum vector.</p>
+    <p>This example demonstrates that angular momentum is a vector and emphasizes the conservation of its direction and magnitude in isolated systems.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vM6G-NgN0PY?si=a20Hm-55fzHB4jps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>Planetary orbits and accretion disks</li>
+      <li>Ice skaters, divers, and gymnasts during spins and flips</li>
+      <li>Engineering: gyroscopes, flywheels, and conservation systems</li>
+    </ul>
+
+
+
+    <h2>Summary</h2>
+    <p>If no external torque acts on a system, its angular momentum remains conserved. This powerful law helps us predict motion in everything from rotating toys to stars and galaxies. When moment of inertia changes due to internal rearrangements, angular velocity changes inversely to keep $L = I\omega$ constant.</p>
+
+    
+    
+    <h1>Conservation of Angular Momentum</h1>
+    <div id="simulation-wrapper">
+  <canvas id="canvas" width="500" height="300"></canvas>
+
+  <div>
+  <label for="blobMass">Blob Mass (kg):</label>
+  <input type="number" id="blobMass" value="1" min="0.1" max="10" step="0.1">
+
+  <label for="blobDistance">Distance from Center (m):</label>
+  <input type="range" id="blobDistance" min="0" max="2" step="0.01" value="1">
+  <span id="distanceLabel">1.00 m</span>
+
+  <label for="initialOmega">Initial Angular Velocity (rad/s):</label>
+  <input type="range" id="initialOmega" min="0.1" max="20" step="0.1" value="2">
+  <span id="omegaLabel">2.0 rad/s</span>
+</div>
+<div class="button-row">
+  <button id="dropBtn" onclick="dropBlob()">Drop Blob</button>
+  <button id="resetBtn" onclick="resetSim()" disabled>Reset</button>
+</div>
+
+  <div class="formula-box" id="resultsBox">
+    —
+  </div>
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const diskRadius = 2; // meters
+  const diskMass = 2; // kg
+  const scale = 72; // pixels per meter
+
+  const blobMassInput = document.getElementById('blobMass');
+  const blobDistanceInput = document.getElementById('blobDistance');
+  const distanceLabel = document.getElementById('distanceLabel');
+  const initialOmegaInput = document.getElementById('initialOmega');
+  const omegaLabel = document.getElementById('omegaLabel');
+  const resultsBox = document.getElementById('resultsBox');
+
+  const dropBtn = document.getElementById('dropBtn');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let d = 1;
+  let m = 1;
+  let omegaBefore = 2;
+  let omegaAfter = 2;
+  let angle = 0;
+  let blobY = 0;
+  let falling = false;
+  let blobLanded = false;
+  let blobLandingAngle = 0;  // New: angle where blob lands relative to disk center
+
+  function safeMathJaxTypeset(element) {
+    if (window.MathJax) {
+      if (MathJax.typesetPromise) {
+        MathJax.typesetPromise([element]);
+      } else if (MathJax.typeset) {
+        MathJax.typeset();
+      } else if (MathJax.Hub && MathJax.Hub.Queue) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, element]);
+      }
+    }
+  }
+
+  function drawDisk() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const cx = canvas.width / 2;
+    const cy = canvas.height / 2;
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(angle);
+
+    // Disk circle
+    ctx.beginPath();
+    ctx.arc(0, 0, diskRadius * scale, 0, 2 * Math.PI);
+    ctx.fillStyle = "#cce5ff";
+    ctx.fill();
+    ctx.stroke();
+
+    // Radial spokes for rotation visualization
+    ctx.strokeStyle = "#003049";
+    ctx.lineWidth = 2;
+    const spokes = 8;
+    for (let i = 0; i < spokes; i++) {
+      const theta = (i * 2 * Math.PI) / spokes;
+      const x = Math.cos(theta) * diskRadius * scale;
+      const y = Math.sin(theta) * diskRadius * scale;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+
+    // Draw the blob, outside rotation transform so it doesn't spin while falling
+    if (falling) {
+      const blobX = cx + d * scale;
+      ctx.beginPath();
+      ctx.arc(blobX, blobY, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = "#ff5e78";
+      ctx.fill();
+      ctx.stroke();
+    } else if (blobLanded) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(angle);
+
+      const blobX = d * scale * Math.cos(blobLandingAngle);
+      const blobYOnDisk = d * scale * Math.sin(blobLandingAngle);
+
+      ctx.beginPath();
+      ctx.arc(blobX, blobYOnDisk, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = "#ff5e78";
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  // Enforce mass cap on input
+  blobMassInput.addEventListener('input', () => {
+    if (parseFloat(blobMassInput.value) > 10) {
+      blobMassInput.value = 10;
+    }
+    if (!falling && !blobLanded) showInitialInertia();
+  });
+
+  function dropBlob() {
+    if (falling) return;
+    d = parseFloat(blobDistanceInput.value);
+    m = parseFloat(blobMassInput.value);
+    if (m > 10) m = 10;  // Cap mass at 10
+    omegaBefore = parseFloat(initialOmegaInput.value);
+    blobY = 0;
+    falling = true;
+    blobLanded = false;
+
+    dropBtn.disabled = true;
+    resetBtn.disabled = false;
+
+    blobMassInput.disabled = true;
+    blobDistanceInput.disabled = true;
+    initialOmegaInput.disabled = true;
+  }
+
+  function resetSim() {
+    falling = false;
+    blobLanded = false;
+    angle = 0;
+    omegaAfter = omegaBefore;
+
+    dropBtn.disabled = false;
+    resetBtn.disabled = true;
+
+    blobMassInput.disabled = false;
+    blobDistanceInput.disabled = false;
+    initialOmegaInput.disabled = false;
+
+    showInitialInertia();
+  }
+
+  function animateDrop() {
+    if (!falling) return;
+    drawDisk();
+    blobY += 5;
+    if (blobY >= canvas.height / 2 - 10) {
+      falling = false;
+      blobLanded = true;
+
+      // Calculate blob landing angle relative to disk center
+      const cx = canvas.width / 2;
+      const blobX = cx + d * scale;
+      // y is at disk center line, so angle = 0 on right side always
+      blobLandingAngle = 0; // Since we drop straight down at fixed horizontal position
+
+      calculateConservation();
+    }
+  }
+
+  function calculateConservation() {
+    const I_disk = 0.5 * diskMass * diskRadius ** 2;
+    const I_blob = m * d ** 2;
+    const I_total = I_disk + I_blob;
+
+    const L = I_disk * omegaBefore;
+    omegaAfter = L / I_total;
+
+    resultsBox.innerHTML = `
+    <strong>After blob lands:</strong><br>
+    $I_{disk} = ${I_disk.toFixed(2)}$ kg·m²<br>
+    $I_{blob} = ${I_blob.toFixed(2)}$ kg·m²<br>
+    $I_{total} = ${I_total.toFixed(2)}$ kg·m²<br>
+    $\\omega_{before} = ${omegaBefore.toFixed(2)}$ rad/s<br>
+    $L = I_{disk} \\times \\omega_{before} = ${L.toFixed(2)}$ kg·m²/s<br>
+    $\\omega_{after} = \\frac{L}{I_{total}} = ${omegaAfter.toFixed(2)}$ rad/s
+    `;
+    safeMathJaxTypeset(resultsBox);
+  }
+
+  function showInitialInertia() {
+    const I_disk = 0.5 * diskMass * diskRadius ** 2;
+    resultsBox.innerHTML = `
+    <strong>Initial State:</strong><br>
+    $I_{disk} = ${I_disk.toFixed(2)}$ kg·m²<br>
+    $\\omega_{initial} = ${omegaBefore.toFixed(2)}$ rad/s
+    `;
+    safeMathJaxTypeset(resultsBox);
+  }
+
+  function animate() {
+    if (falling) {
+      animateDrop();
+    }
+    if (blobLanded) {
+      angle += omegaAfter * 0.02;
+    } else {
+      angle += omegaBefore * 0.02;
+    }
+    drawDisk();
+    requestAnimationFrame(animate);
+  }
+
+  // Event Listeners
+  blobDistanceInput.addEventListener('input', () => {
+    distanceLabel.textContent = parseFloat(blobDistanceInput.value).toFixed(2) + " m";
+  });
+
+  initialOmegaInput.addEventListener('input', () => {
+    omegaBefore = parseFloat(initialOmegaInput.value);
+    omegaLabel.textContent = omegaBefore.toFixed(1) + " rad/s";
+    if (!falling && !blobLanded) {
+      omegaAfter = omegaBefore;
+      showInitialInertia();
+    }
+  });
+
+  blobMassInput.addEventListener('input', () => {
+    if (parseFloat(blobMassInput.value) > 10) {
+      blobMassInput.value = 10;
+    }
+    if (!falling && !blobLanded) showInitialInertia();
+  });
+
+  // Initialize
+  showInitialInertia();
+  animate();
+</script>
+  </div>
+</body>
+</html>
