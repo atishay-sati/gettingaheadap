@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Getting Ahead - Empowering Education</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2rem 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #1e3c72, #4a90e2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .tagline {
+      font-size: 1.1rem;
+      color: #666;
+      font-weight: 300;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    /* Mission Section */
+    .mission {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    
+    .mission h3 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    
+    .mission-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .mission-card {
+      background: linear-gradient(135deg, #1e3c72, #4a90e2);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+    
+    .mission-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* What We Do Section */
+    .what-we-do {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    
+    .what-we-do h3 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .service-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-item h4 {
+      color: #1e3c72;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    /* Courses Section */
+    .courses {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    
+    .courses h3 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .course-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .course-header {
+      background: linear-gradient(135deg, #1e3c72, #4a90e2);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .course-header h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .course-content {
+      padding: 1.5rem;
+    }
+    
+    .course-content p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    
+    .course-features {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .course-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      color: #555;
+    }
+    
+    .course-features li:last-child {
+      border-bottom: none;
+    }
+    
+    /* Footer */
+    footer {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    
+    footer p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero h2 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .mission h3,
+      .what-we-do h3,
+      .courses h3 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <img src="cover.png" alt="Getting Ahead Logo" style="height: 80px; width: auto; border-radius: 10px;">
+            <div>
+              <h1>Getting Ahead</h1>
+              <div class="tagline">Empowering Education Through Excellence</div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="contactus.html" style="color: #1e3c72; text-decoration: none; font-weight: 600; padding: 10px 20px; border: 2px solid #1e3c72; border-radius: 25px; transition: all 0.3s ease; margin-right: 10px;">Contact Us</a>
+          <a href="aboutus.html" style="color: #1e3c72; text-decoration: none; font-weight: 600; padding: 10px 20px; border: 2px solid #1e3c72; border-radius: 25px; transition: all 0.3s ease;">About Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Empowering Students for Academic Excellence</h2>
+      <p>We provide comprehensive AP course preparation and educational resources to help students achieve their academic goals and excel in Advanced Placement examinations. Our mission is to bridge the gap between high school curriculum and college-level expectations, ensuring every student has the tools, knowledge, and confidence needed to succeed in their educational journey and beyond.</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+      <h3>Our Mission & Goals</h3>
+      <div class="mission-content">
+        <div class="mission-card">
+          <h4>Academic Excellence</h4>
+          <p>To provide high-quality educational resources that prepare students for AP examinations and college-level coursework. We strive to create comprehensive learning experiences that not only cover the required curriculum but also foster deep understanding and critical thinking skills essential for higher education success.</p>
+        </div>
+        <div class="mission-card">
+          <h4>Accessible Learning</h4>
+          <p>To make advanced education accessible to all students through comprehensive online resources and interactive learning materials. We believe that quality education should be available to every student regardless of their background, location, or economic circumstances, breaking down barriers to academic achievement.</p>
+        </div>
+        <div class="mission-card">
+          <h4>Student Success</h4>
+          <p>To empower students with the knowledge, skills, and confidence needed to succeed in their academic and professional pursuits. Our comprehensive approach ensures that students not only master the content but also develop the study habits, problem-solving abilities, and self-confidence that will serve them throughout their educational and professional careers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+      <h3>What We Do</h3>
+      <div class="services-grid">
+        <div class="service-item">
+          <h4>Comprehensive AP Preparation</h4>
+          <p>We offer detailed study materials, practice problems, and interactive resources for multiple AP courses. Our curriculum is carefully designed to align with College Board standards while providing additional depth and real-world applications that help students develop a thorough understanding of complex concepts and prepare effectively for their AP examinations.</p>
+        </div>
+        <div class="service-item">
+          <h4>Interactive Learning</h4>
+          <p>Our platform provides engaging visualizations, simulations, and hands-on learning experiences that bring abstract concepts to life. Through interactive demonstrations, virtual laboratories, and dynamic problem-solving exercises, students can explore complex topics in an intuitive and memorable way that enhances retention and understanding.</p>
+        </div>
+        <div class="service-item">
+          <h4>Expert Resources</h4>
+          <p>Access to high-quality educational content created by experienced educators and subject matter experts who understand both the academic requirements and the practical challenges students face. Our materials are continuously updated to reflect the latest curriculum changes and incorporate best practices in educational technology and pedagogy.</p>
+        </div>
+        <div class="service-item">
+          <h4>Progress Tracking</h4>
+          <p>Monitor your learning progress with comprehensive assessments and performance analytics that provide detailed insights into your strengths and areas for improvement. Our adaptive learning system personalizes your educational experience, ensuring you focus on the topics that will have the greatest impact on your AP exam performance and overall academic growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+      <h3>Our AP Courses</h3>
+      <div class="courses-grid">
+        <a href="https://gettingaheadphysicsmech.com/mechanics/" class="course-card">
+          <div class="course-header">
+            <h4>AP Physics C: Mechanics</h4>
+            <p>Advanced Physics Concepts</p>
+          </div>
+          <div class="course-content">
+            <p>Master classical mechanics including kinematics, dynamics, energy, momentum, and rotational motion. This comprehensive course covers the fundamental principles that govern the motion of objects, from simple particle motion to complex systems involving multiple forces and energy transformations. Students will develop strong problem-solving skills and gain a deep understanding of how the physical world operates.</p>
+            <ul class="course-features">
+              <li>• Kinematics & Dynamics - Motion analysis and force interactions</li>
+              <li>• Energy & Momentum - Conservation principles and transformations</li>
+              <li>• Rotational Motion - Angular kinematics and dynamics</li>
+              <li>• Gravitation & Oscillations - Universal forces and periodic motion</li>
+            </ul>
+          </div>
+        </a>
+
+        <a href="https://gettingaheadphysicsmech.com/mechanics/" class="course-card">
+          <div class="course-header">
+            <h4>AP Computer Science A</h4>
+            <p>Programming & Algorithms</p>
+          </div>
+          <div class="course-content">
+            <p>Learn Java programming, object-oriented design, and fundamental computer science concepts. This course provides a solid foundation in programming principles while developing computational thinking skills that are essential for success in computer science and related fields. Students will gain hands-on experience with real-world programming challenges and learn to think algorithmically.</p>
+            <ul class="course-features">
+              <li>• Java Programming - Syntax, control structures, and methods</li>
+              <li>• Object-Oriented Design - Classes, inheritance, and polymorphism</li>
+              <li>• Data Structures - Arrays, ArrayLists, and 2D arrays</li>
+              <li>• Algorithm Analysis - Efficiency and computational complexity</li>
+            </ul>
+          </div>
+        </a>
+
+        <a href="https://gettingaheadphysicsmech.com/mechanics/" class="course-card">
+          <div class="course-header">
+            <h4>AP Chemistry</h4>
+            <p>Chemical Principles</p>
+          </div>
+          <div class="course-content">
+            <p>Explore atomic structure, molecular interactions, chemical reactions, and thermodynamics. This comprehensive chemistry course delves into the fundamental principles that govern matter and its transformations, providing students with a deep understanding of chemical processes and their applications in the natural world and technological innovations.</p>
+            <ul class="course-features">
+              <li>• Atomic Structure - Electron configurations and periodic trends</li>
+              <li>• Chemical Bonding - Ionic, covalent, and intermolecular forces</li>
+              <li>• Thermodynamics - Energy changes and spontaneity</li>
+              <li>• Kinetics & Equilibrium - Reaction rates and chemical balance</li>
+            </ul>
+          </div>
+        </a>
+
+        <a href="https://gettingaheadphysicsmech.com/mechanics/" class="course-card">
+          <div class="course-header">
+            <h4>AP Language & Composition</h4>
+            <p>Rhetorical Analysis</p>
+          </div>
+          <div class="course-content">
+            <p>Develop critical reading and writing skills through rhetorical analysis and argumentation. This course emphasizes the power of language and communication, teaching students to analyze complex texts, construct compelling arguments, and express their ideas with clarity and sophistication. Students will master the art of persuasive writing and develop the analytical skills needed for college-level coursework.</p>
+            <ul class="course-features">
+              <li>• Rhetorical Analysis - Understanding author's purpose and strategies</li>
+              <li>• Argumentation - Constructing logical and persuasive arguments</li>
+              <li>• Synthesis Writing - Combining multiple sources effectively</li>
+              <li>• Research Methods - Evaluating sources and evidence</li>
+            </ul>
+          </div>
+        </a>
+
+        <a href="https://gettingaheadphysicsmech.com/mechanics/" class="course-card">
+          <div class="course-header">
+            <h4>AP World History</h4>
+            <p>Global Perspectives</p>
+          </div>
+          <div class="course-content">
+            <p>Explore world history from ancient civilizations to modern global developments and interactions. This comprehensive survey course examines the major themes, events, and processes that have shaped human societies across time and space, helping students develop a nuanced understanding of historical causation and the interconnected nature of global developments.</p>
+            <ul class="course-features">
+              <li>• Ancient Civilizations - Early human societies and cultural developments</li>
+              <li>• Global Trade Networks - Economic and cultural exchange systems</li>
+              <li>• Revolutions & Industrialization - Political and economic transformations</li>
+              <li>• Modern Global Issues - Contemporary challenges and international relations</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Empowering Education Through Excellence</p>
+    </div>
+  </footer>
+</body>
+</html>
