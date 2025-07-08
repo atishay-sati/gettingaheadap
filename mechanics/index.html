@@ -72,6 +72,17 @@
     .btn-outline-primary {
       border-radius: 30px;
     }
+    .hero-clickable {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    .hero-clickable:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
 
     footer {
       background-color: #343a40;
@@ -112,6 +123,7 @@
   </nav>
 
   <!-- Hero Section -->
+  <a href="https://gettingaheadap.org" class="hero-clickable">
   <section class="hero">
     <div class="container">
       <div class="row align-items-center">
@@ -125,7 +137,7 @@
       </div>
     </div>
   </section>
-
+</a>
   <!-- Topics Section -->
   <section class="container my-5">
     <h2 class="text-center section-heading">📘 Core Topics You'll Learn</h2>
