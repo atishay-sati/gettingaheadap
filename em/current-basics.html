@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn electric current and drift velocity for AP Physics C. Study current definition, charge flow, drift velocity of electrons, and microscopic current flow in conductors." />
+  <title>Electric Current and Drift Velocity</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Current and Drift Velocity</h1>
+
+    <p>
+      Electric current is the flow of electric charge through a conductor. Understanding current, its direction, and the concept of drift velocity is fundamental to analyzing electrical circuits and the behavior of charged particles in conductors.
+    </p>
+
+    <h2>What is Electric Current?</h2>
+
+    <div class="formula-box">
+      $$I = \frac{dq}{dt}$$
+    </div>
+
+    <p>
+      Electric current is the rate at which electric charge flows through a cross-sectional area of a conductor. It is measured in amperes (A), where 1 ampere equals 1 coulomb per second.
+    </p>
+
+    <figure>
+      <img src="electron-current.webp" alt="Electrons moving in a conductor" class="img-fluid-center">
+      <figcaption>
+        Flow of charge carriers through a conductor.
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li><strong>Current direction:</strong> Defined as the flow of positive charge (conventional current)</li>
+      <li><strong>Units:</strong> Amperes (A) = Coulombs per second (C/s)</li>
+      <li><strong>Scalar quantity:</strong> Current has magnitude but direction is specified by the flow direction</li>
+      <li><strong>Steady current:</strong> When the rate of charge flow is constant over time</li>
+    </ul>
+
+    <h2>Conventional Current vs. Electron Current</h2>
+
+    <div class="formula-box">
+      $$\text{Conventional Current: } \text{Flow of positive charge}$$
+      $$\text{Electron Current: } \text{Flow of negative charge (electrons)}$$
+    </div>
+
+    <p>
+      There are two ways to think about current direction:
+    </p>
+
+    <ul>
+      <li><strong>Conventional current:</strong> Direction of positive charge flow (historically established)</li>
+      <li><strong>Electron current:</strong> Direction of electron flow (actual particle movement)</li>
+      <li><strong>Relationship:</strong> Conventional current and electron current flow in opposite directions</li>
+      <li><strong>AP Physics C:</strong> Uses conventional current direction for analysis</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Historical Note: Benjamin Franklin's "Mistake"</h3>
+      <p><strong>Fun fact:</strong> The conventional current direction was established by Benjamin Franklin in the 1700s, before electrons were discovered. Franklin assumed that electricity flowed from positive to negative terminals, which turned out to be backwards! When electrons were discovered in the late 1800s, scientists realized that the actual charge carriers (electrons) flow in the opposite direction.</p>
+      
+      <p>However, by then the conventional current direction was so well-established in electrical engineering and physics that it was kept as the standard. This is why we still use conventional current direction in circuit analysis today, even though we know electrons actually flow in the opposite direction.</p>
+    </div>
+
+    <figure>
+      <img src="conventional-electric.png" alt="Conventional vs Electron Current" class="img-fluid-center">
+      <figcaption>
+        Comparison of conventional current and electron flow directions.
+      </figcaption>
+    </figure>
+
+    <h2>Drift Velocity</h2>
+    <p>
+        Drift velocity is the average velocity of charge carriers (electrons) in a conductor under the influence of an electric field. Despite the high speed of electric field propagation (~speed of light), individual electrons move very slowly.
+      </p>
+
+    <div class="formula-box">
+      $$v_d = \frac{I}{nqA}$$
+    </div>
+
+    
+    <ul>
+        <li><strong>Where:</strong>
+          <ul>
+            <li>\(I\) = current</li>
+            <li>\(n\) = number of charge carriers per unit volume</li>
+            <li>\(q\) = charge of carrier (e.g., \(e = 1.602 \times 10^{-19}\) C for electrons)</li>
+            <li>\(A\) = cross-sectional area</li>
+          </ul>
+        </li>
+        <li><strong>Typical values:</strong> Drift velocity is very slow (~mm/s or cm/s)</li>
+        <li><strong>Electric field propagation:</strong> Near the speed of light</li>
+        <li><strong>Collision model:</strong> Electrons accelerate between collisions with lattice ions</li>
+      </ul>
+
+    <div class="example-box">
+      <h3>Memory Trick: NEVADA</h3>
+      <p><strong>Remember the drift velocity formula using NEVADA:</strong></p>
+      <ul>
+        <li><strong>NE</strong> = \(ne\) (number density × elementary charge)</li>
+        <li><strong>V</strong> = drift velocity (\(v_d\))</li>
+        <li><strong>A</strong> = cross-sectional area (\(A\))</li>
+        <li><strong>D</strong> = diameter (related to area)</li>
+        <li><strong>A</strong> = area again (\(A\))</li>
+      </ul>
+      <p><strong>So:</strong> \(ne \times v_d \times A = I\)</p>
+      <p><strong>Rearranging:</strong> \(v_d = \frac{I}{neA}\)</p>
+      <p>This helps you remember that \(nev_dA = I\), which rearranges to give the drift velocity formula!</p>
+    </div>
+
+    
+
+    
+    <!-- Current Flow Animation Canvas -->
+    <canvas id="currentCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="startCurrent" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetCurrent" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+
+
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Calculating Current from Charge Flow</h3>
+      <p><strong>Problem:</strong> A wire carries 2.5 × 10¹⁹ electrons past a point in 3.0 seconds. What is the current in the wire?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Total charge:</strong> \(q = (2.5 \times 10^{19} \text{ electrons}) \times (1.602 \times 10^{-19} \text{ C/electron})\)</li>
+        <li><strong>Calculation:</strong> \(q = 2.5 \times 10^{19} \times 1.602 \times 10^{-19} = 4.005 \text{ C}\)</li>
+        <li><strong>Current:</strong> \(I = \frac{q}{t} = \frac{4.005 \text{ C}}{3.0 \text{ s}} = 1.335 \text{ A}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The current is 1.34 A.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Drift Velocity Calculation</h3>
+      <p><strong>Problem:</strong> A copper wire with diameter 2.0 mm carries a current of 5.0 A. If copper has 8.5 × 10²⁸ free electrons per m³, what is the drift velocity of the electrons?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Cross-sectional area:</strong> \(A = \pi r^2 = \pi(1.0 \times 10^{-3} \text{ m})^2 = 3.14 \times 10^{-6} \text{ m}^2\)</li>
+        <li><strong>Drift velocity formula:</strong> \(v_d = \frac{I}{nqA}\)</li>
+        <li><strong>Substitution:</strong> \(v_d = \frac{5.0 \text{ A}}{(8.5 \times 10^{28} \text{ m}^{-3})(1.602 \times 10^{-19} \text{ C})(3.14 \times 10^{-6} \text{ m}^2)}\)</li>
+        <li><strong>Calculation:</strong> \(v_d = \frac{5.0}{8.5 \times 10^{28} \times 1.602 \times 10^{-19} \times 3.14 \times 10^{-6}}\)</li>
+        <li><strong>Result:</strong> \(v_d = 1.17 \times 10^{-4} \text{ m/s} = 0.117 \text{ mm/s}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The drift velocity is 0.117 mm/s.</p>
+    </div>
+
+
+
+    <div class="example-box">
+      <h3>Example 3: Charge Carrier Concentration</h3>
+      <p><strong>Problem:</strong> A wire with cross-sectional area 1.0 × 10⁻⁶ m² carries a current of 3.0 A. If the drift velocity is 2.0 × 10⁻⁴ m/s, what is the concentration of charge carriers?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Rearranging drift velocity formula:</strong> \(n = \frac{I}{qv_dA}\)</li>
+        <li><strong>Substitution:</strong> \(n = \frac{3.0 \text{ A}}{(1.602 \times 10^{-19} \text{ C})(2.0 \times 10^{-4} \text{ m/s})(1.0 \times 10^{-6} \text{ m}^2)}\)</li>
+        <li><strong>Calculation:</strong> \(n = \frac{3.0}{1.602 \times 10^{-19} \times 2.0 \times 10^{-4} \times 1.0 \times 10^{-6}}\)</li>
+        <li><strong>Result:</strong> \(n = 9.36 \times 10^{28} \text{ m}^{-3}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The charge carrier concentration is 9.36 × 10²⁸ m⁻³.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 4: Time for Charge to Travel</h3>
+      <p><strong>Problem:</strong> A copper wire is 10.0 m long and carries a current of 2.0 A. If the drift velocity is 1.0 × 10⁻⁴ m/s, how long does it take for an electron to travel the length of the wire?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Time formula:</strong> \(t = \frac{d}{v}\)</li>
+        <li><strong>Substitution:</strong> \(t = \frac{10.0 \text{ m}}{1.0 \times 10^{-4} \text{ m/s}}\)</li>
+        <li><strong>Calculation:</strong> \(t = 1.0 \times 10^5 \text{ s}\)</li>
+        <li><strong>Convert to hours:</strong> \(t = \frac{1.0 \times 10^5 \text{ s}}{3600 \text{ s/hour}} = 27.8 \text{ hours}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> It takes 27.8 hours for an electron to travel 10.0 m.</p>
+    </div>
+
+    
+    
+    
+
+    
+
+<script>
+  // Current Flow Animation
+  const currentCanvas = document.getElementById("currentCanvas");
+  const cctx = currentCanvas.getContext("2d");
+  const startCurrentButton = document.getElementById("startCurrent");
+  const resetCurrentButton = document.getElementById("resetCurrent");
+
+  let electrons = [];
+  let animationId;
+  let animationTime = 0;
+
+  // Initialize electrons
+  function initElectrons() {
+    electrons = [];
+    
+    // Create electrons in a grid pattern
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 15; col++) {
+        electrons.push({
+          x: 50 + col * 50,
+          y: 100 + row * 30,
+          vx: -0.5, // Drift velocity (slow) - negative for opposite direction
+          vy: 0,
+          originalX: 50 + col * 50,
+          originalY: 100 + row * 30
+        });
+      }
+    }
+  }
+
+  function drawCurrentScene() {
+    cctx.clearRect(0, 0, currentCanvas.width, currentCanvas.height);
+    
+    // Draw wire boundaries
+    cctx.strokeStyle = "#333";
+    cctx.lineWidth = 3;
+    cctx.strokeRect(30, 80, 740, 240);
+    
+    // Draw electric field arrows
+    cctx.strokeStyle = "#6f42c1";
+    cctx.lineWidth = 2;
+    for (let y = 100; y < 300; y += 40) {
+      cctx.beginPath();
+      cctx.moveTo(40, y);
+      cctx.lineTo(80, y);
+      cctx.stroke();
+      
+      // Arrow head
+      cctx.beginPath();
+      cctx.moveTo(80, y);
+      cctx.lineTo(75, y - 3);
+      cctx.lineTo(75, y + 3);
+      cctx.closePath();
+      cctx.fill();
+    }
+    
+    // Draw electrons
+    cctx.fillStyle = "#F44336";
+    electrons.forEach(electron => {
+      cctx.beginPath();
+      cctx.arc(electron.x, electron.y, 4, 0, 2 * Math.PI);
+      cctx.fill();
+      cctx.fillStyle = "#D32F2F";
+      cctx.font = '10px Arial';
+      cctx.fillText('-', electron.x - 3, electron.y + 3);
+      cctx.fillStyle = "#F44336";
+    });
+    
+    // Draw labels
+    cctx.fillStyle = "#333";
+    cctx.font = "14px Roboto, sans-serif";
+    cctx.textAlign = "left";
+    cctx.fillText("Electric Field", 50, 50);
+    cctx.fillText("Electron Drift", 50, 70);
+    
+    // Draw current direction
+    cctx.fillStyle = "#6f42c1";
+    cctx.font = "16px Roboto, sans-serif";
+    cctx.textAlign = "center";
+    cctx.fillText("Conventional Current Direction →", 400, 380);
+    cctx.fillText("← Drift Velocity ", 400, 70);
+    
+    // Draw arrow for conventional current
+    cctx.strokeStyle = "#6f42c1";
+    cctx.lineWidth = 3;
+    cctx.beginPath();
+    cctx.moveTo(300, 340);
+    cctx.lineTo(500, 340);
+    cctx.stroke();
+    
+    cctx.beginPath();
+    cctx.moveTo(500, 340);
+    cctx.lineTo(495, 335);
+    cctx.lineTo(495, 345);
+    cctx.closePath();
+    cctx.fill();
+  }
+
+  function updateElectrons() {
+    electrons.forEach(electron => {
+      // Update position based on drift velocity
+      electron.x += electron.vx;
+      
+      // Reset electron position when it reaches the left edge (since moving left)
+      if (electron.x < 30) {
+        electron.x = 750;
+      }
+      
+      // Add some random vertical movement to simulate thermal motion
+      electron.y += (Math.random() - 0.5) * 0.5;
+      
+      // Keep electrons within wire boundaries
+      if (electron.y < 90) electron.y = 90;
+      if (electron.y > 310) electron.y = 310;
+    });
+  }
+
+  function animateCurrent() {
+    updateElectrons();
+    drawCurrentScene();
+    animationId = requestAnimationFrame(animateCurrent);
+  }
+
+  function startCurrentAnimation() {
+    initElectrons();
+    animateCurrent();
+  }
+
+  function resetCurrentAnimation() {
+    cancelAnimationFrame(animationId);
+    initElectrons();
+    drawCurrentScene();
+  }
+
+  // Event listeners
+  startCurrentButton.addEventListener("click", startCurrentAnimation);
+  resetCurrentButton.addEventListener("click", resetCurrentAnimation);
+
+  // Initialize
+  initElectrons();
+  drawCurrentScene();
+</script>
+
+    <div class="formula-box" style="background:#e8d5ff; border-left:6px solid #6f42c1; margin-top:2.5rem;">
+      <h2 style="color:#6f42c1; margin-top:0;">Summary / Key Takeaways</h2>
+      <ul style="font-size:1.08rem; color:#333;">
+        <li><strong>Electric current</strong> is the flow of electric charge, measured in amperes (A).</li>
+        <li>Current in a wire is due to the movement of <strong>electrons</strong>, but conventional current is defined in the direction positive charge would flow.</li>
+        <li>The formula for current is <strong>I = dq/dt</strong>, where dq is the amount of charge passing a point in time dt.</li>
+        <li><strong>Drift velocity</strong> is the average velocity of charge carriers due to an electric field; it is much slower than the speed of the electric field itself.</li>
+        <li>Microscopically, electrons move randomly but have a small net drift opposite to the electric field in conductors.</li>
+        <li>Current depends on the number of charge carriers, their charge, drift velocity, and the cross-sectional area of the conductor: <strong>I = nqv<sub>d</sub>A</strong>.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

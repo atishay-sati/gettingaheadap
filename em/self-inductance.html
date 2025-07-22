@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about self-inductance and inductors for AP Physics C. Study induced EMF, time constant, and practical applications in circuits." />
+  <title>Self-Inductance and Inductors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .concept-card h3 {
+      color: #495057;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .concept-card p {
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+    .concept-card a {
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .concept-card a:hover {
+      text-decoration: underline;
+    }
+    .intro-section {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #155724;
+    }
+    .intro-section h2 {
+      color: #155724;
+      margin-top: 0;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .example-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .example-box h3 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .simulation-container {
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-container h3 {
+      color: #495057;
+      margin-top: 0;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    canvas {
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      background: white;
+    }
+    .controls {
+      margin: 1rem 0;
+    }
+    .controls label {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+    .controls input {
+      margin-right: 1rem;
+      padding: 0.25rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .controls button {
+      background: #6f42c1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background: #5a32a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectromagneticInduction.html" class="back-link">← Back to Electromagnetic Induction</a>
+    <h1>Self-Inductance and Inductors</h1>
+
+    <div class="intro-section">
+      <h2>Overview of Self-Inductance</h2>
+      <p>
+        Self-inductance is the property of a circuit element that opposes changes in current. When the current through an inductor changes, it induces an electromotive force (emf) that opposes the change. This is a fundamental property of inductors and is crucial for understanding time-varying circuits.
+      </p>
+      <p>
+        Inductors store energy in their magnetic fields and are essential components in filters, oscillators, and power supplies. Understanding self-inductance is key to analyzing LR circuits and electromagnetic devices.
+      </p>
+    </div>
+
+    <h2>Self-Inductance Definition</h2>
+    
+    <div class="formula-box">
+      <h3>Self-Inductance Formula</h3>
+      <p><strong>The self-inductance of a circuit element is:</strong></p>
+      <p>\[ L = \frac{N\Phi_B}{I} \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(L\) is the self-inductance in henrys (H)</li>
+        <li>\(N\) is the number of turns in the coil</li>
+        <li>\(\Phi_B\) is the magnetic flux through one turn</li>
+        <li>\(I\) is the current through the inductor</li>
+      </ul>
+      <p><strong>Note:</strong> This formula is NOT on the AP Physics C equation sheet.</p>
+    </div>
+
+    <img src="induced-self-field.jpg" class="img-fluid-center">
+    <figcaption>The yellow lines are the wire while the black arrows signify the magnetic field.</figcaption>
+   <p>In this image, the top and bottom of the coils are producing magnetic fields. The magnetic field OUTSIDE are being canceled out because they are going in the opposite direction. The magnetic field inside are doubling in strength due to the magnetic field from the current on the top and bottom of the current.</p>
+    <h2>Key Concepts</h2>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Induced EMF in Inductors</h3>
+        <p>
+          When the current through an inductor changes, it induces an emf:
+        </p>
+        <p>\[ \mathcal{E} = -L\frac{dI}{dt} \]</p>
+        <p>
+          The negative sign indicates that the induced emf opposes the change in current (Lenz's Law).
+        </p>
+        <ul>
+          <li>Increasing current: induced emf opposes the increase</li>
+          <li>Decreasing current: induced emf opposes the decrease</li>
+          <li>Constant current: no induced emf</li>
+        </ul>
+      </div>
+
+      
+
+      <div class="concept-card">
+        <h3>Time Constant</h3>
+        <p>
+          For LR circuits, the time constant is:
+        </p>
+        <p>\[ \tau = \frac{L}{R} \]</p>
+        <p>
+          This determines how quickly the current changes in the circuit.
+        </p>
+        <ul>
+          <li>Larger L: slower current changes</li>
+          <li>Larger R: faster current changes</li>
+          <li>After τ seconds: current reaches 63% of final value</li>
+        </ul>
+      </div>
+
+      <div class="concept-card">
+        <h3>Factors Affecting Inductance</h3>
+        <p>
+          The inductance depends on:
+        </p>
+        <ul>
+          <li><strong>Number of turns (N):</strong> L ∝ N²</li>
+          <li><strong>Cross-sectional area (A):</strong> L ∝ A</li>
+          <li><strong>Length (l):</strong> L ∝ 1/l</li>
+          <li><strong>Core material:</strong> L ∝ μ (permeability)</li>
+        </ul>
+        <p>
+          For a solenoid: \(L = \frac{\mu_0N^2A}{l}\)
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>Physical Meaning</h3>
+        <p>
+          Self-inductance measures how much magnetic flux is linked to a circuit per unit current. It represents the "inertia" of the circuit to current changes.
+        </p>
+        <ul>
+          <li>High inductance: resists current changes</li>
+          <li>Low inductance: allows rapid current changes</li>
+          <li>Units: Henrys (H) = Wb/A</li>
+          <li>1 H = 1 Wb/A = 1 V⋅s/A</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <h2>Formula Derivations (Not on AP Equation Sheet)</h2>
+
+    <div class="example-box">
+      <h3>Derivation 1: Induced EMF Formula</h3>
+      <p><strong>Derive:</strong> \(\mathcal{E} = -L\frac{dI}{dt}\)</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>By definition: \(L = \frac{N\Phi_B}{I}\)</li>
+        <li>Therefore: \(N\Phi_B = LI\)</li>
+        <li>When current changes: \(\frac{d(N\Phi_B)}{dt} = L\frac{dI}{dt}\)</li>
+        <li>By Faraday's Law: \(\mathcal{E} = -\frac{d(N\Phi_B)}{dt}\)</li>
+        <li>Substitute: \(\mathcal{E} = -L\frac{dI}{dt}\)</li>
+      </ol>
+      <p><strong>Result:</strong> \(\mathcal{E} = -L\frac{dI}{dt}\) (NOT on equation sheet)</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Derivation 2: Time Constant Formula</h3>
+      <p><strong>Derive:</strong> \(\tau = \frac{L}{R}\)</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>In an LR circuit: \(V = IR + L\frac{dI}{dt}\)</li>
+        <li>When switch is closed: \(V = IR + L\frac{dI}{dt}\)</li>
+        <li>Rearrange: \(\frac{dI}{dt} = \frac{V - IR}{L}\)</li>
+        <li>This is a first-order differential equation</li>
+        <li>Solution: \(I = \frac{V}{R}(1 - e^{-t/\tau})\) where \(\tau = \frac{L}{R}\)</li>
+        <li>The time constant determines the rate of current change</li>
+      </ol>
+      <p><strong>Result:</strong> \(\tau = \frac{L}{R}\) (NOT on equation sheet)</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Derivation 3: Solenoid Inductance</h3>
+      <p><strong>Derive:</strong> \(L = \frac{\mu_0N^2A}{l}\) for a solenoid</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>Magnetic field in solenoid: \(B = \mu_0nI = \mu_0\frac{N}{l}I\)</li>
+        <li>Flux through one turn: \(\Phi_B = BA = \mu_0\frac{N}{l}IA\)</li>
+        <li>Total flux linkage: \(N\Phi_B = \mu_0\frac{N^2}{l}IA\)</li>
+        <li>By definition: \(L = \frac{N\Phi_B}{I} = \mu_0\frac{N^2A}{l}\)</li>
+      </ol>
+      <p><strong>Result:</strong> \(L = \frac{\mu_0N^2A}{l}\) (NOT on equation sheet)</p>
+    </div>
+
+    <h2>Example Problems</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Calculating Self-Inductance</h3>
+      <p><strong>Problem:</strong> A solenoid has 500 turns, length 0.1 m, and cross-sectional area 0.001 m². What is its self-inductance?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Use solenoid formula: \(L = \frac{\mu_0N^2A}{l}\)</li>
+        <li>Substitute values: \(L = \frac{(4\pi \times 10^{-7})(500)^2(0.001)}{0.1}\)</li>
+        <li>Calculate: \(L = \frac{(4\pi \times 10^{-7})(250000)(0.001)}{0.1}\)</li>
+        <li>Result: \(L = 3.14 \times 10^{-3} \text{ H} = 3.14 \text{ mH}\)</li>
+      </ol>
+      <p><strong>Answer:</strong> The self-inductance is 3.14 mH.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Induced EMF</h3>
+      <p><strong>Problem:</strong> The current through a 2 H inductor changes from 3 A to 7 A in 0.5 seconds. What is the induced emf?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Calculate current change rate: \(\frac{dI}{dt} = \frac{7 - 3}{0.5} = 8 \text{ A/s}\)</li>
+        <li>Use induced emf formula: \(\mathcal{E} = -L\frac{dI}{dt}\)</li>
+        <li>Substitute: \(\mathcal{E} = -(2)(8) = -16 \text{ V}\)</li>
+        <li>The negative sign indicates the emf opposes the current increase</li>
+      </ol>
+      <p><strong>Answer:</strong> The induced emf is -16 V.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Time Constant</h3>
+      <p><strong>Problem:</strong> An LR circuit has L = 0.5 H and R = 2 Ω. What is the time constant?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Use time constant formula: \(\tau = \frac{L}{R}\)</li>
+        <li>Substitute: \(\tau = \frac{0.5}{2} = 0.25 \text{ s}\)</li>
+        <li>After 0.25 s, current reaches 63% of final value</li>
+        <li>After 5τ = 1.25 s, current reaches 99% of final value</li>
+      </ol>
+      <p><strong>Answer:</strong> The time constant is 0.25 seconds.</p>
+    </div>
+
+    <h2>Applications of Inductors</h2>
+    <ul>
+      <li><strong>Filters:</strong> High-pass and low-pass filters in electronic circuits</li>
+      <li><strong>Oscillators:</strong> LC circuits for generating alternating current</li>
+      <li><strong>Power Supplies:</strong> Smoothing current variations in DC power supplies</li>
+      <li><strong>Transformers:</strong> Core component in voltage transformation</li>
+      <li><strong>Magnetic Storage:</strong> Used in magnetic recording devices</li>
+      <li><strong>Induction Heating:</strong> Used in induction cooktops and industrial heating</li>
+    </ul>
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Self-Inductance</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. What is the unit of self-inductance?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Ohm (Ω)</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Henry (H)</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Farad (F)</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Tesla (T)</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. When current through an inductor increases, the induced emf:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Aids the increase</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Opposes the increase</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Has no effect</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Depends on the inductance</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. If you double the number of turns in a solenoid, the inductance:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Doubles</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Quadruples</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Halves</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Stays the same</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. What is the time constant for L = 2 H and R = 4 Ω?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">0.5 s</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">2 s</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">8 s</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">0.25 s</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. The induced emf in an inductor is proportional to:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The current</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">The rate of change of current</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The voltage</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The resistance</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li><strong>Define Self-Inductance:</strong> Understand the relationship between inductance, flux, and current</li>
+      <li><strong>Calculate Induced EMF:</strong> Use the formula \(\mathcal{E} = -L\frac{dI}{dt}\)</li>
+      <li><strong>Determine Time Constants:</strong> Calculate \(\tau = \frac{L}{R}\) for LR circuits</li>
+      <li><strong>Analyze LR Circuits:</strong> Understand current behavior in inductor-resistor circuits</li>
+      <li><strong>Apply to Real Devices:</strong> Connect theory to practical inductor applications</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Opposition Principle:</strong> Inductors oppose changes in current</li>
+      <li><strong>Time Dependence:</strong> Current changes exponentially in LR circuits</li>
+      <li><strong>Energy Storage:</strong> Inductors store energy in magnetic fields</li>
+      <li><strong>Time Constant:</strong> Determines how quickly current changes</li>
+      <li><strong>Applications:</strong> Essential in filters, oscillators, and power supplies</li>
+    </ul>
+  </div>
+
+  <script>
+    // Quiz functionality
+    function checkAnswer(element, result) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      element.classList.add(result);
+      
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

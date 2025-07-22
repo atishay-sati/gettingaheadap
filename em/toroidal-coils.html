@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about toroidal coils for AP Physics C. Study magnetic field confinement, applications, and calculations using Ampère's Law." />
+  <title>Toroidal Coils</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Toroidal coil specific styles */
+    .toroid-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .field-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .advantages-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .applications-box {
+      background: #f8f9fa;
+      border: 2px solid #6c757d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #495057;
+    }
+    
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Toroidal Coils</h1>
+
+    <p>
+      A toroidal coil (or toroid) is a coil of wire wound in a donut-shaped form that creates a magnetic field confined primarily within the torus. Toroidal coils are important in electromagnetism because they provide excellent magnetic field confinement and are used in various applications.
+    </p>
+
+    <h2>What is a Toroidal Coil?</h2>
+
+    <div class="toroid-box">
+      <h3>🧲 Toroidal Coil Definition</h3>
+      <p><strong>A toroidal coil is a coil of wire wound in a circular or donut shape that creates a magnetic field primarily confined within the torus.</strong></p>
+      <p>The magnetic field lines form closed loops within the toroid, with minimal external field leakage.</p>
+    </div>
+
+    <figure>
+      <img src="toroid-visual.jpg" class=="img-fluid-center">
+      <figcaption>
+        Diagram showing a toroidal coil with current flow and confined magnetic field lines.
+      </figcaption>
+    </figure>
+
+    <h2>Toroid Diagram</h2>
+
+    <img src="toroid-field-lines.png" class="img-fluid-center">
+    <figcaption>Current go in and out creating a circular magnetic field</figcaption>
+
+    <h2>Magnetic Field Inside a Toroid</h2>
+
+    <div class="field-box">
+      <h3>⚡ Field Calculation Using Ampère's Law</h3>
+      <p><strong>The magnetic field inside a toroid can be calculated using <a href="ampere-law.html">Ampère's Law</a>:</strong></p>
+      <div class="formula-box">
+        \[ B = \frac{\mu_0 NI}{2\pi r} \]
+      </div>
+      <p>Where:</p>
+      <ul>
+        <li>\( B \) is the magnetic field strength</li>
+        <li>\( \mu_0 \) is the permeability of free space (4π × 10⁻⁷ T⋅m/A)</li>
+        <li>\( N \) is the total number of turns</li>
+        <li>\( I \) is the current through the coil</li>
+        <li>\( r \) is the distance from the center of the toroid</li>
+      </ul>
+    </div>
+
+    <h3>Derivation Using Ampère's Law</h3>
+    <p>To derive this formula using <a href="ampere-law.html">Ampère's Law</a>:</p>
+    <ol>
+      <li><strong>Choose Amperian Loop:</strong> Use a circular path inside the toroid</li>
+      <li><strong>Apply Ampère's Law:</strong> \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc} \)</li>
+      <li><strong>Calculate Enclosed Current:</strong> \( I_{enc} = NI \) where \( N \) is the total number of turns</li>
+      <li><strong>Evaluate the Integral:</strong> \( B(2\pi r) = \mu_0 NI \)</li>
+      <li><strong>Solve for B:</strong> \( B = \frac{\mu_0 NI}{2\pi r} \)</li>
+    </ol>
+    
+
+    <h2>Watch this For Better Understanding:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XWtscd-IoDU?si=_IN0nc9try_b7Gam" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Key Properties of Toroidal Coils</h2>
+
+    <div class="advantages-box">
+      <h3>🔬 Important Characteristics</h3>
+      <ul>
+        <li><strong>Field Confinement:</strong> Magnetic field is confined within the toroid</li>
+        <li><strong>Minimal Leakage:</strong> Very little external magnetic field</li>
+        <li><strong>Field Variation:</strong> Field strength varies with radius inside the toroid</li>
+        <li><strong>Field Confinement:</strong> Excellent for applications requiring confined fields</li>
+        <li><strong>Efficient Design:</strong> More efficient than solenoids for some applications</li>
+      </ul>
+    </div>
+
+    <h3>Field Distribution</h3>
+    <ul>
+      <li><strong>Inside the Toroid:</strong> Field is strongest near the inner radius</li>
+      <li><strong>Field Direction:</strong> Use the <a href="magnetic-field-basics.html">right-hand rule</a> to determine direction</li>
+      <li><strong>Outside the Toroid:</strong> Field is approximately zero</li>
+      <li><strong>Uniformity:</strong> Field is more uniform than in a solenoid</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Toroidal Coil Field Calculation</h3>
+      <p><strong>Problem:</strong> A toroidal coil has 1000 turns and carries a current of 2.0 A. The inner radius is 5.0 cm and the outer radius is 7.0 cm. Calculate the magnetic field at a radius of 6.0 cm.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>\( N = 1000 \) turns</li>
+        <li>\( I = 2.0 \) A</li>
+        <li>\( r = 6.0 \) cm = 0.060 m</li>
+        <li>\( \mu_0 = 4\pi \times 10^{-7} \) T⋅m/A</li>
+      </ul>
+
+      <h4>Step 2: Apply the Formula</h4>
+      <div class="formula-box">
+        \[ B = \frac{\mu_0 NI}{2\pi r} = \frac{(4\pi \times 10^{-7} \text{ T⋅m/A})(1000)(2.0 \text{ A})}{2\pi(0.060 \text{ m})} \]
+      </div>
+
+      <h4>Step 3: Calculate</h4>
+      <div class="formula-box">
+        \[ B = \frac{8\pi \times 10^{-4}}{0.12\pi} = 6.67 \times 10^{-3} \text{ T} = 6.67 \text{ mT} \]
+      </div>
+
+      <h4>Step 4: Direction</h4>
+      <p>Use the right-hand rule to determine the field direction around the toroid.</p>
+    </div>
+
+    <h2>Comparison with Solenoids</h2>
+
+    <h3>Advantages of Toroidal Coils</h3>
+    <ul>
+      <li><strong>Field Confinement:</strong> No external field leakage</li>
+      <li><strong>Efficiency:</strong> More efficient use of magnetic material</li>
+      <li><strong>Efficiency:</strong> Higher efficiency per unit volume</li>
+      <li><strong>Interference:</strong> Minimal interference with nearby components</li>
+      <li><strong>Applications:</strong> Better for applications requiring confined fields</li>
+    </ul>
+
+    <h3>Disadvantages of Toroidal Coils</h3>
+    <ul>
+      <li><strong>Manufacturing:</strong> More difficult to wind than solenoids</li>
+      <li><strong>Cost:</strong> Generally more expensive to manufacture</li>
+      <li><strong>Size Limitations:</strong> Limited by toroid size</li>
+      <li><strong>Accessibility:</strong> Harder to access the center region</li>
+    </ul>
+
+    <h2>Applications of Toroidal Coils</h2>
+
+    <div class="applications-box">
+      <h3>⚡ Practical Applications</h3>
+      <p><strong>Toroidal coils are used in various applications:</strong></p>
+      <ul>
+        <li><strong>Transformers:</strong> Power transformers and signal transformers</li>
+              <li><strong>Current Sensors:</strong> Current transformers for measurement</li>
+      <li><strong>Magnetic Confinement:</strong> Plasma confinement in fusion research</li>
+        <li><strong>Magnetic Confinement:</strong> Plasma confinement in fusion research</li>
+      </ul>
+    </div>
+
+    <h3>Transformer Applications</h3>
+    <ul>
+      <li><strong>Power Transformers:</strong> Efficient energy transfer with minimal losses</li>
+      <li><strong>Signal Transformers:</strong> Audio and communication transformers</li>
+      <li><strong>Isolation Transformers:</strong> Electrical isolation between circuits</li>
+      <li><strong>Impedance Matching:</strong> Match impedance between circuits</li>
+    </ul>
+
+    <h3>Current Sensing</h3>
+    <ul>
+      <li><strong>Current Transformers:</strong> Measure high currents safely</li>
+      <li><strong>Ground Fault Detection:</strong> Detect current imbalances</li>
+      <li><strong>Power Monitoring:</strong> Monitor power consumption</li>
+      <li><strong>Protection Systems:</strong> Overcurrent protection</li>
+    </ul>
+
+    <h2>Magnetic Flux in Toroidal Coils</h2>
+
+    <h3>Flux Calculation</h3>
+    <p>The magnetic flux through a toroidal coil is:</p>
+    <div class="formula-box">
+      \[ \Phi_B = \int B \, dA = \int_{r_1}^{r_2} \frac{\mu_0 NI}{2\pi r} h \, dr \]
+    </div>
+    <p>Where \( h \) is the height of the toroid and \( r_1, r_2 \) are the inner and outer radii.</p>
+
+
+
+    <h2>Design Considerations</h2>
+
+    <h3>Geometric Factors</h3>
+    <ul>
+      <li><strong>Aspect Ratio:</strong> Ratio of outer to inner radius affects field uniformity</li>
+      <li><strong>Winding Density:</strong> Number of turns per unit length</li>
+      <li><strong>Core Material:</strong> Ferromagnetic cores increase inductance</li>
+      <li><strong>Wire Gauge:</strong> Determines current-carrying capacity</li>
+    </ul>
+
+    <h3>Electrical Factors</h3>
+    <ul>
+      <li><strong>Resistance:</strong> \( R = \rho \frac{l}{A} \) where \( l \) is wire length</li>
+      <li><strong>Power Loss:</strong> \( P = I^2R \) dissipated in the wire</li>
+      <li><strong>Quality Factor:</strong> \( Q = \frac{\omega L}{R} \) for AC applications</li>
+      <li><strong>Resonance:</strong> Natural frequency \( f = \frac{1}{2\pi\sqrt{LC}} \)</li>
+    </ul>
+
+    <h2>Comparison with Other Magnetic Field Sources</h2>
+
+    <h3>vs. Solenoids</h3>
+    <ul>
+      <li><strong>Field Confinement:</strong> Toroids have better field confinement</li>
+      <li><strong>Efficiency:</strong> Toroids are more efficient for energy storage</li>
+      <li><strong>Manufacturing:</strong> Solenoids are easier to manufacture</li>
+      <li><strong>Applications:</strong> Each is better suited for different applications</li>
+    </ul>
+
+    <h3>vs. Single Current Loops</h3>
+    <ul>
+      <li><strong>Field Strength:</strong> Toroids have much stronger fields</li>
+      <li><strong>Field Uniformity:</strong> Toroids have more uniform fields</li>
+      <li><strong>Field Confinement:</strong> Toroids have much better field confinement</li>
+      <li><strong>Applications:</strong> Toroids are better for applications requiring confined fields</li>
+    </ul>
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Toroidal Coils</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. What is the main advantage of toroidal coils over solenoids?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Better field confinement</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Easier to manufacture</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Lower cost</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Higher current capacity</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. What law is used to calculate the magnetic field in a toroid?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Biot-Savart Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Ampère's Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Gauss's Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Coulomb's Law</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. What is the formula for magnetic field inside a toroid?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">B = μ₀nI</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">B = μ₀NI/2πr</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">B = μ₀I/2πr</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">B = μ₀NI/4πr²</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Field Confinement:</strong> Toroidal coils provide excellent magnetic field confinement</li>
+      <li><strong>Ampère's Law:</strong> Used to derive the field formula \( B = \frac{\mu_0 NI}{2\pi r} \)</li>
+      <li><strong>Energy Storage:</strong> Excellent for inductive energy storage applications</li>
+      <li><strong>Transformer Applications:</strong> Widely used in power and signal transformers</li>
+      <li><strong>Efficiency:</strong> More efficient than solenoids for many applications</li>
+    </ul>
+  </div>
+
+  <script>
+    function checkAnswer(element, result) {
+      // Remove previous selections
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      // Add result class
+      element.classList.add(result);
+      
+      // Show explanation
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

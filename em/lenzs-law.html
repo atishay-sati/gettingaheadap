@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn Lenz's Law for AP Physics C. Study the direction of induced currents, energy conservation, and practical applications of Lenz's Law in electromagnetic induction." />
+  <title>Lenz's Law and Direction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .concept-card h3 {
+      color: #495057;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .concept-card p {
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+    .concept-card a {
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .concept-card a:hover {
+      text-decoration: underline;
+    }
+    .intro-section {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #155724;
+    }
+    .intro-section h2 {
+      color: #155724;
+      margin-top: 0;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .example-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .example-box h3 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .simulation-container {
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-container h3 {
+      color: #495057;
+      margin-top: 0;
+    }
+    canvas {
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      background: white;
+    }
+    .controls {
+      margin: 1rem 0;
+    }
+    .controls label {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+    .controls input {
+      margin-right: 1rem;
+      padding: 0.25rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .controls button {
+      background: #6f42c1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background: #5a32a3;
+    }
+    .direction-box {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      border: 2px solid #2196f3;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .direction-box h3 {
+      color: #1565c0;
+      margin-top: 0;
+    }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectromagneticInduction.html" class="back-link">← Back to Electromagnetic Induction</a>
+    <h1>Lenz's Law and Direction</h1>
+
+    <div class="intro-section">
+      <h2>Overview of Lenz's Law</h2>
+      <p>
+        Lenz's Law, formulated by Heinrich Lenz in 1834, is a fundamental principle that determines the direction of induced currents in electromagnetic induction. It states that the direction of an induced current is such that it creates a magnetic field that opposes the change in magnetic flux that produced it.
+      </p>
+      <p>
+        This law is a manifestation of the principle of conservation of energy. If the induced current were to create a field that aided the change, it would create a perpetual motion machine, which violates energy conservation. Lenz's Law ensures that electromagnetic induction always opposes the change that created it.
+      </p>
+    </div>
+
+    <h2>Lenz's Law Statement</h2>
+    
+    <div class="formula-box">
+      <h3>Lenz's Law</h3>
+      <p><strong>The induced current flows in a direction that creates a magnetic field opposing the change in magnetic flux that produced it.</strong></p>
+      <p>This is mathematically expressed by the negative sign in Faraday's Law:</p>
+      <p>\[ \mathcal{E} = -\frac{d\Phi_B}{dt} \]</p>
+      <p>The negative sign indicates that the induced emf opposes the change in flux.</p>
+    </div>
+
+    <h2>Key Concepts</h2>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Energy Conservation</h3>
+        <p>
+          Lenz's Law is a direct consequence of the conservation of energy. If the induced current aided the change in flux, it would create energy from nothing, which is impossible.
+        </p>
+        <p>
+          The induced current always creates a magnetic field that opposes the change, requiring work to be done against the induced field.
+        </p>
+        <ul>
+          <li>Work must be done to overcome the opposition</li>
+          <li>Energy is conserved in the process</li>
+          <li>No perpetual motion is possible</li>
+        </ul>
+      </div>
+
+      <div class="concept-card">
+        <h3>Direction Determination</h3>
+        <p>
+          To determine the direction of induced current:
+        </p>
+        <ol>
+          <li>Identify the change in magnetic flux</li>
+          <li>Determine what would oppose this change</li>
+          <li>Use the right-hand rule to find current direction</li>
+        </ol>
+        <p>
+          The induced current creates a magnetic field that opposes the original change.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>Right-Hand Rule for Induced Current</h3>
+        <p>
+          Point your right thumb in the direction of the induced magnetic field (opposing the change). Your curled fingers show the direction of the induced current.
+        </p>
+        <p>
+          For a coil: If the flux is increasing, the induced current creates a field pointing opposite to the original field.
+        </p>
+        <ul>
+          <li>Increasing flux: current opposes the increase</li>
+          <li>Decreasing flux: current opposes the decrease</li>
+        </ul>
+      </div>
+
+      <div class="concept-card">
+        <h3>Practical Applications</h3>
+        <p>
+          Lenz's Law explains many electromagnetic phenomena:
+        </p>
+        <ul>
+          <li>Eddy current braking</li>
+          <li>Magnetic levitation</li>
+          <li>Induction motors</li>
+          <li>Magnetic damping</li>
+          <li>Transformer operation</li>
+        </ul>
+        <p>
+          Understanding Lenz's Law is crucial for designing electromagnetic devices.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>Magnetic Force and Lenz's Law</h3>
+        <p>
+          When a rod moves through a magnetic field, the induced current creates a magnetic force that opposes the motion:
+        </p>
+        <p>\[ F = ILB \]</p>
+        <p>
+          This force is a direct manifestation of Lenz's Law - the induced current creates a field that opposes the change (motion).
+        </p>
+        <ul>
+          <li>Force opposes motion (energy conservation)</li>
+          <li>Work must be done to overcome the force</li>
+          <li>Used in eddy current brakes</li>
+          <li>Explains magnetic drag effects</li>
+        </ul>
+      </div>
+    </div>
+
+    <img src="lensz-law-rhr.avif" class="img-fluid-center">
+
+    <h2>Interactive Lenz's Law Simulation</h2>
+    
+    <div class="simulation-container">
+      <h3>Lenz's Law Demonstration</h3>
+      <p>Move the magnet to see how the induced current direction opposes the change in flux.</p>
+      <canvas id="lenzCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <label>Magnet Direction:</label>
+        <select id="magnetDirection">
+          <option value="north">North Pole</option>
+          <option value="south">South Pole</option>
+        </select>
+        <label>Movement:</label>
+        <select id="movementType">
+          <option value="toward">Toward Coil</option>
+          <option value="away">Away from Coil</option>
+        </select>
+        <button onclick="updateSimulation()">Update</button>
+        <button onclick="resetSimulation()">Reset</button>
+      </div>
+      <div id="simulationInfo">
+        <p><strong>Flux Change:</strong> <span id="fluxChange">Decreasing</span></p>
+        <p><strong>Induced Current Direction:</strong> <span id="currentDirection">Clockwise</span></p>
+        <p><strong>Induced Field Direction:</strong> <span id="fieldDirection">Into Page</span></p>
+      </div>
+    </div>
+
+    <h2>Direction Analysis Examples</h2>
+
+    <div class="direction-box">
+      <h3>Example 1: Magnet Moving Toward Coil</h3>
+      <p><strong>Situation:</strong> A north pole magnet moves toward a coil.</p>
+      <p><strong>Analysis:</strong></p>
+      <ol>
+        <li>The magnetic flux through the coil is increasing</li>
+        <li>Lenz's Law requires the induced current to oppose this increase</li>
+        <li>The induced current creates a magnetic field pointing away from the magnet</li>
+        <li>Using the right-hand rule, the current flows counterclockwise</li>
+      </ol>
+      <p><strong>Result:</strong> The induced current flows counterclockwise, creating a field that opposes the approaching magnet.</p>
+    </div>
+
+    <div class="direction-box">
+      <h3>Example 2: Magnet Moving Away from Coil</h3>
+      <p><strong>Situation:</strong> A north pole magnet moves away from a coil.</p>
+      <p><strong>Analysis:</strong></p>
+      <ol>
+        <li>The magnetic flux through the coil is decreasing</li>
+        <li>Lenz's Law requires the induced current to oppose this decrease</li>
+        <li>The induced current creates a magnetic field pointing toward the magnet</li>
+        <li>Using the right-hand rule, the current flows clockwise</li>
+      </ol>
+      <p><strong>Result:</strong> The induced current flows clockwise, creating a field that attracts the receding magnet.</p>
+    </div>
+
+    <div class="direction-box">
+      <h3>Example 3: Changing Current in Nearby Wire</h3>
+      <p><strong>Situation:</strong> A wire carrying increasing current is near a loop.</p>
+      <p><strong>Analysis:</strong></p>
+      <ol>
+        <li>The magnetic field from the wire is increasing</li>
+        <li>The flux through the loop is increasing</li>
+        <li>The induced current opposes this increase</li>
+        <li>The induced current creates a field opposite to the wire's field</li>
+      </ol>
+      <p><strong>Result:</strong> The induced current flows in the opposite direction to the wire current.</p>
+    </div>
+
+    <h2>Example Problems</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Magnet and Coil</h3>
+      <p><strong>Problem:</strong> A south pole magnet is moved toward a circular coil. What is the direction of the induced current?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Identify the change: South pole approaching increases flux</li>
+        <li>Lenz's Law: Induced current must oppose this increase</li>
+        <li>To oppose south pole, need north pole pointing toward magnet</li>
+        <li>Right-hand rule: Current flows clockwise</li>
+      </ol>
+      <p><strong>Answer:</strong> The induced current flows clockwise.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Rotating Loop</h3>
+      <p><strong>Problem:</strong> A loop rotates in a magnetic field. When the loop is perpendicular to the field, what is the direction of induced current?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>At perpendicular position, flux is maximum</li>
+        <li>As loop continues rotating, flux decreases</li>
+        <li>Lenz's Law: Induced current opposes the decrease</li>
+        <li>Current creates field that tries to maintain the flux</li>
+        <li>Direction depends on rotation direction</li>
+      </ol>
+      <p><strong>Answer:</strong> The current direction depends on the rotation direction and field orientation.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Sliding Conductor</h3>
+      <p><strong>Problem:</strong> A metal rod slides on conducting rails in a magnetic field. What is the direction of induced current?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>The moving rod creates a changing area</li>
+        <li>This increases the flux through the loop</li>
+        <li>Lenz's Law: Induced current opposes this increase</li>
+        <li>Current creates field that opposes the motion</li>
+        <li>This creates a force opposing the motion (magnetic drag)</li>
+      </ol>
+      <p><strong>Answer:</strong> The current flows in a direction that creates a force opposing the motion.</p>
+    </div>
+
+    <h2>Formula Derivations Using Lenz's Law</h2>
+
+    <div class="example-box">
+      <h3>Derivation 1: Why Induced Current Opposes Motion</h3>
+      <p><strong>Derive:</strong> Why the magnetic force \(F = ILB\) opposes motion</p>
+      
+      <p><strong>Step-by-Step:</strong></p>
+      <ol>
+        <li>When a rod moves through a magnetic field, electrons experience Lorentz force</li>
+        <li>This creates a current flow in the rod: \(I = \frac{BLv}{R}\)</li>
+        <li>The current-carrying rod experiences magnetic force: \(F = ILB\)</li>
+        <li>Substitute: \(F = \frac{BLv}{R} \cdot LB = \frac{B^2L^2v}{R}\)</li>
+        <li>By Lenz's Law, this force must oppose the motion</li>
+        <li>Therefore, the induced current flows in a direction that creates a force opposing the motion</li>
+      </ol>
+      <p><strong>Result:</strong> The induced current creates a force that opposes the motion (Lenz's Law)</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Derivation 2: Energy Conservation in Lenz's Law</h3>
+      <p><strong>Show:</strong> How Lenz's Law ensures energy conservation</p>
+      
+      <p><strong>Step-by-Step:</strong></p>
+      <ol>
+        <li>Work done by external force: \(W = F_{ext} \cdot d\)</li>
+        <li>Power dissipated in resistance: \(P = I^2R = \frac{(BLv)^2}{R}\)</li>
+        <li>If induced current aided motion, we would get: \(P = I^2R\) (positive)</li>
+        <li>But no external work is being done, violating energy conservation</li>
+        <li>Lenz's Law ensures: \(P = I^2R\) (positive) requires external work</li>
+        <li>Therefore, induced current must oppose the change</li>
+      </ol>
+      <p><strong>Result:</strong> Lenz's Law is a manifestation of energy conservation</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Derivation 3: Direction of Induced Current</h3>
+      <p><strong>Derive:</strong> How to determine current direction using Lenz's Law</p>
+      
+      <p><strong>Step-by-Step:</strong></p>
+      <ol>
+        <li>Identify the change in magnetic flux</li>
+        <li>Determine what magnetic field would oppose this change</li>
+        <li>Use right-hand rule to find current direction that creates this opposing field</li>
+        <li>For increasing flux: induced current creates field opposite to original</li>
+        <li>For decreasing flux: induced current creates field in same direction as original</li>
+      </ol>
+      <p><strong>Result:</strong> The induced current direction is determined by what opposes the flux change</p>
+    </div>
+
+    <h2>Applications of Lenz's Law</h2>
+    <ul>
+      <li><strong>Eddy Current Brakes:</strong> Use induced currents to create opposing forces</li>
+      <li><strong>Magnetic Levitation:</strong> Use induced currents to create repulsive forces</li>
+      <li><strong>Induction Motors:</strong> Use induced currents to create rotational motion</li>
+      <li><strong>Magnetic Damping:</strong> Use induced currents to slow down moving objects</li>
+      <li><strong>Transformers:</strong> Use induced currents to transfer energy between circuits</li>
+      <li><strong>Magnetic Sensors:</strong> Use induced currents to detect changes in magnetic fields</li>
+    </ul>
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Lenz's Law</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. What does Lenz's Law determine?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The magnitude of induced emf</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">The direction of induced current</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The strength of magnetic fields</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The energy stored in inductors</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. When a north pole magnet moves toward a coil, the induced current:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Aids the motion</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Opposes the motion</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Has no effect</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Reverses direction</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. Lenz's Law is a manifestation of:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Conservation of energy</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Conservation of charge</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Conservation of momentum</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Conservation of mass</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. If magnetic flux is decreasing, the induced current:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Also decreases</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Creates a field to oppose the decrease</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Becomes zero</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Reverses direction</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. The negative sign in Faraday's Law represents:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy loss</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Lenz's Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Resistance</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Power dissipation</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li><strong>State Lenz's Law:</strong> Explain the relationship between induced current direction and flux changes</li>
+      <li><strong>Determine Current Direction:</strong> Use Lenz's Law to find the direction of induced currents</li>
+      <li><strong>Apply Right-Hand Rule:</strong> Use the right-hand rule for induced currents</li>
+      <li><strong>Understand Energy Conservation:</strong> Relate Lenz's Law to energy conservation</li>
+      <li><strong>Connect to Applications:</strong> Apply Lenz's Law to real-world electromagnetic devices</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Opposition Principle:</strong> Induced currents always oppose the change that created them</li>
+      <li><strong>Energy Conservation:</strong> Lenz's Law is a manifestation of energy conservation</li>
+      <li><strong>Direction Determination:</strong> Use the right-hand rule to find induced current direction</li>
+      <li><strong>Practical Applications:</strong> Lenz's Law explains many electromagnetic phenomena</li>
+      <li><strong>Mathematical Expression:</strong> The negative sign in Faraday's Law represents Lenz's Law</li>
+    </ul>
+  </div>
+
+  <script>
+    // Lenz's Law Simulation
+    const canvas = document.getElementById('lenzCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let magnetX = 200;
+    let magnetY = 200;
+    let coilX = 400;
+    let coilY = 200;
+    let magnetDirection = 'north';
+    let movementType = 'toward';
+    let currentDirection = 'clockwise';
+    let fieldDirection = 'into page';
+    let fluxChange = 'decreasing';
+    
+    function drawMagnet(x, y, direction) {
+      ctx.fillStyle = direction === 'north' ? '#e74c3c' : '#3498db';
+      ctx.fillRect(x - 15, y - 40, 30, 80);
+      ctx.fillStyle = direction === 'north' ? '#c0392b' : '#2980b9';
+      ctx.fillRect(x - 10, y - 35, 20, 70);
+      ctx.fillStyle = '#2c3e50';
+      ctx.fillRect(x - 5, y - 30, 10, 60);
+      
+      // Draw pole labels
+      ctx.fillStyle = 'white';
+      ctx.font = '12px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(direction === 'north' ? 'N' : 'S', x, y + 5);
+    }
+    
+    function drawCoil(x, y) {
+      ctx.strokeStyle = '#27ae60';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      
+      // Draw coil turns
+      for (let i = 0; i < 8; i++) {
+        const angle = (i / 8) * 2 * Math.PI;
+        const coilX = x + 25 * Math.cos(angle);
+        const coilY = y + 25 * Math.sin(angle);
+        
+        if (i === 0) {
+          ctx.moveTo(coilX, coilY);
+        } else {
+          ctx.lineTo(coilX, coilY);
+        }
+      }
+      
+      ctx.stroke();
+      
+      // Draw current direction arrows
+      ctx.strokeStyle = currentDirection === 'clockwise' ? '#e74c3c' : '#3498db';
+      ctx.lineWidth = 2;
+      for (let i = 0; i < 4; i++) {
+        const angle = (i / 4) * 2 * Math.PI + (currentDirection === 'clockwise' ? 0 : Math.PI);
+        const startX = x + 20 * Math.cos(angle);
+        const startY = y + 20 * Math.sin(angle);
+        const endX = x + 30 * Math.cos(angle);
+        const endY = y + 30 * Math.sin(angle);
+        
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(endX, endY);
+        ctx.stroke();
+        
+        // Draw arrowhead
+        const arrowAngle = angle + (currentDirection === 'clockwise' ? 0.3 : -0.3);
+        const arrowX = endX + 5 * Math.cos(arrowAngle);
+        const arrowY = endY + 5 * Math.sin(arrowAngle);
+        ctx.beginPath();
+        ctx.moveTo(endX, endY);
+        ctx.lineTo(arrowX, arrowY);
+        ctx.stroke();
+      }
+      
+      // Draw field direction indicator
+      ctx.fillStyle = fieldDirection === 'into page' ? '#8e44ad' : '#f39c12';
+      ctx.beginPath();
+      ctx.arc(x, y, 15, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.fillStyle = 'white';
+      ctx.font = '14px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(fieldDirection === 'into page' ? '⊗' : '⊙', x, y + 4);
+    }
+    
+    function updateSimulation() {
+      magnetDirection = document.getElementById('magnetDirection').value;
+      movementType = document.getElementById('movementType').value;
+      
+      // Update magnet position based on movement
+      if (movementType === 'toward') {
+        magnetX = 200;
+        fluxChange = 'increasing';
+        if (magnetDirection === 'north') {
+          currentDirection = 'counterclockwise';
+          fieldDirection = 'out of page';
+        } else {
+          currentDirection = 'clockwise';
+          fieldDirection = 'into page';
+        }
+      } else {
+        magnetX = 100;
+        fluxChange = 'decreasing';
+        if (magnetDirection === 'north') {
+          currentDirection = 'clockwise';
+          fieldDirection = 'into page';
+        } else {
+          currentDirection = 'counterclockwise';
+          fieldDirection = 'out of page';
+        }
+      }
+      
+      // Update display
+      document.getElementById('fluxChange').textContent = fluxChange.charAt(0).toUpperCase() + fluxChange.slice(1);
+      document.getElementById('currentDirection').textContent = currentDirection.charAt(0).toUpperCase() + currentDirection.slice(1);
+      document.getElementById('fieldDirection').textContent = fieldDirection.charAt(0).toUpperCase() + fieldDirection.slice(1);
+      
+      // Redraw
+      drawSimulation();
+    }
+    
+    function drawSimulation() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw background
+      ctx.fillStyle = '#ecf0f1';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw field lines
+      ctx.strokeStyle = '#95a5a6';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 5; i++) {
+        const y = 100 + i * 50;
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+      
+      // Draw coil
+      drawCoil(coilX, coilY);
+      
+      // Draw magnet
+      drawMagnet(magnetX, magnetY, magnetDirection);
+      
+      // Draw labels
+      ctx.fillStyle = '#2c3e50';
+      ctx.font = '16px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('Magnet', magnetX, magnetY + 60);
+      ctx.fillText('Coil', coilX, coilY + 50);
+    }
+    
+    function resetSimulation() {
+      magnetX = 200;
+      magnetDirection = 'north';
+      movementType = 'toward';
+      currentDirection = 'counterclockwise';
+      fieldDirection = 'out of page';
+      fluxChange = 'increasing';
+      
+      document.getElementById('magnetDirection').value = 'north';
+      document.getElementById('movementType').value = 'toward';
+      
+      updateSimulation();
+    }
+    
+    // Initialize simulation
+    updateSimulation();
+    
+    // Quiz functionality
+    function checkAnswer(element, result) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      element.classList.add(result);
+      
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

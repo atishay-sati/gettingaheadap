@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about capacitor geometry for AP Physics C. Study parallel plate, cylindrical, and spherical capacitors, and their properties." />
+  <title>Capacitor Geometry and Calculations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .geometry-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Capacitor Geometry and Calculations</h1>
+
+    <p>
+      The capacitance of a capacitor depends strongly on its geometry. Different shapes and configurations result in different capacitance values, even with the same materials and voltage. Understanding these geometric relationships is crucial for capacitor design and analysis.
+    </p>
+
+    <h2>Geometric Factors Affecting Capacitance</h2>
+
+    <div class="geometry-box">
+      <h3>Key Geometric Factors</h3>
+      <ul>
+        <li><strong>Plate area:</strong> Larger area increases capacitance</li>
+        <li><strong>Plate separation:</strong> Smaller separation increases capacitance</li>
+        <li><strong>Shape:</strong> Different geometries have different capacitance formulas</li>
+        <li><strong>Configuration:</strong> Series, parallel, or complex arrangements</li>
+        <li><strong>Edge effects:</strong> Fringing fields affect capacitance</li>
+      </ul>
+    </div>
+
+    <h2>Parallel Plate Capacitor</h2>
+
+    <p>
+      Let's derive the capacitance formula for a parallel plate capacitor step by step. This will help us understand where the formula comes from and why it works.
+    </p>
+
+    <h3>Step 1: Understanding the Setup</h3>
+    <p>We have two conducting plates of area A separated by a distance d. When we apply a voltage V, charge Q accumulates on each plate (positive on one, negative on the other).</p>
+
+    <h3>Step 2: Electric Field Between Plates</h3>
+    <p>From Gauss's law, we know that the electric field between two parallel plates with surface charge density σ is:</p>
+    <div class="formula-box">
+      <p>$$E = \frac{\sigma}{\epsilon_0}$$</p>
+    </div>
+    <p>Where σ = Q/A is the charge per unit area.</p>
+
+    <h3>Step 3: Voltage and Electric Field Relationship</h3>
+    <p>We also know that for a uniform electric field, the voltage is related to the field by:</p>
+    <div class="formula-box">
+      <p>$$V = Ed$$</p>
+    </div>
+    <p>This comes from the definition of electric potential: V = -∫E·dl, which for a uniform field becomes V = Ed.</p>
+
+    <h3>Step 4: Combining the Relationships</h3>
+    <p>Now we can combine these relationships:</p>
+    <div class="calculation-steps">
+      <h4>Derivation:</h4>
+      <ol>
+        <li>From the electric field: \(E = \frac{\sigma}{\epsilon_0} = \frac{Q}{A\epsilon_0}\)</li>
+        <li>From the voltage: \(V = Ed = \frac{Qd}{A\epsilon_0}\)</li>
+        <li>Solving for Q: \(Q = \frac{A\epsilon_0 V}{d}\)</li>
+        <li>Using the definition of capacitance: \(C = \frac{Q}{V} = \frac{A\epsilon_0}{d}\)</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>Final Result</h3>
+      <p>$$C = \frac{\epsilon_0 A}{d}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>ε₀:</strong> Permittivity of free space = 8.85 × 10⁻¹² F/m</li>
+        <li><strong>A:</strong> Area of each plate (m²)</li>
+        <li><strong>d:</strong> Separation between plates (m)</li>
+      </ul>
+    </div>
+
+    <p>
+      This derivation shows why capacitance increases with area (more charge can be stored) and decreases with separation (stronger field for same voltage).
+    </p>
+
+    <figure>
+      <img src="parallel-plate-capacitor.jpg" alt="Parallel Plate Capacitor" class="img-fluid-center">
+      <figcaption>
+        Parallel plate capacitor with area A and separation d.
+      </figcaption>
+    </figure>
+
+    <h2>Spherical Capacitor</h2>
+
+    <p>
+      A spherical capacitor consists of two concentric conducting spheres. Let's derive the capacitance formula step by step.
+    </p>
+
+    <h3>Step 1: Understanding the Setup</h3>
+    <p>We have two concentric spheres with radii a (inner) and b (outer), where b > a. The inner sphere has charge +Q and the outer sphere has charge -Q.</p>
+
+    <h3>Step 2: Electric Field Between Spheres</h3>
+    <p>From Gauss's law, the electric field between the spheres (a < r < b) is:</p>
+    <div class="formula-box">
+      <p>$$E = \frac{Q}{4\pi\epsilon_0 r^2}$$</p>
+    </div>
+    <p>This is the same as the field due to a point charge, because the field outside a charged sphere is the same as if all the charge were concentrated at the center.</p>
+
+    <h3>Step 3: Voltage Between Spheres</h3>
+    <p>The voltage between the spheres is the integral of the electric field from a to b:</p>
+    <div class="calculation-steps">
+      <h4>Voltage Calculation:</h4>
+      <ol>
+        <li>\(V = -\int_a^b E \cdot dr = -\int_a^b \frac{Q}{4\pi\epsilon_0 r^2} dr\)</li>
+        <li>\(V = -\frac{Q}{4\pi\epsilon_0} \int_a^b \frac{1}{r^2} dr\)</li>
+        <li>\(V = -\frac{Q}{4\pi\epsilon_0} [-\frac{1}{r}]_a^b\)</li>
+        <li>\(V = \frac{Q}{4\pi\epsilon_0} (\frac{1}{a} - \frac{1}{b})\)</li>
+        <li>\(V = \frac{Q}{4\pi\epsilon_0} \frac{b-a}{ab}\)</li>
+      </ol>
+    </div>
+
+    <h3>Step 4: Finding Capacitance</h3>
+    <p>Now we can find the capacitance using C = Q/V:</p>
+    <div class="calculation-steps">
+      <h4>Capacitance Calculation:</h4>
+      <ol>
+        <li>\(C = \frac{Q}{V} = \frac{Q}{\frac{Q}{4\pi\epsilon_0} \frac{b-a}{ab}}\)</li>
+        <li>\(C = \frac{Q \cdot 4\pi\epsilon_0 \cdot ab}{Q \cdot (b-a)}\)</li>
+        <li>\(C = \frac{4\pi\epsilon_0 ab}{b-a}\)</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>Spherical Capacitor Formula</h3>
+      <p>$$C = 4\pi\epsilon_0\frac{ab}{b-a}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>a:</strong> Inner radius (m)</li>
+        <li><strong>b:</strong> Outer radius (m)</li>
+        <li><strong>b > a:</strong> Outer radius must be larger than inner radius</li>
+      </ul>
+    </div>
+
+    <p>
+      This derivation shows that the capacitance depends on the product of the radii divided by their difference. This is why spherical capacitors are efficient for high-voltage applications - they provide good capacitance in a compact, symmetric design.
+    </p>
+
+    <h3>Special Case: Isolated Sphere</h3>
+    <p>For a single conducting sphere of radius R (with outer plate at infinity):</p>
+    <div class="formula-box">
+      <p>$$C = 4\pi\epsilon_0 R$$</p>
+    </div>
+
+    <figure>
+      <img src="sphere-capacitor.jpg" alt="Spherical Capacitor" class="img-fluid-center">
+      <figcaption>
+        Spherical capacitor with inner radius a and outer radius b.
+      </figcaption>
+    </figure>
+
+    <h2>Cylindrical Capacitor</h2>
+
+    <p>
+      A cylindrical capacitor consists of two concentric conducting cylinders. Let's derive the capacitance formula step by step.
+    </p>
+
+    <h3>Step 1: Understanding the Setup</h3>
+    <p>We have two concentric cylinders with radii a (inner) and b (outer), and length L, where b > a. The inner cylinder has charge +Q and the outer cylinder has charge -Q.</p>
+
+    <h3>Step 2: Electric Field Between Cylinders</h3>
+    <p>From Gauss's law, the electric field between the cylinders (a < r < b) is:</p>
+    <div class="formula-box">
+      <p>$$E = \frac{\lambda}{2\pi\epsilon_0 r}$$</p>
+    </div>
+    <p>Where λ = Q/L is the charge per unit length. This is the field due to an infinite line of charge.</p>
+
+    <h3>Step 3: Voltage Between Cylinders</h3>
+    <p>The voltage between the cylinders is the integral of the electric field from a to b:</p>
+    <div class="calculation-steps">
+      <h4>Voltage Calculation:</h4>
+      <ol>
+        <li>\(V = -\int_a^b E \cdot dr = -\int_a^b \frac{\lambda}{2\pi\epsilon_0 r} dr\)</li>
+        <li>\(V = -\frac{\lambda}{2\pi\epsilon_0} \int_a^b \frac{1}{r} dr\)</li>
+        <li>\(V = -\frac{\lambda}{2\pi\epsilon_0} [\ln(r)]_a^b\)</li>
+        <li>\(V = -\frac{\lambda}{2\pi\epsilon_0} (\ln(b) - \ln(a))\)</li>
+        <li>\(V = \frac{\lambda}{2\pi\epsilon_0} \ln(\frac{a}{b}) = \frac{\lambda}{2\pi\epsilon_0} \ln(\frac{b}{a})\)</li>
+        <li>\(V = \frac{Q}{2\pi\epsilon_0 L} \ln(\frac{b}{a})\)</li>
+      </ol>
+    </div>
+
+    <h3>Step 4: Finding Capacitance</h3>
+    <p>Now we can find the capacitance using C = Q/V:</p>
+    <div class="calculation-steps">
+      <h4>Capacitance Calculation:</h4>
+      <ol>
+        <li>\(C = \frac{Q}{V} = \frac{Q}{\frac{Q}{2\pi\epsilon_0 L} \ln(\frac{b}{a})}\)</li>
+        <li>\(C = \frac{Q \cdot 2\pi\epsilon_0 L}{Q \cdot \ln(\frac{b}{a})}\)</li>
+        <li>\(C = \frac{2\pi\epsilon_0 L}{\ln(\frac{b}{a})}\)</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>Cylindrical Capacitor Formula</h3>
+      <p>$$C = \frac{2\pi\epsilon_0 L}{\ln(b/a)}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>a:</strong> Inner radius (m)</li>
+        <li><strong>b:</strong> Outer radius (m)</li>
+        <li><strong>L:</strong> Length of cylinder (m)</li>
+        <li><strong>b > a:</strong> Outer radius must be larger than inner radius</li>
+      </ul>
+    </div>
+
+    <p>
+      This derivation shows that the capacitance is proportional to the length and depends logarithmically on the ratio of the radii. This is why coaxial cables are efficient - they can be very long while maintaining good capacitance characteristics.
+    </p>
+
+    <figure>
+      <img src="cylinder-capacitor.jpg" alt="Cylindrical Capacitor" class="img-fluid-center">
+      <figcaption>
+        Cylindrical capacitor with inner radius a, outer radius b, and length L.
+      </figcaption>
+    </figure>
+
+
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Spherical Capacitor</h3>
+      <p><strong>Problem:</strong> A spherical capacitor has inner radius 2.0 cm and outer radius 4.0 cm. What is its capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> a = 2.0 × 10⁻² m, b = 4.0 × 10⁻² m, ε₀ = 8.85 × 10⁻¹² F/m</li>
+          <li><strong>Formula:</strong> C = 4πε₀(ab)/(b-a)</li>
+          <li><strong>Substitute:</strong> C = 4π(8.85 × 10⁻¹²)(2.0 × 10⁻²)(4.0 × 10⁻²)/(4.0 × 10⁻² - 2.0 × 10⁻²)</li>
+          <li><strong>Calculate:</strong> C = 4π(8.85 × 10⁻¹²)(8.0 × 10⁻⁴)/(2.0 × 10⁻²)</li>
+          <li><strong>Result:</strong> C = 4.45 × 10⁻¹² F = 4.45 pF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The capacitance is 4.45 pF.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Cylindrical Capacitor</h3>
+      <p><strong>Problem:</strong> A cylindrical capacitor has inner radius 1.0 cm, outer radius 2.0 cm, and length 10 cm. What is its capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> a = 1.0 × 10⁻² m, b = 2.0 × 10⁻² m, L = 0.10 m, ε₀ = 8.85 × 10⁻¹² F/m</li>
+          <li><strong>Calculate ln(b/a):</strong> ln(2.0/1.0) = ln(2) = 0.693</li>
+          <li><strong>Formula:</strong> C = 2πε₀L/ln(b/a)</li>
+          <li><strong>Substitute:</strong> C = 2π(8.85 × 10⁻¹²)(0.10)/0.693</li>
+          <li><strong>Calculate:</strong> C = 8.02 × 10⁻¹² F = 8.02 pF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The capacitance is 8.02 pF.</p>
+    </div>
+
+
+
+    <h2>Geometric Optimization</h2>
+
+    <h3>Maximizing Capacitance</h3>
+    <p>To maximize capacitance for a given volume:</p>
+    <ul>
+      <li><strong>Increase plate area:</strong> Use larger plates or multiple plates</li>
+      <li><strong>Decrease separation:</strong> Minimize distance between plates</li>
+      <li><strong>Use high-κ dielectrics:</strong> Materials with high dielectric constants</li>
+      <li><strong>Optimize geometry:</strong> Choose shapes that maximize area/volume ratio</li>
+    </ul>
+
+    <h3>Practical Considerations</h3>
+    <p>Real capacitors have limitations:</p>
+    <ul>
+      <li><strong>Breakdown voltage:</strong> Maximum voltage before dielectric breakdown</li>
+      <li><strong>Physical size:</strong> Practical limits on dimensions</li>
+      <li><strong>Manufacturing constraints:</strong> Cost and complexity of construction</li>
+      <li><strong>Temperature effects:</strong> Capacitance varies with temperature</li>
+    </ul>
+
+    
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Using wrong formula:</strong> Apply the correct formula for the geometry</li>
+        <li><strong>Ignoring units:</strong> Ensure all measurements are in consistent units</li>
+        <li><strong>Forgetting series/parallel rules:</strong> Series reduces capacitance, parallel increases it</li>
+        <li><strong>Confusing radii:</strong> Make sure a < b for spherical and cylindrical capacitors</li>
+        <li><strong>Neglecting edge effects:</strong> Consider fringing for precise calculations</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A cylindrical capacitor has inner radius 0.5 cm, outer radius 1.5 cm, and length 5.0 cm. What is its capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> a = 0.5 × 10⁻² m, b = 1.5 × 10⁻² m, L = 5.0 × 10⁻² m</li>
+            <li><strong>Calculate ln(b/a):</strong> ln(1.5/0.5) = ln(3) = 1.099</li>
+            <li><strong>Formula:</strong> C = 2πε₀L/ln(b/a)</li>
+            <li><strong>Substitute:</strong> C = 2π(8.85 × 10⁻¹²)(5.0 × 10⁻²)/1.099</li>
+            <li><strong>Calculate:</strong> C = 2.53 × 10⁻¹² F = 2.53 pF</li>
+          </ol>
+          <p><strong>Answer:</strong> 2.53 pF</p>
+        </div>
+      </details>
+    </div>
+
+
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Parallel plate:</strong> C = ε₀A/d (most common geometry)</li>
+      <li><strong>Spherical:</strong> C = 4πε₀(ab)/(b-a) for two spheres</li>
+      <li><strong>Cylindrical:</strong> C = 2πε₀L/ln(b/a) for coaxial cylinders</li>
+
+      <li><strong>Geometric factors:</strong> Area, separation, and shape determine capacitance</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Parallel plate:</strong> \(C = \frac{\epsilon_0 A}{d}\)</li>
+        <li><strong>Spherical:</strong> \(C = 4\pi\epsilon_0\frac{ab}{b-a}\)</li>
+        <li><strong>Cylindrical:</strong> \(C = \frac{2\pi\epsilon_0 L}{\ln(b/a)}\)</li>
+
+        <li><strong>Isolated sphere:</strong> \(C = 4\pi\epsilon_0 R\)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

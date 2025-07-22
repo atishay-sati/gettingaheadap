@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn capacitor basics and capacitance for AP Physics C. Study capacitor structure, capacitance definition, energy storage, and fundamental capacitor properties." />
+  <title>Capacitor Basics and Capacitance</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .capacitor-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Capacitor Basics and Capacitance</h1>
+
+    <p>
+      A capacitor is a device that stores electrical energy by separating positive and negative charges on two conducting plates. Capacitance is the measure of a capacitor's ability to store charge per unit voltage.
+    </p>
+
+    <h2>What is a Capacitor?</h2>
+
+    <div class="capacitor-box">
+      <h3>Definition</h3>
+      <p>A capacitor consists of two conducting plates separated by an insulating material (dielectric) or vacuum/air. When a voltage is applied, equal and opposite charges accumulate on the plates, creating an electric field between them.</p>
+    </div>
+
+    <p>
+      Capacitors are fundamental components in electrical circuits, used for energy storage, filtering, timing, and many other applications. The ability of a capacitor to store charge depends on its geometry and the material between the plates.
+    </p>
+
+    <figure>
+      <img src="parallel-plate.png" alt="Capacitor Structure" class="img-fluid-center">
+      <figcaption>
+        Basic capacitor structure with two conducting plates separated by a dielectric.
+      </figcaption>
+    </figure>
+
+    <h2>Capacitance Definition</h2>
+
+    <div class="formula-box">
+      <h3>Fundamental Formula</h3>
+      <p>Capacitance is defined as the ratio of charge stored to the voltage applied:</p>
+      <p>$$C = \frac{Q}{V}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>C:</strong> Capacitance (Farads, F)</li>
+        <li><strong>Q:</strong> Charge stored on one plate (Coulombs, C)</li>
+        <li><strong>V:</strong> Voltage across the capacitor (Volts, V)</li>
+      </ul>
+    </div>
+
+    <p>
+      This relationship shows that:
+    </p>
+
+    <ul>
+      <li><strong>Higher capacitance</strong> means more charge stored for the same voltage</li>
+      <li><strong>Capacitance is constant</strong> for a given capacitor (independent of voltage)</li>
+      <li><strong>Units:</strong> 1 Farad = 1 Coulomb/Volt</li>
+      <li><strong>Practical values:</strong> Capacitors range from picofarads (pF) to farads (F)</li>
+    </ul>
+
+    <h2>Parallel Plate Capacitor</h2>
+
+    <div class="formula-box">
+      <h3>Parallel Plate Capacitance</h3>
+      <p>For a parallel plate capacitor with area A and separation d:</p>
+      <p>$$C = \frac{\epsilon_0 A}{d}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>ε₀:</strong> Permittivity of free space = 8.85 × 10⁻¹² F/m</li>
+        <li><strong>A:</strong> Area of each plate (m²)</li>
+        <li><strong>d:</strong> Separation between plates (m)</li>
+      </ul>
+    </div>
+
+    <p>
+      This formula shows that capacitance depends on:
+    </p>
+
+    <ul>
+      <li><strong>Plate area:</strong> Larger area = higher capacitance</li>
+      <li><strong>Plate separation:</strong> Smaller separation = higher capacitance</li>
+      <li><strong>Dielectric material:</strong> Different materials affect capacitance (vacuum/air has κ = 1)</li>
+    </ul>
+
+    <figure>
+      <img src="parallel-plate-efield.png" alt="Parallel Plate Capacitor" class="img-fluid-center">
+      <figcaption>
+        Parallel plate capacitor with area A and separation d.
+      </figcaption>
+    </figure>
+
+    <h2>Properties of Capacitors</h2>
+
+    <div class="property-box">
+      <h3>Fundamental Properties</h3>
+      <ul>
+        <li><strong>Charge storage:</strong> Stores equal and opposite charges on plates</li>
+        <li><strong>Energy storage:</strong> Stores electrical energy in the electric field</li>
+        <li><strong>Voltage relationship:</strong> Voltage is proportional to charge stored</li>
+        <li><strong>DC behavior:</strong> Acts as an open circuit in steady state</li>
+        <li><strong>AC behavior:</strong> Allows alternating current to pass</li>
+        <li><strong>Polarity:</strong> Some capacitors are polarized (electrolytic)</li>
+      </ul>
+    </div>
+
+    <h2>Charge and Voltage Relationship</h2>
+
+    <div class="formula-box">
+      <h3>Charge-Voltage Relationship</h3>
+      <p>The charge stored on a capacitor is directly proportional to the voltage:</p>
+      <p>$$Q = CV$$</p>
+      <p>This means:</p>
+      <ul>
+        <li><strong>Higher voltage</strong> = more charge stored</li>
+        <li><strong>Higher capacitance</strong> = more charge for same voltage</li>
+        <li><strong>Linear relationship</strong> between Q and V</li>
+      </ul>
+    </div>
+
+    <h2>Electric Field Between Plates</h2>
+
+    <div class="formula-box">
+      <h3>Electric Field Formula</h3>
+      <p>For a parallel plate capacitor, the electric field between plates is:</p>
+      <p>$$E = \frac{V}{d} = \frac{\sigma}{\epsilon_0}$$</p>
+      <p>Where σ is the surface charge density on the plates.</p>
+    </div>
+
+    <p>
+      This shows that:
+    </p>
+
+    <ul>
+      <li><strong>Electric field</strong> is uniform between the plates</li>
+      <li><strong>Field strength</strong> depends on voltage and separation</li>
+      <li><strong>Field direction</strong> is from positive to negative plate</li>
+      <li><strong>Field lines</strong> are parallel and evenly spaced</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Calculating Capacitance</h3>
+      <p><strong>Problem:</strong> A parallel plate capacitor has plates of area 0.01 m² separated by 1.0 mm. What is its capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> A = 0.01 m², d = 1.0 × 10⁻³ m, ε₀ = 8.85 × 10⁻¹² F/m</li>
+          <li><strong>Formula:</strong> C = ε₀A/d</li>
+          <li><strong>Substitute:</strong> C = (8.85 × 10⁻¹²)(0.01)/(1.0 × 10⁻³)</li>
+          <li><strong>Calculate:</strong> C = 8.85 × 10⁻¹¹ F = 88.5 pF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The capacitance is 88.5 pF.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Charge Storage</h3>
+      <p><strong>Problem:</strong> A 100 μF capacitor is charged to 12 V. How much charge is stored on each plate?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> C = 100 × 10⁻⁶ F, V = 12 V</li>
+          <li><strong>Formula:</strong> Q = CV</li>
+          <li><strong>Substitute:</strong> Q = (100 × 10⁻⁶)(12)</li>
+          <li><strong>Calculate:</strong> Q = 1.2 × 10⁻³ C = 1.2 mC</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> Each plate stores 1.2 mC of charge (positive on one plate, negative on the other).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Electric Field Between Plates</h3>
+      <p><strong>Problem:</strong> A capacitor has plates separated by 2.0 mm with a voltage of 50 V across them. What is the electric field between the plates?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> V = 50 V, d = 2.0 × 10⁻³ m</li>
+          <li><strong>Formula:</strong> E = V/d</li>
+          <li><strong>Substitute:</strong> E = 50/(2.0 × 10⁻³)</li>
+          <li><strong>Calculate:</strong> E = 2.5 × 10⁴ N/C</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field between the plates is 2.5 × 10⁴ N/C, directed from the positive to negative plate.</p>
+    </div>
+
+    
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Confusing charge and voltage:</strong> Charge is proportional to voltage, not equal to it</li>
+        <li><strong>Forgetting units:</strong> Capacitance is in Farads, not Coulombs or Volts</li>
+        <li><strong>Ignoring polarity:</strong> Some capacitors are polarized and must be connected correctly</li>
+        <li><strong>Thinking capacitance changes with voltage:</strong> C is constant for a given capacitor</li>
+        <li><strong>Confusing with resistors:</strong> Capacitors behave very differently from resistors</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A capacitor stores 5.0 μC of charge when connected to a 10 V battery. What is its capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> Q = 5.0 × 10⁻⁶ C, V = 10 V</li>
+            <li><strong>Formula:</strong> C = Q/V</li>
+            <li><strong>Substitute:</strong> C = (5.0 × 10⁻⁶)/10</li>
+            <li><strong>Calculate:</strong> C = 5.0 × 10⁻⁷ F = 0.5 μF</li>
+          </ol>
+          <p><strong>Answer:</strong> 0.5 μF</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> A parallel plate capacitor has plates of area 0.05 m² separated by 0.5 mm. What is its capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> A = 0.05 m², d = 0.5 × 10⁻³ m, ε₀ = 8.85 × 10⁻¹² F/m</li>
+            <li><strong>Formula:</strong> C = ε₀A/d</li>
+            <li><strong>Substitute:</strong> C = (8.85 × 10⁻¹²)(0.05)/(0.5 × 10⁻³)</li>
+            <li><strong>Calculate:</strong> C = 8.85 × 10⁻¹⁰ F = 885 pF</li>
+          </ol>
+          <p><strong>Answer:</strong> 885 pF</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Capacitance</strong> is the ability to store charge per unit voltage</li>
+      <li><strong>Capacitance formula:</strong> C = Q/V for any capacitor</li>
+      <li><strong>Parallel plate formula:</strong> C = ε₀A/d</li>
+      <li><strong>Charge storage:</strong> Q = CV (linear relationship)</li>
+      <li><strong>Electric field:</strong> E = V/d between parallel plates</li>
+      <li><strong>Capacitance depends on:</strong> Geometry and dielectric material</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Capacitance:</strong> \(C = \frac{Q}{V}\)</li>
+        <li><strong>Parallel plate:</strong> \(C = \frac{\epsilon_0 A}{d}\)</li>
+        <li><strong>Charge stored:</strong> \(Q = CV\)</li>
+        <li><strong>Electric field:</strong> \(E = \frac{V}{d}\)</li>
+        <li><strong>Units:</strong> Farads (F) = Coulombs/Volt</li>
+        <li><strong>Common prefixes:</strong> pF (10⁻¹²), nF (10⁻⁹), μF (10⁻⁶), mF (10⁻³)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

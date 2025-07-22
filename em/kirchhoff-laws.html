@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Master Kirchhoff's Laws (KVL and KCL) for AP Physics C. Study voltage and current laws, circuit analysis, and problem-solving strategies." />
+  <title>Kirchhoff's Laws (KVL and KCL)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* KVL specific styles */
+    .kvl-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .voltage-arrow {
+      position: relative;
+      display: inline-block;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    
+    .sign-convention {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      color: #856404;
+    }
+    
+    /* KCL specific styles */
+    .kcl-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Kirchhoff's Laws (KVL and KCL)</h1>
+
+    <p>
+      Kirchhoff's Laws are fundamental principles for analyzing complex electrical circuits. Kirchhoff's Voltage Law (KVL) states that the sum of voltages around any closed loop equals zero, while Kirchhoff's Current Law (KCL) states that the sum of currents entering a junction equals the sum of currents leaving it.
+    </p>
+
+    <h2>Kirchhoff's Voltage Law (KVL)</h2>
+
+    <div class="formula-box">
+      $$\sum V = 0$$
+    </div>
+
+    <p>
+      Kirchhoff's Voltage Law states that the algebraic sum of all voltage drops around any closed loop in a circuit equals zero. This means that the sum of voltage rises equals the sum of voltage drops.
+    </p>
+
+    <div class="kvl-box">
+      <h3>🎯 KVL Statement</h3>
+      <p><strong>Around any closed loop in a circuit, the algebraic sum of all voltage drops equals zero.</strong></p>
+      <p>This means: <strong>Sum of voltage rises = Sum of voltage drops</strong></p>
+    </div>
+
+    <h3>Sign Conventions for KVL</h3>
+
+    <div class="sign-convention">
+      <h4>📏 KVL Sign Convention Rules</h4>
+      <ul>
+        <li><strong>Choose Direction:</strong> Pick a direction to traverse the loop</li>
+        <li><strong>Voltage Rise (+):</strong> When moving from - to + terminal of battery</li>
+        <li><strong>Voltage Drop (-):</strong> When moving from + to - terminal of battery</li>
+        <li><strong>Resistor Drop (-):</strong> When moving in direction of current through resistor</li>
+        <li><strong>Resistor Rise (+):</strong> When moving against direction of current through resistor</li>
+      </ul>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: KVL in Simple Loop</h3>
+      <p><strong>Problem:</strong> Find the current in a circuit with a 12V battery and two resistors (3Ω, 6Ω) in series.</p>
+      
+      <figure>
+        <img src="kvl1.png" alt="diagram">
+        <figcaption>Simple loop with series resistors</figcaption>
+      </figure>
+
+      <h4>Step 1: Choose Loop Direction</h4>
+      <p>Let's traverse the loop clockwise.</p>
+
+      <h4>Step 2: Write KVL Equation</h4>
+      <div class="formula-box">
+        $$V - I_1R_1 - I_2R_2 = 0$$
+      </div>
+      <div class="formula-box">
+        $$I_1 = I_2 = I$$
+      </div>
+      <div class="formula-box">
+        $$+12V - 3I - 6I = 0$$
+      </div>
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><strong>+12V:</strong> Voltage rise across battery (moving from - to +)</li>
+        <li><strong>-3I:</strong> Voltage drop across first resistor</li>
+        <li><strong>-6I:</strong> Voltage drop across second resistor</li>
+      </ul>
+
+      <h4>Step 3: Solve for Current</h4>
+      <div class="formula-box">
+        $$12V - 9I = 0$$
+        $$9I = 12V$$
+        $$I = \frac{12V}{9Ω} = 1.33A$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The current in the circuit is 1.33A.</strong></p>
+    </div>
+
+    <h2>Kirchhoff's Current Law (KCL)</h2>
+
+    <div class="formula-box">
+      $$\sum I_{in} = \sum I_{out}$$
+    </div>
+
+    <p>
+      Kirchhoff's Current Law states that the sum of currents entering a junction equals the sum of currents leaving the junction. This is based on the conservation of charge.
+    </p>
+
+    <div class="kcl-box">
+      <h3>🎯 KCL Statement</h3>
+      <p><strong>At any junction in a circuit, the sum of currents entering equals the sum of currents leaving.</strong></p>
+      <p>This means: <strong>Charge is conserved at every junction</strong></p>
+    </div>
+
+    <h3>Sign Conventions for KCL</h3>
+
+    <div class="sign-convention">
+      <h4>📏 KCL Sign Convention Rules</h4>
+      <ul>
+        <li><strong>Currents Entering (+):</strong> Currents flowing into the junction</li>
+        <li><strong>Currents Leaving (-):</strong> Currents flowing out of the junction</li>
+        <li><strong>Conservation:</strong> Total charge entering = Total charge leaving</li>
+        <li><strong>Direction:</strong> Choose consistent direction for analysis</li>
+      </ul>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: KCL at Junction</h3>
+      <p><strong>Problem:</strong> Find the unknown current I₃ at a junction where I₁ = 2A (entering) and I₂ = 1.5A (leaving).</p>
+      
+      <figure>
+        <img src="junction-example.jpg" alt="example">
+        <figcaption>Junction with three currents</figcaption>
+      </figure>
+
+      <h4>Step 1: Apply KCL</h4>
+      <div class="formula-box">
+        $$I_{in} = I_{out}$$
+
+        $$I_{in} = I_a$$
+        $$I_{out} = I_b+I_c$$
+
+
+        
+      </div>
+
+      <h4>Step 2: Solve for Unknown Current</h4>
+      <div class="formula-box">
+        $$I_c = I_a-I_b$$
+        $$I_c = 5-3$$
+        $$I_c = 2$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The current I<sub>c</sub> is 2A (leaving the junction).</strong></p>
+    </div>
+
+    <h2>Combined Analysis</h2>
+
+    <p>
+      When analyzing complex circuits, both KVL and KCL are used together to create a system of equations that can be solved simultaneously.
+    </p>
+    <p>This video helps to show to problem solving process:</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dgkaE7eiY5w?si=iH1yYgNz5c3Ba1N4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <p>This video is one of my favorites to understand how to solve these types of question:</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z2QDXjG2ynU?si=-Z9UI63MS0WMIrZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Systematic Method</h2>
+
+    <ol>
+      <li><strong>Identify loops and junctions</strong></li>
+      <li><strong>Assign current directions</strong> (arbitrary, but be consistent)</li>
+      <li><strong>Write KVL equations</strong> for each independent loop</li>
+      <li><strong>Write KCL equations</strong> for junctions (if needed)</li>
+      <li><strong>Solve the system</strong> of equations</li>
+    </ol>
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>KVL:</strong> Conservation of energy - voltage rises equal voltage drops</li>
+      <li><strong>KCL:</strong> Conservation of charge - current entering equals current leaving</li>
+      <li><strong>Sign conventions</strong> are crucial for correct analysis</li>
+      <li><strong>Independent loops</strong> are needed for KVL equations</li>
+      <li><strong>Junctions</strong> provide additional constraints via KCL</li>
+      <li><strong>Systematic approach</strong> prevents errors in complex circuits</li>
+    </ul>
+
+
+  </div>
+</body>
+</html> 

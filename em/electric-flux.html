@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn electric flux for AP Physics C. Study the flow of electric field lines through surfaces, flux calculations, and applications in Gauss's law." />
+  <title>Electric Flux</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .flux-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+    .analogy-box {
+      background-color: #fce4ec;
+      border-left: 6px solid #e91e63;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .analogy-box h3 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Flux</h1>
+
+    <p>
+      Electric flux is a fundamental concept in electromagnetism that measures the "flow" of electric field lines through a surface. It's the key quantity in Gauss's law and provides a powerful way to understand electric fields and their behavior.
+    </p>
+
+    <h2>What is Electric Flux?</h2>
+
+    <div class="flux-box">
+      <h3>Fundamental Definition</h3>
+      <p>Electric flux is the measure of how much electric field passes through a given surface area. It represents the "number" of electric field lines crossing a surface.</p>
+    </div>
+
+    <p>
+      Think of electric flux as counting how many electric field lines pass through a surface. Just like water flowing through a pipe, electric field lines can "flow" through a surface, and the flux tells us how much of this flow occurs.
+    </p>
+
+    <figure>
+        <img src="electric-flux-intro.jpg" alt = "electric flux">
+      
+      <figcaption>
+        Electric field lines passing through a surface - the flux measures this "flow".
+      </figcaption>
+    </figure>
+
+    <h2>Mathematical Definition</h2>
+
+    <div class="formula-box">
+      <h3>Electric Flux Formula</h3>
+      <p>$$\Phi_E = \int \vec{E} \cdot d\vec{A}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>Φ_E:</strong> Electric flux (N⋅m²/C or V⋅m)</li>
+        <li><strong>E:</strong> Electric field vector</li>
+        <li><strong>dA:</strong> Infinitesimal area element vector</li>
+        <li><strong>·:</strong> Dot product between vectors</li>
+      </ul>
+    </div>
+
+    <h3>Understanding the Dot Product</h3>
+    <p>The dot product E·dA can be written as:</p>
+    <div class="formula-box">
+      <p>$$\vec{E} \cdot d\vec{A} = E \cdot dA \cdot \cos\theta$$</p>
+      <p>Where θ is the angle between the electric field and the normal to the surface.</p>
+    </div>
+
+    <h2>Physical Interpretation</h2>
+
+    <div class="analogy-box">
+      <h3>Water Flow Analogy</h3>
+      <p>Think of electric flux like water flowing through a net:</p>
+      <ul>
+        <li><strong>Electric field:</strong> Like the velocity of water</li>
+        <li><strong>Surface:</strong> Like the net catching the water</li>
+        <li><strong>Flux:</strong> Like the amount of water passing through the net</li>
+        <li><strong>Angle:</strong> If the net is tilted, less water passes through</li>
+      </ul>
+    </div>
+
+    <h3>Key Insights</h3>
+    <ul>
+      <li><strong>Perpendicular field:</strong> Maximum flux when E is perpendicular to surface</li>
+      <li><strong>Parallel field:</strong> Zero flux when E is parallel to surface</li>
+      <li><strong>Angle dependence:</strong> Flux depends on the angle between E and surface normal</li>
+      <li><strong>Sign:</strong> Positive flux means field lines point outward, negative means inward</li>
+    </ul>
+
+    <h2>Simple Cases</h2>
+
+    <h3>Uniform Electric Field Through Flat Surface</h3>
+    <p>For a uniform electric field E through a flat surface of area A:</p>
+    <div class="formula-box">
+      <p>$$\Phi_E = EA\cos\theta$$</p>
+      <p>Where θ is the angle between E and the normal to the surface.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 1: Flux Through a Square Surface</h3>
+      <p><strong>Problem:</strong> A uniform electric field of 100 N/C is directed at 30° to the normal of a square surface with area 2 m². Calculate the electric flux.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> E = 100 N/C, A = 2 m², θ = 30°</li>
+          <li><strong>Formula:</strong> Φ_E = EA cos θ</li>
+          <li><strong>Substitute:</strong> Φ_E = (100 N/C)(2 m²) cos(30°)</li>
+          <li><strong>Calculate:</strong> Φ_E = 200 N⋅m²/C × 0.866</li>
+          <li><strong>Result:</strong> Φ_E = 173.2 N⋅m²/C</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric flux is 173.2 N⋅m²/C.</p>
+    </div>
+
+    <h2>Flux Through Closed Surfaces</h2>
+
+    <div class="property-box">
+      <h3>Area Vectors for Closed Surfaces</h3>
+      <p>For any closed surface (like a sphere, cube, or satellite), the area vector at each point always points <b>outward</b> from the surface. This outward direction is a standard convention in physics and is essential for applying Gauss's law (covered next) and calculating net electric flux. If you imagine a balloon, the area vector at every point on the surface points away from the inside, out into space.</p>
+    </div>
+
+    <img src="flux-in-out.jpg" alt="flux going in and out" class="img-fluid-center">
+    
+
+    <h3>Sign Convention</h3>
+    <div class="property-box">
+      <h3>Flux Sign Rules</h3>
+      <ul>
+        <li><strong>Positive flux:</strong> Field lines point outward from the surface</li>
+        <li><strong>Negative flux:</strong> Field lines point inward to the surface</li>
+        <li><strong>Zero flux:</strong> No field lines pass through the surface</li>
+      </ul>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Flux Through Different Surfaces</h3>
+      <p><strong>Problem:</strong> A uniform electric field of 200 N/C is directed upward. Calculate the electric flux through a horizontal surface of area 0.5 m².</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Surface orientation:</strong> Horizontal surface, field is vertical</li>
+          <li><strong>Angle:</strong> θ = 0° (field perpendicular to surface)</li>
+          <li><strong>Flux formula:</strong> Φ_E = EA cos θ</li>
+          <li><strong>Substitute:</strong> Φ_E = (200 N/C)(0.5 m²) cos(0°)</li>
+          <li><strong>Calculate:</strong> Φ_E = 100 N⋅m²/C × 1</li>
+          <li><strong>Result:</strong> Φ_E = 100 N⋅m²/C</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric flux is 100 N⋅m²/C.</p>
+    </div>
+
+    <h2>Visual Understanding</h2>
+
+    <h3>Field Line Interpretation</h3>
+    <p>Electric flux can be understood in terms of field lines:</p>
+    <ul>
+      <li><strong>More field lines:</strong> Higher flux</li>
+      <li><strong>Fewer field lines:</strong> Lower flux</li>
+      <li><strong>No field lines:</strong> Zero flux</li>
+      <li><strong>Field line density:</strong> Proportional to electric field strength</li>
+    </ul>
+
+    <figure>
+      <img src = "flux-difference.png" alt = "Flux in different orientation" class="img-fluid-center">
+      <figcaption>
+        The number of field lines crossing a surface determines the flux.
+      </figcaption>
+    </figure>
+
+    <h3>Surface Orientation Effects</h3>
+    <div class="property-box">
+      <h3>Orientation Dependencies</h3>
+      <ul>
+        <li><strong>θ = 0°:</strong> Maximum flux (E perpendicular to surface)</li>
+        <li><strong>θ = 90°:</strong> Zero flux (E parallel to surface)</li>
+        <li><strong>0° < θ < 90°:</strong> Reduced flux by cos θ factor</li>
+        <li><strong>θ > 90°:</strong> Negative flux (field lines enter surface)</li>
+      </ul>
+    </div>
+
+    <h2>Applications of Electric Flux</h2>
+
+    <div class="property-box">
+      <h3>Electric Flux in Satellites and Spacecraft</h3>
+      <p>Satellites and spacecraft use the concept of electric flux in several ways:
+      <ul>
+        <li><b>Charge management:</b> Satellites can accumulate charge as they move through Earth's magnetic field and plasma. By monitoring electric flux, engineers can detect and control unwanted charge buildup, which could otherwise damage sensitive electronics.</li>
+        <li><b>Field monitoring:</b> Some satellites carry flux sensors to measure the electric field in space. This helps scientists study Earth's magnetosphere, solar wind, and space weather, all of which affect satellite operations and communications.</li>
+      </ul>
+      Electric flux is not just a theoretical concept—it's a practical tool for keeping satellites safe and for exploring the space environment!</p>
+    </div>
+
+    <h3>Flux Calculations</h3>
+    <p>Electric flux is essential for understanding electric fields:</p>
+    <ol>
+      <li><strong>Identify field:</strong> Determine the electric field direction and magnitude</li>
+      <li><strong>Choose surface:</strong> Pick a surface with known orientation</li>
+      <li><strong>Calculate angle:</strong> Find the angle between field and surface normal</li>
+      <li><strong>Apply formula:</strong> Use Φ_E = EA cos θ</li>
+      <li><strong>Check units:</strong> Ensure proper units (N⋅m²/C)</li>
+    </ol>
+
+    <h3>Capacitor Calculations</h3>
+    <p>Electric flux helps understand capacitor behavior:</p>
+    <ul>
+      <li><strong>Parallel plates:</strong> Uniform flux between plates</li>
+      <li><strong>Fringing fields:</strong> Reduced flux at edges</li>
+      <li><strong>Field direction:</strong> Flux depends on surface orientation</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example 3: Flux in Parallel Plate Capacitor</h3>
+      <p><strong>Problem:</strong> A parallel plate capacitor has plates of area 0.5 m² with a uniform electric field of 2000 N/C between them. Calculate the electric flux through a surface parallel to the plates.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Surface orientation:</strong> Surface is parallel to plates</li>
+          <li><strong>Angle:</strong> θ = 90° (E perpendicular to surface normal)</li>
+          <li><strong>Flux formula:</strong> Φ_E = EA cos θ</li>
+          <li><strong>Substitute:</strong> Φ_E = (2000 N/C)(0.5 m²) cos(90°)</li>
+          <li><strong>Calculate:</strong> Φ_E = 1000 N⋅m²/C × 0</li>
+          <li><strong>Result:</strong> Φ_E = 0</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric flux is zero because the surface is parallel to the electric field.</p>
+    </div>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Forgetting cos θ:</strong> Not accounting for surface orientation</li>
+        <li><strong>Wrong units:</strong> Confusing N⋅m²/C with V⋅m</li>
+        <li><strong>Sign errors:</strong> Not considering flux direction</li>
+        <li><strong>Surface choice:</strong> Picking inappropriate surfaces for calculations</li>
+        <li><strong>Vector nature:</strong> Forgetting that E and dA are vectors</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A uniform electric field of 500 N/C makes an angle of 45° with the normal to a circular surface of radius 0.2 m. Calculate the electric flux.</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Area:</strong> A = πr² = π(0.2)² = 0.126 m²</li>
+            <li><strong>Flux formula:</strong> Φ_E = EA cos θ</li>
+            <li><strong>Substitute:</strong> Φ_E = (500 N/C)(0.126 m²) cos(45°)</li>
+            <li><strong>Calculate:</strong> Φ_E = 63 N⋅m²/C × 0.707</li>
+            <li><strong>Result:</strong> Φ_E = 44.5 N⋅m²/C</li>
+          </ol>
+          <p><strong>Answer:</strong> The electric flux is 44.5 N⋅m²/C.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> A cube of side length 0.1 m is placed in a uniform electric field of 1000 N/C directed along the x-axis. Calculate the flux through each face of the cube.</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Area of each face:</strong> A = (0.1 m)² = 0.01 m²</li>
+            <li><strong>Faces perpendicular to x-axis:</strong> θ = 0° and 180°</li>
+            <li><strong>Flux through front face:</strong> Φ = (1000 N/C)(0.01 m²) cos(0°) = 10 N⋅m²/C</li>
+            <li><strong>Flux through back face:</strong> Φ = (1000 N/C)(0.01 m²) cos(180°) = -10 N⋅m²/C</li>
+            <li><strong>Faces parallel to x-axis:</strong> θ = 90°</li>
+            <li><strong>Flux through side faces:</strong> Φ = (1000 N/C)(0.01 m²) cos(90°) = 0</li>
+          </ol>
+          <p><strong>Answer:</strong> Front face: +10 N⋅m²/C, back face: -10 N⋅m²/C, side faces: 0 N⋅m²/C each.</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Electric flux:</strong> Measures electric field "flow" through a surface</li>
+      <li><strong>Mathematical form:</strong> Φ_E = ∫E·dA = EA cos θ for uniform fields</li>
+      <li><strong>Angle dependence:</strong> Maximum when E is perpendicular to surface</li>
+      <li><strong>Angle dependence:</strong> Maximum when E is perpendicular to surface</li>
+      <li><strong>Sign convention:</strong> Positive for outward flux, negative for inward</li>
+      <li><strong>Units:</strong> N⋅m²/C or V⋅m</li>
+      <li><strong>Applications:</strong> Gauss's law problems, capacitor analysis</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>General flux:</strong> \(\Phi_E = \int \vec{E} \cdot d\vec{A}\)</li>
+        <li><strong>Uniform field:</strong> \(\Phi_E = EA\cos\theta\)</li>
+                          <li><strong>Units:</strong> N⋅m²/C = V⋅m</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

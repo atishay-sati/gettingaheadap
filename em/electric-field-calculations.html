@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Master electric field calculations for AP Physics C. Learn to calculate electric fields from point charges, continuous charge distributions, and complex geometries." />
+  <title>Electric Field Calculations</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .highlight {
+      background-color: #fff3cd;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Field Calculations</h1>
+
+    <p>
+      Electric field calculations are essential for understanding how charges interact and how electric forces are distributed in space. This page covers the fundamental calculations for electric fields due to point charges and charge distributions.
+    </p>
+
+    <h2>Basic Electric Field Formula</h2>
+
+    <div class="formula-box">
+      $$\vec{E} = k\frac{q}{r^2}\hat{r}$$
+    </div>
+
+    <p>
+      The electric field due to a point charge q at distance r is given by Coulomb's Law divided by the test charge. The field points away from positive charges and toward negative charges.
+    </p>
+
+    <ul>
+      <li><strong>E:</strong> Electric field magnitude (N/C)</li>
+      <li><strong>k:</strong> Coulomb's constant = 8.99 × 10⁹ N⋅m²/C²</li>
+      <li><strong>q:</strong> Source charge (C)</li>
+      <li><strong>r:</strong> Distance from charge (m)</li>
+      <li><strong>r̂:</strong> Unit vector pointing from charge to field point</li>
+    </ul>
+
+    <h2>Superposition Principle</h2>
+
+    <div class="formula-box">
+      $$\vec{E}_{\text{total}} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3 + ...$$
+    </div>
+
+    <p>
+      When multiple charges are present, the total electric field is the vector sum of the individual electric fields. This principle allows us to calculate complex field patterns by adding simpler contributions.
+    </p>
+
+    <figure>
+      <img src="electric-field-superposition.png" alt="Electric Field Superposition" class="img-fluid-center">
+      <figcaption>
+        Multiple charges create a combined electric field through superposition.
+      </figcaption>
+    </figure>
+
+    <h2>Electric Field Due to a Charged Arc</h2>
+    <p>
+      The electric field at the center of a circle or arc of charge depends on how much of the circle is present:
+    </p>
+    <ul>
+      <li><strong>Full circle:</strong> The electric field at the center is <b>zero</b>. Every bit of charge is balanced by an equal bit on the opposite side, so all the field contributions cancel out by symmetry.</li>
+      <li><strong>3/4 circle:</strong> The field at the center points <b>toward the missing quarter</b>. The missing section means the cancellation is incomplete, so the net field is in the direction where charge is missing.</li>
+      <li><strong>1/2 circle (semicircle):</strong> The field at the center points <b>straight away from the flat side</b> (along the symmetry axis that bisects the arc). The two ends of the arc both contribute in the same direction.</li>
+      <li><strong>1/4 circle:</strong> The field at the center points <b>along the angle bisector</b> of the arc, in between the two ends. The field is strongest for the smallest arc, since less cancellation occurs.</li>
+    </ul>
+    <figure>
+      <img src="quarter-arc.png" alt="Electric Field Due to a Charged Arc" class="img-fluid-center">
+      <figcaption>
+        The direction and strength of the field at the center depends on how much of the circle is present.
+      </figcaption>
+      <b>Note:</b> The image just shows a infitesimally small arc contribution to the field at the center. The actual field points straight down after integration.
+    </figure>
+    <p>
+      <b>How does the field strength compare if all arcs have the same total charge?</b><br>
+      If each arc (full, 3/4, 1/2, 1/4 circle) has the same total charge, the electric field at the center is <b>strongest for the smallest arc</b> and <b>weakest (zero) for the full circle</b>:
+    </p>
+    <ul>
+      <li><strong>Full circle:</strong> The field is zero. For every bit of charge, there is an equal and opposite bit on the other side. The x and y components of the field from each segment cancel out perfectly due to symmetry.</li>
+      <li><strong>3/4 circle:</strong> The field is nonzero and points toward the missing quarter. The cancellation is incomplete: the x and y components from the missing section are not balanced, so the net field points in that direction.</li>
+      <li><strong>1/2 circle:</strong> The field is even stronger. Here, the x components from opposite sides cancel, but the y components (perpendicular to the diameter) all add up in the same direction, so the field points straight away from the flat side.</li>
+      <li><strong>1/4 circle:</strong> The field is strongest. There is very little cancellation, so the field at the center is large and points along the angle bisector of the arc.</li>
+    </ul>
+    <p>
+      <b>Summary:</b> The more symmetric the arc, the more the field components cancel out. The less arc you have (with the same total charge), the less cancellation occurs and the stronger the field at the center.
+    </p>
+    
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Electric Field from a Single Point Charge</h3>
+      <p><strong>Problem:</strong> Calculate the electric field 3.0 m from a point charge of +5.0 μC.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> q = +5.0 × 10⁻⁶ C, r = 3.0 m</li>
+          <li><strong>Formula:</strong> \(E = k\frac{q}{r^2}\)</li>
+          <li><strong>Substitute values:</strong> \(E = (8.99 \times 10^9) \frac{5.0 \times 10^{-6}}{(3.0)^2}\)</li>
+          <li><strong>Calculate:</strong> \(E = (8.99 \times 10^9) \frac{5.0 \times 10^{-6}}{9.0}\)</li>
+          <li><strong>Result:</strong> \(E = 5.0 \times 10^3 \text{ N/C}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field is 5.0 × 10³ N/C, pointing away from the positive charge.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Electric Field Between Two Charges</h3>
+      <p><strong>Problem:</strong> Two point charges, +3.0 μC and -2.0 μC, are placed 4.0 m apart. Find the electric field at the midpoint between them.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Distance to each charge:</strong> r = 2.0 m (half of 4.0 m)</li>
+          <li><strong>Field from +3.0 μC:</strong> \(E_1 = k\frac{3.0 \times 10^{-6}}{(2.0)^2} = 6.74 \times 10^3 \text{ N/C}\) (away)</li>
+          <li><strong>Field from -2.0 μC:</strong> \(E_2 = k\frac{2.0 \times 10^{-6}}{(2.0)^2} = 4.50 \times 10^3 \text{ N/C}\) (toward)</li>
+          <li><strong>Both fields point right:</strong> \(E_{\text{total}} = 6.74 \times 10^3 + 4.50 \times 10^3 = 11.24 \times 10^3 \text{ N/C}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field at the midpoint is 11.24 × 10³ N/C, pointing toward the negative charge.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Electric Field at a Point Not on the Line</h3>
+      <p><strong>Problem:</strong> Two charges, +4.0 μC and -1.0 μC, are placed at (0,0) and (3,0) respectively. Find the electric field at point (1.5, 2.0).</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Distance to +4.0 μC:</strong> \(r_1 = \sqrt{(1.5)^2 + (2.0)^2} = 2.5 \text{ m}\)</li>
+          <li><strong>Distance to -1.0 μC:</strong> \(r_2 = \sqrt{(1.5)^2 + (2.0)^2} = 2.5 \text{ m}\)</li>
+          <li><strong>Field from +4.0 μC:</strong> \(E_1 = k\frac{4.0 \times 10^{-6}}{(2.5)^2} = 5.75 \times 10^3 \text{ N/C}\)</li>
+          <li><strong>Field from -1.0 μC:</strong> \(E_2 = k\frac{1.0 \times 10^{-6}}{(2.5)^2} = 1.44 \times 10^3 \text{ N/C}\)</li>
+          <li><strong>Vector components:</strong> Need to break into x and y components</li>
+          <li><strong>Result:</strong> \(E_x = 4.31 \times 10^3 \text{ N/C}, E_y = 5.75 \times 10^3 \text{ N/C}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field has components \(E_x = 4.31 \times 10^3 \text{ N/C}\) and \(E_y = 5.75 \times 10^3 \text{ N/C}\).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 4: Electric Field Due to Multiple Charges</h3>
+      <p><strong>Problem:</strong> Three charges are placed at the corners of an equilateral triangle: +2.0 μC at (0,0), -1.0 μC at (2,0), and +3.0 μC at (1,√3). Find the electric field at the center of the triangle.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Center coordinates:</strong> (1, √3/3)</li>
+          <li><strong>Calculate distances to each charge</strong></li>
+          <li><strong>Find individual field magnitudes</strong></li>
+          <li><strong>Break into x and y components</strong></li>
+          <li><strong>Add components vectorially</strong></li>
+          <li><strong>Result:</strong> \(E_{\text{total}} = 2.1 \times 10^4 \text{ N/C}\) at 45°</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field at the center is 2.1 × 10⁴ N/C at an angle of 45°.</p>
+    </div>
+
+    <h2>Common Calculation Patterns</h2>
+
+    <div class="formula-box">
+      <h3>Distance Calculations</h3>
+      <p>For charges at positions (x₁,y₁) and field point (x₂,y₂):</p>
+      <p>\(r = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</p>
+    </div>
+
+    <div class="formula-box">
+      <h3>Vector Components</h3>
+      <p>For a field at angle θ:</p>
+      <p>\(E_x = E \cos \theta\) and \(E_y = E \sin \theta\)</p>
+    </div>
+
+    <div class="formula-box">
+      <h3>Unit Vector</h3>
+      <p>Direction from charge to field point:</p>
+      <p>\(\hat{r} = \frac{\vec{r}}{|\vec{r}|}\)</p>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A point charge of -6.0 μC creates an electric field. At what distance from this charge is the electric field strength 2.0 × 10⁴ N/C?</p>
+      
+      <p><strong>Hint:</strong> Rearrange the formula to solve for r.</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> E = 2.0 × 10⁴ N/C, q = -6.0 × 10⁻⁶ C</li>
+            <li><strong>Formula:</strong> \(r = \sqrt{k\frac{|q|}{E}}\)</li>
+            <li><strong>Substitute:</strong> \(r = \sqrt{(8.99 \times 10^9) \frac{6.0 \times 10^{-6}}{2.0 \times 10^4}}\)</li>
+            <li><strong>Calculate:</strong> \(r = \sqrt{2.70} = 1.64 \text{ m}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 1.64 m</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> Two identical charges of +2.0 μC each are placed 3.0 m apart. What is the electric field at a point 1.0 m from one charge and 2.0 m from the other?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Field from first charge:</strong> \(E_1 = k\frac{2.0 \times 10^{-6}}{(1.0)^2} = 1.80 \times 10^4 \text{ N/C}\)</li>
+            <li><strong>Field from second charge:</strong> \(E_2 = k\frac{2.0 \times 10^{-6}}{(2.0)^2} = 4.50 \times 10^3 \text{ N/C}\)</li>
+            <li><strong>Use vector addition:</strong> \(E_{\text{total}} = \sqrt{E_1^2 + E_2^2 + 2E_1E_2\cos\theta}\)</li>
+            <li><strong>Result:</strong> \(E_{\text{total}} = 2.1 \times 10^4 \text{ N/C}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 2.1 × 10⁴ N/C</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Point charges:</strong> Use \(E = k\frac{q}{r^2}\) for individual charges</li>
+      <li><strong>Multiple charges:</strong> Use superposition principle</li>
+      <li><strong>Vector addition:</strong> Add x and y components separately</li>
+      <li><strong>Direction matters:</strong> Positive charges create outward fields, negative charges create inward fields</li>
+      <li><strong>Units:</strong> Always check that final answer is in N/C</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Single charge:</strong> \(E = k\frac{q}{r^2}\)</li>
+        <li><strong>Multiple charges:</strong> \(E_{\text{total}} = \sum E_i\)</li>
+        <li><strong>Distance:</strong> \(r = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</li>
+        <li><strong>Components:</strong> \(E_x = E \cos \theta, E_y = E \sin \theta\)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

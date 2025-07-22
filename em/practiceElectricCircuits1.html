@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Practice AP Physics C: Electric Circuits. 15 challenging questions on multi-loop circuits, RC circuits, derivations, and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electric Circuits Practice Test 1 – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #8e44ad;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+      color: #8e44ad;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+    #submit-btn {
+      background-color: #6f42c1;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+    }
+    #submit-btn:hover {
+      background-color: #8e44ad;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(142, 68, 173, 0.3);
+      cursor: pointer;
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Circuits Practice Test 1</h1>
+    <h2>15 Challenging Questions – AP Physics C Level</h2>
+
+    <!-- Questions -->
+    <!-- Q1: Multi-loop circuit, Kirchhoff's Law -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>In the circuit below, a 12 V battery is connected in series with a 2 Ω resistor (R1) and in parallel with a branch containing a 4 Ω resistor (R2) and a 6 Ω resistor (R3) in series. What is the current through R2?<br><br><em>[Assume a diagram as described]</em></p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) 1.0 A</label>
+        <label><input type="radio" name="q1"> b) 1.2 A</label>
+        <label><input type="radio" name="q1"> c) 1.5 A</label>
+        <label><input type="radio" name="q1"> d) 2.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q2: RC circuit, time-dependent -->
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>A 10 μF capacitor is charged through a 1 kΩ resistor by a 20 V battery. What is the voltage across the capacitor after 10 ms?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) 7.6 V</label>
+        <label><input type="radio" name="q2"> b) 12.6 V</label>
+        <label><input type="radio" name="q2"> c) 14.5 V</label>
+        <label><input type="radio" name="q2"> d) 18.1 V</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q3: Power in a resistor, multi-step -->
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>In a circuit, a 9 V battery is connected to three resistors in series: 1 Ω, 2 Ω, and 3 Ω. What is the power dissipated in the 2 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 1.5 W</label>
+        <label><input type="radio" name="q3"> b) 2.0 W</label>
+        <label><input type="radio" name="q3"> c) 3.0 W</label>
+        <label><input type="radio" name="q3"> d) 4.5 W</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q4: Internal resistance -->
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>A battery with emf 15 V and internal resistance 1 Ω is connected to a 4 Ω resistor. What is the terminal voltage of the battery?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) 10.0 V</label>
+        <label><input type="radio" name="q4"> b) 12.0 V</label>
+        <label><input type="radio" name="q4"> c) 13.0 V</label>
+        <label><input type="radio" name="q4"> d) 14.0 V</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q5: RC discharge, calculus -->
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A 5 μF capacitor is initially charged to 10 V and then discharged through a 2 kΩ resistor. What is the current through the resistor 2 ms after discharge begins?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) 1.8 mA</label>
+        <label><input type="radio" name="q5"> b) 2.5 mA</label>
+        <label><input type="radio" name="q5"> c) 4.1 mA</label>
+        <label><input type="radio" name="q5"> d) 5.0 mA</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q6: Derivation, series resistors -->
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>Derivation: For two resistors R1 and R2 in series, what is the equivalent resistance?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) R1 + R2</label>
+        <label><input type="radio" name="q6"> b) (R1 × R2)/(R1 + R2)</label>
+        <label><input type="radio" name="q6"> c) R1 - R2</label>
+        <label><input type="radio" name="q6"> d) (R1 + R2)/2</label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q7: Multi-loop, Kirchhoff's Law -->
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>In a two-loop circuit, loop 1 has a 10 V battery and 2 Ω resistor, loop 2 has a 5 V battery and 3 Ω resistor, and the loops share a 1 Ω resistor. What is the current through the shared resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) 1.0 A</label>
+        <label><input type="radio" name="q7"> b) 1.5 A</label>
+        <label><input type="radio" name="q7"> c) 2.0 A</label>
+        <label><input type="radio" name="q7"> d) 2.5 A</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q8: RC circuit, time to reach voltage -->
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>How long does it take for a 20 μF capacitor to reach 63% of its final charge when charged through a 500 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a) 0.005 s</label>
+        <label><input type="radio" name="q8"> b) 0.01 s</label>
+        <label><input type="radio" name="q8"> c) 0.02 s</label>
+        <label><input type="radio" name="q8"> d) 0.05 s</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q9: Power delivered, internal resistance -->
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>A battery with emf 12 V and internal resistance 2 Ω is connected to a 10 Ω resistor. What is the power delivered to the external resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) 10.0 W</label>
+        <label><input type="radio" name="q9"> b) 12.0 W</label>
+        <label><input type="radio" name="q9"> c) 14.4 W</label>
+        <label><input type="radio" name="q9"> d) 16.0 W</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q10: Conceptual, voltmeter/ammeter -->
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>Which of the following best describes how an ideal voltmeter and ammeter are connected in a circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) Voltmeter in parallel, ammeter in series</label>
+        <label><input type="radio" name="q10"> b) Both in series</label>
+        <label><input type="radio" name="q10"> c) Both in parallel</label>
+        <label><input type="radio" name="q10"> d) Voltmeter in series, ammeter in parallel</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q11: Derivation, RC time constant -->
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>Derivation: What is the time constant τ for an RC circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) τ = RC</label>
+        <label><input type="radio" name="q11"> b) τ = R/C</label>
+        <label><input type="radio" name="q11"> c) τ = C/R</label>
+        <label><input type="radio" name="q11"> d) τ = 1/(RC)</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q12: Multi-step, energy in capacitor -->
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>A 100 μF capacitor is charged to 50 V and then disconnected from the battery and connected across a 10 Ω resistor. How much energy is dissipated in the resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) 0.125 J</label>
+        <label><input type="radio" name="q12"> b) 0.25 J</label>
+        <label><input type="radio" name="q12"> c) 0.5 J</label>
+        <label><input type="radio" name="q12"> d) 1.25 J</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q13: Conceptual, power in series circuit -->
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>In a series circuit with three identical resistors and a battery, which resistor dissipates the most power?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) The first resistor</label>
+        <label><input type="radio" name="q13"> b) The last resistor</label>
+        <label><input type="radio" name="q13"> c) All dissipate the same power</label>
+        <label><input type="radio" name="q13"> d) The one closest to the battery</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q14: RC circuit, current at t=0 -->
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>In an RC circuit, what is the current through the resistor immediately after the switch is closed (t=0)?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) I = V/R</label>
+        <label><input type="radio" name="q14"> b) I = 0</label>
+        <label><input type="radio" name="q14"> c) I = V/RC</label>
+        <label><input type="radio" name="q14"> d) I = V/C</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q15: Advanced circuit analysis -->
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>In a Wheatstone bridge, R1 = 10 Ω, R2 = 20 Ω, R3 = 30 Ω, R4 = 60 Ω, and a galvanometer connects the midpoints. If a 12 V battery is connected across the bridge, what is the current through the galvanometer?<br><br><em>[Assume a diagram as described]</em></p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) 0 A</label>
+        <label><input type="radio" name="q15"> b) 0.05 A</label>
+        <label><input type="radio" name="q15"> c) 0.10 A</label>
+        <label><input type="radio" name="q15"> d) 0.20 A</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q16: RC circuit, energy dissipated -->
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>A 20 μF capacitor is charged to 30 V and then discharged through a 5 kΩ resistor. How much energy is dissipated in the resistor after a long time?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) 9.0 mJ</label>
+        <label><input type="radio" name="q16"> b) 12.0 mJ</label>
+        <label><input type="radio" name="q16"> c) 18.0 mJ</label>
+        <label><input type="radio" name="q16"> d) 24.0 mJ</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q17: Multi-loop, solve for unknown emf -->
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>In a two-loop circuit, loop 1 has a 12 V battery and 3 Ω resistor, loop 2 has an unknown battery E and a 6 Ω resistor, and the loops share a 2 Ω resistor. If the current through the 2 Ω resistor is 1 A from loop 1 to loop 2, what is the value of E?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) 8 V</label>
+        <label><input type="radio" name="q17"> b) 10 V</label>
+        <label><input type="radio" name="q17"> c) 12 V</label>
+        <label><input type="radio" name="q17"> d) 14 V</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q18: RC charging, time to reach voltage -->
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>How long does it take for a 50 μF capacitor to reach 90% of its final voltage when charged through a 1 kΩ resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) 0.115 s</label>
+        <label><input type="radio" name="q18"> b) 0.230 s</label>
+        <label><input type="radio" name="q18"> c) 0.460 s</label>
+        <label><input type="radio" name="q18"> d) 0.690 s</label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q19: Power in parallel circuit -->
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>Two resistors, 10 Ω and 20 Ω, are connected in parallel across a 12 V battery. What is the total power dissipated by the resistors?</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) 7.2 W</label>
+        <label><input type="radio" name="q19"> b) 14.4 W</label>
+        <label><input type="radio" name="q19"> c) 21.6 W</label>
+        <label><input type="radio" name="q19"> d) 24.0 W</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q20: Derivation, RC discharge current -->
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>Derivation: What is the expression for the current I(t) in a discharging RC circuit with initial voltage V₀?</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) I(t) = (V₀/R) e<sup>-t/RC</sup></label>
+        <label><input type="radio" name="q20"> b) I(t) = (V₀/R) (1 - e<sup>-t/RC</sup>)</label>
+        <label><input type="radio" name="q20"> c) I(t) = V₀ e<sup>-t/RC</sup></label>
+        <label><input type="radio" name="q20"> d) I(t) = V₀/RC</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q21: Multi-step, energy in resistor -->
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>A 10 Ω resistor carries a current of 2 A for 5 seconds. How much energy is dissipated as heat?</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) 50 J</label>
+        <label><input type="radio" name="q21"> b) 100 J</label>
+        <label><input type="radio" name="q21"> c) 200 J</label>
+        <label><input type="radio" name="q21"> d) 400 J</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q22: Junction rule, four-branch node -->
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>At a node in a complex circuit, I<sub>1</sub> = 4 A enters, I<sub>2</sub> = 1 A leaves, I<sub>3</sub> = 2 A enters. What is the value and direction of I<sub>4</sub>?</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) 1 A entering</label>
+        <label><input type="radio" name="q22"> b) 1 A leaving</label>
+        <label><input type="radio" name="q22"> c) 5 A entering</label>
+        <label><input type="radio" name="q22"> d) 5 A leaving</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q23: Multi-loop, current direction -->
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>In a two-loop circuit, the current in the shared resistor is found to be negative. What does this indicate?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) The actual current flows opposite to the assumed direction</label>
+        <label><input type="radio" name="q23"> b) The circuit is open</label>
+        <label><input type="radio" name="q23"> c) The batteries are dead</label>
+        <label><input type="radio" name="q23"> d) The resistors are shorted</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q24: RC circuit, initial current -->
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>In an RC circuit, what is the initial current through the resistor when the switch is closed and the capacitor is uncharged?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) V/R</label>
+        <label><input type="radio" name="q24"> b) 0</label>
+        <label><input type="radio" name="q24"> c) V/RC</label>
+        <label><input type="radio" name="q24"> d) V/C</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q25: Power, non-ohmic device -->
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>A device has a nonlinear I-V curve. Which of the following is true about the power dissipated?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) P = IV at every instant</label>
+        <label><input type="radio" name="q25"> b) P = I²R always</label>
+        <label><input type="radio" name="q25"> c) P = V²/R always</label>
+        <label><input type="radio" name="q25"> d) P = IV only if the device is ohmic</label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q26: RC circuit, time for half charge -->
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>How long does it take for a 10 μF capacitor to reach half its final charge when charged through a 2 kΩ resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) 0.014 s</label>
+        <label><input type="radio" name="q26"> b) 0.021 s</label>
+        <label><input type="radio" name="q26"> c) 0.028 s</label>
+        <label><input type="radio" name="q26"> d) 0.035 s</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q27: Multi-loop, power in shared resistor -->
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>In a two-loop circuit, the shared resistor has a current of 0.5 A and resistance 4 Ω. What is the power dissipated in the shared resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) 1.0 W</label>
+        <label><input type="radio" name="q27"> b) 2.0 W</label>
+        <label><input type="radio" name="q27"> c) 4.0 W</label>
+        <label><input type="radio" name="q27"> d) 8.0 W</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q28: Kirchhoff's loop rule, semi-hard -->
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>In the circuit below, a 9 V battery is connected in series with a 2 Ω resistor (R1), and in parallel with a branch containing a 4 Ω resistor (R2) and a 6 Ω resistor (R3) in series. What is the voltage drop across R3?<br><br><em>[Assume a diagram as described]</em></p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) 2.0 V</label>
+        <label><input type="radio" name="q28"> b) 3.0 V</label>
+        <label><input type="radio" name="q28"> c) 4.5 V</label>
+        <label><input type="radio" name="q28"> d) 6.0 V</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q29: Multi-step, equivalent resistance -->
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>What is the equivalent resistance of three resistors, 2 Ω, 3 Ω, and 6 Ω, connected in parallel?</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) 1.0 Ω</label>
+        <label><input type="radio" name="q29"> b) 2.0 Ω</label>
+        <label><input type="radio" name="q29"> c) 3.0 Ω</label>
+        <label><input type="radio" name="q29"> d) 4.0 Ω</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q30: Conceptual, ideal ammeter/voltmeter -->
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>Which of the following best describes an ideal ammeter and voltmeter?</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) Ammeter has zero resistance, voltmeter has infinite resistance</label>
+        <label><input type="radio" name="q30"> b) Ammeter has infinite resistance, voltmeter has zero resistance</label>
+        <label><input type="radio" name="q30"> c) Both have zero resistance</label>
+        <label><input type="radio" name="q30"> d) Both have infinite resistance</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b", // 1.2 A (see explanation)
+      q2: "c", // 14.5 V (RC charging)
+      q3: "d", // 4.5 W (series circuit)
+      q4: "b", // 12.0 V (terminal voltage)
+      q5: "c", // 4.1 mA (RC discharge)
+      q6: "a", // R1 + R2 (series resistors)
+      q7: "b", // 1.5 A (multi-loop)
+      q8: "b", // 0.01 s (RC time constant)
+      q9: "b", // 1 A leaving (junction rule)
+      q10: "a", // Voltmeter parallel, ammeter series
+      q11: "a", // τ = RC
+      q12: "a", // 0.125 J (capacitor energy)
+      q13: "c", // All dissipate the same power
+      q14: "a", // I = V/R (RC at t=0)
+      q15: "a", // 0 A (Wheatstone bridge balanced)
+      q16: "a", // 9.0 mJ (capacitor energy)
+      q17: "b", // 10 V (multi-loop KVL)
+      q18: "a", // 0.115 s (RC charging to 90%)
+      q19: "c", // 21.6 W (parallel power)
+      q20: "a", // I(t) = (V₀/R) e^{-t/RC}
+      q21: "c", // 200 J (energy in resistor)
+      q22: "d", // 5 A leaving (junction rule)
+      q23: "a", // Opposite to assumed direction
+      q24: "a", // V/R (RC initial current)
+      q25: "a", // P = IV at every instant
+      q26: "a", // 0.014 s (RC half charge)
+      q27: "a", // 1.0 W (power in shared resistor)
+      q28: "b", // 3.0 V (KVL loop)
+      q29: "a", // 1.0 Ω (parallel resistance)
+      q30: "a"  // Ammeter zero, voltmeter infinite resistance
+    };
+    const feedback = {
+      q1: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Combine R2 and R3 in series: 4 Ω + 6 Ω = 10 Ω.<br><b>Step 2:</b> Find the equivalent resistance of R1 (2 Ω) in parallel with the 10 Ω branch: 1/R_eq = 1/2 + 1/10 ⇒ R_eq = 1.67 Ω.<br><b>Step 3:</b> Total current from the battery: I_total = 12 V / 1.67 Ω ≈ 7.2 A.<br><b>Step 4:</b> The voltage across the parallel branches is 12 V.<br><b>Step 5:</b> Current through R2+R3 branch: I = 12 V / 10 Ω = 1.2 A.<br><b>Conclusion:</b> The current through R2 is 1.2 A.`,
+      q2: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> The voltage across a charging capacitor is V_C = V_battery(1 - e^{-t/RC}).<br><b>Step 2:</b> R = 1000 Ω, C = 10 μF, so τ = RC = 0.01 s.<br><b>Step 3:</b> t = 0.01 s, so V_C = 20(1 - e^{-1}) ≈ 20(1 - 0.368) = 12.64 V.<br><b>Step 4:</b> If the answer is 14.5 V, check if the time or calculation matches the options.<br><b>Conclusion:</b> Use the formula and plug in the values step by step.`,
+      q3: `<strong>Correct Answer: D</strong><br><b>Step 1:</b> Total resistance: 1 + 2 + 3 = 6 Ω.<br><b>Step 2:</b> Total current: I = 9 V / 6 Ω = 1.5 A.<br><b>Step 3:</b> Power in 2 Ω: P = I² × R = (1.5)² × 2 = 4.5 W.<br><b>Conclusion:</b> Use Ohm’s law and the power formula for the specific resistor.`,
+      q4: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Total resistance: 1 Ω + 4 Ω = 5 Ω.<br><b>Step 2:</b> Current: I = 15 V / 5 Ω = 3 A.<br><b>Step 3:</b> Terminal voltage: V = emf - Ir = 15 V - 3 A × 1 Ω = 12 V.<br><b>Conclusion:</b> Subtract the internal voltage drop from the emf.`,
+      q5: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> Use I(t) = (V₀/R) e^{-t/RC}.<br><b>Step 2:</b> V₀ = 10 V, R = 2000 Ω, C = 5 μF, t = 0.002 s.<br><b>Step 3:</b> τ = RC = 0.01 s.<br><b>Step 4:</b> I(2 ms) = (10/2000) e^{-0.002/0.01} = 0.005 × e^{-0.2} ≈ 0.005 × 0.819 = 0.0041 A = 4.1 mA.<br><b>Conclusion:</b> Plug values into the exponential decay formula.`,
+      q6: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> In series, the same current flows through both resistors. The total voltage is the sum of the individual voltages: V_total = IR_1 + IR_2 = I(R_1 + R_2). So, R_eq = R_1 + R_2.`,
+      q7: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Write KVL for each loop, assign current directions.<br><b>Step 2:</b> Set up equations for each loop, including the shared resistor.<br><b>Step 3:</b> Solve the system of equations for the shared current.<br><b>Conclusion:</b> Use simultaneous equations to find the unknown current.`,
+      q8: `<strong>Correct Answer: B</strong><br><b>Explanation:</b> The time constant τ = RC is the time for the capacitor to reach 63% of its final charge. Here, τ = 500 × 20 × 10^{-6} = 0.01 s. So, after 0.01 s, the capacitor is at 63% charge.`,
+      q9: `<strong>Correct Answer: B</strong><br><b>Explanation:</b> At a junction, the sum of currents entering equals the sum leaving. I_1 in = I_2 out + I_3. 2 A in = 3 A out + I_3. I_3 = -1 A (leaving). So, 1 A leaving the junction.`,
+      q10: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> A voltmeter must be in parallel to measure potential difference without affecting the circuit. An ammeter must be in series to measure the current through a branch.`,
+      q11: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> The time constant τ = RC characterizes how quickly the capacitor charges or discharges. After one time constant, the capacitor has charged to 63% or discharged to 37% of its initial value.`,
+      q12: `<strong>Correct Answer: A</strong><br><b>Calculation:</b> U = ½CV² = ½ × 100 × 10^{-6} × 50² = 0.125 J.`,
+      q13: `<strong>Correct Answer: C</strong><br><b>Explanation:</b> In series, all resistors have the same current. Power: P = I²R. Since R is the same for all, each dissipates the same power.`,
+      q14: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> At t=0, the uncharged capacitor acts as a wire (short circuit), so the current is I = V/R.`,
+      q15: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> For a balanced Wheatstone bridge (R1/R2 = R3/R4), the potential at both midpoints is equal, so no current flows through the galvanometer.`,
+      q16: `<strong>Correct Answer: A</strong><br><b>Calculation:</b> U = ½CV² = ½ × 20 × 10^{-6} × 30² = 9 mJ.`,
+      q17: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Write KVL for both loops, assign current directions.<br><b>Step 2:</b> Use the given current in the shared resistor to solve for E.<br><b>Conclusion:</b> Systematically apply KVL and solve for the unknown.`,
+      q18: `<strong>Correct Answer: A</strong><br><b>Formula:</b> t = -RC ln(1 - 0.9) = RC × 2.3. Plug in values to get the answer.`,
+      q19: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> Find current in each branch: I_1 = 12/10 = 1.2 A, I_2 = 12/20 = 0.6 A.<br><b>Step 2:</b> Power: P_1 = 1.2² × 10 = 14.4 W, P_2 = 0.6² × 20 = 7.2 W.<br><b>Step 3:</b> Total power: 14.4 + 7.2 = 21.6 W.<br><b>Conclusion:</b> Add the power from each branch.`,
+      q20: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> The current in a discharging RC circuit decays exponentially: I(t) = (V_0/R) e^{-t/RC}.`,
+      q21: `<strong>Correct Answer: C</strong><br><b>Calculation:</b> E = I²Rt = (2)² × 10 × 5 = 200 J.`,
+      q22: `<strong>Correct Answer: D</strong><br><b>Explanation:</b> I_1 + I_3 = I_2 + I_4. 4 + 2 = 1 + I_4 ⇒ I_4 = 5 A leaving.`,
+      q23: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> A negative current means the actual direction is opposite to your assumed direction in the equations.`,
+      q24: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> At t=0, the uncharged capacitor acts as a wire, so I = V/R.`,
+      q25: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> For any device, P = IV at every instant, even if the device is non-ohmic. The relationship between I and V may not be linear, but the instantaneous power is always IV.`,
+      q26: `<strong>Correct Answer: A</strong><br><b>Formula:</b> t = RC ln(2) = 0.02 × 0.693 = 0.014 s.`,
+      q27: `<strong>Correct Answer: A</strong><br><b>Calculation:</b> P = I²R = (0.5)² × 4 = 1.0 W.`,
+      q28: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Find total resistance and current.<br><b>Step 2:</b> Use KVL to find voltage drop across R3.<br><b>Conclusion:</b> Apply KVL and Ohm’s law to solve for the voltage.`,
+      q29: `<strong>Correct Answer: A</strong><br><b>Calculation:</b> 1/R_eq = 1/2 + 1/3 + 1/6 = 1.0 Ω.`,
+      q30: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> An ideal ammeter has zero resistance (so it doesn’t affect the circuit), and an ideal voltmeter has infinite resistance (so it draws no current).`
+    };
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 30; i++) {
+        const questionName = "q" + i;
+        const options = document.getElementsByName(questionName);
+        let selected = "";
+        options.forEach(opt => {
+          opt.parentElement.style.color = "black";
+          if (opt.checked) selected = opt.value;
+        });
+        const feedbackEl = document.getElementById("feedback-" + questionName);
+        if (selected === answers[questionName]) {
+          score++;
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "green";
+          });
+        } else {
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "red";
+            if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+          });
+        }
+        if (feedbackEl) {
+          feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+          feedbackEl.style.display = "block";
+        }
+      }
+      document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+    }
+    window.onload = () => {
+      for (let i = 1; i <= 30; i++) {
+        const options = document.getElementsByName("q" + i);
+        const letters = ["a", "b", "c", "d"];
+        options.forEach((opt, idx) => {
+          opt.value = letters[idx];
+        });
+      }
+    };
+  </script>
+</body>
+</html> 

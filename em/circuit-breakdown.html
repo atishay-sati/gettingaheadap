@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn circuit breakdown for AP Physics C. Study how to analyze and simplify complex circuits, identify series and parallel components, and apply circuit reduction techniques." />
+  <title>Circuit Breakdown</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* Step-by-step breakdown styles */
+    .step-container {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 5px solid #6f42c1;
+    }
+    
+    .step-number {
+      background: #6f42c1;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .step-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #6f42c1;
+      margin-bottom: 1rem;
+    }
+    
+    .step-description {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    
+    .circuit-image {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      margin: 1rem auto;
+      background-color: #f3e5ff;
+      border: 2px  #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #e8d5ff, #f3e5ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-weight: 600;
+      color: #6f42c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Circuit Breakdown</h1>
+
+    <p>
+      Circuit breakdown is a systematic approach to simplify complex circuits by identifying series and parallel combinations, then reducing them step by step to find the equivalent resistance. This method is essential for analyzing complex circuits in AP Physics C.
+    </p>
+
+    <h2>What is Circuit Breakdown?</h2>
+
+    <div class="formula-box">
+      <strong>Circuit Breakdown:</strong> A systematic method to simplify complex circuits by identifying and combining series and parallel resistors step by step until the entire circuit is reduced to a single equivalent resistance.
+    </div>
+
+    <p>
+      Circuit breakdown involves:
+    </p>
+
+    <ul>
+      <li><strong>Identification:</strong> Finding series and parallel combinations</li>
+      <li><strong>Simplification:</strong> Replacing combinations with equivalent resistors</li>
+      <li><strong>Iteration:</strong> Repeating until the circuit is fully simplified</li>
+      <li><strong>Verification:</strong> Checking that the final result makes sense</li>
+    </ul>
+
+    <h2>Step-by-Step Breakdown Method</h2>
+
+    <div class="step-container">
+      <div class="step-number">1</div>
+      <div class="step-title">Identify the Circuit Structure</div>
+      <div class="step-description">
+        First, carefully examine the circuit to identify all components and their connections. Look for obvious series and parallel combinations.
+      </div>
+      <img src="step1.png" alt="Step 1" class="circuit-image">
+      <div class="highlight-box">
+        💡 <strong>Tip:</strong> Start by labeling all resistors and identifying which ones are in series vs. parallel.
+      </div>
+    </div>
+
+    <div class="step-container">
+      <div class="step-number">2</div>
+      <div class="step-title">Find Series Combinations</div>
+      <div class="step-description">
+        Look for resistors connected end-to-end (series). These can be combined using the series resistance formula.
+      </div>
+      <div class="formula-box">
+        $$R_{series} = R_1 + R_2 + R_3 + ...$$
+      </div>
+      <img src="step2.png" alt="Step 2" class="circuit-image">
+      <div class="highlight-box">
+        ⚡ <strong>Series Rule:</strong> Current is the same through all series resistors, voltage divides.
+      </div>
+    </div>
+
+    <div class="step-container">
+      <div class="step-number">3</div>
+      <div class="step-title">Find Parallel Combinations</div>
+      <div class="step-description">
+        Look for resistors connected across the same two points (parallel). These can be combined using the parallel resistance formula.
+      </div>
+      <div class="formula-box">
+        $$\frac{1}{R_{parallel}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + ...$$
+      </div>
+      <img src="step3.png" alt="Step 3" class="circuit-image">
+      <div class="highlight-box">
+        ⚡ <strong>Parallel Rule:</strong> Voltage is the same across all parallel resistors, current divides.
+      </div>
+    </div>
+
+    <div class="step-container">
+      <div class="step-number">4</div>
+      <div class="step-title">Replace and Redraw</div>
+      <div class="step-description">
+        Replace each identified combination with its equivalent resistance and redraw the simplified circuit.
+      </div>
+      <img src="step4.png" alt="Step 4" class="circuit-image">
+      <div class="highlight-box">
+        🔄 <strong>Process:</strong> Continue this process until only one equivalent resistor remains.
+      </div>
+    </div>
+
+    <div class="step-container">
+      <div class="step-number">5</div>
+      <div class="step-title">Calculate Final Equivalent Resistance</div>
+      <div class="step-description">
+        The final equivalent resistance represents the entire circuit's resistance.
+      </div>
+      <img src="step5.png" alt="Step 5" class="circuit-image">
+      <div class="highlight-box">
+        ✅ <strong>Result:</strong> This is the total resistance of the original complex circuit.
+      </div>
+    </div>
+
+    <p><b>Some questions will ask you to find the current and voltage across each resistor. To do this, you need to expand (this is taught in the next section).</b></p>
+
+    <h2>Worked Example: Complex Circuit</h2>
+
+    <div class="example-box">
+      <h3>Example: Find the equivalent resistance of the following circuit</h3>
+      
+      <figure>
+        <img src="step1breakdownvalues.png" alt="Step 1" class="circuit-image">
+        <figcaption>Original complex circuit with 5 resistors</figcaption>
+      </figure>
+
+      <h4>Step 1: Combine Series Resistors</h4>
+      <figure>
+        <img src="step2breakdownvalues.png" alt="Step 2" class="circuit-image">
+        <figcaption>Circuit after combining R₁ and R₂</figcaption>
+      </figure>
+      <p>R₁ and R₂ are in series:</p>
+      <div class="formula-box">
+        $$R_{1,2} = R_1 + R_2 = 4Ω + 8Ω = 12Ω$$
+      </div>
+
+      
+
+      <h4>Step 2: Combine Parallel Resistors</h4>
+      <figure>
+        <img src="step3breakdownvalues.png" alt="Step 3" class="circuit-image">
+        <figcaption>Circuit after combining R₁₂ and R₃</figcaption>
+      </figure>
+
+      <p>R₁₂ and R₃ are in parallel:</p>
+      
+      <div class="formula-box">
+        $$\frac{1}{R_{1,2,3}} = \frac{1}{R_{1,2}} + \frac{1}{R_3} = \frac{1}{12Ω} + \frac{1}{6Ω}$$
+        $$R_{1,2,3} = \frac{12Ω}{3} = 4Ω$$
+      </div>
+      
+
+      
+
+      <h4>Step 3: Combine Series Resistors</h4>
+      <figure>
+        <img src="step4breakdownvalues.png" alt="Step 4" class="circuit-image">
+        <figcaption>Circuit after combining R₁₂₃ and R₄</figcaption>
+      </figure>
+
+      <p>R₁ and R₂ are in series:</p>
+      <div class="formula-box">
+        $$R_{1,2,3,4} = R_{1,2,3} + R_4 = 4Ω + 1Ω = 5Ω$$
+      </div>
+      
+      
+
+      
+
+      <h4>Step 4: Final Series Combination</h4>
+      <figure>
+        <img src="step5breakdownvalues.png" alt="Step 5" class="circuit-image">
+        <figcaption>Final simplified circuit</figcaption>
+      </figure>
+      <p>Now we have three resistors in series:</p>
+      <div class="formula-box">
+        $$\frac{1}{R_{1,2,3,4,5}} = \frac{1}{R_{1,2,3,4}} + \frac{1}{R_5} = \frac{1}{5Ω} + \frac{1}{5Ω}$$
+        $$R_{eq} = \frac{5Ω}{2} = 2.5Ω$$
+      </div>
+
+      
+
+      <h4>Answer</h4>
+      <p><strong>The equivalent resistance of the circuit is 2.5Ω.</strong></p>
+    </div>
+
+    <h2>Key Takeaways Summary</h2>
+
+    <div class="formula-box">
+      <h3>🎯 Essential Circuit Breakdown Steps</h3>
+      <ol>
+        <li><strong>Identify:</strong> Find all series and parallel combinations</li>
+        <li><strong>Combine Series:</strong> Add resistances: R₁ + R₂ + R₃ + ...</li>
+        <li><strong>Combine Parallel:</strong> Use reciprocal formula: 1/R₁ + 1/R₂ + 1/R₃ + ...</li>
+        <li><strong>Redraw:</strong> Replace combinations with equivalent resistors</li>
+        <li><strong>Repeat:</strong> Continue until only one resistor remains</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>⚡ Key Formulas to Remember</h3>
+      <ul>
+        <li><strong>Series:</strong> R_eq = R₁ + R₂ + R₃ + ...</li>
+        <li><strong>Parallel:</strong> 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ...</li>
+        <li><strong>Two Parallel Resistors:</strong> R_eq = (R₁ × R₂)/(R₁ + R₂)</li>
+        <li><strong>Equal Parallel Resistors:</strong> R_eq = R/n (n resistors of value R)</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>🔍 Identification Rules</h3>
+      <ul>
+        <li><strong>Series:</strong> Resistors connected end-to-end with no branching</li>
+        <li><strong>Parallel:</strong> Resistors connected across the same two points</li>
+        <li><strong>Mixed:</strong> Look for obvious combinations first, then work systematically</li>
+        <li><strong>Complex:</strong> May require multiple steps of simplification</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>✅ Verification Checklist</h3>
+      <ul>
+        <li><strong>Units:</strong> Final answer should be in ohms (Ω)</li>
+        <li><strong>Reasonableness:</strong> Equivalent resistance should be logical</li>
+        <li><strong>Series:</strong> R_eq > any individual resistor</li>
+        <li><strong>Parallel:</strong> R_eq < any individual resistor</li>
+        <li><strong>Consistency:</strong> Check your work step by step</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box" style="background: linear-gradient(135deg, #e8f5e8, #f0f8f0); border-color: #28a745; color: #155724;">
+      <h3>💡 Pro Tips for Success</h3>
+      <ul>
+        <li><strong>Start Simple:</strong> Begin with obvious series/parallel combinations</li>
+        <li><strong>Draw Each Step:</strong> Redraw the circuit after each combination</li>
+        <li><strong>Label Clearly:</strong> Use subscripts to track combined resistors</li>
+        <li><strong>Check Symmetry:</strong> Symmetrical circuits are often easier to analyze</li>
+        <li><strong>Practice Regularly:</strong> Circuit breakdown improves with practice</li>
+      </ul>
+    </div>
+
+  </div>
+
+  
+</body>
+</html> 

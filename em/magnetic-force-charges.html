@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about magnetic force on moving charges for AP Physics C. Study Lorentz force law, circular motion, and energy conservation in magnetic fields." />
+  <title>Magnetic Force on Moving Charges</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Magnetic force specific styles */
+    .lorentz-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .centripetal-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .work-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .applications-box {
+      background: #f8f9fa;
+      border: 2px solid #6c757d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #495057;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #ffe8e8, #fff0f0);
+      border: 2px solid #dc3545;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Magnetic Force on Moving Charges</h1>
+
+    <p>
+      When electric charges move through a magnetic field, they experience a magnetic force. This fundamental interaction is described by the Lorentz force law and has profound implications for particle motion, including circular motion and energy conservation.
+    </p>
+
+    <h2>The Lorentz Force Law</h2>
+
+    <div class="lorentz-box">
+      <h3>⚡ Lorentz Force Formula</h3>
+      <p><strong>The magnetic force on a moving charge is given by the Lorentz force law:</strong></p>
+      <p>This force is perpendicular to both the velocity and magnetic field vectors.</p>
+    </div>
+
+    <div class="formula-box">
+      $$\vec{F}_B = q\vec{v} \times \vec{B}$$
+    </div>
+
+    <h3>Key Characteristics</h3>
+    <ul>
+      <li><strong>Magnitude:</strong> \(F_B = qvB\sin\theta\) where θ is the angle between velocity and field</li>
+      <li><strong>Direction:</strong> Perpendicular to both velocity and magnetic field (right-hand rule)</li>
+      <li><strong>Negative Charges:</strong> For negative charges, the force direction is <b>opposite</b> to the right-hand rule thumb direction</li>
+      <li><strong>Dependence:</strong> Force depends on charge, velocity, and field strength</li>
+      <li><strong>No Force:</strong> Stationary charges experience no magnetic force</li>
+    </ul>
+
+    <figure>
+      <img src="lorentz-force.png" alt="charge in magnetic field" class="img-fluid-center">
+      <figcaption>
+        Vector diagram showing magnetic force perpendicular to velocity and magnetic field. (magnetic field is into the page and force is up or down dependent on charge)
+      </figcaption>
+    </figure>
+
+    <h2>Right Hand Rule for Moving Charges</h2>
+
+    <ul>
+      <li>Step 1: Put your hand in the direction of velocity</li>
+      <li>Step 2: Curl your fingers in the direction of the magnetic field</li>
+      <li>Step 3: Identify the direction which your thumb points</li>
+      <li>Step 4: The direction in which your thumb points is the direction of the force on a <b>positive charge</b>. <b>Negative charges</b> are in the opposite direction of your thumb.</li>
+    </ul>
+
+    <img src = "rhr-curl.jpg" class="img-fluid-center">
+
+    <p>Another way you can do it is:</p>
+
+    <img src = "another-rhr.jpg" class="img-fluid-center">
+
+    <div class="example-box">
+      <h3>Example: Basic Lorentz Force Calculation</h3>
+      <p><strong>Problem:</strong> A proton (q = +1.6 × 10⁻¹⁹ C) moves to the right at 2 × 10⁶ m/s perpendicular to a 0.5 T magnetic field <b>going into the page</b>. Calculate the magnetic force.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>Charge: q = +1.6 × 10⁻¹⁹ C</li>
+        <li>Velocity: v = 2 × 10⁶ m/s <b>(to the right)</b></li>
+        <li>Magnetic field: B = 0.5 T <b>(into the page)</b></li>
+        <li>Angle: θ = 90° (perpendicular motion)</li>
+      </ul>
+
+      <h4>Step 2: Apply Lorentz Force Formula</h4>
+      <ul>
+        <li>\(F_B = qvB\sin\theta\)</li>
+        <li>\(F_B = (1.6 \times 10^{-19})(2 \times 10^6)(0.5)\sin(90°)\)</li>
+        <li>\(F_B = 1.6 \times 10^{-13}\) N</li>
+      </ul>
+
+      <h4>Step 3: Determine Direction</h4>
+      <ul>
+        <li>Use right-hand rule for positive charge: point fingers to the right (velocity), curl into the page (direction of B), thumb points <b>upwards</b> (force direction).</li>
+        <li>For negative charges, force direction is opposite to right-hand rule thumb</li>
+        <li>Force is perpendicular to both velocity and field</li>
+        <li>Direction depends on relative orientations</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The magnetic force is 1.6 × 10⁻¹³ N, directed perpendicular to both the velocity and magnetic field (<b>upwards</b> for a proton moving to the right with B into the page).</strong></p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: Lorentz Force on an Electron</h3>
+      <p><strong>Problem:</strong> An electron (q = -1.6 × 10⁻¹⁹ C) moves to the right at 2 × 10⁶ m/s perpendicular to a 0.4 T magnetic field <b>going into the page</b>. Calculate the magnetic force and its direction.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>Charge: q = -1.6 × 10⁻¹⁹ C</li>
+        <li>Velocity: v = 2 × 10⁶ m/s <b>(to the right)</b></li>
+        <li>Magnetic field: B = 0.4 T <b>(into the page)</b></li>
+        <li>Angle: θ = 90° (perpendicular motion)</li>
+      </ul>
+
+      <h4>Step 2: Apply Lorentz Force Formula</h4>
+      <ul>
+        <li>\(F_B = |q|vB\sin\theta\)</li>
+        <li>\(F_B = (1.6 \times 10^{-19})(2 \times 10^6)(0.4)\sin(90°)\)</li>
+        <li>\(F_B = 1.28 \times 10^{-13}\) N</li>
+      </ul>
+
+      <h4>Step 3: Determine Direction</h4>
+      <ul>
+        <li>Use right-hand rule for positive charge: point fingers to the right (velocity), curl into the page (direction of B), thumb points <b>upwards</b>.</li>
+        <li>But for an electron (negative charge), the force is in the <b>opposite direction</b>: <b>downwards</b>.</li>
+        <li>The electron will be deflected downward by the magnetic force.</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The magnetic force is 1.28 × 10⁻¹³ N, directed <b>downwards</b> for an electron moving to the right with B into the page.</strong></p>
+    </div>
+
+    <h2>Circular Motion in Magnetic Fields</h2>
+
+    <div class="centripetal-box">
+      <h3>🔄 Centripetal Force from Magnetic Field</h3>
+      <p><strong>When a charged particle moves perpendicular to a uniform magnetic field, it follows a circular path.</strong></p>
+      <p>The magnetic force provides the centripetal force needed for circular motion.</p>
+    </div>
+
+    <h3>Circular Motion Analysis</h3>
+    <ul>
+      <li><strong>Centripetal Force:</strong> \(F_c = \frac{mv^2}{r}\)</li>
+      <li><strong>Magnetic Force:</strong> \(F_B = qvB\) (for perpendicular motion)</li>
+      <li><strong>Equilibrium:</strong> \(qvB = \frac{mv^2}{r}\)</li>
+      <li><strong>Radius:</strong> \(r = \frac{mv}{qB}\)</li>
+    </ul>
+
+    <div class="formula-box">
+      $$r = \frac{mv}{qB}$$
+    </div>
+
+    <figure>
+      <img src="circular.jpg" class="img-fluid-center">
+      <figcaption>
+        Charged particle moving in circular path due to magnetic force providing centripetal force.
+      </figcaption>
+    </figure>
+
+    <div class="example-box">
+      <h3>Example: Electron in Magnetic Field</h3>
+      <p><strong>Problem:</strong> An electron (m = 9.11 × 10⁻³¹ kg, q = -1.6 × 10⁻¹⁹ C) moves at 3 × 10⁶ m/s perpendicular to a 0.2 T magnetic field. Find the radius of its circular path.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>Mass: m = 9.11 × 10⁻³¹ kg</li>
+        <li>Velocity: v = 3 × 10⁶ m/s</li>
+        <li>Charge: q = -1.6 × 10⁻¹⁹ C</li>
+        <li>Magnetic field: B = 0.2 T</li>
+      </ul>
+
+      <h4>Step 2: Apply Radius Formula</h4>
+      <ul>
+        <li>\(r = \frac{mv}{qB}\)</li>
+        <li>\(r = \frac{(9.11 \times 10^{-31})(3 \times 10^6)}{(1.6 \times 10^{-19})(0.2)}\)</li>
+        <li>\(r = 8.54 \times 10^{-5}\) m = 85.4 μm</li>
+      </ul>
+
+      <h4>Step 3: Calculate Period</h4>
+      <ul>
+        <li>Period: \(T = \frac{2\pi r}{v} = \frac{2\pi m}{qB}\)</li>
+        <li>\(T = \frac{2\pi(9.11 \times 10^{-31})}{(1.6 \times 10^{-19})(0.2)}\)</li>
+        <li>\(T = 1.79 \times 10^{-10}\) s</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The electron follows a circular path with radius 85.4 μm and period 1.79 × 10⁻¹⁰ s.</strong></p>
+    </div>
+
+    <h2>Velocity Selector (Wien Filter)</h2>
+
+    <div class="centripetal-box">
+      <h3>🎯 Velocity Selection with Crossed Fields</h3>
+      <p><strong>When both electric and magnetic fields are present, particles can be selected based on their velocity.</strong></p>
+      <p>This setup is commonly used in particle physics and mass spectrometry. It is called a <b>velocity selector</b> or <b>Wien filter</b>.</p>
+    </div>
+
+    <h3>Velocity Selector Setup</h3>
+    <ul>
+      <li><strong>Electric Field:</strong> Parallel plates create a uniform electric field \(\vec{E}\)</li>
+      <li><strong>Magnetic Field:</strong> Perpendicular to both the electric field and particle velocity \(\vec{B}\)</li>
+      <li><strong>Forces:</strong> Electric force (\(F_E = qE\)) and magnetic force (\(F_B = qvB\)) act in opposite directions</li>
+      <li><strong>Equilibrium:</strong> When forces balance, the particle moves in a straight line</li>
+    </ul>
+
+    <div class="formula-box">
+      $$F_E = F_B$$
+      $$qE = qvB$$
+      $$v = \frac{E}{B}$$
+    </div>
+
+    <figure>
+      <img src="shooting-electrons.jpg" class="img-fluid-center">
+      <figcaption>
+        Crossed electric and magnetic fields create a velocity selector. Only particles with velocity \(v = E/B\) pass through undeflected.
+      </figcaption>
+    </figure>
+
+    <p>If the E field is stronger, the electron will be deflected upwards (since its a negative charge). If the B field is stronger, the electron will be deflected downwards. (use rhr, force goes opposite direction from thumb)</p>
+
+    <div class="example-box">
+      <h3>Example: Velocity Selector</h3>
+      <p><strong>Problem:</strong> A velocity selector has an electric field of 1000 V/m and a magnetic field of 0.5 T. What velocity particles will pass through undeflected?</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>Electric field: E = 1000 V/m</li>
+        <li>Magnetic field: B = 0.5 T</li>
+      </ul>
+
+      <h4>Step 2: Apply Velocity Selector Formula</h4>
+      <ul>
+        <li>\(v = \frac{E}{B}\)</li>
+        <li>\(v = \frac{1000}{0.5} = 2000\) m/s</li>
+      </ul>
+
+      <h4>Step 3: Interpretation</h4>
+      <ul>
+        <li>Particles with \(v = 2000\) m/s pass through undeflected</li>
+        <li>Faster particles are deflected by the magnetic force</li>
+        <li>Slower particles are deflected by the electric force</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>Only particles with velocity 2000 m/s will pass through the velocity selector undeflected.</strong></p>
+    </div>
+
+    <h2>Work and Energy in Magnetic Fields</h2>
+
+    <div class="work-box">
+      <h3>⚡ No Work Done by Magnetic Force</h3>
+      <p><strong>Magnetic forces do no work on charged particles.</strong></p>
+      <p>This is because the force is always perpendicular to the velocity, so no energy is transferred.</p>
+    </div>
+
+    <h3>Work-Energy Principle</h3>
+    <ul>
+      <li><strong>Work Done:</strong> \(W = \vec{F} \cdot \vec{d}\)</li>
+      <li><strong>Magnetic Force:</strong> Always perpendicular to displacement</li>
+      <li><strong>Result:</strong> \(W = 0\) (no work done)</li>
+      <li><strong>Energy Conservation:</strong> Kinetic energy remains constant</li>
+    </ul>
+
+    <div class="formula-box">
+      $$W = \vec{F}_B \cdot \vec{d} = 0$$
+    </div>
+
+    
+
+    <div class="example-box">
+      <h3>Example: Energy Conservation in Magnetic Field</h3>
+      <p><strong>Problem:</strong> A proton moves in a circular path in a magnetic field. Show that its kinetic energy remains constant.</p>
+
+      <h4>Step 1: Work Done by Magnetic Force</h4>
+      <ul>
+        <li>\(W = \vec{F}_B \cdot \vec{d}\)</li>
+        <li>Since \(\vec{F}_B\) is perpendicular to \(\vec{d}\)</li>
+        <li>\(W = 0\)</li>
+      </ul>
+
+      <h4>Step 2: Work-Energy Theorem</h4>
+      <ul>
+        <li>\(W = \Delta K\)</li>
+        <li>Since \(W = 0\)</li>
+        <li>\(\Delta K = 0\)</li>
+      </ul>
+
+      <h4>Step 3: Kinetic Energy</h4>
+      <ul>
+        <li>\(K = \frac{1}{2}mv^2\)</li>
+        <li>Since \(\Delta K = 0\)</li>
+        <li>Speed remains constant</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The magnetic force does no work, so the proton's kinetic energy and speed remain constant throughout its circular motion.</strong></p>
+    </div>
+
+
+
+    <h2>Practical Applications</h2>
+
+    <div class="applications-box">
+      <h3>🔬 Real-World Applications</h3>
+      <p><strong>Magnetic forces on moving charges have numerous practical applications in modern technology.</strong></p>
+      <p>These applications range from particle accelerators to medical imaging.</p>
+    </div>
+
+    <h3>Key Applications</h3>
+    <ul>
+      <li><strong>Particle Accelerators:</strong> Cyclotrons and synchrotrons use magnetic fields to guide charged particles</li>
+      <li><strong>Mass Spectrometers:</strong> Separate ions by mass-to-charge ratio using magnetic deflection</li>
+      <li><strong>Magnetic Confinement:</strong> Fusion reactors use magnetic fields to contain plasma</li>
+      <li><strong>CRT Displays:</strong> Cathode ray tubes use magnetic fields to deflect electron beams</li>
+      <li><strong>Medical Imaging:</strong> MRI machines use magnetic fields to align nuclear spins</li>
+     
+
+    </ul>
+
+    <figure>
+      <img src="application.jpg" class="img-fluid-center">
+      <figcaption>
+        Old tv's use CRT which uses magnetic field to deflect to show pixels. Adding a magnet distorts the screen.
+      </figcaption>
+    </figure>
+
+    <div class="example-box">
+      <h3>Example: Mass Spectrometer</h3>
+      <p><strong>Problem:</strong> In a mass spectrometer, ions with different masses follow different circular paths. Explain how this works.</p>
+
+      <h4>Step 1: Magnetic Force</h4>
+      <ul>
+        <li>Ions enter magnetic field perpendicular to field</li>
+        <li>Magnetic force provides centripetal force</li>
+        <li>\(qvB = \frac{mv^2}{r}\)</li>
+      </ul>
+
+      <h4>Step 2: Radius Dependence</h4>
+      <ul>
+        <li>\(r = \frac{mv}{qB}\)</li>
+        <li>For same charge and velocity</li>
+        <li>Radius is proportional to mass</li>
+      </ul>
+
+      <h4>Step 3: Separation</h4>
+      <ul>
+        <li>Heavier ions follow larger radius paths</li>
+        <li>Lighter ions follow smaller radius paths</li>
+        <li>Ions are separated by mass</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>Ions with different masses follow different circular paths, with heavier ions having larger radii, allowing separation by mass-to-charge ratio.</strong></p>
+    </div>
+
+    <div class="warning-box">
+      <h3>⚠️ Common Misconceptions</h3>
+      <ul>
+        <li><strong>Stationary charges:</strong> Experience no magnetic force, only electric force</li>
+        <li><strong>Work done:</strong> Magnetic forces do no work, so kinetic energy is conserved</li>
+        <li><strong>Direction:</strong> Force is perpendicular to both velocity and field, not parallel</li>
+        <li><strong>Speed:</strong> Magnetic forces change direction but not speed of charged particles</li>
+        <li><strong>Energy:</strong> Magnetic fields can't increase or decrease particle energy</li>
+      </ul>
+    </div>
+
+    <h2>Watch this video for Mastery</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/grgNdIYP6zI?si=EPPVsaRO8x543i99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Key Takeaways</h2>
+
+         <ul>
+       <li><strong>Lorentz Force:</strong> \(\vec{F}_B = q\vec{v} \times \vec{B}\) describes magnetic force on moving charges</li>
+       <li><strong>Circular Motion:</strong> Perpendicular motion creates circular paths with radius \(r = \frac{mv}{qB}\)</li>
+       <li><strong>No Work:</strong> Magnetic forces do no work, so kinetic energy is conserved</li>
+       <li><strong>Applications:</strong> Used in particle accelerators, mass spectrometers, and medical imaging</li>
+       <li><strong>Energy Conservation:</strong> Magnetic fields can change direction but not speed of particles</li>
+       <li><strong>Right-Hand Rule:</strong> Essential for determining force direction</li>
+       <li><strong>Mass Dependence:</strong> Heavier particles follow larger radius paths in magnetic fields</li>
+     </ul>
+
+  </div>
+</body>
+</html> 

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn Ohm's law for AP Physics C. Study the relationship between voltage, current, and resistance with interactive simulations and practice problems." />
+  <title>Ohm's Law</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-fluid-center2 {
+      width: 50%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Ohm's Law</h1>
+
+    <p>
+      Ohm's Law is one of the most fundamental relationships in electrical circuits, describing the relationship between voltage, current, and resistance. It provides the foundation for understanding how electrical circuits behave and is essential for circuit analysis and design.
+    </p>
+
+    <h2>Statement of Ohm's Law</h2>
+
+    <div class="formula-box">
+      $$V = IR$$
+    </div>
+
+    <p>
+      Ohm's Law states that the voltage across a conductor is directly proportional to the current flowing through it, with the constant of proportionality being the resistance.
+    </p>
+
+    <ul>
+      <li><strong>Where:</strong>
+        <ul>
+          <li>\(V\) = voltage (volts, V)</li>
+          <li>\(I\) = current (amperes, A)</li>
+          <li>\(R\) = resistance (ohms, Ω)</li>
+        </ul>
+      </li>
+      <li><strong>Linear relationship:</strong> Voltage is directly proportional to current</li>
+      <li><strong>Ohmic materials:</strong> Materials that obey Ohm's Law</li>
+      <li><strong>Non-ohmic materials:</strong> Materials that don't follow this linear relationship</li>
+    </ul>
+
+    
+
+    <h2>Alternative Forms</h2>
+
+    <div class="formula-box">
+      $$I = \frac{V}{R} \quad \text{and} \quad R = \frac{V}{I}$$
+    </div>
+
+    <p>
+      Ohm's Law can be rearranged to solve for any of the three variables, depending on what's known and what needs to be calculated.
+    </p>
+
+    <figure>
+      <img src="ohms-law-pyramid.png" class="img-fluid-center">
+      <figcaption>
+        Pyramid showing voltage, current, and resistance relationship.
+      </figcaption>
+    </figure>
+
+    <p>Use this pyramid to help you if you are ever confused. The Ohm’s Law pyramid helps you quickly find formulas by covering the quantity you want: cover V to get V = I × R, cover I for I = V ÷ R, and cover R for R = V ÷ I. It’s a simple way to remember how voltage, current, and resistance relate without memorizing each formula separately.</p>
+
+    <ul>
+      <li><strong>Current calculation:</strong> \(I = \frac{V}{R}\)</li>
+      <li><strong>Resistance calculation:</strong> \(R = \frac{V}{I}\)</li>
+      <li><strong>Power relationship:</strong> \(P = VI = I^2R = \frac{V^2}{R}\)</li>
+    </ul>
+
+
+
+    <h2>Ohmic vs Non-Ohmic Materials</h2>
+
+    <h3>Ohmic Materials</h3>
+    <ul>
+      <li><strong>Linear relationship:</strong> \(V = IR\) holds true</li>
+      <li><strong>Examples:</strong> Most metals (copper, aluminum, gold)</li>
+      <li><strong>Temperature range:</strong> Linear over a wide temperature range</li>
+      <li><strong>Graph:</strong> Straight line through origin on V-I plot</li>
+    </ul>
+
+    <h3>Non-Ohmic Materials</h3>
+    <ul>
+      <li><strong>Non-linear relationship:</strong> \(V = IR\) doesn't apply</li>
+      <li><strong>Examples:</strong> Diodes, transistors, light bulbs (at high current)</li>
+      <li><strong>Behavior:</strong> Resistance changes with current or voltage</li>
+      <li><strong>Graph:</strong> Curved line on V-I plot</li>
+    </ul>
+
+    <div>
+      <figure>
+        <img src="ohmic-and-non-ohmic.png" class="img-fluid-center">
+        <figcaption>
+          Linear relationship between voltage and current for ohmic materials.
+        </figcaption>
+      </figure>
+      </div>
+
+    <div class="example-box">
+      <h3>Memory Trick: VIR Triangle</h3>
+      <p><strong>Remember Ohm's Law using the VIR triangle:</strong></p>
+      <ul>
+        <li><strong>V</strong> = Voltage (top of triangle)</li>
+        <li><strong>I</strong> = Current (bottom left)</li>
+        <li><strong>R</strong> = Resistance (bottom right)</li>
+      </ul>
+      <p><strong>To find any variable:</strong></p>
+      <ul>
+        <li><strong>V</strong> = I × R (multiply the two bottom values)</li>
+        <li><strong>I</strong> = V ÷ R (divide top by bottom right)</li>
+        <li><strong>R</strong> = V ÷ I (divide top by bottom left)</li>
+      </ul>
+      <p>This visual triangle helps you quickly rearrange the formula!</p>
+    </div>
+
+
+
+
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Basic Ohm's Law</h3>
+      <p><strong>Problem:</strong> A 12 V battery is connected to a 4.0 Ω resistor. What is the current flowing through the resistor?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Ohm's Law:</strong> \(I = \frac{V}{R}\)</li>
+        <li><strong>Substitution:</strong> \(I = \frac{12 \text{ V}}{4.0 \text{ Ω}}\)</li>
+        <li><strong>Calculation:</strong> \(I = 3.0 \text{ A}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The current is 3.0 A.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Resistance Calculation</h3>
+      <p><strong>Problem:</strong> A circuit draws 2.5 A when connected to a 6.0 V source. What is the resistance of the circuit?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Ohm's Law:</strong> \(R = \frac{V}{I}\)</li>
+        <li><strong>Substitution:</strong> \(R = \frac{6.0 \text{ V}}{2.5 \text{ A}}\)</li>
+        <li><strong>Calculation:</strong> \(R = 2.4 \text{ Ω}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The resistance is 2.4 Ω.</p>
+    </div>
+
+
+
+
+
+
+
+    <h2>Ohm's Law Interactive</h2>
+    <p>Explore the relationship between voltage, current, and resistance:</p>
+    
+    <!-- Ohm's Law Interactive Canvas -->
+    <canvas id="ohmsCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="startOhms" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetOhms" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="voltageSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Voltage (V):</label>
+        <input type="range" id="voltageSlider" min="1" max="20" value="5" step="0.5" style="width: 100%;">
+        <div id="voltageValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">5.0 V</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="r1Slider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">R₁ (Ω):</label>
+        <input type="range" id="r1Slider" min="1" max="10" value="2" step="0.5" style="width: 100%;">
+        <div id="r1Value" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 Ω</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="r2Slider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">R₂ (Ω):</label>
+        <input type="range" id="r2Slider" min="1" max="10" value="2" step="0.5" style="width: 100%;">
+        <div id="r2Value" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 Ω</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="r3Slider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">R₃ (Ω):</label>
+        <input type="range" id="r3Slider" min="1" max="10" value="2" step="0.5" style="width: 100%;">
+        <div id="r3Value" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 Ω</div>
+      </div>
+    </div>
+    
+    <div id="currentDisplay" style="text-align: center; margin: 1rem 0; font-size: 1.2rem; color: #6f42c1; font-weight: bold;">
+      Total Resistance: 6.0 Ω | Current: 0.83 A
+    </div>
+    
+    <!-- Removed Current vs Time Graph -->
+
+    
+
+<script>
+  // Ohm's Law Animation
+  const ohmsCanvas = document.getElementById("ohmsCanvas");
+  const octx = ohmsCanvas.getContext("2d");
+  const startOhmsButton = document.getElementById("startOhms");
+  const resetOhmsButton = document.getElementById("resetOhms");
+
+  let voltage = 5;
+  let r1 = 2;
+  let r2 = 2;
+  let r3 = 2;
+  let totalResistance = r1 + r2 + r3;
+  let current = voltage / totalResistance;
+  
+  // Electron particles for animation
+  let electrons = [];
+  let animationId = null;
+  let isAnimating = false;
+  
+  // Removed graph variables and code
+
+
+  function drawOhmsScene() {
+    octx.clearRect(0, 0, ohmsCanvas.width, ohmsCanvas.height);
+    
+    // Draw circuit background
+    octx.fillStyle = "#f8f9fa";
+    octx.fillRect(0, 0, ohmsCanvas.width, ohmsCanvas.height);
+    
+    // Draw battery symbol (circuit diagram style) - horizontal, rotated 180°
+    octx.strokeStyle = "#333";
+    octx.lineWidth = 3;
+    
+    // Positive terminal (longer line) - horizontal, top
+    octx.beginPath();
+    octx.moveTo(80, 170);
+    octx.lineTo(120, 170);
+    octx.stroke();
+    
+    // Negative terminal (shorter line) - horizontal, bottom
+    octx.beginPath();
+    octx.moveTo(90, 180);
+    octx.lineTo(110, 180);
+    octx.stroke();
+    
+    // Battery label
+    octx.fillStyle = "#333";
+    octx.font = "12px Arial";
+    octx.fillText("V = " + voltage + "V", 40, 180);
+    
+    
+    
+   
+    
+
+    
+    // Draw current loops
+    octx.strokeStyle = "#333";
+    octx.lineWidth = 2;
+    octx.setLineDash([]);
+    
+    // Main current loop - broken into segments to avoid overlap with resistors
+    octx.beginPath();
+    // Top wire - left segment
+    octx.moveTo(100, 120);
+    octx.lineTo(365, 120);
+    octx.stroke();
+    
+    // Top wire - right segment
+    octx.beginPath();
+    octx.moveTo(415, 120);
+    octx.lineTo(650, 120);
+    octx.stroke();
+    
+    // Right wire - top segment
+    octx.beginPath();
+    octx.moveTo(650, 120);
+    octx.lineTo(650, 190);
+    octx.stroke();
+    
+    // Right wire - bottom segment
+    octx.beginPath();
+    octx.moveTo(650, 240);
+    octx.lineTo(650, 280);
+    octx.stroke();
+    
+    // Bottom wire - left segment
+    octx.beginPath();
+    octx.moveTo(100, 280);
+    octx.lineTo(365, 280);
+    octx.stroke();
+    
+    // Bottom wire - right segment
+    octx.beginPath();
+    octx.moveTo(415, 280);
+    octx.lineTo(650, 280);
+    octx.stroke();
+    
+    // Left wire
+    octx.beginPath();
+    octx.moveTo(100, 120);
+    octx.lineTo(100, 280);
+    octx.stroke();
+    
+    // Draw zigzag resistors on the wire
+    octx.strokeStyle = "#333";
+    octx.lineWidth = 2;
+    
+    // Top wire resistor (midpoint at x=375, y=120)
+    octx.beginPath();
+    octx.moveTo(365, 120);
+    octx.lineTo(375, 110);
+    octx.lineTo(385, 130);
+    octx.lineTo(395, 110);
+    octx.lineTo(405, 130);
+    octx.lineTo(415, 120);
+    octx.stroke();
+    
+    // Right wire resistor (midpoint at x=650, y=200)
+    octx.beginPath();
+    octx.moveTo(650, 190);
+    octx.lineTo(640, 200);
+    octx.lineTo(660, 210);
+    octx.lineTo(640, 220);
+    octx.lineTo(660, 230);
+    octx.lineTo(650, 240);
+    octx.stroke();
+    
+    // Bottom wire resistor (midpoint at x=375, y=280)
+    octx.beginPath();
+    octx.moveTo(365, 280);
+    octx.lineTo(375, 270);
+    octx.lineTo(385, 290);
+    octx.lineTo(395, 270);
+    octx.lineTo(405, 290);
+    octx.lineTo(415, 280);
+    octx.stroke();
+    
+    // Add labels for the resistors
+    octx.fillStyle = "#333";
+    octx.font = "18px Arial";
+    octx.textAlign = "center";
+    
+    // R₁ label (top resistor)
+    octx.fillText("R₁", 390, 150);
+    
+    // R₂ label (right resistor)
+    octx.fillText("R₂", 680, 215);
+    
+    // R₃ label (bottom resistor)
+    octx.fillText("R₃", 390, 325);
+    
+    // White rectangle to cover wire between battery terminals
+    octx.fillStyle = "#f8f9fa";
+    octx.fillRect(75, 172, 50, 6);
+    
+
+    
+    // Draw labels
+    octx.fillStyle = "#333";
+    octx.font = "16px Roboto, sans-serif";
+    octx.textAlign = "center";
+    octx.fillText("Ohm's Law: V = IR", 400, 50);
+    octx.fillText("Series Circuit: R_total = R₁ + R₂ + R₃", 400, 70);
+    octx.fillText("Current = " + current.toFixed(2) + " A", 400, 90);
+  }
+
+  // Electron class
+  class Electron {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.speed = 1 + current * 0.5; // Speed based on current
+      this.pathIndex = 0;
+      this.pathProgress = 0;
+    }
+    
+    update() {
+      // Circuit path coordinates (series of points to follow)
+      const path = [
+        {x: 100, y: 120}, // Start at top left
+        {x: 365, y: 120}, // Top wire left
+        {x: 415, y: 120}, // Top wire right (after R1)
+        {x: 650, y: 120}, // Top right
+        {x: 650, y: 190}, // Right wire top
+        {x: 650, y: 240}, // Right wire bottom (after R2)
+        {x: 650, y: 280}, // Bottom right
+        {x: 415, y: 280}, // Bottom wire right
+        {x: 365, y: 280}, // Bottom wire left (after R3)
+        {x: 100, y: 280}  // Bottom left
+      ];
+      
+      // Update speed based on current
+      this.speed = 1 + current * 0.5;
+      
+      const currentPoint = path[this.pathIndex];
+      const nextPoint = this.pathIndex === path.length - 1 ? path[0] : path[this.pathIndex + 1];
+      
+      // Calculate direction to next point
+      const dx = nextPoint.x - currentPoint.x;
+      const dy = nextPoint.y - currentPoint.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      if (distance > 0) {
+        // Calculate progress along current segment
+        const segmentProgress = this.pathProgress;
+        const targetX = currentPoint.x + (dx * segmentProgress);
+        const targetY = currentPoint.y + (dy * segmentProgress);
+        
+        // Move towards target position
+        const moveX = targetX - this.x;
+        const moveY = targetY - this.y;
+        const moveDistance = Math.sqrt(moveX * moveX + moveY * moveY);
+        
+        if (moveDistance > 0) {
+          this.x += (moveX / moveDistance) * this.speed;
+          this.y += (moveY / moveDistance) * this.speed;
+        }
+        
+        // Update progress along segment
+        this.pathProgress += this.speed / distance;
+        
+        // Check if reached next point
+        if (this.pathProgress >= 1) {
+          this.pathProgress = 0;
+          this.pathIndex = this.pathIndex === path.length - 1 ? 0 : this.pathIndex + 1;
+        }
+      }
+    }
+    
+    draw(ctx) {
+      ctx.fillStyle = "#e74c3c";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, 3, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+  }
+
+  function startOhmsAnimation() {
+    if (isAnimating) return;
+    
+    isAnimating = true;
+    electrons = [];
+    
+    // Always create exactly 50 electrons
+    const numElectrons = 50;
+    
+    // Create electrons with equidistant spacing around the loop
+    for (let i = 0; i < numElectrons; i++) {
+      const loopProgress = i / numElectrons;
+      
+      // Calculate position along the path (total path length is 9 segments)
+      const pathPosition = loopProgress * 9;
+      const pathIndex = Math.floor(pathPosition);
+      const segmentProgress = pathPosition - pathIndex;
+      
+      // Calculate initial position based on path progress
+      const path = [
+        {x: 100, y: 120}, {x: 365, y: 120}, {x: 415, y: 120}, {x: 650, y: 120},
+        {x: 650, y: 190}, {x: 650, y: 240}, {x: 650, y: 280}, {x: 415, y: 280},
+        {x: 365, y: 280}, {x: 100, y: 280}
+      ];
+      
+      const currentPoint = path[pathIndex];
+      const nextPoint = pathIndex === path.length - 1 ? path[0] : path[pathIndex + 1];
+      
+      // Interpolate position between current and next point
+      const startX = currentPoint.x + (nextPoint.x - currentPoint.x) * segmentProgress;
+      const startY = currentPoint.y + (nextPoint.y - currentPoint.y) * segmentProgress;
+      
+      const electron = new Electron(startX, startY);
+      electron.pathIndex = pathIndex;
+      electron.pathProgress = segmentProgress;
+      electrons.push(electron);
+    }
+    
+    function animate() {
+      if (!isAnimating) return;
+      
+      drawOhmsScene();
+      
+      // Update and draw electrons
+      electrons.forEach(electron => {
+        electron.update();
+        electron.draw(octx);
+      });
+      
+      // Removed updateGraph();
+      
+      animationId = requestAnimationFrame(animate);
+    }
+    
+    animate();
+  }
+
+  function resetOhmsAnimation() {
+    isAnimating = false;
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+    electrons = [];
+    // Removed graphData = [] and graphTime = 0;
+    drawOhmsScene();
+    // Removed drawCurrentGraph();
+  }
+
+  // Event listeners
+  startOhmsButton.addEventListener("click", startOhmsAnimation);
+  resetOhmsButton.addEventListener("click", resetOhmsAnimation);
+
+  // Slider event listeners
+  document.getElementById("voltageSlider").addEventListener("input", updateValues);
+  document.getElementById("r1Slider").addEventListener("input", updateValues);
+  document.getElementById("r2Slider").addEventListener("input", updateValues);
+  document.getElementById("r3Slider").addEventListener("input", updateValues);
+
+  function updateValues() {
+    voltage = parseFloat(document.getElementById("voltageSlider").value);
+    r1 = parseFloat(document.getElementById("r1Slider").value);
+    r2 = parseFloat(document.getElementById("r2Slider").value);
+    r3 = parseFloat(document.getElementById("r3Slider").value);
+    
+    totalResistance = r1 + r2 + r3;
+    current = voltage / totalResistance;
+    
+    // Update display values
+    document.getElementById("voltageValue").textContent = voltage.toFixed(1) + " V";
+    document.getElementById("r1Value").textContent = r1.toFixed(1) + " Ω";
+    document.getElementById("r2Value").textContent = r2.toFixed(1) + " Ω";
+    document.getElementById("r3Value").textContent = r3.toFixed(1) + " Ω";
+    document.getElementById("currentDisplay").textContent = 
+      `Total Resistance: ${totalResistance.toFixed(1)} Ω | Current: ${current.toFixed(2)} A`;
+    
+    // Redraw the scene
+    drawOhmsScene();
+    
+    // Update animation if running
+    if (isAnimating) {
+      resetOhmsAnimation();
+      startOhmsAnimation();
+    }
+  }
+
+  // Initialize
+  drawOhmsScene();
+  // Removed drawCurrentGraph();
+</script>
+
+  </div>
+</body>
+</html> 

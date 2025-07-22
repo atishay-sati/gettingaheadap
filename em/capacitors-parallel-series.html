@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about capacitors in series and parallel for AP Physics C. Study capacitance calculations, circuit analysis, and practical applications." />
+  <title>Capacitors in Series and Parallel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .series-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .parallel-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+    .comparison-box {
+      background-color: #fce4ec;
+      border-left: 6px solid #e91e63;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .comparison-box h3 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+    .simulation-container {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .circuit-area {
+      flex: 1;
+      min-width: 600px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 2rem;
+      border: 2px solid #e9ecef;
+    }
+    .controls-area {
+      flex: 1;
+      min-width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      border: 2px solid #e9ecef;
+    }
+    .circuit-display {
+      width: 100%;
+      height: 400px;
+      background: #fff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .battery {
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 120px;
+      background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .battery::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 10px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .capacitor {
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .capacitor::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 40px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .capacitor::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 8px;
+      height: 40px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .capacitor.rotated {
+      transform: rotate(90deg);
+    }
+    .wire {
+      position: absolute;
+      background: #333;
+      border-radius: 2px;
+    }
+    .wire.horizontal {
+      height: 4px;
+    }
+    .wire.vertical {
+      width: 4px;
+    }
+    .control-group {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #6f42c1;
+    }
+    .control-group h4 {
+      margin-top: 0;
+      color: #6f42c1;
+      font-size: 1.2rem;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      gap: 1rem;
+    }
+    .control-row label {
+      min-width: 120px;
+      font-weight: bold;
+    }
+    .control-row input, .control-row select {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-row input[type="range"] {
+      flex: 1;
+    }
+    .value-display {
+      min-width: 80px;
+      padding: 0.5rem;
+      background: #e9ecef;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .results-box {
+      background: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .results-box h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .result-item {
+      background: white;
+      padding: 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    .result-item strong {
+      color: #6f42c1;
+    }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background: #6f42c1;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #5a32a3;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+      transform: translateY(-2px);
+    }
+    .btn-success {
+      background: #28a745;
+      color: white;
+    }
+    .btn-success:hover {
+      background: #218838;
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Capacitors in Series and Parallel</h1>
+
+    <p>
+      Capacitors can be connected in different configurations to achieve desired capacitance values. Understanding series and parallel connections is essential for circuit design and analysis. These configurations follow specific rules that determine the equivalent capacitance of the combination.
+    </p>
+
+    <h2>Capacitors in Series</h2>
+
+    <p>
+      Capacitors are connected "in series" when they are connected end-to-end, with the positive plate of one connected to the negative plate of the next. This configuration reduces the total capacitance.
+    </p>
+
+    <h3>What Does "Series" Mean?</h3>
+    <p>In a series connection, the capacitors are connected in a chain:</p>
+    <div class="series-box">
+      <p><strong>Series Connection:</strong></p>
+      <figure>
+        <img src="capacitor-series.jpg" alt="Series Capacitor Connection" class="img-fluid-center">
+        <figcaption>
+          Capacitors connected in series - positive plate of one connects to negative plate of the next.
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3>Key Properties of Series Connection</h3>
+    <ul>
+      <li><strong>Same charge:</strong> Each capacitor stores the same charge Q</li>
+      <li><strong>Voltage (electric potential) adds:</strong> Total voltage (electric potential) V = V₁ + V₂ + V₃ + ...</li>
+      <li><strong>Current same:</strong> Same current flows through all capacitors</li>
+      <li><strong>Reduced capacitance:</strong> Total capacitance is less than any individual capacitor</li>
+    </ul>
+
+    <h3>Deriving the Series Formula</h3>
+    <p>Let's derive why series capacitors have reduced capacitance:</p>
+    <div class="calculation-steps">
+      <h4>Derivation:</h4>
+      <ol>
+        <li>Each capacitor has the same charge Q: \(Q_1 = Q_2 = Q_3 = Q\)</li>
+        <li>Voltage (electric potential) across each capacitor: \(V_1 = \frac{Q}{C_1}, V_2 = \frac{Q}{C_2}, V_3 = \frac{Q}{C_3}\)</li>
+        <li>Total voltage (electric potential): \(V = V_1 + V_2 + V_3 = Q(\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3})\)</li>
+        <li>Equivalent capacitance: \(C_{eq} = \frac{Q}{V} = \frac{Q}{Q(\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3})}\)</li>
+        <li>Result: \(\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}\)</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>Series Capacitance Formula</h3>
+      <p>$$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + ...$$</p>
+      <p>For two capacitors in series:</p>
+      <p>$$C_{eq} = \frac{C_1 C_2}{C_1 + C_2}$$</p>
+    </div>
+
+    <p>
+      This derivation shows why series capacitors have reduced capacitance: the total voltage (electric potential) is the sum of individual voltages (electric potentials), so for the same charge, you need more total voltage (electric potential), meaning less capacitance.
+    </p>
+
+    <h3>Physical Intuition</h3>
+    <p>Think of series capacitors like resistors in series:</p>
+    <ul>
+      <li><strong>Charge conservation:</strong> The same charge flows through each capacitor</li>
+      <li><strong>Voltage (electric potential) division:</strong> The total voltage (electric potential) is distributed across all capacitors</li>
+      <li><strong>Reduced storage:</strong> Less total charge can be stored for a given voltage (electric potential)</li>
+    </ul>
+
+    <figure>
+      <img src="capacitor-series-voltage.jpg" alt="Series Capacitor Connection" class="img-fluid-center">
+      <figcaption>
+        Capacitors connected in series - same charge, voltage adds.
+      </figcaption>
+    </figure>
+
+    <h2>Capacitors in Parallel</h2>
+
+    <p>
+      Capacitors are connected "in parallel" when all their positive plates are connected together and all their negative plates are connected together. This configuration increases the total capacitance.
+    </p>
+
+    <h3>What Does "Parallel" Mean?</h3>
+    <p>In a parallel connection, the capacitors are connected side by side:</p>
+    <div class="parallel-box">
+      <p><strong>Parallel Connection:</strong></p>
+      <figure>
+        <img src="capacitor-parallel.png" alt="Parallel Capacitor Connection" class="img-fluid-center">
+        <figcaption>
+          Capacitors connected in parallel - all positive plates connected together, all negative plates connected together.
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3>Key Properties of Parallel Connection</h3>
+    <ul>
+      <li><strong>Same voltage (electric potential):</strong> Each capacitor has the same voltage (electric potential) V</li>
+      <li><strong>Charge adds:</strong> Total charge Q = Q₁ + Q₂ + Q₃ + ...  </li>
+      <li><strong>Current splits:</strong> Current divides among the capacitors (not always equally)</li>
+      <li><strong>Increased capacitance:</strong> Total capacitance is greater than any individual capacitor</li>
+    </ul>
+
+    <h3>Deriving the Parallel Formula</h3>
+    <p>Let's derive why parallel capacitors have increased capacitance:</p>
+    <div class="calculation-steps">
+      <h4>Derivation:</h4>
+      <ol>
+        <li>Each capacitor has the same voltage (electric potential) V: \(V_1 = V_2 = V_3 = V\)</li>
+        <li>Charge on each capacitor: \(Q_1 = C_1V, Q_2 = C_2V, Q_3 = C_3V\)</li>
+        <li>Total charge: \(Q = Q_1 + Q_2 + Q_3 = V(C_1 + C_2 + C_3)\)</li>
+        <li>Equivalent capacitance: \(C_{eq} = \frac{Q}{V} = \frac{V(C_1 + C_2 + C_3)}{V}\)</li>
+        <li>Result: \(C_{eq} = C_1 + C_2 + C_3\)</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>Parallel Capacitance Formula</h3>
+      <p>$$C_{eq} = C_1 + C_2 + C_3 + ...$$</p>
+    </div>
+
+    <p>
+      This derivation shows why parallel capacitors have increased capacitance: the total charge is the sum of individual charges, so for the same voltage (electric potential), you can store more charge, meaning more capacitance.
+    </p>
+
+    <h3>Physical Intuition</h3>
+    <p>Think of parallel capacitors like resistors in parallel:</p>
+    <ul>
+      <li><strong>Voltage (electric potential) conservation:</strong> All capacitors have the same voltage (electric potential)</li>
+      <li><strong>Charge addition:</strong> Total charge is the sum of individual charges</li>
+      <li><strong>Increased storage:</strong> More total charge can be stored for a given voltage (electric potential)</li>
+    </ul>
+
+    
+
+    <h2>Comparison of Series and Parallel</h2>
+
+    <div class="comparison-box">
+      <h3>Key Differences</h3>
+      <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+        <tr style="background-color: #f8f9fa;">
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Property</th>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Series</th>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Parallel</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Charge</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Same on all capacitors</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Adds across capacitors</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Voltage (electric potential)</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Adds across capacitors</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Same on all capacitors</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Capacitance</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Reduces total capacitance</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Increases total capacitance</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Formula</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">\(\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2}\)</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">\(C_{eq} = C_1 + C_2\)</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Capacitors in Series</h3>
+      <p><strong>Problem:</strong> Three capacitors of 2.0 μF, 3.0 μF, and 6.0 μF are connected in series. What is the equivalent capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> C₁ = 2.0 μF, C₂ = 3.0 μF, C₃ = 6.0 μF</li>
+          <li><strong>Formula:</strong> \(\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}\)</li>
+          <li><strong>Substitute:</strong> \(\frac{1}{C_{eq}} = \frac{1}{2.0} + \frac{1}{3.0} + \frac{1}{6.0}\)</li>
+          <li><strong>Calculate:</strong> \(\frac{1}{C_{eq}} = 0.5 + 0.333 + 0.167 = 1.0\)</li>
+          <li><strong>Result:</strong> C_eq = 1.0 μF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The equivalent capacitance is 1.0 μF.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Capacitors in Parallel</h3>
+      <p><strong>Problem:</strong> Two capacitors of 4.0 μF and 6.0 μF are connected in parallel. What is the equivalent capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> C₁ = 4.0 μF, C₂ = 6.0 μF</li>
+          <li><strong>Formula:</strong> C_eq = C₁ + C₂</li>
+          <li><strong>Substitute:</strong> C_eq = 4.0 + 6.0</li>
+          <li><strong>Calculate:</strong> C_eq = 10.0 μF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The equivalent capacitance is 10.0 μF.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Mixed Configuration</h3>
+      <p><strong>Problem:</strong> Three capacitors of 2.0 μF, 4.0 μF, and 6.0 μF are connected as follows: C₁ and C₂ in parallel, then connected in series with C₃. What is the equivalent capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Step 1 - Parallel combination:</strong> C₁₂ = C₁ + C₂ = 2.0 + 4.0 = 6.0 μF</li>
+          <li><strong>Step 2 - Series combination:</strong> \(\frac{1}{C_{eq}} = \frac{1}{C_{12}} + \frac{1}{C_3}\)</li>
+          <li><strong>Substitute:</strong> \(\frac{1}{C_{eq}} = \frac{1}{6.0} + \frac{1}{6.0} = \frac{2}{6.0}\)</li>
+          <li><strong>Calculate:</strong> C_eq = 3.0 μF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The equivalent capacitance is 3.0 μF.</p>
+    </div>
+
+    <h2>Applications and Design Considerations</h2>
+
+    <h3>Series Applications</h3>
+    <ul>
+      <li><strong>Voltage (electric potential) division:</strong> Distribute voltage (electric potential) across multiple capacitors</li>
+      <li><strong>High-voltage (electric potential) circuits:</strong> Use multiple low-voltage (electric potential) capacitors</li>
+      <li><strong>Precision timing:</strong> Fine-tune capacitance values</li>
+      <li><strong>Energy storage:</strong> Increase voltage (electric potential) rating while reducing capacitance</li>
+    </ul>
+
+    <h3>Parallel Applications</h3>
+    <ul>
+      <li><strong>Increased capacitance:</strong> Achieve higher capacitance values</li>
+      <li><strong>Current handling:</strong> Distribute current among multiple capacitors</li>
+      <li><strong>Redundancy:</strong> Improve reliability with backup capacitors</li>
+      <li><strong>Filtering:</strong> Create effective low-pass filters</li>
+    </ul>
+
+    <h3>Design Considerations</h3>
+    <div class="property-box">
+      <h3>Important Factors</h3>
+      <ul>
+        <li><strong>Voltage (electric potential) ratings:</strong> Ensure each capacitor can handle its voltage (electric potential)</li>
+        <li><strong>Temperature effects:</strong> Capacitance varies with temperature</li>
+        <li><strong>Parasitic effects:</strong> Consider inductance and resistance</li>
+        <li><strong>Manufacturing tolerances:</strong> Account for component variations</li>
+      </ul>
+    </div>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Wrong formula:</strong> Using series formula for parallel or vice versa</li>
+        <li><strong>Mixed configurations:</strong> Not simplifying step by step</li>
+        <li><strong>Units confusion:</strong> Mixing different units (μF, nF, pF)</li>
+        <li><strong>Voltage (electric potential) ratings:</strong> Forgetting to check voltage (electric potential) limits</li>
+        <li><strong>Polarity:</strong> Connecting polarized capacitors incorrectly</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> Four capacitors of 1.0 μF each are connected in series. What is the equivalent capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> C₁ = C₂ = C₃ = C₄ = 1.0 μF</li>
+            <li><strong>Formula:</strong> \(\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \frac{1}{C_4}\)</li>
+            <li><strong>Substitute:</strong> \(\frac{1}{C_{eq}} = \frac{1}{1.0} + \frac{1}{1.0} + \frac{1}{1.0} + \frac{1}{1.0} = 4\)</li>
+            <li><strong>Calculate:</strong> C_eq = 0.25 μF</li>
+          </ol>
+          <p><strong>Answer:</strong> 0.25 μF</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> Three capacitors of 2.0 μF, 3.0 μF, and 5.0 μF are connected in parallel. What is the equivalent capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> C₁ = 2.0 μF, C₂ = 3.0 μF, C₃ = 5.0 μF</li>
+            <li><strong>Formula:</strong> C_eq = C₁ + C₂ + C₃</li>
+            <li><strong>Substitute:</strong> C_eq = 2.0 + 3.0 + 5.0</li>
+            <li><strong>Calculate:</strong> C_eq = 10.0 μF</li>
+          </ol>
+          <p><strong>Answer:</strong> 10.0 μF</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 3</h3>
+      <p><strong>Problem:</strong> Two capacitors of 3.0 μF and 6.0 μF are connected in series, and this combination is connected in parallel with a 2.0 μF capacitor. What is the equivalent capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Step 1 - Series combination:</strong> \(\frac{1}{C_{12}} = \frac{1}{3.0} + \frac{1}{6.0} = \frac{1}{2.0}\)</li>
+            <li><strong>Result:</strong> C₁₂ = 2.0 μF</li>
+            <li><strong>Step 2 - Parallel combination:</strong> C_eq = C₁₂ + C₃ = 2.0 + 2.0</li>
+            <li><strong>Calculate:</strong> C_eq = 4.0 μF</li>
+          </ol>
+          <p><strong>Answer:</strong> 4.0 μF</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Interactive Simulation</h2>
+
+    <p>
+      Explore how capacitors behave in series and parallel configurations with this interactive simulation. Adjust the battery voltage and capacitor values to see how the circuit responds.
+    </p>
+
+    <div class="simulation-container">
+      <div class="circuit-area">
+        <h3>Circuit Diagram</h3>
+        <div class="circuit-display" id="circuitDisplay">
+          <!-- Circuit elements will be drawn here by JavaScript -->
+        </div>
+        
+        <div class="info-box">
+          <h4>Circuit Information</h4>
+          <p><strong>Configuration:</strong> <span id="configType">Series</span></p>
+          <p><strong>Battery Voltage (electric potential):</strong> <span id="batteryVoltage">12</span> V</p>
+          <p><strong>Total Capacitance:</strong> <span id="totalCapacitance">0.33</span> μF</p>
+          <p><strong>Total Charge:</strong> <span id="totalCharge">4.0</span> μC</p>
+        </div>
+      </div>
+
+      <div class="controls-area">
+        <h3>Controls</h3>
+        
+        <div class="control-group">
+          <h4>Configuration</h4>
+          <div class="control-row">
+            <label>Connection Type:</label>
+            <select id="configSelect">
+              <option value="series">Series</option>
+              <option value="parallel">Parallel</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h4>Battery Settings</h4>
+          <div class="control-row">
+            <label>Voltage (electric potential) (V):</label>
+            <input type="range" id="voltageSlider" min="1" max="24" value="12" step="1">
+            <span class="value-display" id="voltageDisplay">12 V</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h4>Capacitor Values</h4>
+          <div class="control-row">
+            <label>C₁ (μF):</label>
+            <input type="range" id="c1Slider" min="0.1" max="10" value="1" step="0.1">
+            <span class="value-display" id="c1Display">1.0 μF</span>
+          </div>
+          <div class="control-row">
+            <label>C₂ (μF):</label>
+            <input type="range" id="c2Slider" min="0.1" max="10" value="2" step="0.1">
+            <span class="value-display" id="c2Display">2.0 μF</span>
+          </div>
+          <div class="control-row">
+            <label>C₃ (μF):</label>
+            <input type="range" id="c3Slider" min="0.1" max="10" value="3" step="0.1">
+            <span class="value-display" id="c3Display">3.0 μF</span>
+          </div>
+        </div>
+
+        <div class="button-group">
+          
+          <button class="btn btn-secondary" onclick="resetCircuit()">Reset</button>
+          <button class="btn btn-success" onclick="showFormulas()">Show Formulas</button>
+        </div>
+
+        <div class="results-box">
+          <h4>Circuit Results</h4>
+          <div class="results-grid" id="resultsGrid">
+            <!-- Results will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h4>How to Use the Simulation</h4>
+      <ul>
+        <li><strong>Configuration:</strong> Switch between series and parallel connections</li>
+        <li><strong>Battery Voltage:</strong> Adjust the power source voltage</li>
+        <li><strong>Capacitor Values:</strong> Change individual capacitor capacitances</li>
+        <li><strong>Calculate:</strong> Update the circuit calculations</li>
+        <li><strong>Reset:</strong> Return to default values</li>
+        <li><strong>Show Formulas:</strong> Display the mathematical relationships</li>
+      </ul>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Series connection:</strong> Reduces total capacitance, same charge on all capacitors</li>
+      <li><strong>Parallel connection:</strong> Increases total capacitance, same voltage on all capacitors</li>
+      <li><strong>Series formula:</strong> \(\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + ...\)</li>
+      <li><strong>Parallel formula:</strong> \(C_{eq} = C_1 + C_2 + ...\)</li>
+      <li><strong>Mixed configurations:</strong> Simplify step by step from inside out</li>
+      <li><strong>Design considerations:</strong> Voltage ratings, temperature effects, parasitic elements</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Single capacitor:</strong> E = ½CV²</li>
+        <li><strong>Alternative forms:</strong> E = ½QV = Q²/2C</li>
+        <li><strong>Series capacitors:</strong> E_total = ½C_eqV²</li>
+        <li><strong>Parallel capacitors:</strong> E_total = ½C_eqV²</li>
+        <li><strong>Energy density:</strong> Energy per unit mass or volume</li>
+        <li><strong>Power:</strong> P = dE/dt = VI for time-varying systems</li>
+      </ul>
+    </div>
+
+    <h2>Advanced Capacitor Concepts</h2>
+
+    <h3>Capacitor Networks</h3>
+    <p>Complex capacitor networks can be simplified using systematic approaches:</p>
+    <ul>
+      <li><strong>Step-by-step reduction:</strong> Simplify from inside out</li>
+      <li><strong>Symmetry analysis:</strong> Use symmetry to simplify calculations</li>
+      <li><strong>Delta-Wye transformations:</strong> Convert between equivalent configurations</li>
+      <li><strong>Superposition:</strong> Analyze each source separately</li>
+    </ul>
+
+    <h3>Time-Varying Voltage</h3>
+    <p>When voltage changes with time, capacitors exhibit dynamic behavior:</p>
+    <div class="formula-box">
+      <h4>Instantaneous Current</h4>
+      <p>$$i(t) = C \frac{dV(t)}{dt}$$</p>
+      <p>Where \(i(t)\) is the instantaneous current and \(V(t)\) is the time-varying voltage.</p>
+    </div>
+
+    <div class="formula-box">
+      <h4>Instantaneous Power</h4>
+      <p>$$P(t) = V(t) \cdot i(t) = C \cdot V(t) \cdot \frac{dV(t)}{dt}$$</p>
+      <p>The power delivered to or from the capacitor at any instant.</p>
+    </div>
+
+    
+
+  </div>
+
+  <script>
+    // Circuit state
+    let circuitState = {
+      config: 'series',
+      voltage: 12,
+      c1: 1.0,
+      c2: 2.0,
+      c3: 3.0
+    };
+
+    // Initialize the simulation
+    function initSimulation() {
+      updateCircuitDisplay();
+      updateResults();
+      setupEventListeners();
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      document.getElementById('configSelect').addEventListener('change', function() {
+        circuitState.config = this.value;
+        updateCircuitDisplay();
+        updateResults();
+      });
+
+      document.getElementById('voltageSlider').addEventListener('input', function() {
+        circuitState.voltage = parseFloat(this.value);
+        document.getElementById('voltageDisplay').textContent = this.value + ' V';
+        updateResults();
+      });
+
+      document.getElementById('c1Slider').addEventListener('input', function() {
+        circuitState.c1 = parseFloat(this.value);
+        document.getElementById('c1Display').textContent = this.value + ' μF';
+        updateCircuitDisplay();
+        updateResults();
+      });
+
+      document.getElementById('c2Slider').addEventListener('input', function() {
+        circuitState.c2 = parseFloat(this.value);
+        document.getElementById('c2Display').textContent = this.value + ' μF';
+        updateCircuitDisplay();
+        updateResults();
+      });
+
+      document.getElementById('c3Slider').addEventListener('input', function() {
+        circuitState.c3 = parseFloat(this.value);
+        document.getElementById('c3Display').textContent = this.value + ' μF';
+        updateCircuitDisplay();
+        updateResults();
+      });
+    }
+
+    // Update circuit display
+    function updateCircuitDisplay() {
+      const display = document.getElementById('circuitDisplay');
+      display.innerHTML = '';
+
+      // Create battery
+      const battery = document.createElement('div');
+      battery.className = 'battery';
+      battery.innerHTML = circuitState.voltage + 'V';
+      display.appendChild(battery);
+
+      // Create capacitors and wires based on configuration
+      if (circuitState.config === 'series') {
+        drawSeriesCircuit();
+      } else {
+        drawParallelCircuit();
+      }
+    }
+
+    // Draw series circuit
+    function drawSeriesCircuit() {
+      const display = document.getElementById('circuitDisplay');
+
+      // Capacitor positions
+      const cap1 = createCapacitor('C₁', 200, 120, circuitState.c1);
+      const cap2 = createCapacitor('C₂', 350, 120, circuitState.c2);
+      const cap3 = createCapacitor('C₃', 500, 120, circuitState.c3);
+
+      display.appendChild(cap1);
+      display.appendChild(cap2);
+      display.appendChild(cap3);
+
+      // Top wire segments (with gaps for capacitors)
+      const topWire1 = createWire('horizontal', 80, 140, 120, 4);   // battery to before C1
+      const topWire2 = createWire('horizontal', 280, 140, 75, 4);   // after C1 to before C2
+      const topWire3 = createWire('horizontal', 430, 140, 75, 4);   // after C2 to before C3
+      const topWire4 = createWire('horizontal', 580, 140, 100, 4);  // after C3 to right
+
+      // Right wire
+      const rightWire = createWire('vertical', 680, 140, 120, 4);
+
+      // Bottom wire (continuous for series connection)
+      const bottomWire = createWire('horizontal', 80, 260, 600, 4);
+
+      display.appendChild(topWire1);
+      display.appendChild(topWire2);
+      display.appendChild(topWire3);
+      display.appendChild(topWire4);
+      display.appendChild(rightWire);
+      display.appendChild(bottomWire);
+    }
+
+    // Draw parallel circuit
+    function drawParallelCircuit() {
+      const display = document.getElementById('circuitDisplay');
+
+      // Capacitor positions (side by side, rotated)
+      const cap1 = createCapacitor('C₁', 335, 170, circuitState.c1, true);
+      const cap2 = createCapacitor('C₂', 485, 170, circuitState.c2, true);
+      const cap3 = createCapacitor('C₃', 635, 170, circuitState.c3, true);
+
+      display.appendChild(cap1);
+      display.appendChild(cap2);
+      display.appendChild(cap3);
+
+      // Main top and bottom wires
+      const topWire = createWire('horizontal', 80, 120, 600, 4);   // main top wire
+      const bottomWire = createWire('horizontal', 80, 280, 600, 4); // main bottom wire
+      
+      // Right wire
+      const rightWire = createWire('horizontal', 675, 120, 4, 35);
+      
+
+      
+
+      // Branch lines to each capacitor
+      const branch1 = createWire('horizontal', 375, 120, 4, 30);   // top to C1
+      const branch2 = createWire('horizontal', 375, 230, 4, 50);   // C1 to bottom
+      const branch3 = createWire('horizontal', 525, 120, 4, 30);   // top to C2
+      const branch4 = createWire('horizontal', 525, 230, 4, 50);   // C2 to bottom
+      const branch5 = createWire('horizontal', 675, 120, 4, 30);   // top to C3
+      const branch6 = createWire('horizontal', 675, 230, 4, 50);   // C3 to bottom
+
+      display.appendChild(topWire);
+      display.appendChild(bottomWire);
+      display.appendChild(rightWire);
+      display.appendChild(branch1);
+      display.appendChild(branch2);
+      display.appendChild(branch3);
+      display.appendChild(branch4);
+      display.appendChild(branch5);
+      display.appendChild(branch6);
+    }
+
+    // Create capacitor element
+    function createCapacitor(label, x, y, value, rotated = false) {
+      const cap = document.createElement('div');
+      cap.className = rotated ? 'capacitor rotated' : 'capacitor';
+      cap.style.left = x + 'px';
+      cap.style.top = y + 'px';
+      cap.innerHTML = label + '<br>' + value + 'μF';
+      return cap;
+    }
+
+    // Create wire element
+    function createWire(orientation, x, y, length, thickness) {
+      const wire = document.createElement('div');
+      wire.className = 'wire ' + orientation;
+      wire.style.left = x + 'px';
+      wire.style.top = y + 'px';
+      
+      if (orientation === 'horizontal') {
+        wire.style.width = length + 'px';
+        wire.style.height = thickness + 'px';
+      } else {
+        wire.style.width = thickness + 'px';
+        wire.style.height = length + 'px';
+      }
+      
+      return wire;
+    }
+
+    // Calculate circuit values
+    function calculateCircuit() {
+      updateResults();
+    }
+
+    // Update results display
+    function updateResults() {
+      const results = calculateCircuitValues();
+      
+      document.getElementById('configType').textContent = circuitState.config.charAt(0).toUpperCase() + circuitState.config.slice(1);
+      document.getElementById('batteryVoltage').textContent = circuitState.voltage;
+      document.getElementById('totalCapacitance').textContent = results.totalCapacitance.toFixed(2);
+      document.getElementById('totalCharge').textContent = results.totalCharge.toFixed(1);
+
+      const resultsGrid = document.getElementById('resultsGrid');
+      resultsGrid.innerHTML = `
+        <div class="result-item">
+          <strong>Total Capacitance:</strong><br>
+          ${results.totalCapacitance.toFixed(3)} μF
+        </div>
+        <div class="result-item">
+          <strong>Total Charge:</strong><br>
+          ${results.totalCharge.toFixed(2)} μC
+        </div>
+        <div class="result-item">
+          <strong>Voltage (electric potential) on C₁:</strong><br>
+          ${results.voltage1.toFixed(2)} V
+        </div>
+        <div class="result-item">
+          <strong>Voltage (electric potential) on C₂:</strong><br>
+          ${results.voltage2.toFixed(2)} V
+        </div>
+        <div class="result-item">
+          <strong>Voltage (electric potential) on C₃:</strong><br>
+          ${results.voltage3.toFixed(2)} V
+        </div>
+        <div class="result-item">
+          <strong>Charge on C₁:</strong><br>
+          ${results.charge1.toFixed(2)} μC
+        </div>
+        <div class="result-item">
+          <strong>Charge on C₂:</strong><br>
+          ${results.charge2.toFixed(2)} μC
+        </div>
+        <div class="result-item">
+          <strong>Charge on C₃:</strong><br>
+          ${results.charge3.toFixed(2)} μC
+        </div>
+      `;
+    }
+
+    // Calculate circuit values
+    function calculateCircuitValues() {
+      let totalCapacitance, totalCharge;
+      let charge1, charge2, charge3;
+      let voltage1, voltage2, voltage3;
+
+      if (circuitState.config === 'series') {
+        // Series calculation
+        totalCapacitance = 1 / (1/circuitState.c1 + 1/circuitState.c2 + 1/circuitState.c3);
+        totalCharge = totalCapacitance * circuitState.voltage;
+        
+        // In series, all capacitors have the same charge
+        charge1 = totalCharge;
+        charge2 = totalCharge;
+        charge3 = totalCharge;
+        
+        // Voltage across each capacitor in series
+        voltage1 = charge1 / circuitState.c1;
+        voltage2 = charge2 / circuitState.c2;
+        voltage3 = charge3 / circuitState.c3;
+      } else {
+        // Parallel calculation
+        totalCapacitance = circuitState.c1 + circuitState.c2 + circuitState.c3;
+        totalCharge = totalCapacitance * circuitState.voltage;
+        
+        // In parallel, charge is distributed based on capacitance
+        charge1 = circuitState.c1 * circuitState.voltage;
+        charge2 = circuitState.c2 * circuitState.voltage;
+        charge3 = circuitState.c3 * circuitState.voltage;
+        
+        // Voltage across each capacitor in parallel (same as battery voltage)
+        voltage1 = circuitState.voltage;
+        voltage2 = circuitState.voltage;
+        voltage3 = circuitState.voltage;
+      }
+
+      return {
+        totalCapacitance,
+        totalCharge,
+        charge1,
+        charge2,
+        charge3,
+        voltage1,
+        voltage2,
+        voltage3
+      };
+    }
+
+    // Reset circuit
+    function resetCircuit() {
+      circuitState = {
+        config: 'series',
+        voltage: 12,
+        c1: 1.0,
+        c2: 2.0,
+        c3: 3.0
+      };
+
+      document.getElementById('configSelect').value = 'series';
+      document.getElementById('voltageSlider').value = 12;
+      document.getElementById('c1Slider').value = 1;
+      document.getElementById('c2Slider').value = 2;
+      document.getElementById('c3Slider').value = 3;
+
+      document.getElementById('voltageDisplay').textContent = '12 V';
+      document.getElementById('c1Display').textContent = '1.0 μF';
+      document.getElementById('c2Display').textContent = '2.0 μF';
+      document.getElementById('c3Display').textContent = '3.0 μF';
+
+      updateCircuitDisplay();
+      updateResults();
+    }
+
+    // Show formulas
+    function showFormulas() {
+      alert(`Series Configuration:
+• Total Capacitance: 1/C_eq = 1/C₁ + 1/C₂ + 1/C₃
+• Total Charge: Q = C_eq × V
+• All capacitors have the same charge
+
+Parallel Configuration:
+• Total Capacitance: C_eq = C₁ + C₂ + C₃
+• Total Charge: Q = C_eq × V
+• Charge on each capacitor: Q_i = C_i × V
+
+Energy stored: E = ½ × C × V²`);
+    }
+
+
+
+    // Initialize when page loads
+    window.addEventListener('load', initSimulation);
+  </script>
+</body>
+</html> 

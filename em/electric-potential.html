@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study electric potential for AP Physics C. Learn about voltage, potential difference, equipotential surfaces, and the relationship between electric fields and potential." />
+  <title>Electric Potential</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .potential-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Potential</h1>
+
+    <p>
+      Electric potential is a scalar quantity that represents the electric potential energy per unit charge at a point in space. It provides a way to describe electric fields in terms of energy rather than force.
+    </p>
+
+    <h2>What is Electric Potential?</h2>
+
+    <div class="formula-box">
+      $$V = \frac{U}{q_0} = k\frac{q}{r}$$
+    </div>
+
+    <p>
+      Electric potential is defined as the electric potential energy <b>per unit test charge</b>. It depends only on the source charge and distance, not on the test charge used to measure it.
+    </p>
+
+    <ul>
+      <li><strong>V:</strong> Electric potential (V = J/C)</li>
+      <li><strong>U:</strong> Electric potential energy (J)</li>
+      <li><strong>q₀:</strong> Test charge (C)</li>
+      <li><strong>k:</strong> Coulomb's constant = 8.99 × 10⁹ N⋅m²/C²</li>
+      <li><strong>q:</strong> Source charge (C)</li>
+      <li><strong>r:</strong> Distance from source charge (m)</li>
+    </ul>
+
+    <figure>
+      <img src="electric-potential-diagram.jpg" alt="High-low potential" class="img-fluid-center">
+      <figcaption>
+        Electric potential decreases with distance from a positive charge.
+      </figcaption>
+    </figure>
+
+    <h2>Relationship to Electric Potential Energy</h2>
+
+    <div class="potential-box">
+      <h3>Key Relationship</h3>
+      <p>Electric potential energy equals the product of electric potential and charge:</p>
+      <p>$$U = qV$$</p>
+    </div>
+
+    <p>
+      This relationship shows that:
+    </p>
+
+    <ul>
+      <li><strong>Electric potential</strong> is a property of the field (independent of test charge)</li>
+      <li><strong>Electric potential energy</strong> depends on both the field and the test charge</li>
+      <li><strong>Positive potential</strong> means positive test charges gain energy</li>
+      <li><strong>Negative potential</strong> means positive test charges lose energy</li>
+    </ul>
+
+    <h2>Sign of Electric Potential</h2>
+
+    <div class="formula-box">
+      <h3>Potential Sign Rules</h3>
+      <ul>
+        <li><strong>Positive potential:</strong> Due to positive source charges</li>
+        <li><strong>Negative potential:</strong> Due to negative source charges</li>
+        <li><strong>Zero potential:</strong> At infinite distance from any charge</li>
+        <li><strong>Reference point:</strong> Usually taken as infinity (V = 0)</li>
+      </ul>
+    </div>
+
+    <h2>Multiple Charge Systems</h2>
+
+    <div class="formula-box">
+      $$V_{\text{total}} = k\sum_{i} \frac{q_i}{r_i}$$
+    </div>
+
+    <p>
+      For multiple source charges, the total electric potential is the scalar sum of the individual potentials. This is much simpler than vector addition for electric fields.
+    </p>
+
+    <h3>Example: Two Charges</h3>
+    <p>For two charges q₁ and q₂ at distances r₁ and r₂:</p>
+    <p>$$V = k\left(\frac{q_1}{r_1} + \frac{q_2}{r_2}\right)$$</p>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Electric Potential Due to a Point Charge</h3>
+      <p><strong>Problem:</strong> Calculate the electric potential 3.0 m from a point charge of +4.0 μC.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> q = +4.0 × 10⁻⁶ C, r = 3.0 m</li>
+          <li><strong>Formula:</strong> \(V = k\frac{q}{r}\)</li>
+          <li><strong>Substitute:</strong> \(V = (8.99 \times 10^9) \frac{4.0 \times 10^{-6}}{3.0}\)</li>
+          <li><strong>Calculate:</strong> \(V = 1.2 \times 10^4 \text{ V}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric potential is 1.2 × 10⁴ V (positive because the source charge is positive).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Electric Potential Due to Multiple Charges</h3>
+      <p><strong>Problem:</strong> Two charges, +2.0 μC and -1.0 μC, are placed at (0,0) and (2,0) respectively. Find the electric potential at point (1,0).</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Distance to +2.0 μC:</strong> r₁ = 1.0 m</li>
+          <li><strong>Distance to -1.0 μC:</strong> r₂ = 1.0 m</li>
+          <li><strong>Potential from +2.0 μC:</strong> \(V_1 = k\frac{2.0 \times 10^{-6}}{1.0} = 1.8 \times 10^4 \text{ V}\)</li>
+          <li><strong>Potential from -1.0 μC:</strong> \(V_2 = k\frac{-1.0 \times 10^{-6}}{1.0} = -9.0 \times 10^3 \text{ V}\)</li>
+          <li><strong>Total potential:</strong> \(V = V_1 + V_2 = 9.0 \times 10^3 \text{ V}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric potential at (1,0) is 9.0 × 10³ V.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Electric Potential Energy from Electric Potential</h3>
+      <p><strong>Problem:</strong> A charge of +3.0 μC is placed at a point where the electric potential is +5.0 × 10³ V. What is the electric potential energy of this charge?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> q = +3.0 × 10⁻⁶ C, V = +5.0 × 10³ V</li>
+          <li><strong>Formula:</strong> \(U = qV\)</li>
+          <li><strong>Substitute:</strong> \(U = (+3.0 \times 10^{-6})(+5.0 \times 10^3)\)</li>
+          <li><strong>Calculate:</strong> \(U = 1.5 \times 10^{-2} \text{ J}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric potential energy is 1.5 × 10⁻² J (positive because both q and V are positive).</p>
+    </div>
+
+
+
+    <h2>Electric Potential vs. Electric Field</h2>
+
+    <div class="formula-box">
+      <h3>Relationship</h3>
+      <p>Electric field is the negative gradient of electric potential:</p>
+      <p>$$\vec{E_x} = -\frac{dV}{dx}$$</p>
+      <p>
+        $$
+        \Delta V(x) = -\int \vec{E}_x \, dx
+        $$
+        </p>
+
+    </div>
+
+    <p>
+      This relationship means:
+    </p>
+
+    <ul>
+      <li><strong>Electric field</strong> points in the direction of decreasing potential</li>
+      <li><strong>Stronger fields</strong> correspond to steeper potential gradients</li>
+      <li><strong>Uniform fields</strong> correspond to linear potential changes</li>
+      <li><strong>Zero field</strong> corresponds to constant potential</li>
+    </ul>
+
+    <h2>Applications of Electric Potential</h2>
+
+    <ul>
+      <li><strong>Circuit analysis:</strong> Electric potential differences drive current flow</li>
+      <li><strong>Particle accelerators:</strong> High potential differences accelerate charged particles</li>
+      <li><strong>Capacitors:</strong> Potential difference between plates stores energy</li>
+      <li><strong>Electron microscopes:</strong> High potentials focus electron beams</li>
+      <li><strong>Lightning:</strong> Large potential differences cause electrical breakdown</li>
+    </ul>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A charge of -2.0 μC creates an electric potential of -1.0 × 10⁴ V at a certain point. What is the distance from the charge to this point?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> V = -1.0 × 10⁴ V, q = -2.0 × 10⁻⁶ C</li>
+            <li><strong>Formula:</strong> \(r = k\frac{q}{V}\)</li>
+            <li><strong>Substitute:</strong> \(r = (8.99 \times 10^9) \frac{-2.0 \times 10^{-6}}{-1.0 \times 10^4}\)</li>
+            <li><strong>Calculate:</strong> \(r = 1.8 \text{ m}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 1.8 m</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> Three charges are placed at the corners of an equilateral triangle: +1.0 μC, +2.0 μC, and -1.0 μC. The side length is 2.0 m. Find the electric potential at the center of the triangle.</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Distance to center:</strong> \(r = \frac{2.0}{\sqrt{3}} = 1.15 \text{ m}\)</li>
+            <li><strong>Potential from each charge:</strong> \(V_i = k\frac{q_i}{r}\)</li>
+            <li><strong>Total potential:</strong> \(V = k\frac{1.0 \times 10^{-6} + 2.0 \times 10^{-6} - 1.0 \times 10^{-6}}{1.15}\)</li>
+            <li><strong>Result:</strong> \(V = 1.6 \times 10^4 \text{ V}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 1.6 × 10⁴ V</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Electric potential</strong> is energy per unit charge</li>
+      <li><strong>It's a scalar quantity</strong> (easier to work with than electric field)</li>
+      <li><strong>Positive potential</strong> means positive charges gain energy</li>
+      <li><strong>Negative potential</strong> means positive charges lose energy</li>
+      <li><strong>Potential is additive</strong> for multiple charges</li>
+      <li><strong>Electric field</strong> points from high to low potential</li>
+    </ul>
+
+    <div class="note-box">
+      <h4>📝 Important Note</h4>
+      <p>Electric potential is often called "voltage" in practical applications, especially in circuits. We'll explore this connection when we study electric circuits and current flow.</p>
+    </div>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Single charge:</strong> \(V = k\frac{q}{r}\)</li>
+        <li><strong>Multiple charges:</strong> \(V = k\sum_{i} \frac{q_i}{r_i}\)</li>
+        <li><strong>Potential energy:</strong> \(U = qV\)</li>
+        <li><strong>Electric field:</strong> \(E = -\frac{dV}{dx}\)</li>
+        <li><strong>Units:</strong> V = J/C (Volts)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

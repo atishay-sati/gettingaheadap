@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study Faraday's law of electromagnetic induction for AP Physics C. Learn about induced EMF, changing magnetic flux, and electromagnetic induction with examples." />
+  <title>Faraday's Law of Induction</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .concept-card h3 {
+      color: #495057;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .concept-card p {
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+    .concept-card a {
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .concept-card a:hover {
+      text-decoration: underline;
+    }
+    .intro-section {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #155724;
+    }
+    .intro-section h2 {
+      color: #155724;
+      margin-top: 0;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .example-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .example-box h3 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .simulation-container {
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-container h3 {
+      color: #495057;
+      margin-top: 0;
+    }
+    canvas {
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      background: white;
+    }
+    .controls {
+      margin: 1rem 0;
+    }
+    .controls label {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+    .controls input {
+      margin-right: 1rem;
+      padding: 0.25rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .controls button {
+      background: #6f42c1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background: #5a32a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectromagneticInduction.html" class="back-link">← Back to Electromagnetic Induction</a>
+    <h1>Faraday's Law of Induction</h1>
+
+    <div class="intro-section">
+      <h2>Overview of Faraday's Law</h2>
+      <p>
+        Faraday's Law of Induction is one of the most fundamental principles in electromagnetism. Discovered by Michael Faraday in 1831, it states that a changing magnetic field induces an electromotive force (emf) in a conductor. This law is the foundation for understanding how generators work and how electromagnetic induction operates.
+      </p>
+      <p>
+        The law connects the rate of change of magnetic flux through a surface to the induced emf around the boundary of that surface. This relationship is crucial for understanding time-varying electromagnetic phenomena and is a cornerstone of Maxwell's equations.
+      </p>
+    </div>
+
+    <h2>Faraday's Law Statement</h2>
+    
+    <div class="formula-box">
+      <h3>Faraday's Law of Induction</h3>
+      <p><strong>The induced emf is equal to the negative rate of change of magnetic flux:</strong></p>
+      <p>\[ \mathcal{E} = -\frac{d\Phi_B}{dt} \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(\mathcal{E}\) is the induced electromotive force (emf) in volts</li>
+        <li>\(\Phi_B\) is the magnetic flux through the surface in webers</li>
+        <li>\(\frac{d\Phi_B}{dt}\) is the rate of change of magnetic flux</li>
+        <li>The negative sign indicates Lenz's Law (direction of induced current)</li>
+      </ul>
+    </div>
+
+    <h2>Formula Derivations</h2>
+
+    <div class="example-box">
+      <h3>Derivation 1: Motional EMF Formula</h3>
+      <p><strong>Derive:</strong> \(\mathcal{E} = BLv\) for a conductor moving through a magnetic field</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>Consider a conductor of length L moving at velocity v perpendicular to magnetic field B</li>
+        <li>The magnetic flux through the loop changes as the conductor moves</li>
+        <li>Flux change: \(\Delta\Phi_B = B \cdot \Delta A = B \cdot L \cdot \Delta x\)</li>
+        <li>Rate of change: \(\frac{d\Phi_B}{dt} = B \cdot L \cdot \frac{dx}{dt} = BLv\)</li>
+        <li>By Faraday's Law: \(\mathcal{E} = -\frac{d\Phi_B}{dt} = -BLv\)</li>
+        <li>For a complete circuit, the negative sign indicates direction, so: \(\mathcal{E} = BLv\)</li>
+      </ol>
+      <p><strong>Result:</strong> \(\mathcal{E} = BLv\) (This formula is NOT on the equation sheet)</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Derivation 2: Rotating Loop EMF</h3>
+      <p><strong>Derive:</strong> \(\mathcal{E} = BA\omega\sin(\omega t)\) for a rotating loop</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>Magnetic flux through a rotating loop: \(\Phi_B = BA\cos(\theta)\)</li>
+        <li>For rotation at angular velocity ω: \(\theta = \omega t\)</li>
+        <li>Flux becomes: \(\Phi_B = BA\cos(\omega t)\)</li>
+        <li>Rate of change: \(\frac{d\Phi_B}{dt} = -BA\omega\sin(\omega t)\)</li>
+        <li>By Faraday's Law: \(\mathcal{E} = -\frac{d\Phi_B}{dt} = BA\omega\sin(\omega t)\)</li>
+      </ol>
+      <p><strong>Result:</strong> \(\mathcal{E} = BA\omega\sin(\omega t)\) (This formula is NOT on the equation sheet)</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Derivation 3: Magnetic Force on Moving Rod</h3>
+      <p><strong>Derive:</strong> \(F = ILB\) for the magnetic force on a moving rod</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>When a rod moves through a magnetic field, it experiences motional EMF: \(\mathcal{E} = BLv\)</li>
+        <li>If the rod has resistance R, the induced current is: \(I = \frac{\mathcal{E}}{R} = \frac{BLv}{R}\)</li>
+        <li>The magnetic force on a current-carrying conductor is: \(F = ILB\) (from magnetic force on wire)</li>
+        <li>Substitute the induced current: \(F = \frac{BLv}{R} \cdot LB = \frac{B^2L^2v}{R}\)</li>
+        <li>This force opposes the motion (Lenz's Law)</li>
+      </ol>
+      <p><strong>Result:</strong> \(F = ILB\) where I is the induced current (This formula is NOT on the equation sheet)</p>
+    </div>
+
+    <h2>Key Concepts</h2>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Magnetic Flux</h3>
+        <p>
+          Magnetic flux (\(\Phi_B\)) is the product of magnetic field strength, area, and the cosine of the angle between the field and the normal to the surface:
+        </p>
+        <p>\[ \Phi_B = \vec{B} \cdot \vec{A} = BA\cos\theta \]</p>
+        <p>
+          The flux can change due to:
+        </p>
+        <ul>
+          <li>Changing magnetic field strength</li>
+          <li>Changing area of the loop</li>
+          <li>Changing orientation (angle)</li>
+        </ul>
+      </div>
+
+      <div class="concept-card">
+        <h3>Rate of Change</h3>
+        <p>
+          The induced emf depends on how quickly the flux changes, not the absolute value of the flux. This means:
+        </p>
+        <ul>
+          <li>Faster changes produce larger emf</li>
+          <li>Constant flux produces zero emf</li>
+          <li>The direction of change affects the sign</li>
+        </ul>
+        <p>
+          This is why generators need to rotate - to create a changing flux.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>Multiple Turns</h3>
+        <p>
+          For a coil with N turns, the total induced emf is:
+        </p>
+        <p>\[ \mathcal{E} = -N\frac{d\Phi_B}{dt} \]</p>
+        <p>
+          This is because each turn contributes to the total flux linkage, and the emf is proportional to the total flux linkage.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>Direction of Induced Current</h3>
+        <p>
+          The negative sign in Faraday's Law indicates that the induced current creates a magnetic field that opposes the change in flux that produced it. This is Lenz's Law in action.
+        </p>
+        <p>
+          The direction can be determined using the right-hand rule for the induced current.
+        </p>
+      </div>
+    </div>
+
+    <h2>Interactive Simulation</h2>
+    
+    <div class="simulation-container">
+      <h3>Faraday's Law Simulation</h3>
+      <p>Move the magnet to see how changing magnetic flux induces current in the coil.</p>
+      <canvas id="faradayCanvas" width="600" height="400"></canvas>
+      <div class="controls">
+        <label>Magnet Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="10" value="5">
+        <label>Coil Turns:</label>
+        <input type="number" id="turnsInput" value="10" min="1" max="20">
+        <button onclick="resetSimulation()">Reset</button>
+      </div>
+      <div id="simulationInfo">
+        <p><strong>Current Flux:</strong> <span id="fluxValue">0</span> Wb</p>
+        <p><strong>Rate of Change:</strong> <span id="rateValue">0</span> Wb/s</p>
+        <p><strong>Induced EMF:</strong> <span id="emfValue">0</span> V</p>
+      </div>
+    </div>
+
+    <h2>For Better Understanding:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/npls3sQP7xk?si=5awUntRPV0n4f9vT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Example Problems</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Simple Loop in Changing Field</h3>
+      <p><strong>Problem:</strong> A circular loop of radius 0.1 m is placed in a uniform magnetic field of 0.5 T. The field is increasing at a rate of 0.1 T/s. What is the induced emf in the loop?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Calculate the area: \(A = \pi r^2 = \pi(0.1)^2 = 0.0314 \text{ m}^2\)</li>
+        <li>Calculate the flux: \(\Phi_B = BA = (0.5)(0.0314) = 0.0157 \text{ Wb}\)</li>
+        <li>Calculate the rate of change: \(\frac{d\Phi_B}{dt} = A\frac{dB}{dt} = (0.0314)(0.1) = 0.00314 \text{ Wb/s}\)</li>
+        <li>Apply Faraday's Law: \(\mathcal{E} = -\frac{d\Phi_B}{dt} = -0.00314 \text{ V}\)</li>
+      </ol>
+      <p><strong>Answer:</strong> The induced emf is -3.14 mV (negative sign indicates direction).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Rotating Loop</h3>
+      <p><strong>Problem:</strong> A rectangular loop of area 0.02 m² rotates in a uniform magnetic field of 0.3 T at 60 rad/s. What is the maximum induced emf?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>The flux is: \(\Phi_B = BA\cos(\omega t)\)</li>
+        <li>The rate of change is: \(\frac{d\Phi_B}{dt} = -BA\omega\sin(\omega t)\)</li>
+        <li>The maximum emf occurs when \(\sin(\omega t) = \pm 1\)</li>
+        <li>Maximum emf: \(|\mathcal{E}| = BA\omega = (0.3)(0.02)(60) = 0.36 \text{ V}\)</li>
+      </ol>
+      <p><strong>Answer:</strong> The maximum induced emf is 0.36 V.</p>
+    </div>
+
+    <h2>Applications</h2>
+    <ul>
+      <li><strong>Electric Generators:</strong> Convert mechanical energy to electrical energy by rotating coils in magnetic fields</li>
+      <li><strong>Transformers:</strong> Use changing magnetic fields to transfer energy between circuits</li>
+      <li><strong>Induction Cooktops:</strong> Use changing magnetic fields to heat conductive materials</li>
+      <li><strong>Magnetic Recording:</strong> Use changing magnetic fields to store and retrieve information</li>
+      <li><strong>Wireless Charging:</strong> Transfer energy through changing magnetic fields without physical contact</li>
+    </ul>
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Faraday's Law</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. What does Faraday's Law relate?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Rate of change of magnetic flux to induced emf</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Electric field to magnetic field</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Current to resistance</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Voltage to power</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. If the magnetic flux through a loop is constant, what is the induced emf?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Maximum</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Zero</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Negative</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Positive</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. For a coil with N turns, the induced emf is:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">N times the single-turn emf</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The same as single-turn emf</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">1/N times the single-turn emf</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">N² times the single-turn emf</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. What happens to the induced emf if the rate of flux change doubles?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">It doubles</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">It halves</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">It stays the same</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">It quadruples</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. The negative sign in Faraday's Law represents:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy loss</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Lenz's Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Resistance</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Power dissipation</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li><strong>State Faraday's Law:</strong> Express the relationship between changing magnetic flux and induced emf</li>
+      <li><strong>Calculate Induced EMF:</strong> Use Faraday's Law to find induced emf in various situations</li>
+      <li><strong>Understand Flux Changes:</strong> Identify the different ways magnetic flux can change</li>
+      <li><strong>Apply to Multiple Turns:</strong> Calculate emf for coils with multiple turns</li>
+      <li><strong>Connect to Applications:</strong> Relate Faraday's Law to real-world devices</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Changing Flux:</strong> Only changing magnetic flux induces emf, not constant flux</li>
+      <li><strong>Rate Dependence:</strong> The induced emf is proportional to the rate of change of flux</li>
+      <li><strong>Multiple Turns:</strong> For N turns, the emf is N times the single-turn emf</li>
+      <li><strong>Direction:</strong> The negative sign indicates the direction of the induced current</li>
+      <li><strong>Fundamental Principle:</strong> Faraday's Law is the foundation for electromagnetic induction</li>
+    </ul>
+  </div>
+
+  <script>
+    // Faraday's Law Simulation
+    const canvas = document.getElementById('faradayCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let magnetX = 300;
+    let magnetY = 200;
+    let magnetVelocity = 0;
+    let coilX = 450;
+    let coilY = 200;
+    let coilRadius = 30;
+    let turns = 10;
+    let flux = 0;
+    let rateOfChange = 0;
+    let emf = 0;
+    
+    function drawMagnet(x, y) {
+      ctx.fillStyle = '#e74c3c';
+      ctx.fillRect(x - 15, y - 40, 30, 80);
+      ctx.fillStyle = '#c0392b';
+      ctx.fillRect(x - 10, y - 35, 20, 70);
+      ctx.fillStyle = '#2c3e50';
+      ctx.fillRect(x - 5, y - 30, 10, 60);
+    }
+    
+    function drawCoil(x, y, radius, numTurns) {
+      ctx.strokeStyle = '#3498db';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      
+      for (let i = 0; i < numTurns; i++) {
+        const angle = (i / numTurns) * 2 * Math.PI;
+        const coilX = x + radius * Math.cos(angle);
+        const coilY = y + radius * Math.sin(angle);
+        
+        if (i === 0) {
+          ctx.moveTo(coilX, coilY);
+        } else {
+          ctx.lineTo(coilX, coilY);
+        }
+      }
+      
+      ctx.stroke();
+      
+      // Draw coil center
+      ctx.fillStyle = '#3498db';
+      ctx.beginPath();
+      ctx.arc(x, y, 5, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+    
+    function calculateFlux() {
+      const distance = Math.abs(magnetX - coilX);
+      const maxFlux = 0.01;
+      const fluxFactor = Math.max(0, 1 - distance / 100);
+      return maxFlux * fluxFactor;
+    }
+    
+    function updateSimulation() {
+      // Update magnet position
+      magnetX += magnetVelocity;
+      
+      // Keep magnet within bounds
+      if (magnetX < 50) {
+        magnetX = 50;
+        magnetVelocity = 0;
+      } else if (magnetX > 550) {
+        magnetX = 550;
+        magnetVelocity = 0;
+      }
+      
+      // Calculate flux and rate of change
+      const newFlux = calculateFlux();
+      rateOfChange = newFlux - flux;
+      flux = newFlux;
+      emf = -rateOfChange * turns;
+      
+      // Update display
+      document.getElementById('fluxValue').textContent = flux.toFixed(4);
+      document.getElementById('rateValue').textContent = rateOfChange.toFixed(4);
+      document.getElementById('emfValue').textContent = emf.toFixed(4);
+      
+      // Draw everything
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw background
+      ctx.fillStyle = '#ecf0f1';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw coil
+      drawCoil(coilX, coilY, coilRadius, turns);
+      
+      // Draw magnet
+      drawMagnet(magnetX, magnetY);
+      
+      // Draw field lines
+      ctx.strokeStyle = '#95a5a6';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 5; i++) {
+        const y = 100 + i * 50;
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+      
+      // Draw current indicator
+      if (Math.abs(emf) > 0.001) {
+        ctx.fillStyle = emf > 0 ? '#27ae60' : '#e74c3c';
+        ctx.beginPath();
+        ctx.arc(coilX, coilY, 15, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = 'white';
+        ctx.font = '12px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(emf > 0 ? '→' : '←', coilX, coilY + 4);
+      }
+    }
+    
+    function resetSimulation() {
+      magnetX = 300;
+      magnetY = 200;
+      magnetVelocity = 0;
+      flux = 0;
+      rateOfChange = 0;
+      emf = 0;
+    }
+    
+    // Event listeners
+    document.getElementById('speedSlider').addEventListener('input', function() {
+      magnetVelocity = (this.value - 5) * 0.5;
+    });
+    
+    document.getElementById('turnsInput').addEventListener('input', function() {
+      turns = parseInt(this.value);
+    });
+    
+    // Animation loop
+    setInterval(updateSimulation, 50);
+    
+    // Quiz functionality
+    function checkAnswer(element, result) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      element.classList.add(result);
+      
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

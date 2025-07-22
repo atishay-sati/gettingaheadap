@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about RC circuits for AP Physics C. Study time constant, charging/discharging behavior, and practical applications in circuits." />
+  <title>RC Circuits and Transient Behavior</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* RC Circuit specific styles */
+    .time-constant-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .transient-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .charging-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .sign-convention {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>RC Circuits and Transient Behavior</h1>
+
+    <p>
+      RC circuits consist of resistors and capacitors connected together. These circuits exhibit transient behavior, meaning their voltage and current change over time when the circuit is switched on or off. Understanding RC circuits is crucial for analyzing timing circuits, filters, and energy storage systems.
+    </p>
+
+    <img src="RC-diagram.png" class="img-fluid-center">
+
+    <h2>Time Constant</h2>
+
+    <div class="time-constant-box">
+      <h3>🎯 Time Constant Definition</h3>
+      <p><strong>The time constant τ (tau) determines how quickly an RC circuit responds to changes.</strong></p>
+      <p>It represents the time required for the voltage or current to change by 63.2% of its total change.</p>
+    </div>
+
+    <div class="formula-box">
+      $$\tau = RC$$
+    </div>
+
+    <p>
+      The time constant is the product of resistance and capacitance. It has units of seconds and characterizes the speed of the circuit's response to changes.
+    </p>
+
+
+    <h3>Physical Interpretation</h3>
+    <ul>
+      <li><strong>Small τ:</strong> Fast response, quick charging/discharging</li>
+      <li><strong>Large τ:</strong> Slow response, gradual charging/discharging</li>
+      <li><strong>5τ Rule:</strong> After 5 time constants, the circuit reaches 99.3% of its final value</li>
+      <li><strong>Units:</strong> τ = (ohms) × (farads) = seconds</li>
+    </ul>
+
+    <img src="time-constant.webp" class="img-fluid-center">
+
+    
+
+    <div class="example-box">
+      <h3>Example: Calculating Time Constant</h3>
+      <p><strong>Problem:</strong> Find the time constant of an RC circuit with R = 10kΩ and C = 100μF.</p>
+
+      <h4>Step 1: Use Time Constant Formula</h4>
+      <div class="formula-box">
+        $$\tau = RC$$
+        $$\tau = (10kΩ)(100μF)$$
+      </div>
+
+      <h4>Step 2: Convert Units</h4>
+      <div class="formula-box">
+        $$\tau = (10 \times 10^3Ω)(100 \times 10^{-6}F)$$
+        $$\tau = 10^4 \times 10^{-4}s = 1s$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The time constant is 1 second.</strong></p>
+    </div>
+
+    <h2>Mathematical Derivation</h2>
+
+    <div class="example-box">
+      <h3>Differential Equation for RC Circuit</h3>
+      <p>For an RC circuit with battery voltage V₀, we can write Kirchhoff's voltage law:</p>
+      <div class="formula-box">
+        $$V_0 = V_R + V_C = IR + \frac{Q}{C}$$
+      </div>
+      <p>Since I = dQ/dt, we get the differential equation:</p>
+      <div class="formula-box">
+        $$V_0 = R\frac{dQ}{dt} + \frac{Q}{C}$$
+      </div>
+      <p>Rearranging:</p>
+      <div class="formula-box">
+        $$\frac{dQ}{dt} + \frac{Q}{RC} = \frac{V_0}{R}$$
+      </div>
+      <p>This is a first-order linear differential equation with solution:</p>
+      <div class="formula-box">
+        $$Q(t) = CV_0(1 - e^{-t/RC})$$
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3>Deriving V(t) from Q(t)</h3>
+      <p>Since V = Q/C:</p>
+      <div class="formula-box">
+        $$V_C(t) = \frac{Q(t)}{C} = \frac{CV_0(1 - e^{-t/RC})}{C} = V_0(1 - e^{-t/RC})$$
+      </div>
+      <p>With τ = RC:</p>
+      <div class="formula-box">
+        $$V_C(t) = V_0(1 - e^{-t/\tau})$$
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3>Deriving I(t) from Q(t)</h3>
+      <p>Since I = dQ/dt:</p>
+      <div class="formula-box">
+        $$I(t) = \frac{d}{dt}[CV_0(1 - e^{-t/RC})] = CV_0 \cdot \frac{d}{dt}(1 - e^{-t/RC})$$
+      </div>
+      <p>Using the chain rule:</p>
+      <div class="formula-box">
+        $$I(t) = CV_0 \cdot \frac{1}{RC}e^{-t/RC} = \frac{V_0}{R}e^{-t/RC}$$
+      </div>
+      <p>With τ = RC:</p>
+      <div class="formula-box">
+        $$I(t) = \frac{V_0}{R}e^{-t/\tau}$$
+      </div>
+    </div>
+
+    <h2>Charging Process</h2>
+
+    <div class="charging-box">
+      <h3>⚡ Charging Behavior</h3>
+      <p><strong>When a capacitor charges, voltage increases exponentially toward the battery voltage.</strong></p>
+      <p>Current decreases exponentially as the capacitor fills up.</p>
+    </div>
+
+    <h3>Voltage During Charging</h3>
+    <div class="formula-box">
+      $$V_C(t) = V_0(1 - e^{-t/\tau})$$
+    </div>
+
+    <h3>Current During Charging</h3>
+    <div class="formula-box">
+      $$I(t) = \frac{V_0}{R}e^{-t/\tau}$$
+    </div>
+
+    <p>
+      During charging, the capacitor voltage starts at zero and approaches the battery voltage exponentially. The current starts at its maximum value and decreases exponentially to zero.
+    </p>
+
+    <div class="example-box">
+      <h3>Example: Charging Analysis</h3>
+      <p><strong>Problem:</strong> In an RC circuit with τ = 2s and V₀ = 12V, find the capacitor voltage after 4 seconds.</p>
+
+      <h4>Step 1: Use Charging Formula</h4>
+      <div class="formula-box">
+        $$V_C(t) = V_0(1 - e^{-t/\tau})$$
+        $$V_C(4s) = 12V(1 - e^{-4s/2s})$$
+      </div>
+
+      <h4>Step 2: Calculate Exponential</h4>
+      <div class="formula-box">
+        $$V_C(4s) = 12V(1 - e^{-2})$$
+        $$V_C(4s) = 12V(1 - 0.135)$$
+        $$V_C(4s) = 12V(0.865) = 10.38V$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The capacitor voltage is 10.38V after 4 seconds.</strong></p>
+    </div>
+
+    <h2>Discharging Process</h2>
+
+    <div class="example-box">
+      <h3>Differential Equation for Discharging</h3>
+      <p>When the switch opens, the battery is disconnected. Kirchhoff's voltage law becomes:</p>
+      <div class="formula-box">
+        $$0 = V_R + V_C = IR + \frac{Q}{C}$$
+      </div>
+      <p>Since I = dQ/dt:</p>
+      <div class="formula-box">
+        $$R\frac{dQ}{dt} + \frac{Q}{C} = 0$$
+      </div>
+      <p>Rearranging:</p>
+      <div class="formula-box">
+        $$\frac{dQ}{dt} + \frac{Q}{RC} = 0$$
+      </div>
+      <p>This is a first-order linear differential equation with solution:</p>
+      <div class="formula-box">
+        $$Q(t) = Q_0e^{-t/RC}$$
+      </div>
+      <p>Where Q₀ is the initial charge on the capacitor.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Deriving V(t) for Discharging</h3>
+      <p>Since V = Q/C and Q₀ = CV₀:</p>
+      <div class="formula-box">
+        $$V_C(t) = \frac{Q(t)}{C} = \frac{Q_0e^{-t/RC}}{C} = \frac{CV_0e^{-t/RC}}{C} = V_0e^{-t/RC}$$
+      </div>
+      <p>With τ = RC:</p>
+      <div class="formula-box">
+        $$V_C(t) = V_0e^{-t/\tau}$$
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3>Deriving I(t) for Discharging</h3>
+      <p>Since I = dQ/dt:</p>
+      <div class="formula-box">
+        $$I(t) = \frac{d}{dt}[Q_0e^{-t/RC}] = Q_0 \cdot \frac{d}{dt}(e^{-t/RC})$$
+      </div>
+      <p>Using the chain rule:</p>
+      <div class="formula-box">
+        $$I(t) = Q_0 \cdot (-\frac{1}{RC})e^{-t/RC} = -\frac{Q_0}{RC}e^{-t/RC}$$
+      </div>
+      <p>Since Q₀ = CV₀:</p>
+      <div class="formula-box">
+        $$I(t) = -\frac{CV_0}{RC}e^{-t/RC} = -\frac{V_0}{R}e^{-t/RC}$$
+      </div>
+      <p>With τ = RC:</p>
+      <div class="formula-box">
+        $$I(t) = -\frac{V_0}{R}e^{-t/\tau}$$
+      </div>
+      <p>The negative sign indicates current flows in the opposite direction during discharging.</p>
+    </div>
+
+    <div class="transient-box">
+      <h3>🎯 Discharging Behavior</h3>
+      <p><strong>When a capacitor discharges, voltage decreases exponentially toward zero.</strong></p>
+      <p>Current also decreases exponentially but flows in the opposite direction.</p>
+    </div>
+
+    <h3>Voltage During Discharging</h3>
+    <div class="formula-box">
+      $$V_C(t) = V_0e^{-t/\tau}$$
+    </div>
+
+    <h3>Current During Discharging</h3>
+    <div class="formula-box">
+      $$I(t) = -\frac{V_0}{R}e^{-t/\tau}$$
+    </div>
+
+    <p>
+      During discharging, the capacitor voltage starts at its initial value and decreases exponentially to zero. The current flows in the opposite direction and also decreases exponentially.
+    </p>
+
+    <div class="example-box">
+      <h3>Example: Discharging Analysis</h3>
+      <p><strong>Problem:</strong> A capacitor initially charged to 9V discharges through a resistor. If τ = 3s, find the voltage after 6 seconds.</p>
+
+      <h4>Step 1: Use Discharging Formula</h4>
+      <div class="formula-box">
+        $$V_C(t) = V_0e^{-t/\tau}$$
+        $$V_C(6s) = 9Ve^{-6s/3s}$$
+      </div>
+
+      <h4>Step 2: Calculate Exponential</h4>
+      <div class="formula-box">
+        $$V_C(6s) = 9Ve^{-2}$$
+        $$V_C(6s) = 9V(0.135) = 1.22V$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The capacitor voltage is 1.22V after 6 seconds.</strong></p>
+    </div>
+
+    <h2>Key Time Points</h2>
+
+    <h3>Important Time Intervals</h3>
+    <ul>
+      <li><strong>t = τ:</strong> 63.2% of total change (charging: 63.2% of V₀, discharging: 36.8% of V₀)</li>
+      <li><strong>t = 2τ:</strong> 86.5% of total change</li>
+      <li><strong>t = 3τ:</strong> 95.0% of total change</li>
+      <li><strong>t = 5τ:</strong> 99.3% of total change (practically complete)</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Time Point Analysis</h3>
+      <p><strong>Problem:</strong> A 10V capacitor discharges with τ = 1s. Find the voltage at t = 2τ.</p>
+
+      <h4>Step 1: Calculate Time</h4>
+      <div class="formula-box">
+        $$t = 2\tau = 2(1s) = 2s$$
+      </div>
+
+      <h4>Step 2: Use Discharging Formula</h4>
+      <div class="formula-box">
+        $$V_C(2s) = 10Ve^{-2s/1s} = 10Ve^{-2}$$
+        $$V_C(2s) = 10V(0.135) = 1.35V$$
+      </div>
+
+      <h4>Verification</h4>
+      <p>At t = 2τ, the voltage should be 13.5% of the initial value, which matches our calculation.</p>
+
+      <h4>Answer</h4>
+      <p><strong>The voltage is 1.35V at t = 2τ.</strong></p>
+    </div>
+
+    
+
+    <h2>This video really helps sum everything up:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FYsfp4bZc2w?si=_kPUyUpJTY0iST9j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Interactive RC Circuit Simulation</h2>
+
+    <div class="simulation-container" style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+      <h3>RC Circuit Parameters</h3>
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1rem;">
+        <div>
+          <label for="batteryVoltage">Battery Voltage (V):</label>
+          <input type="range" id="batteryVoltage" min="1" max="20" value="12" step="1" style="width: 150px;">
+          <span id="voltageValue">12V</span>
+        </div>
+        <div>
+          <label for="resistance">Resistance (kΩ):</label>
+          <input type="range" id="resistance" min="1" max="20" value="10" step="1" style="width: 150px;">
+          <span id="resistanceValue">10kΩ</span>
+        </div>
+        <div>
+          <label for="capacitance">Capacitance (μF):</label>
+          <input type="range" id="capacitance" min="1" max="100" value="100" step="1" style="width: 150px;">
+          <span id="capacitanceValue">100μF</span>
+        </div>
+      </div>
+      
+             <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1rem;">
+         <button id="startCharging" style="background: #28a745; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Close Switch (Charge)</button>
+         <button id="startDischarging" style="background: #dc3545; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Open Switch (Discharge)</button>
+         <button id="reset" style="background: #6c757d; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Reset</button>
+       </div>
+
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 2;">
+          <canvas id="circuitCanvas" width="600" height="300" style="border: 2px solid #6f42c1; border-radius: 8px; background: white;"></canvas>
+        </div>
+      </div>
+      
+      <div style="margin-top: 2rem;">
+        <h4>Circuit Values</h4>
+        <div id="circuitValues" style="background: white; padding: 1rem; border-radius: 5px; border: 1px solid #dee2e6; max-width: 600px;">
+          <p><strong>Time Constant (τ):</strong> <span id="timeConstant">1.0s</span></p>
+          <p><strong>Capacitor Voltage:</strong> <span id="capacitorVoltage">0.0V</span></p>
+          <p><strong>Current:</strong> <span id="current">0.0mA</span></p>
+          <p><strong>Time Elapsed:</strong> <span id="timeElapsed">0.0s</span></p>
+          <p><strong>Status:</strong> <span id="status">Ready</span></p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h4>Real-time Graphs</h4>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 300px;">
+            <h5>Voltage vs Time</h5>
+            <canvas id="voltageGraph" width="300" height="200" style="background: white; border: 2px solid #6f42c1; border-radius: 8px;"></canvas>
+          </div>
+          <div style="flex: 1; min-width: 300px;">
+            <h5>Current vs Time</h5>
+            <canvas id="currentGraph" width="300" height="200" style="background: white; border: 2px solid #28a745; border-radius: 8px;"></canvas>
+          </div>
+          <div style="flex: 1; min-width: 300px;">
+            <h5>Charge vs Time</h5>
+            <canvas id="chargeGraph" width="300" height="200" style="background: white; border: 2px solid #ffc107; border-radius: 8px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>Time Constant:</strong> τ = RC determines circuit response speed</li>
+      <li><strong>Charging:</strong> Voltage increases exponentially, current decreases</li>
+      <li><strong>Discharging:</strong> Voltage decreases exponentially, current reverses</li>
+      <li><strong>5τ Rule:</strong> Circuit reaches 99.3% of final value after 5τ</li>
+      <li><strong>Exponential Behavior:</strong> All RC circuit responses follow exponential functions</li>
+      <li><strong>Practical Importance:</strong> Essential for timing, filtering, and energy applications</li>
+    </ul>
+
+  </div>
+
+  <script>
+    // RC Circuit Simulation
+    const canvas = document.getElementById('circuitCanvas');
+    const ctx = canvas.getContext('2d');
+    
+         // Circuit parameters
+     let batteryVoltage = 12;
+     let resistance = 10; // kΩ
+     let capacitance = 100; // μF
+     let timeConstant = resistance * capacitance / 1000; // seconds
+     
+     // Simulation state
+     let isCharging = false;
+     let isDischarging = false;
+     let startTime = 0;
+     let currentTime = 0;
+     let capacitorVoltage = 0;
+     let current = 0;
+     let animationId = null;
+     let switchClosed = false; // Track switch state
+     let totalElapsedTime = 0; // Track total time for graph
+     
+     // Graph data
+     let voltageHistory = [];
+     let currentHistory = [];
+     let chargeHistory = [];
+     let timeHistory = [];
+     const maxDataPoints = 200;
+     
+     // Graph canvases
+     const voltageCanvas = document.getElementById('voltageGraph');
+     const currentCanvas = document.getElementById('currentGraph');
+     const chargeCanvas = document.getElementById('chargeGraph');
+     const vCtx = voltageCanvas.getContext('2d');
+     const cCtx = currentCanvas.getContext('2d');
+     const qCtx = chargeCanvas.getContext('2d');
+    
+    // Update display values
+    function updateDisplay() {
+      document.getElementById('voltageValue').textContent = batteryVoltage + 'V';
+      document.getElementById('resistanceValue').textContent = resistance + 'kΩ';
+      document.getElementById('capacitanceValue').textContent = capacitance + 'μF';
+      document.getElementById('timeConstant').textContent = timeConstant.toFixed(1) + 's';
+             document.getElementById('capacitorVoltage').textContent = capacitorVoltage.toFixed(8) + 'V';
+      document.getElementById('current').textContent = current.toFixed(2) + 'mA';
+      document.getElementById('timeElapsed').textContent = currentTime.toFixed(1) + 's';
+    }
+    
+    // Draw circuit
+    function drawCircuit() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Battery
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(50, 100);
+      ctx.lineTo(50, 140);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(50, 160);
+      ctx.lineTo(50, 200);
+      ctx.stroke();
+
+      
+      ctx.beginPath();
+      ctx.moveTo(40, 140);
+      ctx.lineTo(60, 140);
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.moveTo(40, 160);
+      ctx.lineTo(60, 160);
+      ctx.stroke();
+      
+      // Battery label
+      ctx.fillStyle = '#dc3545';
+      ctx.font = '14px Arial';
+      ctx.fillText(batteryVoltage + 'V', 60, 155);
+      
+      // Resistor
+      ctx.strokeStyle = '#6f42c1';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(150, 100);
+      ctx.lineTo(200, 100);
+      ctx.lineTo(210, 110);
+      ctx.lineTo(220, 90);
+      ctx.lineTo(230, 110);
+      ctx.lineTo(240, 90);
+      ctx.lineTo(250, 110);
+      ctx.lineTo(260, 100);
+      ctx.lineTo(300, 100);
+      ctx.stroke();
+      
+      // Resistor label
+      ctx.fillStyle = '#6f42c1';
+      ctx.fillText(resistance + 'kΩ', 200, 85);
+      
+      // Capacitor
+      ctx.strokeStyle = '#28a745';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(300, 100);
+      ctx.lineTo(350, 100);
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.moveTo(350, 80);
+      ctx.lineTo(350, 120);
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.moveTo(370, 80);
+      ctx.lineTo(370, 120);
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.moveTo(370, 100);
+      ctx.lineTo(420, 100);
+      ctx.stroke();
+      
+      // Capacitor label
+      ctx.fillStyle = '#28a745';
+      ctx.fillText(capacitance + 'μF', 350, 75);
+      
+             // Switch
+       ctx.strokeStyle = '#ff6b35';
+       ctx.lineWidth = 3;
+       if (switchClosed) {
+         // Switch closed - straight line
+         ctx.beginPath();
+         ctx.moveTo(50, 100);
+         ctx.lineTo(150, 100);
+         ctx.stroke();
+       } else {
+         // Switch open - broken line
+         ctx.beginPath();
+         ctx.moveTo(50, 100);
+         ctx.lineTo(120, 100);
+         ctx.stroke();
+         
+         ctx.beginPath();
+         ctx.moveTo(130, 100);
+         ctx.lineTo(150, 100);
+         ctx.stroke();
+         
+         // Draw switch gap
+         ctx.strokeStyle = '#ff6b35';
+         ctx.lineWidth = 2;
+         ctx.beginPath();
+         ctx.moveTo(125, 95);
+         ctx.lineTo(125, 105);
+         ctx.stroke();
+       }
+       
+       // Switch label
+       ctx.fillStyle = '#ff6b35';
+       ctx.font = '12px Arial';
+       ctx.fillText('SW', 100, 85);
+       
+       // Wires
+       ctx.strokeStyle = '#333';
+       ctx.lineWidth = 2;
+       ctx.beginPath();
+       ctx.moveTo(420, 100);
+       ctx.lineTo(420, 200);
+       ctx.lineTo(50, 200);
+       ctx.stroke();
+      
+      // Current arrow
+      if (isCharging || isDischarging) {
+        ctx.strokeStyle = '#ffc107';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(175, 95);
+        ctx.lineTo(185, 95);
+        ctx.lineTo(180, 90);
+        ctx.moveTo(185, 95);
+        ctx.lineTo(180, 100);
+        ctx.stroke();
+      }
+      
+             // Voltage indicator
+       ctx.fillStyle = '#ffc107';
+       ctx.font = 'bold 16px Arial';
+       ctx.fillText('V = ' + capacitorVoltage.toFixed(8) + 'V', 300, 150);
+    }
+    
+         // Update simulation
+     function updateSimulation() {
+       if (isCharging) {
+         currentTime = (Date.now() - startTime) / 1000;
+         totalElapsedTime = (Date.now() - startTime) / 1000;
+         let calculatedVoltage = batteryVoltage * (1 - Math.exp(-currentTime / timeConstant));
+         
+         // Hold at 11.9999999 until 100 seconds, then jump to 12
+         if (calculatedVoltage >= 11.9999999 && currentTime < 100) {
+           capacitorVoltage = 11.9999999;
+         } else if (currentTime >= 100) {
+           capacitorVoltage = batteryVoltage;
+         } else {
+           capacitorVoltage = calculatedVoltage;
+         }
+         
+         current = (batteryVoltage / resistance) * Math.exp(-currentTime / timeConstant);
+         
+         if (currentTime > 100) {
+           isCharging = false;
+           document.getElementById('status').textContent = 'Fully Charged (100s)';
+         } else {
+           document.getElementById('status').textContent = 'Charging...';
+         }
+       } else if (isDischarging) {
+         currentTime = (Date.now() - startTime) / 1000;
+         totalElapsedTime = totalElapsedTime + (Date.now() - startTime) / 1000;
+         // Use current capacitor voltage as initial value for discharging
+         let initialVoltage = voltageHistory.length > 0 ? voltageHistory[voltageHistory.length - 1] : batteryVoltage;
+         let calculatedVoltage = initialVoltage * Math.exp(-currentTime / timeConstant);
+         
+         // Hold at 0.0000001 until 100 seconds, then jump to 0
+         if (calculatedVoltage <= 0.0000001 && currentTime < 100) {
+           capacitorVoltage = 0.0000001;
+         } else if (currentTime >= 100) {
+           capacitorVoltage = 0;
+         } else {
+           capacitorVoltage = calculatedVoltage;
+         }
+         
+         current = -(initialVoltage / resistance) * Math.exp(-currentTime / timeConstant);
+         
+         if (currentTime > 100) {
+           isDischarging = false;
+           document.getElementById('status').textContent = 'Fully Discharged (100s)';
+         } else {
+           document.getElementById('status').textContent = 'Discharging...';
+         }
+       }
+       
+       updateDisplay();
+       drawCircuit();
+       updateGraphs();
+       
+       if (isCharging || isDischarging) {
+         animationId = requestAnimationFrame(updateSimulation);
+       }
+     }
+    
+    // Event listeners
+    document.getElementById('batteryVoltage').addEventListener('input', function() {
+      batteryVoltage = parseInt(this.value);
+      updateDisplay();
+      drawCircuit();
+    });
+    
+    document.getElementById('resistance').addEventListener('input', function() {
+      resistance = parseInt(this.value);
+      timeConstant = resistance * capacitance / 1000;
+      updateDisplay();
+      drawCircuit();
+    });
+    
+    document.getElementById('capacitance').addEventListener('input', function() {
+      capacitance = parseInt(this.value);
+      timeConstant = resistance * capacitance / 1000;
+      updateDisplay();
+      drawCircuit();
+    });
+    
+         document.getElementById('startCharging').addEventListener('click', function() {
+       if (animationId) cancelAnimationFrame(animationId);
+       switchClosed = true;
+       isCharging = true;
+       isDischarging = false;
+       startTime = Date.now();
+       currentTime = 0;
+       document.getElementById('status').textContent = 'Switch Closed - Charging...';
+       updateSimulation();
+     });
+     
+     document.getElementById('startDischarging').addEventListener('click', function() {
+       if (animationId) cancelAnimationFrame(animationId);
+       switchClosed = false;
+       isDischarging = true;
+       isCharging = false;
+       startTime = Date.now();
+       currentTime = 0;
+       // Continue total elapsed time from where we left off
+       let lastTime = timeHistory.length > 0 ? timeHistory[timeHistory.length - 1] : 0;
+       totalElapsedTime = lastTime;
+       document.getElementById('status').textContent = 'Switch Open - Discharging...';
+       updateSimulation();
+     });
+    
+         document.getElementById('reset').addEventListener('click', function() {
+       if (animationId) cancelAnimationFrame(animationId);
+       isCharging = false;
+       isDischarging = false;
+       switchClosed = false;
+       currentTime = 0;
+       totalElapsedTime = 0;
+       capacitorVoltage = 0;
+       current = 0;
+       document.getElementById('status').textContent = 'Ready - Switch Open';
+       updateDisplay();
+       drawCircuit();
+       clearGraphs();
+     });
+    
+         // Graph drawing functions
+     function drawGraph(ctx, data, timeData, title, color, yAxisLabel, maxValue) {
+       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+       
+       // Draw axes
+       ctx.strokeStyle = "#888";
+       ctx.lineWidth = 1;
+       ctx.beginPath();
+       // X axis
+       ctx.moveTo(40, ctx.canvas.height - 20);
+       ctx.lineTo(ctx.canvas.width - 20, ctx.canvas.height - 20);
+       // Y axis
+       ctx.moveTo(40, 20);
+       ctx.lineTo(40, ctx.canvas.height - 20);
+       ctx.stroke();
+       
+       // Labels
+       ctx.fillStyle = "#333";
+       ctx.font = "10px Arial";
+       ctx.fillText("Time (s)", ctx.canvas.width - 50, ctx.canvas.height - 5);
+       ctx.fillText(yAxisLabel, 5, 15);
+       
+       if (data.length < 2) return;
+       
+       // Draw grid lines
+       ctx.strokeStyle = "#eee";
+       ctx.lineWidth = 1;
+       for (let i = 0; i <= 5; i++) {
+         const y = 20 + (ctx.canvas.height - 40) * i / 5;
+         ctx.beginPath();
+         ctx.moveTo(40, y);
+         ctx.lineTo(ctx.canvas.width - 20, y);
+         ctx.stroke();
+       }
+       
+       // Draw the curve
+       ctx.strokeStyle = color;
+       ctx.lineWidth = 2;
+       ctx.beginPath();
+       
+       data.forEach((value, index) => {
+         const x = 40 + (timeData[index] / Math.max(...timeData)) * (ctx.canvas.width - 60);
+         const y = ctx.canvas.height - 20 - (value / maxValue) * (ctx.canvas.height - 40);
+         
+         if (index === 0) {
+           ctx.moveTo(x, y);
+         } else {
+           ctx.lineTo(x, y);
+         }
+       });
+       
+       ctx.stroke();
+       
+       // Draw current point
+       if (data.length > 0) {
+         const lastValue = data[data.length - 1];
+         const lastTime = timeData[timeData.length - 1];
+         const x = 40 + (lastTime / Math.max(...timeData)) * (ctx.canvas.width - 60);
+         const y = ctx.canvas.height - 20 - (lastValue / maxValue) * (ctx.canvas.height - 40);
+         
+         ctx.fillStyle = color;
+         ctx.beginPath();
+         ctx.arc(x, y, 3, 0, 2 * Math.PI);
+         ctx.fill();
+       }
+     }
+     
+     function drawCurrentGraph(ctx, data, timeData, title, color, yAxisLabel, maxValue) {
+       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+       
+       // Draw axes
+       ctx.strokeStyle = "#888";
+       ctx.lineWidth = 1;
+       ctx.beginPath();
+       // X axis
+       ctx.moveTo(40, ctx.canvas.height / 2);
+       ctx.lineTo(ctx.canvas.width - 20, ctx.canvas.height / 2);
+       // Y axis
+       ctx.moveTo(40, 20);
+       ctx.lineTo(40, ctx.canvas.height - 20);
+       ctx.stroke();
+       
+       // Labels
+       ctx.fillStyle = "#333";
+       ctx.font = "10px Arial";
+       ctx.fillText("Time (s)", ctx.canvas.width - 50, ctx.canvas.height - 5);
+       ctx.fillText(yAxisLabel, 5, 15);
+       
+       if (data.length < 2) return;
+       
+       // Draw grid lines
+       ctx.strokeStyle = "#eee";
+       ctx.lineWidth = 1;
+       for (let i = 0; i <= 4; i++) {
+         const y = 20 + (ctx.canvas.height - 40) * i / 4;
+         ctx.beginPath();
+         ctx.moveTo(40, y);
+         ctx.lineTo(ctx.canvas.width - 20, y);
+         ctx.stroke();
+       }
+       
+       // Find min and max for scaling
+       const maxCurrent = Math.max(...data.map(Math.abs));
+       const minCurrent = -maxCurrent;
+       
+       // Draw the curve
+       ctx.strokeStyle = color;
+       ctx.lineWidth = 2;
+       ctx.beginPath();
+       
+       data.forEach((value, index) => {
+         const x = 40 + (timeData[index] / Math.max(...timeData)) * (ctx.canvas.width - 60);
+         const y = ctx.canvas.height / 2 - (value / maxCurrent) * (ctx.canvas.height / 2 - 20);
+         
+         if (index === 0) {
+           ctx.moveTo(x, y);
+         } else {
+           ctx.lineTo(x, y);
+         }
+       });
+       
+       ctx.stroke();
+       
+       // Draw current point
+       if (data.length > 0) {
+         const lastValue = data[data.length - 1];
+         const lastTime = timeData[timeData.length - 1];
+         const x = 40 + (lastTime / Math.max(...timeData)) * (ctx.canvas.width - 60);
+         const y = ctx.canvas.height / 2 - (lastValue / maxCurrent) * (ctx.canvas.height / 2 - 20);
+         
+         ctx.fillStyle = color;
+         ctx.beginPath();
+         ctx.arc(x, y, 3, 0, 2 * Math.PI);
+         ctx.fill();
+       }
+       
+       // Draw zero line
+       ctx.strokeStyle = "#999";
+       ctx.lineWidth = 1;
+       ctx.setLineDash([5, 5]);
+       ctx.beginPath();
+       ctx.moveTo(40, ctx.canvas.height / 2);
+       ctx.lineTo(ctx.canvas.width - 20, ctx.canvas.height / 2);
+       ctx.stroke();
+       ctx.setLineDash([]);
+     }
+     
+     function updateGraphs() {
+       // Add current data points
+       voltageHistory.push(capacitorVoltage);
+       currentHistory.push(current); // Keep negative values for current
+       chargeHistory.push(capacitorVoltage * capacitance / 1000); // Convert to mC
+       timeHistory.push(totalElapsedTime);
+       
+       // Draw graphs
+       drawGraph(vCtx, voltageHistory, timeHistory, "Voltage", "#6f42c1", "V", batteryVoltage);
+       drawCurrentGraph(cCtx, currentHistory, timeHistory, "Current", "#28a745", "mA", batteryVoltage / resistance);
+       drawGraph(qCtx, chargeHistory, timeHistory, "Charge", "#ffc107", "mC", batteryVoltage * capacitance / 1000);
+     }
+     
+     function clearGraphs() {
+       voltageHistory = [];
+       currentHistory = [];
+       chargeHistory = [];
+       timeHistory = [];
+       
+       vCtx.clearRect(0, 0, voltageCanvas.width, voltageCanvas.height);
+       cCtx.clearRect(0, 0, currentCanvas.width, currentCanvas.height);
+       qCtx.clearRect(0, 0, chargeCanvas.width, chargeCanvas.height);
+     }
+     
+     // Initialize
+     updateDisplay();
+     drawCircuit();
+   </script>
+</body>
+</html> 

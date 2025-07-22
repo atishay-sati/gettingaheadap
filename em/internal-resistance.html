@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study internal resistance for AP Physics C. Learn about real batteries, terminal voltage, and how internal resistance affects circuit performance." />
+  <title>Internal Resistance</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Internal Resistance and Terminal Voltage</h1>
+
+    <p>
+      Every real battery has internal resistance that causes the terminal voltage to be less than the EMF when current flows. Understanding internal resistance is crucial for analyzing real battery behavior in circuits.
+    </p>
+
+    <h2>What is Internal Resistance?</h2>
+
+    <p>
+      Internal resistance is the resistance within the battery itself. It's caused by the resistance of the battery's internal components, including the electrolyte, electrodes, and connections.
+    </p>
+
+    <ul>
+      <li><strong>Symbol:</strong> \(r\)</li>
+      <li><strong>Units:</strong> Ohms (Ω)</li>
+      <li><strong>Effect:</strong> Reduces terminal voltage when current flows</li>
+      <li><strong>Location:</strong> Inside the battery, in series with the EMF</li>
+    </ul>
+
+    <figure>
+      <img src="internal-resistance-diagram.png" alt="Internal Resistance" class="img-fluid-center">
+      <figcaption>
+        A real battery can be modeled as an ideal battery (EMF) in series with internal resistance.
+      </figcaption>
+    </figure>
+
+    <h2>Terminal Voltage Equation</h2>
+
+    <div class="formula-box">
+      $$V = \mathcal{E} - Ir$$
+    </div>
+
+    <p>
+      This equation shows how internal resistance affects the terminal voltage of a battery.
+    </p>
+
+    <ul>
+      <li><strong>\(V\):</strong> Terminal voltage (volts)</li>
+      <li><strong>\(\mathcal{E}\):</strong> EMF (volts)</li>
+      <li><strong>\(I\):</strong> Current through battery (amperes)</li>
+      <li><strong>\(r\):</strong> Internal resistance (ohms)</li>
+    </ul>
+
+    
+
+    <h3>Key Cases</h3>
+    <ul>
+      <li><strong>Open circuit (I = 0):</strong> \(V = \mathcal{E}\) - Terminal voltage equals EMF</li>
+      <li><strong>Short circuit (V = 0):</strong> \(I = \frac{\mathcal{E}}{r}\) - Maximum current</li>
+      <li><strong>Normal operation:</strong> \(V < \mathcal{E}\) - Terminal voltage less than EMF</li>
+    </ul>
+
+    <h2>Remember:</h2>
+    <p><b>Every single time you go across a resistor (whether that be inside the battery or out), the voltage drops by the current that passes through it times the resistance</b></p>
+
+    <div class="example-box">
+      <h3>Memory Trick: Voltage Drop</h3>
+      <p><strong>Think of internal resistance as a "voltage thief":</strong></p>
+      <ul>
+        <li><strong>EMF (ε):</strong> "I want to provide 12V"</li>
+        <li><strong>Internal resistance (r):</strong> "I'll steal some voltage"</li>
+        <li><strong>Terminal voltage (V):</strong> "You only get what's left"</li>
+      </ul>
+      <p><strong>Formula:</strong> \(V = \mathcal{E} - Ir\)</p>
+      <p>This helps you remember that terminal voltage is always less than or equal to EMF!</p>
+    </div>
+
+    <h2>Effects of Internal Resistance</h2>
+
+    <h3>Voltage Drop</h3>
+    <ul>
+      <li><strong>Voltage drop:</strong> \(V_{drop} = Ir\)</li>
+      <li><strong>Energy loss:</strong> Internal resistance converts electrical energy to heat</li>
+      <li><strong>Efficiency reduction:</strong> Less energy available to the external circuit</li>
+    </ul>
+
+    <h3>Current Limiting</h3>
+    <ul>
+      <li><strong>Maximum current:</strong> Limited by internal resistance</li>
+      <li><strong>Short circuit protection:</strong> Internal resistance prevents infinite current</li>
+      <li><strong>Battery heating:</strong> High current causes battery to heat up</li>
+      <li><strong>Battery damage:</strong> Excessive current can damage battery</li>
+    </ul>
+
+    <h2>Battery Performance</h2>
+
+    <h3>Fresh vs Old Batteries</h3>
+    <ul>
+      <li><strong>Fresh battery:</strong> Low internal resistance, terminal voltage close to EMF</li>
+      <li><strong>Old battery:</strong> High internal resistance, significant voltage drop</li>
+      <li><strong>Dead battery:</strong> Very high internal resistance, terminal voltage near zero</li>
+    </ul>
+
+    <h3>Temperature Effects</h3>
+    <ul>
+      <li><strong>Cold temperature:</strong> Internal resistance increases</li>
+      <li><strong>Warm temperature:</strong> Internal resistance decreases</li>
+      <li><strong>Performance impact:</strong> Battery performance varies with temperature</li>
+    </ul>
+
+
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Terminal Voltage Calculation</h3>
+      <p><strong>Problem:</strong> A 9.0 V battery has internal resistance 0.30 Ω. What is the terminal voltage when 2.0 A flows through it?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Terminal voltage equation:</strong> \(V = \mathcal{E} - Ir\)</li>
+        <li><strong>Substitution:</strong> \(V = 9.0 - (2.0)(0.30)\)</li>
+        <li><strong>Calculation:</strong> \(V = 9.0 - 0.6 = 8.4 \text{ V}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The terminal voltage is 8.4 V.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Internal Resistance from Measurements</h3>
+      <p><strong>Problem:</strong> A battery has EMF 12.0 V. When connected to a 4.0 Ω resistor, the terminal voltage is 10.0 V. What is the internal resistance?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Current through resistor:</strong> \(I = \frac{V}{R} = \frac{10.0}{4.0} = 2.5 \text{ A}\)</li>
+        <li><strong>Terminal voltage equation:</strong> \(V = \mathcal{E} - Ir\)</li>
+        <li><strong>Solve for internal resistance:</strong> \(r = \frac{\mathcal{E} - V}{I} = \frac{12.0 - 10.0}{2.5}\)</li>
+        <li><strong>Calculation:</strong> \(r = \frac{2.0}{2.5} = 0.8 \text{ Ω}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The internal resistance is 0.8 Ω.</p>
+    </div>
+
+
+
+    <h2>Interactive Internal Resistance Simulation</h2>
+    <p>Explore how internal resistance affects battery performance:</p>
+    
+    <canvas id="internalResistanceCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="emfSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">EMF (V):</label>
+        <input type="range" id="emfSlider" min="1" max="20" value="12" step="0.5" style="width: 100%;">
+        <div id="emfValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">12.0 V</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="internalResistanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Internal Resistance (Ω):</label>
+        <input type="range" id="internalResistanceSlider" min="0" max="2" value="0.5" step="0.1" style="width: 100%;">
+        <div id="internalResistanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">0.5 Ω</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="loadResistanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Load Resistance (Ω):</label>
+        <input type="range" id="loadResistanceSlider" min="0" max="10" value="2" step="0.5" style="width: 100%;">
+        <div id="loadResistanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 Ω</div>
+      </div>
+    </div>
+    
+    <div id="internalResistanceDisplay" style="text-align: center; margin: 1rem 0; font-size: 1.2rem; color: #6f42c1; font-weight: bold;">
+      Current: 4.8 A | Terminal Voltage: 9.6 V
+    </div>
+    
+    <div style="text-align: center; margin: 2rem 0;">
+      <button id="startInternalResistance" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetInternalResistance" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+
+  </div>
+
+  <script>
+    // Internal Resistance Simulation
+    const internalResistanceCanvas = document.getElementById("internalResistanceCanvas");
+    const ircx = internalResistanceCanvas.getContext("2d");
+    const emfSlider = document.getElementById("emfSlider");
+    const internalResistanceSlider = document.getElementById("internalResistanceSlider");
+    const loadResistanceSlider = document.getElementById("loadResistanceSlider");
+    const emfValue = document.getElementById("emfValue");
+    const internalResistanceValue = document.getElementById("internalResistanceValue");
+    const loadResistanceValue = document.getElementById("loadResistanceValue");
+    const internalResistanceDisplay = document.getElementById("internalResistanceDisplay");
+    const startInternalResistanceButton = document.getElementById("startInternalResistance");
+    const resetInternalResistanceButton = document.getElementById("resetInternalResistance");
+
+    let emf = 12.0; // volts
+    let internalResistance = 0.5; // ohms
+    let loadResistance = 2.0; // ohms
+    let current = 4.8; // calculated current
+    let terminalVoltage = 9.6; // calculated terminal voltage
+    let animationId = null;
+    let isAnimating = false;
+    let electrons = [];
+
+    function calculateCircuit() {
+      if (loadResistance === 0) {
+        // Short circuit
+        current = emf / internalResistance;
+        terminalVoltage = 0;
+      } else {
+        // Normal circuit
+        current = emf / (internalResistance + loadResistance);
+        terminalVoltage = emf - current * internalResistance;
+      }
+      
+      internalResistanceDisplay.textContent = `Current: ${current.toFixed(1)} A | Terminal Voltage: ${terminalVoltage.toFixed(1)} V`;
+    }
+
+    function initElectrons() {
+      electrons = [];
+      const numElectrons = 15;
+      for (let i = 0; i < numElectrons; i++) {
+        electrons.push({
+          x: 100 + Math.random() * 600,
+          y: 200 + Math.random() * 100,
+          vx: current * 0.3, // Speed proportional to current
+          vy: (Math.random() - 0.5) * 1,
+          radius: 3
+        });
+      }
+    }
+
+    function drawInternalResistanceCircuit() {
+      ircx.clearRect(0, 0, internalResistanceCanvas.width, internalResistanceCanvas.height);
+      
+      // Draw gradient background
+      const gradient = ircx.createLinearGradient(0, 0, 0, internalResistanceCanvas.height);
+      gradient.addColorStop(0, "#f8f9fa");
+      gradient.addColorStop(1, "#e9ecef");
+      ircx.fillStyle = gradient;
+      ircx.fillRect(0, 0, internalResistanceCanvas.width, internalResistanceCanvas.height);
+      
+      // Draw battery with rounded corners and shadow
+      ircx.shadowColor = "rgba(0, 0, 0, 0.3)";
+      ircx.shadowBlur = 10;
+      ircx.shadowOffsetX = 2;
+      ircx.shadowOffsetY = 2;
+      
+      // Battery body with gradient
+      const batteryGradient = ircx.createLinearGradient(50, 150, 130, 250);
+      batteryGradient.addColorStop(0, "#FFD700");
+      batteryGradient.addColorStop(1, "#FFA500");
+      ircx.fillStyle = batteryGradient;
+      ircx.fillRect(50, 150, 80, 100);
+      
+      ircx.shadowColor = "transparent";
+      ircx.strokeStyle = "#654321";
+      ircx.lineWidth = 3;
+      ircx.strokeRect(50, 150, 80, 100);
+      
+      // Battery terminals with 3D effect
+      ircx.fillStyle = "#8B4513";
+      ircx.fillRect(45, 180, 10, 40);
+      ircx.fillRect(125, 180, 10, 40);
+      
+      // Terminal highlights
+      ircx.fillStyle = "#A0522D";
+      ircx.fillRect(46, 181, 8, 38);
+      ircx.fillRect(126, 181, 8, 38);
+      
+      // Battery labels with better styling
+      ircx.fillStyle = "#333";
+      ircx.font = "bold 14px Arial";
+      ircx.fillText("+", 130, 200);
+      ircx.fillText("-", 50, 200);
+      ircx.font = "12px Arial";
+      ircx.fillText("ε = " + emf + "V", 60, 140);
+      
+      // Internal resistance with better styling
+      ircx.fillStyle = "#FF6B6B";
+      ircx.fillRect(70, 160, 40, 80);
+      ircx.strokeStyle = "#DC143C";
+      ircx.lineWidth = 2;
+      ircx.strokeRect(70, 160, 40, 80);
+      ircx.fillStyle = "#333";
+      ircx.font = "bold 10px Arial";
+      ircx.fillText("r = " + internalResistance + "Ω", 75, 200);
+      
+      // Draw wires with better styling
+      ircx.strokeStyle = "#2C3E50";
+      ircx.lineWidth = 4;
+      ircx.lineCap = "round";
+      ircx.lineJoin = "round";
+      
+      ircx.beginPath();
+      ircx.moveTo(135, 200);
+      ircx.lineTo(300, 200);
+      ircx.stroke();
+      
+      ircx.beginPath();
+      ircx.moveTo(300, 200);
+      ircx.lineTo(300, 300);
+      ircx.stroke();
+      
+      ircx.beginPath();
+      ircx.moveTo(300, 300);
+      ircx.lineTo(50, 300);
+      ircx.stroke();
+      
+      ircx.beginPath();
+      ircx.moveTo(50, 300);
+      ircx.lineTo(50, 220);
+      ircx.stroke();
+      
+      // Draw load resistor with 3D effect
+      ircx.shadowColor = "rgba(0, 0, 0, 0.2)";
+      ircx.shadowBlur = 5;
+      ircx.shadowOffsetX = 1;
+      ircx.shadowOffsetY = 1;
+      
+      const resistorGradient = ircx.createLinearGradient(280, 180, 320, 220);
+      resistorGradient.addColorStop(0, "#8B4513");
+      resistorGradient.addColorStop(1, "#A0522D");
+      ircx.fillStyle = resistorGradient;
+      ircx.fillRect(280, 180, 40, 40);
+      
+      ircx.shadowColor = "transparent";
+      ircx.strokeStyle = "#654321";
+      ircx.lineWidth = 2;
+      ircx.strokeRect(280, 180, 40, 40);
+      
+      // Resistor zigzag with smooth, elegant styling
+      ircx.strokeStyle = "#2C3E50";
+      ircx.lineWidth = 3;
+      ircx.lineCap = "round";
+      ircx.lineJoin = "round";
+      
+      // Create a more elegant zigzag pattern
+      ircx.beginPath();
+      ircx.moveTo(285, 200);
+      
+      // Smooth zigzag with more points
+      for (let i = 0; i < 5; i++) {
+        const x = 285 + (i + 1) * 8;
+        const y = 200 + (i % 2 === 0 ? -8 : 8);
+        ircx.lineTo(x, y);
+      }
+      
+      ircx.stroke();
+      
+      // Add subtle highlights to the zigzag
+      ircx.strokeStyle = "#34495E";
+      ircx.lineWidth = 1;
+      ircx.beginPath();
+      ircx.moveTo(285, 200);
+      
+      for (let i = 0; i < 5; i++) {
+        const x = 285 + (i + 1) * 8;
+        const y = 200 + (i % 2 === 0 ? -8 : 8);
+        ircx.lineTo(x, y);
+      }
+      
+      ircx.stroke();
+      
+      // Resistor label with better styling
+      ircx.fillStyle = "#2C3E50";
+      ircx.font = "bold 12px Arial";
+      ircx.fillText("R = " + loadResistance + "Ω", 285, 175);
+      
+      // Draw electrons if animating with better styling
+      if (isAnimating) {
+        electrons.forEach(electron => {
+          // Electron glow effect
+          ircx.shadowColor = "#FF6B6B";
+          ircx.shadowBlur = 8;
+          ircx.fillStyle = "#FF6B6B";
+          ircx.beginPath();
+          ircx.arc(electron.x, electron.y, electron.radius, 0, 2 * Math.PI);
+          ircx.fill();
+          
+          // Electron core
+          ircx.shadowColor = "transparent";
+          ircx.fillStyle = "#FF4500";
+          ircx.beginPath();
+          ircx.arc(electron.x, electron.y, electron.radius * 0.6, 0, 2 * Math.PI);
+          ircx.fill();
+          
+          // Update electron positions
+          electron.x += electron.vx;
+          electron.y += electron.vy;
+          
+          // Reset electrons that go off screen
+          if (electron.x > 800) {
+            electron.x = 100;
+            electron.y = 200 + Math.random() * 100;
+          }
+          
+          // Keep electrons within bounds
+          if (electron.y < 150 || electron.y > 350) {
+            electron.vy *= -1;
+          }
+          
+          // Update speed based on current
+          electron.vx = current * 0.3;
+        });
+      }
+      
+      // Draw voltage labels with better styling
+      ircx.fillStyle = "#6f42c1";
+      ircx.font = "bold 16px Arial";
+      ircx.fillText("V = " + terminalVoltage.toFixed(1) + "V", 350, 200);
+      ircx.fillText("I = " + current.toFixed(1) + "A", 350, 220);
+    }
+
+    function animate() {
+      drawInternalResistanceCircuit();
+      if (isAnimating) {
+        animationId = requestAnimationFrame(animate);
+      }
+    }
+
+    // Event listeners
+    emfSlider.addEventListener("input", function() {
+      emf = parseFloat(this.value);
+      emfValue.textContent = emf.toFixed(1) + " V";
+      calculateCircuit();
+      drawInternalResistanceCircuit();
+    });
+
+    internalResistanceSlider.addEventListener("input", function() {
+      internalResistance = parseFloat(this.value);
+      internalResistanceValue.textContent = internalResistance.toFixed(1) + " Ω";
+      calculateCircuit();
+      drawInternalResistanceCircuit();
+    });
+
+    loadResistanceSlider.addEventListener("input", function() {
+      loadResistance = parseFloat(this.value);
+      loadResistanceValue.textContent = loadResistance.toFixed(1) + " Ω";
+      calculateCircuit();
+      drawInternalResistanceCircuit();
+    });
+
+    startInternalResistanceButton.addEventListener("click", function() {
+      if (!isAnimating) {
+        isAnimating = true;
+        initElectrons();
+        animate();
+        this.textContent = "Stop Animation";
+      } else {
+        isAnimating = false;
+        cancelAnimationFrame(animationId);
+        this.textContent = "Start Animation";
+        drawInternalResistanceCircuit();
+      }
+    });
+
+    resetInternalResistanceButton.addEventListener("click", function() {
+      emfSlider.value = 12;
+      internalResistanceSlider.value = 0.5;
+      loadResistanceSlider.value = 2;
+      emf = 12.0;
+      internalResistance = 0.5;
+      loadResistance = 2.0;
+      emfValue.textContent = "12.0 V";
+      internalResistanceValue.textContent = "0.5 Ω";
+      loadResistanceValue.textContent = "2.0 Ω";
+      calculateCircuit();
+      isAnimating = false;
+      cancelAnimationFrame(animationId);
+      startInternalResistanceButton.textContent = "Start Animation";
+      drawInternalResistanceCircuit();
+    });
+
+    // Initialize
+    calculateCircuit();
+    drawInternalResistanceCircuit();
+  </script>
+</body>
+</html> 

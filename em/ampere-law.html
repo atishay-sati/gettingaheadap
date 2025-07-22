@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn Ampère's Law for AP Physics C. Study magnetic fields, current loops, and applications of Ampère's Law in electromagnetism." />
+  <title>Ampère's Law</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Ampère's Law specific styles */
+    .law-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .symmetry-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .applications-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .advantages-box {
+      background: #f8f9fa;
+      border: 2px solid #6c757d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #495057;
+    }
+    
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Ampère's Law</h1>
+
+    <p>
+      Ampère's Law is one of the four Maxwell equations and provides a powerful method for calculating magnetic fields in situations with high symmetry. It relates the circulation of the magnetic field around a closed loop to the current passing through the loop.
+    </p>
+
+    <h2>Statement of Ampère's Law</h2>
+
+    <div class="law-box">
+      <h3>🧲 The Integral Law</h3>
+      <p><strong>Ampère's Law states that the line integral of the magnetic field around a closed path is equal to \( \mu_0 \) times the current passing through the area bounded by the path:</strong></p>
+      <div class="formula-box">
+        \[ \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc} \]
+      </div>
+      <p>Where:</p>
+      <ul>
+        <li>\( \oint \vec{B} \cdot d\vec{l} \) is the line integral of the magnetic field around a closed path</li>
+        <li>\( \mu_0 \) is the permeability of free space (4π × 10⁻⁷ T⋅m/A)</li>
+        <li>\( I_{enc} \) is the total current enclosed by the path</li>
+      </ul>
+    </div>
+
+    <figure>
+      <img src="ampere-law-diagram.png" alt="Ampère's Law" class="img-fluid-center">
+      <figcaption>
+        Diagram showing a closed path and the current enclosed by it.
+      </figcaption>
+    </figure>
+
+    <h2>Key Features of Ampère's Law</h2>
+
+    <h3>Symmetry Requirements</h3>
+    <ul>
+      <li><strong>High Symmetry:</strong> Works best when the current distribution has symmetry</li>
+      <li><strong>Known Field Direction:</strong> Field direction must be predictable from symmetry</li>
+      <li><strong>Constant Magnitude:</strong> Field magnitude should be constant along the integration path</li>
+      <li><strong>Parallel or Perpendicular:</strong> Field should be either parallel or perpendicular to the path</li>
+    </ul>
+
+    <div class="symmetry-box">
+      <h3>🔬 Symmetry Considerations</h3>
+      <p><strong>Ampère's Law is most effective when:</strong></p>
+      <ul>
+        <li><strong>Cylindrical Symmetry:</strong> Long straight wires, coaxial cables</li>
+        <li><strong>Planar Symmetry:</strong> Current sheets, parallel plate conductors</li>
+        <li><strong>Spherical Symmetry:</strong> Spherical current distributions</li>
+        <li><strong>Translational Symmetry:</strong> Infinite current sheets or wires</li>
+      </ul>
+    </div>
+
+    <h3>Advantages Over Biot-Savart</h3>
+    <ul>
+      <li><strong>No Integration:</strong> Avoids complex vector integrals</li>
+      <li><strong>Symmetry Exploitation:</strong> Uses geometric symmetry to simplify calculations</li>
+      <li><strong>Direct Calculation:</strong> Often gives results directly without intermediate steps</li>
+      <li><strong>Conceptual Clarity:</strong> Emphasizes the relationship between current and field circulation</li>
+    </ul>
+
+    <h2>Applications of Ampère's Law</h2>
+
+    <div class="applications-box">
+      <h3>⚡ Ideal Applications</h3>
+      <p><strong>Ampère's Law is particularly useful for:</strong></p>
+      <ul>
+        <li><strong>Long Straight Wires:</strong> Current-carrying conductors with cylindrical symmetry</li>
+        <li><strong>Coaxial Cables:</strong> Concentric cylindrical conductors</li>
+        <li><strong>Current Sheets:</strong> Planar current distributions</li>
+        <li><strong>Solenoids:</strong> Long coils with many turns</li>
+        <li><strong>Toroids:</strong> Ring-shaped solenoids</li>
+      </ul>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: Magnetic Field of a Long Straight Wire</h3>
+      <p><strong>Problem:</strong> Calculate the magnetic field at a distance \( r \) from a long straight wire carrying current \( I \).</p>
+
+      <h4>Step 1: Choose Amperian Loop</h4>
+      <p>Use a circular path of radius \( r \) centered on the wire:</p>
+      <div class="formula-box">
+        \[ \oint \vec{B} \cdot d\vec{l} = B(2\pi r) \]
+      </div>
+
+      <h4>Step 2: Apply Ampère's Law</h4>
+      <p>The enclosed current is \( I \):</p>
+      <div class="formula-box">
+        \[ B(2\pi r) = \mu_0 I \]
+      </div>
+
+      <h4>Step 3: Solve for B</h4>
+      <p>The magnetic field is:</p>
+      <div class="formula-box">
+        \[ B = \frac{\mu_0 I}{2\pi r} \]
+      </div>
+
+      <h4>Step 4: Direction</h4>
+      <p>The field circulates around the wire according to the right-hand rule.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: Magnetic Field Inside a Solenoid</h3>
+      <p><strong>Problem:</strong> Calculate the magnetic field inside a long solenoid with \( n \) turns per unit length carrying current \( I \).</p>
+
+      <h4>Step 1: Choose Amperian Loop</h4>
+      <p>Use a rectangular loop with one side inside the solenoid:</p>
+      <div class="formula-box">
+        \[ \oint \vec{B} \cdot d\vec{l} = BL \]
+      </div>
+
+      <h4>Step 2: Calculate Enclosed Current</h4>
+      <p>The enclosed current is \( nLI \):</p>
+      <div class="formula-box">
+        \[ BL = \mu_0 nLI \]
+      </div>
+
+      <h4>Step 3: Solve for B</h4>
+      <p>The magnetic field inside is:</p>
+      <div class="formula-box">
+        \[ B = \mu_0 nI \]
+      </div>
+    </div>
+
+    <h2>Limitations and Considerations</h2>
+
+    <div class="advantages-box">
+      <h3>⚠️ Important Limitations</h3>
+      <ul>
+        <li><strong>Symmetry Required:</strong> Only works for highly symmetric current distributions</li>
+        <li><strong>Steady Currents:</strong> Applies only to steady (DC) currents</li>
+        <li><strong>Field Direction:</strong> Requires knowledge of field direction from symmetry</li>
+        <li><strong>Complex Geometries:</strong> Not suitable for arbitrary current distributions</li>
+        <li><strong>Displacement Current:</strong> Original form doesn't include time-varying electric fields</li>
+      </ul>
+    </div>
+
+    <h2>Relationship to Other Laws</h2>
+
+    <h3>Connection to Biot-Savart Law</h3>
+    <ul>
+      <li><strong>Consistency:</strong> Both laws give the same results for the same problems</li>
+      <li><strong>Different Approaches:</strong> Ampère's Law uses symmetry, Biot-Savart uses direct integration</li>
+      <li><strong>Complementary:</strong> Each is better suited for different problem types</li>
+    </ul>
+
+
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Ampère's Law</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. What does Ampère's Law relate?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Magnetic field circulation to enclosed current</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Electric field to charge</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Force to acceleration</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy to power</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. When is Ampère's Law most useful?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">For arbitrary current distributions</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">For symmetric current distributions</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">For time-varying currents</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">For magnetic materials only</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. What type of integration does Ampère's Law use?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Line integral around a closed path</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Surface integral over an area</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Volume integral over a region</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Point evaluation at a specific location</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Symmetry-Based:</strong> Ampère's Law works best with symmetric current distributions</li>
+      <li><strong>Circulation Concept:</strong> Relates magnetic field circulation to enclosed current</li>
+      <li><strong>Powerful Tool:</strong> Often simpler than Biot-Savart for symmetric cases</li>
+      <li><strong>Maxwell Equation:</strong> One of the four fundamental equations of electromagnetism</li>
+      <li><strong>Complementary:</strong> Works well with Biot-Savart Law for different problem types</li>
+    </ul>
+  </div>
+
+  <script>
+    function checkAnswer(element, result) {
+      // Remove previous selections
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      // Add result class
+      element.classList.add(result);
+      
+      // Show explanation
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

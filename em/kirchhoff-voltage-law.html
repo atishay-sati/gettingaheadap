@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn Kirchhoff's Voltage Law (KVL) for AP Physics C. Study voltage loops, circuit analysis, and energy conservation in electrical circuits." />
+  <title>Kirchhoff's Voltage Law (KVL)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* KVL specific styles */
+    .kvl-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .voltage-arrow {
+      position: relative;
+      display: inline-block;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    
+    .sign-convention {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Kirchhoff's Voltage Law (KVL)</h1>
+
+    <p>
+      Kirchhoff's Voltage Law (KVL) is a fundamental principle in circuit analysis that states the sum of all voltage drops around any closed loop in a circuit must equal zero. This law is based on the conservation of energy and is essential for analyzing complex circuits.
+    </p>
+
+    <h2>Definition of KVL</h2>
+
+    <div class="formula-box">
+      $$\sum V = 0$$
+    </div>
+
+    Voltage drop from each resistor:
+
+    <div class="formula-box">
+      $$V_{drop} = iR$$
+    </div>
+
+    <p>
+      Kirchhoff's Voltage Law states that the algebraic sum of all voltage drops around any closed loop in a circuit equals zero. This means that the sum of voltage rises equals the sum of voltage drops.
+    </p>
+
+    <ul>
+      <li><strong>Symbol:</strong> \(\sum V = 0\)</li>
+      <li><strong>Units:</strong> Volts (V)</li>
+      <li><strong>Principle:</strong> Conservation of energy</li>
+      <li><strong>Application:</strong> Single-loop and multi-loop circuits</li>
+    </ul>
+
+    <figure>
+      <img src="voltage-drop.png" alt="voltage drop" class="img-fluid-center">
+      <figcaption>
+        Voltage drops around a closed loop must sum to zero.
+      </figcaption>
+    </figure>
+
+    <p>The loop starts from the negative terminal (0 V). It then jumps up by V<sub>s</sub> and goes to R<sub>1</sub> where the voltage drops. Then it goes through the next resistor and voltage drops to 0. It then keeps going through the loop and when it reaches the battery it jumps back to V<sub>s</sub></p>
+
+    <h2>Understanding KVL</h2>
+
+    <h3>Energy Conservation</h3>
+    <ul>
+      <li><strong>Energy Source:</strong> Batteries and power supplies provide energy</li>
+      <li><strong>Energy Consumption:</strong> Resistors and other components consume energy</li>
+      <li><strong>Conservation:</strong> Energy gained = Energy lost</li>
+      <li><strong>Voltage Representation:</strong> Voltage represents energy per unit charge</li>
+    </ul>
+
+    <h3>Physical Interpretation</h3>
+    <ul>
+      <li><strong>Voltage Rise:</strong> Energy gained (batteries, power supplies)</li>
+      <li><strong>Voltage Drop:</strong> Energy lost (resistors, loads)</li>
+      <li><strong>Net Result:</strong> Total energy change around loop = 0</li>
+      <li><strong>Direction:</strong> Choose a direction and stick to it consistently</li>
+    </ul>
+
+    <div class="kvl-box">
+      <h3>🎯 KVL Statement</h3>
+      <p><strong>Around any closed loop in a circuit, the algebraic sum of all voltage drops equals zero.</strong></p>
+      <p>This means: <strong>Sum of voltage rises = Sum of voltage drops</strong></p>
+    </div>
+
+    <h2>Sign Conventions for KVL</h2>
+
+    <div class="sign-convention">
+      <h3>📏 Sign Convention Rules</h3>
+      <ul>
+        <li><strong>Choose Direction:</strong> Pick a direction to traverse the loop</li>
+        <li><strong>Voltage Rise (+):</strong> When moving from - to + terminal of battery</li>
+        <li><strong>Voltage Drop (-):</strong> When moving from + to - terminal of battery</li>
+        <li><strong>Resistor Drop (-):</strong> When moving in direction of current through resistor</li>
+        <li><strong>Resistor Rise (+):</strong> When moving against direction of current through resistor</li>
+      </ul>
+    </div>
+
+    <h2>KVL Equation Formulation</h2>
+
+    <h3>Step-by-Step Process</h3>
+    <ol>
+      <li><strong>Choose Loop Direction:</strong> Pick clockwise or counterclockwise</li>
+      <li><strong>Identify Components:</strong> List all voltage sources and resistors</li>
+      <li><strong>Assign Signs:</strong> Use sign convention for each component</li>
+      <li><strong>Write Equation:</strong> Sum all voltages and set equal to zero</li>
+      <li><strong>Solve:</strong> Use algebra to find unknown quantities</li>
+    </ol>
+
+    <div class="example-box">
+      <h3>Example: Simple Single-Loop Circuit</h3>
+      <p><strong>Problem:</strong> Find the current in the circuit with a 12V battery and 6Ω resistor.</p>
+      
+      <figure>
+        <img src="voltage-law-1.png">
+        <figcaption>Simple single-loop circuit</figcaption>
+      </figure>
+
+      <h4>Step 1: Choose Loop Direction</h4>
+      <p>Let's traverse the loop clockwise.</p>
+
+      <h4>Step 2: Write KVL Equation</h4>
+      <p>Starting from the battery and going clockwise:</p>
+      <div class="formula-box">
+        $$+12V - I(6Ω) = 0$$
+      </div>
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><strong>+12V:</strong> Voltage rise across battery (moving from - to +)</li>
+        <li><strong>-I(6Ω):</strong> Voltage drop across resistor (moving in direction of current)</li>
+        <li><strong>= 0:</strong> KVL requirement</li>
+      </ul>
+
+      <h4>Step 3: Solve for Current</h4>
+      <div class="formula-box">
+        $$12V - 6I = 0$$
+        $$6I = 12V$$
+        $$I = \frac{12V}{6Ω} = 2A$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The current in the circuit is 2A.</strong></p>
+    </div>
+
+    <h2>KVL in Complex Circuits</h2>
+
+    <div class="example-box">
+      <h3>Example: Multiple Voltage Sources</h3>
+      <p><strong>Problem:</strong> Find the current in a circuit with two batteries (12V and 6V) and a 3Ω resistor.</p>
+      
+      <figure>
+        <img src="voltage-law-2.png">
+        <figcaption>Circuit with multiple voltage sources</figcaption>
+      </figure>
+
+      <h4>Step 1: Choose Loop Direction</h4>
+      <p>Traverse clockwise starting from the 12V battery.</p>
+
+      <h4>Step 2: Write KVL Equation</h4>
+      <div class="formula-box">
+        $$+12V - 6V - I(3Ω) = 0$$
+      </div>
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li><strong>+12V:</strong> Voltage rise across first battery</li>
+        <li><strong>-6V:</strong> Voltage drop across second battery (opposing)</li>
+        <li><strong>-I(3Ω):</strong> Voltage drop across resistor</li>
+      </ul>
+
+      <h4>Step 3: Solve for Current</h4>
+      <div class="formula-box">
+        $$12V - 6V - 3I = 0$$
+        $$6V - 3I = 0$$
+        $$3I = 6V$$
+        $$I = \frac{6V}{3Ω} = 2A$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The current in the circuit is 2A.</strong></p>
+    </div>
+
+    <h2>KVL with Multiple Resistors</h2>
+
+    <div class="example-box">
+      <h3>Example: Series Resistors</h3>
+      <p><strong>Problem:</strong> Find the current and voltage drops across each resistor in a circuit with a 9V battery and three resistors: 2Ω, 3Ω, and 4Ω in series.</p>
+      
+      <figure>
+        <img src="voltage-law-3.png">
+        <figcaption>Circuit with series resistors</figcaption>
+      </figure>
+
+      <h4>Step 1: Write KVL Equation</h4>
+      <div class="formula-box">
+        $$+9V - I(2Ω) - I(3Ω) - I(4Ω) = 0$$
+        $$+9V - I(2Ω + 3Ω + 4Ω) = 0$$
+        $$+9V - I(9Ω) = 0$$
+      </div>
+
+      <h4>Step 2: Solve for Current</h4>
+      <div class="formula-box">
+        $$9V - 9I = 0$$
+        $$9I = 9V$$
+        $$I = \frac{9V}{9Ω} = 1A$$
+      </div>
+
+      <h4>Step 3: Find Voltage Drops</h4>
+      <div class="formula-box">
+        $$V_1 = I \times R_1 = 1A \times 2Ω = 2V$$
+        $$V_2 = I \times R_2 = 1A \times 3Ω = 3V$$
+        $$V_3 = I \times R_3 = 1A \times 4Ω = 4V$$
+      </div>
+
+      <h4>Verification</h4>
+      <div class="formula-box">
+        $$V_{total} = V_1 + V_2 + V_3 = 2V + 3V + 4V = 9V$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The current is 1A, and the voltage drops are 2V, 3V, and 4V respectively.</strong></p>
+    </div>
+
+    <h2>Common KVL Applications</h2>
+
+    <div class="formula-box">
+      <h3>🔋 Battery Circuits</h3>
+      <ul>
+        <li><strong>Single Battery:</strong> V_battery - IR = 0</li>
+        <li><strong>Series Batteries:</strong> V₁ + V₂ - IR = 0</li>
+        <li><strong>Opposing Batteries:</strong> V₁ - V₂ - IR = 0</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>⚡ Resistor Networks</h3>
+      <ul>
+        <li><strong>Series Resistors:</strong> V - I(R₁ + R₂ + R₃) = 0</li>
+        <li><strong>Mixed Networks:</strong> Apply KVL to each loop</li>
+        <li><strong>Complex Circuits:</strong> Use KVL with KCL for complete analysis</li>
+      </ul>
+    </div>
+
+    <h2>KVL vs. Ohm's Law</h2>
+
+    <div class="example-box">
+      <h3>Relationship Between KVL and Ohm's Law</h3>
+      <p><strong>KVL:</strong> Conservation of energy around a loop</p>
+      <p><strong>Ohm's Law:</strong> Relationship between voltage, current, and resistance</p>
+      
+      <div class="formula-box">
+        <h4>KVL Equation:</h4>
+        $$\sum V = 0$$
+        <h4>Ohm's Law:</h4>
+        $$V = IR$$
+        <h4>Combined:</h4>
+        $$\sum (IR) = \sum V_{sources}$$
+      </div>
+    </div>
+
+    <h2>Key Takeaways Summary</h2>
+
+    <div class="formula-box">
+      <h3>🎯 Essential KVL Concepts</h3>
+      <ul>
+        <li><strong>Conservation:</strong> Energy is conserved around any closed loop</li>
+        <li><strong>Sum to Zero:</strong> Algebraic sum of all voltages = 0</li>
+        <li><strong>Direction Matters:</strong> Choose direction and stick to sign convention</li>
+        <li><strong>Universal:</strong> Applies to any closed loop in any circuit</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>⚡ KVL Equation Steps</h3>
+      <ol>
+        <li><strong>Choose Direction:</strong> Pick clockwise or counterclockwise</li>
+        <li><strong>Identify Components:</strong> List all voltage sources and resistors</li>
+        <li><strong>Assign Signs:</strong> Use sign convention consistently</li>
+        <li><strong>Write Equation:</strong> Sum all voltages = 0</li>
+        <li><strong>Solve:</strong> Use algebra to find unknowns</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>🔍 Sign Convention Rules</h3>
+      <ul>
+        <li><strong>Battery Rise (+):</strong> Moving from - to + terminal</li>
+        <li><strong>Battery Drop (-):</strong> Moving from + to - terminal</li>
+        <li><strong>Resistor Drop (-):</strong> Moving in direction of current</li>
+        <li><strong>Resistor Rise (+):</strong> Moving against direction of current</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>✅ Verification Methods</h3>
+      <ul>
+        <li><strong>Energy Check:</strong> Total energy gained = Total energy lost</li>
+        <li><strong>Voltage Check:</strong> Sum of voltage drops = Sum of voltage rises</li>
+        <li><strong>Ohm's Law:</strong> V = IR must hold for each resistor</li>
+        <li><strong>Power Check:</strong> Power supplied = Power dissipated</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box" style="background: linear-gradient(135deg, #e8f5e8, #f0f8f0); border-color: #28a745; color: #155724;">
+      <h3>💡 Pro Tips for KVL</h3>
+      <ul>
+        <li><strong>Be Consistent:</strong> Use the same direction throughout the loop</li>
+        <li><strong>Check Signs:</strong> Verify sign assignments for each component</li>
+        <li><strong>Start Simple:</strong> Begin with single-loop circuits</li>
+        <li><strong>Practice Direction:</strong> Draw arrows to show your chosen direction</li>
+        <li><strong>Verify Results:</strong> Always check that your answer makes sense</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

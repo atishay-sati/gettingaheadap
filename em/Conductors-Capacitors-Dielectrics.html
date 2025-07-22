@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study conductors, capacitors, and dielectrics for AP Physics C. Learn about capacitance, energy storage, dielectric materials, and electrostatic shielding with interactive examples." />
+  <title>Conductors, Capacitors & Dielectrics</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    color: #212529;
+  }
+
+  h1, h2, h5 {
+    font-weight: 700;
+  }
+  
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6f42c1;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #8e44ad;
+  }
+
+  .question {
+    margin-bottom: 1.8rem;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .question:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+
+  .options button {
+    margin: 0.25rem 0.35rem 0.25rem 0;
+    min-width: 110px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .options button.active {
+    background-color: #6f42c1;
+    color: white;
+    border-color: #6f42c1;
+  }
+  .options button:hover:not(.active):not(:disabled) {
+    background-color: #f3e5ff;
+  }
+
+  .correct {
+    background-color: #e8d5ff !important;
+    border-color: #d1b3ff !important;
+    color: #6f42c1 !important;
+  }
+  .incorrect {
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+    color: #842029 !important;
+  }
+
+  .feedback {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Top content area */
+  .top-content {
+    min-height: 400px;
+    margin-bottom: 3rem;
+    background: #f3e5ff;
+    border: 2px dashed #d1b3ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6f42c1;
+    font-size: 1.2rem;
+    font-style: italic;
+    user-select: none;
+  }
+
+  .center-align {
+    
+    text-align: center;
+  }
+
+  /* Container for left/right text + image */
+  .left-half {
+    width: 100%;
+    font-size: 1.15rem;
+    text-align: left;
+    padding: 1rem 2rem 1rem 0;
+    color: #212529;
+  }
+
+  .right-half {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right-half img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+  }
+  .right-half img:hover {
+    transform: scale(1.03);
+  }
+
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  /* Controls container */
+  #controls label {
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  #controls input[type=number] {
+    width: 4.5rem;
+    padding: 0.25rem 0.4rem;
+    margin-left: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  #controls input[type=number]:focus {
+    border-color: #6f42c1;
+    outline: none;
+  }
+
+  #controls button.btn-success {
+    font-weight: 700;
+    padding: 0.45rem 1.2rem;
+    border-radius: 8px;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #e0e0e0 !important; /* light gray background */
+    color: black !important; /* black text */
+    border-color: #6c757d !important; /* keep default border */
+  }
+
+  .btn-outline-secondary.active {
+    background-color: #6f42c1 !important;
+    color: white !important;
+  }
+
+  /* Canvas container styling */
+  #simCanvas {
+    border: 2px solid #d1b3ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    background-color: #f3e5ff;
+  }
+
+  /* Formulas image */
+  .img-fluid {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .img-fluid-center {
+    height: auto;
+    width: 10%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-fluid-isacc {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    transform: scale(1.5);
+  }
+
+  /* Quiz container animation */
+  .quiz-container {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 900px;
+    margin: 0 auto 4rem;
+  }
+
+  /* Back links & other anchors */
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #6f42c1;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  a:hover {
+    transform: scale(1.1);
+    color: #8e44ad;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Top area for your other content -->
+
+  <!-- Start-->
+
+  <!-- Top area split into two columns -->
+<section class="container mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text -->
+    <div class="col-md-6">
+      <div style="background:#f3e5ff; padding: 1rem; border-radius: 10px;">
+        <h2>Conductors, Capacitors & Dielectrics</h2>
+        <p>Conductors, capacitors, and dielectrics are fundamental components in electrical systems. This unit covers how conductors behave in electric fields, how capacitors store electrical energy, and how dielectrics affect capacitance. Understanding these concepts is crucial for circuit analysis and electrical engineering applications.</p>
+        <p>Let's explore these essential electrical components!</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-md-6 text-center">
+      <img src="capacitor.jpg" class="img-fluid">
+  </div>
+</section>
+
+  <!--Stop-->
+
+  <!-- Hello World Text Box -->
+  <div class="container my-4 d-flex justify-content-between align-items-center">
+    <div class="left-half">
+      Conductors, capacitors, and dielectrics form the foundation of electrical systems. Conductors allow free movement of electrons, creating equipotential surfaces and shielding electric fields. Capacitors store electrical energy by separating charges on conducting plates, with capacitance depending on geometry and dielectric material. Dielectrics increase capacitance while reducing electric field strength, making them essential for practical capacitor design and electrical insulation.
+    </div>
+    <div class="right-half">
+      <img src="capacitor-circuit.png" class="img-fluid">
+    </div>
+  </div>
+
+  <h1>
+    <p>Relevant Formulas On Equation Sheet:</p>
+  </h1>
+  <div>
+    <img src="EquationSheetConductors.png" class="img-fluid-center">
+    <img src="EquationSheetConductors2.png" class="img-fluid-center">
+  </div>
+
+ 
+<h1>Concept 1: Conductors in Electric Fields</h1>
+<div class="center-align">
+  <p><a href="conductors-electric-fields.html">Key Topic 1: Conductors in Electric Fields</a></p>
+</div>
+<div class="center-align">
+  <p><a href="electrostatic-shielding.html">Key Topic 2: Electrostatic Shielding</a></p>
+</div>
+
+<h1>Concept 2: Capacitors</h1>
+<div class="center-align">
+  <p><a href="capacitor-basics.html">Key Topic 1: Capacitor Basics and Capacitance</a></p>
+</div>
+<div class="center-align">
+  <p><a href="capacitor-geometry.html">Key Topic 2: Capacitor Geometry and Calculations</a></p>
+</div>
+<div class="center-align">
+  <p><a href="capacitors-parallel-series.html">Key Topic 3: Capacitors and Voltage in Series and Parallel</a></p>
+</div>
+<div class="center-align">
+  <p><a href="capacitor-energy.html">Key Topic 4: Energy Stored in Capacitors</a></p>
+</div>
+
+<h1>Concept 3: Dielectrics</h1>
+
+<div class="center-align">
+  <p><a href="dielectric-basics.html">Key Topic 1: Dielectric Materials and Properties</a></p>
+</div>
+<div class="center-align">
+  <p><a href="dielectric-breakdown.html">Key Topic 2: Dielectric Breakdown and Applications</a></p>
+</div>
+
+<h1>Practice Tests</h1>
+
+<div class="center-align">
+  <p><a href="practiceConductors-Capacitors-Dielectrics1.html">Practice Test 1: Conductors, Capacitors & Dielectrics</a></p>
+</div>
+
+<div class="center-align">
+  <p><a href="practiceConductors-Capacitors-Dielectrics2.html">Practice Test 2: Conductors, Capacitors & Dielectrics</a></p>
+</div>
+
+  <!-- Quiz Section -->
+  <section class="quiz-container container">
+    <h1>⚡ Conductors, Capacitors & Dielectrics: Check for Understanding</h1>
+    <div id="quiz"></div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+      <div id="scoreDisplay" class="mt-3 fw-bold"></div>
+    </div>
+  </section>
+
+  <script>
+  const questions = [
+  {
+    q: "1. What is the electric field inside a conductor in electrostatic equilibrium?",
+    options: ["Zero", "Maximum", "Constant", "Variable"],
+    correct: 0
+  },
+  {
+    q: "2. What is the formula for capacitance of a parallel plate capacitor?",
+    options: ["C = ε₀A/d", "C = ε₀d/A", "C = A/ε₀d", "C = ε₀Ad"],
+    correct: 0
+  },
+  {
+    q: "3. What happens to capacitance when a dielectric is inserted between capacitor plates?",
+    options: ["Increases by factor κ", "Decreases by factor κ", "Stays the same", "Depends on voltage"],
+    correct: 0
+  },
+  {
+    q: "4. What is the energy stored in a capacitor?",
+    options: ["U = ½CV²", "U = CV²", "U = ½QV", "U = QV"],
+    correct: 0
+  },
+  {
+    q: "5. What is the dielectric constant κ for vacuum?",
+    options: ["1", "0", "∞", "8.85×10⁻¹²"],
+    correct: 0
+  },
+  {
+    q: "6. What is the electric field inside a conductor?",
+    options: ["Zero", "Maximum", "Constant", "Variable"],
+    correct: 0
+  },
+  {
+    q: "7. What is the unit of capacitance?",
+    options: ["Farad (F)", "Coulomb (C)", "Volt (V)", "Ohm (Ω)"],
+    correct: 0
+  },
+  {
+    q: "8. What happens to the electric field when a dielectric is inserted?",
+    options: ["Decreases by factor κ", "Increases by factor κ", "Stays the same", "Depends on charge"],
+    correct: 0
+  },
+  {
+    q: "9. What is the charge on a capacitor plate?",
+    options: ["Q = CV", "Q = C/V", "Q = V/C", "Q = CV²"],
+    correct: 0
+  },
+  {
+    q: "10. What is the potential difference across a capacitor?",
+    options: ["V = Q/C", "V = C/Q", "V = QC", "V = Q²C"],
+    correct: 0
+  },
+  {
+    q: "11. What is the electric field between parallel plates?",
+    options: ["E = V/d", "E = d/V", "E = Vd", "E = V²d"],
+    correct: 0
+  },
+  {
+    q: "12. What is the capacitance of a spherical capacitor?",
+    options: ["C = 4πε₀ab/(b-a)", "C = 4πε₀(b-a)/ab", "C = 4πε₀ab", "C = 4πε₀/(b-a)"],
+    correct: 0
+  },
+  {
+    q: "13. What is the capacitance of a cylindrical capacitor?",
+    options: ["C = 2πε₀L/ln(b/a)", "C = 2πε₀ln(b/a)/L", "C = 2πε₀L", "C = 2πε₀/ln(b/a)"],
+    correct: 0
+  },
+  {
+    q: "14. What is the energy density in an electric field?",
+    options: ["u = ½ε₀E²", "u = ε₀E²", "u = ½E²", "u = E²"],
+    correct: 0
+  },
+  {
+    q: "15. What is the dielectric strength?",
+    options: ["Maximum electric field before breakdown", "Dielectric constant", "Capacitance per unit area", "Energy stored per unit volume"],
+    correct: 0
+  }
+];
+
+  let userAnswers = Array(questions.length).fill(null);
+
+  function renderQuiz() {
+    const quizDiv = document.getElementById("quiz");
+    questions.forEach((q, index) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.id = `question-${index}`;
+      let html = `<h5>Q${index + 1}: ${q.q.replace(/^\d+\.\s*/, "")}</h5><div class="options">`;
+      q.options.forEach((choice, i) => {
+        html += `<button type="button" class="btn btn-outline-secondary" onclick="selectAnswer(${index}, ${i}, this)">${choice}</button> `;
+      });
+      html += `</div><div class="feedback" id="feedback-${index}"></div>`;
+      qDiv.innerHTML = html;
+      quizDiv.appendChild(qDiv);
+    });
+  }
+
+  function selectAnswer(questionIndex, choiceIndex, button) {
+    userAnswers[questionIndex] = choiceIndex;
+    
+    // Remove active class from all buttons in this question
+    const questionDiv = document.getElementById(`question-${questionIndex}`);
+    const buttons = questionDiv.querySelectorAll('.options button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to selected button
+    button.classList.add('active');
+  }
+
+  function submitQuiz() {
+    let correctCount = 0;
+    const totalQuestions = questions.length;
+    
+    questions.forEach((q, index) => {
+      const userAnswer = userAnswers[index];
+      const feedbackDiv = document.getElementById(`feedback-${index}`);
+      const questionDiv = document.getElementById(`question-${index}`);
+      const buttons = questionDiv.querySelectorAll('.options button');
+      
+      if (userAnswer === null) {
+        feedbackDiv.innerHTML = '<span style="color: #856404;">⚠️ Please select an answer</span>';
+        return;
+      }
+      
+      if (userAnswer === q.correct) {
+        correctCount++;
+        feedbackDiv.innerHTML = '<span style="color: #155724;">✅ Correct!</span>';
+        buttons[userAnswer].classList.add('correct');
+      } else {
+        feedbackDiv.innerHTML = '<span style="color: #721c24;">❌ Incorrect</span>';
+        buttons[userAnswer].classList.add('incorrect');
+        buttons[q.correct].classList.add('correct');
+      }
+    });
+    
+    const percentage = Math.round((correctCount / totalQuestions) * 100);
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    scoreDisplay.innerHTML = `Score: ${correctCount}/${totalQuestions} (${percentage}%)`;
+    
+    if (percentage >= 80) {
+      scoreDisplay.style.color = '#155724';
+    } else if (percentage >= 60) {
+      scoreDisplay.style.color = '#856404';
+    } else {
+      scoreDisplay.style.color = '#721c24';
+    }
+  }
+
+  // Initialize quiz when page loads
+  window.onload = function() {
+    renderQuiz();
+  };
+  </script>
+</body>
+</html> 

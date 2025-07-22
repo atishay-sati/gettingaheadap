@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about circuit expansion for AP Physics C. Study current and voltage distribution, parallel and series circuits, and practical applications." />
+  <title>Circuit Expansion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* Step-by-step expansion styles */
+    .step-container {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 5px solid #6f42c1;
+    }
+    
+    .step-number {
+      background: #6f42c1;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .step-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #6f42c1;
+      margin-bottom: 1rem;
+    }
+    
+    .step-description {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    
+    .circuit-image {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      margin: 1rem auto;
+      background-color: #f3e5ff;
+      border: 2px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #e8d5ff, #f3e5ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-weight: 600;
+      color: #6f42c1;
+    }
+    
+    .voltage-current-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Circuit Expansion</h1>
+
+    <p>
+      Circuit expansion is the reverse process of circuit breakdown. After finding the equivalent resistance, we work backwards to determine the current and voltage across each individual resistor. This is essential for understanding how power is distributed throughout a circuit.
+    </p>
+
+    <h2>What is Circuit Expansion?</h2>
+
+    <div class="formula-box">
+      <strong>Circuit Expansion:</strong> The process of working backwards from the equivalent resistance to find current and voltage across each individual resistor in the original circuit.
+    </div>
+
+    <p>
+      Circuit expansion involves:
+    </p>
+
+    <ul>
+      <li><strong>Starting Point:</strong> Known equivalent resistance and total current</li>
+      <li><strong>Reverse Process:</strong> Working backwards through each combination step</li>
+      <li><strong>Current Division:</strong> Finding how current splits in parallel branches</li>
+      <li><strong>Voltage Division:</strong> Finding how voltage drops across series resistors</li>
+    </ul>
+
+    <p>In my opinion, circuit expansion is a lot more difficult than circuit breakdown. It is a lot more difficult to keep track of the current and voltage at each step. It is also a lot more difficult to verify your work. However, it is a very important skill to have for AP Physics C.</p>
+    <br>
+    <p>This video will walk you through the process of circuit expansion step by step.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KRqeQ1oSV6Y?si=w7ywEz_i4I9X_9ry" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YaaQtUUCGc8?si=z79zZ7BpdyL_kTPn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <h2>Key Takeaways Summary</h2>
+
+    <div class="formula-box">
+      <h3>🎯 Essential Circuit Expansion Steps</h3>
+      <ol>
+        <li><strong>Start:</strong> Use equivalent resistance and total current from breakdown</li>
+        <li><strong>Expand Series:</strong> Same current, voltage divides: V = IR</li>
+        <li><strong>Expand Parallel:</strong> Same voltage, current divides: I = V/R</li>
+        <li><strong>Work Backwards:</strong> Reverse the breakdown process step by step</li>
+        <li><strong>Verify:</strong> Check voltage and current conservation</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>⚡ Key Formulas for Expansion</h3>
+      <ul>
+        <li><strong>Total Current:</strong> I_total = V_battery / R_eq</li>
+        <li><strong>Series Current:</strong> I_series = I_total (same for all)</li>
+        <li><strong>Series Voltage:</strong> V_i = I_total × R_i</li>
+        <li><strong>Parallel Voltage:</strong> V_parallel = V_total (same for all)</li>
+        <li><strong>Parallel Current:</strong> I_i = V_total / R_i</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>🔍 Expansion Rules</h3>
+      <ul>
+        <li><strong>Series:</strong> Current constant, voltage divides proportionally</li>
+        <li><strong>Parallel:</strong> Voltage constant, current divides inversely to resistance</li>
+        <li><strong>Power:</strong> P = I²R = V²/R = IV for each resistor</li>
+        <li><strong>Conservation:</strong> Total voltage = sum of voltage drops</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>✅ Verification Methods</h3>
+      <ul>
+        <li><strong>Voltage Check:</strong> Sum of voltage drops = battery voltage</li>
+        <li><strong>Current Check:</strong> Sum of parallel currents = total current</li>
+        <li><strong>Power Check:</strong> Sum of individual powers = total power</li>
+        <li><strong>Ohm's Law:</strong> V = IR must hold for each resistor</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box" style="background: linear-gradient(135deg, #e8f5e8, #f0f8f0); border-color: #28a745; color: #155724;">
+      <h3>💡 Pro Tips for Expansion</h3>
+      <ul>
+        <li><strong>Start Simple:</strong> Begin with the equivalent circuit</li>
+        <li><strong>Track Carefully:</strong> Keep track of current and voltage at each step</li>
+        <li><strong>Use Tables:</strong> Organize results in a table for clarity</li>
+        <li><strong>Verify Each Step:</strong> Check conservation laws at each expansion</li>
+        <li><strong>Practice Regularly:</strong> Expansion becomes easier with practice</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

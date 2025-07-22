@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about electric charge and conservation for AP Physics C. Study fundamental properties of charge, types of charge, and the law of charge conservation." />
+  <title>Electric Charge and Conservation</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #chargeDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Charge and Conservation</h1>
+
+    <p>
+      Electric charge is one of the most fundamental properties of matter. It is the source of all electrical phenomena and forms the foundation of electromagnetism. Understanding electric charge and its conservation is essential for analyzing electric forces, fields, and circuits.
+    </p>
+
+    <h2>What is Electric Charge?</h2>
+
+    <div class="formula-box">
+      $$q = \text{fundamental property of matter}$$
+    </div>
+
+    <p>
+      Electric charge is a fundamental property of matter that determines how objects interact electrically. There are two types of charge: <strong>positive</strong> and <strong>negative</strong>. Like charges repel each other, while opposite charges attract.
+    </p>
+
+    <figure>
+      <img src="charges.png" alt="Positive and negative charges with their interactions" class="img-fluid-center">
+      <figcaption>
+        Positive and negative charges with their interactions.
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li><strong>Positive charge</strong> is typically associated with protons.</li>
+      <li><strong>Negative charge</strong> is typically associated with electrons.</li>
+      <li>Charge is a <strong>scalar quantity</strong> with magnitude but no direction.</li>
+      <li>The smallest unit of charge is the elementary charge (the charge of a proton) \(e = 1.602 \times 10^{-19}\) C.</li>
+      <li>The charge of an electron is \(-e\).</li>
+    </ul>
+
+    <h2>Key Properties of Electric Charge</h2>
+    <ul>
+      <li><strong>Units:</strong> Coulombs (C)</li>
+      <li><strong>Charge is always conserved</strong> in isolated systems.</li>
+      <li><strong>Charge is quantized</strong> - it comes in discrete units of \(e\). 1e, 2e, 3e, etc. You can't have 1.5e or 0.7e.</li>
+      <li>Charge is invariant - it doesn't change with velocity or reference frame.</li>
+    </ul>
+
+    <h2>Finding Total Charge from Charge Density</h2>
+    <div class="formula-box">
+      $$Q = \int \rho(\vec{r})\, dV$$
+    </div>
+    <p>
+      When charge is distributed continuously (not just as point charges), we use <strong>charge density</strong> to describe how much charge is present per unit length, area, or volume:
+    </p>
+    <ul>
+      <li><strong>Linear charge density:</strong> \(\lambda = \frac{dq}{dl}\) (C/m)</li>
+      <li><strong>Surface charge density:</strong> \(\sigma = \frac{dq}{dA}\) (C/m²)</li>
+      <li><strong>Volume charge density:</strong> \(\rho = \frac{dq}{dV}\) (C/m³)</li>
+    </ul>
+    <p>
+      To find the <strong>total charge</strong> in a region, integrate the charge density over the appropriate dimension:
+    </p>
+    <div class="formula-box">
+      <ul>
+        <li>Line: \(Q = \int \lambda(x)\, dx\)</li>
+        <li>Surface: \(Q = \int \sigma(x, y)\, dA\)</li>
+        <li>Volume: \(Q = \int \rho(x, y, z)\, dV\)</li>
+      </ul>
+    </div>
+    <div class="example-box">
+      <h3>Example: Total Charge on a Non-Uniform Rod</h3>
+      <p><strong>Problem:</strong> A thin rod of length 2 m has a linear charge density \(\lambda(x) = 3x\) C/m, where \(x\) is in meters from one end. What is the total charge on the rod?</p>
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Set up the integral: \(Q = \int_0^2 3x\, dx\)</li>
+        <li>Integrate: \(Q = 3 \int_0^2 x\, dx = 3 \left[\frac{1}{2}x^2\right]_0^2 = 3 \times \frac{1}{2} \times 4 = 6\) C</li>
+      </ol>
+      <p><strong>Answer:</strong> The total charge on the rod is 6 C.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: Total Charge on a Disk (Surface Charge Density)</h3>
+      <p><strong>Problem:</strong> A circular disk of radius 0.5 m has a uniform surface charge density \(\sigma = 2\) C/m². What is the total charge on the disk?</p>
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Area of the disk: \(A = \pi r^2 = \pi (0.5)^2 = 0.25\pi\) m²</li>
+        <li>Total charge: \(Q = \sigma A = 2 \times 0.25\pi = 0.5\pi\) C</li>
+        <li>Numerical value: \(Q \approx 1.57\) C</li>
+      </ol>
+      <p><strong>Answer:</strong> The total charge on the disk is approximately 1.57 C.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example: Total Charge in a Sphere (Volume Charge Density)</h3>
+      <p><strong>Problem:</strong> A solid sphere of radius 0.2 m has a uniform volume charge density \(\rho = 5\) C/m³. What is the total charge in the sphere?</p>
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Volume of the sphere: \(V = \frac{4}{3}\pi r^3 = \frac{4}{3}\pi (0.2)^3 = \frac{4}{3}\pi (0.008) = 0.0107\pi\) m³</li>
+        <li>Total charge: \(Q = \rho V = 5 \times 0.0107\pi = 0.0535\pi\) C</li>
+        <li>Numerical value: \(Q \approx 0.168\) C</li>
+      </ol>
+      <p><strong>Answer:</strong> The total charge in the sphere is approximately 0.168 C.</p>
+    </div>
+
+
+    <h2>Conservation of Charge</h2>
+
+    <div class="formula-box">
+      $$\sum q_{\text{initial}} = \sum q_{\text{final}}$$
+    </div>
+
+    <p>
+      The total electric charge in an isolated system remains constant. This is one of the most fundamental conservation laws in physics. Charge can be transferred between objects, but it cannot be created or destroyed.
+    </p>
+
+    <figure>
+      <img src="conservation-of-charge.png" alt="Conservation of Charge" class="img-fluid-center">
+      <figcaption>
+        Total charge remains constant in isolated systems.
+      </figcaption>
+    </figure>
+
+    <h2>Charge Transfer Mechanisms</h2>
+
+    <div class="formula-box">
+      $$\text{Conduction: } q_{\text{final}} = \frac{q_1 + q_2}{2}$$
+    </div>
+
+    <p>
+      There are three main ways charge can be transferred:
+    </p>
+
+    <ul>
+      <li><strong>Conduction:</strong> Direct contact between objects allows electrons to flow.</li>
+      <li><strong>Induction:</strong> Bringing a charged object near a neutral object causes charge separation.</li>
+      <li><strong>Friction:</strong> Rubbing two objects together can transfer electrons between them.</li>
+    </ul>
+
+    <p>
+      Understanding these mechanisms is crucial for analyzing how objects become charged and how charge distributions affect electric fields and forces.
+    </p>
+
+    <figure>
+      <img src="methods-of-charging.jpg" alt="Charge Transfer Mechanisms" class="img-fluid-center">
+      <figcaption>
+        Visual representation of conduction, induction, and friction.
+      </figcaption>
+    </figure>
+
+    <h2>Grounding and Charge Neutralization</h2>
+
+    <div class="formula-box">
+      $$\text{When grounded: } q_{\text{final}} = 0$$
+    </div>
+
+    <p>
+      Grounding is the process of connecting a charged object to the Earth (or a large conductor) to neutralize its charge. The Earth acts as an infinite reservoir of charge, allowing excess electrons to flow away or providing electrons to neutralize positive charges.
+    </p>
+
+    <ul>
+      <li><strong>Positive charge:</strong> Electrons flow from Earth to neutralize the positive charge.</li>
+      <li><strong>Negative charge:</strong> Excess electrons flow to Earth, leaving the object neutral.</li>
+      <li><strong>Neutralization:</strong> The object becomes electrically neutral (net charge = 0).</li>
+    </ul>
+
+    <figure>
+      <img src="grounding1.jpg" alt="Grounding Process" class="img-fluid-center">
+      <img src="grounding2.jpg" alt="Grounding Process" class="img-fluid-center">
+    </figure>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Charge Conservation in Conduction</h3>
+      <p><strong>Problem:</strong> Two identical metal spheres have charges of +8 μC and -4 μC respectively. If they are brought into contact and then separated, what will be the final charge on each sphere?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Initial total charge:</strong> \(q_{\text{total}} = +8 \text{ μC} + (-4 \text{ μC}) = +4 \text{ μC}\)</li>
+        <li><strong>Conservation principle:</strong> Total charge remains +4 μC after contact</li>
+        <li><strong>Equal distribution:</strong> Since spheres are identical, charge distributes equally</li>
+        <li><strong>Final charge per sphere:</strong> \(q_{\text{final}} = \frac{+4 \text{ μC}}{2} = +2 \text{ μC}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> Each sphere will have a charge of +2 μC.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Charge Transfer by Induction</h3>
+      <p><strong>Problem:</strong> A neutral conducting sphere is brought near a positively charged rod. The sphere is then grounded while the rod is still nearby. What happens to the sphere's charge when the ground connection is removed and then the rod is taken away?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Initial state:</strong> Sphere is neutral (net charge = 0)</li>
+        <li><strong>Induction:</strong> Positive rod attracts electrons to near side, repels protons to far side</li>
+        <li><strong>Grounding:</strong> Excess electrons flow to ground, leaving sphere with net positive charge</li>
+        <li><strong>Rod removal:</strong> Electrons redistribute, but sphere retains net positive charge</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The sphere ends up with a net positive charge.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Quantized Charge Calculation</h3>
+      <p><strong>Problem:</strong> An object has a charge of -3.2 × 10⁻¹⁹ C. How many excess electrons does it have?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Elementary charge:</strong> \(e = 1.602 \times 10^{-19} \text{ C}\)</li>
+        <li><strong>Number of electrons:</strong> \(n = \frac{|q|}{e} = \frac{3.2 \times 10^{-19} \text{ C}}{1.602 \times 10^{-19} \text{ C}}\)</li>
+        <li><strong>Calculation:</strong> \(n = \frac{3.2}{1.602} = 2\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The object has 2 excess electrons.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 4: Complex Charge Distribution</h3>
+      <p><strong>Problem:</strong> Three identical conducting spheres A, B, and C have initial charges of +6 μC, -2 μC, and +4 μC respectively. Sphere A touches sphere B, then sphere A touches sphere C. What are the final charges on each sphere?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>First contact (A and B):</strong>
+          <ul>
+            <li>Total charge: \(q_{\text{total}} = +6 \text{ μC} + (-2 \text{ μC}) = +4 \text{ μC}\)</li>
+            <li>After contact: \(q_A = q_B = \frac{+4 \text{ μC}}{2} = +2 \text{ μC}\)</li>
+          </ul>
+        </li>
+        <li><strong>Second contact (A and C):</strong>
+          <ul>
+            <li>Total charge: \(q_{\text{total}} = +2 \text{ μC} + (+4 \text{ μC}) = +6 \text{ μC}\)</li>
+            <li>After contact: \(q_A = q_C = \frac{+6 \text{ μC}}{2} = +3 \text{ μC}\)</li>
+          </ul>
+        </li>
+      </ol>
+      
+      <p><strong>Answer:</strong> Final charges are: A = +3 μC, B = +2 μC, C = +3 μC</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 5: Charge Neutralization</h3>
+      <p><strong>Problem:</strong> A plastic rod rubbed with wool acquires a charge of -8 × 10⁻⁹ C. How many electrons were transferred during the rubbing process?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Given:</strong> \(q = -8 \times 10^{-9} \text{ C}\) (negative indicates excess electrons)</li>
+        <li><strong>Elementary charge:</strong> \(e = 1.602 \times 10^{-19} \text{ C}\)</li>
+        <li><strong>Number of electrons:</strong> \(n = \frac{|q|}{e} = \frac{8 \times 10^{-9} \text{ C}}{1.602 \times 10^{-19} \text{ C}}\)</li>
+        <li><strong>Calculation:</strong> \(n = \frac{8 \times 10^{-9}}{1.602 \times 10^{-19}} = 5 \times 10^{10}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> Approximately 5 × 10¹⁰ electrons were transferred to the rod.</p>
+    </div>
+
+    <h2>Induction Animation</h2>
+    <p>Watch how a charged rod induces charge separation in a neutral ball, and how grounding affects the process:</p>
+    
+    <!-- Induction Animation Canvas -->
+    <canvas id="inductionCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="startInduction" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetInduction" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+
+    
+
+
+<script>
+  
+
+  // Induction Animation
+  const inductionCanvas = document.getElementById("inductionCanvas");
+  const ictx = inductionCanvas.getContext("2d");
+  const startButton = document.getElementById("startInduction");
+  const resetButton = document.getElementById("resetInduction");
+
+  let animationState = "initial"; // initial, approaching, grounded, separated
+  let rodX = 150;
+  let ballX = 400;
+  let electrons = [];
+  let protons = [];
+  let animationId;
+
+  let electronPositions = [];
+  
+  // Initialize charges
+  function initCharges() {
+    electrons = [];
+    protons = [];
+    
+    // Add protons (green, fixed positions) - well-spaced distribution within circle
+    const protonPositions = [
+      // Top row
+      {x: -45, y: -35}, {x: -25, y: -35}, {x: 0, y: -35}, {x: 25, y: -35}, {x: 45, y: -35},
+      // Upper middle row
+      {x: -40, y: -20}, {x: -15, y: -20}, {x: 15, y: -20}, {x: 40, y: -20},
+      // Lower middle row
+      {x: -40, y: 20}, {x: -15, y: 20}, {x: 15, y: 20}, {x: 40, y: 20},
+      // Bottom row
+      {x: -45, y: 35}, {x: -25, y: 35}, {x: 0, y: 35}, {x: 25, y: 35}, {x: 45, y: 35}
+    ];
+    
+    protonPositions.forEach(pos => {
+      protons.push({
+        x: ballX + pos.x,
+        y: 200 + pos.y,
+        vx: 0,
+        vy: 0
+      });
+    });
+    
+    // Add electrons (red, can move) - well-spaced distribution within circle
+    electronPositions = [
+      // Top row (offset from protons)
+      {x: -40, y: -30}, {x: -20, y: -30}, {x: 5, y: -30}, {x: 30, y: -30}, {x: 50, y: -30},
+      // Upper middle row (offset from protons)
+      {x: -35, y: -15}, {x: -10, y: -15}, {x: 20, y: -15}, {x: 45, y: -15},
+      // Lower middle row (offset from protons)
+      {x: -35, y: 15}, {x: -10, y: 15}, {x: 20, y: 15}, {x: 45, y: 15},
+      // Bottom row (offset from protons)
+      {x: -40, y: 30}, {x: -20, y: 30}, {x: 5, y: 30}, {x: 30, y: 30}, {x: 50, y: 30}
+    ];
+    
+    electronPositions.forEach(pos => {
+      electrons.push({
+        x: ballX + pos.x,
+        y: 200 + pos.y,
+        vx: 0,
+        vy: 0,
+        targetX: ballX + pos.x,
+        targetY: 200 + pos.y
+      });
+    });
+  }
+
+  function drawInductionScene() {
+    ictx.clearRect(0, 0, inductionCanvas.width, inductionCanvas.height);
+    
+    // Draw ground wire
+    ictx.strokeStyle = "#333";
+    ictx.lineWidth = 3;
+    ictx.beginPath();
+    ictx.moveTo(ballX + 60, 200);
+    ictx.lineTo(ballX + 80, 200);
+    ictx.lineTo(ballX + 80, 350);
+    ictx.stroke();
+    
+    // Draw ground symbol
+    ictx.beginPath();
+    ictx.moveTo(ballX + 60, 350);
+    ictx.lineTo(ballX + 100, 350);
+    ictx.moveTo(ballX + 65, 355);
+    ictx.lineTo(ballX + 95, 355);
+    ictx.moveTo(ballX + 70, 360);
+    ictx.lineTo(ballX + 90, 360);
+    ictx.stroke();
+    
+    // Draw ball
+    ictx.fillStyle = "#fff";
+    ictx.beginPath();
+    ictx.arc(ballX, 200, 60, 0, 2 * Math.PI);
+    ictx.fill();
+    ictx.strokeStyle = "#333";
+    ictx.lineWidth = 2;
+    ictx.stroke();
+    
+    // Draw rod (white)
+    ictx.fillStyle = "#fff";
+    ictx.fillRect(rodX, 100, 20, 200);
+    ictx.strokeStyle = "#333";
+    ictx.lineWidth = 2;
+    ictx.strokeRect(rodX, 100, 20, 200);
+    
+    // Draw green positive charges on rod (uniformly distributed)
+    ictx.fillStyle = "#28a745";
+    for (let i = 0; i < 8; i++) {
+      const y = 120 + (i * 20);
+      ictx.beginPath();
+      ictx.arc(rodX + 10, y, 3, 0, 2 * Math.PI);
+      ictx.fill();
+    }
+    
+    // Draw protons (green, don't move)
+    ictx.fillStyle = "#4CAF50";
+    protons.forEach(proton => {
+      ictx.beginPath();
+      ictx.arc(proton.x, proton.y, 4, 0, 2 * Math.PI);
+      ictx.fill();
+      ictx.fillStyle = "#2E7D32";
+      ictx.font = '12px Arial';
+      ictx.fillText('+', proton.x - 3, proton.y + 4);
+    });
+    
+    // Draw electrons (red, can move)
+    ictx.fillStyle = "#F44336";
+    electrons.forEach(electron => {
+      ictx.beginPath();
+      ictx.arc(electron.x, electron.y, 4, 0, 2 * Math.PI);
+      ictx.fill();
+      ictx.fillStyle = "#D32F2F";
+      ictx.font = '12px Arial';
+      ictx.fillText('-', electron.x - 3, electron.y + 4);
+    });
+    
+    // Draw labels
+    ictx.fillStyle = "#333";
+    ictx.font = "14px Roboto, sans-serif";
+    ictx.textAlign = "left";
+    ictx.fillText("Protons (fixed)", 50, 50);
+    ictx.fillText("Electrons (mobile)", 50, 70);
+    
+    // Draw state label
+    ictx.fillStyle = "#6f42c1";
+    ictx.font = "18px Roboto, sans-serif";
+    ictx.textAlign = "center";
+    ictx.fillText(animationState.toUpperCase(), 400, 50);
+  }
+
+  let groundedElectronIndex = 0;
+  let groundingStartTime = 0;
+  let returnStartTime = 0;
+  let returningElectronIndex = 0;
+  
+  function updateElectrons() {
+    electrons.forEach((electron, index) => {
+      // Calculate force from rod (simplified)
+      const distanceToRod = Math.abs(electron.x - rodX);
+      const force = 1000 / (distanceToRod * distanceToRod);
+      
+      if (animationState === "approaching") {
+        // Electrons move away from positive rod
+        if (electron.x > ballX) {
+          electron.targetX = electron.x + force * 0.1;
+        } else {
+          electron.targetX = electron.x - force * 0.1;
+        }
+      } else if (animationState === "grounded") {
+        // Ground electrons one by one
+        if (index < groundedElectronIndex) {
+          // This electron has already been grounded
+          electron.targetX = ballX + 80;
+          electron.targetY = 350;
+        } else if (index === groundedElectronIndex) {
+          // This electron is currently being grounded - follow wire path
+          const progress = (Date.now() - groundingStartTime) / 200; // 200ms per electron
+          if (progress < 0.5) {
+            // First half: move horizontally to the right
+            const horizontalProgress = progress * 2;
+            electron.targetX = ballX + 60 + (horizontalProgress * 20); // 60 to 80
+            electron.targetY = 200; // Stay at ball level
+          } else {
+            // Second half: move vertically down
+            const verticalProgress = (progress - 0.5) * 2;
+            electron.targetX = ballX + 80; // Stay at wire end
+            electron.targetY = 200 + (verticalProgress * 150); // 200 to 350
+          }
+        } else {
+          // This electron hasn't been grounded yet
+          electron.targetX = electron.x;
+          electron.targetY = electron.y;
+        }
+      } else if (animationState === "separated") {
+        // Rod removed, electrons flow back to ball
+        if (index < groundedElectronIndex - returningElectronIndex) {
+          // This electron is still grounded
+          electron.targetX = ballX + 80;
+          electron.targetY = 350;
+        } else if (index === groundedElectronIndex - returningElectronIndex - 1) {
+          // This electron is currently returning
+          const returnProgress = (Date.now() - returnStartTime) / 200; // 200ms per electron return
+          if (returnProgress < 0.5) {
+            // First half: move vertically up from ground
+            const verticalProgress = returnProgress * 2;
+            electron.targetX = ballX + 80; // Stay at wire end
+            electron.targetY = 350 - (verticalProgress * 150); // 350 to 200
+          } else {
+            // Second half: move horizontally back to ball
+            const horizontalProgress = (returnProgress - 0.5) * 2;
+            electron.targetX = ballX + 80 - (horizontalProgress * 20); // 80 to 60
+            electron.targetY = 200; // Stay at ball level
+          }
+        } else {
+          // This electron has returned to ball
+          electron.targetX = ballX + electronPositions[index].x;
+          electron.targetY = 200 + electronPositions[index].y;
+        }
+      }
+      
+      // Smooth movement
+      electron.x += (electron.targetX - electron.x) * 0.1;
+      electron.y += (electron.targetY - electron.y) * 0.1;
+    });
+    
+    // Progress grounding
+    if (animationState === "grounded") {
+      const currentTime = Date.now();
+      if (currentTime - groundingStartTime > 200) { // Ground one electron every 200ms
+        groundedElectronIndex++;
+        groundingStartTime = currentTime;
+      }
+    }
+    
+    // Progress return
+    if (animationState === "separated") {
+      const currentTime = Date.now();
+      if (currentTime - returnStartTime > 200) { // Return one electron every 200ms
+        returningElectronIndex++;
+        returnStartTime = currentTime;
+      }
+    }
+  }
+
+  function animateInduction() {
+    updateElectrons();
+    drawInductionScene();
+    animationId = requestAnimationFrame(animateInduction);
+  }
+
+  function startAnimation() {
+    animationState = "initial";
+    rodX = 150;
+    groundedElectronIndex = 0;
+    groundingStartTime = 0;
+    returningElectronIndex = 0;
+    returnStartTime = 0;
+    initCharges();
+    
+    setTimeout(() => {
+      animationState = "approaching";
+      rodX = 250;
+    }, 1000);
+    
+    setTimeout(() => {
+      animationState = "grounded";
+      groundingStartTime = Date.now();
+    }, 3000);
+    
+    setTimeout(() => {
+      animationState = "separated";
+      rodX = 100;
+      returnStartTime = Date.now();
+    }, 8000); // Extended time to allow all electrons to be grounded
+    
+    animateInduction();
+  }
+
+  function resetAnimation() {
+    cancelAnimationFrame(animationId);
+    animationState = "initial";
+    rodX = 150;
+    groundedElectronIndex = 0;
+    groundingStartTime = 0;
+    returningElectronIndex = 0;
+    returnStartTime = 0;
+    initCharges();
+    drawInductionScene();
+  }
+
+  // Event listeners
+  startButton.addEventListener("click", startAnimation);
+  resetButton.addEventListener("click", resetAnimation);
+
+  // Initialize
+  initCharges();
+  drawInductionScene();
+</script>
+
+  </div>
+</body>
+</html> 

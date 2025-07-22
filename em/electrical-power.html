@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn electrical power for AP Physics C. Study power in circuits, power dissipation, and energy transfer in resistors and other circuit elements." />
+  <title>Electrical Power</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Electrical Power and Energy</h1>
+
+    <p>
+      Electrical power is the rate at which electrical energy is transferred or consumed in a circuit. Understanding power is essential for analyzing energy efficiency, circuit design, and electrical systems.
+    </p>
+
+    <h2>Definition of Electrical Power</h2>
+
+    <div class="formula-box">
+      $$P = \frac{W}{t} = VI$$
+    </div>
+
+    <p>
+      Electrical power is the rate at which work is done or energy is transferred. It can be calculated as the product of voltage and current.
+    </p>
+
+    <ul>
+      <li><strong>Symbol:</strong> \(P\)</li>
+      <li><strong>Units:</strong> Watts (W)</li>
+      <li><strong>Definition:</strong> Rate of energy transfer</li>
+      <li><strong>Relationship:</strong> Power = Voltage × Current</li>
+    </ul>
+
+    <figure>
+      <img src="energy-meter.jpg" alt="Energy being disapatted" class="img-fluid-center">
+      <figcaption>
+        Power flows from the source to the load in an electrical circuit.
+      </figcaption>
+    </figure>
+
+    <h2>Power Formulas</h2>
+
+    <p>
+      Power can be expressed in several equivalent forms depending on what quantities are known:
+    </p>
+
+    <div class="formula-box">
+      $$P = VI = I^2R = \frac{V^2}{R}$$
+    </div>
+
+    <ul>
+      <li><strong>\(P = VI\):</strong> Power equals voltage times current</li>
+      <li><strong>\(P = I^2R\):</strong> Power equals current squared times resistance</li>
+      <li><strong>\(P = \frac{V^2}{R}\):</strong> Power equals voltage squared divided by resistance</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Memory Trick: Power Triangle</h3>
+      <p><strong>Remember the power formulas using the PVI triangle:</strong></p>
+      <ul>
+        <li><strong>P</strong> = Power (top of triangle)</li>
+        <li><strong>V</strong> = Voltage (bottom left)</li>
+        <li><strong>I</strong> = Current (bottom right)</li>
+      </ul>
+      <p><strong>To find any variable:</strong></p>
+      <ul>
+        <li><strong>P</strong> = V × I (multiply the two bottom values)</li>
+        <li><strong>V</strong> = P ÷ I (divide top by bottom right)</li>
+        <li><strong>I</strong> = P ÷ V (divide top by bottom left)</li>
+      </ul>
+      <p>This visual triangle helps you quickly rearrange the power formula!</p>
+    </div>
+
+    <h2>Energy and Power</h2>
+
+    <h3>Energy Definition</h3>
+    <ul>
+      <li><strong>Symbol:</strong> \(E\) or \(W\)</li>
+      <li><strong>Units:</strong> Joules (J)</li>
+      <li><strong>Relationship:</strong> \(E = Pt\)</li>
+      <li><strong>Definition:</strong> Total work done or energy transferred</li>
+    </ul>
+
+    <h3>Power vs Energy</h3>
+    <ul>
+      <li><strong>Power:</strong> Rate of energy transfer (watts)</li>
+      <li><strong>Energy:</strong> Total amount transferred (joules)</li>
+      <li><strong>Time factor:</strong> Energy = Power × Time</li>
+      <li><strong>Practical units:</strong> Kilowatt-hours (kWh) for large amounts</li>
+    </ul>
+
+    <h2>Power in Different Circuit Elements</h2>
+
+    <h3>Power Sources</h3>
+    <ul>
+      <li><strong>Batteries:</strong> Supply power to the circuit</li>
+      <li><strong>Generators:</strong> Convert mechanical to electrical power</li>
+      <li><strong>Solar panels:</strong> Convert light to electrical power</li>
+      <li><strong>Power supplies:</strong> Convert AC to DC power</li>
+    </ul>
+
+    <h3>Power Consumers</h3>
+    <ul>
+      <li><strong>Resistors:</strong> Convert electrical energy to heat</li>
+      <li><strong>Motors:</strong> Convert electrical energy to mechanical energy</li>
+      <li><strong>Light bulbs:</strong> Convert electrical energy to light and heat</li>
+      <li><strong>Electronics:</strong> Use power for various functions</li>
+    </ul>
+
+    <h2>Power Conservation</h2>
+
+    <p>
+      In any electrical circuit, power is conserved. The power supplied by sources equals the power consumed by loads.
+    </p>
+
+    <div class="formula-box">
+      $$P_{supplied} = P_{consumed}$$
+    </div>
+
+    <ul>
+      <li><strong>Power in:</strong> Sum of power from all sources</li>
+      <li><strong>Power out:</strong> Sum of power consumed by all loads</li>
+      <li><strong>Conservation:</strong> Power in = Power out</li>
+      <li><strong>Efficiency:</strong> Useful power output / total power input</li>
+    </ul>
+
+    <h2>Power Units and Conversions</h2>
+
+    <h3>Common Power Units</h3>
+    <ul>
+      <li><strong>Milliwatt (mW):</strong> 0.001 W</li>
+      <li><strong>Watt (W):</strong> 1 W</li>
+      <li><strong>Kilowatt (kW):</strong> 1000 W</li>
+      <li><strong>Megawatt (MW):</strong> 1,000,000 W</li>
+    </ul>
+
+    <h3>Energy Units</h3>
+    <ul>
+      <li><strong>Joule (J):</strong> 1 W for 1 second</li>
+      <li><strong>Watt-hour (Wh):</strong> 1 W for 1 hour</li>
+      <li><strong>Kilowatt-hour (kWh):</strong> 1000 W for 1 hour</li>
+      <li><strong>Practical use:</strong> kWh for electricity bills</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Basic Power Calculation</h3>
+      <p><strong>Problem:</strong> A device operates at 12 V and draws 2.0 A. What is the power consumed?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Power formula:</strong> \(P = VI\)</li>
+        <li><strong>Substitution:</strong> \(P = (12 \text{ V})(2.0 \text{ A})\)</li>
+        <li><strong>Calculation:</strong> \(P = 24 \text{ W}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The power consumed is 24 W.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Energy Calculation</h3>
+      <p><strong>Problem:</strong> A 60 W light bulb is left on for 4 hours. How much energy is consumed?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Energy formula:</strong> \(E = Pt\)</li>
+        <li><strong>Time conversion:</strong> \(t = 4 \text{ hours} = 14400 \text{ seconds}\)</li>
+        <li><strong>Substitution:</strong> \(E = (60 \text{ W})(14400 \text{ s})\)</li>
+        <li><strong>Calculation:</strong> \(E = 864000 \text{ J} = 0.24 \text{ kWh}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The energy consumed is 864,000 J or 0.24 kWh.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Power from Current and Resistance</h3>
+      <p><strong>Problem:</strong> A current of 3.0 A flows through a 5.0 Ω resistor. What is the power dissipated?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Power formula:</strong> \(P = I^2R\)</li>
+        <li><strong>Substitution:</strong> \(P = (3.0)^2(5.0)\)</li>
+        <li><strong>Calculation:</strong> \(P = 9.0 \times 5.0 = 45 \text{ W}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The power dissipated is 45 W.</p>
+    </div>
+
+    <h2>Interactive Power Simulation</h2>
+    <p>Explore how voltage, current, and resistance affect power:</p>
+    
+    <canvas id="powerCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="voltageSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Voltage (V):</label>
+        <input type="range" id="voltageSlider" min="1" max="20" value="12" step="0.5" style="width: 100%;">
+        <div id="voltageValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">12.0 V</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="currentSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Current (A):</label>
+        <input type="range" id="currentSlider" min="0.5" max="5" value="2" step="0.1" style="width: 100%;">
+        <div id="currentValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 A</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="resistanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Resistance (Ω):</label>
+        <input type="range" id="resistanceSlider" min="1" max="10" value="6" step="0.5" style="width: 100%;">
+        <div id="resistanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">6.0 Ω</div>
+      </div>
+    </div>
+    
+    <div id="powerDisplay" style="text-align: center; margin: 1rem 0; font-size: 1.2rem; color: #6f42c1; font-weight: bold;">
+      Power: 24.0 W | Energy (1 min): 1440 J
+    </div>
+    
+    <div style="text-align: center; margin: 2rem 0;">
+      <button id="startPower" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetPower" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+
+  </div>
+
+  <script>
+    // Power Simulation
+    const powerCanvas = document.getElementById("powerCanvas");
+    const pctx = powerCanvas.getContext("2d");
+    const voltageSlider = document.getElementById("voltageSlider");
+    const currentSlider = document.getElementById("currentSlider");
+    const resistanceSlider = document.getElementById("resistanceSlider");
+    const voltageValue = document.getElementById("voltageValue");
+    const currentValue = document.getElementById("currentValue");
+    const resistanceValue = document.getElementById("resistanceValue");
+    const powerDisplay = document.getElementById("powerDisplay");
+    const startPowerButton = document.getElementById("startPower");
+    const resetPowerButton = document.getElementById("resetPower");
+
+    let voltage = 12.0; // volts
+    let current = 2.0; // amperes
+    let resistance = 6.0; // ohms
+    let power = 24.0; // calculated power
+    let energy = 1440.0; // calculated energy for 1 minute
+    let animationId = null;
+    let isAnimating = false;
+    let energyParticles = [];
+
+    function calculatePower() {
+      power = voltage * current;
+      energy = power * 60; // energy for 1 minute
+      powerDisplay.textContent = `Power: ${power.toFixed(1)} W | Energy (1 min): ${energy.toFixed(0)} J`;
+    }
+
+    function initEnergyParticles() {
+      energyParticles = [];
+      const numParticles = 8;
+      for (let i = 0; i < numParticles; i++) {
+        energyParticles.push({
+          x: 100 + Math.random() * 600,
+          y: 200 + Math.random() * 100,
+          vx: current * 0.8, // Speed proportional to current
+          vy: (Math.random() - 0.5) * 2,
+          radius: 4,
+          color: "#FFD700"
+        });
+      }
+    }
+
+    function drawPowerCircuit() {
+      pctx.clearRect(0, 0, powerCanvas.width, powerCanvas.height);
+      
+      // Draw gradient background
+      const gradient = pctx.createLinearGradient(0, 0, 0, powerCanvas.height);
+      gradient.addColorStop(0, "#f8f9fa");
+      gradient.addColorStop(1, "#e9ecef");
+      pctx.fillStyle = gradient;
+      pctx.fillRect(0, 0, powerCanvas.width, powerCanvas.height);
+      
+      // Draw battery with gradient
+      pctx.shadowColor = "rgba(0, 0, 0, 0.3)";
+      pctx.shadowBlur = 10;
+      pctx.shadowOffsetX = 2;
+      pctx.shadowOffsetY = 2;
+      
+      const batteryGradient = pctx.createLinearGradient(50, 150, 130, 250);
+      batteryGradient.addColorStop(0, "#FFD700");
+      batteryGradient.addColorStop(1, "#FFA500");
+      pctx.fillStyle = batteryGradient;
+      pctx.fillRect(50, 150, 80, 100);
+      
+      pctx.shadowColor = "transparent";
+      pctx.strokeStyle = "#654321";
+      pctx.lineWidth = 3;
+      pctx.strokeRect(50, 150, 80, 100);
+      
+      // Battery terminals
+      pctx.fillStyle = "#8B4513";
+      pctx.fillRect(45, 180, 10, 40);
+      pctx.fillRect(125, 180, 10, 40);
+      
+      // Terminal highlights
+      pctx.fillStyle = "#A0522D";
+      pctx.fillRect(46, 181, 8, 38);
+      pctx.fillRect(126, 181, 8, 38);
+      
+      // Battery labels
+      pctx.fillStyle = "#333";
+      pctx.font = "bold 14px Arial";
+      pctx.fillText("+", 130, 200);
+      pctx.fillText("-", 50, 200);
+      pctx.font = "12px Arial";
+      pctx.fillText("V = " + voltage + "V", 60, 140);
+      
+      // Draw wires
+      pctx.strokeStyle = "#2C3E50";
+      pctx.lineWidth = 4;
+      pctx.lineCap = "round";
+      pctx.lineJoin = "round";
+      
+      pctx.beginPath();
+      pctx.moveTo(135, 200);
+      pctx.lineTo(300, 200);
+      pctx.stroke();
+      
+      pctx.beginPath();
+      pctx.moveTo(300, 200);
+      pctx.lineTo(300, 300);
+      pctx.stroke();
+      
+      pctx.beginPath();
+      pctx.moveTo(300, 300);
+      pctx.lineTo(50, 300);
+      pctx.stroke();
+      
+      pctx.beginPath();
+      pctx.moveTo(50, 300);
+      pctx.lineTo(50, 220);
+      pctx.stroke();
+      
+      // Draw load with power indicator
+      pctx.shadowColor = "rgba(0, 0, 0, 0.2)";
+      pctx.shadowBlur = 5;
+      pctx.shadowOffsetX = 1;
+      pctx.shadowOffsetY = 1;
+      
+      const loadGradient = pctx.createLinearGradient(280, 180, 320, 220);
+      loadGradient.addColorStop(0, "#8B4513");
+      loadGradient.addColorStop(1, "#A0522D");
+      pctx.fillStyle = loadGradient;
+      pctx.fillRect(280, 180, 40, 40);
+      
+      pctx.shadowColor = "transparent";
+      pctx.strokeStyle = "#654321";
+      pctx.lineWidth = 2;
+      pctx.strokeRect(280, 180, 40, 40);
+      
+      // Load zigzag
+      pctx.strokeStyle = "#2C3E50";
+      pctx.lineWidth = 3;
+      pctx.lineCap = "round";
+      pctx.lineJoin = "round";
+      
+      pctx.beginPath();
+      pctx.moveTo(285, 200);
+      
+      for (let i = 0; i < 5; i++) {
+        const x = 285 + (i + 1) * 8;
+        const y = 200 + (i % 2 === 0 ? -8 : 8);
+        pctx.lineTo(x, y);
+      }
+      
+      pctx.stroke();
+      
+      // Load label
+      pctx.fillStyle = "#2C3E50";
+      pctx.font = "bold 12px Arial";
+      pctx.fillText("R = " + resistance + "Ω", 285, 175);
+      
+      // Draw energy particles if animating
+      if (isAnimating) {
+        energyParticles.forEach(particle => {
+          // Energy particle glow effect
+          pctx.shadowColor = particle.color;
+          pctx.shadowBlur = 10;
+          pctx.fillStyle = particle.color;
+          pctx.beginPath();
+          pctx.arc(particle.x, particle.y, particle.radius, 0, 2 * Math.PI);
+          pctx.fill();
+          
+          // Particle core
+          pctx.shadowColor = "transparent";
+          pctx.fillStyle = "#FFA500";
+          pctx.beginPath();
+          pctx.arc(particle.x, particle.y, particle.radius * 0.6, 0, 2 * Math.PI);
+          pctx.fill();
+          
+          // Update particle positions
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+          
+          // Reset particles that go off screen
+          if (particle.x > 800) {
+            particle.x = 100;
+            particle.y = 200 + Math.random() * 100;
+          }
+          
+          // Keep particles within bounds
+          if (particle.y < 150 || particle.y > 350) {
+            particle.vy *= -1;
+          }
+          
+          // Update speed based on current
+          particle.vx = current * 0.8;
+        });
+      }
+      
+      // Draw power labels
+      pctx.fillStyle = "#6f42c1";
+      pctx.font = "bold 16px Arial";
+      pctx.fillText("P = " + power.toFixed(1) + "W", 350, 200);
+      pctx.fillText("I = " + current.toFixed(1) + "A", 350, 220);
+      pctx.fillText("V = " + voltage.toFixed(1) + "V", 350, 240);
+    }
+
+    function animate() {
+      drawPowerCircuit();
+      if (isAnimating) {
+        animationId = requestAnimationFrame(animate);
+      }
+    }
+
+    // Event listeners
+    voltageSlider.addEventListener("input", function() {
+      voltage = parseFloat(this.value);
+      voltageValue.textContent = voltage.toFixed(1) + " V";
+      calculatePower();
+      drawPowerCircuit();
+    });
+
+    currentSlider.addEventListener("input", function() {
+      current = parseFloat(this.value);
+      currentValue.textContent = current.toFixed(1) + " A";
+      calculatePower();
+      drawPowerCircuit();
+    });
+
+    resistanceSlider.addEventListener("input", function() {
+      resistance = parseFloat(this.value);
+      resistanceValue.textContent = resistance.toFixed(1) + " Ω";
+      calculatePower();
+      drawPowerCircuit();
+    });
+
+    startPowerButton.addEventListener("click", function() {
+      if (!isAnimating) {
+        isAnimating = true;
+        initEnergyParticles();
+        animate();
+        this.textContent = "Stop Animation";
+      } else {
+        isAnimating = false;
+        cancelAnimationFrame(animationId);
+        this.textContent = "Start Animation";
+        drawPowerCircuit();
+      }
+    });
+
+    resetPowerButton.addEventListener("click", function() {
+      voltageSlider.value = 12;
+      currentSlider.value = 2;
+      resistanceSlider.value = 6;
+      voltage = 12.0;
+      current = 2.0;
+      resistance = 6.0;
+      voltageValue.textContent = "12.0 V";
+      currentValue.textContent = "2.0 A";
+      resistanceValue.textContent = "6.0 Ω";
+      calculatePower();
+      isAnimating = false;
+      cancelAnimationFrame(animationId);
+      startPowerButton.textContent = "Start Animation";
+      drawPowerCircuit();
+    });
+
+    // Initialize
+    calculatePower();
+    drawPowerCircuit();
+  </script>
+</body>
+</html> 

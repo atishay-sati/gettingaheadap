@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Practice AP Physics C electrostatics: 30 new questions on charge, field, potential, energy, conductors, and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electrostatics Practice Test 2 – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #8e44ad;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+      color: #8e44ad;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+    #submit-btn {
+      background-color: #6f42c1;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+    }
+    #submit-btn:hover {
+      background-color: #8e44ad;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(142, 68, 173, 0.3);
+      cursor: pointer;
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electrostatics Practice Test 2</h1>
+    <h2>30 Questions – AP Physics C Level</h2>
+
+    <!-- Question 1 -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>Two point charges, +4 μC and +6 μC, are placed 0.3 m apart in vacuum. What is the magnitude of the force between them? (k = 9 × 10<sup>9</sup> N·m²/C²)</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) 0.8 N</label>
+        <label><input type="radio" name="q1"> b) 2.4 N</label>
+        <label><input type="radio" name="q1"> c) 7.2 N</label>
+        <label><input type="radio" name="q1"> d) 0.12 N</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>What is the net electric field at the midpoint between two equal but opposite point charges +Q and -Q separated by distance 2a?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) Zero</label>
+        <label><input type="radio" name="q2"> b) \( \frac{2kQ}{a^2} \) directed from +Q to -Q</label>
+        <label><input type="radio" name="q2"> c) \( \frac{4kQ}{a^2} \) directed from -Q to +Q</label>
+        <label><input type="radio" name="q2"> d) \( \frac{kQ}{a^2} \) directed from +Q to -Q</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>Which of the following statements is true about the electric field inside a conductor in electrostatic equilibrium?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) It is always zero</label>
+        <label><input type="radio" name="q3"> b) It is maximum at the center</label>
+        <label><input type="radio" name="q3"> c) It is equal to the field at the surface</label>
+        <label><input type="radio" name="q3"> d) It depends on the shape</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>What is the electric potential at the center of a square of side a with four equal charges +Q at each corner?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) Zero</label>
+        <label><input type="radio" name="q4"> b) \( \frac{4kQ}{a} \)</label>
+        <label><input type="radio" name="q4"> c) \( \frac{2kQ}{a} \)</label>
+        <label><input type="radio" name="q4"> d) \( \frac{4kQ}{a\sqrt{2}} \)</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A conducting sphere of radius R carries a net charge Q. What is the electric field at a distance r = 2R from the center?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) \( \frac{kQ}{R^2} \)</label>
+        <label><input type="radio" name="q5"> b) \( \frac{kQ}{4R^2} \)</label>
+        <label><input type="radio" name="q5"> c) \( \frac{kQ}{2R^2} \)</label>
+        <label><input type="radio" name="q5"> d) Zero</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>What is the electric field inside a uniformly charged solid sphere of radius R and total charge Q at a distance r &lt; R from the center?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) \( \frac{kQr}{R^3} \)</label>
+        <label><input type="radio" name="q6"> b) \( \frac{kQ}{r^2} \)</label>
+        <label><input type="radio" name="q6"> c) \( \frac{kQ}{R^2} \)</label>
+        <label><input type="radio" name="q6"> d) Zero</label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>Two point charges, +Q and +Q, are placed a distance d apart. Where is the electric field zero along the line joining them?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) At the midpoint</label>
+        <label><input type="radio" name="q7"> b) At a point outside the segment, beyond either charge</label>
+        <label><input type="radio" name="q7"> c) There is no such point</label>
+        <label><input type="radio" name="q7"> d) At a point between the charges, but not at the midpoint</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>A 1 μC charge is placed at the origin. What is the electric potential at a point 0.5 m away? (k = 9 × 10<sup>9</sup> N·m²/C²)</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a) 1.8 × 10<sup>4</sup> V</label>
+        <label><input type="radio" name="q8"> b) 9 × 10<sup>3</sup> V</label>
+        <label><input type="radio" name="q8"> c) 2 × 10<sup>4</sup> V</label>
+        <label><input type="radio" name="q8"> d) 1.2 × 10<sup>4</sup> V</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>What is the work required to move a 2 μC charge from infinity to a point 0.2 m from a 5 μC point charge? (k = 9 × 10<sup>9</sup> N·m²/C²)</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) 0.45 J</label>
+        <label><input type="radio" name="q9"> b) 0.9 J</label>
+        <label><input type="radio" name="q9"> c) 1.8 J</label>
+        <label><input type="radio" name="q9"> d) 0.18 J</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>Which of the following is true about the electric field at the center of a uniformly charged ring?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) It is maximum</label>
+        <label><input type="radio" name="q10"> b) It is zero</label>
+        <label><input type="radio" name="q10"> c) It is equal to the field at the edge</label>
+        <label><input type="radio" name="q10"> d) It depends on the total charge</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>Using Gauss's law, what is the electric field just outside the surface of a uniformly charged conducting sphere of radius R and total charge Q?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) \( \frac{kQ}{R^2} \)</label>
+        <label><input type="radio" name="q11"> b) \( \frac{kQ}{2R^2} \)</label>
+        <label><input type="radio" name="q11"> c) \( \frac{kQ}{R} \)</label>
+        <label><input type="radio" name="q11"> d) Zero</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>Which of the following best describes the direction of electric field lines at the surface of a charged conductor?</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) Perpendicular to the surface</label>
+        <label><input type="radio" name="q12"> b) Tangential to the surface</label>
+        <label><input type="radio" name="q12"> c) At an angle of 45°</label>
+        <label><input type="radio" name="q12"> d) Randomly oriented</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>Which of the following is true about the electric field inside a parallel-plate capacitor (neglecting edge effects)?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) It is uniform and points from positive to negative plate</label>
+        <label><input type="radio" name="q13"> b) It is zero everywhere</label>
+        <label><input type="radio" name="q13"> c) It is strongest near the edges</label>
+        <label><input type="radio" name="q13"> d) It points from negative to positive plate</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>Which of the following materials is an electrical insulator?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) Copper</label>
+        <label><input type="radio" name="q14"> b) Silver</label>
+        <label><input type="radio" name="q14"> c) Aluminum</label>
+        <label><input type="radio" name="q14"> d) Glass</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>What happens to the electric field inside a conductor when it reaches electrostatic equilibrium?</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) It becomes zero</label>
+        <label><input type="radio" name="q15"> b) It becomes maximum</label>
+        <label><input type="radio" name="q15"> c) It points outward</label>
+        <label><input type="radio" name="q15"> d) It oscillates</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>What is the potential difference between two points 0.2 m apart in a uniform electric field of 400 V/m?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) 80 V</label>
+        <label><input type="radio" name="q16"> b) 200 V</label>
+        <label><input type="radio" name="q16"> c) 20 V</label>
+        <label><input type="radio" name="q16"> d) 2 V</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>A 3 μC charge is placed in an electric field of 2 × 10<sup>4</sup> N/C. What is the force on the charge?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) 0.06 N</label>
+        <label><input type="radio" name="q17"> b) 0.6 N</label>
+        <label><input type="radio" name="q17"> c) 6 N</label>
+        <label><input type="radio" name="q17"> d) 0.006 N</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>What is the energy stored in a 2 μF capacitor charged to 100 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) 0.01 J</label>
+        <label><input type="radio" name="q18"> b) 0.02 J</label>
+        <label><input type="radio" name="q18"> c) 0.005 J</label>
+        <label><input type="radio" name="q18"> d) 0.5 J</label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>Two point charges, +2 μC and -2 μC, are 0.1 m apart. What is the potential energy of the system? (k = 9 × 10<sup>9</sup> N·m²/C²)</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) -3.6 J</label>
+        <label><input type="radio" name="q19"> b) 3.6 J</label>
+        <label><input type="radio" name="q19"> c) -1.8 J</label>
+        <label><input type="radio" name="q19"> d) 1.8 J</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>What is the electric field 0.2 m away from a long straight wire carrying a uniform linear charge density of 5 × 10<sup>-6</sup> C/m? (\( \varepsilon_0 = 8.85 \times 10^{-12} \) C²/N·m²)</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) 1.1 × 10<sup>5</sup> N/C</label>
+        <label><input type="radio" name="q20"> b) 4.5 × 10<sup>5</sup> N/C</label>
+        <label><input type="radio" name="q20"> c) 3.6 × 10<sup>5</sup> N/C</label>
+        <label><input type="radio" name="q20"> d) 2.8 × 10<sup>5</sup> N/C</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>Which of the following statements about electric field lines is correct?</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) They can cross each other</label>
+        <label><input type="radio" name="q21"> b) They begin on negative charges and end on positive charges</label>
+        <label><input type="radio" name="q21"> c) Their density represents field strength</label>
+        <label><input type="radio" name="q21"> d) They form closed loops in electrostatics</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>What happens to the electric field inside a hollow, uncharged, conducting shell when a point charge is placed outside the shell?</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) It becomes nonzero</label>
+        <label><input type="radio" name="q22"> b) It remains zero</label>
+        <label><input type="radio" name="q22"> c) It oscillates</label>
+        <label><input type="radio" name="q22"> d) It points toward the shell</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>Which of the following is true about the potential difference between any two points on a conductor in electrostatic equilibrium?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) It is always positive</label>
+        <label><input type="radio" name="q23"> b) It is always negative</label>
+        <label><input type="radio" name="q23"> c) It is zero</label>
+        <label><input type="radio" name="q23"> d) It depends on the shape</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>Which of the following best describes the effect of inserting a dielectric between the plates of a charged, isolated capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) The capacitance decreases</label>
+        <label><input type="radio" name="q24"> b) The stored energy increases</label>
+        <label><input type="radio" name="q24"> c) The voltage across the plates decreases</label>
+        <label><input type="radio" name="q24"> d) The charge on the plates increases</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>Which of the following is true about the electric field at the surface of a conductor with a sharp point?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) It is weaker than at a flat surface</label>
+        <label><input type="radio" name="q25"> b) It is the same as at a flat surface</label>
+        <label><input type="radio" name="q25"> c) It is stronger than at a flat surface</label>
+        <label><input type="radio" name="q25"> d) It is always zero</label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 26 -->
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>Which of the following is true about the net electric flux through a closed surface that encloses equal amounts of positive and negative charge?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) It is positive</label>
+        <label><input type="radio" name="q26"> b) It is negative</label>
+        <label><input type="radio" name="q26"> c) It is zero</label>
+        <label><input type="radio" name="q26"> d) It depends on the surface area</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 27 -->
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>A 5 μC charge is placed at the center of a cube of side 0.1 m. What is the electric flux through one face of the cube? (\( \varepsilon_0 = 8.85 \times 10^{-12} \) C²/N·m²)</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) 9.4 × 10<sup>4</sup> N·m²/C</label>
+        <label><input type="radio" name="q27"> b) 4.7 × 10<sup>4</sup> N·m²/C</label>
+        <label><input type="radio" name="q27"> c) 1.5 × 10<sup>5</sup> N·m²/C</label>
+        <label><input type="radio" name="q27"> d) 7.5 × 10<sup>4</sup> N·m²/C</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 28 -->
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>Two point charges, +Q and +2Q, are placed 1 m apart. Where along the line joining them is the electric field zero? (Assume Q > 0)</p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) 0.33 m from +Q, on the side away from +2Q</label>
+        <label><input type="radio" name="q28"> b) 0.67 m from +Q, between the charges</label>
+        <label><input type="radio" name="q28"> c) 2 m from +Q, on the side away from +2Q</label>
+        <label><input type="radio" name="q28"> d) 0.5 m from +Q, between the charges</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 29 -->
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>What is the minimum work required to assemble three point charges, each of +1 μC, at the corners of an equilateral triangle of side 0.2 m? (k = 9 × 10<sup>9</sup> N·m²/C²)</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) 0.27 J</label>
+        <label><input type="radio" name="q29"> b) 0.41 J</label>
+        <label><input type="radio" name="q29"> c) 0.54 J</label>
+        <label><input type="radio" name="q29"> d) 0.81 J</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 30 -->
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>A parallel-plate capacitor has plates of area 0.01 m² separated by 1 mm and is filled with a dielectric of constant 5. If the voltage across the plates is 100 V, what is the charge stored? (\( \varepsilon_0 = 8.85 \times 10^{-12} \) C²/N·m²)</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) 4.4 × 10<sup>-8</sup> C</label>
+        <label><input type="radio" name="q30"> b) 2.2 × 10<sup>-8</sup> C</label>
+        <label><input type="radio" name="q30"> c) 8.9 × 10<sup>-8</sup> C</label>
+        <label><input type="radio" name="q30"> d) 1.8 × 10<sup>-8</sup> C</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b",
+      q2: "b",
+      q3: "a",
+      q4: "d",
+      q5: "b",
+      q6: "a",
+      q7: "b",
+      q8: "a",
+      q9: "a",
+      q10: "b",
+      q11: "a",
+      q12: "a",
+      q13: "a",
+      q14: "d",
+      q15: "a",
+      q16: "a",
+      q17: "a",
+      q18: "a",
+      q19: "a",
+      q20: "a",
+      q21: "c",
+      q22: "b",
+      q23: "c",
+      q24: "b",
+      q25: "a",
+      q26: "c",
+      q27: "a",
+      q28: "b",
+      q29: "a",
+      q30: "a"
+    };
+    const feedback = {
+      q1: "F = k * q1 * q2 / r² = 9×10⁹ × 4×10⁻⁶ × 6×10⁻⁶ / (0.3)² = 2.4 N.",
+      q2: "At the midpoint, the fields from +Q and -Q add and point from +Q to -Q. Each field is kQ/a², so net E = 2kQ/a².",
+      q3: "The field inside a conductor in electrostatic equilibrium is always zero.",
+      q4: "Distance from center to each corner is a/√2. V = 4kQ/(a√2).",
+      q5: "Outside a sphere, E = kQ/r². At r = 2R, E = kQ/(2R)² = kQ/4R².",
+      q6: "Inside a uniformly charged solid sphere, E = kQr/R³ for r < R.",
+      q7: "For two equal positive charges, the field is zero only at a point outside the segment, beyond either charge.",
+      q8: "V = kQ/r = 9×10⁹ × 1×10⁻⁶ / 0.5 = 1.8×10⁴ V.",
+      q9: "W = kQq/r = 9×10⁹ × 5×10⁻⁶ × 2×10⁻⁶ / 0.2 = 0.45 J.",
+      q10: "By symmetry, the field at the center of a uniformly charged ring is zero.",
+      q11: "Using Gauss's law, the electric field just outside a uniformly charged conducting sphere is kQ/R².",
+      q12: "Electric field lines are always perpendicular to the surface of a conductor in electrostatic equilibrium.",
+      q13: "Inside a parallel-plate capacitor, the field is uniform and points from positive to negative plate.",
+      q14: "Glass is an insulator; the others are conductors.",
+      q15: "The field inside a conductor in electrostatic equilibrium is always zero.",
+      q16: "V = E*d = 400*0.2 = 80 V.",
+      q17: "F = qE = 3×10⁻⁶ * 2×10⁴ = 0.06 N.",
+      q18: "U = 0.5*C*V² = 0.5*2×10⁻⁶*10000 = 0.01 J.",
+      q19: "U = k*q1*q2/r = 9×10⁹*2×10⁻⁶*-2×10⁻⁶/0.1 = -3.6 J.",
+      q20: "E = λ/(2πϵ₀r) = 5×10⁻⁶/(2π*8.85×10⁻¹²*0.2) ≈ 1.1×10⁵ N/C.",
+      q21: "The density of field lines represents the strength of the electric field. Field lines never cross and begin on positive charges and end on negative charges.",
+      q22: "A hollow, uncharged, conducting shell shields its interior from external fields, so the field inside remains zero even if a charge is placed outside.",
+      q23: "All points on a conductor in electrostatic equilibrium are at the same potential, so the potential difference is zero.",
+      q24: "Inserting a dielectric increases the capacitance and decreases the stored energy for a charged, isolated capacitor.",
+      q25: "The electric field is strongest at sharp points due to charge accumulation, so it is stronger than at a flat surface.",
+      q26: "If equal amounts of positive and negative charge are enclosed, the net charge is zero, so the net flux is zero (Gauss's law).",
+      q27: "By Gauss's law, the total flux is Q/ε₀. For a cube, the flux through one face is (Q/ε₀)/6 = 5×10⁻⁶/(8.85×10⁻¹²*6) ≈ 9.4×10⁴ N·m²/C.",
+      q28: "The field is zero at a point between the charges, closer to +Q. Set kQ/x² = k2Q/(1-x)², solve for x: x = 0.67 m from +Q, between the charges.",
+      q29: "The work to assemble three charges at triangle corners is 3 pairs: W = 3[kq²/a] = 3*9×10⁹*(1×10⁻⁶)²/0.2 = 0.27 J.",
+      q30: "C = κε₀A/d = 5*8.85×10⁻¹²*0.01/0.001 = 4.425×10⁻¹² F; Q = CV = 4.425×10⁻¹²*100 = 4.4×10⁻⁸ C."
+    };
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 30; i++) {
+        const questionName = "q" + i;
+        const options = document.getElementsByName(questionName);
+        let selected = "";
+        options.forEach(opt => {
+          opt.parentElement.style.color = "black";
+          if (opt.checked) selected = opt.value;
+        });
+        const feedbackEl = document.getElementById("feedback-" + questionName);
+        if (selected === answers[questionName]) {
+          score++;
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "green";
+          });
+        } else {
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "red";
+            if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+          });
+        }
+        if (feedbackEl) {
+          feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+          feedbackEl.style.display = "block";
+        }
+      }
+      document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+    }
+    window.onload = () => {
+      for (let i = 1; i <= 30; i++) {
+        const options = document.getElementsByName("q" + i);
+        const letters = ["a", "b", "c", "d"];
+        options.forEach((opt, idx) => {
+          opt.value = letters[idx];
+        });
+      }
+    };
+  </script>
+</body>
+</html> 

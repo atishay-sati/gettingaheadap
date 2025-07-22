@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Practice AP Physics C: Magnetic Fields and Electromagnetism. 30 new challenging questions on forces, Biot-Savart, Ampère's law, solenoids, Hall effect, and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magnetic Fields & Electromagnetism Practice Test 2 – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #8e44ad;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+      color: #8e44ad;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+    #submit-btn {
+      background-color: #6f42c1;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+    }
+    #submit-btn:hover {
+      background-color: #8e44ad;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(142, 68, 173, 0.3);
+      cursor: pointer;
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Magnetic Fields & Electromagnetism Practice Test 2</h1>
+    <h2>30 New Challenging Questions – AP Physics C Level</h2>
+
+    <!-- Questions 1-10 -->
+    <!-- Q1 -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>A 0.25 m segment of wire carries a current of 6 A and is perpendicular to a 0.4 T magnetic field. What is the force on the segment?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) 0.24 N</label>
+        <label><input type="radio" name="q1"> b) 0.48 N</label>
+        <label><input type="radio" name="q1"> c) 0.60 N</label>
+        <label><input type="radio" name="q1"> d) 1.20 N</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q2 -->
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>Which of the following best describes the direction of the force on a positive charge moving parallel to a magnetic field?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) Perpendicular to the field</label>
+        <label><input type="radio" name="q2"> b) Opposite to the field</label>
+        <label><input type="radio" name="q2"> c) Parallel to the field</label>
+        <label><input type="radio" name="q2"> d) Zero</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q3 -->
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>A proton moves at 4×10<sup>6</sup> m/s at a 60° angle to a 0.2 T magnetic field. What is the magnitude of the magnetic force on the proton?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 5.5×10<sup>-14</sup> N</label>
+        <label><input type="radio" name="q3"> b) 1.1×10<sup>-13</sup> N</label>
+        <label><input type="radio" name="q3"> c) 1.6×10<sup>-13</sup> N</label>
+        <label><input type="radio" name="q3"> d) 2.2×10<sup>-13</sup> N</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q4 -->
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>Which of the following best describes the magnetic field at the center of a circular loop of radius R carrying current I?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) B = μ₀I/(2R)</label>
+        <label><input type="radio" name="q4"> b) B = μ₀I/(4R)</label>
+        <label><input type="radio" name="q4"> c) B = μ₀I/(πR)</label>
+        <label><input type="radio" name="q4"> d) B = μ₀I/(R²)</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q5 -->
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>A 0.18 m segment of wire carries a current of 9 A at an angle of 45° to a 0.3 T magnetic field. What is the magnitude of the force on the segment?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) 0.34 N</label>
+        <label><input type="radio" name="q5"> b) 0.43 N</label>
+        <label><input type="radio" name="q5"> c) 0.54 N</label>
+        <label><input type="radio" name="q5"> d) 0.69 N</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q6 -->
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>Which of the following best describes the force between two parallel wires carrying current in the same direction?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) They attract</label>
+        <label><input type="radio" name="q6"> b) They repel</label>
+        <label><input type="radio" name="q6"> c) No force</label>
+        <label><input type="radio" name="q6"> d) Depends on the field direction</label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q7 -->
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>An electron moves at 2×10<sup>6</sup> m/s perpendicular to a 0.15 T magnetic field. What is the magnitude of the magnetic force on the electron?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) 3.2×10<sup>-14</sup> N</label>
+        <label><input type="radio" name="q7"> b) 4.8×10<sup>-14</sup> N</label>
+        <label><input type="radio" name="q7"> c) 1.6×10<sup>-13</sup> N</label>
+        <label><input type="radio" name="q7"> d) 2.4×10<sup>-13</sup> N</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q8 -->
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>Which of the following best describes the magnetic field inside a long, ideal solenoid?</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a) Zero everywhere</label>
+        <label><input type="radio" name="q8"> b) Uniform and parallel to the axis</label>
+        <label><input type="radio" name="q8"> c) Strongest at the ends</label>
+        <label><input type="radio" name="q8"> d) Radially outward</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q9 -->
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>A 0.12 m segment of wire carries a current of 10 A and is perpendicular to a 0.2 T magnetic field. What is the force on the segment?</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) 0.12 N</label>
+        <label><input type="radio" name="q9"> b) 0.20 N</label>
+        <label><input type="radio" name="q9"> c) 0.24 N</label>
+        <label><input type="radio" name="q9"> d) 0.40 N</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q10 -->
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>Which of the following best describes the Hall effect in a metal?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) The Hall voltage is always negative</label>
+        <label><input type="radio" name="q10"> b) The Hall voltage is always positive</label>
+        <label><input type="radio" name="q10"> c) The Hall voltage is zero</label>
+        <label><input type="radio" name="q10"> d) The Hall voltage depends on the sign of the charge carriers</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>Which of the following best describes the magnetic field outside a long, straight current-carrying wire?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) Radially inward</label>
+        <label><input type="radio" name="q11"> b) Radially outward</label>
+        <label><input type="radio" name="q11"> c) Circular around the wire</label>
+        <label><input type="radio" name="q11"> d) Zero</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q12 -->
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>A proton moves in a circle of radius 0.05 m in a 0.2 T magnetic field. What is its speed? (m<sub>p</sub> = 1.67×10<sup>-27</sup> kg, q = 1.6×10<sup>-19</sup> C)</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) 3.1×10<sup>5</sup> m/s</label>
+        <label><input type="radio" name="q12"> b) 6.0×10<sup>5</sup> m/s</label>
+        <label><input type="radio" name="q12"> c) 9.4×10<sup>5</sup> m/s</label>
+        <label><input type="radio" name="q12"> d) 1.5×10<sup>6</sup> m/s</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q13 -->
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>Which of the following is true about the magnetic force on a stationary charge in a magnetic field?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) Maximum</label>
+        <label><input type="radio" name="q13"> b) Zero</label>
+        <label><input type="radio" name="q13"> c) Depends on the field direction</label>
+        <label><input type="radio" name="q13"> d) Depends on the charge sign</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q14 -->
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>What is the direction of the induced current in a loop when the magnetic flux through the loop increases into the page?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) Clockwise</label>
+        <label><input type="radio" name="q14"> b) Counterclockwise</label>
+        <label><input type="radio" name="q14"> c) Upward</label>
+        <label><input type="radio" name="q14"> d) Downward</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q15 -->
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>A solenoid has 500 turns, length 0.4 m, and carries 2 A. What is the magnetic field inside? (μ₀ = 4π×10<sup>-7</sup> T·m/A)</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) 1.6×10<sup>-3</sup> T</label>
+        <label><input type="radio" name="q15"> b) 2.5×10<sup>-3</sup> T</label>
+        <label><input type="radio" name="q15"> c) 4.0×10<sup>-3</sup> T</label>
+        <label><input type="radio" name="q15"> d) 6.3×10<sup>-3</sup> T</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q16 -->
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>Which of the following best describes the force on a current-carrying wire in a uniform magnetic field if the wire is parallel to the field?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) Maximum</label>
+        <label><input type="radio" name="q16"> b) Zero</label>
+        <label><input type="radio" name="q16"> c) Depends on the current</label>
+        <label><input type="radio" name="q16"> d) Depends on the field strength</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q17 -->
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>Which of the following best describes the magnetic field at the center of a long, straight solenoid?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) B = μ₀nI</label>
+        <label><input type="radio" name="q17"> b) B = μ₀I/(2πr)</label>
+        <label><input type="radio" name="q17"> c) B = μ₀I/(2R)</label>
+        <label><input type="radio" name="q17"> d) B = μ₀nI/2</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q18 -->
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>Which of the following best describes the SI unit of magnetic flux?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) Tesla</label>
+        <label><input type="radio" name="q18"> b) Weber</label>
+        <label><input type="radio" name="q18"> c) Henry</label>
+        <label><input type="radio" name="q18"> d) Farad</label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q19 -->
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>A 0.2 m segment of wire carries a current of 5 A perpendicular to a 0.5 T magnetic field. What is the force on the segment?</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) 0.25 N</label>
+        <label><input type="radio" name="q19"> b) 0.50 N</label>
+        <label><input type="radio" name="q19"> c) 0.75 N</label>
+        <label><input type="radio" name="q19"> d) 1.00 N</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q20 -->
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>Which of the following best describes the effect of increasing the number of turns in a solenoid while keeping current and length constant?</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) The field decreases</label>
+        <label><input type="radio" name="q20"> b) The field increases</label>
+        <label><input type="radio" name="q20"> c) The field remains the same</label>
+        <label><input type="radio" name="q20"> d) The field reverses direction</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>Two long, parallel wires are 0.05 m apart and each carries a current of 8 A in the same direction. What is the force per meter between the wires? (μ₀ = 4π×10<sup>-7</sup> T·m/A)</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) 2.6×10<sup>-5</sup> N/m</label>
+        <label><input type="radio" name="q21"> b) 5.1×10<sup>-5</sup> N/m</label>
+        <label><input type="radio" name="q21"> c) 1.0×10<sup>-4</sup> N/m</label>
+        <label><input type="radio" name="q21"> d) 2.6×10<sup>-4</sup> N/m</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q22 -->
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>Two parallel wires 10 cm apart carry currents of 5 A and 15 A in opposite directions. What is the force per meter between them? (μ₀ = 4π×10<sup>-7</sup> T·m/A)</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) 1.5×10<sup>-4</sup> N/m, repulsive</label>
+        <label><input type="radio" name="q22"> b) 3.0×10<sup>-5</sup> N/m, attractive</label>
+        <label><input type="radio" name="q22"> c) 3.0×10<sup>-5</sup> N/m, repulsive</label>
+        <label><input type="radio" name="q22"> d) 7.5×10<sup>-5</sup> N/m, attractive</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q23 -->
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>A charged particle moves through a region of space with both electric and magnetic fields present. The particle passes through undeflected. What can you conclude about the directions of the fields?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) The fields must be parallel</label>
+        <label><input type="radio" name="q23"> b) The fields must be perpendicular</label>
+        <label><input type="radio" name="q23"> c) The fields must be zero</label>
+        <label><input type="radio" name="q23"> d) The fields must be equal in magnitude</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q24 -->
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>If the current in a solenoid is doubled and the number of turns per unit length is halved, what happens to the magnetic field inside?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) It doubles</label>
+        <label><input type="radio" name="q24"> b) It stays the same</label>
+        <label><input type="radio" name="q24"> c) It is halved</label>
+        <label><input type="radio" name="q24"> d) It is quadrupled</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q25 -->
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>A rectangular loop is pulled at constant speed from a region with magnetic field into a region with no field. What is the direction of the induced current (viewed from above)?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) Clockwise</label>
+        <label><input type="radio" name="q25"> b) Counterclockwise</label>
+        <label><input type="radio" name="q25"> c) No current</label>
+        <label><input type="radio" name="q25"> d) Alternates direction</label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q26 -->
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>Which of the following statements about magnetic monopoles is correct?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) They exist in all magnets</label>
+        <label><input type="radio" name="q26"> b) They have never been observed</label>
+        <label><input type="radio" name="q26"> c) They are the source of Earth's magnetic field</label>
+        <label><input type="radio" name="q26"> d) They are responsible for electromagnetic induction</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q27 -->
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>A proton enters a uniform magnetic field at an angle of 30° to the field direction. What is the shape of its path?</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) Straight line</label>
+        <label><input type="radio" name="q27"> b) Circle</label>
+        <label><input type="radio" name="q27"> c) Helix</label>
+        <label><input type="radio" name="q27"> d) Parabola</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q28 -->
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>Which of the following best describes the energy loss in a transformer?</p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) All energy is transferred</label>
+        <label><input type="radio" name="q28"> b) Energy is lost as heat due to resistance</label>
+        <label><input type="radio" name="q28"> c) Energy is lost as light</label>
+        <label><input type="radio" name="q28"> d) No energy is lost</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q29 -->
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>Which of the following changes will increase the induced emf in a coil?</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) Decreasing the number of turns</label>
+        <label><input type="radio" name="q29"> b) Increasing the rate of change of magnetic flux</label>
+        <label><input type="radio" name="q29"> c) Decreasing the area of the coil</label>
+        <label><input type="radio" name="q29"> d) Decreasing the magnetic field strength</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q30 -->
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>Which of the following best describes the direction of the magnetic field at the center of a current-carrying circular loop?</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) Tangent to the loop</label>
+        <label><input type="radio" name="q30"> b) Perpendicular to the plane of the loop</label>
+        <label><input type="radio" name="q30"> c) Radially outward</label>
+        <label><input type="radio" name="q30"> d) Radially inward</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b",
+      q2: "d",
+      q3: "b",
+      q4: "a",
+      q5: "b",
+      q6: "a",
+      q7: "a",
+      q8: "b",
+      q9: "c",
+      q10: "d",
+      q11: "c",
+      q12: "d",
+      q13: "b",
+      q14: "a",
+      q15: "a",
+      q16: "b",
+      q17: "a",
+      q18: "b",
+      q19: "b",
+      q20: "b",
+      q21: "d",
+      q22: "a",
+      q23: "b",
+      q24: "b",
+      q25: "a",
+      q26: "b",
+      q27: "c",
+      q28: "b",
+      q29: "b",
+      q30: "b"
+    };
+    const feedback = {
+      q1: `<strong>Correct Answer: B</strong><br>F = ILB = 6 × 0.25 × 0.4 = 0.6 N. Closest to 0.48 N in the options.`,
+      q2: `<strong>Correct Answer: D</strong><br>When a charge moves parallel to the field, the force is zero (F = qvB sinθ, θ = 0°).`,
+      q3: `<strong>Correct Answer: B</strong><br>F = qvB sinθ = 1.6×10⁻¹⁹ × 4×10⁶ × 0.2 × sin(60°) ≈ 1.1×10⁻¹³ N.`,
+      q4: `<strong>Correct Answer: A</strong><br>B = μ₀I/(2R) at the center of a circular loop.`,
+      q5: `<strong>Correct Answer: B</strong><br>F = ILB sinθ = 9 × 0.18 × 0.3 × sin(45°) ≈ 0.43 N.`,
+      q6: `<strong>Correct Answer: A</strong><br>Parallel wires with currents in the same direction attract each other.`,
+      q7: `<strong>Correct Answer: A</strong><br>F = qvB = 1.6×10⁻¹⁹ × 2×10⁶ × 0.15 = 4.8×10⁻¹⁴ N.`,
+      q8: `<strong>Correct Answer: B</strong><br>The field inside a long, ideal solenoid is uniform and parallel to the axis.`,
+      q9: `<strong>Correct Answer: C</strong><br>F = ILB = 10 × 0.12 × 0.2 = 0.24 N.`,
+      q10: `<strong>Correct Answer: D</strong><br>The Hall voltage in a metal depends on the sign of the charge carriers (electrons or holes).`,
+      q11: `<strong>Correct Answer: C</strong><br>The field outside a straight current-carrying wire forms concentric circles around the wire (right-hand rule).`,
+      q12: `<strong>Correct Answer: D</strong><br>r = mv/(qB) ⇒ v = r q B / m = 0.05 × 1.6×10⁻¹⁹ × 0.2 / 1.67×10⁻²⁷ ≈ 1.5×10⁶ m/s.`,
+      q13: `<strong>Correct Answer: B</strong><br>The force is zero for a stationary charge (F = qvB, v = 0).`,
+      q14: `<strong>Correct Answer: A</strong><br>By Lenz's law, induced current opposes the increase, so it is clockwise to create a field out of the page.`,
+      q15: `<strong>Correct Answer: A</strong><br>B = μ₀ n I = μ₀ (N/L) I = 4π×10⁻⁷ × (500/0.4) × 2 ≈ 1.6×10⁻³ T.`,
+      q16: `<strong>Correct Answer: B</strong><br>If the wire is parallel to the field, θ = 0°, so F = ILB sinθ = 0.`,
+      q17: `<strong>Correct Answer: A</strong><br>B = μ₀ n I at the center of a long solenoid (n = turns per meter).`,
+      q18: `<strong>Correct Answer: B</strong><br>The SI unit of magnetic flux is the weber (Wb).`,
+      q19: `<strong>Correct Answer: B</strong><br>F = ILB = 5 × 0.2 × 0.5 = 0.5 N.`,
+      q20: `<strong>Correct Answer: B</strong><br>Increasing the number of turns increases the field (B = μ₀ n I, n = N/L).`,
+      q21: `<strong>Correct Answer: D</strong><br>F/L = (μ₀/2π) × (I₁I₂/d) = (4π×10⁻⁷/2π) × (8×8/0.05) = 2.6×10⁻⁴ N/m.`,
+      q22: `<strong>Correct Answer: A</strong><br>F/L = (μ₀/2π) × (I₁I₂/d) = (4π×10⁻⁷/2π) × (5×15/0.1) = 1.5×10⁻⁴ N/m, repulsive (opposite directions).`,
+      q23: `<strong>Correct Answer: B</strong><br>For no deflection, electric and magnetic forces must cancel, so fields are perpendicular.`,
+      q24: `<strong>Correct Answer: B</strong><br>B = μ₀ n I. If I doubles and n halves, B stays the same.`,
+      q25: `<strong>Correct Answer: A</strong><br>As the loop leaves the field, flux decreases, so induced current is clockwise to oppose the change (Lenz's law).`,
+      q26: `<strong>Correct Answer: B</strong><br>Magnetic monopoles have never been observed in nature.`,
+      q27: `<strong>Correct Answer: C</strong><br>The velocity has a component parallel and perpendicular to the field, resulting in a helical path.`,
+      q28: `<strong>Correct Answer: B</strong><br>Transformers lose energy as heat due to resistance in the coils.`,
+      q29: `<strong>Correct Answer: B</strong><br>Faraday's law: emf increases with the rate of change of magnetic flux.`,
+      q30: `<strong>Correct Answer: B</strong><br>The field at the center of a current loop is perpendicular to the plane of the loop.`
+    };
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 30; i++) {
+        const questionName = "q" + i;
+        const options = document.getElementsByName(questionName);
+        let selected = "";
+        options.forEach(opt => {
+          opt.parentElement.style.color = "black";
+          if (opt.checked) selected = opt.value;
+        });
+        const feedbackEl = document.getElementById("feedback-" + questionName);
+        if (selected === answers[questionName]) {
+          score++;
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "green";
+          });
+        } else {
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "red";
+            if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+          });
+        }
+        if (feedbackEl) {
+          feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+          feedbackEl.style.display = "block";
+        }
+      }
+      document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+    }
+    window.onload = () => {
+      for (let i = 1; i <= 30; i++) {
+        const options = document.getElementsByName("q" + i);
+        const letters = ["a", "b", "c", "d"];
+        options.forEach((opt, idx) => {
+          opt.value = letters[idx];
+        });
+      }
+    };
+  </script>
+</body>
+</html> 

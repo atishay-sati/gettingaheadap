@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Practice AP Physics C: Conductors, Capacitors, and Dielectrics. 30 new questions on charge, energy, series/parallel, dielectrics, and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conductors, Capacitors, and Dielectrics Practice Test 2 – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #8e44ad;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+      color: #8e44ad;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+    #submit-btn {
+      background-color: #6f42c1;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+    }
+    #submit-btn:hover {
+      background-color: #8e44ad;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(142, 68, 173, 0.3);
+      cursor: pointer;
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Conductors, Capacitors, and Dielectrics Practice Test 2</h1>
+    <h2>30 New Questions – AP Physics C Level</h2>
+
+    <!-- Question 1 -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>Which of the following is a property of an ideal conductor in electrostatic equilibrium?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) The electric field inside is uniform</label>
+        <label><input type="radio" name="q1"> b) The electric field inside is zero</label>
+        <label><input type="radio" name="q1"> c) The potential varies throughout the conductor</label>
+        <label><input type="radio" name="q1"> d) The charge resides in the center</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>Which of the following materials is a dielectric?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) Silver</label>
+        <label><input type="radio" name="q2"> b) Copper</label>
+        <label><input type="radio" name="q2"> c) Glass</label>
+        <label><input type="radio" name="q2"> d) Iron</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+
+    <!-- Question 3 -->
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>Three 6 μF capacitors are connected in parallel. What is the equivalent capacitance?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 2 μF</label>
+        <label><input type="radio" name="q3"> b) 6 μF</label>
+        <label><input type="radio" name="q3"> c) 12 μF</label>
+        <label><input type="radio" name="q3"> d) 18 μF</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>What is the energy stored in a 10 μF capacitor charged to 20 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) 0.002 J</label>
+        <label><input type="radio" name="q4"> b) 0.01 J</label>
+        <label><input type="radio" name="q4"> c) 0.002 C</label>
+        <label><input type="radio" name="q4"> d) 0.5 J</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>What happens to the capacitance of a parallel-plate capacitor if the area of the plates is doubled and the separation is halved?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) It is doubled</label>
+        <label><input type="radio" name="q5"> b) It is quadrupled</label>
+        <label><input type="radio" name="q5"> c) It is halved</label>
+        <label><input type="radio" name="q5"> d) It is unchanged</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+
+    <!-- Question 6 -->
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>A parallel-plate capacitor is filled with a dielectric of constant k. What is the new capacitance compared to the original (vacuum) value?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) k times larger</label>
+        <label><input type="radio" name="q6"> b) k times smaller</label>
+        <label><input type="radio" name="q6"> c) Unchanged</label>
+        <label><input type="radio" name="q6"> d) Doubled</label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>Derivation: What is the equivalent capacitance of two capacitors, C1 and C2, connected in series?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) C1 + C2</label>
+        <label><input type="radio" name="q7"> b) (C1 × C2)/(C1 + C2)</label>
+        <label><input type="radio" name="q7"> c) C1 - C2</label>
+        <label><input type="radio" name="q7"> d) (C1 + C2)/2</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>Which of the following best describes the effect of grounding one plate of a capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a) It increases the capacitance</label>
+        <label><input type="radio" name="q8"> b) It brings that plate to zero potential</label>
+        <label><input type="radio" name="q8"> c) It removes all charge from the plate</label>
+        <label><input type="radio" name="q8"> d) It makes the field inside the capacitor zero</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>Which of the following is true about the surface charge density on a conductor with a sharp point?</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) It is lower than on a flat surface</label>
+        <label><input type="radio" name="q9"> b) It is the same as on a flat surface</label>
+        <label><input type="radio" name="q9"> c) It is higher than on a flat surface</label>
+        <label><input type="radio" name="q9"> d) It is always zero</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>What is the potential difference across a 5 μF capacitor that stores 0.01 J of energy?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) 20 V</label>
+        <label><input type="radio" name="q10"> b) 40 V</label>
+        <label><input type="radio" name="q10"> c) 63 V</label>
+        <label><input type="radio" name="q10"> d) 100 V</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>What is the surface charge density on a conductor if the electric field just outside is 2×10⁶ N/C?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) 1.77×10⁻⁵ C/m²</label>
+        <label><input type="radio" name="q11"> b) 3.54×10⁻⁵ C/m²</label>
+        <label><input type="radio" name="q11"> c) 7.08×10⁻⁵ C/m²</label>
+        <label><input type="radio" name="q11"> d) 1.77×10⁻⁴ C/m²</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>What is the charge on a 8 μF capacitor connected to a 30 V battery?</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) 0.24 mC</label>
+        <label><input type="radio" name="q12"> b) 0.48 mC</label>
+        <label><input type="radio" name="q12"> c) 2.4 mC</label>
+        <label><input type="radio" name="q12"> d) 24 mC</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>Derivation: What is the capacitance of a parallel-plate capacitor with a dielectric of thickness t inserted between plates separated by distance d?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) \( \varepsilon_0 A/(d-t+t/k) \)</label>
+        <label><input type="radio" name="q13"> b) \( \varepsilon_0 A/(d-t) \)</label>
+        <label><input type="radio" name="q13"> c) \( \varepsilon_0 A/(d+t/k) \)</label>
+        <label><input type="radio" name="q13"> d) \( \varepsilon_0 A/(d+t) \)</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>What happens to the capacitance of a parallel-plate capacitor if the area is tripled and the separation is doubled?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) It is multiplied by 1.5</label>
+        <label><input type="radio" name="q14"> b) It is multiplied by 2</label>
+        <label><input type="radio" name="q14"> c) It is multiplied by 3</label>
+        <label><input type="radio" name="q14"> d) It is multiplied by 6</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>Which of the following materials has the highest dielectric constant?</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) Air</label>
+        <label><input type="radio" name="q15"> b) Glass</label>
+        <label><input type="radio" name="q15"> c) Water</label>
+        <label><input type="radio" name="q15"> d) Barium titanate</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+
+    <!-- Question 16 -->
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>Derivation: What is the electric field at a distance r from an infinitely long line of charge with linear charge density λ?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) \( \lambda/(2\pi\varepsilon_0 r) \)</label>
+        <label><input type="radio" name="q16"> b) \( \lambda/(4\pi\varepsilon_0 r) \)</label>
+        <label><input type="radio" name="q16"> c) \( \lambda/(\pi\varepsilon_0 r) \)</label>
+        <label><input type="radio" name="q16"> d) \( \lambda/(\varepsilon_0 r) \)</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>Derivation: What is the electric potential at a distance r from a point charge Q?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) \( Q/(4\pi\varepsilon_0 r) \)</label>
+        <label><input type="radio" name="q17"> b) \( Q/(2\pi\varepsilon_0 r) \)</label>
+        <label><input type="radio" name="q17"> c) \( Q/(\pi\varepsilon_0 r) \)</label>
+        <label><input type="radio" name="q17"> d) \( Q/(\varepsilon_0 r) \)</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>What is the energy stored in a 12 μF capacitor charged to 25 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) 0.00375 J</label>
+        <label><input type="radio" name="q18"> b) 0.0075 J</label>
+        <label><input type="radio" name="q18"> c) 0.015 J</label>
+        <label><input type="radio" name="q18"> d) 0.03 J</label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>Which of the following is true about the electric potential inside a conductor in electrostatic equilibrium?</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) It varies with position</label>
+        <label><input type="radio" name="q19"> b) It is constant throughout</label>
+        <label><input type="radio" name="q19"> c) It is maximum at the center</label>
+        <label><input type="radio" name="q19"> d) It is zero everywhere</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>What is the equivalent capacitance of a 4 μF and 8 μF capacitor connected in parallel?</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) 2.67 μF</label>
+        <label><input type="radio" name="q20"> b) 4 μF</label>
+        <label><input type="radio" name="q20"> c) 8 μF</label>
+        <label><input type="radio" name="q20"> d) 12 μF</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>Which of the following best describes the effect of a dielectric on the breakdown voltage of a capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) It always increases the breakdown voltage</label>
+        <label><input type="radio" name="q21"> b) It always decreases the breakdown voltage</label>
+        <label><input type="radio" name="q21"> c) It has no effect on breakdown voltage</label>
+        <label><input type="radio" name="q21"> d) It depends on the dielectric material</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>What is the charge density on the plates of a parallel-plate capacitor with capacitance 6 μF, plate area 0.2 m², and voltage 50 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) 1.5×10⁻⁶ C/m²</label>
+        <label><input type="radio" name="q22"> b) 1.5×10⁻⁵ C/m²</label>
+        <label><input type="radio" name="q22"> c) 1.5×10⁻⁴ C/m²</label>
+        <label><input type="radio" name="q22"> d) 1.5×10⁻³ C/m²</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+
+    <!-- Question 23 -->
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>Three capacitors (3 μF, 6 μF, 9 μF) are connected in series. What is the equivalent capacitance?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) 1.5 μF</label>
+        <label><input type="radio" name="q23"> b) 1.8 μF</label>
+        <label><input type="radio" name="q23"> c) 6 μF</label>
+        <label><input type="radio" name="q23"> d) 18 μF</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>Which of the following is true about the electric field between the plates of a charged parallel-plate capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) It is uniform and directed from positive to negative plate</label>
+        <label><input type="radio" name="q24"> b) It is non-uniform and strongest at the edges</label>
+        <label><input type="radio" name="q24"> c) It is zero everywhere between the plates</label>
+        <label><input type="radio" name="q24"> d) It varies sinusoidally with position</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>What is the potential difference across a 25 μF capacitor that stores 0.125 J of energy?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) 50 V</label>
+        <label><input type="radio" name="q25"> b) 100 V</label>
+        <label><input type="radio" name="q25"> c) 150 V</label>
+        <label><input type="radio" name="q25"> d) 200 V</label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 26 -->
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>Which of the following best describes the polarization of a dielectric in an electric field?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) The dielectric becomes permanently charged</label>
+        <label><input type="radio" name="q26"> b) The dielectric develops induced dipoles</label>
+        <label><input type="radio" name="q26"> c) The dielectric becomes a conductor</label>
+        <label><input type="radio" name="q26"> d) The dielectric loses all its electrons</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 27 -->
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>Derivation: What is the force between the plates of a parallel-plate capacitor with charge Q and plate area A?</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) Q²/(2ε₀A)</label>
+        <label><input type="radio" name="q27"> b) Q²/(ε₀A)</label>
+        <label><input type="radio" name="q27"> c) Q²/(4ε₀A)</label>
+        <label><input type="radio" name="q27"> d) Q²/(8ε₀A)</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 28 -->
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>What happens to the electric field inside a capacitor when a dielectric is inserted?</p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) It increases by a factor of k</label>
+        <label><input type="radio" name="q28"> b) It decreases by a factor of k</label>
+        <label><input type="radio" name="q28"> c) It remains unchanged</label>
+        <label><input type="radio" name="q28"> d) It becomes zero</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 29 -->
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>What is the energy stored in a 16 μF capacitor charged to 30 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) 0.0072 J</label>
+        <label><input type="radio" name="q29"> b) 0.0144 J</label>
+        <label><input type="radio" name="q29"> c) 0.072 J</label>
+        <label><input type="radio" name="q29"> d) 0.144 J</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <!-- Question 30 -->
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>Which of the following is true about the surface charge density on a conductor?</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) It is uniform everywhere</label>
+        <label><input type="radio" name="q30"> b) It is highest where the radius of curvature is smallest</label>
+        <label><input type="radio" name="q30"> c) It is highest where the radius of curvature is largest</label>
+        <label><input type="radio" name="q30"> d) It is always zero</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b",
+      q2: "c",
+      q3: "d",
+      q4: "a",
+      q5: "b",
+      q6: "a",
+      q7: "b",
+      q8: "b",
+      q9: "c",
+      q10: "c",
+      q11: "a",
+      q12: "a",
+      q13: "a",
+      q14: "a",
+      q15: "d",
+      q16: "a",
+      q17: "a",
+      q18: "a",
+      q19: "b",
+      q20: "d",
+      q21: "d",
+      q22: "d",
+      q23: "a",
+      q24: "a",
+      q25: "b",
+      q26: "b",
+      q27: "a",
+      q28: "b",
+      q29: "a",
+      q30: "b"
+    };
+    const feedback = {
+      q1: " <strong>Correct Answer: B</strong><br>In electrostatic equilibrium, free charges in a conductor redistribute themselves to cancel any internal electric field. This is why the field inside is always zero - any field would cause charges to move, violating equilibrium. This is a fundamental principle of electrostatics.",
+      q2: " <strong>Correct Answer: C</strong><br>Glass is an insulator that can be polarized in an electric field. Unlike conductors (silver, copper, iron), dielectrics have bound charges that can align but don't conduct electricity. This polarization is what gives dielectrics their ability to increase capacitance.",
+      q3: " <strong>Correct Answer: D</strong><br>For parallel capacitors, the equivalent capacitance is the sum: C_eq = C1 + C2 + C3 = 6 + 6 + 6 = 18 μF. This is because parallel capacitors share the same voltage but can store more charge. The total charge is the sum of individual charges.",
+      q4: " <strong>Correct Answer: A</strong><br>Energy stored in a capacitor: U = ½CV² = ½ × 10×10⁻⁶ × 400 = 0.002 J. The energy is proportional to both capacitance and the square of voltage. This quadratic dependence on voltage is important for energy storage applications.",
+      q5: " <strong>Correct Answer: B</strong><br>Capacitance C = ε₀A/d, so doubling area (A→2A) and halving separation (d→d/2) gives C_new = ε₀(2A)/(d/2) = 4ε₀A/d = 4C. The capacitance quadruples! This shows how geometry dramatically affects capacitance.",
+      q6: " <strong>Correct Answer: A</strong><br>When a dielectric (k > 1) is inserted, the capacitance increases by a factor of k. This happens because the dielectric reduces the effective electric field, allowing more charge storage. The dielectric constant k represents this enhancement factor.",
+      q7: " <strong>Correct Answer: B</strong><br>For series capacitors, the reciprocals add: 1/C_eq = 1/C1 + 1/C2. Solving gives C_eq = (C1 × C2)/(C1 + C2). Series capacitors share the same charge but have different voltages.<br><br><strong>Derivation:</strong><br>For capacitors in series, the same charge Q flows through each capacitor: Q = C₁V₁ = C₂V₂<br>The total voltage is the sum: V_total = V₁ + V₂<br>Substitute V = Q/C: Q/C₁ + Q/C₂ = Q/C_eq<br>Divide by Q: 1/C₁ + 1/C₂ = 1/C_eq<br>Solve for C_eq: C_eq = (C₁ × C₂)/(C₁ + C₂)<br>This is the product over sum formula for series capacitors.",
+      q8: " <strong>Correct Answer: B</strong><br>Grounding connects a conductor to the Earth (infinite charge reservoir at zero potential). This brings the grounded plate to zero potential, allowing charge to flow as needed. Grounding is essential for safety and proper circuit operation.",
+      q9: " <strong>Correct Answer: C</strong><br>Surface charge density σ = Q/A is highest at sharp points (smallest radius of curvature) because the electric field is strongest there. This is why lightning rods are pointed! The field enhancement at sharp points is a key principle in electrostatics.",
+      q10: " <strong>Correct Answer: C</strong><br>From U = ½CV², we solve for V: V = √(2U/C) = √(2×0.01/5×10⁻⁶) = √4000 = 63.2 V ≈ 63 V. The voltage is proportional to the square root of stored energy. This inverse relationship is important for energy calculations.",
+      q11: " <strong>Correct Answer: A</strong><br>Surface charge density σ = ε₀E = 8.85×10⁻¹² × 2×10⁶ = 1.77×10⁻⁵ C/m². This follows from Gauss's law applied to a small pillbox at the conductor surface. The field just outside a conductor is always σ/ε₀.",
+      q12: " <strong>Correct Answer: A</strong><br>Charge on a capacitor: Q = CV = 8×10⁻⁶ × 30 = 240×10⁻⁶ C = 0.24 mC. The charge is directly proportional to both capacitance and voltage. This linear relationship is fundamental to capacitor behavior.",
+      q13: " <strong>Correct Answer: A</strong><br>The capacitance is C = ε₀A/(d-t+t/k).<br><br><strong>Derivation:</strong><br>This is equivalent to two capacitors in series: one with air (thickness d-t) and one with dielectric (thickness t).<br>1) Capacitance of air gap: C₁ = ε₀A/(d-t)<br>2) Capacitance of dielectric: C₂ = kε₀A/t<br>3) For series capacitors: 1/C = 1/C₁ + 1/C₂<br>4) 1/C = (d-t)/(ε₀A) + t/(kε₀A)<br>5) 1/C = [(d-t)k + t]/(kε₀A)<br>6) C = kε₀A/[(d-t)k + t] = ε₀A/(d-t+t/k)",
+      q14: " <strong>Correct Answer: A</strong><br>Since C = ε₀A/d, tripling area (A→3A) and doubling separation (d→2d) gives C_new = ε₀(3A)/(2d) = 1.5ε₀A/d = 1.5C. The capacitance increases by 50%. This shows how geometry affects capacitance.",
+      q15: " <strong>Correct Answer: D</strong><br>Barium titanate has an extremely high dielectric constant (k ≈ 1200-1500), making it excellent for high-capacitance applications. Air (k≈1), glass (k≈5), and water (k≈80) have much lower values. High-k materials are crucial for modern electronics.",
+      q16: " <strong>Correct Answer: A</strong><br>The electric field is E = λ/(2πε₀r).<br><br><strong>Derivation:</strong><br>1) Use Gauss's law: ∮E·dA = Q_enclosed/ε₀<br>2) Choose a cylindrical Gaussian surface of radius r and length L<br>3) The enclosed charge is Q = λL<br>4) The electric field is radial and constant on the cylindrical surface<br>5) ∮E·dA = E(2πrL) = λL/ε₀<br>6) Therefore: E = λL/(2πrLε₀) = λ/(2πε₀r)<br>This field decreases as 1/r, characteristic of line charges.",
+      q17: " <strong>Correct Answer: A</strong><br>The electric potential is V = Q/(4πε₀r).<br><br><strong>Derivation:</strong><br>1) The electric field of a point charge is E = Q/(4πε₀r²)<br>2) Electric potential is V = -∫E·dr from infinity to r<br>3) V = -∫[Q/(4πε₀r²)]dr from ∞ to r<br>4) V = Q/(4πε₀)[1/r] from ∞ to r<br>5) V = Q/(4πε₀)[1/r - 0] = Q/(4πε₀r)<br>Note: We choose V = 0 at infinity as the reference point.<br>This potential decreases as 1/r, while the field decreases as 1/r².",
+      q18: " <strong>Correct Answer: A</strong><br>Energy stored: U = ½CV² = ½ × 12×10⁻⁶ × 625 = 0.00375 J. The energy scales with the square of voltage, so doubling voltage quadruples the energy. This quadratic dependence is crucial for energy storage.",
+      q19: " <strong>Correct Answer: B</strong><br>In electrostatic equilibrium, the electric potential inside a conductor is constant throughout. This is because E = -∇V, and since E = 0 inside, V must be constant. This is why conductors are equipotential surfaces.",
+      q20: " <strong>Correct Answer: D</strong><br>For parallel capacitors: C_eq = C1 + C2 = 4 + 8 = 12 μF. Parallel capacitors add directly because they share the same voltage across all capacitors. This is the opposite of series capacitors.",
+      q21: " <strong>Correct Answer: D</strong><br>The effect of a dielectric on breakdown voltage depends on the specific material. Some dielectrics increase breakdown voltage, others may decrease it, and some have no effect. It's material-dependent and must be tested experimentally.",
+      q22: " <strong>Correct Answer: D</strong><br>Surface charge density: σ = Q/A = CV/A = 6×10⁻⁶ × 50/0.2 = 1.5×10⁻³ C/m². This represents the charge per unit area on the capacitor plates. Higher charge density means stronger electric fields.",
+      q23: " <strong>Correct Answer: A</strong><br>For series capacitors: 1/C_eq = 1/3 + 1/6 + 1/9 = 6/18 + 3/18 + 2/18 = 11/18. Therefore, C_eq = 18/11 ≈ 1.64 μF ≈ 1.5 μF. Series capacitors have smaller equivalent capacitance than any individual capacitor.",
+      q24: " <strong>Correct Answer: A</strong><br>The electric field between parallel plates is uniform and directed from positive to negative plate. This uniform field is what makes parallel-plate capacitors so useful and predictable. Edge effects are negligible for large plates.",
+      q25: " <strong>Correct Answer: B</strong><br>From U = ½CV²: V = √(2U/C) = √(2×0.125/25×10⁻⁶) = √10000 = 100 V. The voltage is the square root of (2 × energy / capacitance). This relationship is fundamental to capacitor energy calculations.",
+      q26: " <strong>Correct Answer: B</strong><br>A dielectric develops induced dipoles when placed in an electric field. The field causes bound charges to separate slightly, creating microscopic dipoles that reduce the net field inside the dielectric. This polarization is the key mechanism of dielectrics.",
+      q27: " <strong>Correct Answer: A</strong><br>The force between capacitor plates is F = Q²/(2ε₀A). This can be derived from F = -dU/dx where U is the stored energy and x is the plate separation.<br><br><strong>Derivation:</strong><br>For a parallel-plate capacitor with fixed charge Q: U = Q²/(2C)<br>Substitute C = ε₀A/d: U = Q²d/(2ε₀A)<br>The force is the negative gradient of energy with respect to separation: F = -dU/dd<br>F = -d/dd[Q²d/(2ε₀A)] = -Q²/(2ε₀A)<br>The negative sign indicates an attractive force, so F = Q²/(2ε₀A)<br>This force arises because opposite charges attract each other.",
+      q28: " <strong>Correct Answer: B</strong><br>When a dielectric is inserted, the electric field decreases by a factor of k due to the induced dipoles in the dielectric. These dipoles create an opposing field that reduces the net field. This is why dielectrics increase capacitance.",
+      q29: " <strong>Correct Answer: A</strong><br>Energy stored: U = ½CV² = ½ × 16×10⁻⁶ × 900 = 0.0072 J. The energy stored in a capacitor is always positive and increases with both C and V². This energy can be recovered when the capacitor discharges.",
+      q30: " <strong>Correct Answer: B</strong><br>Surface charge density is highest where the radius of curvature is smallest (sharp points). This is why lightning rods are pointed and why electric fields are strongest at sharp edges. This principle is used in many electrostatic applications."
+    };
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 30; i++) {
+        const questionName = "q" + i;
+        const options = document.getElementsByName(questionName);
+        let selected = "";
+        options.forEach(opt => {
+          opt.parentElement.style.color = "black";
+          if (opt.checked) selected = opt.value;
+        });
+        const feedbackEl = document.getElementById("feedback-" + questionName);
+        if (selected === answers[questionName]) {
+          score++;
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "green";
+          });
+        } else {
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "red";
+            if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+          });
+        }
+        if (feedbackEl) {
+          feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+          feedbackEl.style.display = "block";
+        }
+      }
+      document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+    }
+    window.onload = () => {
+      for (let i = 1; i <= 30; i++) {
+        const options = document.getElementsByName("q" + i);
+        const letters = ["a", "b", "c", "d"];
+        options.forEach((opt, idx) => {
+          opt.value = letters[idx];
+        });
+      }
+    };
+  </script>
+</body>
+</html> 

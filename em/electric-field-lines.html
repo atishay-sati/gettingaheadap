@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study electric field lines for AP Physics C. Learn about field line patterns, rules for drawing field lines, and visualizing electric fields around charges." />
+  <title>Electric Field Lines</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .rules-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .field-patterns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .field-pattern {
+      text-align: center;
+      padding: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    .field-pattern h4 {
+      color: #6f42c1;
+      margin-bottom: 1rem;
+    }
+    .field-pattern .pattern-placeholder {
+      width: 200px;
+      height: 150px;
+      margin: 0 auto 1rem;
+      background-color: #f3e5ff;
+      border: 2px  #6f42c1;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 0.9rem;
+    }
+    .warning-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .warning-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Field Lines</h1>
+
+    <p>
+      Electric field lines are a visual representation of electric fields that help us understand the direction and relative strength of electric fields in space. They provide an intuitive way to visualize complex electric field patterns.
+    </p>
+
+    <h2>What are Electric Field Lines?</h2>
+
+    <div class="formula-box">
+      $$\text{Electric field lines show the direction of the electric field at every point}$$
+    </div>
+
+    <p>
+      Electric field lines are imaginary lines drawn in space that show the direction of the electric field at every point. The tangent to a field line at any point gives the direction of the electric field at that point.
+    </p>
+
+    <figure>
+      
+        <img src="electric-field-lines-different.png" alt = "different types of E field"  >
+      
+      <figcaption>
+        Field lines show the direction and relative strength of electric fields.
+      </figcaption>
+    </figure>
+    <h2>How to Find the Direction of Force from Field Lines</h2>
+    <div class="rules-box">
+      <p>The electric force on a charge points in the same direction as the electric field at that point if the charge is positive, and in the opposite direction if it’s negative. Since field lines can curve, you find the force direction by drawing a line tangent to the field line at the location of the charge.</p>
+    </div>
+
+    <h2>Rules for Drawing Electric Field Lines</h2>
+
+    <div class="rules-box">
+      <h3>Fundamental Rules</h3>
+      <ol>
+        <li><strong>Direction:</strong> Field lines point in the direction of the electric field</li>
+        <li><strong>Start and End:</strong> Lines start on positive charges and end on negative charges</li>
+        <li><strong>Never Cross:</strong> Field lines never cross each other</li>
+        <li><strong>Density:</strong> Closer lines indicate stronger electric fields</li>
+        <li><strong>Perpendicular:</strong> Lines are perpendicular to equipotential surfaces</li>
+      </ol>
+      <h4>Step-by-Step: Drawing Field Lines for a Positive and Negative Charge (Dipole)</h4>
+      <ol>
+        <li><b>Mark the charges:</b> Place a positive charge (+) and a negative charge (–) on your diagram, spaced apart.</li>
+        <li><b>Start at the positive charge:</b> Draw several lines radiating outward from the positive charge. These are the starting points for your field lines.</li>
+        <li><b>Curve the lines:</b> As you draw, let the lines bend smoothly toward the negative charge. At first, your lines might look like they will intersect, but adjust them so they curve and never cross. Field lines naturally curve to avoid intersections and always connect from + to –.</li>
+        <li><b>End at the negative charge:</b> The lines should end at the negative charge, with the pattern denser near the charges and spreading out as they move away.</li>
+        <li><b>Show symmetry:</b> Make sure the pattern is symmetric about the axis connecting the two charges. The lines should curve smoothly from + to –.</li>
+        <li><b>Fill in the pattern:</b> Add a few lines that start at the positive charge and go off to infinity, and a few that end at the negative charge from infinity, to show the field extends beyond just the two charges.</li>
+        <li><b>Check your work:</b> No lines should cross, and the direction should always be from + to –.</li>
+      </ol>
+      <p><b>Tip:</b> If your lines look like they're about to cross, curve them more! Field lines always curve to avoid intersections and to connect from positive to negative.</p>
+    </div>
+
+    <h3>Additional Properties</h3>
+    <ul>
+      <li><strong>Number of lines:</strong> Proportional to the magnitude of the charge</li>
+      <li><strong>Symmetry:</strong> Field lines respect the symmetry of the charge distribution</li>
+      <li><strong>Infinite lines:</strong> In theory, there are infinite field lines around any charge</li>
+      <li><strong>Convergence:</strong> Lines converge toward negative charges</li>
+      <li><strong>Divergence:</strong> Lines diverge from positive charges</li>
+    </ul>
+
+    <h2>Common Field Line Patterns</h2>
+
+    <div class="field-patterns">
+      
+      
+      <div class="field-pattern">
+        <h4>Two Equal Negative Charges</h4>
+        <div class="pattern-placeholder">
+          <img src="negative-charges-field.png" alt="2 negative charges" style="width:100%;height:100%;object-fit:cover;display:block;margin:0 auto;">
+        </div>
+        <p>Lines curve away from each charge</p>
+      </div>
+      
+      <div class="field-pattern">
+        <h4>Two Equal Positive Charges</h4>
+        <div class="pattern-placeholder">
+          <img src = "positive-charges-field.jpg" alt = "2 positive charges" style="width:100%;height:100%;object-fit:cover;display:block;margin:0 auto;">
+        </div>
+        <p>Lines curve away from each charge</p>
+      </div>
+      
+      <div class="field-pattern">
+        <h4>Positive and Negative Charges</h4>
+        <div class="pattern-placeholder">
+          <img src="positive-negative-field.png" alt = "positive and negative charge" style="width:100%;height:100%;object-fit:cover;display:block;margin:0 auto;">
+        </div>
+        <p>Lines connect from positive to negative</p>
+      </div>
+    </div>
+
+    <h2>Interpreting Field Line Density</h2>
+
+    <div class="formula-box">
+      $$\text{Field strength} \propto \frac{\text{Number of lines}}{\text{Area}}$$
+    </div>
+
+    <p>
+      The density of field lines (number of lines per unit area) is proportional to the strength of the electric field. This means:
+    </p>
+
+    <ul>
+      <li><strong>Closer lines:</strong> Stronger electric field</li>
+      <li><strong>Farther apart lines:</strong> Weaker electric field</li>
+      <li><strong>Uniform spacing:</strong> Uniform field strength</li>
+      <li><strong>Varying spacing:</strong> Varying field strength</li>
+    </ul>
+
+    <p>Simply, what this means is that the closer the electric field lines are, the stronger the electric field will be there. Due to a stronger E field, there will be a greater electric force if a charge is placed there.</p>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Drawing Field Lines for Two Equal Positive Charges</h3>
+      <p><strong>Problem:</strong> Sketch the electric field lines for two equal positive charges placed 2.0 m apart.</p>
+      
+      <div class="rules-box">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Start points:</strong> Draw lines starting from each positive charge</li>
+          <li><strong>Repulsion:</strong> Lines from each charge curve away from the other charge</li>
+          <li><strong>Midpoint:</strong> At the midpoint, field lines point away from both charges</li>
+          <li><strong>Symmetry:</strong> Maintain symmetry about the line connecting the charges</li>
+          <li><strong>Density:</strong> Lines are denser near the charges, sparser in the middle</li>
+        </ol>
+      </div>
+      
+      <p><strong>Key Features:</strong> The field lines show repulsion between the charges, with a region of weak field at the midpoint.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Field Lines for a Dipole</h3>
+      <p><strong>Problem:</strong> Draw the electric field lines for a dipole (equal positive and negative charges).</p>
+      
+      <div class="rules-box">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Start and end:</strong> Lines start at positive charge, end at negative charge</li>
+          <li><strong>Curved paths:</strong> Lines curve from positive to negative charge</li>
+          <li><strong>Perpendicular:</strong> Lines are perpendicular to the dipole axis at the midpoint</li>
+          <li><strong>Density:</strong> Lines are densest near the charges</li>
+          <li><strong>Far field:</strong> Lines become more parallel at large distances</li>
+        </ol>
+      </div>
+      
+      <p><strong>Key Features:</strong> The dipole creates a characteristic field pattern with lines connecting the charges and a weak field region perpendicular to the dipole axis.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Field Lines Near a Conductor (covered in next unit)</h3>
+      <p><strong>Problem:</strong> Sketch the electric field lines near a charged conducting sphere.</p>
+      
+      <div class="rules-box">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Radial pattern:</strong> Lines are radial (point outward from center)</li>
+          <li><strong>Perpendicular to surface:</strong> Lines are perpendicular to the conductor surface</li>
+          <li><strong>No lines inside:</strong> No field lines inside the conductor (E = 0)</li>
+          <li><strong>Uniform density:</strong> Lines are uniformly spaced around the sphere</li>
+          <li><strong>Decreasing density:</strong> Line density decreases with distance</li>
+        </ol>
+      </div>
+      
+      <p><strong>Key Features:</strong> The field is strongest at the surface and decreases with distance according to the inverse square law.</p>
+    </div>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="warning-box">
+      <h4>⚠️ Important Warnings</h4>
+      <ul>
+        <li><strong>Don't draw lines crossing:</strong> Field lines never intersect</li>
+        <li><strong>Don't forget direction:</strong> Lines must show the correct direction</li>
+        <li><strong>Don't ignore symmetry:</strong> Field patterns should respect charge symmetry</li>
+        <li><strong>Don't confuse density:</strong> More lines = stronger field</li>
+        <li><strong>Don't forget units:</strong> Field lines are qualitative, not quantitative</li>
+      </ul>
+    </div>
+
+    <h2>Applications of Field Lines</h2>
+
+    <ul>
+      <li><strong>Visualizing complex fields:</strong> Help understand field patterns around multiple charges</li>
+      <li><strong>Predicting motion:</strong> Show the path a positive test charge would follow</li>
+      <li><strong>Understanding conductors:</strong> Explain why electric fields are zero inside conductors</li>
+      <li><strong>Designing devices:</strong> Used in designing capacitors, antennas, and other electrical devices</li>
+      <li><strong>Teaching concepts:</strong> Provide intuitive understanding of electric fields</li>
+    </ul>
+
+    <h2>Field Lines vs. Mathematical Calculations</h2>
+
+    <div class="formula-box">
+      <h3>Comparison</h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr style="background-color: #f8f9fa;">
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Aspect</th>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Field Lines</th>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Mathematical</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Purpose</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Qualitative visualization</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Quantitative calculation</td>
+        </tr>
+        <tr style="background-color: #f8f9fa;">
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Precision</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Approximate</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Exact</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Complexity</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Simple patterns</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Complex calculations</td>
+        </tr>
+        <tr style="background-color: #f8f9fa;">
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Use</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Conceptual understanding</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Problem solving</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>Field lines are visual tools</strong> that help understand electric field patterns</li>
+      <li><strong>They follow specific rules</strong> that reflect the physics of electric fields</li>
+      <li><strong>Line density indicates field strength</strong> - closer lines mean stronger fields</li>
+      <li><strong>They never cross</strong> because the electric field has a unique direction at each point</li>
+      <li><strong>They start on positive charges</strong> and end on negative charges</li>
+      <li><strong>They are perpendicular</strong> to equipotential surfaces</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference Rules</h3>
+      <ul>
+        <li><strong>Direction:</strong> Lines point in field direction</li>
+        <li><strong>Start/End:</strong> Positive → Negative</li>
+        <li><strong>No crossing:</strong> Lines never intersect</li>
+        <li><strong>Density:</strong> More lines = stronger field</li>
+        <li><strong>Symmetry:</strong> Respect charge distribution symmetry</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

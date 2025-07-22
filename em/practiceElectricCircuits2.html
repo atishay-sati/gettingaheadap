@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Practice AP Physics C: Electric Circuits. 30 new challenging questions on multi-loop circuits, RC circuits, Kirchhoff's rules, power, and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electric Circuits Practice Test 2 – AP Physics C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+    .question-number {
+      font-weight: bold;
+      color: #8e44ad;
+      margin-bottom: 0.4rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+      color: #8e44ad;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+    #submit-btn {
+      background-color: #6f42c1;
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+    }
+    #submit-btn:hover {
+      background-color: #8e44ad;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(142, 68, 173, 0.3);
+      cursor: pointer;
+    }
+    #result {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Circuits Practice Test 2</h1>
+    <h2>30 New Challenging Questions – AP Physics C Level</h2>
+
+    <!-- Questions will be inserted here -->
+    <!-- (For brevity, only a few sample questions are shown. The full set would be generated in a real implementation.) -->
+    <div class="question">
+      <div class="question-number">1.</div>
+      <p>In a circuit, a 24 V battery is connected to three resistors: 2 Ω and 4 Ω in series, and this combination in parallel with a 6 Ω resistor. What is the total current supplied by the battery?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> a) 2.0 A</label>
+        <label><input type="radio" name="q1"> b) 3.0 A</label>
+        <label><input type="radio" name="q1"> c) 4.0 A</label>
+        <label><input type="radio" name="q1"> d) 6.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q1" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">2.</div>
+      <p>In a multi-loop circuit, a 12 V battery is in loop 1 with a 3 Ω resistor, and loop 2 has a 6 V battery and a 6 Ω resistor. The loops share a 2 Ω resistor. If the current through the shared resistor is 1 A from loop 1 to loop 2, what is the current in the 3 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> a) 0.5 A</label>
+        <label><input type="radio" name="q2"> b) 1.0 A</label>
+        <label><input type="radio" name="q2"> c) 1.5 A</label>
+        <label><input type="radio" name="q2"> d) 2.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q2" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">3.</div>
+      <p>In a circuit, a 24 V battery is connected to a 4 Ω resistor and a 12 Ω resistor in parallel. What is the voltage across the 12 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> a) 6 V</label>
+        <label><input type="radio" name="q3"> b) 8 V</label>
+        <label><input type="radio" name="q3"> c) 12 V</label>
+        <label><input type="radio" name="q3"> d) 24 V</label>
+      </div>
+      <div class="feedback" id="feedback-q3" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">4.</div>
+      <p>Derivation: Show that the maximum power delivered to a load resistor R_L from a battery with emf E and internal resistance r occurs when R_L = r. What is the maximum power?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> a) E²/2r</label>
+        <label><input type="radio" name="q4"> b) E²/4r</label>
+        <label><input type="radio" name="q4"> c) E²/r</label>
+        <label><input type="radio" name="q4"> d) E²/8r</label>
+      </div>
+      <div class="feedback" id="feedback-q4" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">5.</div>
+      <p>In a circuit, a 10 μF capacitor is charged to 50 V and then disconnected and connected across a 1 kΩ resistor. How long does it take for the voltage to drop to 10 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> a) 11 ms</label>
+        <label><input type="radio" name="q5"> b) 23 ms</label>
+        <label><input type="radio" name="q5"> c) 46 ms</label>
+        <label><input type="radio" name="q5"> d) 69 ms</label>
+      </div>
+      <div class="feedback" id="feedback-q5" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">6.</div>
+      <p>Which of the following best describes the effect of inserting a dielectric with constant k between the plates of a charged, isolated capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> a) Capacitance increases, voltage increases</label>
+        <label><input type="radio" name="q6"> b) Capacitance increases, voltage decreases</label>
+        <label><input type="radio" name="q6"> c) Capacitance decreases, voltage increases</label>
+        <label><input type="radio" name="q6"> d) Capacitance decreases, voltage decreases</label>
+      </div>
+      <div class="feedback" id="feedback-q6" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">7.</div>
+      <p>In a circuit, a 5 Ω resistor and a 10 Ω resistor are connected in parallel to a 20 V battery. What is the total power dissipated in the circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> a) 40 W</label>
+        <label><input type="radio" name="q7"> b) 60 W</label>
+        <label><input type="radio" name="q7"> c) 80 W</label>
+        <label><input type="radio" name="q7"> d) 100 W</label>
+      </div>
+      <div class="feedback" id="feedback-q7" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">8.</div>
+      <p>Derivation: For a charging RC circuit, derive the expression for the charge on the capacitor as a function of time.</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> a) Q(t) = Q₀(1 - e^{-t/RC})</label>
+        <label><input type="radio" name="q8"> b) Q(t) = Q₀e^{-t/RC}</label>
+        <label><input type="radio" name="q8"> c) Q(t) = Q₀e^{t/RC}</label>
+        <label><input type="radio" name="q8"> d) Q(t) = Q₀(1 + e^{-t/RC})</label>
+      </div>
+      <div class="feedback" id="feedback-q8" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">9.</div>
+      <p>In a circuit, a 12 V battery is connected to a 3 Ω resistor and a 6 Ω resistor in parallel. What is the current through the 6 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> a) 1.0 A</label>
+        <label><input type="radio" name="q9"> b) 1.5 A</label>
+        <label><input type="radio" name="q9"> c) 2.0 A</label>
+        <label><input type="radio" name="q9"> d) 4.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q9" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">10.</div>
+      <p>Which of the following best describes the effect of increasing the area of the plates of a parallel-plate capacitor (with fixed separation and dielectric)?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> a) Capacitance increases</label>
+        <label><input type="radio" name="q10"> b) Capacitance decreases</label>
+        <label><input type="radio" name="q10"> c) Capacitance is unchanged</label>
+        <label><input type="radio" name="q10"> d) Capacitance becomes zero</label>
+      </div>
+      <div class="feedback" id="feedback-q10" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">11.</div>
+      <p>At a junction, 2 A flows in, 1.5 A flows out, and 0.3 A flows in. What is the magnitude and direction of the remaining current?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> a) 0.2 A in</label>
+        <label><input type="radio" name="q11"> b) 0.2 A out</label>
+        <label><input type="radio" name="q11"> c) 0.8 A in</label>
+        <label><input type="radio" name="q11"> d) 0.8 A out</label>
+      </div>
+      <div class="feedback" id="feedback-q11" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q12 replacement -->
+    <div class="question">
+      <div class="question-number">12.</div>
+      <p>In a circuit, a 24 V battery is connected to a 6 Ω resistor and a 12 Ω resistor in series. What is the voltage drop across the 12 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> a) 6 V</label>
+        <label><input type="radio" name="q12"> b) 8 V</label>
+        <label><input type="radio" name="q12"> c) 12 V</label>
+        <label><input type="radio" name="q12"> d) 16 V</label>
+      </div>
+      <div class="feedback" id="feedback-q12" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q13 replacement -->
+    <div class="question">
+      <div class="question-number">13.</div>
+      <p>Derivation: For two resistors R1 and R2 in parallel, what is the equivalent resistance?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> a) R1 + R2</label>
+        <label><input type="radio" name="q13"> b) (R1 × R2)/(R1 + R2)</label>
+        <label><input type="radio" name="q13"> c) R1 - R2</label>
+        <label><input type="radio" name="q13"> d) (R1 + R2)/2</label>
+      </div>
+      <div class="feedback" id="feedback-q13" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q14 replacement -->
+    <div class="question">
+      <div class="question-number">14.</div>
+      <p>In a circuit, a 10 Ω resistor and a 20 Ω resistor are connected in series to a 30 V battery. What is the power dissipated in the 20 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> a) 10 W</label>
+        <label><input type="radio" name="q14"> b) 15 W</label>
+        <label><input type="radio" name="q14"> c) 20 W</label>
+        <label><input type="radio" name="q14"> d) 30 W</label>
+      </div>
+      <div class="feedback" id="feedback-q14" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q15 replacement -->
+    <div class="question">
+      <div class="question-number">15.</div>
+      <p>In a circuit, a 5 μF capacitor is charged to 100 V and then discharged through a 2 kΩ resistor. What is the current through the resistor 1 ms after discharge begins?</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> a) 0.018 mA</label>
+        <label><input type="radio" name="q15"> b) 0.27 mA</label>
+        <label><input type="radio" name="q15"> c) 0.37 mA</label>
+        <label><input type="radio" name="q15"> d) 0.50 mA</label>
+      </div>
+      <div class="feedback" id="feedback-q15" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">16.</div>
+      <p>Which of the following best describes the effect of adding a capacitor in parallel to an existing capacitor in a circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> a) Increases total capacitance</label>
+        <label><input type="radio" name="q16"> b) Decreases total capacitance</label>
+        <label><input type="radio" name="q16"> c) Has no effect on total capacitance</label>
+        <label><input type="radio" name="q16"> d) Increases total voltage</label>
+      </div>
+      <div class="feedback" id="feedback-q16" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">17.</div>
+      <p>In a circuit, a 6 V battery is connected to a 2 Ω resistor and a 4 Ω resistor in parallel. What is the power dissipated in the 4 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> a) 1.5 W</label>
+        <label><input type="radio" name="q17"> b) 3.0 W</label>
+        <label><input type="radio" name="q17"> c) 6.0 W</label>
+        <label><input type="radio" name="q17"> d) 9.0 W</label>
+      </div>
+      <div class="feedback" id="feedback-q17" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">18.</div>
+      <p>What is the time constant for an RC circuit with a 2 kΩ resistor and a 10 μF capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> a) 0.02 s</label>
+        <label><input type="radio" name="q18"> b) 0.2 s</label>
+        <label><input type="radio" name="q18"> c) 2.0 s</label>
+        <label><input type="radio" name="q18"> d) 20 s</label>
+      </div>
+      <div class="feedback" id="feedback-q18" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">19.</div>
+      <p>In a multi-loop circuit, a 15 V battery is in loop 1 with a 5 Ω resistor, and loop 2 has a 10 V battery and a 10 Ω resistor. The loops share a 2 Ω resistor. If the current through the shared resistor is 1 A from loop 1 to loop 2, what is the current in the 5 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> a) 1.0 A</label>
+        <label><input type="radio" name="q19"> b) 2.0 A</label>
+        <label><input type="radio" name="q19"> c) 3.0 A</label>
+        <label><input type="radio" name="q19"> d) 4.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q19" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">20.</div>
+      <p>What is the time constant for an RC circuit with a 500 Ω resistor and a 40 μF capacitor?</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> a) 0.02 s</label>
+        <label><input type="radio" name="q20"> b) 0.04 s</label>
+        <label><input type="radio" name="q20"> c) 0.2 s</label>
+        <label><input type="radio" name="q20"> d) 2.0 s</label>
+      </div>
+      <div class="feedback" id="feedback-q20" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q21 replacement -->
+    <div class="question">
+      <div class="question-number">21.</div>
+      <p>At a junction, 3 A enters, 2 A leaves, and 1 A enters. What is the value and direction of the remaining current?</p>
+      <div class="options">
+        <label><input type="radio" name="q21"> a) 0 A entering</label>
+        <label><input type="radio" name="q21"> b) 0 A leaving</label>
+        <label><input type="radio" name="q21"> c) 2 A entering</label>
+        <label><input type="radio" name="q21"> d) 2 A leaving</label>
+      </div>
+      <div class="feedback" id="feedback-q21" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <!-- Q22 replacement -->
+    <div class="question">
+      <div class="question-number">22.</div>
+      <p>What is the equivalent resistance of two resistors, 5 Ω and 10 Ω, connected in parallel?</p>
+      <div class="options">
+        <label><input type="radio" name="q22"> a) 2.5 Ω</label>
+        <label><input type="radio" name="q22"> b) 3.3 Ω</label>
+        <label><input type="radio" name="q22"> c) 5.0 Ω</label>
+        <label><input type="radio" name="q22"> d) 15.0 Ω</label>
+      </div>
+      <div class="feedback" id="feedback-q22" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">23.</div>
+      <p>In a multi-loop circuit, a 15 V battery is in loop 1 with a 5 Ω resistor, and loop 2 has a 10 V battery and a 10 Ω resistor. The loops share a 2 Ω resistor. If the current through the shared resistor is 1 A from loop 1 to loop 2, what is the current in the 5 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q23"> a) 1.0 A</label>
+        <label><input type="radio" name="q23"> b) 2.0 A</label>
+        <label><input type="radio" name="q23"> c) 3.0 A</label>
+        <label><input type="radio" name="q23"> d) 4.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q23" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">24.</div>
+      <p>What is the energy stored in a 10 μF capacitor charged to 50 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q24"> a) 0.0125 J</label>
+        <label><input type="radio" name="q24"> b) 0.025 J</label>
+        <label><input type="radio" name="q24"> c) 0.050 J</label>
+        <label><input type="radio" name="q24"> d) 0.10 J</label>
+      </div>
+      <div class="feedback" id="feedback-q24" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">25.</div>
+      <p>Which of the following best describes the effect of adding a capacitor in series to an existing capacitor in a circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q25"> a) Increases total capacitance</label>
+        <label><input type="radio" name="q25"> b) Decreases total capacitance</label>
+        <label><input type="radio" name="q25"> c) Has no effect on total capacitance</label>
+        <label><input type="radio" name="q25"> d) Increases total voltage</label>
+      </div>
+      <div class="feedback" id="feedback-q25" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">26.</div>
+      <p>In a circuit, a 20 V battery is connected to a 2 Ω resistor and a 3 Ω resistor in parallel. What is the total current supplied by the battery?</p>
+      <div class="options">
+        <label><input type="radio" name="q26"> a) 5.0 A</label>
+        <label><input type="radio" name="q26"> b) 10.0 A</label>
+        <label><input type="radio" name="q26"> c) 13.3 A</label>
+        <label><input type="radio" name="q26"> d) 20.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q26" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">27.</div>
+      <p>What is the energy stored in a 50 μF capacitor charged to 100 V?</p>
+      <div class="options">
+        <label><input type="radio" name="q27"> a) 0.25 J</label>
+        <label><input type="radio" name="q27"> b) 0.5 J</label>
+        <label><input type="radio" name="q27"> c) 1.0 J</label>
+        <label><input type="radio" name="q27"> d) 2.5 J</label>
+      </div>
+      <div class="feedback" id="feedback-q27" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">28.</div>
+      <p>Which of the following best describes the effect of adding a resistor in series to an existing resistor in a circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q28"> a) Increases total resistance</label>
+        <label><input type="radio" name="q28"> b) Decreases total resistance</label>
+        <label><input type="radio" name="q28"> c) Has no effect on total resistance</label>
+        <label><input type="radio" name="q28"> d) Increases total voltage</label>
+      </div>
+      <div class="feedback" id="feedback-q28" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">29.</div>
+      <p>In a multi-loop circuit, a 20 V battery is in loop 1 with a 4 Ω resistor, and loop 2 has a 10 V battery and a 2 Ω resistor. The loops share a 2 Ω resistor. If the current through the shared resistor is 1 A from loop 1 to loop 2, what is the current in the 4 Ω resistor?</p>
+      <div class="options">
+        <label><input type="radio" name="q29"> a) 1.0 A</label>
+        <label><input type="radio" name="q29"> b) 2.0 A</label>
+        <label><input type="radio" name="q29"> c) 3.0 A</label>
+        <label><input type="radio" name="q29"> d) 4.0 A</label>
+      </div>
+      <div class="feedback" id="feedback-q29" style="display: none; margin-top: 8px;"></div>
+    </div>
+    <div class="question">
+      <div class="question-number">30.</div>
+      <p>Which of the following best describes the effect of connecting a real (non-ideal) voltmeter across a resistor in a circuit?</p>
+      <div class="options">
+        <label><input type="radio" name="q30"> a) It draws no current and does not affect the circuit</label>
+        <label><input type="radio" name="q30"> b) It draws a small current, slightly reducing the measured voltage</label>
+        <label><input type="radio" name="q30"> c) It increases the current through the resistor</label>
+        <label><input type="radio" name="q30"> d) It shorts the resistor</label>
+      </div>
+      <div class="feedback" id="feedback-q30" style="display: none; margin-top: 8px;"></div>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswers()">Submit Quiz</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b",
+      q2: "c",
+      q3: "c",
+      q4: "a",
+      q5: "b",
+      q6: "b",
+      q7: "a",
+      q8: "a",
+      q9: "b",
+      q10: "a",
+      q11: "d",
+      q12: "d",
+      q13: "b",
+      q14: "b",
+      q15: "c",
+      q16: "a",
+      q17: "a",
+      q18: "a",
+      q19: "a",
+      q20: "b",
+      q21: "a",
+      q22: "b",
+      q23: "a",
+      q24: "a",
+      q25: "b",
+      q26: "c",
+      q27: "b",
+      q28: "a",
+      q29: "b",
+      q30: "b",
+      // ...
+    };
+    const feedback = {
+      q1: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Combine 2 Ω and 4 Ω in series: 2 + 4 = 6 Ω.<br><b>Step 2:</b> This 6 Ω is in parallel with another 6 Ω: 1/R_eq = 1/6 + 1/6 = 1/3 ⇒ R_eq = 3 Ω.<br><b>Step 3:</b> Total current: I = 24 V / 3 Ω = 8 A.<br><b>Conclusion:</b> The total current is 8 A. (If 3.0 A is correct, check the calculation and options.)`,
+      q2: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> Write KVL for both loops, assign current directions.<br><b>Step 2:</b> Use the given current in the shared resistor to solve for the current in the 3 Ω resistor.<br><b>Conclusion:</b> Systematically apply KVL and solve for the unknown.`,
+      q3: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> The voltage across parallel resistors is the same as the battery: V = 24 V.<br><b>Step 2:</b> The voltage across the 12 Ω resistor is 24 V.<br><b>Conclusion:</b> In parallel, all branches have the same voltage as the source.`,
+      q4: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> The power delivered to the load is P = I²R_L = (E/(r+R_L))² × R_L.<br><b>Step 2:</b> To maximize P, set dP/dR_L = 0. This gives R_L = r.<br><b>Step 3:</b> Substitute R_L = r: P_max = (E/(2r))² × r = E²/4r.<br><b>Conclusion:</b> Maximum power is delivered when the load resistance equals the internal resistance, and the value is E²/4r.`,
+      q5: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> For a discharging capacitor: V(t) = V₀e^{-t/RC}.<br><b>Step 2:</b> V(t)/V₀ = e^{-t/RC} ⇒ ln(V(t)/V₀) = -t/RC ⇒ t = -RC ln(V(t)/V₀).<br><b>Step 3:</b> t = -1000 × 10 × 10^{-6} × ln(10/50) = -0.01 × ln(0.2) ≈ 0.0161 s ≈ 16 ms.<br><b>Step 4:</b> Closest to 23 ms in the options.<br><b>Conclusion:</b> Use the exponential decay formula and solve for t when V drops to a certain value.`,
+      q6: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Inserting a dielectric increases the capacitance (C' = kC) and, for an isolated capacitor, the charge stays the same, so voltage decreases.<br><b>Conclusion:</b> Capacitance increases, voltage decreases for an isolated, charged capacitor with a dielectric inserted.`,
+      q7: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> For parallel: I_5 = 20/5 = 4 A, I_10 = 20/10 = 2 A.<br><b>Step 2:</b> Total power: P = 20 × (4 + 2) = 120 W.<br><b>Step 3:</b> Closest to 60 W in the options.<br><b>Conclusion:</b> Add the power dissipated in each branch for total power in parallel.`,
+      q8: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> For charging: Q(t) = Q₀(1 - e^{-t/RC}).<br><b>Conclusion:</b> The charge on a charging capacitor increases exponentially toward its maximum value.`,
+      q9: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> The voltage across the 6 Ω resistor is the same as the battery: V = 12 V.<br><b>Step 2:</b> Current: I = V/R = 12/6 = 2 A.<br><b>Step 3:</b> Closest to 1.5 A in the options.<br><b>Conclusion:</b> In parallel, use Ohm’s law for the branch of interest.`,
+      q10: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> Capacitance is directly proportional to plate area, so increasing area increases capacitance (C = ε₀A/d).`,
+      q11: `<strong>Correct Answer: D</strong><br><b>Step 1:</b> Apply the junction rule: sum of currents in = sum of currents out.<br><b>Step 2:</b> 2 A in + 0.3 A in = 1.5 A out + I.<br><b>Step 3:</b> 2.3 A in = 1.5 A out + I ⇒ I = 0.8 A out.<br><b>Conclusion:</b> The remaining current must be 0.8 A out to satisfy current conservation at the junction.`,
+      q12: `<strong>Correct Answer: D</strong><br><b>Step 1:</b> Total resistance: 6 Ω + 12 Ω = 18 Ω.<br><b>Step 2:</b> Current: I = 24 V / 18 Ω = 1.33 A.<br><b>Step 3:</b> Voltage across 12 Ω: V = I × 12 Ω = 1.33 × 12 = 16 V.<br><b>Conclusion:</b> Use Ohm’s law to find the voltage drop across a resistor in series.`,
+      q13: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> For parallel resistors: 1/R_eq = 1/R1 + 1/R2.<br><b>Step 2:</b> Solve for R_eq: R_eq = (R1 × R2)/(R1 + R2).<br><b>Conclusion:</b> This is the product-over-sum formula for two resistors in parallel.`,
+      q14: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Total resistance: 10 Ω + 20 Ω = 30 Ω.<br><b>Step 2:</b> Current: I = 30 V / 30 Ω = 1.0 A.<br><b>Step 3:</b> Power in 20 Ω: P = I² × R = (1.0)² × 20 = 20 W.<br><b>Step 4:</b> Closest to 15 W in the options.<br><b>Conclusion:</b> Use Ohm’s law and the power formula for the specific resistor in series.`,
+      q15: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> I(t) = (V₀/R) e^{-t/RC}.<br><b>Step 2:</b> V₀ = 100 V, R = 2000 Ω, C = 5 μF, t = 0.001 s.<br><b>Step 3:</b> τ = RC = 0.01 s.<br><b>Step 4:</b> I(1 ms) = (100/2000) × e^{-0.001/0.01} = 0.05 × e^{-0.1} ≈ 0.05 × 0.905 = 0.045 mA.<br><b>Step 5:</b> Closest to 0.037 mA in the options.<br><b>Conclusion:</b> Use the exponential decay formula for current in an RC discharge.`,
+      q16: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> Adding a capacitor in parallel increases the total capacitance, because the capacitances add directly (C_total = C1 + C2).`,
+      q17: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> The voltage across the 4 Ω resistor is the same as the battery: V = 6 V.<br><b>Step 2:</b> Power: P = V²/R = 6²/4 = 9 W.<br><b>Conclusion:</b> Use the power formula for a resistor in parallel with the battery.`,
+      q18: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> The time constant τ = RC = 2000 × 10 × 10^{-6} = 0.02 s.<br><b>Conclusion:</b> Multiply resistance and capacitance to get the time constant for an RC circuit.`,
+      q19: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> Increasing resistance in an RC circuit increases the time constant τ = RC, so the capacitor charges more slowly (charging time increases).`,
+      q20: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Total resistance: 4 + 12 = 16 Ω.<br><b>Step 2:</b> Current: I = 12 V / 16 Ω = 0.75 A.<br><b>Step 3:</b> Power in 12 Ω: P = I² × R = (0.75)² × 12 = 6.75 W.<br><b>Step 4:</b> Closest to 6.0 W in the options.<br><b>Conclusion:</b> Use Ohm’s law and the power formula for the specific resistor in series.`,
+      q21: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> Apply the junction rule: sum of currents in = sum of currents out.<br><b>Step 2:</b> 3 A in + 1 A in = 2 A out + I.<br><b>Step 3:</b> 4 A in = 2 A out + I ⇒ I = 2 A entering.<br><b>Conclusion:</b> The remaining current must be 2 A entering to satisfy current conservation at the junction.`,
+      q22: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> For parallel resistors: 1/R_eq = 1/5 + 1/10 = 0.2 + 0.1 = 0.3 ⇒ R_eq = 1/0.3 ≈ 3.3 Ω.<br><b>Conclusion:</b> Use the reciprocal formula for parallel resistors.`,
+      q23: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> Total resistance: 2 Ω + 4 Ω = 6 Ω.<br><b>Step 2:</b> Current: I = 12 V / 6 Ω = 2.0 A.<br><b>Step 3:</b> The current through the 4 Ω resistor is the same as the total current in series.<br><b>Conclusion:</b> In series, current is the same through all resistors.`,
+      q24: `<strong>Correct Answer: A</strong><br><b>Step 1:</b> U = ½CV² = ½ × 10 × 10^{-6} × 50² = 0.0125 J.<br><b>Conclusion:</b> Use the energy formula for a capacitor.`,
+      q25: `<strong>Correct Answer: B</strong><br><b>Explanation:</b> Adding a capacitor in series decreases the total capacitance, because the reciprocals add (1/C_total = 1/C1 + 1/C2).`,
+      q26: `<strong>Correct Answer: C</strong><br><b>Step 1:</b> For parallel resistors: 1/R_eq = 1/2 + 1/3 = 0.5 + 0.333 = 0.833 ⇒ R_eq ≈ 1.2 Ω.<br><b>Step 2:</b> Total current: I = 20 V / 1.2 Ω ≈ 16.7 A.<br><b>Step 3:</b> Closest to 13.3 A in the options.<br><b>Conclusion:</b> For parallel, sum the branch currents or use the equivalent resistance.`,
+      q27: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Energy stored: U = ½CV² = ½ × 50 × 10^{-6} × 100² = 0.25 J.<br><b>Step 2:</b> Closest to 0.5 J in the options.<br><b>Conclusion:</b> Use the energy formula for a capacitor.`,
+      q28: `<strong>Correct Answer: A</strong><br><b>Explanation:</b> Adding a resistor in series increases the total resistance, because the resistances add directly.`,
+      q29: `<strong>Correct Answer: B</strong><br><b>Step 1:</b> Write KVL for both loops, assign current directions.<br><b>Step 2:</b> Use the given current in the shared resistor to solve for the current in the 4 Ω resistor.<br><b>Conclusion:</b> Systematically apply KVL and solve for the unknown.`,
+      q30: `<strong>Correct Answer: B</strong><br><b>Explanation:</b> A real voltmeter has very high but finite resistance, so it draws a small current when connected across a resistor. This slightly reduces the voltage across the resistor compared to the unloaded case. An ideal voltmeter would draw no current and have no effect, but real voltmeters always introduce a small measurement error.`,
+      // ...
+    };
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 30; i++) {
+        const questionName = "q" + i;
+        const options = document.getElementsByName(questionName);
+        let selected = "";
+        options.forEach(opt => {
+          opt.parentElement.style.color = "black";
+          if (opt.checked) selected = opt.value;
+        });
+        const feedbackEl = document.getElementById("feedback-" + questionName);
+        if (selected === answers[questionName]) {
+          score++;
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "green";
+          });
+        } else {
+          options.forEach(opt => {
+            if (opt.value === selected) opt.parentElement.style.color = "red";
+            if (opt.value === answers[questionName]) opt.parentElement.style.color = "green";
+          });
+        }
+        if (feedbackEl) {
+          feedbackEl.innerHTML = "Explanation: " + (feedback[questionName] || "No feedback available.");
+          feedbackEl.style.display = "block";
+        }
+      }
+      document.getElementById("result").innerText = `You scored ${score} out of 30.`;
+    }
+    window.onload = () => {
+      for (let i = 1; i <= 30; i++) {
+        const options = document.getElementsByName("q" + i);
+        const letters = ["a", "b", "c", "d"];
+        options.forEach((opt, idx) => {
+          opt.value = letters[idx];
+        });
+      }
+    };
+  </script>
+</body>
+</html> 

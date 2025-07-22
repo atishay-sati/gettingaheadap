@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn energy conservation in circuits for AP Physics C. Study power, energy transfer, and conservation principles in electrical circuits." />
+  <title>Energy Conservation in Circuits</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Energy Conservation specific styles */
+    .conservation-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .power-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .storage-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .sign-convention {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Energy Conservation in Circuits</h1>
+
+    <p>
+      Energy conservation is a fundamental principle in electrical circuits. Energy cannot be created or destroyed, only transferred between different forms. In circuits, energy is transferred between sources (batteries, power supplies), storage elements (capacitors, inductors), and dissipative elements (resistors).
+    </p>
+
+    <h2>Power and Energy</h2>
+
+    <div class="power-box">
+      <h3>⚡ Power Transfer</h3>
+      <p><strong>Power is the rate at which energy is transferred in a circuit.</strong></p>
+      <p>Power can be supplied by sources or dissipated by loads.</p>
+    </div>
+
+    <h3>Power Formulas</h3>
+    <div class="formula-box">
+      $$P = IV = I^2R = \frac{V^2}{R}$$
+    </div>
+
+    <h3>Energy Transfer</h3>
+    <div class="formula-box">
+      $$E = Pt = IVt$$
+    </div>
+
+    <p>
+      Power is measured in watts (W) and energy in joules (J). The power dissipated in a resistor is always positive, while power supplied by a source can be positive or negative depending on the direction of current flow.
+    </p>
+
+    <div class="example-box">
+      <h3>Example: Power Calculation</h3>
+      <p><strong>Problem:</strong> A 12V battery supplies 2A to a circuit. Calculate the power supplied and the energy transferred in 5 minutes.</p>
+
+      <h4>Step 1: Calculate Power</h4>
+      <div class="formula-box">
+        $$P = IV = (2A)(12V) = 24W$$
+      </div>
+
+      <h4>Step 2: Calculate Energy</h4>
+      <div class="formula-box">
+        $$E = Pt = (24W)(5 \times 60s) = 7200J = 7.2kJ$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>Power supplied = 24W, Energy transferred = 7.2kJ</strong></p>
+    </div>
+
+    <h2>Energy Conservation Principle</h2>
+
+    <div class="conservation-box">
+      <h3>🎯 Conservation Law</h3>
+      <p><strong>In any circuit, the total energy supplied equals the total energy dissipated plus the energy stored.</strong></p>
+      <p>Energy cannot be created or destroyed, only transferred between forms.</p>
+    </div>
+
+    <h3>Conservation Equation</h3>
+    <div class="formula-box">
+      $$\sum P_{supplied} = \sum P_{dissipated} + \sum P_{stored}$$
+    </div>
+
+    <h3>Energy Forms in Circuits</h3>
+    <ul>
+      <li><strong>Electrical Energy:</strong> Energy stored in electric fields (capacitors)</li>
+      <li><strong>Magnetic Energy:</strong> Energy stored in magnetic fields (inductors)</li>
+      <li><strong>Thermal Energy:</strong> Energy dissipated as heat in resistors</li>
+      <li><strong>Chemical Energy:</strong> Energy stored in batteries</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Energy Conservation</h3>
+      <p><strong>Problem:</strong> A 10V battery charges a 100μF capacitor through a 1kΩ resistor. Verify energy conservation during the charging process.</p>
+
+      <h4>Step 1: Calculate Final Stored Energy</h4>
+      <div class="formula-box">
+        $$U_{stored} = \frac{1}{2}CV^2 = \frac{1}{2}(100μF)(10V)^2 = 5mJ$$
+      </div>
+
+      <h4>Step 2: Calculate Energy Supplied</h4>
+      <div class="formula-box">
+        $$E_{supplied} = CV^2 = (100μF)(10V)^2 = 10mJ$$
+      </div>
+
+      <h4>Step 3: Calculate Energy Dissipated</h4>
+      <div class="formula-box">
+        $$E_{dissipated} = E_{supplied} - U_{stored} = 10mJ - 5mJ = 5mJ$$
+      </div>
+
+      <h4>Verification</h4>
+      <p>Energy supplied (10mJ) = Energy stored (5mJ) + Energy dissipated (5mJ) ✓</p>
+
+      <h4>Answer</h4>
+      <p><strong>Energy conservation is verified: 10mJ = 5mJ + 5mJ</strong></p>
+    </div>
+
+    <h2>Energy Storage in Circuit Elements</h2>
+
+    <div class="storage-box">
+      <h3>⚡ Energy Storage</h3>
+      <p><strong>Circuit elements can store energy in electric and magnetic fields.</strong></p>
+      <p>Capacitors store electrical energy, inductors store magnetic energy.</p>
+    </div>
+
+    <h3>Capacitor Energy Storage</h3>
+    <div class="formula-box">
+      $$U_C = \frac{1}{2}CV^2$$
+    </div>
+
+    <h3>Inductor Energy Storage</h3>
+    <div class="formula-box">
+      $$U_L = \frac{1}{2}LI^2$$
+    </div>
+
+    <h3>Energy Transfer During Transients</h3>
+    <ul>
+      <li><strong>Charging:</strong> Energy flows from source to capacitor</li>
+      <li><strong>Discharging:</strong> Energy flows from capacitor to resistor</li>
+      <li><strong>Oscillations:</strong> Energy oscillates between capacitor and inductor</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Energy Storage Analysis</h3>
+      <p><strong>Problem:</strong> A 50μF capacitor is charged to 20V, then discharged through a 100Ω resistor. Calculate the energy stored and dissipated.</p>
+
+      <h4>Step 1: Calculate Stored Energy</h4>
+      <div class="formula-box">
+        $$U_{stored} = \frac{1}{2}CV^2 = \frac{1}{2}(50μF)(20V)^2 = 10mJ$$
+      </div>
+
+      <h4>Step 2: Energy Dissipation</h4>
+      <p>During discharge, all stored energy is dissipated as heat in the resistor.</p>
+
+      <h4>Answer</h4>
+      <p><strong>Stored energy = 10mJ, Dissipated energy = 10mJ</strong></p>
+    </div>
+
+    <h2>Power Analysis in Complex Circuits</h2>
+
+    <h3>Power in Different Elements</h3>
+    <ul>
+      <li><strong>Resistors:</strong> Always dissipate power (P = I²R > 0)</li>
+      <li><strong>Batteries:</strong> Can supply or absorb power depending on current direction</li>
+      <li><strong>Capacitors:</strong> Store energy, power can be positive or negative</li>
+      <li><strong>Inductors:</strong> Store energy, power can be positive or negative</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Complex Circuit Power Analysis</h3>
+      <p><strong>Problem:</strong> In a circuit with a 12V battery, 2Ω resistor, and 4Ω resistor in series, calculate the power supplied and dissipated.</p>
+
+      <h4>Step 1: Find Current</h4>
+      <div class="formula-box">
+        $$I = \frac{V}{R_{total}} = \frac{12V}{6Ω} = 2A$$
+      </div>
+
+      <h4>Step 2: Calculate Power Supplied</h4>
+      <div class="formula-box">
+        $$P_{supplied} = IV = (2A)(12V) = 24W$$
+      </div>
+
+      <h4>Step 3: Calculate Power Dissipated</h4>
+      <div class="formula-box">
+        $$P_{R1} = I^2R_1 = (2A)^2(2Ω) = 8W$$
+        $$P_{R2} = I^2R_2 = (2A)^2(4Ω) = 16W$$
+        $$P_{total} = P_{R1} + P_{R2} = 8W + 16W = 24W$$
+      </div>
+
+      <h4>Verification</h4>
+      <p>Power supplied (24W) = Power dissipated (24W) ✓</p>
+
+      <h4>Answer</h4>
+      <p><strong>Power supplied = 24W, Power dissipated = 24W</strong></p>
+    </div>
+
+    <h2>Efficiency Considerations</h2>
+
+    <h3>Power Efficiency</h3>
+    <div class="formula-box">
+      $$\text{Efficiency} = \frac{P_{useful}}{P_{total}} \times 100\%$$
+    </div>
+
+    <h3>Energy Efficiency</h3>
+    <div class="formula-box">
+      $$\text{Efficiency} = \frac{E_{useful}}{E_{total}} \times 100\%$$
+    </div>
+
+    <h3>Factors Affecting Efficiency</h3>
+    <ul>
+      <li><strong>Resistance:</strong> Higher resistance increases power dissipation</li>
+      <li><strong>Current:</strong> Higher current increases power dissipation</li>
+      <li><strong>Voltage Drop:</strong> Voltage drops across components reduce efficiency</li>
+      <li><strong>Heat Loss:</strong> Energy lost as heat reduces efficiency</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Efficiency Calculation</h3>
+      <p><strong>Problem:</strong> A motor draws 5A from a 24V supply and delivers 100W of mechanical power. Calculate the efficiency.</p>
+
+      <h4>Step 1: Calculate Input Power</h4>
+      <div class="formula-box">
+        $$P_{input} = IV = (5A)(24V) = 120W$$
+      </div>
+
+      <h4>Step 2: Calculate Efficiency</h4>
+      <div class="formula-box">
+        $$\text{Efficiency} = \frac{100W}{120W} \times 100\% = 83.3\%$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The motor efficiency is 83.3%.</strong></p>
+    </div>
+
+    <h2>Practical Applications</h2>
+
+    <h3>Power Distribution</h3>
+    <ul>
+      <li><strong>Transmission Lines:</strong> Minimize power loss over long distances</li>
+      <li><strong>Power Supplies:</strong> Efficient conversion of electrical energy</li>
+      <li><strong>Battery Systems:</strong> Optimal energy storage and delivery</li>
+    </ul>
+
+    <h3>Energy Storage</h3>
+    <ul>
+      <li><strong>Capacitor Banks:</strong> Store electrical energy for later use</li>
+      <li><strong>Battery Systems:</strong> Chemical energy storage</li>
+      <li><strong>Flywheels:</strong> Mechanical energy storage</li>
+    </ul>
+
+    <h3>Energy Recovery</h3>
+    <ul>
+      <li><strong>Regenerative Braking:</strong> Recover energy during deceleration</li>
+      <li><strong>Heat Recovery:</strong> Convert waste heat to useful energy</li>
+      <li><strong>Energy Harvesting:</strong> Capture ambient energy sources</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>Conservation:</strong> Total energy supplied equals total energy dissipated plus stored</li>
+      <li><strong>Power Transfer:</strong> P = IV = I²R = V²/R for different circuit elements</li>
+      <li><strong>Energy Storage:</strong> Capacitors store electrical energy, inductors store magnetic energy</li>
+      <li><strong>Efficiency:</strong> Ratio of useful power/energy to total power/energy</li>
+      <li><strong>Practical Importance:</strong> Essential for power system design and optimization</li>
+      <li><strong>Verification Tool:</strong> Energy conservation provides a check for circuit analysis</li>
+    </ul>
+
+  </div>
+</body>
+</html> 

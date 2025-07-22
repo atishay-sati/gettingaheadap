@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study current density for AP Physics C. Learn about current density vector, microscopic current flow, and the relationship between current density and macroscopic current." />
+  <title>Current Density</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Current Density</h1>
+
+    <p>
+      Current density is a vector quantity that describes the current per unit area flowing through a conductor. It provides a more detailed description of how current is distributed within a material and is essential for understanding current flow in conductors of varying cross-sectional areas.
+    </p>
+
+    <h2>Definition of Current Density</h2>
+
+    <div class="formula-box">
+      $$\vec{J} = \frac{I}{A} \hat{n}$$
+    </div>
+
+    <p>
+      Current density is defined as the current per unit area, where the direction is specified by the unit vector \(\hat{n}\) in the direction of current flow.
+    </p>
+
+    <ul>
+      <li><strong>Units:</strong> A/m² (amperes per square meter)</li>
+      <li><strong>Direction:</strong> Same as conventional current direction</li>
+      <li><strong>Vector quantity:</strong> Has both magnitude and direction</li>
+      <li><strong>Microscopic description:</strong> Provides detailed current distribution</li>
+    </ul>
+
+    <figure>
+      <img src="current-density-diagram.jpg" alt="Current Density Vector" class="img-fluid-center">
+      <figcaption>
+        Current density vector showing magnitude and direction of current flow per unit area.
+      </figcaption>
+    </figure>
+
+    <h2>Relationship to Current</h2>
+
+    <img src="current-density-angle.jpg" alt="Current Density Vector" class="img-fluid-center">
+
+    <div class="formula-box">
+      $$I = \int \vec{J} \cdot d\vec{A}$$
+    </div>
+
+    <p>
+      The total current through a surface is the flux of current density through that surface. For uniform current density, this simplifies to:
+    </p>
+
+    <div class="formula-box">
+      $$I = JA \cos\theta$$
+    </div>
+
+    <ul>
+      <li><strong>Where:</strong>
+        <ul>
+          <li>\(I\) = total current</li>
+          <li>\(J\) = current density magnitude</li>
+          <li>\(A\) = cross-sectional area</li>
+          <li>\(\theta\) = angle between current density and area normal</li>
+        </ul>
+      </li>
+      <li><strong>Perpendicular flow:</strong> When \(\theta = 0°\), \(I = JA\)</li>
+      <li><strong>Parallel flow:</strong> When \(\theta = 90°\), \(I = 0\)</li>
+    </ul>
+
+    <h2>Microscopic Expression</h2>
+
+    <div class="formula-box">
+      $$\vec{J} = nq\vec{v}_d$$
+    </div>
+
+    <p>
+      Current density can also be expressed in terms of the microscopic properties of the conductor.
+    </p>
+
+    <ul>
+      <li><strong>Where:</strong>
+        <ul>
+          <li>\(n\) = number density of charge carriers</li>
+          <li>\(q\) = charge of each carrier</li>
+          <li>\(\vec{v}_d\) = drift velocity vector</li>
+        </ul>
+      </li>
+      <li><strong>For electrons:</strong> \(q = -e\) (negative charge)</li>
+      <li><strong>For holes:</strong> \(q = +e\) (positive charge)</li>
+      <li><strong>Direction:</strong> Opposite to electron drift velocity</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Memory Trick: NEVADA for Current Density</h3>
+      <p><strong>Remember the current density formula using NEVADA:</strong></p>
+      <ul>
+        <li><strong>NE</strong> = \(ne\) (number density × elementary charge)</li>
+        <li><strong>V</strong> = drift velocity (\(v_d\))</li>
+        <li><strong>A</strong> = area (related to current density)</li>
+        <li><strong>D</strong> = density (current density \(J\))</li>
+        <li><strong>A</strong> = area again (cross-sectional area)</li>
+      </ul>
+      <p><strong>So:</strong> \(ne \times v_d = J\) (current density)</p>
+      <p><strong>And:</strong> \(J \times A = I\) (total current)</p>
+      <p>This helps you remember that \(nev_d = J\), which is the microscopic expression for current density!</p>
+    </div>
+
+    <h2>Current Density in Different Geometries</h2>
+
+    <h3>Uniform Current Density</h3>
+    <p>
+      When current density is constant across the cross-section:
+    </p>
+
+    <div class="formula-box">
+      $$J = \frac{I}{A} = \text{constant}$$
+    </div>
+
+    <h3>Non-Uniform Current Density</h3>
+    <p>
+      When current density varies across the cross-section, the total current is:
+    </p>
+
+    <div class="formula-box">
+      $$I = \int J(r) \, dA$$
+    </div>
+
+    <div class="example-box">
+      <h3>Example: Radial Current Density</h3>
+      <p><strong>Problem:</strong> A cylindrical conductor has current density that varies with radius as \(J(r) = J_0(1 - r/R)\), where \(R\) is the radius. Find the total current.</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Area element:</strong> \(dA = 2\pi r \, dr\)</li>
+        <li><strong>Current element:</strong> \(dI = J(r) \, dA = J_0(1 - r/R) \cdot 2\pi r \, dr\)</li>
+        <li><strong>Total current:</strong> \(I = \int_0^R J_0(1 - r/R) \cdot 2\pi r \, dr\)</li>
+        <li><strong>Integration:</strong> \(I = 2\pi J_0 \int_0^R (r - r^2/R) \, dr\)</li>
+        <li><strong>Result:</strong> \(I = 2\pi J_0 [R^2/2 - R^2/3] = \pi J_0 R^2/3\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The total current is \(\frac{\pi J_0 R^2}{3}\).</p>
+    </div>
+
+    <h2>Current Density and Ohm's Law</h2>
+
+    <div class="formula-box">
+      $$\vec{E} = \rho\vec{J}$$
+    </div>
+
+    <p>
+      At the microscopic level, the electric field in a conductor is proportional to the current density, with resistivity as the proportionality constant.
+    </p>
+
+    <ul>
+      <li><strong>Where:</strong>
+        <ul>
+          <li>\(\vec{E}\) = electric field</li>
+          <li>\(\rho\) = resistivity</li>
+          <li>\(\vec{J}\) = current density</li>
+        </ul>
+      </li>
+      <li><strong>Conductivity:</strong> \(\sigma = \frac{1}{\rho}\)</li>
+      <li><strong>Alternative form:</strong> \(\vec{J} = \sigma\vec{E}\)</li>
+    </ul>
+
+    
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Basic Current Density Calculation</h3>
+      <p><strong>Problem:</strong> A wire with radius 1.0 mm carries a current of 2.0 A. What is the current density in the wire?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Cross-sectional area:</strong> \(A = \pi r^2 = \pi(1.0 \times 10^{-3} \text{ m})^2 = 3.14 \times 10^{-6} \text{ m}^2\)</li>
+        <li><strong>Current density:</strong> \(J = \frac{I}{A} = \frac{2.0 \text{ A}}{3.14 \times 10^{-6} \text{ m}^2}\)</li>
+        <li><strong>Calculation:</strong> \(J = 6.37 \times 10^5 \text{ A/m}^2\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The current density is 6.37 × 10⁵ A/m².</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Current Density from Microscopic Properties</h3>
+      <p><strong>Problem:</strong> A copper wire has 8.5 × 10²⁸ free electrons per m³. If the drift velocity is 1.0 × 10⁻⁴ m/s, what is the current density?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Current density formula:</strong> \(J = nqv_d\)</li>
+        <li><strong>For electrons:</strong> \(q = -e = -1.602 \times 10^{-19} \text{ C}\)</li>
+        <li><strong>Substitution:</strong> \(J = (8.5 \times 10^{28} \text{ m}^{-3})(1.602 \times 10^{-19} \text{ C})(1.0 \times 10^{-4} \text{ m/s})\)</li>
+        <li><strong>Calculation:</strong> \(J = 1.36 \times 10^6 \text{ A/m}^2\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The current density is 1.36 × 10⁶ A/m².</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Current from Non-Uniform Current Density</h3>
+      <p><strong>Problem:</strong> A wire has current density that varies as \(J(r) = J_0 r/R\), where \(R\) is the radius. If \(J_0 = 2.0 \times 10^6 \text{ A/m}^2\) and \(R = 1.0 \text{ mm}\), find the total current.</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Current element:</strong> \(dI = J(r) \cdot 2\pi r \, dr = J_0 \frac{r}{R} \cdot 2\pi r \, dr\)</li>
+        <li><strong>Total current:</strong> \(I = 2\pi J_0 \int_0^R \frac{r^2}{R} \, dr\)</li>
+        <li><strong>Integration:</strong> \(I = 2\pi J_0 \frac{R^2}{3}\)</li>
+        <li><strong>Substitution:</strong> \(I = 2\pi(2.0 \times 10^6) \frac{(1.0 \times 10^{-3})^2}{3}\)</li>
+        <li><strong>Result:</strong> \(I = 4.19 \text{ A}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The total current is 4.19 A.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 4: Electric Field from Current Density</h3>
+      <p><strong>Problem:</strong> A copper wire has current density 1.0 × 10⁶ A/m². If copper has resistivity 1.68 × 10⁻⁸ Ω·m, what is the electric field in the wire?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Microscopic Ohm's law:</strong> \(E = \rho J\)</li>
+        <li><strong>Substitution:</strong> \(E = (1.68 \times 10^{-8} \text{ Ω·m})(1.0 \times 10^6 \text{ A/m}^2)\)</li>
+        <li><strong>Calculation:</strong> \(E = 1.68 \times 10^{-2} \text{ V/m}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The electric field is 1.68 × 10⁻² V/m.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 5: Current Density in Parallel Wires</h3>
+      <p><strong>Problem:</strong> Two wires are connected in parallel. Wire A has radius 1.0 mm and carries 3.0 A. Wire B has radius 2.0 mm and carries 5.0 A. Which wire has higher current density?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Wire A area:</strong> \(A_A = \pi(1.0 \times 10^{-3})^2 = 3.14 \times 10^{-6} \text{ m}^2\)</li>
+        <li><strong>Wire A current density:</strong> \(J_A = \frac{3.0}{3.14 \times 10^{-6}} = 9.55 \times 10^5 \text{ A/m}^2\)</li>
+        <li><strong>Wire B area:</strong> \(A_B = \pi(2.0 \times 10^{-3})^2 = 1.26 \times 10^{-5} \text{ m}^2\)</li>
+        <li><strong>Wire B current density:</strong> \(J_B = \frac{5.0}{1.26 \times 10^{-5}} = 3.98 \times 10^5 \text{ A/m}^2\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> Wire A has higher current density (9.55 × 10⁵ A/m² vs 3.98 × 10⁵ A/m²).</p>
+    </div>
+
+    <h2>Current Density Visualization</h2>
+    <p>Explore how current density varies with different wire geometries:</p>
+    
+    <!-- Current Density Animation Canvas -->
+    <canvas id="densityCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="startDensity" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetDensity" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+
+    
+
+<script>
+  // Current Density Animation
+  const densityCanvas = document.getElementById("densityCanvas");
+  const dctx = densityCanvas.getContext("2d");
+  const startDensityButton = document.getElementById("startDensity");
+  const resetDensityButton = document.getElementById("resetDensity");
+
+  let particles = [];
+  let animationId;
+  let animationTime = 0;
+
+  // Initialize particles
+  function initParticles() {
+    particles = [];
+    
+    // Create particles with varying density to show current density distribution
+    for (let row = 0; row < 10; row++) {
+      for (let col = 0; col < 20; col++) {
+        const x = 50 + col * 35;
+        const y = 100 + row * 25;
+        
+        // Vary particle density to show current density variation
+        const density = 1 - Math.abs(y - 200) / 200; // Higher density in center
+        const particleCount = Math.floor(density * 3) + 1;
+        
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: x + (Math.random() - 0.5) * 20,
+            y: y + (Math.random() - 0.5) * 15,
+            vx: -0.8 * density, // Faster in high density regions
+            vy: 0,
+            originalX: x,
+            originalY: y,
+            density: density
+          });
+        }
+      }
+    }
+  }
+
+  function drawDensityScene() {
+    dctx.clearRect(0, 0, densityCanvas.width, densityCanvas.height);
+    
+    // Draw wire boundaries
+    dctx.strokeStyle = "#333";
+    dctx.lineWidth = 3;
+    dctx.strokeRect(30, 80, 740, 240);
+    
+    // Draw current density gradient background
+    const gradient = dctx.createLinearGradient(30, 80, 770, 320);
+    gradient.addColorStop(0, "rgba(111, 66, 193, 0.1)");
+    gradient.addColorStop(0.5, "rgba(111, 66, 193, 0.3)");
+    gradient.addColorStop(1, "rgba(111, 66, 193, 0.1)");
+    dctx.fillStyle = gradient;
+    dctx.fillRect(30, 80, 740, 240);
+    
+
+    
+    // Draw particles with size based on density
+    particles.forEach(particle => {
+      const size = 2 + particle.density * 3;
+      dctx.fillStyle = `rgba(244, 67, 54, ${0.5 + particle.density * 0.5})`;
+      dctx.beginPath();
+      dctx.arc(particle.x, particle.y, size, 0, 2 * Math.PI);
+      dctx.fill();
+      
+      // Draw charge symbol
+      dctx.fillStyle = "#D32F2F";
+      dctx.font = '8px Arial';
+      dctx.fillText('-', particle.x - 2, particle.y + 2);
+    });
+    
+    // Draw labels
+    dctx.fillStyle = "#333";
+    dctx.font = "14px Roboto, sans-serif";
+    dctx.textAlign = "left";
+    dctx.fillText("Current Density Distribution", 50, 50);
+    dctx.fillText("Higher density = Higher current density", 50, 70);
+    
+    // Draw current direction
+    dctx.fillStyle = "#6f42c1";
+    dctx.font = "16px Roboto, sans-serif";
+    dctx.textAlign = "center";
+    dctx.fillText("Current Density Vector →", 400, 370);
+    
+    // Draw arrow for current density
+    dctx.strokeStyle = "#6f42c1";
+    dctx.lineWidth = 3;
+    dctx.beginPath();
+    dctx.moveTo(300, 340);
+    dctx.lineTo(500, 340);
+    dctx.stroke();
+    
+    dctx.beginPath();
+    dctx.moveTo(500, 340);
+    dctx.lineTo(495, 335);
+    dctx.lineTo(495, 345);
+    dctx.closePath();
+    dctx.fill();
+  }
+
+  function updateParticles() {
+    particles.forEach(particle => {
+      // Update position based on velocity (which depends on density)
+      particle.x += particle.vx;
+      
+      // Reset particle position when it reaches the left edge
+      if (particle.x < 30) {
+        particle.x = 750;
+      }
+      
+      // Add some random vertical movement
+      particle.y += (Math.random() - 0.5) * 0.3;
+      
+      // Keep particles within wire boundaries
+      if (particle.y < 90) particle.y = 90;
+      if (particle.y > 310) particle.y = 310;
+    });
+  }
+
+  function animateDensity() {
+    updateParticles();
+    drawDensityScene();
+    animationId = requestAnimationFrame(animateDensity);
+  }
+
+  function startDensityAnimation() {
+    initParticles();
+    animateDensity();
+  }
+
+  function resetDensityAnimation() {
+    cancelAnimationFrame(animationId);
+    initParticles();
+    drawDensityScene();
+  }
+
+  // Event listeners
+  startDensityButton.addEventListener("click", startDensityAnimation);
+  resetDensityButton.addEventListener("click", resetDensityAnimation);
+
+  // Initialize
+  initParticles();
+  drawDensityScene();
+</script>
+
+  </div>
+</body>
+</html> 

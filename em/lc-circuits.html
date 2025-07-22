@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn LC circuits for AP Physics C. Study oscillations, resonance, energy transfer, and applications of inductor-capacitor circuits with interactive examples." />
+  <title>LC Circuits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p { font-size: 1.1rem; margin-bottom: 1.2rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.6rem; }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .concept-card h3 { color: #495057; margin-top: 0; margin-bottom: 1rem; font-size: 1.4rem; }
+    .concept-card p { color: #6c757d; margin-bottom: 1rem; }
+    .concept-card a { color: #6f42c1; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 0.5rem; }
+    .concept-card a:hover { text-decoration: underline; }
+    .intro-section {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #155724;
+    }
+    .intro-section h2 { color: #155724; margin-top: 0; }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #f3e5ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+    .example-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .example-box h3 { color: #856404; margin-top: 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectromagneticInduction.html" class="back-link">← Back to Concepts</a>
+    <h1>LC Circuits</h1>
+
+    <div class="intro-section">
+      <h2>Overview: Inductor-Capacitor Circuits</h2>
+      <p>
+        LC circuits consist of an inductor and capacitor connected together. When energy is stored in either component, it oscillates between the inductor's magnetic field and the capacitor's electric field. This creates electrical oscillations at a natural frequency determined by the inductance and capacitance.
+      </p>
+      <p>
+        These circuits are fundamental for understanding electrical oscillations, resonance, and are the basis for many electronic devices including radio tuners, filters, and oscillators.
+      </p>
+    </div>
+
+    <img src="LC-circuit-diagram.gif" class="img-fluid-center">
+
+    <h2>Key Formulas</h2>
+    <div class="formula-box">
+      <h3>Natural Frequency</h3>
+      <p>\[ f = \frac{1}{2\pi\sqrt{LC}} \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(f\) is the natural frequency (Hz)</li>
+        <li>\(L\) is the inductance (H)</li>
+        <li>\(C\) is the capacitance (F)</li>
+      </ul>
+      <p><strong>Note:</strong> This formula is NOT on the AP Physics C equation sheet.</p>
+    </div>
+
+    <div class="formula-box">
+      <h3>Angular Frequency</h3>
+      <p>\[ \omega = \frac{1}{\sqrt{LC}} \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(\omega\) is the angular frequency (rad/s)</li>
+        <li>\(L\) is the inductance (H)</li>
+        <li>\(C\) is the capacitance (F)</li>
+      </ul>
+      <p><strong>Note:</strong> This formula is NOT on the AP Physics C equation sheet.</p>
+    </div>
+
+    <h2>Key Concepts</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Energy Oscillation</h3>
+        <p>Energy oscillates between:</p>
+        <ul>
+          <li>Capacitor: \(U_C = \frac{1}{2}CV^2\)</li>
+          <li>Inductor: \(U_L = \frac{1}{2}LI^2\)</li>
+          <li>Total energy is conserved</li>
+          <li>When one is maximum, the other is zero</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <h3>Current and Voltage</h3>
+        <p>Current and voltage are 90° out of phase:</p>
+        <ul>
+          <li>When current is maximum, voltage is zero</li>
+          <li>When voltage is maximum, current is zero</li>
+          <li>Current leads voltage by 90°</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <h3>Natural Frequency</h3>
+        <p>The frequency depends on:</p>
+        <ul>
+          <li>Larger \(L\): lower frequency</li>
+          <li>Larger \(C\): lower frequency</li>
+          <li>Smaller \(L\) or \(C\): higher frequency</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <h3>Applications</h3>
+        <p>LC circuits are used in:</p>
+        <ul>
+          <li>Radio tuners</li>
+          <li>Filters</li>
+          <li>Oscillators</li>
+          <li>Resonant circuits</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Derivations (Not on AP Equation Sheet)</h2>
+    <div class="example-box">
+      <h3>Derivation: Natural Frequency</h3>
+      <p><strong>Step-by-Step:</strong></p>
+      <ol>
+        <li>Kirchhoff's voltage law: \(L\frac{dI}{dt} + \frac{Q}{C} = 0\)</li>
+        <li>Since \(I = \frac{dQ}{dt}\), we get: \(L\frac{d^2Q}{dt^2} + \frac{Q}{C} = 0\)</li>
+        <li>This is a second-order differential equation</li>
+        <li>Solution: \(Q = Q_0\cos(\omega t)\) where \(\omega = \frac{1}{\sqrt{LC}}\)</li>
+        <li>Frequency: \(f = \frac{\omega}{2\pi} = \frac{1}{2\pi\sqrt{LC}}\)</li>
+      </ol>
+    </div>
+
+    <h2>Example Problems</h2>
+    <div class="example-box">
+      <h3>Example 1: Natural Frequency</h3>
+      <p><strong>Problem:</strong> An LC circuit has \(L = 0.1\) H and \(C = 1\) μF. What is the natural frequency?</p>
+      <ol>
+        <li>\(f = \frac{1}{2\pi\sqrt{LC}} = \frac{1}{2\pi\sqrt{(0.1)(10^{-6})}}\)</li>
+        <li>\(f = \frac{1}{2\pi\sqrt{10^{-7}}} = \frac{1}{2\pi \times 3.16 \times 10^{-4}}\)</li>
+        <li>\(f = 503\) Hz</li>
+      </ol>
+      <p><strong>Answer:</strong> 503 Hz</p>
+    </div>
+    <div class="example-box">
+      <h3>Example 2: Angular Frequency</h3>
+      <p><strong>Problem:</strong> What is the angular frequency for the above circuit?</p>
+      <ol>
+        <li>\(\omega = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{(0.1)(10^{-6})}}\)</li>
+        <li>\(\omega = \frac{1}{\sqrt{10^{-7}}} = 3162\) rad/s</li>
+      </ol>
+      <p><strong>Answer:</strong> 3162 rad/s</p>
+    </div>
+    <div class="example-box">
+      <h3>Example 3: Energy Oscillation</h3>
+      <p><strong>Problem:</strong> If the maximum voltage across the capacitor is 10 V, what is the maximum current in the inductor?</p>
+      <ol>
+        <li>Maximum capacitor energy: \(U_C = \frac{1}{2}CV^2 = \frac{1}{2}(10^{-6})(10)^2 = 5 \times 10^{-5}\) J</li>
+        <li>Maximum inductor energy: \(U_L = \frac{1}{2}LI^2 = 5 \times 10^{-5}\) J</li>
+        <li>\(I = \sqrt{\frac{2U_L}{L}} = \sqrt{\frac{2(5 \times 10^{-5})}{0.1}} = 0.032\) A</li>
+      </ol>
+      <p><strong>Answer:</strong> 0.032 A</p>
+    </div>
+
+    <h2>One to watch:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/r9q1Wh-rl5I?si=4mciZfCHo6RfMvzP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Quiz: LC Circuits</h2>
+    <div class="quiz-container">
+      <div class="quiz-question">
+        <p><strong>1. What is the natural frequency for \(L = 0.2\) H and \(C = 0.5\) μF?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">1592 Hz</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">796 Hz</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">3184 Hz</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">398 Hz</div>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <p><strong>2. In an LC circuit, when the capacitor voltage is maximum:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">The inductor current is zero</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The inductor current is maximum</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The inductor current is half maximum</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The inductor current is negative</div>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <p><strong>3. If you increase the inductance in an LC circuit:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">The frequency decreases</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The frequency increases</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The frequency stays the same</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The frequency becomes zero</div>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <p><strong>4. The total energy in an LC circuit:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Remains constant</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Increases with time</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Decreases with time</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Oscillates between zero and maximum</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li>Calculate natural frequency for LC circuits</li>
+      <li>Understand energy oscillation between components</li>
+      <li>Determine phase relationship between current and voltage</li>
+      <li>Apply to resonant circuits and filters</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Energy oscillates between capacitor and inductor</li>
+      <li>Natural frequency: \(f = \frac{1}{2\pi\sqrt{LC}}\)</li>
+      <li>Current and voltage are 90° out of phase</li>
+      <li>Total energy is conserved</li>
+    </ul>
+
+    <h2>LC Circuit Interactive Simulation</h2>
+    <p>Explore how current and voltage oscillate in an LC circuit:</p>
+    
+    <!-- LC Circuit Interactive Canvas -->
+    <canvas id="lcCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="startLC" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetLC" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="inductanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Inductance (H):</label>
+        <input type="range" id="inductanceSlider" min="0.1" max="2" value="0.5" step="0.1" style="width: 100%;">
+        <div id="inductanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">0.5 H</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="capacitanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Capacitance (F):</label>
+        <input type="range" id="capacitanceSlider" min="1" max="10" value="5" step="0.1" style="width: 100%;">
+        <div id="capacitanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">5.0 F</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="initialVoltageSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Initial Voltage (V):</label>
+        <input type="range" id="initialVoltageSlider" min="1" max="20" value="10" step="0.5" style="width: 100%;">
+        <div id="initialVoltageValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">10.0 V</div>
+      </div>
+    </div>
+    
+    <div id="frequencyDisplay" style="text-align: center; margin: 1rem 0; font-size: 1.2rem; color: #6f42c1; font-weight: bold;">
+      Natural Frequency: 0.1 Hz | Period: 10.00 s
+    </div>
+    
+    <h3 style="text-align: center; margin: 2rem 0 1rem 0; color: #6f42c1;">Energy Oscillation</h3>
+    <div style="display: flex; justify-content: space-around; align-items: center; margin: 2rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+      <div style="text-align: center; flex: 1; margin: 0 1rem;">
+        <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">Capacitor Energy</h4>
+        <div style="width: 100%; height: 150px; background: #ecf0f1; border: 2px solid #e74c3c; border-radius: 8px; position: relative; overflow: hidden;">
+          <div id="capacitorEnergyBar" style="width: 50%; height: 100%; background: linear-gradient(to top, #e74c3c, #c0392b); transition: width 0.1s ease; position: absolute; bottom: 0;"></div>
+          <div id="capacitorEnergyText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; color: #2c3e50; font-size: 1.1rem;">0.00 J</div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; flex: 1; margin: 0 1rem;">
+        <h4 style="color: #3498db; margin-bottom: 0.5rem;">Inductor Energy</h4>
+        <div style="width: 100%; height: 150px; background: #ecf0f1; border: 2px solid #3498db; border-radius: 8px; position: relative; overflow: hidden;">
+          <div id="inductorEnergyBar" style="width: 50%; height: 100%; background: linear-gradient(to top, #3498db, #2980b9); transition: width 0.1s ease; position: absolute; bottom: 0;"></div>
+          <div id="inductorEnergyText" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; color: #2c3e50; font-size: 1.1rem;">0.00 J</div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin: 1rem 0; font-size: 1.1rem; color: #6f42c1; font-weight: bold;">
+      <div id="totalEnergyText">Total Energy: 0.00 J</div>
+    </div>
+  </div>
+  <script>
+    function checkAnswer(element, result) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      element.classList.add(result);
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+
+    // LC Circuit Animation
+    const lcCanvas = document.getElementById("lcCanvas");
+    const lcCtx = lcCanvas.getContext("2d");
+    const startLCButton = document.getElementById("startLC");
+    const resetLCButton = document.getElementById("resetLC");
+
+    let inductance = 0.5;
+    let capacitance = 5; // in F
+    let initialVoltage = 10;
+    let naturalFrequency = 1 / (2 * Math.PI * Math.sqrt(inductance * capacitance));
+    let period = 1 / naturalFrequency;
+    let simulationTime = 0;
+    
+    // Electron particles for animation
+    let electrons = [];
+    let animationId = null;
+    let isAnimating = false;
+    
+    // Energy display variables
+    let maxEnergy = 0;
+
+    function drawLCScene() {
+      lcCtx.clearRect(0, 0, lcCanvas.width, lcCanvas.height);
+      
+      // Draw circuit background
+      lcCtx.fillStyle = "#f8f9fa";
+      lcCtx.fillRect(0, 0, lcCanvas.width, lcCanvas.height);
+      
+      // Draw circuit wires
+      lcCtx.strokeStyle = "#333";
+      lcCtx.lineWidth = 2;
+      lcCtx.setLineDash([]);
+      
+      // Top wire
+      lcCtx.beginPath();
+      lcCtx.moveTo(100, 120);
+      lcCtx.lineTo(650, 120);
+      lcCtx.stroke();
+      
+      // Right wire
+      lcCtx.beginPath();
+      lcCtx.moveTo(650, 120);
+      lcCtx.lineTo(650, 280);
+      lcCtx.stroke();
+      
+      // Bottom wire
+      lcCtx.beginPath();
+      lcCtx.moveTo(100, 280);
+      lcCtx.lineTo(650, 280);
+      lcCtx.stroke();
+      
+      // Left wire
+      lcCtx.beginPath();
+      lcCtx.moveTo(100, 120);
+      lcCtx.lineTo(100, 280);
+      lcCtx.stroke();
+      
+      // Draw inductor (standard circuit symbol) on top wire
+      lcCtx.strokeStyle = "#333";
+      lcCtx.lineWidth = 2;
+      
+      // Draw inductor coils on top wire (around x=300)
+      const coilStartX = 280;
+      const coilEndX = 320;
+      const coilY = 120;
+      const coilSpacing = 5;
+      const coilHeight = 20;
+      
+      lcCtx.beginPath();
+      // Start line
+      lcCtx.moveTo(280, coilY);
+      
+      // Draw 6 coils with smooth curves
+      for (let i = 0; i < 6; i++) {
+        const x = coilStartX + i * coilSpacing;
+        const nextX = x + coilSpacing;
+        
+        // Draw smooth coil curve
+        lcCtx.moveTo(x, coilY);
+        lcCtx.quadraticCurveTo(x + coilSpacing/2, coilY - coilHeight/2, nextX, coilY);
+        lcCtx.quadraticCurveTo(x + coilSpacing/2, coilY + coilHeight/2, nextX, coilY);
+      }
+      
+      // End line
+      lcCtx.lineTo(320, coilY);
+      lcCtx.stroke();
+      
+      // Draw capacitor on right wire
+      lcCtx.beginPath();
+      lcCtx.moveTo(650, 190);
+      lcCtx.lineTo(650, 210);
+      lcCtx.stroke();
+      
+      // Cover the vertical line with a white rectangle
+      lcCtx.fillStyle = "#f8f9fa";
+      lcCtx.fillRect(649, 190, 2, 20);
+      
+      lcCtx.beginPath();
+      lcCtx.moveTo(640, 190);
+      lcCtx.lineTo(660, 190);
+      lcCtx.moveTo(640, 210);
+      lcCtx.lineTo(660, 210);
+      lcCtx.stroke();
+      
+      // Add labels
+      lcCtx.fillStyle = "#333";
+      lcCtx.font = "18px Arial";
+      lcCtx.textAlign = "center";
+      
+      // L label (inductor)
+      lcCtx.fillText("L", 300, 150);
+      
+      // C label (capacitor)
+      lcCtx.fillText("C", 680, 215);
+      
+      // Draw labels
+      lcCtx.fillStyle = "#333";
+      lcCtx.font = "16px Roboto, sans-serif";
+      lcCtx.textAlign = "center";
+      lcCtx.fillText("LC Circuit: Energy Oscillation", 400, 50);
+      lcCtx.fillText("Natural Frequency: " + naturalFrequency.toFixed(1) + " Hz", 400, 70);
+      lcCtx.fillText("Period: " + period.toFixed(2) + " s", 400, 90);
+      lcCtx.fillText("I(t) = I₀·sin(ωt), V(t) = V₀·cos(ωt)", 400, 110);
+    }
+
+    // Electron class
+    class Electron {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.speed = 1;
+        this.pathIndex = 0;
+        this.pathProgress = 0;
+      }
+      
+      update() {
+        // Circuit path coordinates
+        const path = [
+          {x: 100, y: 120}, // Start at top left
+          {x: 285, y: 120}, // Top wire left (before inductor)
+          {x: 315, y: 120}, // Top wire right (after inductor)
+          {x: 650, y: 120}, // Top right
+          {x: 650, y: 190}, // Right wire top
+          {x: 650, y: 210}, // Right wire bottom (after capacitor)
+          {x: 650, y: 280}, // Bottom right
+          {x: 100, y: 280}  // Bottom left
+        ];
+        
+        // Calculate current at this time using the natural frequency
+        const angularFrequency = 1 / Math.sqrt(inductance * capacitance);
+        const currentAtTime = initialVoltage * Math.sqrt(capacitance / inductance) * Math.sin(angularFrequency * simulationTime);
+        
+        // Update speed based on current magnitude
+        const speedMultiplier = Math.abs(currentAtTime) * 0.3;
+        this.speed = 0.2 + speedMultiplier;
+        
+        // Determine direction based on current sign
+        const direction = Math.sign(currentAtTime);
+        
+        // Get current and next points
+        const currentPoint = path[this.pathIndex];
+        const nextPoint = this.pathIndex === path.length - 1 ? path[0] : path[this.pathIndex + 1];
+        
+        // Calculate direction to next point
+        const dx = nextPoint.x - currentPoint.x;
+        const dy = nextPoint.y - currentPoint.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance > 0) {
+          // Move along current segment
+          this.pathProgress += (this.speed * direction) / distance;
+          
+          // Calculate position on current segment
+          this.x = currentPoint.x + (dx * this.pathProgress);
+          this.y = currentPoint.y + (dy * this.pathProgress);
+          
+          // Handle segment completion
+          if (this.pathProgress >= 1) {
+            this.pathProgress = 0;
+            this.pathIndex = this.pathIndex === path.length - 1 ? 0 : this.pathIndex + 1;
+          } else if (this.pathProgress < 0) {
+            this.pathProgress = 1;
+            this.pathIndex = this.pathIndex === 0 ? path.length - 1 : this.pathIndex - 1;
+          }
+        }
+      }
+      
+      draw(ctx) {
+        ctx.fillStyle = "#e74c3c";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 3, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+    }
+
+    function startLCAnimation() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      electrons = [];
+      simulationTime = 0;
+      
+      // Create electrons with perfectly equidistant spacing around the loop
+      const numElectrons = 40;
+      const path = [
+        {x: 100, y: 120}, {x: 285, y: 120}, {x: 315, y: 120}, {x: 650, y: 120},
+        {x: 650, y: 190}, {x: 650, y: 210}, {x: 650, y: 280}, {x: 100, y: 280}
+      ];
+      
+      // Calculate total path length for proper spacing
+      let totalLength = 0;
+      for (let i = 0; i < path.length; i++) {
+        const current = path[i];
+        const next = path[(i + 1) % path.length];
+        const dx = next.x - current.x;
+        const dy = next.y - current.y;
+        totalLength += Math.sqrt(dx * dx + dy * dy);
+      }
+      
+      for (let i = 0; i < numElectrons; i++) {
+        // Calculate exact position along the path
+        const targetDistance = (i / numElectrons) * totalLength;
+        
+        // Find which segment this distance falls into
+        let accumulatedLength = 0;
+        let pathIndex = 0;
+        let segmentProgress = 0;
+        
+        for (let j = 0; j < path.length; j++) {
+          const current = path[j];
+          const next = path[(j + 1) % path.length];
+          const dx = next.x - current.x;
+          const dy = next.y - current.y;
+          const segmentLength = Math.sqrt(dx * dx + dy * dy);
+          
+          if (accumulatedLength + segmentLength >= targetDistance) {
+            pathIndex = j;
+            segmentProgress = (targetDistance - accumulatedLength) / segmentLength;
+            break;
+          }
+          accumulatedLength += segmentLength;
+        }
+        
+        // Calculate exact position
+        const currentPoint = path[pathIndex];
+        const nextPoint = path[(pathIndex + 1) % path.length];
+        const startX = currentPoint.x + (nextPoint.x - currentPoint.x) * segmentProgress;
+        const startY = currentPoint.y + (nextPoint.y - currentPoint.y) * segmentProgress;
+        
+        const electron = new Electron(startX, startY);
+        electron.pathIndex = pathIndex;
+        electron.pathProgress = segmentProgress;
+        electrons.push(electron);
+      }
+      
+      function animate() {
+        if (!isAnimating) return;
+        
+        simulationTime += 0.02; // Faster time progression
+        drawLCScene();
+        
+        // Update and draw electrons
+        electrons.forEach(electron => {
+          electron.update();
+          electron.draw(lcCtx);
+        });
+        
+        // Update energy display
+        updateEnergyDisplay();
+        
+        animationId = requestAnimationFrame(animate);
+      }
+      
+      animate();
+    }
+
+    function updateEnergyDisplay() {
+      // Calculate current and voltage at this time using the natural frequency
+      const angularFrequency = 1 / Math.sqrt(inductance * capacitance);
+      const currentAtTime = initialVoltage * Math.sqrt(capacitance / inductance) * Math.sin(angularFrequency * simulationTime);
+      const voltageAtTime = initialVoltage * Math.cos(angularFrequency * simulationTime);
+      
+      // Calculate energies
+      const capacitorEnergy = 0.5 * capacitance * voltageAtTime * voltageAtTime;
+      const inductorEnergy = 0.5 * inductance * currentAtTime * currentAtTime;
+      const totalEnergy = capacitorEnergy + inductorEnergy;
+      
+      // Update max energy for scaling
+      if (totalEnergy > maxEnergy) {
+        maxEnergy = totalEnergy;
+      }
+      
+      // Update energy bars
+      const capacitorBar = document.getElementById("capacitorEnergyBar");
+      const inductorBar = document.getElementById("inductorEnergyBar");
+      const capacitorText = document.getElementById("capacitorEnergyText");
+      const inductorText = document.getElementById("inductorEnergyText");
+      const totalText = document.getElementById("totalEnergyText");
+      
+      // Scale bars relative to max energy (with some padding)
+      const scaleFactor = maxEnergy > 0 ? maxEnergy * 1.2 : 1;
+      
+      capacitorBar.style.width = (capacitorEnergy / scaleFactor * 100) + "%";
+      inductorBar.style.width = (inductorEnergy / scaleFactor * 100) + "%";
+      
+      // Update text
+      capacitorText.textContent = capacitorEnergy.toFixed(3) + " J";
+      inductorText.textContent = inductorEnergy.toFixed(3) + " J";
+      totalText.textContent = "Total Energy: " + totalEnergy.toFixed(3) + " J";
+    }
+    
+    function resetLCAnimation() {
+      isAnimating = false;
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+      electrons = [];
+      maxEnergy = 0; // Reset max energy
+      simulationTime = 0;
+      drawLCScene();
+      
+      // Reset energy bars
+      document.getElementById("capacitorEnergyBar").style.width = "0%";
+      document.getElementById("inductorEnergyBar").style.width = "0%";
+      document.getElementById("capacitorEnergyText").textContent = "0.00 J";
+      document.getElementById("inductorEnergyText").textContent = "0.00 J";
+      document.getElementById("totalEnergyText").textContent = "Total Energy: 0.00 J";
+    }
+
+    // Event listeners
+    startLCButton.addEventListener("click", startLCAnimation);
+    resetLCButton.addEventListener("click", resetLCAnimation);
+
+    // Slider event listeners
+    document.getElementById("inductanceSlider").addEventListener("input", updateLCValues);
+    document.getElementById("capacitanceSlider").addEventListener("input", updateLCValues);
+    document.getElementById("initialVoltageSlider").addEventListener("input", updateLCValues);
+
+    function updateLCValues() {
+      inductance = parseFloat(document.getElementById("inductanceSlider").value);
+      capacitance = parseFloat(document.getElementById("capacitanceSlider").value);
+      initialVoltage = parseFloat(document.getElementById("initialVoltageSlider").value);
+      
+      naturalFrequency = 1 / (2 * Math.PI * Math.sqrt(inductance * capacitance));
+      period = 1 / naturalFrequency;
+      
+      // Update display values
+      document.getElementById("inductanceValue").textContent = inductance.toFixed(1) + " H";
+      document.getElementById("capacitanceValue").textContent = capacitance.toFixed(3) + " F";
+      document.getElementById("initialVoltageValue").textContent = initialVoltage.toFixed(1) + " V";
+      document.getElementById("frequencyDisplay").textContent = 
+        `Natural Frequency: ${naturalFrequency.toFixed(1)} Hz | Period: ${(period * 1000).toFixed(1)} ms`;
+      
+      // Redraw the scene
+      drawLCScene();
+      
+      // Update animation if running
+      if (isAnimating) {
+        resetLCAnimation();
+        startLCAnimation();
+      }
+    }
+
+    // Initialize
+    drawLCScene();
+  </script>
+</body>
+</html> 

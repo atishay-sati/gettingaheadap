@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn solenoid basics for AP Physics C. Study magnetic fields, right-hand rule, and applications of solenoids in electromagnetism." />
+  <title>Solenoid Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Solenoid specific styles */
+    .solenoid-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .field-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .properties-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .link-box {
+      background: #f8f9fa;
+      border: 2px solid #6c757d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #495057;
+    }
+    
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Solenoid Basics</h1>
+
+    <p>
+      A solenoid is a coil of wire wound in a helical pattern that creates a uniform magnetic field when current flows through it. Solenoids are fundamental components in electromagnetism and have numerous practical applications.
+    </p>
+
+    <h2>What is a Solenoid?</h2>
+
+    <div class="solenoid-box">
+      <h3>🧲 Solenoid Definition</h3>
+      <p><strong>A solenoid is a long coil of wire with many turns that produces a nearly uniform magnetic field inside when current flows through it.</strong></p>
+      <p>The magnetic field inside a solenoid is approximately uniform and parallel to the axis of the coil.</p>
+    </div>
+
+    <figure>
+      <img src="solenoid-first.png" class="img-fluid-center">
+      <figcaption>
+        Diagram showing a solenoid with current flow and magnetic field lines inside.
+      </figcaption>
+    </figure>
+
+    <h2>Solenoid Diagrams</h2>
+    <p>
+      In diagrams, solenoids are often represented using <strong>"×"</strong> (cross) to indicate current or field going <em>into</em> the page, and <strong>"●"</strong> (dot) to indicate current or field coming <em>out of</em> the page. This notation helps visualize the three-dimensional direction of current or magnetic field lines in two-dimensional drawings.
+    </p>
+    <figure>
+      <img src="solenoid-in-out.png" class="img-fluid-center">
+      <figcaption>
+        Current going into the page and out of the page for a solenoid.
+      </figcaption>
+      <img src = "solenoid-rhr.png" class="img-fluid-center">
+      <figcaption>
+        Common solenoid diagram notation: "×" for into the page, "●" for out of the page.
+      </figcaption>
+    </figure>
+
+    <h2>Magnetic Field Inside a Solenoid</h2>
+
+    <div class="field-box">
+      <h3>⚡ Field Calculation Using Ampère's Law</h3>
+      <p><strong>The magnetic field inside a long solenoid can be calculated using <a href="ampere-law.html">Ampère's Law</a>:</strong></p>
+      <div class="formula-box">
+        \[ B = \mu_0 nI \]
+      </div>
+      <p>Where:</p>
+      <ul>
+        <li>\( B \) is the magnetic field strength</li>
+        <li>\( \mu_0 \) is the permeability of free space (4π × 10⁻⁷ T⋅m/A)</li>
+        <li>\( n \) is the number of turns per unit length</li>
+        <li>\( I \) is the current through the solenoid</li>
+      </ul>
+    </div>
+
+    <img src="solenoid-derivation.jpg" class="img-fluid-center">
+
+    <figcaption>Amperian loop in a solenoid</figcaption>
+
+    <h3>Derivation Using Ampère's Law</h3>
+    <p>To derive this formula using <a href="ampere-law.html">Ampère's Law</a>:</p>
+    <ol>
+      <li><strong>Choose Amperian Loop:</strong> Use a rectangular loop with one side inside the solenoid</li>
+      <li><strong>Apply Ampère's Law:</strong> \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc} \)</li>
+      <li><strong>Calculate Enclosed Current:</strong> \( I_{enc} = nLI \) where \( L \) is the length of the loop</li>
+      <li><strong>Evaluate the Integral:</strong> \( BL = \mu_0 nLI \)</li>
+      <li><strong>Solve for B:</strong> \( B = \mu_0 nI \)</li>
+    </ol>
+
+    
+
+    <h2>Key Properties of Solenoids</h2>
+
+    <div class="properties-box">
+      <h3>🔬 Important Characteristics</h3>
+      <ul>
+        <li><strong>Uniform Field:</strong> The magnetic field is nearly uniform inside a long solenoid</li>
+        <li><strong>Field Direction:</strong> Use the <a href="magnetic-field-basics.html">right-hand rule</a> to determine field direction</li>
+        <li><strong>Field Strength:</strong> Proportional to current and turns per unit length</li>
+        <li><strong>End Effects:</strong> Field is weaker near the ends of the solenoid</li>
+        <li><strong>External Field:</strong> Much weaker outside the solenoid</li>
+      </ul>
+    </div>
+
+    <h3>Right-Hand Rule for Solenoids</h3>
+    <ul>
+      <li><strong>Grasp the Solenoid:</strong> Wrap your right hand around the solenoid</li>
+      <li><strong>Finger Direction:</strong> Point your fingers in the direction of current flow</li>
+      <li><strong>Thumb Direction:</strong> Your thumb points in the direction of the magnetic field inside</li>
+      <li><strong>Field Lines:</strong> The field lines run parallel to the axis inside the solenoid</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Solenoid Field Calculation</h3>
+      <p><strong>Problem:</strong> A solenoid has 1000 turns per meter and carries a current of 2.0 A. Calculate the magnetic field inside the solenoid.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>\( n = 1000 \) turns/m</li>
+        <li>\( I = 2.0 \) A</li>
+        <li>\( \mu_0 = 4\pi \times 10^{-7} \) T⋅m/A</li>
+      </ul>
+
+      <h4>Step 2: Apply the Formula</h4>
+      <div class="formula-box">
+        \[ B = \mu_0 nI = (4\pi \times 10^{-7} \text{ T⋅m/A})(1000 \text{ turns/m})(2.0 \text{ A}) \]
+      </div>
+
+      <h4>Step 3: Calculate</h4>
+      <div class="formula-box">
+        \[ B = 2.51 \times 10^{-3} \text{ T} = 2.51 \text{ mT} \]
+      </div>
+
+      <h4>Step 4: Direction</h4>
+      <p>Use the right-hand rule to determine the field direction along the solenoid axis.</p>
+    </div>
+
+    <h2>Magnetic Flux in Solenoids</h2>
+
+    <div class="link-box">
+      <h3>🔗 Connection to Magnetic Flux</h3>
+      <p><strong>The magnetic flux through a solenoid is related to the field strength:</strong></p>
+      <div class="formula-box">
+        \[ \Phi_B = BA = \mu_0 nIA \]
+      </div>
+      <p>Where \( A \) is the cross-sectional area of the solenoid.</p>
+      <p>This connects to the fundamental concept of <a href="magnetic-field-basics.html">magnetic flux</a> and how it relates to the magnetic field.</p>
+    </div>
+
+    <h3>Flux Linkage</h3>
+    <ul>
+      <li><strong>Total Flux:</strong> \( \Phi_{total} = N\Phi_B = N\mu_0 nIA \)</li>
+    </ul>
+
+    <h2>Factors Affecting Solenoid Performance</h2>
+
+    <h3>Length and Diameter</h3>
+    <ul>
+      <li><strong>Long Solenoids:</strong> More uniform field, better approximation</li>
+      <li><strong>Short Solenoids:</strong> Non-uniform field, end effects important</li>
+      <li><strong>Diameter:</strong> Larger diameter means more turns needed for same field</li>
+    </ul>
+
+    <h3>Core Material Effects</h3>
+    <ul>
+      <li><strong>Air Core:</strong> Uses the formula \( B = \mu_0 nI \)</li>
+      <li><strong>Iron Core:</strong> Field enhanced by factor of relative permeability \( \mu_r \)</li>
+      <li><strong>Ferromagnetic Core:</strong> Can increase field by 1000+ times</li>
+      <li><strong>Superconducting Core:</strong> Can create extremely strong fields</li>
+    </ul>
+
+    <h4>How Core Material Affects the Solenoid</h4>
+    <p>The material inside the solenoid (the core) significantly affects its magnetic field strength:</p>
+    <ul>
+      <li><strong>Air Core:</strong> No enhancement, field follows \( B = \mu_0 nI \)</li>
+      <li><strong>Iron Core:</strong> Field becomes \( B = \mu_r \mu_0 nI \) where \( \mu_r \) is the relative permeability</li>
+      <li><strong>Ferromagnetic Materials:</strong> Can have \( \mu_r \) values of 1000-100,000, dramatically increasing field strength</li>
+      <li><strong>Core Saturation:</strong> At high fields, ferromagnetic materials saturate and stop enhancing the field</li>
+      <li><strong>Hysteresis:</strong> Ferromagnetic cores have memory effects that can affect performance</li>
+    </ul>
+
+    <h2>Comparison with Other Magnetic Field Sources</h2>
+
+    <h3>vs. Single Current Loop</h3>
+    <ul>
+      <li><strong>Solenoid:</strong> Uniform field, many turns</li>
+      <li><strong>Single Loop:</strong> Non-uniform field, one turn</li>
+      <li><strong>Field Strength:</strong> Solenoid field is \( n \) times stronger per unit current</li>
+    </ul>
+
+    <h3>vs. Straight Wire</h3>
+    <ul>
+      <li><strong>Solenoid:</strong> Field inside is uniform and strong</li>
+      <li><strong>Straight Wire:</strong> Field decreases with distance, circular pattern</li>
+      <li><strong>Applications:</strong> Solenoids used where uniform field is needed</li>
+    </ul>
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Solenoid Basics</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. What law is used to calculate the magnetic field inside a solenoid?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Ampère's Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Biot-Savart Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Gauss's Law</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Coulomb's Law</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. What is the formula for magnetic field inside a solenoid?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">B = μ₀I/2πr</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">B = μ₀nI</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">B = μ₀I/2R</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">B = μ₀I/4πr²</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. How do you determine the direction of the magnetic field in a solenoid?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Use the left-hand rule</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Use the right-hand rule</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Field always points north</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Field direction is random</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Uniform Field:</strong> Solenoids create nearly uniform magnetic fields inside</li>
+      <li><strong>Ampère's Law:</strong> Used to derive the field formula \( B = \mu_0 nI \)</li>
+      <li><strong>Right-Hand Rule:</strong> Determines field direction based on current flow</li>
+      <li><strong>Flux Connection:</strong> Links to magnetic flux concepts</li>
+      <li><strong>Practical Device:</strong> Foundation for many electromagnetic applications</li>
+    </ul>
+  </div>
+
+  <script>
+    function checkAnswer(element, result) {
+      // Remove previous selections
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      // Add result class
+      element.classList.add(result);
+      
+      // Show explanation
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

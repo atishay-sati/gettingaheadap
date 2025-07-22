@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about magnetic fields for AP Physics C. Study magnetic field definition, properties, and applications in electromagnetism." />
+  <title>Introduction to Magnetic Fields</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Magnetic field specific styles */
+    .field-lines-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .direction-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .units-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .properties-box {
+      background: #f8f9fa;
+      border: 2px solid #6c757d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #495057;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Introduction to Magnetic Fields</h1>
+
+    <p>
+      Magnetic fields are fundamental to understanding electromagnetism. They are regions of space where magnetic forces can be detected, created by moving electric charges or magnetic materials. Understanding magnetic fields is essential for analyzing electromagnetic phenomena and their applications.
+    </p>
+
+    <h2>What is a Magnetic Field?</h2>
+
+    <div class="field-lines-box">
+      <h3>🧲 Magnetic Field Definition</h3>
+      <p><strong>A magnetic field is a vector field that describes the magnetic influence on moving electric charges, electric currents, and magnetic materials.</strong></p>
+      <p>Magnetic fields are created by moving electric charges and can exert forces on other moving charges and magnetic materials.</p>
+    </div>
+
+    <h3>Key Characteristics</h3>
+    <ul>
+      <li><strong>Vector Field:</strong> Has both magnitude and direction at every point</li>
+      <li><strong>Invisible:</strong> Cannot be directly observed, but effects can be measured</li>
+      <li><strong>No Discovered Monopoles:</strong> No magnetic monopoles have been discovered in nature. If you break a magnetic, it will create 2 poles</li>
+      <li><strong>Directional:</strong> Always points from north to south pole</li>
+    </ul>
+
+    <figure>
+      <img src="bar-magnetic.png">
+      <figcaption>
+        Magnetic field lines around a bar magnet showing direction and strength.
+      </figcaption>
+    </figure>
+
+    <h2>Magnetic Field Lines</h2>
+
+    <div class="direction-box">
+      <h3>🎯 Field Line Properties</h3>
+      <p><strong>Magnetic field lines are imaginary lines that show the direction and strength of the magnetic field.</strong></p>
+      <p>They provide a visual representation of the magnetic field structure.</p>
+    </div>
+
+    <h3>Properties of Magnetic Field Lines</h3>
+    <ul>
+      <li><strong>Direction:</strong> Field lines point from north to south pole</li>
+      <li><strong>Density:</strong> Closer lines indicate stronger magnetic field</li>
+      <li><strong>Never Cross:</strong> Field lines never intersect each other</li>
+      <li><strong>Continuous:</strong> Field lines form closed loops</li>
+      <li><strong>Tangent Direction:</strong> At any point, field lines are tangent to the magnetic field direction</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Interpreting Field Lines</h3>
+      <p><strong>Problem:</strong> Analyze the magnetic field lines around a bar magnet.</p>
+
+      <h4>Step 1: Identify Field Direction</h4>
+      <ul>
+        <li>Field lines emerge from the north pole</li>
+        <li>Field lines enter the south pole</li>
+        <li>Field lines curve around the magnet</li>
+      </ul>
+
+      <h4>Step 2: Analyze Field Strength</h4>
+      <ul>
+        <li>Strongest field near the poles (lines are closest together)</li>
+        <li>Weaker field in the middle (lines are farther apart)</li>
+        <li>Field strength decreases with distance from the magnet</li>
+      </ul>
+
+      <h4>Step 3: Field Line Behavior</h4>
+      <ul>
+        <li>Lines never cross each other</li>
+        <li>Lines form continuous loops</li>
+        <li>Lines are denser where field is stronger</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The field lines show the magnetic field direction and strength around the bar magnet.</strong></p>
+    </div>
+
+    
+
+    <h2>Magnetic Field Units</h2>
+
+    <div class="units-box">
+      <h3>⚡ Magnetic Field Units</h3>
+      <p><strong>The SI unit for magnetic field is the tesla (T).</strong></p>
+      <p>Other common units include gauss (G) and weber per square meter (Wb/m²).</p>
+    </div>
+
+    <h3>Unit Conversions</h3>
+    <div class="formula-box">
+      $$1 \text{ T} = 10,000 \text{ G}$$
+      $$1 \text{ T} = 1 \text{ Wb/m}^2$$
+    </div>
+
+    <h3>Typical Magnetic Field Strengths</h3>
+    <ul>
+      <li><strong>Earth's Magnetic Field:</strong> ~50 μT (0.5 G)</li>
+      <li><strong>Refrigerator Magnet:</strong> ~5 mT (50 G)</li>
+      <li><strong>Medical MRI:</strong> 1.5-3 T</li>
+      <li><strong>Strong Laboratory Magnet:</strong> 10-20 T</li>
+      <li><strong>Neutron Star:</strong> 10⁸-10¹¹ T</li>
+    </ul>
+
+    <h2>Magnetic Field Direction</h2>
+
+    <h3>Convention for Field Direction</h3>
+    <ul>
+      <li><strong>North to South:</strong> Field lines point from north pole to south pole</li>
+      <li><strong>Compass Needle:</strong> North pole of compass points toward south pole of magnet</li>
+      <li><strong>Right-Hand Rule:</strong> Used to determine field direction around current-carrying wires</li>
+      <li><strong>Vector Notation:</strong> \( \vec{B} \) represents magnetic field vector</li>
+
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Determining Field Direction</h3>
+      <p><strong>Problem:</strong> Determine the direction of the magnetic field at point P near a bar magnet.</p>
+
+      <h4>Step 1: Identify Poles</h4>
+      <ul>
+        <li>North pole (N) - field lines emerge</li>
+        <li>South pole (S) - field lines enter</li>
+      </ul>
+
+      <h4>Step 2: Draw Field Lines</h4>
+      <ul>
+        <li>Lines emerge from N pole</li>
+        <li>Lines curve around the magnet</li>
+        <li>Lines enter S pole</li>
+      </ul>
+
+      <h4>Step 3: Determine Direction at Point P</h4>
+      <ul>
+        <li>Field direction is tangent to field line at P</li>
+        <li>Direction points from N to S along the field line</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The magnetic field at point P points in the direction tangent to the field line at that point.</strong></p>
+    </div>
+
+  
+
+    <h2>Magnetic Fields Into and Out of the Page</h2>
+
+    <div class="direction-box">
+      <h3>📄 3D Field Representation in 2D</h3>
+      <p><strong>When drawing magnetic fields on paper, we use special symbols to represent fields that go into or out of the page.</strong></p>
+      <p>This is essential for understanding magnetic fields in three-dimensional space when working with two-dimensional diagrams.</p>
+    </div>
+
+    <h3>Convention for Page Direction</h3>
+    <ul>
+      <li><strong>Into the Page (⊗):</strong> Field points away from you, into the page</li>
+      <li><strong>Out of the Page (⊙):</strong> Field points toward you, out of the page</li>
+      <li><strong>Arrow Tail (⊗):</strong> Represents the tail of an arrow pointing away</li>
+      <li><strong>Arrow Head (⊙):</strong> Represents the tip of an arrow pointing toward you</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Interpreting Page Direction Symbols</h3>
+      <p><strong>Problem:</strong> A current-carrying wire is shown with magnetic field lines around it. Some lines are marked with ⊗ and others with ⊙. What do these symbols mean?</p>
+
+      <h4>Step 1: Understand the Symbols</h4>
+      <ul>
+        <li>⊗ = Field going into the page (away from you)</li>
+        <li>⊙ = Field coming out of the page (toward you)</li>
+      </ul>
+
+      <h4>Step 2: Apply Right-Hand Rule</h4>
+      <ul>
+        <li>Point thumb in direction of current</li>
+        <li>Curl fingers around wire</li>
+        <li>Fingers show field direction</li>
+      </ul>
+
+      <h4>Step 3: Determine Field Pattern</h4>
+      <ul>
+        <li>Field lines form concentric circles around wire</li>
+        <li>Direction depends on current direction</li>
+        <li>⊗ and ⊙ show the 3D nature of the field</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The ⊗ and ⊙ symbols show that the magnetic field is three-dimensional, with some parts going into the page and others coming out of the page.</strong></p>
+    </div>
+
+    <h3>Common Applications</h3>
+    <ul>
+      <li><strong>Current-Carrying Wires:</strong> Field lines form circles around the wire</li>
+      <li><strong>Solenoids:</strong> Field inside points along axis, outside field is weak</li>
+      <li><strong>Circular Current Loops:</strong> Field pattern depends on viewing angle</li>
+      <li><strong>Magnetic Dipoles:</strong> Field lines emerge from one pole and enter the other</li>
+    </ul>
+
+    <div class="formula-box">
+      <h4>Right-Hand Rule for Current-Carrying Wires</h4>
+      <p><strong>Point your right thumb in the direction of current, and your curled fingers show the direction of the magnetic field.</strong></p>
+      <p>This rule helps determine whether field lines go into (⊗) or out of (⊙) the page.</p>
+    </div>
+
+    <figure>
+      <img src="into-and-out.png" class="img-fluid-center">
+      <figcaption>
+        Visual representation of magnetic field lines going into (⊗) and out of (⊙) the page around a current-carrying wire.
+      </figcaption>
+    </figure>
+
+    <h2>Magnetic Field Properties</h2>
+
+    <div class="properties-box">
+      <h3>🔧 Fundamental Properties</h3>
+      <p><strong>Magnetic fields have several fundamental properties that distinguish them from other fields.</strong></p>
+      <p>These properties are essential for understanding magnetic phenomena.</p>
+    </div>
+
+    <h3>Key Properties</h3>
+    <ul>
+      <li><strong>No Magnetic Monopoles:</strong> Magnetic field lines always form closed loops</li>
+      <li><strong>Gauss's Law for Magnetism:</strong> ∮B⃗·dA⃗ = 0 (net magnetic flux through closed surface is zero)</li>
+      <li><strong>Superposition:</strong> Total field is vector sum of individual fields</li>
+      <li><strong>Energy Storage:</strong> Magnetic fields store energy</li>
+      <li><strong>Vector Field:</strong> Magnetic field is a vector quantity with magnitude and direction</li>
+    </ul>
+
+    <h3>Gauss's Law for Magnetism</h3>
+    <div class="formula-box">
+      $$\oint \vec{B} \cdot d\vec{A} = 0$$
+    </div>
+    <p>This law states that the net magnetic flux through any closed surface is zero, indicating that there are no magnetic monopoles.</p>
+
+    <figure>
+      <img src="no-monopoles.png" class="img-fluid-center">
+      <figcaption>
+        Visual representation of Gauss's Law for Magnetism showing zero net flux through closed surface.
+      </figcaption>
+    </figure>
+
+    <h2>Magnetic Field vs. Electric Field</h2>
+
+    <h3>Comparison of Field Properties</h3>
+    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+      <tr style="background-color: #f3e5ff;">
+        <th style="border: 1px solid #6f42c1; padding: 0.5rem;">Property</th>
+        <th style="border: 1px solid #6f42c1; padding: 0.5rem;">Electric Field</th>
+        <th style="border: 1px solid #6f42c1; padding: 0.5rem;">Magnetic Field</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Source</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Electric charges</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Moving charges</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Force on Stationary Charge</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Yes</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">No</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Force on Moving Charge</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Yes</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Yes</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Field Lines</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Start/end on charges</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Form closed loops</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Monopoles</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Exist (positive/negative)</td>
+        <td style="border: 1px solid #6f42c1; padding: 0.5rem;">Do not exist</td>
+      </tr>
+    </table>
+
+    <h2>Magnetic Field Measurement</h2>
+
+    <h3>Methods of Detection</h3>
+    <ul>
+      <li><strong>Compass:</strong> Simple device that aligns with magnetic field</li>
+      <li><strong>Hall Effect Sensor:</strong> Electronic device that measures field strength</li>
+      <li><strong>Magnetometer:</strong> Precise instrument for measuring magnetic fields</li>
+      <li><strong>Magnetic Field Probe:</strong> Laboratory instrument for field mapping</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Using a Compass</h3>
+      <p><strong>Problem:</strong> Use a compass to determine the direction of Earth's magnetic field.</p>
+
+      <h4>Step 1: Compass Behavior</h4>
+      <ul>
+        <li>Compass needle aligns with magnetic field</li>
+        <li>North pole of compass points toward Earth's magnetic south</li>
+        <li>South pole of compass points toward Earth's magnetic north</li>
+      </ul>
+
+      <h4>Step 2: Field Direction</h4>
+      <ul>
+        <li>Earth's magnetic field points from south to north</li>
+        <li>Field lines emerge from Earth's magnetic south pole</li>
+        <li>Field lines enter Earth's magnetic north pole</li>
+      </ul>
+
+      <h4>Step 3: Practical Application</h4>
+      <ul>
+        <li>Compass always points toward geographic north</li>
+        <li>This indicates Earth's magnetic south is near geographic north</li>
+        <li>Magnetic declination accounts for differences</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The compass needle points toward Earth's magnetic south pole, indicating the direction of the magnetic field.</strong></p>
+    </div>
+
+    <figure>
+      <img src="magnetic-field-earth.avif" class="img-fluid-center">
+      <figcaption>
+        Compass needle alignment with Earth's magnetic field showing direction.
+      </figcaption>
+    </figure>
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>Definition:</strong> Magnetic fields are vector fields created by moving charges</li>
+      <li><strong>Field Lines:</strong> Visual representation showing direction and strength</li>
+      <li><strong>Units:</strong> Tesla (T) is the SI unit for magnetic field</li>
+      <li><strong>Direction:</strong> Field lines point from north to south pole</li>
+      <li><strong>Properties:</strong> No monopoles, conservative field, superposition applies</li>
+      <li><strong>Measurement:</strong> Compasses and electronic sensors detect magnetic fields</li>
+      <li><strong>Fundamental Law:</strong> Gauss's Law for Magnetism: ∮B⃗·dA⃗ = 0</li>
+    </ul>
+
+  </div>
+</body>
+</html> 

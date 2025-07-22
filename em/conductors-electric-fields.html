@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study conductors in electric fields for AP Physics C. Learn about charge distribution, electric field inside conductors, and electrostatic equilibrium in conducting materials." />
+  <title>Conductors in Electric Fields</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .conductor-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Conductors in Electric Fields</h1>
+
+    <p>
+      Conductors are materials that allow free movement of electrons. When placed in electric fields, conductors exhibit unique behaviors that are fundamental to understanding electrical systems and electrostatic shielding.
+    </p>
+
+    <h2>What is a Conductor?</h2>
+
+    <div class="conductor-box">
+      <h3>Definition</h3>
+      <p>A conductor is a material that contains free electrons that can move easily through the material. Metals like copper, aluminum, and silver are excellent conductors.</p>
+    </div>
+
+    <p>
+      In conductors, some electrons are not bound to individual atoms but can move freely throughout the material. This free electron movement is what makes conductors able to carry electric current and respond to electric fields.
+    </p>
+
+    <figure>
+      <img src="Electrons-moving.gif" alt="Electrons moving in a conductor" class="img-fluid-center">
+      <figcaption>
+        Free electrons in a conductor can move throughout the material.
+      </figcaption>
+    </figure>
+
+    <h2>Electrostatic Equilibrium</h2>
+
+    <div class="formula-box">
+      <h3>Key Principle</h3>
+      <p>In electrostatic equilibrium, the electric field inside a conductor is zero:</p>
+      <p>$$\vec{E}_{\text{inside}} = 0$$</p>
+    </div>
+
+    <p>
+      When a conductor is placed in an external electric field, the free electrons redistribute themselves until electrostatic equilibrium is reached. At this point:
+    </p>
+
+    <ul>
+      <li><strong>Electric field inside:</strong> Zero everywhere inside the conductor</li>
+      <li><strong>Electric field at surface:</strong> Perpendicular to the surface</li>
+      <li><strong>Potential:</strong> Constant throughout the conductor</li>
+      <li><strong>Charge distribution:</strong> Excess charge resides on the surface</li>
+    </ul>
+
+    <h2>Properties of Conductors in Electric Fields</h2>
+
+    <div class="property-box">
+      <h3>Fundamental Properties</h3>
+      <ul>
+        <li><strong>Zero internal field:</strong> Electric field inside conductor is zero</li>
+        <li><strong>Surface charge:</strong> Excess charge accumulates on the surface</li>
+        <li><strong>Equipotential surface:</strong> Conductor surface is an equipotential</li>
+        <li><strong>Field at surface:</strong> Electric field is perpendicular to surface</li>
+        <li><strong>Shielding effect:</strong> Conductor shields its interior from external fields</li>
+      </ul>
+    </div>
+
+    <h2>Charge Distribution on Conductors</h2>
+
+    <h3>Surface Charge Density</h3>
+    <p>The charge on a conductor's surface is distributed according to the surface curvature:</p>
+    <div class="formula-box">
+      $$\sigma = \frac{Q}{A}$$
+    </div>
+    <p>Where σ is surface charge density, Q is total charge, and A is surface area.</p>
+
+    <h3>Curvature Effect</h3>
+    <p>Charge density is higher on sharp points and lower on flat surfaces:</p>
+    <ul>
+      <li><strong>Sharp points:</strong> High charge density, strong electric field</li>
+      <li><strong>Flat surfaces:</strong> Lower charge density, moderate electric field</li>
+      <li><strong>Concave regions:</strong> Very low charge density, weak electric field</li>
+    </ul>
+
+    <figure>
+      <img src="charge-distribution-conductor.png" alt="Charge Distribution on Conductor" class="img-fluid-center">
+      <figcaption>
+        Charge density varies with surface curvature.
+      </figcaption>
+    </figure>
+
+    <h2>Electric Field at Conductor Surface</h2>
+
+    <div class="formula-box">
+      <h3>Surface Field Formula</h3>
+      <p>The electric field just outside a conductor surface is:</p>
+      <p>$$E = \frac{\sigma}{\epsilon_0}$$</p>
+      <p>Where σ is the surface charge density and ε₀ is the permittivity of free space.</p>
+    </div>
+
+    <p>
+      This relationship shows that:
+    </p>
+
+    <ul>
+      <li><strong>Stronger fields</strong> occur where charge density is higher</li>
+      <li><strong>Weaker fields</strong> occur where charge density is lower</li>
+      <li><strong>Field direction</strong> is always perpendicular to the surface</li>
+      <li><strong>Field magnitude</strong> depends only on local charge density</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Electric Field Inside a Conductor</h3>
+      <p><strong>Problem:</strong> A conducting sphere of radius 5.0 cm has a total charge of +2.0 μC. What is the electric field inside the sphere?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> Q = +2.0 × 10⁻⁶ C, r = 5.0 × 10⁻² m</li>
+          <li><strong>Property:</strong> Electric field inside conductor is zero</li>
+          <li><strong>Answer:</strong> E = 0 N/C</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field inside the conductor is zero (E = 0 N/C).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Surface Charge Density</h3>
+      <p><strong>Problem:</strong> A conducting sphere of radius 3.0 cm has a total charge of -1.5 μC. What is the surface charge density?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> Q = -1.5 × 10⁻⁶ C, r = 3.0 × 10⁻² m</li>
+          <li><strong>Surface area:</strong> A = 4πr² = 4π(3.0 × 10⁻²)² = 1.13 × 10⁻² m²</li>
+          <li><strong>Surface charge density:</strong> σ = Q/A = (-1.5 × 10⁻⁶)/(1.13 × 10⁻²)</li>
+          <li><strong>Calculate:</strong> σ = -1.33 × 10⁻⁴ C/m²</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The surface charge density is -1.33 × 10⁻⁴ C/m² (negative because the charge is negative).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Electric Field at Conductor Surface</h3>
+      <p><strong>Problem:</strong> A conducting plate has a surface charge density of +3.0 × 10⁻⁶ C/m². What is the electric field just outside the plate?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> σ = +3.0 × 10⁻⁶ C/m², ε₀ = 8.85 × 10⁻¹² C²/N⋅m²</li>
+          <li><strong>Formula:</strong> E = σ/ε₀</li>
+          <li><strong>Substitute:</strong> E = (3.0 × 10⁻⁶)/(8.85 × 10⁻¹²)</li>
+          <li><strong>Calculate:</strong> E = 3.39 × 10⁵ N/C</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field just outside the plate is 3.39 × 10⁵ N/C, directed away from the plate (since the charge is positive).</p>
+    </div>
+
+    <h2>Conductors in External Electric Fields</h2>
+
+    <h3>Induction Process</h3>
+    <p>When a conductor is placed in an external electric field:</p>
+    <ol>
+      <li><strong>Initial state:</strong> External field penetrates the conductor</li>
+      <li><strong>Electron movement:</strong> Free electrons move in response to the field</li>
+      <li><strong>Charge separation:</strong> Positive and negative charges separate</li>
+      <li><strong>Induced field:</strong> Induced charges create their own electric field</li>
+      <li><strong>Equilibrium:</strong> Induced field cancels external field inside conductor</li>
+    </ol>
+
+    <h3>Faraday Cage Effect</h3>
+    <p>A hollow conductor completely shields its interior from external electric fields:</p>
+    <ul>
+      <li><strong>Complete shielding:</strong> No electric field inside the cavity</li>
+      <li><strong>Charge distribution:</strong> All excess charge resides on outer surface</li>
+      <li><strong>Applications:</strong> Electronic shielding, microwave ovens, MRI rooms</li>
+    </ul>
+
+    <figure>
+      <div class="image-placeholder">
+        Conductor in External Field
+      </div>
+      <figcaption>
+        A conductor in an external electric field reaches electrostatic equilibrium.
+      </figcaption>
+    </figure>
+
+    <h2>Applications of Conductors</h2>
+
+    <ul>
+      <li><strong>Electrostatic shielding:</strong> Protecting sensitive electronics from electric fields</li>
+      <li><strong>Lightning rods:</strong> Using sharp points to concentrate electric field</li>
+      <li><strong>Capacitors:</strong> Using conductors as plates to store charge</li>
+      <li><strong>Electrical wiring:</strong> Conducting electric current through circuits</li>
+      <li><strong>Grounding:</strong> Providing a path for excess charge to flow to earth</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Thinking field exists inside:</strong> Electric field inside conductor is always zero in equilibrium</li>
+        <li><strong>Ignoring surface charge:</strong> All excess charge must be on the surface</li>
+        <li><strong>Forgetting perpendicular field:</strong> Field at surface is always perpendicular</li>
+        <li><strong>Confusing with insulators:</strong> Conductors and insulators behave very differently</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A conducting sphere of radius 4.0 cm has a surface charge density of +2.0 × 10⁻⁶ C/m². What is the electric field just outside the sphere?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> σ = +2.0 × 10⁻⁶ C/m², ε₀ = 8.85 × 10⁻¹² C²/N⋅m²</li>
+            <li><strong>Formula:</strong> E = σ/ε₀</li>
+            <li><strong>Substitute:</strong> E = (2.0 × 10⁻⁶)/(8.85 × 10⁻¹²)</li>
+            <li><strong>Calculate:</strong> E = 2.26 × 10⁵ N/C</li>
+          </ol>
+          <p><strong>Answer:</strong> 2.26 × 10⁵ N/C, directed away from the sphere</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> A conducting cube has a total charge of +6.0 μC. If the cube has side length 2.0 cm, what is the surface charge density?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> Q = +6.0 × 10⁻⁶ C, side length = 2.0 × 10⁻² m</li>
+            <li><strong>Surface area:</strong> A = 6 × (2.0 × 10⁻²)² = 2.4 × 10⁻³ m²</li>
+            <li><strong>Surface charge density:</strong> σ = Q/A = (6.0 × 10⁻⁶)/(2.4 × 10⁻³)</li>
+            <li><strong>Calculate:</strong> σ = 2.5 × 10⁻³ C/m²</li>
+          </ol>
+          <p><strong>Answer:</strong> 2.5 × 10⁻³ C/m²</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Charge Sharing Between Conducting Spheres of Different Sizes</h2>
+    <div class="property-box">
+      <h3>Key Principle</h3>
+      <p>When two conducting spheres of different radii are brought into contact and then separated, the final charge on each sphere is <strong>not</strong> simply the average of their initial charges. Instead, <strong>charge distributes so that both spheres reach the same electric potential</strong> (voltage), because conductors in equilibrium are equipotentials.</p>
+    </div>
+    <p>
+      For isolated spheres of radii <strong>R₁</strong> and <strong>R₂</strong> with initial charges <strong>q₁</strong> and <strong>q₂</strong>:
+    </p>
+    <div class="formula-box">
+      <p>Potential of a sphere: \( V = \frac{1}{4\pi\epsilon_0} \frac{q}{R} \)</p>
+      <p>After contact and separation, set \( V_1 = V_2 \):</p>
+      <p>\( \frac{q_1'}{R_1} = \frac{q_2'}{R_2} \)</p>
+      <p>and \( q_1' + q_2' = q_1 + q_2 \) (conservation of charge)</p>
+      <p><strong>Solving gives:</strong></p>
+      <p>\( q_1' = (q_1 + q_2) \frac{R_1}{R_1 + R_2} \)</p>
+      <p>\( q_2' = (q_1 + q_2) \frac{R_2}{R_1 + R_2} \)</p>
+    </div>
+    <figure>
+      <div class="image-placeholder">
+        Diagram: Two spheres of different radii sharing charge
+      </div>
+      <figcaption>
+        After contact, charge distributes so both spheres have the same potential.
+      </figcaption>
+    </figure>
+    <div class="example-box">
+      <h3>Example: Charge Sharing for Different Sized Spheres</h3>
+      <p><strong>Problem:</strong> Sphere A (radius 2 cm) has +6 μC, Sphere B (radius 6 cm) has -2 μC. They are brought into contact and then separated. What is the final charge on each?</p>
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Total charge:</strong> \( q_{\text{total}} = +6 \text{ μC} + (-2 \text{ μC}) = +4 \text{ μC} \)</li>
+          <li><strong>Radii:</strong> \( R_1 = 2 \text{ cm}, R_2 = 6 \text{ cm} \)</li>
+          <li><strong>Formula:</strong> \( q_1' = q_{\text{total}} \frac{R_1}{R_1 + R_2} \), \( q_2' = q_{\text{total}} \frac{R_2}{R_1 + R_2} \)</li>
+          <li><strong>Calculate:</strong> \( q_1' = 4 \times \frac{2}{2+6} = 1 \text{ μC} \), \( q_2' = 4 \times \frac{6}{2+6} = 3 \text{ μC} \)</li>
+        </ol>
+      </div>
+      <p><strong>Answer:</strong> After contact, Sphere A has +1 μC, Sphere B has +3 μC.</p>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Electric field inside conductor</strong> is zero in electrostatic equilibrium</li>
+      <li><strong>Excess charge</strong> resides on the surface of conductors</li>
+      <li><strong>Surface charge density</strong> determines electric field at surface</li>
+      <li><strong>Conductors shield</strong> their interior from external electric fields</li>
+      <li><strong>Charge distribution</strong> depends on surface curvature</li>
+      <li><strong>Conductors form equipotential surfaces</strong> in electrostatic equilibrium</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Field inside conductor:</strong> \(E_{\text{inside}} = 0\)</li>
+        <li><strong>Field at surface:</strong> \(E = \frac{\sigma}{\epsilon_0}\)</li>
+        <li><strong>Surface charge density:</strong> \(\sigma = \frac{Q}{A}\)</li>
+        <li><strong>Conductor properties:</strong> Free electrons, equipotential surface, surface charge</li>
+        <li><strong>Shielding:</strong> Complete protection from external fields</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

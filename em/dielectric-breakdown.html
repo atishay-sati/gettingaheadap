@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about dielectric breakdown for AP Physics C. Study breakdown voltage, field strength, and safety considerations in electrical systems." />
+  <title>Dielectric Breakdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .breakdown-box {
+      background-color: #ffe6e6;
+      border-left: 6px solid #dc3545;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .safety-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+    .comparison-box {
+      background-color: #fce4ec;
+      border-left: 6px solid #e91e63;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .comparison-box h3 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+    .interactive-box {
+      background-color: #f0f8ff;
+      border-left: 6px solid #4169e1;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    .interactive-box h3 {
+      color: #2e4a8f;
+      margin-top: 0;
+    }
+    .control-group {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #6f42c1;
+    }
+    .control-group h4 {
+      margin-top: 0;
+      color: #6f42c1;
+      font-size: 1.2rem;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      gap: 1rem;
+    }
+    .control-row label {
+      min-width: 120px;
+      font-weight: bold;
+    }
+    .control-row input, .control-row select {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-row input[type="range"] {
+      flex: 1;
+    }
+    .value-display {
+      min-width: 80px;
+      padding: 0.5rem;
+      background: #e9ecef;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .results-box {
+      background: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .results-box h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .result-item {
+      background: white;
+      padding: 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    .result-item strong {
+      color: #6f42c1;
+    }
+    .table-container {
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .warning-box {
+      background-color: #ffe6e6;
+      border-left: 6px solid #dc3545;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .warning-box h4 {
+      color: #dc3545;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Dielectric Breakdown</h1>
+
+    <p>
+      Dielectric breakdown is a critical phenomenon in electrical engineering where an insulating material (dielectric) suddenly becomes conductive when subjected to an electric field above its breakdown strength. Understanding this process is essential for designing safe and reliable electrical systems.
+    </p>
+
+    <h2>What is Dielectric Breakdown?</h2>
+
+    <p>
+      Dielectric breakdown occurs when the electric field strength in a dielectric material exceeds its breakdown strength, causing the material to lose its insulating properties and become conductive. This can lead to permanent damage to the material and potentially dangerous electrical discharges.
+    </p>
+
+    <div class="breakdown-box">
+      <h3>Key Characteristics of Dielectric Breakdown</h3>
+      <ul>
+        <li><strong>Sudden onset:</strong> Occurs rapidly when threshold is exceeded</li>
+        <li><strong>Irreversible damage:</strong> Usually causes permanent material damage</li>
+        <li><strong>High current flow:</strong> Results in large current through the material</li>
+        <li><strong>Heat generation:</strong> Can cause thermal damage and fires</li>
+        <li><strong>Safety hazard:</strong> Can cause electric shock and equipment damage</li>
+      </ul>
+    </div>
+
+    <h2>Breakdown Voltage Formula</h2>
+
+    <div class="formula-box">
+      <h3>Breakdown Voltage Calculation</h3>
+      <p>$$V_{\text{breakdown}} = E_{\text{breakdown}} \times d$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>\(V_{\text{breakdown}}\)</strong> = Breakdown voltage (Volts)</li>
+        <li><strong>\(E_{\text{breakdown}}\)</strong> = Breakdown field strength (V/m)</li>
+        <li><strong>\(d\)</strong> = Distance between electrodes (meters)</li>
+      </ul>
+    </div>
+
+    <p>
+      The breakdown voltage depends on both the material's intrinsic breakdown strength and the geometry of the electrodes. Thicker dielectrics can withstand higher voltages, but the breakdown field strength is a material property.
+    </p>
+
+    <h2>Types of Dielectric Breakdown</h2>
+
+    <h3>Intrinsic Breakdown</h3>
+    <div class="property-box">
+      <h4>Mechanism</h4>
+      <p><strong>Process:</strong> Direct electron acceleration by electric field</p>
+      <p><strong>Speed:</strong> Very fast (nanoseconds)</p>
+      <p><strong>Material dependence:</strong> Depends on material's band gap</p>
+      <p><strong>Temperature effect:</strong> Generally decreases with temperature</p>
+    </div>
+
+    <h3>Thermal Breakdown</h3>
+    <div class="property-box">
+      <h4>Mechanism</h4>
+      <p><strong>Process:</strong> Heat generation causes material degradation</p>
+      <p><strong>Speed:</strong> Slower (milliseconds to seconds)</p>
+      <p><strong>Material dependence:</strong> Depends on thermal conductivity</p>
+      <p><strong>Temperature effect:</strong> Increases with temperature</p>
+    </div>
+
+    <h3>Electrochemical Breakdown</h3>
+    <div class="property-box">
+      <h4>Mechanism</h4>
+      <p><strong>Process:</strong> Chemical reactions at electrode interfaces</p>
+      <p><strong>Speed:</strong> Very slow (hours to years)</p>
+      <p><strong>Material dependence:</strong> Depends on chemical stability</p>
+      <p><strong>Environment effect:</strong> Sensitive to humidity and contaminants</p>
+    </div>
+
+    <h2>Breakdown Field Strengths</h2>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Material</th>
+          <th>Breakdown Field (V/μm)</th>
+          <th>Breakdown Field (MV/m)</th>
+          <th>Typical Applications</th>
+        </tr>
+        <tr>
+          <td>Air (atmospheric)</td>
+          <td>3</td>
+          <td>3</td>
+          <td>Air gaps, outdoor equipment</td>
+        </tr>
+        <tr>
+          <td>Paper (dry)</td>
+          <td>8-16</td>
+          <td>8-16</td>
+          <td>Paper capacitors</td>
+        </tr>
+        <tr>
+          <td>Mica</td>
+          <td>118</td>
+          <td>118</td>
+          <td>High-voltage capacitors</td>
+        </tr>
+        <tr>
+          <td>Glass</td>
+          <td>14</td>
+          <td>14</td>
+          <td>Insulators, high-voltage</td>
+        </tr>
+        <tr>
+          <td>Porcelain</td>
+          <td>4-25</td>
+          <td>4-25</td>
+          <td>Power line insulators</td>
+        </tr>
+        <tr>
+          <td>Aluminum Oxide</td>
+          <td>710</td>
+          <td>710</td>
+          <td>Electrolytic capacitors</td>
+        </tr>
+        <tr>
+          <td>Ceramic (low-k)</td>
+          <td>4-25</td>
+          <td>4-25</td>
+          <td>General capacitors</td>
+        </tr>
+        <tr>
+          <td>Polyethylene</td>
+          <td>18-22</td>
+          <td>18-22</td>
+          <td>Cable insulation</td>
+        </tr>
+        <tr>
+          <td>Polypropylene</td>
+          <td>25-30</td>
+          <td>25-30</td>
+          <td>Film capacitors</td>
+        </tr>
+        <tr>
+          <td>Vacuum</td>
+          <td>20-40</td>
+          <td>20-40</td>
+          <td>Vacuum capacitors</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Factors Affecting Breakdown Voltage</h2>
+
+    <h3>Material Properties</h3>
+    <ul>
+      <li><strong>Intrinsic breakdown strength:</strong> Material's fundamental limit</li>
+      <li><strong>Purity:</strong> Impurities create weak spots</li>
+      <li><strong>Crystallinity:</strong> Crystal structure affects breakdown</li>
+      <li><strong>Molecular structure:</strong> Chemical bonds determine strength</li>
+    </ul>
+
+    <h3>Environmental Factors</h3>
+    <ul>
+      <li><strong>Temperature:</strong> Higher temperatures reduce breakdown voltage</li>
+      <li><strong>Humidity:</strong> Moisture can cause surface breakdown</li>
+      <li><strong>Pressure:</strong> Gas pressure affects air breakdown</li>
+      <li><strong>Contaminants:</strong> Dust, oil, or other contaminants</li>
+    </ul>
+
+    <h3>Geometric Factors</h3>
+    <ul>
+      <li><strong>Thickness:</strong> Thicker materials withstand higher voltages</li>
+      <li><strong>Electrode shape:</strong> Sharp edges concentrate field</li>
+      <li><strong>Surface finish:</strong> Rough surfaces can cause local breakdown</li>
+      <li><strong>Edge effects:</strong> Field concentration at edges</li>
+    </ul>
+
+    <h2>Demonstration of Dielectric Breakdown</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lg032EjUn4o?si=umSO4uMtMlxd-QAr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Calculating Breakdown Voltage</h3>
+      <p><strong>Problem:</strong> A mica sheet with thickness 0.1 mm is used as a dielectric. What is the breakdown voltage?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> \(E_{\text{breakdown}} = 118\) V/μm, \(d = 0.1\) mm = 100 μm</li>
+          <li><strong>Formula:</strong> \(V_{\text{breakdown}} = E_{\text{breakdown}} \times d\)</li>
+          <li><strong>Substitute:</strong> \(V_{\text{breakdown}} = 118 \times 100\)</li>
+          <li><strong>Calculate:</strong> \(V_{\text{breakdown}} = 11,800\) V = 11.8 kV</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The breakdown voltage is 11.8 kV.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Safe Operating Voltage</h3>
+      <p><strong>Problem:</strong> A capacitor uses a 50 μm thick polyethylene dielectric. What is the breakdown voltage?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> \(E_{\text{breakdown}} = 20\) V/μm, \(d = 50\) μm</li>
+          <li><strong>Breakdown voltage:</strong> \(V_{\text{breakdown}} = 20 \times 50 = 1000\) V</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The breakdown voltage is 1000 V.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Minimum Thickness Required</h3>
+      <p><strong>Problem:</strong> A capacitor needs to operate at 1000 V. What is the minimum thickness of glass dielectric required?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> \(V_{\text{breakdown}} = 1000\) V, \(E_{\text{breakdown}} = 14\) V/μm</li>
+          <li><strong>Formula:</strong> \(d = V_{\text{breakdown}} / E_{\text{breakdown}}\)</li>
+          <li><strong>Substitute:</strong> \(d = 1000 / 14\)</li>
+          <li><strong>Calculate:</strong> \(d = 71.4\) μm</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The minimum thickness required is 71.4 μm.</p>
+    </div>
+
+    <h2>Interactive Breakdown Calculator</h2>
+
+    <div class="interactive-box">
+      <h3>Calculate Breakdown Voltage</h3>
+      
+      <div class="control-group">
+        <h4>Material Parameters</h4>
+        <div class="control-row">
+          <label>Material:</label>
+          <select id="materialSelect">
+            <option value="3">Air (3 V/μm)</option>
+            <option value="8">Paper (8 V/μm)</option>
+            <option value="14">Glass (14 V/μm)</option>
+            <option value="20">Polyethylene (20 V/μm)</option>
+            <option value="25">Polypropylene (25 V/μm)</option>
+            <option value="118">Mica (118 V/μm)</option>
+            <option value="710">Aluminum Oxide (710 V/μm)</option>
+          </select>
+        </div>
+        <div class="control-row">
+          <label>Thickness (μm):</label>
+          <input type="range" id="thicknessSlider" min="1" max="1000" value="100" step="1">
+          <span class="value-display" id="thicknessDisplay">100 μm</span>
+        </div>
+      </div>
+
+      <div class="results-box">
+        <h4>Breakdown Analysis</h4>
+        <div class="results-grid" id="breakdownResults">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <h2>Safety Considerations</h2>
+
+    <div class="warning-box">
+      <h4>⚠️ Critical Safety Warnings</h4>
+      <ul>
+        <li><strong>High voltage hazard:</strong> Breakdown can cause electric shock</li>
+        <li><strong>Fire risk:</strong> Breakdown can cause fires and explosions</li>
+        <li><strong>Equipment damage:</strong> Can permanently damage electrical equipment</li>
+        <li><strong>Arc flash:</strong> Can cause dangerous arc flashes</li>
+        <li><strong>Permanent damage:</strong> Breakdown usually damages the dielectric permanently</li>
+      </ul>
+    </div>
+
+    <h3>Prevention Strategies</h3>
+    <ul>
+      <li><strong>Material selection:</strong> Choose appropriate materials for voltage</li>
+      <li><strong>Environmental control:</strong> Maintain clean, dry conditions</li>
+      <li><strong>Regular testing:</strong> Test insulation resistance regularly</li>
+      <li><strong>Proper design:</strong> Use appropriate geometries and spacing</li>
+    </ul>
+
+    <h3>Design Guidelines</h3>
+    <div class="safety-box">
+      <h4>Best Practices</h4>
+      <ul>
+        <li><strong>Voltage rating:</strong> Always exceed operating voltage by 50-100%</li>
+        <li><strong>Temperature derating:</strong> Reduce voltage at high temperatures</li>
+        <li><strong>Environmental protection:</strong> Seal against moisture and contaminants</li>
+        <li><strong>Edge protection:</strong> Use rounded edges to reduce field concentration</li>
+        <li><strong>Multiple barriers:</strong> Use multiple layers for redundancy</li>
+      </ul>
+    </div>
+
+    <h2>Applications and Testing</h2>
+
+    <h3>High-Voltage Applications</h3>
+    <ul>
+      <li><strong>Power transmission:</strong> High-voltage cable insulation</li>
+      <li><strong>Transformers:</strong> Oil and solid insulation systems</li>
+      <li><strong>Capacitors:</strong> High-voltage capacitor design</li>
+      <li><strong>Switchgear:</strong> Circuit breaker insulation</li>
+    </ul>
+
+    <h3>Testing Methods</h3>
+    <ul>
+      <li><strong>Dielectric strength test:</strong> Apply increasing voltage until breakdown</li>
+      <li><strong>Partial discharge test:</strong> Detect small discharges before breakdown</li>
+      <li><strong>Insulation resistance test:</strong> Measure leakage current</li>
+      <li><strong>Tan delta test:</strong> Measure dielectric losses</li>
+    </ul>
+
+    <h3>Failure Analysis</h3>
+    <ul>
+      <li><strong>Visual inspection:</strong> Look for burn marks and damage</li>
+      <li><strong>Electrical testing:</strong> Measure resistance and capacitance</li>
+      <li><strong>Chemical analysis:</strong> Analyze material degradation</li>
+      <li><strong>Thermal imaging:</strong> Detect hot spots</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Ignoring safety margins:</strong> Operating too close to breakdown voltage</li>
+        <li><strong>Wrong units:</strong> Confusing V/μm with V/m</li>
+        <li><strong>Temperature effects:</strong> Not accounting for temperature derating</li>
+        <li><strong>Environmental factors:</strong> Ignoring humidity and contaminants</li>
+        <li><strong>Edge effects:</strong> Not considering field concentration at edges</li>
+        <li><strong>Material selection:</strong> Choosing wrong material for application</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A capacitor uses a 25 μm thick polypropylene film. What is the breakdown voltage?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> \(E_{\text{breakdown}} = 25\) V/μm, \(d = 25\) μm</li>
+            <li><strong>Formula:</strong> \(V_{\text{breakdown}} = E_{\text{breakdown}} \times d\)</li>
+            <li><strong>Substitute:</strong> \(V_{\text{breakdown}} = 25 \times 25\)</li>
+            <li><strong>Calculate:</strong> \(V_{\text{breakdown}} = 625\) V</li>
+          </ol>
+          <p><strong>Answer:</strong> 625 V</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> A high-voltage capacitor needs to operate at 5 kV. What thickness of mica is required with a 60% safety margin?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> \(V_{\text{operating}} = 5000\) V, \(E_{\text{breakdown}} = 118\) V/μm, safety margin = 60%</li>
+            <li><strong>Required breakdown voltage:</strong> \(V_{\text{breakdown}} = 5000 / 0.4 = 12,500\) V</li>
+            <li><strong>Formula:</strong> \(d = V_{\text{breakdown}} / E_{\text{breakdown}}\)</li>
+            <li><strong>Substitute:</strong> \(d = 12,500 / 118\)</li>
+            <li><strong>Calculate:</strong> \(d = 106\) μm</li>
+          </ol>
+          <p><strong>Answer:</strong> 106 μm</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Breakdown voltage:</strong> \(V_{\text{breakdown}} = E_{\text{breakdown}} \times d\)</li>
+      <li><strong>Material property:</strong> Breakdown field strength is intrinsic to material</li>
+      <li><strong>Safety margins:</strong> Always operate below breakdown voltage</li>
+      <li><strong>Environmental effects:</strong> Temperature, humidity, and contaminants affect breakdown</li>
+      <li><strong>Irreversible damage:</strong> Breakdown usually causes permanent damage</li>
+      <li><strong>Safety hazard:</strong> Can cause electric shock, fires, and equipment damage</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Breakdown voltage:</strong> \(V_{\text{breakdown}} = E_{\text{breakdown}} \times d\)</li>
+        <li><strong>Minimum thickness:</strong> \(d_{\text{min}} = V_{\text{operating}} / E_{\text{breakdown}}\)</li>
+        <li><strong>Common materials:</strong> Mica (118 V/μm), Glass (14 V/μm), Air (3 V/μm)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    // Interactive breakdown calculator
+    function initBreakdownCalculator() {
+      const materialSelect = document.getElementById('materialSelect');
+      const thicknessSlider = document.getElementById('thicknessSlider');
+      const breakdownResults = document.getElementById('breakdownResults');
+
+      function updateBreakdown() {
+        const breakdownField = parseFloat(materialSelect.value);
+        const thickness = parseFloat(thicknessSlider.value);
+        
+        // Calculate breakdown voltage
+        const breakdownVoltage = breakdownField * thickness;
+        
+        breakdownResults.innerHTML = `
+          <div class="result-item">
+            <strong>Breakdown Field:</strong><br>
+            ${breakdownField} V/μm
+          </div>
+          <div class="result-item">
+            <strong>Breakdown Voltage:</strong><br>
+            ${breakdownVoltage.toFixed(0)} V
+          </div>
+        `;
+      }
+
+      // Add event listeners
+      materialSelect.addEventListener('change', updateBreakdown);
+      thicknessSlider.addEventListener('input', updateBreakdown);
+      
+      // Initialize
+      updateBreakdown();
+    }
+
+    // Initialize when page loads
+    window.addEventListener('load', initBreakdownCalculator);
+  </script>
+</body>
+</html> 

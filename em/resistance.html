@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn electrical resistance for AP Physics C. Study resistance definition, resistivity, temperature dependence, and factors affecting resistance in materials." />
+  <title>Electrical Resistance</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Electrical Resistance</h1>
+
+    <p>
+      Electrical resistance is a fundamental property of materials that opposes the flow of electric current. Understanding resistance is crucial for analyzing electrical circuits, designing electronic devices, and predicting how materials will behave in electrical applications.
+    </p>
+
+    <h2>Definition of Resistance</h2>
+
+    <div class="formula-box">
+      $$R = \frac{V}{I}$$
+    </div>
+
+    <p>
+      Resistance is defined as the ratio of voltage across a conductor to the current flowing through it. It measures how much a material opposes the flow of electric charge.
+    </p>
+
+    <ul>
+      <li><strong>Units:</strong> Ohms (Ω)</li>
+      <li><strong>Symbol:</strong> \(R\)</li>
+      <li><strong>Definition:</strong> Opposition to current flow</li>
+    </ul>
+
+    <figure>
+      <img src="resistor-symbol.jpg" class="img-fluid-center">
+      <figcaption>
+        Standard symbol for electrical resistance in circuit diagrams.
+      </figcaption>
+    </figure>
+
+    <h2>Resistivity and Resistance</h2>
+
+    <div class="formula-box">
+      $$R = \rho \frac{L}{A}$$
+    </div>
+
+    <p>
+      The resistance of a conductor depends on its material properties (resistivity) and geometry (length and cross-sectional area).
+    </p>
+
+    <ul>
+      <li><strong>Where:</strong>
+        <ul>
+          <li>\(R\) = resistance (Ω)</li>
+          <li>\(\rho\) = resistivity (Ω·m)</li>
+          <li>\(L\) = length (m)</li>
+          <li>\(A\) = cross-sectional area (m²)</li>
+        </ul>
+      </li>
+      <li><strong>Material property:</strong> Resistivity depends on the material</li>
+      <li><strong>Geometric factors:</strong> Length and area affect resistance</li>
+      <li><strong>Temperature dependence:</strong> Resistivity changes with temperature</li>
+    </ul>
+
+    <img src="resistor-animation.gif" class="img-fluid-center">
+
+    <h2>Factors Affecting Resistance</h2>
+
+    <h3>Material (Resistivity)</h3>
+    <ul>
+      <li><strong>Conductors:</strong> Low resistivity (copper: 1.68 × 10⁻⁸ Ω·m)</li>
+      <li><strong>Insulators:</strong> High resistivity (glass: ~10¹² Ω·m)</li>
+      <li><strong>Semiconductors:</strong> Intermediate resistivity (silicon: ~10³ Ω·m)</li>
+      <li><strong>Superconductors:</strong> Zero resistivity below critical temperature</li>
+    </ul>
+
+    <h3>Length</h3>
+    <ul>
+      <li><strong>Direct proportionality:</strong> \(R \propto L\)</li>
+      <li><strong>Longer wire:</strong> Higher resistance</li>
+      <li><strong>Shorter wire:</strong> Lower resistance</li>
+      <li><strong>Linear relationship:</strong> Double length = double resistance</li>
+    </ul>
+
+    <h3>Cross-Sectional Area</h3>
+    <ul>
+      <li><strong>Inverse proportionality:</strong> \(R \propto \frac{1}{A}\)</li>
+      <li><strong>Thicker wire:</strong> Lower resistance</li>
+      <li><strong>Thinner wire:</strong> Higher resistance</li>
+      <li><strong>Area relationship:</strong> Double area = half resistance</li>
+    </ul>
+
+    <h3>Temperature</h3>
+    <ul>
+      <li><strong>Metals:</strong> Resistance increases with temperature</li>
+      <li><strong>Semiconductors:</strong> Resistance decreases with temperature</li>
+      <li><strong>Superconductors:</strong> Zero resistance below critical temperature</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Memory Trick: RLA Formula</h3>
+      <p><strong>Remember the resistance formula using RLA:</strong></p>
+      <ul>
+        <li><strong>R</strong> = Resistance (what we're calculating)</li>
+        <li><strong>L</strong> = Length (longer = more resistance)</li>
+        <li><strong>A</strong> = Area (larger = less resistance)</li>
+      </ul>
+      <p><strong>So:</strong> \(R = \rho \frac{L}{A}\)</p>
+      <p><strong>Think:</strong> Resistance = resistivity × (length ÷ area)</p>
+      <p>This helps you remember that resistance increases with length and decreases with area!</p>
+    </div>
+
+
+
+
+
+    <h2>Short Circuits</h2>
+
+    <p>
+      A short circuit occurs when a low-resistance path is created between two points in a circuit, bypassing the intended load. This creates a very high current flow that can damage components and pose safety hazards.
+    </p>
+
+    <h3>What is a Short Circuit?</h3>
+    <ul>
+      <li><strong>Definition:</strong> A path of very low resistance between two points in a circuit</li>
+      <li><strong>Resistance:</strong> Approaches zero (R ≈ 0 Ω)</li>
+      <li><strong>Current:</strong> Becomes very large (I = V/R → ∞ as R → 0)</li>
+      <li><strong>Voltage:</strong> Drops to nearly zero across the short</li>
+    </ul>
+
+    <h3>Effects of Short Circuits</h3>
+    <ul>
+      <li><strong>High current:</strong> Can exceed component ratings</li>
+      <li><strong>Heat generation:</strong> \(P = I^2R\) becomes very large</li>
+      <li><strong>Component damage:</strong> Wires can melt, components can burn</li>
+      <li><strong>Fire hazard:</strong> Excessive heat can cause fires</li>
+      <li><strong>Circuit failure:</strong> Normal operation stops</li>
+    </ul>
+
+    <h3>Protection Against Short Circuits</h3>
+    <ul>
+      <li><strong>Fuses:</strong> Melt when current exceeds rating</li>
+      <li><strong>Circuit breakers:</strong> Automatically open when current is too high</li>
+      <li><strong>Current limiting:</strong> Resistors or other components that limit current</li>
+      <li><strong>Proper wiring:</strong> Insulation prevents accidental shorts</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Short Circuit Current</h3>
+      <p><strong>Problem:</strong> A 12 V battery is accidentally short-circuited with a wire of resistance 0.01 Ω. What current flows?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Ohm's Law:</strong> \(I = \frac{V}{R}\)</li>
+        <li><strong>Substitution:</strong> \(I = \frac{12 \text{ V}}{0.01 \text{ Ω}}\)</li>
+        <li><strong>Calculation:</strong> \(I = 1200 \text{ A}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The current is 1200 A, which is extremely dangerous!</p>
+      <p><strong>Note:</strong> This is why fuses and circuit breakers are essential safety devices.</p>
+    </div>
+
+    <h2>Resistance in Series and Parallel</h2>
+
+    <h3>Series Resistance</h3>
+    <div class="formula-box">
+      $$R_{total} = R_1 + R_2 + R_3 + \cdots$$
+    </div>
+    <ul>
+      <li><strong>Current:</strong> Same through all resistors</li>
+      <li><strong>Voltage:</strong> Divides across resistors</li>
+      <li><strong>Total resistance:</strong> Sum of individual resistances</li>
+      <li><strong>Power:</strong> \(P = I^2R_{total}\)</li>
+    </ul>
+
+    <h3>Parallel Resistance</h3>
+    <div class="formula-box">
+      $$\frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots$$
+    </div>
+    <ul>
+      <li><strong>Voltage:</strong> Same across all resistors</li>
+      <li><strong>Current:</strong> Divides through resistors</li>
+      <li><strong>Total resistance:</strong> Less than smallest individual resistance</li>
+      <li><strong>Power:</strong> \(P = \frac{V^2}{R_{total}}\)</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+
+    <h2>Interactive Resistance Simulation</h2>
+    <p>Explore how resistance changes with wire length and cross-sectional area:</p>
+    
+    <canvas id="resistanceCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="lengthSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Length (m):</label>
+        <input type="range" id="lengthSlider" min="1" max="20" value="10" step="0.5" style="width: 100%;">
+        <div id="lengthValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">10.0 m</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="diameterSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Diameter (mm):</label>
+        <input type="range" id="diameterSlider" min="0.5" max="5" value="2" step="0.1" style="width: 100%;">
+        <div id="diameterValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 mm</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="materialSelect" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Material:</label>
+        <select id="materialSelect" style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #ced4da;">
+          <option value="1.68e-8">Copper (1.68 × 10⁻⁸ Ω·m)</option>
+          <option value="2.82e-8">Aluminum (2.82 × 10⁻⁸ Ω·m)</option>
+          <option value="1.59e-8">Silver (1.59 × 10⁻⁸ Ω·m)</option>
+          <option value="1.72e-8">Gold (1.72 × 10⁻⁸ Ω·m)</option>
+          <option value="9.71e-8">Iron (9.71 × 10⁻⁸ Ω·m)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div id="resistanceDisplay" style="text-align: center; margin: 1rem 0; font-size: 1.2rem; color: #6f42c1; font-weight: bold;">
+      Resistance: 0.0535 Ω
+    </div>
+    
+    <div style="text-align: center; margin: 2rem 0;">
+      <button id="startResistance" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="showChargeFlow" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Show Charge Flow</button>
+      <button id="resetResistance" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 1: Basic Resistance Calculation</h3>
+      <p><strong>Problem:</strong> A copper wire is 10.0 m long and has a diameter of 2.0 mm. If copper has resistivity 1.68 × 10⁻⁸ Ω·m, what is the resistance of the wire?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Cross-sectional area:</strong> \(A = \pi r^2 = \pi(1.0 \times 10^{-3})^2 = 3.14 \times 10^{-6} \text{ m}^2\)</li>
+        <li><strong>Resistance formula:</strong> \(R = \rho \frac{L}{A}\)</li>
+        <li><strong>Substitution:</strong> \(R = (1.68 \times 10^{-8}) \frac{10.0}{3.14 \times 10^{-6}}\)</li>
+        <li><strong>Calculation:</strong> \(R = 5.35 \times 10^{-2} \text{ Ω} = 0.0535 \text{ Ω}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The resistance is 0.0535 Ω.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <script>
+    // Resistance Simulation
+    const resistanceCanvas = document.getElementById("resistanceCanvas");
+    const rctx = resistanceCanvas.getContext("2d");
+    const lengthSlider = document.getElementById("lengthSlider");
+    const diameterSlider = document.getElementById("diameterSlider");
+    const materialSelect = document.getElementById("materialSelect");
+    const lengthValue = document.getElementById("lengthValue");
+    const diameterValue = document.getElementById("diameterValue");
+    const resistanceDisplay = document.getElementById("resistanceDisplay");
+    const startResistanceButton = document.getElementById("startResistance");
+    const showChargeFlowButton = document.getElementById("showChargeFlow");
+    const resetResistanceButton = document.getElementById("resetResistance");
+
+    let length = 10.0; // meters
+    let diameter = 2.0; // mm
+    let resistivity = 1.68e-8; // Ω·m (copper)
+    let resistance = 0.0535; // calculated resistance
+    let animationId = null;
+    let isAnimating = false;
+    let isChargeFlow = false;
+    let electrons = [];
+    let chargeParticles = [];
+
+    // Initialize electrons
+    function initElectrons() {
+      electrons = [];
+      const numElectrons = 20;
+      for (let i = 0; i < numElectrons; i++) {
+        electrons.push({
+          x: Math.random() * 600 + 100,
+          y: Math.random() * 200 + 100,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          radius: 3
+        });
+      }
+    }
+
+    // Initialize charge flow particles
+    function initChargeFlow() {
+      chargeParticles = [];
+      const numParticles = 5;
+      const wireX = (resistanceCanvas.width - Math.min(600, length * 20)) / 2;
+      const wireY = resistanceCanvas.height / 2;
+      const wireRadius = Math.max(5, diameter * 2);
+      const wireLength = Math.min(600, length * 20);
+      
+      // Space particles evenly across the wire
+      for (let i = 0; i < numParticles; i++) {
+        const spacing = (wireLength - wireRadius * 2) / (numParticles + 1);
+        chargeParticles.push({
+          x: wireX + wireRadius + spacing * (i + 1),
+          y: wireY + (Math.random() - 0.5) * (wireRadius * 0.8),
+          vx: 2.0 / Math.sqrt(resistance), // Speed inversely proportional to resistance
+          vy: 0, // No vertical movement for cleaner flow
+          radius: 5,
+          color: "#FF6B6B"
+        });
+      }
+    }
+
+    // Get material color based on resistivity
+    function getMaterialColor(resistivity) {
+      if (resistivity === 1.68e-8) return "#B87333"; // Copper - brown
+      if (resistivity === 2.82e-8) return "#C0C0C0"; // Aluminum - silver
+      if (resistivity === 1.59e-8) return "#C0C0C0"; // Silver - silver
+      if (resistivity === 1.72e-8) return "#FFD700"; // Gold - gold
+      if (resistivity === 9.71e-8) return "#8B4513"; // Iron - dark brown
+      return "#8B4513"; // Default brown
+    }
+
+    function calculateResistance() {
+      const radius = (diameter / 2) * 1e-3; // convert mm to m
+      const area = Math.PI * radius * radius;
+      resistance = resistivity * length / area;
+      resistanceDisplay.textContent = `Resistance: ${resistance.toFixed(4)} Ω`;
+    }
+
+    function drawWire() {
+      rctx.clearRect(0, 0, resistanceCanvas.width, resistanceCanvas.height);
+      
+      // Draw background
+      rctx.fillStyle = "#f8f9fa";
+      rctx.fillRect(0, 0, resistanceCanvas.width, resistanceCanvas.height);
+      
+      // Calculate wire dimensions for visualization
+      const wireLength = Math.min(600, length * 20); // scale length for display
+      const wireRadius = Math.max(5, diameter * 2); // scale diameter for display
+      const wireX = (resistanceCanvas.width - wireLength) / 2;
+      const wireY = resistanceCanvas.height / 2;
+      
+      // Draw wire (cylinder representation) with material color
+      const materialColor = getMaterialColor(resistivity);
+      rctx.fillStyle = materialColor;
+      rctx.fillRect(wireX, wireY - wireRadius, wireLength, wireRadius * 2);
+      
+      // Draw wire ends (circles)
+      rctx.beginPath();
+      rctx.arc(wireX, wireY, wireRadius, 0, 2 * Math.PI);
+      rctx.fill();
+      
+      rctx.beginPath();
+      rctx.arc(wireX + wireLength, wireY, wireRadius, 0, 2 * Math.PI);
+      rctx.fill();
+      
+      // Draw wire outline
+      rctx.strokeStyle = "#654321";
+      rctx.lineWidth = 2;
+      rctx.strokeRect(wireX, wireY - wireRadius, wireLength, wireRadius * 2);
+      rctx.beginPath();
+      rctx.arc(wireX, wireY, wireRadius, 0, 2 * Math.PI);
+      rctx.stroke();
+      rctx.beginPath();
+      rctx.arc(wireX + wireLength, wireY, wireRadius, 0, 2 * Math.PI);
+      rctx.stroke();
+      
+      // Draw electrons if animating
+      if (isAnimating) {
+        rctx.fillStyle = "#FF6B6B";
+        electrons.forEach(electron => {
+          rctx.beginPath();
+          rctx.arc(electron.x, electron.y, electron.radius, 0, 2 * Math.PI);
+          rctx.fill();
+          
+          // Update electron positions
+          electron.x += electron.vx;
+          electron.y += electron.vy;
+          
+          // Bounce off wire boundaries
+          if (electron.x < wireX + wireRadius || electron.x > wireX + wireLength - wireRadius) {
+            electron.vx *= -1;
+          }
+          if (electron.y < wireY - wireRadius || electron.y > wireY + wireRadius) {
+            electron.vy *= -1;
+          }
+          
+          // Keep electrons within wire area
+          electron.x = Math.max(wireX + wireRadius, Math.min(wireX + wireLength - wireRadius, electron.x));
+          electron.y = Math.max(wireY - wireRadius, Math.min(wireY + wireRadius, electron.y));
+        });
+      }
+
+      // Draw charge flow particles
+      if (isChargeFlow) {
+        chargeParticles.forEach((particle, index) => {
+          rctx.fillStyle = particle.color;
+          rctx.beginPath();
+          rctx.arc(particle.x, particle.y, particle.radius, 0, 2 * Math.PI);
+          rctx.fill();
+          
+          // Update particle positions
+          particle.x += particle.vx;
+          
+          // Reset particles that reach the end
+          if (particle.x > wireX + wireLength - wireRadius) {
+            particle.x = wireX + wireRadius;
+            particle.y = wireY + (Math.random() - 0.5) * (wireRadius * 0.8);
+            particle.vx = 2.0 / Math.sqrt(resistance); // Update speed based on current resistance
+          }
+          
+          // Update speed when resistance changes
+          particle.vx = 2.0 / Math.sqrt(resistance);
+        });
+      }
+      
+      // Draw labels
+      rctx.fillStyle = "#333";
+      rctx.font = "14px Arial";
+      rctx.fillText(`Length: ${length} m`, 10, 30);
+      rctx.fillText(`Diameter: ${diameter} mm`, 10, 50);
+      rctx.fillText(`Resistivity: ${resistivity.toExponential(2)} Ω·m`, 10, 70);
+      rctx.fillText(`Resistance: ${resistance.toFixed(4)} Ω`, 10, 90);
+      
+      // Draw formula
+      rctx.font = "16px Arial";
+      rctx.fillText("R = ρL/A", 10, 350);
+    }
+
+    function animate() {
+      drawWire();
+      if (isAnimating || isChargeFlow) {
+        animationId = requestAnimationFrame(animate);
+      }
+    }
+
+    // Event listeners
+    lengthSlider.addEventListener("input", function() {
+      length = parseFloat(this.value);
+      lengthValue.textContent = length.toFixed(1) + " m";
+      calculateResistance();
+      if (isChargeFlow) {
+        initChargeFlow(); // Reinitialize particles with new speed
+      }
+      drawWire();
+    });
+
+    diameterSlider.addEventListener("input", function() {
+      diameter = parseFloat(this.value);
+      diameterValue.textContent = diameter.toFixed(1) + " mm";
+      calculateResistance();
+      if (isChargeFlow) {
+        initChargeFlow(); // Reinitialize particles with new speed
+      }
+      drawWire();
+    });
+
+    materialSelect.addEventListener("change", function() {
+      resistivity = parseFloat(this.value);
+      calculateResistance();
+      if (isChargeFlow) {
+        initChargeFlow(); // Reinitialize particles with new speed
+      }
+      drawWire();
+    });
+
+    startResistanceButton.addEventListener("click", function() {
+      if (!isAnimating) {
+        isAnimating = true;
+        isChargeFlow = false; // Stop charge flow when starting animation
+        initElectrons();
+        animate();
+        this.textContent = "Stop Animation";
+        showChargeFlowButton.textContent = "Show Charge Flow";
+      } else {
+        isAnimating = false;
+        cancelAnimationFrame(animationId);
+        this.textContent = "Start Animation";
+        drawWire();
+      }
+    });
+
+    showChargeFlowButton.addEventListener("click", function() {
+      if (!isChargeFlow) {
+        isChargeFlow = true;
+        isAnimating = false; // Stop regular animation when starting charge flow
+        cancelAnimationFrame(animationId);
+        initChargeFlow();
+        animate();
+        this.textContent = "Stop Charge Flow";
+        startResistanceButton.textContent = "Start Animation";
+      } else {
+        isChargeFlow = false;
+        cancelAnimationFrame(animationId);
+        this.textContent = "Show Charge Flow";
+        drawWire();
+      }
+    });
+
+    resetResistanceButton.addEventListener("click", function() {
+      lengthSlider.value = 10;
+      diameterSlider.value = 2;
+      materialSelect.value = "1.68e-8";
+      length = 10.0;
+      diameter = 2.0;
+      resistivity = 1.68e-8;
+      lengthValue.textContent = "10.0 m";
+      diameterValue.textContent = "2.0 mm";
+      calculateResistance();
+      isAnimating = false;
+      isChargeFlow = false;
+      cancelAnimationFrame(animationId);
+      startResistanceButton.textContent = "Start Animation";
+      showChargeFlowButton.textContent = "Show Charge Flow";
+      drawWire();
+    });
+
+    // Initialize
+    calculateResistance();
+    drawWire();
+  </script>
+</body>
+</html> 

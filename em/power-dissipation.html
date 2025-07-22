@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study power dissipation for AP Physics C. Learn about power loss in resistors, Joule heating, and energy transfer in electric circuits." />
+  <title>Power Dissipation</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* Enhanced button styles */
+    .btn-success {
+      background: linear-gradient(135deg, #28a745, #20c997) !important;
+      border: none !important;
+      padding: 12px 24px !important;
+      font-weight: 600 !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3) !important;
+      transition: all 0.3s ease !important;
+      margin-top: 10px !important;
+      color: white !important;
+      font-size: 1rem !important;
+    }
+    
+    .btn-success:hover {
+      background: linear-gradient(135deg, #218838, #1ea085) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4) !important;
+    }
+    
+    .btn-success:active {
+      transform: translateY(0) !important;
+      box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
+    }
+    
+    /* Enhanced input styles */
+    input[type="number"] {
+      width: 100% !important;
+      padding: 10px 12px !important;
+      border: 2px solid #e9ecef !important;
+      border-radius: 6px !important;
+      font-size: 1rem !important;
+      transition: border-color 0.3s ease !important;
+      margin-bottom: 16px !important;
+    }
+    
+    input[type="number"]:focus {
+      outline: none !important;
+      border-color: #6f42c1 !important;
+      box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1) !important;
+    }
+    
+    input[type="number"]:hover {
+      border-color: #8e44ad !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Power Dissipation in Resistors</h1>
+
+    <p>
+      Power dissipation in resistors is a fundamental concept in electric circuits. When current flows through a resistor, electrical energy is converted to heat energy through the process of Joule heating. This conversion is essential for understanding circuit behavior, energy conservation, and practical applications.
+    </p>
+
+    <h2>Definition of Power Dissipation</h2>
+
+    <div class="formula-box">
+      $$P = I^2R = \frac{V^2}{R} = VI$$
+    </div>
+
+    <p>
+      Power dissipation in a resistor is the rate at which electrical energy is converted to heat energy. This occurs due to collisions between electrons and the atoms in the resistive material, causing the material to heat up.
+    </p>
+
+    <ul>
+      <li><strong>Symbol:</strong> \(P\)</li>
+      <li><strong>Units:</strong> Watts (W)</li>
+      <li><strong>Definition:</strong> Rate of energy conversion to heat</li>
+      <li><strong>Process:</strong> Electrical energy → Heat energy</li>
+    </ul>
+
+    <figure>
+      <img src="thermal-energy-dissapation.png" alt="Energy being disapatted" class="img-fluid-center">
+      <figcaption>
+        Electrical energy is converted to heat as current flows through the resistor.
+      </figcaption>
+    </figure>
+
+    <h2>Joule's Law</h2>
+
+    <p>
+      Joule's law describes the relationship between current, resistance, and power dissipation:
+    </p>
+
+    <div class="formula-box">
+      $$P = I^2R$$
+    </div>
+
+    <ul>
+      <li><strong>\(P = I^2R\):</strong> Power equals current squared times resistance</li>
+      <li><strong>Power is always positive:</strong> Energy is always dissipated</li>
+      <li><strong>Quadratic relationship:</strong> Power increases with current squared</li>
+      <li><strong>Linear with resistance:</strong> Power increases linearly with resistance</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Memory Trick: Power Dissipation Triangle</h3>
+      <p><strong>Remember the power dissipation formulas using the PIR triangle:</strong></p>
+      <ul>
+        <li><strong>P</strong> = Power dissipated (top of triangle)</li>
+        <li><strong>I</strong> = Current (bottom left)</li>
+        <li><strong>R</strong> = Resistance (bottom right)</li>
+      </ul>
+      <p><strong>To find any variable:</strong></p>
+      <ul>
+        <li><strong>P</strong> = I² × R (multiply current squared by resistance)</li>
+        <li><strong>I</strong> = √(P ÷ R) (square root of power divided by resistance)</li>
+        <li><strong>R</strong> = P ÷ I² (divide power by current squared)</li>
+      </ul>
+      <p>This visual triangle helps you quickly rearrange the power dissipation formula!</p>
+    </div>
+
+    <h2>Energy Conservation in Power Dissipation</h2>
+
+    <h3>Energy Transformation</h3>
+    <ul>
+      <li><strong>Input:</strong> Electrical energy from the source</li>
+      <li><strong>Process:</strong> Electron collisions with atoms</li>
+      <li><strong>Output:</strong> Heat energy in the resistor</li>
+      <li><strong>Conservation:</strong> Total energy is conserved</li>
+    </ul>
+
+    <h3>Heat Generation Process</h3>
+    <ul>
+      <li><strong>Electron flow:</strong> Current carries electrons through resistor</li>
+      <li><strong>Collisions:</strong> Electrons collide with atomic lattice</li>
+      <li><strong>Energy transfer:</strong> Kinetic energy converts to thermal energy</li>
+      <li><strong>Temperature rise:</strong> Resistor material heats up</li>
+    </ul>
+
+    <h2>Power Dissipation Formulas</h2>
+
+    <p>
+      Power dissipation can be calculated using three equivalent formulas, depending on what quantities are known:
+    </p>
+
+    <div class="formula-box">
+      $$P = I^2R = \frac{V^2}{R} = VI$$
+    </div>
+
+    <ul>
+      <li><strong>\(P = I^2R\):</strong> Most fundamental form (Joule's law)</li>
+      <li><strong>\(P = \frac{V^2}{R}\):</strong> Useful when voltage is known</li>
+      <li><strong>\(P = VI\):</strong> General power formula</li>
+      <li><strong>All equivalent:</strong> These formulas give the same result</li>
+    </ul>
+
+    <h2>Practical Implications</h2>
+
+    <h3>Circuit Design Considerations</h3>
+    <ul>
+      <li><strong>Power ratings:</strong> Resistors have maximum power ratings</li>
+      <li><strong>Heat management:</strong> High power requires heat sinks</li>
+      <li><strong>Safety:</strong> Prevent overheating and fire hazards</li>
+      <li><strong>Efficiency:</strong> Minimize energy waste in circuits</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+      <li><strong>Heating elements:</strong> Toasters, electric heaters</li>
+      <li><strong>Light bulbs:</strong> Incandescent bulbs convert power to light and heat</li>
+      <li><strong>Circuit protection:</strong> Fuses use power dissipation</li>
+      <li><strong>Temperature sensors:</strong> Resistance changes with temperature</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Basic Power Calculation</h3>
+      <p><strong>Problem:</strong> A 10-Ω resistor carries a current of 2.0 A. Calculate the power dissipated.</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Power formula:</strong> \(P = I^2R\)</li>
+        <li><strong>Substitution:</strong> \(P = (2.0 \text{ A})^2 \times 10 \text{ Ω}\)</li>
+        <li><strong>Calculation:</strong> \(P = 4.0 \text{ A}^2 \times 10 \text{ Ω} = 40 \text{ W}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The resistor dissipates 40 W of power.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Power from Voltage</h3>
+      <p><strong>Problem:</strong> A 20-Ω resistor has a voltage drop of 12 V across it. Calculate the power dissipated.</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Power formula:</strong> \(P = \frac{V^2}{R}\)</li>
+        <li><strong>Substitution:</strong> \(P = \frac{(12 \text{ V})^2}{20 \text{ Ω}}\)</li>
+        <li><strong>Calculation:</strong> \(P = \frac{144 \text{ V}^2}{20 \text{ Ω}} = 7.2 \text{ W}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The resistor dissipates 7.2 W of power.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Current from Power</h3>
+      <p><strong>Problem:</strong> A 5-Ω resistor dissipates 20 W. Calculate the current through the resistor.</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li><strong>Power formula:</strong> \(P = I^2R\)</li>
+        <li><strong>Rearrange:</strong> \(I^2 = \frac{P}{R}\)</li>
+        <li><strong>Substitution:</strong> \(I^2 = \frac{20 \text{ W}}{5 \text{ Ω}} = 4 \text{ A}^2\)</li>
+        <li><strong>Calculation:</strong> \(I = \sqrt{4 \text{ A}^2} = 2 \text{ A}\)</li>
+      </ol>
+      
+      <p><strong>Answer:</strong> The current through the resistor is 2.0 A.</p>
+    </div>
+
+    <h2>Interactive Power Dissipation Simulation</h2>
+
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Circuit Parameters</h3>
+          <div id="controls" class="mb-3">
+            <label for="voltage" style="font-weight: 600; color: #6f42c1; margin-bottom: 8px; display: block;">Voltage (V):</label>
+            <input type="number" id="voltage" value="12" min="1" max="24" step="1" style="width: 100%; padding: 10px 12px; border: 2px solid #e9ecef; border-radius: 6px; font-size: 1rem; transition: border-color 0.3s ease; margin-bottom: 16px;">
+            <label for="resistance" style="font-weight: 600; color: #6f42c1; margin-bottom: 8px; display: block;">Resistance (Ω):</label>
+            <input type="number" id="resistance" value="6" min="1" max="20" step="1" style="width: 100%; padding: 10px 12px; border: 2px solid #e9ecef; border-radius: 6px; font-size: 1rem; transition: border-color 0.3s ease; margin-bottom: 16px;">
+            <br><br>
+            <button class="btn btn-success" onclick="updateSimulation()" style="background: linear-gradient(135deg, #28a745, #20c997); border: none; padding: 12px 24px; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3); transition: all 0.3s ease; margin-top: 10px;">
+              🔄 Update Circuit
+            </button>
+          </div>
+          
+          <div class="formula-box">
+            <h4>Calculations</h4>
+            <p><strong>Current:</strong> <span id="current">2.00</span> A</p>
+            <p><strong>Power Dissipated:</strong> <span id="power">24.00</span> W</p>
+            <p><strong>Heat Generated:</strong> <span id="heat">24.00</span> J/s</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <canvas id="simCanvas" width="400" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  // Simulation variables
+  let voltage = 12;
+  let resistance = 6;
+  let current = voltage / resistance;
+  let power = current * current * resistance;
+
+  // Canvas setup
+  const canvas = document.getElementById('simCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Heat particles
+  let heatParticles = [];
+
+  class HeatParticle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.vx = (Math.random() - 0.5) * 2;
+      this.vy = -Math.random() * 3 - 1;
+      this.life = 1;
+      this.decay = Math.random() * 0.02 + 0.01;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.vy += 0.1; // gravity
+      this.life -= this.decay;
+    }
+
+    draw() {
+      ctx.save();
+      ctx.globalAlpha = this.life;
+      ctx.fillStyle = `hsl(${30 + this.life * 30}, 100%, 70%)`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+
+  function drawCircuit() {
+    // Clear canvas
+    ctx.fillStyle = '#f3e5ff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw battery
+    ctx.fillStyle = '#6f42c1';
+    ctx.fillRect(50, 120, 20, 60);
+    ctx.fillStyle = '#8e44ad';
+    ctx.fillRect(45, 115, 30, 70);
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(55, 125, 10, 50);
+    ctx.fillRect(55, 125, 10, 10);
+    ctx.fillRect(55, 165, 10, 10);
+
+    // Draw wires
+    ctx.strokeStyle = '#6f42c1';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(75, 150);
+    ctx.lineTo(150, 150);
+    ctx.stroke();
+
+    // Draw resistor (with heat effect)
+    const heatIntensity = Math.min(power / 50, 1);
+    const resistorColor = `hsl(${30 + heatIntensity * 30}, 100%, ${70 - heatIntensity * 20}%)`;
+    
+    ctx.fillStyle = resistorColor;
+    ctx.fillRect(150, 140, 60, 20);
+    ctx.strokeStyle = '#6f42c1';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(150, 140, 60, 20);
+
+    // Draw zigzag pattern
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(155, 150);
+    ctx.lineTo(165, 145);
+    ctx.lineTo(175, 155);
+    ctx.lineTo(185, 145);
+    ctx.lineTo(195, 155);
+    ctx.lineTo(205, 145);
+    ctx.stroke();
+
+    // Draw wire back to battery
+    ctx.strokeStyle = '#6f42c1';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(210, 150);
+    ctx.lineTo(285, 150);
+    ctx.stroke();
+
+    // Draw electrons
+    const electronCount = Math.floor(current * 5);
+    for (let i = 0; i < electronCount; i++) {
+      const t = (Date.now() / 1000 + i * 0.5) % 3;
+      const x = 75 + (t / 3) * 210;
+      const y = 150 + Math.sin(t * 10) * 3;
+      
+      ctx.fillStyle = '#ff6b6b';
+      ctx.beginPath();
+      ctx.arc(x, y, 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Add heat particles based on power
+    if (Math.random() < power / 100) {
+      heatParticles.push(new HeatParticle(180 + Math.random() * 20, 140));
+    }
+
+    // Update and draw heat particles
+    for (let i = heatParticles.length - 1; i >= 0; i--) {
+      heatParticles[i].update();
+      heatParticles[i].draw();
+      
+      if (heatParticles[i].life <= 0) {
+        heatParticles.splice(i, 1);
+      }
+    }
+
+    // Draw labels
+    ctx.fillStyle = '#6f42c1';
+    ctx.font = '14px Arial';
+    ctx.fillText(`${voltage}V`, 30, 100);
+    ctx.fillText(`${resistance}Ω`, 170, 135);
+    ctx.fillText(`${current.toFixed(2)}A`, 170, 170);
+  }
+
+  function updateSimulation() {
+    voltage = parseFloat(document.getElementById('voltage').value);
+    resistance = parseFloat(document.getElementById('resistance').value);
+    current = voltage / resistance;
+    power = current * current * resistance;
+    
+    document.getElementById('current').textContent = current.toFixed(2);
+    document.getElementById('power').textContent = power.toFixed(2);
+    document.getElementById('heat').textContent = power.toFixed(2);
+  }
+
+  function animate() {
+    drawCircuit();
+    requestAnimationFrame(animate);
+  }
+
+  // Initialize simulation
+  updateSimulation();
+  animate();
+  </script>
+</body>
+</html> 

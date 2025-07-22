@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about LR circuits for AP Physics C. Study time constant, current behavior, energy storage, and practical applications in circuits." />
+  <title>LR Circuits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p { font-size: 1.1rem; margin-bottom: 1.2rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.6rem; }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .concept-card h3 { color: #495057; margin-top: 0; margin-bottom: 1rem; font-size: 1.4rem; }
+    .concept-card p { color: #6c757d; margin-bottom: 1rem; }
+    .concept-card a { color: #6f42c1; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 0.5rem; }
+    .concept-card a:hover { text-decoration: underline; }
+    .intro-section {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #155724;
+    }
+    .intro-section h2 { color: #155724; margin-top: 0; }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #f3e5ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    .example-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .example-box h3 { color: #856404; margin-top: 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectromagneticInduction.html" class="back-link">← Back to Concepts</a>
+    <h1>LR Circuits</h1>
+
+    <div class="intro-section">
+      <h2>Overview: Inductor-Resistor Circuits</h2>
+      <p>
+        LR circuits consist of an inductor and resistor connected in series. When a voltage is applied, the current doesn't immediately reach its maximum value due to the inductor's opposition to changes in current. The current increases exponentially with a characteristic time constant.
+      </p>
+      <p>
+        These circuits are fundamental for understanding how inductors behave in DC circuits and are important for analyzing electromagnetic devices, filters, and power electronics.
+      </p>
+    </div>
+
+    <h2>Key Formulas</h2>
+    <div class="formula-box">
+      <h3>Time Constant</h3>
+      <p>\[ \tau = \frac{L}{R} \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(\tau\) is the time constant (s)</li>
+        <li>\(L\) is the inductance (H)</li>
+        <li>\(R\) is the resistance (Ω)</li>
+      </ul>
+      <p><strong>Note:</strong> This formula is NOT on the AP Physics C equation sheet.</p>
+    </div>
+
+    <div class="formula-box">
+      <h3>Current as Function of Time</h3>
+      <p>\[ I(t) = \frac{V}{R}(1 - e^{-t/\tau}) \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(I(t)\) is the current at time \(t\) (A)</li>
+        <li>\(V\) is the applied voltage (V)</li>
+        <li>\(R\) is the resistance (Ω)</li>
+        <li>\(\tau\) is the time constant (s)</li>
+      </ul>
+      <p><strong>Note:</strong> This formula is NOT on the AP Physics C equation sheet.</p>
+    </div>
+
+    <h2>Key Concepts</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h3>Time Constant</h3>
+        <p>The time constant determines how quickly the current changes:</p>
+        <ul>
+          <li>After \(\tau\): current reaches 63% of final value</li>
+          <li>After \(2\tau\): current reaches 86% of final value</li>
+          <li>After \(5\tau\): current reaches 99% of final value</li>
+          <li>Larger \(L\) or smaller \(R\): slower current changes</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <h3>Initial Behavior</h3>
+        <p>When switch is first closed:</p>
+        <ul>
+          <li>Current starts at zero</li>
+          <li>Inductor opposes current change</li>
+          <li>Voltage across inductor equals applied voltage</li>
+          <li>Voltage across resistor is zero</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <h3>Final Behavior</h3>
+        <p>After a long time:</p>
+        <ul>
+          <li>Current reaches maximum: \(I = \frac{V}{R}\)</li>
+          <li>Inductor acts like a wire</li>
+          <li>Voltage across inductor is zero</li>
+          <li>Voltage across resistor equals applied voltage</li>
+        </ul>
+      </div>
+      <div class="concept-card">
+        <h3>Energy Storage</h3>
+        <p>Energy is stored in the inductor's magnetic field:</p>
+        <ul>
+          <li>Energy: \(U = \frac{1}{2}LI^2\)</li>
+          <li>Increases as current increases</li>
+          <li>Maximum when current is maximum</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Visualize an inductor at the start as a broken wire, current can't pass through. Once time progresses, current can pass through, acting like a wire.</p>
+
+    <img src="lr-circuit-example.png" class="img-fluid-center">
+
+    <p>In this diagram, at the start all the current will flow through the resistor because the inductor acts like a broken wire. After a while, NO current passes through the resistor because it gets short circuted - the inductor is the path of least resistance so all the current passes through there.</p>
+
+    <h2>Derivations (Not on AP Equation Sheet)</h2>
+    <div class="example-box">
+      <h3>Derivation: Current Formula</h3>
+      <p><strong>Step-by-Step:</strong></p>
+      <ol>
+        <li>Kirchhoff's voltage law: \(V = IR + L\frac{dI}{dt}\)</li>
+        <li>Rearrange: \(\frac{dI}{dt} = \frac{V - IR}{L}\)</li>
+        <li>This is a first-order differential equation</li>
+        <li>Solution: \(I(t) = \frac{V}{R}(1 - e^{-t/\tau})\) where \(\tau = \frac{L}{R}\)</li>
+      </ol>
+    </div>
+
+    <h2>Example Problems</h2>
+    <div class="example-box">
+      <h3>Example 1: Time Constant</h3>
+      <p><strong>Problem:</strong> An LR circuit has \(L = 0.5\) H and \(R = 2\) Ω. What is the time constant?</p>
+      <ol>
+        <li>\(\tau = \frac{L}{R} = \frac{0.5}{2} = 0.25\) s</li>
+      </ol>
+      <p><strong>Answer:</strong> 0.25 s</p>
+    </div>
+    <div class="example-box">
+      <h3>Example 2: Current Calculation</h3>
+      <p><strong>Problem:</strong> In the above circuit with \(V = 10\) V, what is the current after 0.5 s?</p>
+      <ol>
+        <li>\(I(t) = \frac{V}{R}(1 - e^{-t/\tau}) = \frac{10}{2}(1 - e^{-0.5/0.25})\)</li>
+        <li>\(I(0.5) = 5(1 - e^{-2}) = 5(1 - 0.135) = 4.33\) A</li>
+      </ol>
+      <p><strong>Answer:</strong> 4.33 A</p>
+    </div>
+    <div class="example-box">
+      <h3>Example 3: Energy Storage</h3>
+      <p><strong>Problem:</strong> What is the energy stored in the inductor when current is maximum?</p>
+      <ol>
+        <li>Maximum current: \(I = \frac{V}{R} = \frac{10}{2} = 5\) A</li>
+        <li>Energy: \(U = \frac{1}{2}LI^2 = \frac{1}{2}(0.5)(5)^2 = 6.25\) J</li>
+      </ol>
+      <p><strong>Answer:</strong> 6.25 J</p>
+    </div>
+
+    <h2>Quiz: LR Circuits</h2>
+    <div class="quiz-container">
+      <div class="quiz-question">
+        <p><strong>1. What is the time constant for \(L = 2\) H and \(R = 4\) Ω?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">0.5 s</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">2 s</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">8 s</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">0.25 s</div>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <p><strong>2. After one time constant, the current reaches:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">63% of final value</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">50% of final value</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">100% of final value</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">37% of final value</div>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <p><strong>3. When the switch is first closed, the voltage across the inductor is:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Equal to the applied voltage</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Zero</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Half the applied voltage</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Negative</div>
+        </div>
+      </div>
+      <div class="quiz-question">
+        <p><strong>4. After a long time, the inductor acts like:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">A wire</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">An open circuit</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">A battery</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">A resistor</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li>Calculate time constant for LR circuits</li>
+      <li>Determine current as function of time</li>
+      <li>Understand initial and final behavior</li>
+      <li>Calculate energy stored in inductor</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Current increases exponentially with time constant \(\tau = \frac{L}{R}\)</li>
+      <li>After \(\tau\) seconds, current reaches 63% of final value</li>
+      <li>Inductor opposes current changes initially</li>
+      <li>Energy is stored in the magnetic field</li>
+    </ul>
+
+    <h2>LR Circuit Interactive Simulation</h2>
+    <p>Explore how current changes over time in an LR circuit:</p>
+    
+    <!-- LR Circuit Interactive Canvas -->
+    <canvas id="lrCanvas" width="800" height="400" style="background-color: #f3e5ff; border-radius: 8px; margin: 2rem auto; display: block;"></canvas>
+    
+    <div style="text-align: center; margin: 1rem 0;">
+      <button id="startLR" style="background: #6f42c1; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Start Animation</button>
+      <button id="resetLR" style="background: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin: 0 10px; cursor: pointer;">Reset</button>
+    </div>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="voltageSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Voltage (V):</label>
+        <input type="range" id="voltageSlider" min="1" max="20" value="10" step="0.5" style="width: 100%;">
+        <div id="voltageValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">10.0 V</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="inductanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Inductance (H):</label>
+        <input type="range" id="inductanceSlider" min="0.1" max="2" value="0.5" step="0.1" style="width: 100%;">
+        <div id="inductanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">0.5 H</div>
+      </div>
+      
+      <div style="flex: 1; min-width: 200px; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+        <label for="resistanceSlider" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Resistance (Ω):</label>
+        <input type="range" id="resistanceSlider" min="1" max="10" value="2" step="0.5" style="width: 100%;">
+        <div id="resistanceValue" style="text-align: center; margin-top: 0.5rem; font-weight: bold;">2.0 Ω</div>
+      </div>
+    </div>
+    
+    <div id="currentDisplay" style="text-align: center; margin: 1rem 0; font-size: 1.2rem; color: #6f42c1; font-weight: bold;">
+      Time Constant: 0.25 s | Max Current: 5.0 A
+    </div>
+    
+    <div style="display: flex; justify-content: space-around; margin: 1rem 0; flex-wrap: wrap;">
+      <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 0.5rem; min-width: 200px;">
+        <div style="text-align: center; font-weight: bold; color: #6f42c1;">Voltage Across Inductor</div>
+        <div id="inductorVoltage" style="text-align: center; font-size: 1.1rem; margin-top: 0.5rem;">10.0 V</div>
+      </div>
+      <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 0.5rem; min-width: 200px;">
+        <div style="text-align: center; font-weight: bold; color: #6f42c1;">Voltage Across Resistor</div>
+        <div id="resistorVoltage" style="text-align: center; font-size: 1.1rem; margin-top: 0.5rem;">0.0 V</div>
+      </div>
+    </div>
+    
+    <h3 style="text-align: center; margin: 2rem 0 1rem 0; color: #6f42c1;">Current vs Time Graph</h3>
+    <canvas id="currentGraph" width="800" height="200" style="background-color: #f8f9fa; border: 2px solid #6f42c1; border-radius: 8px; display: block; margin: 1rem auto;"></canvas>
+    
+    <h3 style="text-align: center; margin: 2rem 0 1rem 0; color: #6f42c1;">Voltage vs Time Graph</h3>
+    <canvas id="voltageGraph" width="800" height="200" style="background-color: #f8f9fa; border: 2px solid #6f42c1; border-radius: 8px; display: block; margin: 1rem auto;"></canvas>
+  </div>
+  <script>
+    function checkAnswer(element, result) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      element.classList.add(result);
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+
+    // LR Circuit Animation
+    const lrCanvas = document.getElementById("lrCanvas");
+    const lrCtx = lrCanvas.getContext("2d");
+    const startLRButton = document.getElementById("startLR");
+    const resetLRButton = document.getElementById("resetLR");
+
+    let voltage = 10;
+    let inductance = 0.5;
+    let resistance = 2;
+    let timeConstant = inductance / resistance;
+    let maxCurrent = voltage / resistance;
+    let simulationTime = 0;
+    
+    // Electron particles for animation
+    let electrons = [];
+    let animationId = null;
+    let isAnimating = false;
+    
+    // Graph variables
+    const currentGraph = document.getElementById("currentGraph");
+    const graphCtx = currentGraph.getContext("2d");
+    const voltageGraph = document.getElementById("voltageGraph");
+    const voltageGraphCtx = voltageGraph.getContext("2d");
+    let graphData = [];
+    let voltageGraphData = [];
+    let graphTime = 0;
+
+    function drawLRScene() {
+      lrCtx.clearRect(0, 0, lrCanvas.width, lrCanvas.height);
+      
+      // Draw circuit background
+      lrCtx.fillStyle = "#f8f9fa";
+      lrCtx.fillRect(0, 0, lrCanvas.width, lrCanvas.height);
+      
+      // Draw battery symbol
+      lrCtx.strokeStyle = "#333";
+      lrCtx.lineWidth = 3;
+      
+      // Positive terminal (longer line)
+      lrCtx.beginPath();
+      lrCtx.moveTo(80, 170);
+      lrCtx.lineTo(120, 170);
+      lrCtx.stroke();
+      
+      // Negative terminal (shorter line)
+      lrCtx.beginPath();
+      lrCtx.moveTo(90, 180);
+      lrCtx.lineTo(110, 180);
+      lrCtx.stroke();
+      
+      // Battery label
+      lrCtx.fillStyle = "#333";
+      lrCtx.font = "12px Arial";
+      lrCtx.fillText("V = " + voltage + "V", 40, 180);
+      
+      // Draw circuit wires
+      lrCtx.strokeStyle = "#333";
+      lrCtx.lineWidth = 2;
+      lrCtx.setLineDash([]);
+      
+      // Top wire
+      lrCtx.beginPath();
+      lrCtx.moveTo(100, 120);
+      lrCtx.lineTo(650, 120);
+      lrCtx.stroke();
+      
+      // Right wire
+      lrCtx.beginPath();
+      lrCtx.moveTo(650, 120);
+      lrCtx.lineTo(650, 280);
+      lrCtx.stroke();
+      
+      // Bottom wire
+      lrCtx.beginPath();
+      lrCtx.moveTo(100, 280);
+      lrCtx.lineTo(650, 280);
+      lrCtx.stroke();
+      
+      // Left wire
+      lrCtx.beginPath();
+      lrCtx.moveTo(100, 120);
+      lrCtx.lineTo(100, 280);
+      lrCtx.stroke();
+      
+      // Draw inductor (standard circuit symbol)
+      lrCtx.strokeStyle = "#333";
+      lrCtx.lineWidth = 2;
+      
+      // Draw inductor coils on top wire (around x=300)
+      const coilStartX = 280;
+      const coilEndX = 320;
+      const coilY = 120;
+      const coilSpacing = 5;
+      const coilHeight = 20;
+      
+      lrCtx.beginPath();
+      // Start line
+      lrCtx.moveTo(280, coilY);
+      
+      // Draw 6 coils with smooth curves
+      for (let i = 0; i < 6; i++) {
+        const x = coilStartX + i * coilSpacing;
+        const nextX = x + coilSpacing;
+        
+        // Draw smooth coil curve
+        lrCtx.moveTo(x, coilY);
+        lrCtx.quadraticCurveTo(x + coilSpacing/2, coilY - coilHeight/2, nextX, coilY);
+        lrCtx.quadraticCurveTo(x + coilSpacing/2, coilY + coilHeight/2, nextX, coilY);
+      }
+      
+      // End line
+      lrCtx.lineTo(320, coilY);
+      lrCtx.stroke();
+      
+      // Draw zigzag resistor on right wire (around y=200)
+      lrCtx.beginPath();
+      lrCtx.moveTo(650, 190);
+      lrCtx.lineTo(640, 200);
+      lrCtx.lineTo(660, 210);
+      lrCtx.lineTo(640, 220);
+      lrCtx.lineTo(660, 230);
+      lrCtx.lineTo(650, 240);
+      lrCtx.stroke();
+      
+      // Add labels
+      lrCtx.fillStyle = "#333";
+      lrCtx.font = "18px Arial";
+      lrCtx.textAlign = "center";
+      
+      // L label (inductor)
+      lrCtx.fillText("L", 300, 150);
+      
+      // R label (resistor)
+      lrCtx.fillText("R", 680, 215);
+      
+      // White rectangle to cover wire between battery terminals
+      lrCtx.fillStyle = "#f8f9fa";
+      lrCtx.fillRect(75, 172, 50, 6);
+      
+      // Draw labels
+      lrCtx.fillStyle = "#333";
+      lrCtx.font = "16px Roboto, sans-serif";
+      lrCtx.textAlign = "center";
+      lrCtx.fillText("LR Circuit: I(t) = (V/R)(1 - e     )", 400, 50);
+lrCtx.font = "14px Arial";
+lrCtx.fillText("-t/τ", 490, 40); // Positioned as superscript
+lrCtx.font = "16px Roboto, sans-serif";
+      lrCtx.fillText("Time Constant: τ = L/R = " + timeConstant.toFixed(2) + " s", 400, 70);
+      lrCtx.fillText("Max Current: " + maxCurrent.toFixed(2) + " A", 400, 90);
+    }
+
+    // Electron class
+    class Electron {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.speed = 1;
+        this.pathIndex = 0;
+        this.pathProgress = 0;
+      }
+      
+      update() {
+        // Circuit path coordinates
+        const path = [
+          {x: 100, y: 120}, // Start at top left
+          {x: 285, y: 120}, // Top wire left (before inductor)
+          {x: 315, y: 120}, // Top wire right (after inductor)
+          {x: 650, y: 120}, // Top right
+          {x: 650, y: 190}, // Right wire top
+          {x: 650, y: 240}, // Right wire bottom (after resistor)
+          {x: 650, y: 280}, // Bottom right
+          {x: 100, y: 280}  // Bottom left
+        ];
+        
+        // Update speed based on current at this time - start very slow and speed up
+        const currentAtTime = maxCurrent * (1 - Math.exp(-simulationTime / timeConstant));
+        // Make speed start very slow (0.1) and scale up to normal speed
+        this.speed = 0.1 + currentAtTime * 0.8;
+        
+        const currentPoint = path[this.pathIndex];
+        const nextPoint = this.pathIndex === path.length - 1 ? path[0] : path[this.pathIndex + 1];
+        
+        // Calculate direction to next point
+        const dx = nextPoint.x - currentPoint.x;
+        const dy = nextPoint.y - currentPoint.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance > 0) {
+          // Calculate progress along current segment
+          const segmentProgress = this.pathProgress;
+          const targetX = currentPoint.x + (dx * segmentProgress);
+          const targetY = currentPoint.y + (dy * segmentProgress);
+          
+          // Move towards target position
+          const moveX = targetX - this.x;
+          const moveY = targetY - this.y;
+          const moveDistance = Math.sqrt(moveX * moveX + moveY * moveY);
+          
+          if (moveDistance > 0) {
+            this.x += (moveX / moveDistance) * this.speed;
+            this.y += (moveY / moveDistance) * this.speed;
+          }
+          
+          // Update progress along segment
+          this.pathProgress += this.speed / distance;
+          
+          // Check if reached next point
+          if (this.pathProgress >= 1) {
+            this.pathProgress = 0;
+            this.pathIndex = this.pathIndex === path.length - 1 ? 0 : this.pathIndex + 1;
+          }
+        }
+      }
+      
+      draw(ctx) {
+        ctx.fillStyle = "#e74c3c";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 3, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+    }
+
+    function startLRAnimation() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      electrons = [];
+      simulationTime = 0;
+      
+      // Create electrons with perfectly equidistant spacing around the loop
+      const numElectrons = 40;
+      const path = [
+        {x: 100, y: 120}, {x: 285, y: 120}, {x: 315, y: 120}, {x: 650, y: 120},
+        {x: 650, y: 190}, {x: 650, y: 240}, {x: 650, y: 280}, {x: 100, y: 280}
+      ];
+      
+      // Calculate total path length for proper spacing
+      let totalLength = 0;
+      for (let i = 0; i < path.length; i++) {
+        const current = path[i];
+        const next = path[(i + 1) % path.length];
+        const dx = next.x - current.x;
+        const dy = next.y - current.y;
+        totalLength += Math.sqrt(dx * dx + dy * dy);
+      }
+      
+      for (let i = 0; i < numElectrons; i++) {
+        // Calculate exact position along the path
+        const targetDistance = (i / numElectrons) * totalLength;
+        
+        // Find which segment this distance falls into
+        let accumulatedLength = 0;
+        let pathIndex = 0;
+        let segmentProgress = 0;
+        
+        for (let j = 0; j < path.length; j++) {
+          const current = path[j];
+          const next = path[(j + 1) % path.length];
+          const dx = next.x - current.x;
+          const dy = next.y - current.y;
+          const segmentLength = Math.sqrt(dx * dx + dy * dy);
+          
+          if (accumulatedLength + segmentLength >= targetDistance) {
+            pathIndex = j;
+            segmentProgress = (targetDistance - accumulatedLength) / segmentLength;
+            break;
+          }
+          accumulatedLength += segmentLength;
+        }
+        
+        // Calculate exact position
+        const currentPoint = path[pathIndex];
+        const nextPoint = path[(pathIndex + 1) % path.length];
+        const startX = currentPoint.x + (nextPoint.x - currentPoint.x) * segmentProgress;
+        const startY = currentPoint.y + (nextPoint.y - currentPoint.y) * segmentProgress;
+        
+        const electron = new Electron(startX, startY);
+        electron.pathIndex = pathIndex;
+        electron.pathProgress = segmentProgress;
+        electrons.push(electron);
+      }
+      
+      function animate() {
+        if (!isAnimating) return;
+        
+        simulationTime += 0.005; // Much slower time progression to make the effect clearly visible
+        drawLRScene();
+        
+        // Update and draw electrons
+        electrons.forEach(electron => {
+          electron.update();
+          electron.draw(lrCtx);
+        });
+        
+        // Update graph
+        updateGraph();
+        
+        animationId = requestAnimationFrame(animate);
+      }
+      
+      animate();
+    }
+
+    function drawCurrentGraph() {
+      graphCtx.clearRect(0, 0, currentGraph.width, currentGraph.height);
+      
+      // Draw grid
+      graphCtx.strokeStyle = "#ddd";
+      graphCtx.lineWidth = 1;
+      
+      // Vertical grid lines (time)
+      for (let i = 0; i <= 10; i++) {
+        const x = (i / 10) * currentGraph.width;
+        graphCtx.beginPath();
+        graphCtx.moveTo(x, 0);
+        graphCtx.lineTo(x, currentGraph.height);
+        graphCtx.stroke();
+      }
+      
+      // Horizontal grid lines (current)
+      for (let i = 0; i <= 5; i++) {
+        const y = (i / 5) * currentGraph.height;
+        graphCtx.beginPath();
+        graphCtx.moveTo(0, y);
+        graphCtx.lineTo(currentGraph.width, y);
+        graphCtx.stroke();
+      }
+      
+      // Draw axes
+      graphCtx.strokeStyle = "#333";
+      graphCtx.lineWidth = 2;
+      graphCtx.beginPath();
+      graphCtx.moveTo(0, currentGraph.height);
+      graphCtx.lineTo(currentGraph.width, currentGraph.height); // X-axis
+      graphCtx.moveTo(0, 0);
+      graphCtx.lineTo(0, currentGraph.height); // Y-axis
+      graphCtx.stroke();
+      
+      // Draw labels
+      graphCtx.fillStyle = "#333";
+      graphCtx.font = "12px Arial";
+      graphCtx.textAlign = "center";
+      graphCtx.fillText("Time (s)", currentGraph.width / 2, currentGraph.height - 5);
+      
+      graphCtx.save();
+      graphCtx.translate(10, currentGraph.height / 2);
+      graphCtx.rotate(-Math.PI / 2);
+      graphCtx.fillText("Current (A)", 0, 0);
+      graphCtx.restore();
+      
+      // Draw current line
+      if (graphData.length > 1) {
+        graphCtx.strokeStyle = "#6f42c1";
+        graphCtx.lineWidth = 3;
+        graphCtx.beginPath();
+        
+        graphData.forEach((point, index) => {
+          // Scale x-axis to show full history, with most recent data on the right
+          const maxTime = Math.max(...graphData.map(p => p.time));
+          const x = (point.time / Math.max(maxTime, 10)) * currentGraph.width;
+          const y = currentGraph.height - (point.current / maxCurrent) * currentGraph.height;
+          
+          if (index === 0) {
+            graphCtx.moveTo(x, y);
+          } else {
+            graphCtx.lineTo(x, y);
+          }
+        });
+        
+              graphCtx.stroke();
+    }
+  }
+  
+  function drawVoltageGraph() {
+    voltageGraphCtx.clearRect(0, 0, voltageGraph.width, voltageGraph.height);
+    
+    // Draw grid
+    voltageGraphCtx.strokeStyle = "#ddd";
+    voltageGraphCtx.lineWidth = 1;
+    
+    // Vertical grid lines (time)
+    for (let i = 0; i <= 10; i++) {
+      const x = (i / 10) * voltageGraph.width;
+      voltageGraphCtx.beginPath();
+      voltageGraphCtx.moveTo(x, 0);
+      voltageGraphCtx.lineTo(x, voltageGraph.height);
+      voltageGraphCtx.stroke();
+    }
+    
+    // Horizontal grid lines (voltage)
+    for (let i = 0; i <= 5; i++) {
+      const y = (i / 5) * voltageGraph.height;
+      voltageGraphCtx.beginPath();
+      voltageGraphCtx.moveTo(0, y);
+      voltageGraphCtx.lineTo(voltageGraph.width, y);
+      voltageGraphCtx.stroke();
+    }
+    
+    // Draw axes
+    voltageGraphCtx.strokeStyle = "#333";
+    voltageGraphCtx.lineWidth = 2;
+    voltageGraphCtx.beginPath();
+    voltageGraphCtx.moveTo(0, voltageGraph.height);
+    voltageGraphCtx.lineTo(voltageGraph.width, voltageGraph.height); // X-axis
+    voltageGraphCtx.moveTo(0, 0);
+    voltageGraphCtx.lineTo(0, voltageGraph.height); // Y-axis
+    voltageGraphCtx.stroke();
+    
+    // Draw labels
+    voltageGraphCtx.fillStyle = "#333";
+    voltageGraphCtx.font = "12px Arial";
+    voltageGraphCtx.textAlign = "center";
+    voltageGraphCtx.fillText("Time (s)", voltageGraph.width / 2, voltageGraph.height - 5);
+    
+    voltageGraphCtx.save();
+    voltageGraphCtx.translate(10, voltageGraph.height / 2);
+    voltageGraphCtx.rotate(-Math.PI / 2);
+    voltageGraphCtx.fillText("Voltage (V)", 0, 0);
+    voltageGraphCtx.restore();
+    
+    // Draw voltage lines
+    if (voltageGraphData.length > 1) {
+      // Scale x-axis to show full history
+      const maxTime = Math.max(...voltageGraphData.map(p => p.time));
+      
+      // Draw inductor voltage line (blue)
+      voltageGraphCtx.strokeStyle = "#3498db";
+      voltageGraphCtx.lineWidth = 3;
+      voltageGraphCtx.beginPath();
+      
+      voltageGraphData.forEach((point, index) => {
+        const x = (point.time / Math.max(maxTime, 10)) * voltageGraph.width;
+        const y = voltageGraph.height - (point.inductorVoltage / voltage) * voltageGraph.height;
+        
+        if (index === 0) {
+          voltageGraphCtx.moveTo(x, y);
+        } else {
+          voltageGraphCtx.lineTo(x, y);
+        }
+      });
+      
+      voltageGraphCtx.stroke();
+      
+      // Draw resistor voltage line (red)
+      voltageGraphCtx.strokeStyle = "#e74c3c";
+      voltageGraphCtx.lineWidth = 3;
+      voltageGraphCtx.beginPath();
+      
+      voltageGraphData.forEach((point, index) => {
+        const x = (point.time / Math.max(maxTime, 10)) * voltageGraph.width;
+        const y = voltageGraph.height - (point.resistorVoltage / voltage) * voltageGraph.height;
+        
+        if (index === 0) {
+          voltageGraphCtx.moveTo(x, y);
+        } else {
+          voltageGraphCtx.lineTo(x, y);
+        }
+      });
+      
+      voltageGraphCtx.stroke();
+      
+      // Add legend
+      voltageGraphCtx.fillStyle = "#3498db";
+      voltageGraphCtx.fillText("Inductor Voltage", voltageGraph.width - 120, 20);
+      voltageGraphCtx.fillStyle = "#e74c3c";
+      voltageGraphCtx.fillText("Resistor Voltage", voltageGraph.width - 120, 40);
+    }
+  }
+  
+  function updateGraph() {
+      // Calculate current at this time
+      const currentAtTime = maxCurrent * (1 - Math.exp(-simulationTime / timeConstant));
+      
+      // Calculate voltages
+      const inductorVoltage = voltage * Math.exp(-simulationTime / timeConstant);
+      const resistorVoltage = voltage - inductorVoltage;
+      
+      // Add current data point
+      graphData.push({
+        time: simulationTime,
+        current: currentAtTime
+      });
+      
+      // Add voltage data point
+      voltageGraphData.push({
+        time: simulationTime,
+        inductorVoltage: inductorVoltage,
+        resistorVoltage: resistorVoltage
+      });
+      
+      // Keep all data points to show full history
+      // Only limit to prevent memory issues after very long runs
+      if (graphData.length > 1000) {
+        graphData.shift();
+      }
+      if (voltageGraphData.length > 1000) {
+        voltageGraphData.shift();
+      }
+      
+      // Update voltage displays
+      document.getElementById("inductorVoltage").textContent = inductorVoltage.toFixed(1) + " V";
+      document.getElementById("resistorVoltage").textContent = resistorVoltage.toFixed(1) + " V";
+      
+      // Redraw graphs
+      drawCurrentGraph();
+      drawVoltageGraph();
+    }
+    
+    function resetLRAnimation() {
+      isAnimating = false;
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+      electrons = [];
+      graphData = []; // Clear graph data on reset
+      voltageGraphData = []; // Clear voltage graph data on reset
+      simulationTime = 0;
+      drawLRScene();
+      drawCurrentGraph();
+      drawVoltageGraph();
+    }
+
+    // Event listeners
+    startLRButton.addEventListener("click", startLRAnimation);
+    resetLRButton.addEventListener("click", resetLRAnimation);
+
+    // Slider event listeners
+    document.getElementById("voltageSlider").addEventListener("input", updateLRValues);
+    document.getElementById("inductanceSlider").addEventListener("input", updateLRValues);
+    document.getElementById("resistanceSlider").addEventListener("input", updateLRValues);
+
+    function updateLRValues() {
+      voltage = parseFloat(document.getElementById("voltageSlider").value);
+      inductance = parseFloat(document.getElementById("inductanceSlider").value);
+      resistance = parseFloat(document.getElementById("resistanceSlider").value);
+      
+      timeConstant = inductance / resistance;
+      maxCurrent = voltage / resistance;
+      
+      // Update display values
+      document.getElementById("voltageValue").textContent = voltage.toFixed(1) + " V";
+      document.getElementById("inductanceValue").textContent = inductance.toFixed(1) + " H";
+      document.getElementById("resistanceValue").textContent = resistance.toFixed(1) + " Ω";
+      document.getElementById("currentDisplay").textContent = 
+        `Time Constant: ${timeConstant.toFixed(2)} s | Max Current: ${maxCurrent.toFixed(2)} A`;
+      
+      // Redraw the scene
+      drawLRScene();
+      
+      // Update animation if running
+      if (isAnimating) {
+        resetLRAnimation();
+        startLRAnimation();
+      }
+    }
+
+    // Initialize
+    drawLRScene();
+    drawCurrentGraph();
+    drawVoltageGraph();
+    
+    // Initialize voltage displays
+    document.getElementById("inductorVoltage").textContent = voltage.toFixed(1) + " V";
+    document.getElementById("resistorVoltage").textContent = "0.0 V";
+  </script>
+</body>
+</html> 

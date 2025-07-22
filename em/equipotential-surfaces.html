@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about equipotential surfaces for AP Physics C. Study surfaces of constant potential, their relationship to electric fields, and applications in electrostatics." />
+  <title>Equipotential Surfaces</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .equipotential-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Equipotential Surfaces</h1>
+
+    <p>
+      Equipotential surfaces are surfaces where the electric potential is constant at every point. They provide a powerful way to visualize electric fields and understand the relationship between electric potential and electric field.
+    </p>
+
+    <h2>What are Equipotential Surfaces?</h2>
+
+    <div class="equipotential-box">
+      <h3>Definition</h3>
+      <p>An equipotential surface is a surface where the electric potential V has the same value at every point. Moving a charge along an equipotential surface requires no work.</p>
+    </div>
+
+    <p>
+      Equipotential surfaces are like contour lines on a topographic map, but for electric potential instead of elevation. They help us visualize how electric potential changes in space.
+    </p>
+
+    <figure>
+      <img src="equipotential-lines.png" alt="Equipotential lines on a positve charge" class="img-fluid-center">
+      <figcaption>
+        Equipotential surfaces around a positive point charge (concentric spheres).
+      </figcaption>
+    </figure>
+
+    <h2>Key Properties of Equipotential Surfaces</h2>
+
+    <div class="property-box">
+      <h3>Fundamental Properties</h3>
+      <ul>
+        <li><strong>Perpendicular to field lines:</strong> Electric field lines are always perpendicular to equipotential surfaces</li>
+        <li><strong>No work required:</strong> Moving a charge along an equipotential surface requires no work (W = qΔV = 0)</li>
+        <li><strong>Never cross:</strong> Equipotential surfaces never intersect each other</li>
+        <li><strong>Density indicates field strength:</strong> Closer equipotential surfaces indicate stronger electric fields</li>
+        <li><strong>Direction of field:</strong> Electric field points from high potential to low potential</li>
+      </ul>
+    </div>
+
+    <h2>Common Equipotential Surface Patterns</h2>
+
+    <h3>Point Charge</h3>
+    <p>For a single point charge, equipotential surfaces are concentric spheres:</p>
+    <div class="formula-box">
+      $$V = k\frac{q}{r} = \text{constant}$$
+    </div>
+    <p>This means r = constant, which describes a sphere centered on the charge.</p>
+
+    <h3>Two Equal Point Charges</h3>
+    <p>For two equal point charges, equipotential surfaces have a figure-8 shape in 2D, with the midpoint being a saddle point.</p>
+
+    <h3>Parallel Plates</h3>
+    <p>For parallel charged plates, equipotential surfaces are parallel planes between the plates, with equal spacing indicating uniform electric field.</p>
+
+    <h3>Dipole</h3>
+    <p>For an electric dipole (equal and opposite charges), equipotential surfaces are more complex, with a zero-potential surface passing through the midpoint.</p>
+
+    <h2>Visually:</h2>
+    <figure>
+      <img src = "equipotential-diagram.png" alt="Equipotential lines" class="img-fluid-center">
+      
+    </figure>
+    <p>Points F and G have the same potential because they are on an equipotential line at -50 V. Also, C and B have the same potential because they are at the same equipotential line at 10 V</p>
+
+    <h2>Relationship to Electric Field</h2>
+
+    <div class="formula-box">
+      <h3>Simple Relationship</h3>
+      <p>The electric field always points from high potential to low potential, and is perpendicular to equipotential surfaces.</p>
+      <p>In simple cases (like between parallel plates or along a line):</p>
+      <p>$$E = -\frac{\Delta V}{\Delta x}$$</p>
+      <p>This means the electric field strength is the rate at which the potential changes with distance. The negative sign shows that the field points in the direction of decreasing potential.</p>
+    </div>
+
+    <p>
+      This relationship tells us:
+    </p>
+
+    <ul>
+      <li><strong>Field direction:</strong> Electric field lines point from high to low potential</li>
+      <li><strong>Field strength:</strong> Stronger fields correspond to closer equipotential surfaces</li>
+      <li><strong>Uniform field:</strong> Equally spaced equipotential surfaces indicate uniform electric field</li>
+      <li><strong>Zero field:</strong> Widely spaced equipotential surfaces indicate weak electric field</li>
+    </ul>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Equipotential Surfaces for a Point Charge</h3>
+      <p><strong>Problem:</strong> A point charge of +2.0 μC creates electric potential values of 1.0 × 10⁴ V, 5.0 × 10³ V, and 2.5 × 10³ V. What are the radii of these equipotential surfaces?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> q = +2.0 × 10⁻⁶ C, k = 8.99 × 10⁹ N⋅m²/C²</li>
+          <li><strong>Formula:</strong> \(r = k\frac{q}{V}\)</li>
+          <li><strong>For V = 1.0 × 10⁴ V:</strong> \(r_1 = (8.99 \times 10^9) \frac{2.0 \times 10^{-6}}{1.0 \times 10^4} = 1.8 \text{ m}\)</li>
+          <li><strong>For V = 5.0 × 10³ V:</strong> \(r_2 = (8.99 \times 10^9) \frac{2.0 \times 10^{-6}}{5.0 \times 10^3} = 3.6 \text{ m}\)</li>
+          <li><strong>For V = 2.5 × 10³ V:</strong> \(r_3 = (8.99 \times 10^9) \frac{2.0 \times 10^{-6}}{2.5 \times 10^3} = 7.2 \text{ m}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The equipotential surfaces are spheres with radii 1.8 m, 3.6 m, and 7.2 m respectively.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Work Done Moving Along Equipotential Surface</h3>
+      <p><strong>Problem:</strong> A charge of +1.0 μC is moved from point A to point B along an equipotential surface where V = 5.0 × 10³ V. How much work is done?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> q = +1.0 × 10⁻⁶ C, V_A = V_B = 5.0 × 10³ V</li>
+          <li><strong>Formula:</strong> \(W = q(V_B - V_A)\)</li>
+          <li><strong>Substitute:</strong> \(W = (1.0 \times 10^{-6})(5.0 \times 10^3 - 5.0 \times 10^3)\)</li>
+          <li><strong>Calculate:</strong> \(W = 0 \text{ J}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> No work is done (W = 0 J) because the potential difference is zero.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Electric Field from Equipotential Spacing</h3>
+      <p><strong>Problem:</strong> Two equipotential surfaces have potentials of 100 V and 90 V, separated by 2.0 cm. What is the magnitude of the electric field between them?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> V₁ = 100 V, V₂ = 90 V, Δx = 2.0 × 10⁻² m</li>
+          <li><strong>Formula:</strong> \(E = -\frac{\Delta V}{\Delta x}\)</li>
+          <li><strong>Substitute:</strong> \(E = -\frac{90 - 100}{2.0 \times 10^{-2}}\)</li>
+          <li><strong>Calculate:</strong> \(E = 500 \text{ V/m}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric field magnitude is 500 V/m, pointing from the 100 V surface toward the 90 V surface.</p>
+    </div>
+
+    <h2>Visualizing Equipotential Surfaces</h2>
+
+    <h3>2D Representation</h3>
+    <p>In two dimensions, equipotential surfaces become equipotential lines. These are often drawn as dashed lines to distinguish them from electric field lines.</p>
+
+    <h3>3D Representation</h3>
+    <p>In three dimensions, equipotential surfaces are actual surfaces. For simple cases like point charges, these are spheres.</p>
+
+    <h3>Computer Visualization</h3>
+    <p>Modern software can create detailed 3D visualizations of equipotential surfaces for complex charge distributions.</p>
+
+    
+
+    <h2>Applications of Equipotential Surfaces</h2>
+
+    <ul>
+      <li><strong>Circuit design:</strong> Understanding equipotential surfaces helps design efficient circuit layouts</li>
+      <li><strong>Electrostatic shielding:</strong> Conductors form equipotential surfaces, providing shielding</li>
+      <li><strong>Particle accelerators:</strong> Equipotential surfaces guide charged particles</li>
+      <li><strong>Medical imaging:</strong> EEG and ECG measurements use equipotential surfaces</li>
+      <li><strong>Geophysical exploration:</strong> Mapping equipotential surfaces helps locate underground resources</li>
+    </ul>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Confusing field lines and equipotential lines:</strong> Field lines are solid, equipotential lines are dashed</li>
+        <li><strong>Thinking equipotential surfaces can cross:</strong> They never intersect</li>
+        <li><strong>Forgetting the perpendicular relationship:</strong> Field lines are always perpendicular to equipotential surfaces</li>
+        <li><strong>Ignoring the work relationship:</strong> No work is done moving along equipotential surfaces</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A point charge creates equipotential surfaces at distances of 1.0 m, 2.0 m, and 4.0 m. What are the potential values at these surfaces if the charge is +3.0 μC?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Formula:</strong> \(V = k\frac{q}{r}\)</li>
+            <li><strong>For r = 1.0 m:</strong> \(V_1 = (8.99 \times 10^9) \frac{3.0 \times 10^{-6}}{1.0} = 2.7 \times 10^4 \text{ V}\)</li>
+            <li><strong>For r = 2.0 m:</strong> \(V_2 = (8.99 \times 10^9) \frac{3.0 \times 10^{-6}}{2.0} = 1.35 \times 10^4 \text{ V}\)</li>
+            <li><strong>For r = 4.0 m:</strong> \(V_3 = (8.99 \times 10^9) \frac{3.0 \times 10^{-6}}{4.0} = 6.7 \times 10^3 \text{ V}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 2.7 × 10⁴ V, 1.35 × 10⁴ V, and 6.7 × 10³ V respectively</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> Two parallel plates are separated by 5.0 cm and have a potential difference of 100 V. How many equipotential surfaces (including the plates) would you expect between them if they are equally spaced?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Electric field:</strong> \(E = \frac{100 \text{ V}}{0.05 \text{ m}} = 2000 \text{ V/m}\)</li>
+            <li><strong>For equal spacing:</strong> Each equipotential surface represents equal potential change</li>
+            <li><strong>If we want 5 surfaces:</strong> Potential difference between surfaces = 100 V ÷ 4 = 25 V</li>
+            <li><strong>Spacing:</strong> Distance between surfaces = 5.0 cm ÷ 4 = 1.25 cm</li>
+          </ol>
+          <p><strong>Answer:</strong> 5 equipotential surfaces (including the plates) with 1.25 cm spacing</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Equipotential surfaces</strong> are surfaces of constant electric potential</li>
+      <li><strong>Electric field lines</strong> are always perpendicular to equipotential surfaces</li>
+      <li><strong>No work</strong> is required to move a charge along an equipotential surface</li>
+      <li><strong>Closer surfaces</strong> indicate stronger electric fields</li>
+      <li><strong>Field direction</strong> is from high to low potential</li>
+      <li><strong>Common shapes:</strong> Spheres (point charges), planes (parallel plates), complex (multiple charges)</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Work along equipotential:</strong> \(W = q\Delta V = 0\)</li>
+        <li><strong>Electric field from potential:</strong> \(E = -\frac{\Delta V}{\Delta x}\)</li>
+        <li><strong>Point charge equipotentials:</strong> \(V = k\frac{q}{r} = \text{constant}\)</li>
+        <li><strong>Parallel plates:</strong> Equally spaced equipotential surfaces</li>
+        <li><strong>Field strength:</strong> Inversely proportional to equipotential spacing</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

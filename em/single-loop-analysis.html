@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about single-loop circuit analysis for AP Physics C. Study Kirchhoff's Voltage Law, Ohm's Law, and practical applications in electrical circuits." />
+  <title>Single-Loop Circuit Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* Single-loop specific styles */
+    .loop-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .analysis-step {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 5px solid #6f42c1;
+    }
+    
+    .step-number {
+      background: #6f42c1;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .step-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #6f42c1;
+      margin-bottom: 1rem;
+    }
+    
+    .step-description {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    
+    .circuit-image {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      margin: 1rem auto;
+      background-color: #f3e5ff;
+      border: 2px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #e8d5ff, #f3e5ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-weight: 600;
+      color: #6f42c1;
+    }
+    
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .results-table th {
+      background: #6f42c1;
+      color: white;
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .results-table td {
+      padding: 12px;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .results-table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Single-Loop Circuit Analysis</h1>
+
+    <p>
+      Single-loop circuit analysis is the foundation of circuit theory. These circuits contain one complete path for current flow and can be analyzed using Kirchhoff's Voltage Law (KVL). Understanding single-loop analysis is essential for more complex multi-loop circuits.
+    </p>
+
+    <h2>What is a Single-Loop Circuit?</h2>
+
+    <div class="formula-box">
+      <strong>Single-Loop Circuit:</strong> A circuit that contains exactly one closed path for current flow. All components are connected in series, and the same current flows through every component.
+    </div>
+
+    <p>
+      Characteristics of single-loop circuits:
+    </p>
+
+    <ul>
+      <li><strong>One Current:</strong> Same current flows through all components</li>
+      <li><strong>Series Connection:</strong> All components are in series</li>
+      <li><strong>KVL Analysis:</strong> One KVL equation is sufficient</li>
+      <li><strong>Simple Solution:</strong> Direct application of Ohm's Law</li>
+    </ul>
+
+    <figure>
+      <img src="single-loop-circuit.jpg" class="img-fluid-center">
+      <figcaption>
+        Single-loop circuit with batteries and resistors in series.
+      </figcaption>
+    </figure>
+
+    <h2>Systematic Analysis Method</h2>
+
+    <div class="analysis-step">
+      <div class="step-number">1</div>
+      <div class="step-title">Identify the Circuit</div>
+      <div class="step-description">
+        Confirm that the circuit has only one loop. All components should be connected in series with no branching.
+      </div>
+      
+      <div class="highlight-box">
+        💡 <strong>Tip:</strong> Trace the current path to ensure there's only one complete loop.
+      </div>
+    </div>
+
+    <div class="analysis-step">
+      <div class="step-number">2</div>
+      <div class="step-title">Choose Loop Direction</div>
+      <div class="step-description">
+        Pick a direction (clockwise or counterclockwise) to traverse the loop. This direction will be used for sign conventions.
+      </div>
+      
+      <div class="highlight-box">
+        ⚡ <strong>Direction Rule:</strong> Be consistent with your chosen direction throughout the analysis.
+      </div>
+    </div>
+
+    <div class="analysis-step">
+      <div class="step-number">3</div>
+      <div class="step-title">Write KVL Equation</div>
+      <div class="step-description">
+        Apply Kirchhoff's Voltage Law around the loop. Sum all voltage rises and drops, setting the total equal to zero.
+      </div>
+      <div class="formula-box">
+        $$\sum V = 0$$
+        <p><strong>For single-loop circuits:</strong></p>
+        $$\sum V_{sources} - \sum IR = 0$$
+      </div>
+      
+      <div class="highlight-box">
+        ⚡ <strong>KVL Rule:</strong> Voltage rises = Voltage drops around the loop.
+      </div>
+    </div>
+
+    <div class="analysis-step">
+      <div class="step-number">4</div>
+      <div class="step-title">Solve for Current</div>
+      <div class="step-description">
+        Use algebra to solve for the current. Since all components are in series, there's only one current value.
+      </div>
+      <div class="formula-box">
+        $$I = \frac{\sum V_{sources}}{\sum R}$$
+      </div>
+      
+      <div class="highlight-box">
+        ✅ <strong>Result:</strong> One current value for the entire circuit.
+      </div>
+    </div>
+
+    <div class="analysis-step">
+      <div class="step-number">5</div>
+      <div class="step-title">Find Voltage Drops</div>
+      <div class="step-description">
+        Use Ohm's Law to find the voltage drop across each resistor: V = IR.
+      </div>
+      <div class="formula-box">
+        $$V_i = I \times R_i$$
+      </div>
+      
+      <div class="highlight-box">
+        ✅ <strong>Verification:</strong> Sum of voltage drops should equal sum of voltage sources.
+      </div>
+    </div>
+
+    <h2>Worked Example: Basic Single-Loop Circuit</h2>
+
+    <div class="example-box">
+      <h3>Example: Find current and voltage drops</h3>
+      <p><strong>Problem:</strong> A 24V battery is connected to three resistors in series: R₁=4Ω, R₂=6Ω, R₃=2Ω. Find the current and voltage drop across each resistor.</p>
+      
+      <figure>
+        <img src="single-loop-circuit.png">
+        <figcaption>Single-loop circuit with three resistors</figcaption>
+      </figure>
+
+      <h4>Step 1: Identify the Circuit</h4>
+      <p>This is a single-loop circuit with one battery and three resistors in series.</p>
+
+      <h4>Step 2: Choose Loop Direction</h4>
+      <p>Let's traverse the loop clockwise, starting from the battery.</p>
+
+      <h4>Step 3: Write KVL Equation</h4>
+      <div class="formula-box">
+        $$+24V - I(4Ω) - I(6Ω) - I(2Ω) = 0$$
+        $$+24V - I(4Ω + 6Ω + 2Ω) = 0$$
+        $$+24V - I(12Ω) = 0$$
+      </div>
+
+      <h4>Step 4: Solve for Current</h4>
+      <div class="formula-box">
+        $$24V - 12I = 0$$
+        $$12I = 24V$$
+        $$I = \frac{24V}{12Ω} = 2A$$
+      </div>
+
+      <h4>Step 5: Find Voltage Drops</h4>
+      <div class="formula-box">
+        $$V_1 = I \times R_1 = 2A \times 4Ω = 8V$$
+        $$V_2 = I \times R_2 = 2A \times 6Ω = 12V$$
+        $$V_3 = I \times R_3 = 2A \times 2Ω = 4V$$
+      </div>
+
+      <h4>Step 6: Verify Results</h4>
+      <div class="formula-box">
+        $$V_{total} = V_1 + V_2 + V_3 = 8V + 12V + 4V = 24V$$
+      </div>
+
+      <h4>Results Summary</h4>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Resistance (Ω)</th>
+            <th>Current (A)</th>
+            <th>Voltage Drop (V)</th>
+            <th>Power (W)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>R₁</td>
+            <td>4</td>
+            <td>2</td>
+            <td>8</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>R₂</td>
+            <td>6</td>
+            <td>2</td>
+            <td>12</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>R₃</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>8</td>
+          </tr>
+          <tr style="background: #e8f5e8; font-weight: bold;">
+            <td>Total</td>
+            <td>12</td>
+            <td>2</td>
+            <td>24</td>
+            <td>48</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Answer</h4>
+      <p><strong>The current is 2A, and the voltage drops are 8V, 12V, and 4V respectively.</strong></p>
+    </div>
+
+    <h2>Complex Single-Loop Examples</h2>
+
+    <div class="example-box">
+      <h3>Example: Multiple Voltage Sources</h3>
+      <p><strong>Problem:</strong> A circuit has two batteries (18V and 6V) and three resistors (3Ω, 4Ω, 5Ω) in series. Find the current and voltage drops.</p>
+      
+      <figure>
+        <img src="complex-single.png">
+        <figcaption>Single-loop circuit with multiple voltage sources</figcaption>
+      </figure>
+
+      <h4>Step 1: Write KVL Equation</h4>
+      <div class="formula-box">
+        $$+18V - 6V - I(3Ω) - I(4Ω) - I(5Ω) = 0$$
+        $$+12V - I(12Ω) = 0$$
+      </div>
+      <p><b>Remember:</b> going from the positive to the negative terminal of the battery is a voltage <b>drop</b>.</p>
+
+      <h4>Step 2: Solve for Current</h4>
+      <div class="formula-box">
+        $$12V - 12I = 0$$
+        $$I = \frac{12V}{12Ω} = 1A$$
+      </div>
+
+      <h4>Step 3: Find Voltage Drops</h4>
+      <div class="formula-box">
+        $$V_1 = 1A \times 3Ω = 3V$$
+        $$V_2 = 1A \times 4Ω = 4V$$
+        $$V_3 = 1A \times 5Ω = 5V$$
+      </div>
+
+      <h4>Answer</h4>
+      <p><strong>The current is 1A, and the voltage drops are 3V, 4V, and 5V respectively.</strong></p>
+    </div>
+
+    <h2>Common Single-Loop Configurations</h2>
+
+    <div class="loop-box">
+      <h3>🔋 Single Battery with Multiple Resistors</h3>
+      <div class="formula-box">
+        $$I = \frac{V_{battery}}{R_1 + R_2 + R_3 + ...}$$
+        $$V_i = I \times R_i$$
+      </div>
+      <p><strong>Application:</strong> Most common single-loop configuration</p>
+    </div>
+
+    <div class="loop-box">
+      <h3>⚡ Multiple Batteries in Series</h3>
+      <div class="formula-box">
+        $$I = \frac{V_1 + V_2 + V_3 + ...}{R_1 + R_2 + R_3 + ...}$$
+      </div>
+      <p><strong>Application:</strong> Battery packs and voltage addition</p>
+    </div>
+
+    <div class="loop-box">
+      <h3>🔄 Opposing Batteries</h3>
+      <div class="formula-box">
+        $$I = \frac{V_1 - V_2}{R_1 + R_2 + R_3 + ...}$$
+      </div>
+      <p><strong>Application:</strong> When batteries oppose each other</p>
+    </div>
+
+    <h2>Power Analysis in Single-Loop Circuits</h2>
+
+    <div class="example-box">
+      <h3>Power Calculations</h3>
+      <p>In single-loop circuits, power can be calculated for each component:</p>
+      
+      <div class="formula-box">
+        <h4>Power Formulas</h4>
+        <ul>
+          <li><strong>Resistor Power:</strong> P = I²R = V²/R = IV</li>
+          <li><strong>Battery Power:</strong> P = IV (positive if supplying, negative if receiving)</li>
+          <li><strong>Total Power:</strong> P_total = I²R_total</li>
+        </ul>
+      </div>
+
+      <h4>Example: Power Calculation</h4>
+      <p>Using the previous example with I = 2A:</p>
+      <div class="formula-box">
+        $$P_1 = I^2R_1 = (2A)^2 \times 4Ω = 16W$$
+        $$P_2 = I^2R_2 = (2A)^2 \times 6Ω = 24W$$
+        $$P_3 = I^2R_3 = (2A)^2 \times 2Ω = 8W$$
+        $$P_{total} = 16W + 24W + 8W = 48W$$
+      </div>
+    </div>
+
+    <h2>Key Takeaways Summary</h2>
+
+    <div class="formula-box">
+      <h3>🎯 Essential Single-Loop Concepts</h3>
+      <ul>
+        <li><strong>One Current:</strong> Same current flows through all components</li>
+        <li><strong>Series Connection:</strong> All components are in series</li>
+        <li><strong>KVL Analysis:</strong> One equation is sufficient</li>
+        <li><strong>Simple Solution:</strong> Direct application of Ohm's Law</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>⚡ Analysis Steps</h3>
+      <ol>
+        <li><strong>Identify:</strong> Confirm single-loop configuration</li>
+        <li><strong>Choose Direction:</strong> Pick clockwise or counterclockwise</li>
+        <li><strong>Write KVL:</strong> Sum all voltages = 0</li>
+        <li><strong>Solve Current:</strong> I = ΣV_sources / ΣR</li>
+        <li><strong>Find Voltages:</strong> V_i = I × R_i</li>
+      </ol>
+    </div>
+
+    <div class="formula-box">
+      <h3>🔍 Key Formulas</h3>
+      <ul>
+        <li><strong>Current:</strong> I = V_total / R_total</li>
+        <li><strong>Voltage Drop:</strong> V_i = I × R_i</li>
+        <li><strong>Power:</strong> P_i = I²R_i = V_i²/R_i</li>
+        <li><strong>Verification:</strong> ΣV_drops = ΣV_sources</li>
+      </ul>
+    </div>
+
+    <div class="formula-box">
+      <h3>✅ Verification Methods</h3>
+      <ul>
+        <li><strong>Voltage Check:</strong> Sum of voltage drops = battery voltage</li>
+        <li><strong>Current Check:</strong> Same current through all components</li>
+        <li><strong>Power Check:</strong> Power supplied = Power dissipated</li>
+        <li><strong>Ohm's Law:</strong> V = IR must hold for each resistor</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box" style="background: linear-gradient(135deg, #e8f5e8, #f0f8f0); border-color: #28a745; color: #155724;">
+      <h3>💡 Pro Tips for Single-Loop Analysis</h3>
+      <ul>
+        <li><strong>Start Simple:</strong> Begin with basic single-battery circuits</li>
+        <li><strong>Be Systematic:</strong> Follow the 5-step method consistently</li>
+        <li><strong>Check Signs:</strong> Verify sign conventions for voltage sources</li>
+        <li><strong>Verify Results:</strong> Always check that your answer makes sense</li>
+        <li><strong>Practice Regularly:</strong> Single-loop analysis is the foundation for complex circuits</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

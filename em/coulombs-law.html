@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study Coulomb's law and electric force for AP Physics C. Learn about the inverse square law, electric force between charges, and electrostatic interactions." />
+  <title>Coulomb's Law and Electric Force</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #chargeDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Coulomb's Law and Electric Force</h1>
+
+    <p>
+      Coulomb's Law is the fundamental equation that describes the electric force between two point charges. It was discovered by Charles-Augustin de Coulomb in 1785 and forms the foundation of electrostatics.
+    </p>
+
+    <h2>What is Coulomb's Law?</h2>
+
+    <div class="formula-box">
+      $$F = k\frac{q_1 q_2}{r^2}$$
+    </div>
+
+    <p>
+      Coulomb's Law states that the magnitude of the electric force between two point charges is directly proportional to the product of their charges and inversely proportional to the square of the distance between them.
+    </p>
+
+    <ul>
+      <li><strong>F:</strong> Electric force (N)</li>
+      <li><strong>k:</strong> Coulomb's constant = 8.99 × 10⁹ N⋅m²/C²</li>
+      <li><strong>q₁, q₂:</strong> Charges of the two objects (C)</li>
+      <li><strong>r:</strong> Distance between the charges (m)</li>
+    </ul>
+
+    <div class="formula-box">
+      $$k = \frac{1}{4\pi\epsilon_0}$$
+    </div>
+
+    <p>
+      Coulomb's constant is related to the permittivity of free space (ε₀) by the equation above. The permittivity of free space is ε₀ = 8.85 × 10⁻¹² C²/N⋅m². We will talk more about ε when we talk about capacitors.
+    </p>
+
+    <figure>
+      <img src="coulombs-law-diagram.png" alt="Coulomb's Law Diagram" class="img-fluid-center">
+      <figcaption>
+        The electric force between two point charges.
+      </figcaption>
+    </figure>
+
+    <h2>Law of Charges</h2>
+
+    <div class="formula-box">
+      $$\text{Like charges repel, opposite charges attract}$$
+    </div>
+
+    <p>
+      The fundamental law of electric charges governs all electrostatic interactions:
+    </p>
+
+    <ul>
+      <li><strong>Like charges repel:</strong> Two positive charges or two negative charges will push each other apart.</li>
+      <li><strong>Opposite charges attract:</strong> A positive charge and a negative charge will pull each other together.</li>
+      <li><strong>Neutral objects:</strong> Objects with no net charge experience no electrostatic force. However, if the object is polarized, it will experience a force (common in conductors).</li>
+      <li><strong>Force strength:</strong> The magnitude of the force depends on the amount of charge and the distance between charges. The magnitude of the force on each object is the same due to <b>Newton's 3rd law</b></li>
+    </ul>
+
+    <figure>
+      <img src="law-of-charges.png" alt="Law of Charges" class="img-fluid-center">
+      <figcaption>
+        Like charges repel, opposite charges attract.
+      </figcaption>
+      <img src="polarization.jpg" alt="Polarization" class="img-fluid-center">
+      <figcaption>
+        Polarization of a conductor.
+      </figcaption>
+    </figure>
+
+    <h2>Vector Form of Coulomb's Law</h2>
+
+    <div class="formula-box">
+      $$\vec{F}_{12} = k\frac{q_1 q_2}{r^2}\hat{r}_{12}$$
+    </div>
+
+    <p>
+      The vector form includes the direction of the force. The unit vector \(\hat{r}_{12}\) points from charge 1 toward charge 2. This determines whether the force is attractive or repulsive.
+    </p>
+
+    <h2>Key Properties of Coulomb's Law</h2>
+    <ul>
+      <li><strong>Inverse square law:</strong> Force decreases as 1/r²</li>
+      <li><strong>Superposition principle:</strong> Total force is the vector sum of individual forces</li>
+      <li><strong>Conservative force:</strong> Work done is path-independent</li>
+      <li><strong>Long-range force:</strong> Acts over large distances</li>
+    </ul>
+
+    <figure>
+      <img src="coulombs-law-graph.png" alt="Coulomb's Law Graph" class="img-fluid-center">
+      <figcaption>
+        Force decreases with the square of distance.
+      </figcaption>
+    </figure>
+
+    <h2>Comparing Electric and Gravitational Forces</h2>
+
+    <div class="formula-box">
+      $$\text{Electric: } F_e = k\frac{q_1 q_2}{r^2} \quad \text{Gravitational: } F_g = G\frac{m_1 m_2}{r^2}$$
+    </div>
+
+    <p>
+      Both forces follow inverse square laws, but electric forces can be attractive or repulsive, while gravitational forces are always attractive.
+    </p>
+
+<!-- Simulation Controls -->
+<div class="controls">
+  <div class="control-group">
+    <label>Charge 1 (μC): <span id="charge1Label">2</span></label>
+    <input type="range" min="-10" max="10" value="2" id="charge1Slider">
+  </div>
+  <div class="control-group">
+    <label>Charge 2 (μC): <span id="charge2Label">-3</span></label>
+    <input type="range" min="-10" max="10" value="-3" id="charge2Slider">
+  </div>
+  <div class="control-group">
+    <label>Distance (m): <span id="distanceLabel">0.1</span></label>
+    <input type="range" min="0.05" max="0.5" value="0.1" step="0.01" id="distanceSlider">
+  </div>
+</div>
+
+<div id="chargeDisplay" style="margin-top:1rem; font-weight:bold;">Force: 5.4 N (Attractive)</div>
+
+<!-- Charge Simulation Canvas -->
+<canvas id="chargeCanvas" width="720" height="200" style="background-color: #f3e5ff; border-radius: 8px;"></canvas>
+
+<!-- Force vs Distance Graph -->
+<canvas id="graph" width="720" height="300" style="background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-top: 1.5rem;"></canvas>
+
+<script>
+  const charge1Slider = document.getElementById("charge1Slider");
+  const charge2Slider = document.getElementById("charge2Slider");
+  const distanceSlider = document.getElementById("distanceSlider");
+  const charge1Label = document.getElementById("charge1Label");
+  const charge2Label = document.getElementById("charge2Label");
+  const distanceLabel = document.getElementById("distanceLabel");
+  const chargeDisplay = document.getElementById("chargeDisplay");
+  const canvas = document.getElementById("chargeCanvas");
+  const ctx = canvas.getContext("2d");
+
+  const graphCanvas = document.getElementById("graph");
+  const gctx = graphCanvas.getContext("2d");
+
+  let forceHistory = [];
+
+  let charges = {
+    q1: 2,
+    q2: -3,
+    distance: 0.1,
+    x1: 200,
+    x2: 520
+  };
+
+  function drawCharges() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw charge 1
+    ctx.fillStyle = charges.q1 > 0 ? "#ef476f" : "#6f42c1";
+    ctx.beginPath();
+    ctx.arc(charges.x1, 100, 30, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
+    // Draw charge 2
+    ctx.fillStyle = charges.q2 > 0 ? "#ef476f" : "#6f42c1";
+    ctx.beginPath();
+    ctx.arc(charges.x2, 100, 30, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+    
+    // Draw charge labels
+    ctx.fillStyle = "#333";
+    ctx.font = "16px Roboto, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText(charges.q1 > 0 ? "+" + charges.q1 : charges.q1, charges.x1, 110);
+    ctx.fillText(charges.q2 > 0 ? "+" + charges.q2 : charges.q2, charges.x2, 110);
+    
+    // Draw force arrows
+    const force = (8.99e9 * charges.q1 * charges.q2 * 1e-12) / (charges.distance * charges.distance);
+    if (Math.abs(force) > 0.1) {
+      ctx.strokeStyle = force > 0 ? "#ef476f" : "#6f42c1";
+      ctx.lineWidth = 3;
+      
+      if (force > 0) {
+        // Repulsive force - arrows on opposite sides pointing away from each other
+        ctx.beginPath();
+        ctx.moveTo(charges.x1 - 35, 100);
+        ctx.lineTo(charges.x1 - 70, 100);
+        // Arrowhead pointing left (away from other charge)
+        ctx.lineTo(charges.x1 - 65, 95);
+        ctx.moveTo(charges.x1 - 70, 100);
+        ctx.lineTo(charges.x1 - 65, 105);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(charges.x2 + 35, 100);
+        ctx.lineTo(charges.x2 + 70, 100);
+        // Arrowhead pointing right (away from other charge)
+        ctx.lineTo(charges.x2 + 65, 95);
+        ctx.moveTo(charges.x2 + 70, 100);
+        ctx.lineTo(charges.x2 + 65, 105);
+        ctx.stroke();
+      } else {
+        // Attractive force - arrows pointing inward (toward each other)
+        ctx.beginPath();
+        ctx.moveTo(charges.x1 + 35, 100);
+        ctx.lineTo(charges.x1 + 50, 100);
+        // Arrowhead pointing inward
+        ctx.lineTo(charges.x1 + 45, 95);
+        ctx.moveTo(charges.x1 + 50, 100);
+        ctx.lineTo(charges.x1 + 45, 105);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(charges.x2 - 35, 100);
+        ctx.lineTo(charges.x2 - 50, 100);
+        // Arrowhead pointing inward
+        ctx.lineTo(charges.x2 - 45, 95);
+        ctx.moveTo(charges.x2 - 50, 100);
+        ctx.lineTo(charges.x2 - 45, 105);
+        ctx.stroke();
+      }
+    }
+    
+    // Draw distance indicator at bottom
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 2;
+    ctx.font = "14px Roboto, sans-serif";
+    ctx.textAlign = "center";
+    
+    // Draw the distance bracket
+    ctx.beginPath();
+    ctx.moveTo(charges.x1, 170);
+    ctx.lineTo(charges.x1, 180);
+    ctx.moveTo(charges.x1, 175);
+    ctx.lineTo(charges.x2, 175);
+    ctx.moveTo(charges.x2, 170);
+    ctx.lineTo(charges.x2, 180);
+    ctx.stroke();
+    
+    // Add distance label
+    ctx.fillStyle = "#333";
+    ctx.fillText(`${charges.distance} m`, (charges.x1 + charges.x2) / 2, 195);
+  }
+
+  function drawGraph() {
+    // Clear the graph canvas
+    gctx.clearRect(0, 0, graphCanvas.width, graphCanvas.height);
+
+    // Draw axes
+    gctx.strokeStyle = "#888";
+    gctx.lineWidth = 1;
+    gctx.beginPath();
+    // X axis
+    gctx.moveTo(40, graphCanvas.height - 30);
+    gctx.lineTo(graphCanvas.width - 20, graphCanvas.height - 30);
+    // Y axis
+    gctx.moveTo(40, 20);
+    gctx.lineTo(40, graphCanvas.height - 30);
+    gctx.stroke();
+
+    // Labels
+    gctx.fillStyle = "#333";
+    gctx.font = "12px Roboto, sans-serif";
+    gctx.fillText("Distance (m) →", graphCanvas.width - 70, graphCanvas.height - 10);
+    gctx.fillText("Force (N)", 5, 15);
+
+    if (forceHistory.length < 2) return;
+
+    // Settings
+    const maxForce = 20;
+    const graphHeight = graphCanvas.height - 50;
+    const graphWidth = graphCanvas.width - 60;
+
+    // Draw line graph of force vs distance
+    gctx.strokeStyle = "#6f42c1";
+    gctx.lineWidth = 2;
+    gctx.beginPath();
+
+    forceHistory.forEach((force, index) => {
+      let x = 40 + (index / (forceHistory.length - 1)) * graphWidth;
+      let y = graphCanvas.height - 30 - (Math.abs(force) / maxForce) * graphHeight;
+      if (index === 0) {
+        gctx.moveTo(x, y);
+      } else {
+        gctx.lineTo(x, y);
+      }
+    });
+
+    gctx.stroke();
+  }
+
+  function update() {
+    // Update charge positions based on distance
+    const centerX = canvas.width / 2;
+    const halfDistance = charges.distance * 200; // Scale for visualization
+    charges.x1 = centerX - halfDistance;
+    charges.x2 = centerX + halfDistance;
+
+    drawCharges();
+
+    const force = (8.99e9 * charges.q1 * charges.q2 * 1e-12) / (charges.distance * charges.distance);
+    const forceType = force > 0 ? "Repulsive" : "Attractive";
+    chargeDisplay.textContent = `Force: ${Math.abs(force).toFixed(1)} N (${forceType})`;
+
+    // Update history
+    forceHistory.push(force);
+    if (forceHistory.length > 100) forceHistory.shift();
+
+    drawGraph();
+  }
+
+  function animate() {
+    update();
+    requestAnimationFrame(animate);
+  }
+
+  // Event Listeners
+  charge1Slider.oninput = () => {
+    charges.q1 = parseFloat(charge1Slider.value);
+    charge1Label.textContent = charge1Slider.value;
+  };
+
+  charge2Slider.oninput = () => {
+    charges.q2 = parseFloat(charge2Slider.value);
+    charge2Label.textContent = charge2Slider.value;
+  };
+
+  distanceSlider.oninput = () => {
+    charges.distance = parseFloat(distanceSlider.value);
+    distanceLabel.textContent = distanceSlider.value;
+  };
+
+  drawCharges();
+  animate();
+</script>
+
+  </div>
+</body>
+</html> 

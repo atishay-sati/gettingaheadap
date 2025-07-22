@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about magnetic force on current-carrying wires for AP Physics C. Study magnetic force formula, variables, and practical applications in electromagnetism." />
+  <title>Magnetic Force on Current-Carrying Wires</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    
+    /* Magnetic force on wires specific styles */
+    .force-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .torque-box {
+      background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+      border: 2px solid #17a2b8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #0c5460;
+    }
+    
+    .motor-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .applications-box {
+      background: #f8f9fa;
+      border: 2px solid #6c757d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #495057;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #ffe8e8, #fff0f0);
+      border: 2px solid #dc3545;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="MagneticFields-Electromagnetism.html" class="back-link">← Back to Concepts</a>
+    <h1>Magnetic Force on Current-Carrying Wires</h1>
+
+    <p>
+      Current-carrying wires experience magnetic forces when placed in magnetic fields. This fundamental interaction is the basis for electric motors, galvanometers, and many other electromagnetic devices. Understanding these forces is crucial for analyzing electromagnetic systems.
+    </p>
+
+    <h2>The Magnetic Force on a Wire</h2>
+
+    <div class="force-box">
+      <h3>⚡ Magnetic Force Formula</h3>
+      <p><strong>The magnetic force on a current-carrying wire is given by:</strong></p>
+      <p>This force is perpendicular to both the current direction and the magnetic field.</p>
+    </div>
+
+    <div class="formula-box">
+      $$\vec{F}_B = I\vec{L} \times \vec{B}$$
+    </div>
+
+    <h3>Variables in the Formula</h3>
+    <ul>
+      <li><strong>I:</strong> Current in the wire (A)</li>
+      <li><strong>L:</strong> Length of wire in the magnetic field (m)</li>
+      <li><strong>B:</strong> Magnetic field strength (T)</li>
+      <li><strong>θ:</strong> Angle between current direction and magnetic field direction</li>
+    </ul>
+
+    <h3>Key Characteristics</h3>
+    <ul>
+      <li><strong>Magnitude:</strong> \(F_B = ILB\sin\theta\) where θ is the angle between current and field</li>
+      <li><strong>Direction:</strong> Perpendicular to both current and magnetic field (palm rule)</li>
+      <li><strong>Right-Hand Rule:</strong> Point fingers in field direction, thumb in current direction, palm faces force direction</li>
+      <li><strong>Dependence:</strong> Force depends on current, wire length, and field strength</li>
+      <li><strong>Vector Nature:</strong> Force is a vector quantity with magnitude and direction</li>
+    </ul>
+
+    <figure>
+      <img src="force-wires.png" class="img-fluid-center">
+      <figcaption>
+        Vector diagram showing magnetic force perpendicular to current direction and magnetic field.
+      </figcaption>
+    </figure>
+
+    <div class="example-box">
+      <h3>Example: Basic Wire Force Calculation</h3>
+      <p><strong>Problem:</strong> A 0.5 m wire carries 3 A of current perpendicular to a 0.2 T magnetic field. Calculate the magnetic force on the wire.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>Current: I = 3 A</li>
+        <li>Length: L = 0.5 m</li>
+        <li>Magnetic field: B = 0.2 T</li>
+        <li>Angle: θ = 90° (perpendicular)</li>
+      </ul>
+
+      <h4>Step 2: Apply Force Formula</h4>
+      <ul>
+        <li>\(F_B = ILB\sin\theta\)</li>
+        <li>\(F_B = (3)(0.5)(0.2)\sin(90°)\)</li>
+        <li>\(F_B = 0.3\) N</li>
+      </ul>
+
+      <h4>Step 3: Determine Direction</h4>
+      <ul>
+        <li>Use right-hand rule: point fingers in magnetic field direction</li>
+        <li>Point thumb in current direction</li>
+        <li>Palm faces in force direction</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The magnetic force is 0.3 N, directed perpendicular to both the current and magnetic field.</strong></p>
+    </div>
+
+    <h2>Why Magnetic Forces Arise from Current-Carrying Wires</h2>
+
+    <div class="force-box">
+      <h3>🔍 Understanding the Source of Magnetic Forces</h3>
+      <p><strong>Magnetic forces on current-carrying wires arise from the collective motion of charged particles.</strong></p>
+      <p>Each moving electron in the wire experiences a magnetic force, and these individual forces combine to create the net force on the wire.</p>
+    </div>
+
+    <h3>Microscopic Explanation</h3>
+    <ul>
+      <li><strong>Moving Electrons:</strong> Each electron in the wire moves with drift velocity</li>
+      <li><strong>Individual Forces:</strong> Each electron experiences Lorentz force: \(\vec{F} = q\vec{v} \times \vec{B}\)</li>
+      <li><strong>Collective Effect:</strong> All electron forces add up to create net force on wire</li>
+      <li><strong>Wire Structure:</strong> Positive ions in wire lattice provide equal and opposite forces</li>
+    </ul>
+
+    
+
+    <div class="example-box">
+      <h3>Example: Force on Individual Electrons</h3>
+      <p><strong>Problem:</strong> Explain how the magnetic force on a wire relates to forces on individual electrons.</p>
+
+      <h4>Step 1: Electron Motion</h4>
+      <ul>
+        <li>Electrons move with drift velocity through wire</li>
+        <li>Each electron has charge q = -1.6 × 10⁻¹⁹ C</li>
+        <li>Electrons move in direction opposite to conventional current</li>
+      </ul>
+
+      <h4>Step 2: Individual Forces</h4>
+      <ul>
+        <li>Each electron experiences: \(\vec{F} = q\vec{v}_d \times \vec{B}\)</li>
+        <li>Force direction depends on electron velocity and field</li>
+        <li>All electrons experience force in same direction</li>
+      </ul>
+
+      <h4>Step 3: Net Force</h4>
+      <ul>
+        <li>Total force = Sum of all individual electron forces</li>
+        <li>Net force = Number of electrons × Force per electron</li>
+        <li>This gives the macroscopic force formula: \(\vec{F}_B = I\vec{L} \times \vec{B}\)</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The magnetic force on a wire is the sum of individual Lorentz forces on all moving electrons in the wire, resulting in the macroscopic force formula.</strong></p>
+    </div>
+
+    <h2>Electric Motor Principles</h2>
+
+    <div class="motor-box">
+      <h3>⚙️ Electric Motor Operation</h3>
+      <p><strong>Electric motors convert electrical energy to mechanical energy using magnetic forces on current-carrying wires.</strong></p>
+      <p>The basic motor consists of a current-carrying coil in a magnetic field that experiences forces.</p>
+    </div>
+
+    <h3>Motor Components</h3>
+    <ul>
+      <li><strong>Armature:</strong> Current-carrying coil that experiences magnetic forces</li>
+      <li><strong>Magnetic Field:</strong> Usually provided by permanent magnets or electromagnets</li>
+      <li><strong>Commutator:</strong> Reverses current direction to maintain rotation</li>
+      <li><strong>Brushes:</strong> Electrical contacts that connect to power source</li>
+    </ul>
+
+    <figure>
+      <img src="electric-motor.jpg" class="img-fluid-center">
+      <figcaption>
+        Simple electric motor showing armature, magnetic field, and commutator.
+      </figcaption>
+    </figure>
+
+    <div class="example-box">
+      <h3>Example: Motor Force Calculation</h3>
+      <p><strong>Problem:</strong> A motor has 100 turns of wire, each with length 0.1 m, carrying 1 A in a 0.3 T field. Calculate the total magnetic force on the coil.</p>
+
+      <h4>Step 1: Calculate Total Wire Length</h4>
+      <ul>
+        <li>Single turn length: L₁ = 0.1 m</li>
+        <li>Total length: (L_total) = N × L₁ = (100)(0.1) = 10 m</li>
+      </ul>
+
+      <h4>Step 2: Calculate Magnetic Force</h4>
+      <ul>
+        <li>\(F_B = ILB\sin\theta\)</li>
+        <li>\(F_B = (1)(10)(0.3)\sin(90°)\)</li>
+        <li>\(F_B = 3\) N</li>
+      </ul>
+
+      <h4>Step 3: Motor Operation</h4>
+      <ul>
+        <li>Force causes coil to move</li>
+        <li>Commutator reverses current to maintain motion</li>
+        <li>Converts electrical energy to mechanical motion</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The motor experiences a total magnetic force of 3 N on the coil, causing rotation and converting electrical to mechanical energy.</strong></p>
+    </div>
+
+    
+
+    <h2>Force Between Parallel Wires</h2>
+
+    <h3>Mutual Magnetic Forces</h3>
+    <ul>
+      <li><strong>Parallel Currents:</strong> Wires attract each other</li>
+      <li><strong>Antiparallel Currents:</strong> Wires repel each other</li>
+      <li><strong>Force per Unit Length:</strong> \(\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}\)</li>
+      <li><strong>Distance Dependence:</strong> Force decreases with wire separation</li>
+    </ul>
+
+    <div class="formula-box">
+      $$\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}$$
+    </div>
+
+    <h3>Derivation of the Force Between Parallel Wires</h3>
+
+    <div class="force-box">
+      <h3>🔬 Step-by-Step Derivation (come back after learning Ampere's law)</h3>
+      <p><strong>We derive the force between two parallel wires by combining Ampere's law and the magnetic force formula.</strong></p>
+      <p>This derivation shows how the magnetic field from one wire creates a force on the other wire.</p>
+    </div>
+
+    <h4>Magnetic Field from Wire 1</h4>
+    <p>Using Ampere's law, the magnetic field at a distance d from a long straight wire carrying current I₁ is:</p>
+    <div class="formula-box">     $$B_1 = \frac{\mu_0 I_1}{2\pi d}$$
+    </div>
+
+    <h4>Force on Wire 2</h4>
+    <p>Wire 2, carrying current I₂, experiences a magnetic force due to the field B₁ from wire 1:</p>
+    <div class="formula-box">
+      $$F_2 = I_2 L B_1sin\theta$$
+    </div>
+    <p>Since the current in wire 2s perpendicular to the magnetic field from wire 1, θ = 90° and sin(90 = 1:</p>
+    <div class="formula-box">
+      $$F_2 = I_2 L B_1$$
+    </div>
+
+    <h4>Step 3: Substitute the Magnetic Field</h4>
+    <p>Substituting the expression for B₁ from Step 1:</p>
+    <div class="formula-box">
+      $$F_2 = I_2 L \left(\frac{\mu_0 I_1}{2\pi d}\right)$$
+    </div>
+    <div class="formula-box">     $$F_2 = \frac{\mu_0 I_1 I_2}{2\pi d}$$
+    </div>
+
+    <h4>Step 4: Divide per Unit Length</h4>
+    <p>Dividing both sides by L to get the force per unit length:</p>
+    <div class="formula-box">
+      $$\frac{F_2}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}$$
+    </div>
+
+    <h4>Step 5: Direction of Force</h4>
+    <ul>
+      <li><strong>Parallel Currents (same direction):</strong> Wires attract each other</li>
+      <li><strong>Antiparallel Currents (opposite directions):</strong> Wires repel each other</li>
+      <li><strong>Right-Hand Rule:</strong> Use to determine force direction</li>
+    </ul>
+
+    
+    <figure>
+      <img src="wires-putting-force.png" class="img-fluid-center">
+      <figcaption>
+        Two parallel current-carrying wires experiencing mutual magnetic forces.
+      </figcaption>
+    </figure>
+
+    <div class="example-box">
+      <h3>Example: Force Between Wires</h3>
+      <p><strong>Problem:</strong> Two parallel wires carry 5 A and 3 A in the same direction, separated by 0.1 m. Calculate the force per unit length.</p>
+
+      <h4>Step 1: Identify Given Values</h4>
+      <ul>
+        <li>Current 1: I₁ = 5 A</li>
+        <li>Current 2: I₂ = 3 A</li>
+        <li>Separation: d = 0.1 m</li>
+        <li>Same direction: attractive force</li>
+      </ul>
+
+      <h4>Step 2: Apply Force Formula</h4>
+      <ul>
+        <li>\(\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}\)</li>
+        <li>\(\frac{F}{L} = \frac{(4\pi \times 10^{-7})(5)(3)}{2\pi(0.1)}\)</li>
+        <li>\(\frac{F}{L} = 3 \times 10^{-5}\) N/m</li>
+      </ul>
+
+      <h4>Step 3: Determine Direction</h4>
+      <ul>
+        <li>Same current direction: attractive force</li>
+        <li>Wires are pulled toward each other</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The force per unit length is 3 × 10⁻⁵ N/m, attracting the wires toward each other.</strong></p>
+    </div>
+
+    <h2>Practical Applications</h2>
+
+    <div class="applications-box">
+      <h3>🔧 Real-World Applications</h3>
+      <p><strong>Magnetic forces on current-carrying wires have numerous practical applications in modern technology.</strong></p>
+      <p>These applications range from electric motors to precision measurement devices.</p>
+    </div>
+
+    <h3>Key Applications</h3>
+    <ul>
+      <li><strong>Electric Motors:</strong> Convert electrical energy to mechanical motion</li>
+      <li><strong>Galvanometers:</strong> Measure small currents and voltages</li>
+      <li><strong>Loudspeakers:</strong> Convert electrical signals to sound</li>
+      <li><strong>Magnetic Levitation:</strong> Maglev trains use magnetic forces for propulsion</li>
+      <li><strong>Circuit Breakers:</strong> Use magnetic forces to trip when current is too high</li>
+      <li><strong>Electric Meters:</strong> Measure power consumption in homes</li>
+    </ul>
+
+    
+
+    <div class="example-box">
+      <h3>Example: Loudspeaker Operation</h3>
+      <p><strong>Problem:</strong> Explain how a loudspeaker uses magnetic forces on current-carrying wires.</p>
+
+      <h4>Step 1: Voice Coil</h4>
+      <ul>
+        <li>Coil of wire attached to speaker cone</li>
+        <li>Carries audio signal current</li>
+        <li>Located in permanent magnetic field</li>
+      </ul>
+
+      <h4>Step 2: Magnetic Force</h4>
+      <ul>
+        <li>Current creates magnetic force on coil</li>
+        <li>Force direction depends on current direction</li>
+        <li>Force magnitude depends on current magnitude</li>
+      </ul>
+
+      <h4>Step 3: Sound Production</h4>
+      <ul>
+        <li>Coil moves back and forth with audio signal</li>
+        <li>Speaker cone moves with coil</li>
+        <li>Creates sound waves in air</li>
+      </ul>
+
+      <h4>Answer</h4>
+      <p><strong>The loudspeaker uses magnetic forces on the voice coil to convert electrical audio signals into mechanical motion, producing sound waves.</strong></p>
+    </div>
+
+    <div class="warning-box">
+      <h3>⚠️ Common Misconceptions</h3>
+      <ul>
+        <li><strong>Force direction:</strong> Always perpendicular to both current and field, not parallel</li>
+        <li><strong>Torque direction:</strong> Tends to align magnetic moment with field direction</li>
+        <li><strong>Wire length:</strong> Only the component of length perpendicular to field matters</li>
+        <li><strong>Current direction:</strong> Conventional current direction, not electron flow</li>
+        <li><strong>Field strength:</strong> Force is proportional to field strength, not field direction</li>
+      </ul>
+    </div>
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>Force Formula:</strong> \(\vec{F}_B = I\vec{L} \times \vec{B}\) for magnetic force on wires</li>
+      <li><strong>Electron Motion:</strong> Forces arise from individual Lorentz forces on moving electrons</li>
+      <li><strong>Electric Motors:</strong> Convert electrical to mechanical energy using magnetic forces</li>
+      <li><strong>Galvanometers:</strong> Measure currents using balance of magnetic and restoring forces</li>
+      <li><strong>Parallel Wires:</strong> Attract when currents are parallel, repel when antiparallel</li>
+      <li><strong>Palm Rule:</strong> Point fingers in field direction, thumb in current direction, palm faces force direction</li>
+      <li><strong>Applications:</strong> Used in motors, speakers, meters, and many other devices</li>
+      <li><strong>Energy Conversion:</strong> Magnetic forces enable electrical-to-mechanical energy conversion</li>
+    </ul>
+
+  </div>
+</body>
+</html> 

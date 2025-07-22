@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about capacitor energy for AP Physics C. Study energy storage, formulas, and applications of capacitors in circuits." />
+  <title>Capacitor Energy Storage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .energy-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+    .comparison-box {
+      background-color: #fce4ec;
+      border-left: 6px solid #e91e63;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .comparison-box h3 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+    .interactive-box {
+      background-color: #f0f8ff;
+      border-left: 6px solid #4169e1;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    .interactive-box h3 {
+      color: #2e4a8f;
+      margin-top: 0;
+    }
+    .control-group {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #6f42c1;
+    }
+    .control-group h4 {
+      margin-top: 0;
+      color: #6f42c1;
+      font-size: 1.2rem;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      gap: 1rem;
+    }
+    .control-row label {
+      min-width: 120px;
+      font-weight: bold;
+    }
+    .control-row input {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-row input[type="range"] {
+      flex: 1;
+    }
+    .value-display {
+      min-width: 80px;
+      padding: 0.5rem;
+      background: #e9ecef;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .results-box {
+      background: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .results-box h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .result-item {
+      background: white;
+      padding: 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    .result-item strong {
+      color: #6f42c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Capacitor Energy Storage</h1>
+
+    <p>
+      Capacitors store electrical energy in the form of an electric field between their plates. Understanding how capacitors store and release energy is crucial for many applications in electronics and electrical engineering.
+    </p>
+
+    <h2>Energy Storage Formula</h2>
+
+    <div class="formula-box">
+      <h3>Capacitor Energy Formula</h3>
+      <p>$$E = \frac{1}{2}CV^2$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>E</strong> = Energy stored (Joules)</li>
+        <li><strong>C</strong> = Capacitance (Farads)</li>
+        <li><strong>V</strong> = Voltage across the capacitor (Volts)</li>
+      </ul>
+    </div>
+
+    <h3>Alternative Forms of the Energy Equation</h3>
+    
+    <div class="energy-box">
+      <h4>Different Ways to Express Capacitor Energy</h4>
+      <p>The energy stored in a capacitor can be expressed in several equivalent forms:</p>
+      
+      <div class="formula-box">
+        <h4>Form 1: In terms of Capacitance and Voltage</h4>
+        <p>$$E = \frac{1}{2}CV^2$$</p>
+        <p>This is the most common form, useful when you know the capacitance and voltage.</p>
+      </div>
+      
+      <div class="formula-box">
+        <h4>Form 2: In terms of Charge and Voltage</h4>
+        <p>$$E = \frac{1}{2}QV$$</p>
+        <p>Since Q = CV, this form is useful when you know the charge and voltage.</p>
+      </div>
+      
+      <div class="formula-box">
+        <h4>Form 3: In terms of Charge and Capacitance</h4>
+        <p>$$E = \frac{Q^2}{2C}$$</p>
+        <p>This form is useful when you know the charge and capacitance but not the voltage.</p>
+      </div>
+      
+      <div class="formula-box">
+        <h4>Form 4: In terms of Electric Field</h4>
+        <p>$$E = \frac{1}{2}\epsilon_0 E^2 \cdot Ad$$</p>
+        <p>Where ε₀ is the permittivity of free space, E is the electric field strength, A is the plate area, and d is the plate separation.</p>
+      </div>
+    </div>
+
+    <div class="calculation-steps">
+      <h4>Converting Between Forms</h4>
+      <p><strong>To convert between these forms, use these relationships:</strong></p>
+      <ul>
+        <li><strong>Q = CV</strong> (Charge = Capacitance × Voltage)</li>
+        <li><strong>V = Q/C</strong> (Voltage = Charge ÷ Capacitance)</li>
+        <li><strong>C = Q/V</strong> (Capacitance = Charge ÷ Voltage)</li>
+        <li><strong>V = Ed</strong> (Voltage = Electric Field × Distance)</li>
+      </ul>
+    </div>
+
+    <h2>Derivation of the Energy Formula</h2>
+
+    <p>Let's derive why the energy stored in a capacitor is given by \(E = \frac{1}{2}CV^2\):</p>
+
+    <div class="calculation-steps">
+      <h4>Derivation Steps:</h4>
+      <ol>
+        <li><strong>Work done to charge:</strong> To charge a capacitor, we must move charge against the electric field</li>
+        <li><strong>Incremental work:</strong> \(dW = V \, dq\) where \(V\) is the voltage and \(dq\) is a small amount of charge</li>
+        <li><strong>Voltage relationship:</strong> \(V = \frac{q}{C}\) (from \(Q = CV\))</li>
+        <li><strong>Substitute:</strong> \(dW = \frac{q}{C} \, dq\)</li>
+        <li><strong>Integrate:</strong> \(W = \int_0^Q \frac{q}{C} \, dq = \frac{1}{C} \int_0^Q q \, dq\)</li>
+        <li><strong>Result:</strong> \(W = \frac{1}{C} \cdot \frac{Q^2}{2} = \frac{Q^2}{2C}\)</li>
+        <li><strong>Final form:</strong> Since \(Q = CV\), we get \(E = \frac{1}{2}CV^2\)</li>
+      </ol>
+    </div>
+
+    <h3>Physical Intuition</h3>
+    <p>Think of charging a capacitor like filling a water tank:</p>
+    <ul>
+      <li><strong>Empty tank:</strong> Easy to add water (low voltage)</li>
+      <li><strong>Filling up:</strong> Gets harder to add more water (voltage increases)</li>
+      <li><strong>Full tank:</strong> Very hard to add more water (high voltage)</li>
+      <li><strong>Energy stored:</strong> The work done against the increasing pressure</li>
+    </ul>
+
+    <h2>Energy in Series and Parallel Capacitors</h2>
+
+    <h3>Series Capacitors</h3>
+    <div class="energy-box">
+      <p><strong>Total Energy:</strong></p>
+      <p>$$E_{total} = \frac{1}{2}C_{eq}V^2$$</p>
+      <p>Where \(C_{eq}\) is the equivalent capacitance of the series combination.</p>
+      <p><strong>Individual Capacitor Energy:</strong></p>
+      <p>$$E_i = \frac{1}{2}C_iV_i^2$$</p>
+      <p>Where \(V_i\) is the voltage across each capacitor.</p>
+    </div>
+
+    <h3>Parallel Capacitors</h3>
+    <div class="energy-box">
+      <p><strong>Total Energy:</strong></p>
+      <p>$$E_{total} = \frac{1}{2}C_{eq}V^2$$</p>
+      <p>Where \(C_{eq}\) is the equivalent capacitance of the parallel combination.</p>
+      <p><strong>Individual Capacitor Energy:</strong></p>
+      <p>$$E_i = \frac{1}{2}C_iV^2$$</p>
+      <p>All capacitors have the same voltage \(V\) in parallel.</p>
+    </div>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Single Capacitor Energy</h3>
+      <p><strong>Problem:</strong> A 10 μF capacitor is charged to 12 V. How much energy is stored?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> C = 10 μF = 10 × 10⁻⁶ F, V = 12 V</li>
+          <li><strong>Formula:</strong> E = ½ × C × V²</li>
+          <li><strong>Substitute:</strong> E = ½ × (10 × 10⁻⁶) × (12)²</li>
+          <li><strong>Calculate:</strong> E = ½ × 10⁻⁵ × 144 = 7.2 × 10⁻⁴ J</li>
+          <li><strong>Convert:</strong> E = 0.72 mJ</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The capacitor stores 0.72 millijoules of energy.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 1b: Using Different Energy Forms</h3>
+      <p><strong>Problem:</strong> A 10 μF capacitor is charged to 12 V. Calculate the energy using different forms of the equation.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution using different forms:</h4>
+        <ol>
+          <li><strong>Form 1 (CV²):</strong> E = ½ × (10 × 10⁻⁶) × (12)² = 0.72 mJ</li>
+          <li><strong>Form 2 (QV):</strong> Q = CV = 120 μC, E = ½ × (120 × 10⁻⁶) × 12 = 0.72 mJ</li>
+          <li><strong>Form 3 (Q²/2C):</strong> Q = 120 μC, E = (120 × 10⁻⁶)² / (2 × 10 × 10⁻⁶) = 0.72 mJ</li>
+        </ol>
+      </div>
+      
+      <p><strong>Note:</strong> All forms give the same result, showing they are equivalent!</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Series Capacitors Energy</h3>
+      <p><strong>Problem:</strong> Two capacitors of 2 μF and 4 μF are connected in series and charged to 24 V. Find the total energy stored.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Step 1 - Equivalent capacitance:</strong> \(\frac{1}{C_{eq}} = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\)</li>
+          <li><strong>Result:</strong> C_eq = 1.33 μF</li>
+          <li><strong>Step 2 - Total energy:</strong> E = ½ × C_eq × V²</li>
+          <li><strong>Substitute:</strong> E = ½ × (1.33 × 10⁻⁶) × (24)²</li>
+          <li><strong>Calculate:</strong> E = 0.384 mJ</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The total energy stored is 0.384 millijoules.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Parallel Capacitors Energy</h3>
+      <p><strong>Problem:</strong> Three capacitors of 1 μF, 2 μF, and 3 μF are connected in parallel and charged to 6 V. Find the total energy stored.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Step 1 - Equivalent capacitance:</strong> C_eq = 1 + 2 + 3 = 6 μF</li>
+          <li><strong>Step 2 - Total energy:</strong> E = ½ × C_eq × V²</li>
+          <li><strong>Substitute:</strong> E = ½ × (6 × 10⁻⁶) × (6)²</li>
+          <li><strong>Calculate:</strong> E = 0.108 mJ</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The total energy stored is 0.108 millijoules.</p>
+    </div>
+
+    <h2>Interactive Energy Calculator</h2>
+
+    <div class="interactive-box">
+      <h3>Calculate Capacitor Energy</h3>
+      
+      <div class="control-group">
+        <h4>Capacitor Parameters</h4>
+        <div class="control-row">
+          <label>Capacitance (μF):</label>
+          <input type="range" id="capacitanceSlider" min="0.1" max="100" value="10" step="0.1">
+          <span class="value-display" id="capacitanceDisplay">10.0 μF</span>
+        </div>
+        <div class="control-row">
+          <label>Voltage (V):</label>
+          <input type="range" id="voltageSlider" min="1" max="50" value="12" step="1">
+          <span class="value-display" id="voltageDisplay">12 V</span>
+        </div>
+      </div>
+
+      <div class="results-box">
+        <h4>Energy Results</h4>
+        <div class="results-grid" id="energyResults">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <h2>Applications of Capacitor Energy</h2>
+
+    <h3>Energy Storage Systems</h3>
+    <ul>
+      <li><strong>Supercapacitors:</strong> High-capacitance devices for energy storage</li>
+      <li><strong>Backup power:</strong> Uninterruptible power supplies (UPS)</li>
+      <li><strong>Electric vehicles:</strong> Regenerative braking systems</li>
+      <li><strong>Renewable energy:</strong> Solar and wind power storage</li>
+    </ul>
+
+    <h3>Electronic Applications</h3>
+    <ul>
+      <li><strong>Filtering:</strong> Smoothing power supply voltages</li>
+      <li><strong>Timing circuits:</strong> RC oscillators and delays</li>
+      <li><strong>Coupling:</strong> AC signal transmission between stages</li>
+      <li><strong>Energy harvesting:</strong> Collecting ambient energy</li>
+    </ul>
+
+    <h3>High-Energy Applications</h3>
+    <ul>
+      <li><strong>Pulse power:</strong> Rapid energy discharge for lasers</li>
+      <li><strong>Defibrillators:</strong> Medical devices for heart restart</li>
+      <li><strong>Rail guns:</strong> Electromagnetic propulsion systems</li>
+      <li><strong>Flash photography:</strong> Rapid light generation</li>
+    </ul>
+
+    <h2>Energy Density and Efficiency</h2>
+
+    <div class="property-box">
+      <h3>Energy Density Comparison</h3>
+      <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+        <tr style="background-color: #f8f9fa;">
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Storage Type</th>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Energy Density (J/kg)</th>
+          <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Advantages</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Capacitors</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">10⁴ - 10⁵</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Fast charge/discharge, long life</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Batteries</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">10⁵ - 10⁶</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">High energy density, stable voltage</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Supercapacitors</strong></td>
+          <td style="border: 1px solid #ddd; padding: 8px;">10⁴ - 10⁵</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">Very fast charge/discharge</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Wrong formula:</strong> Using E = CV instead of E = ½CV²</li>
+        <li><strong>Unit confusion:</strong> Mixing μF with F in calculations</li>
+        <li><strong>Voltage confusion:</strong> Using battery voltage instead of capacitor voltage</li>
+        <li><strong>Series/parallel:</strong> Not using equivalent capacitance for combinations</li>
+        <li><strong>Energy addition:</strong> Adding energies instead of using equivalent capacitance</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A 5 μF capacitor stores 0.5 mJ of energy. What is the voltage across it?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> C = 5 μF = 5 × 10⁻⁶ F, E = 0.5 mJ = 5 × 10⁻⁴ J</li>
+            <li><strong>Formula:</strong> E = ½CV² → V² = 2E/C</li>
+            <li><strong>Substitute:</strong> V² = 2 × (5 × 10⁻⁴) / (5 × 10⁻⁶) = 200</li>
+            <li><strong>Calculate:</strong> V = √200 = 14.14 V</li>
+          </ol>
+          <p><strong>Answer:</strong> 14.14 V</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> Two capacitors of 3 μF and 6 μF are connected in parallel and charged to 9 V. What is the total energy stored?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Step 1 - Equivalent capacitance:</strong> C_eq = 3 + 6 = 9 μF</li>
+            <li><strong>Step 2 - Total energy:</strong> E = ½ × C_eq × V²</li>
+            <li><strong>Substitute:</strong> E = ½ × (9 × 10⁻⁶) × (9)²</li>
+            <li><strong>Calculate:</strong> E = 0.3645 mJ</li>
+          </ol>
+          <p><strong>Answer:</strong> 0.365 mJ</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Energy formula:</strong> E = ½CV² for energy stored in a capacitor</li>
+      <li><strong>Series capacitors:</strong> Use equivalent capacitance, energy distributes based on voltage</li>
+      <li><strong>Parallel capacitors:</strong> Use equivalent capacitance, all have same voltage</li>
+      <li><strong>Energy density:</strong> Capacitors have lower energy density than batteries</li>
+      <li><strong>Applications:</strong> Energy storage, filtering, timing, and high-power applications</li>
+      <li><strong>Efficiency:</strong> Capacitors have very high charge/discharge efficiency</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Single capacitor:</strong> E = ½CV²</li>
+        <li><strong>Alternative forms:</strong> E = ½QV = Q²/2C</li>
+        <li><strong>Series capacitors:</strong> E_total = ½C_eqV²</li>
+        <li><strong>Parallel capacitors:</strong> E_total = ½C_eqV²</li>
+        <li><strong>Energy density:</strong> Energy per unit mass or volume</li>
+        <li><strong>Power:</strong> P = dE/dt = VI for time-varying systems</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    // Interactive energy calculator
+    function initEnergyCalculator() {
+      const capacitanceSlider = document.getElementById('capacitanceSlider');
+      const voltageSlider = document.getElementById('voltageSlider');
+      const capacitanceDisplay = document.getElementById('capacitanceDisplay');
+      const voltageDisplay = document.getElementById('voltageDisplay');
+      const energyResults = document.getElementById('energyResults');
+
+      function updateEnergy() {
+        const capacitance = parseFloat(capacitanceSlider.value);
+        const voltage = parseFloat(voltageSlider.value);
+        
+        // Convert μF to F
+        const capacitanceF = capacitance * 1e-6;
+        
+        // Calculate energy
+        const energyJ = 0.5 * capacitanceF * voltage * voltage;
+        const energyMJ = energyJ * 1000; // Convert to mJ
+        
+        // Update displays
+        capacitanceDisplay.textContent = capacitance.toFixed(1) + ' μF';
+        voltageDisplay.textContent = voltage + ' V';
+        
+        energyResults.innerHTML = `
+          <div class="result-item">
+            <strong>Energy Stored:</strong><br>
+            ${energyMJ.toFixed(3)} mJ
+          </div>
+          <div class="result-item">
+            <strong>Energy (Joules):</strong><br>
+            ${energyJ.toFixed(6)} J
+          </div>
+          <div class="result-item">
+            <strong>Charge Stored:</strong><br>
+            ${(capacitance * voltage).toFixed(2)} μC
+          </div>
+        `;
+      }
+
+      // Add event listeners
+      capacitanceSlider.addEventListener('input', updateEnergy);
+      voltageSlider.addEventListener('input', updateEnergy);
+      
+      // Initialize
+      updateEnergy();
+    }
+
+    // Initialize when page loads
+    window.addEventListener('load', initEnergyCalculator);
+  </script>
+</body>
+</html> 

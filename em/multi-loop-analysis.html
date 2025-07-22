@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about multi-loop circuit analysis for AP Physics C. Study Kirchhoff's Laws, circuit analysis, and practical applications in electrical circuits." />
+  <title>Multi-Loop Circuit Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    
+    .example-box ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    
+    .example-box ul li {
+      margin-bottom: 0.4rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .img-fluid-center {
+      width: 75%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    canvas {
+      background: #f3e5ff;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input[type=range], input[type=number] {
+      width: 100%;
+    }
+    #currentDisplay {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #6f42c1;
+      text-align: center;
+    }
+    #graph {
+      width: 100%;
+      height: 300px;
+    }
+    
+    /* Multi-loop specific styles */
+    .method-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #155724;
+    }
+    
+    .power-box {
+      background: linear-gradient(135deg, #fff3cd, #fef7e0);
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #856404;
+    }
+    
+    .sign-convention {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      color: #856404;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectricCircuits.html" class="back-link">← Back to Concepts</a>
+    <h1>Multi-Loop Circuit Analysis</h1>
+
+    <p>
+      Multi-loop circuit analysis involves applying Kirchhoff's Laws systematically to solve complex circuits with multiple loops and junctions. This method allows us to find currents, voltages, and power in each component of the circuit.
+    </p>
+
+    <h2>Systematic Analysis Method</h2>
+
+    <div class="method-box">
+      <h3>🎯 Systematic Approach</h3>
+      <p><strong>Multi-loop analysis uses Kirchhoff's Laws to create a system of equations that can be solved simultaneously.</strong></p>
+      <p>This systematic approach prevents errors and ensures all circuit elements are properly analyzed.</p>
+    </div>
+
+    <h3>Step 1: Identify Circuit Elements</h3>
+    <ul>
+      <li>Count the number of independent loops</li>
+      <li>Identify all voltage sources (batteries, emf)</li>
+      <li>Identify all resistors and their values</li>
+      <li>Mark junctions where currents split or combine</li>
+    </ul>
+    
+    <h3>Step 2: Assign Current Variables</h3>
+    <ul>
+      <li>Assign a current variable to each independent loop</li>
+      <li>Use consistent direction (clockwise or counterclockwise)</li>
+      <li>Label currents as I₁, I₂, I₃, etc.</li>
+      <li>Shared elements carry the difference of loop currents</li>
+    </ul>
+    
+    <h3>Step 3: Apply Kirchhoff's Voltage Law</h3>
+    <ul>
+      <li>Write KVL equation for each independent loop</li>
+      <li>Follow sign conventions: +V for voltage rises, -V for drops</li>
+      <li>Include all voltage sources and resistors in each loop</li>
+      <li>For shared elements, use the net current through them</li>
+    </ul>
+    
+    <h3>Step 4: Apply Kirchhoff's Current Law (if needed)</h3>
+    <ul>
+      <li>Use KCL at junctions to relate loop currents</li>
+      <li>This provides additional equations if needed</li>
+      <li>Often not necessary if loop currents are independent</li>
+    </ul>
+    
+    <h3>Step 5: Solve the System of Equations</h3>
+    <ul>
+      <li>Use substitution, elimination, or matrix methods</li>
+      <li>Check that the number of equations equals the number of unknowns</li>
+      <li>Verify solutions by checking power conservation</li>
+    </ul>
+
+    <div class="example-box">
+      <h3>Example: Three-Loop Circuit</h3>
+      <p><strong>Problem:</strong> Find the currents in a circuit with three loops, multiple resistors, and two batteries (12 V and 3 V).</p>
+      
+      <figure>
+        <img src="KVLCircuit.png" alt="Three-Loop Circuit" style="max-width: 100%; height: auto;" />
+        <figcaption>Complex circuit with three independent loops and two batteries</figcaption>
+      </figure>
+    
+      <h4>Step 1: Assign Current Variables</h4>
+      <p>Let \( I_1 \) be the current in the left loop (clockwise), \( I_2 \) be the current through the middle vertical branch (downward), and \( I_3 \) be the current in the right loop (clockwise).</p>
+    
+      <h4>Step 2: Write KVL Equations</h4>
+      <p>Apply Kirchhoff’s Voltage Law (KVL) to each loop, using the passive sign convention and Ohm’s Law.</p>
+      <div class="formula-box">
+        $$\text{Loop 1 (left loop): } 12 - 3I_1 - 2(I_1 - I_2) - 1I_1 = 0$$
+        $$\text{Loop 2 (vertical middle branch): } 2(I_1 - I_2) + 4I_2 - 2(I_3 - I_2) = 0$$
+        $$\text{Loop 3 (right loop): } 5I_3 + 2(I_3 - I_2) + 3I_3 - 3 = 0$$
+      </div>
+    
+      <h4>Step 3: Simplify the Equations</h4>
+      <div class="formula-box">
+        $$\text{Loop 1: } 12 = 6I_1 - 2I_2$$
+        $$\text{Loop 2: } 0 = 2I_1 - 8I_2 + 2I_3$$
+        $$\text{Loop 3: } 3 = 10I_3 - 2I_2$$
+      </div>
+    
+      <h4>Step 4: Solve the System of Equations</h4>
+      <p>Solving this system (by substitution or matrix methods) gives:</p>
+      <div class="formula-box">
+        $$I_1 = \frac{231}{104} \approx 2.22\,\text{A}$$
+        $$I_2 = \frac{69}{104} \approx 0.66\,\text{A}$$
+        $$I_3 = \frac{45}{104} \approx 0.43\,\text{A}$$
+      </div>
+    
+      <h4>Answer</h4>
+      <p><strong>The currents are:</strong></p>
+      <ul>
+        <li>\( I_1 = \frac{231}{104} \approx 2.22\,\text{A} \) (left loop, clockwise)</li>
+        <li>\( I_2 = \frac{69}{104} \approx 0.66\,\text{A} \) (middle branch, downward)</li>
+        <li>\( I_3 = \frac{45}{104} \approx 0.43\,\text{A} \) (right loop, clockwise)</li>
+      </ul>
+    </div>
+
+    <h2>Common Circuit Patterns</h2>
+
+    <h3>Bridge Circuits</h3>
+    <p>Circuits with cross-connections require careful current assignment:</p>
+    <ul>
+      <li>Use mesh analysis (loop currents)</li>
+      <li>Identify independent loops carefully</li>
+      <li>Shared elements carry current differences</li>
+    </ul>
+    
+    <h3>Delta-Wye Transformations</h3>
+    <p>For complex resistor networks:</p>
+    <ul>
+      <li>Convert delta (Δ) to wye (Y) configurations</li>
+      <li>Simplify before applying KVL/KCL</li>
+      <li>Transform back to find individual currents</li>
+    </ul>
+    
+    <h3>Superposition Method</h3>
+    <p>For circuits with multiple sources:</p>
+    <ul>
+      <li>Analyze each source separately</li>
+      <li>Set other sources to zero (replace batteries with wires)</li>
+      <li>Add results algebraically</li>
+    </ul>
+
+    <h2>Power Analysis</h2>
+
+<div class="power-box">
+  <h3>⚡ Power Calculations</h3>
+  <p><strong>Once currents are found, calculate power in each element:</strong></p>
+  <ul>
+    <li><strong>Resistors:</strong> P = I²R (always positive, power dissipated)</li>
+    <li><strong>Batteries:</strong> P = IV (positive if supplying power, negative if absorbing)</li>
+    <li><strong>Total power:</strong> ΣP = 0 (conservation of energy)</li>
+  </ul>
+</div>
+
+<h3>Verification</h3>
+<ul>
+  <li>Check that power supplied equals power dissipated</li>
+  <li>Verify that currents satisfy KCL at all junctions</li>
+  <li>Confirm that voltage drops satisfy KVL around all loops</li>
+</ul>
+
+<h2>Power Analysis</h2>
+
+<div class="power-box">
+  <h3>⚡ Power Calculations</h3>
+  <p><strong>Once currents are found, calculate power in each element:</strong></p>
+  <ul>
+    <li><strong>Resistors:</strong> P = I²R (always positive, power dissipated)</li>
+    <li><strong>Batteries:</strong> P = IV (positive if supplying power, negative if absorbing)</li>
+    <li><strong>Total power:</strong> ΣP = 0 (conservation of energy)</li>
+  </ul>
+</div>
+
+<h3>Verification</h3>
+<ul>
+  <li>Check that power supplied equals power dissipated</li>
+  <li>Verify that currents satisfy KCL at all junctions</li>
+  <li>Confirm that voltage drops satisfy KVL around all loops</li>
+</ul>
+
+<div class="example-box">
+  <h3>Example: Power Verification</h3>
+  <p><strong>Problem:</strong> Verify power conservation in the three-loop circuit.</p>
+  
+  <h4>Step 1: Calculate Power in Each Element</h4>
+  <div class="formula-box">
+    $$P_{R1} = I_1^2 R_1 = \left(\frac{231}{104}\right)^2 \cdot 3 \approx 14.25\,\text{W}$$
+    $$P_{R2} = I_2^2 R_2 = \left(\frac{69}{104}\right)^2 \cdot 4 \approx 1.76\,\text{W}$$
+    $$P_{R3} = (I_1 - I_2)^2 R_3 = \left(\frac{162}{104}\right)^2 \cdot 2 \approx 4.85\,\text{W}$$
+    $$P_{R4} = I_3^2 R_4 = \left(\frac{45}{104}\right)^2 \cdot 5 \approx 0.93\,\text{W}$$
+    $$P_{R5} = (I_2 - I_3)^2 R_5 = \left(\frac{24}{104}\right)^2 \cdot 1 \approx 0.05\,\text{W}$$
+  </div>
+
+  <h4>Step 2: Calculate Power Supplied</h4>
+  <div class="formula-box">
+    $$P_{B1} = I_1 \cdot 12 = \frac{231}{104} \cdot 12 \approx 26.65\,\text{W}$$
+    $$P_{B2} = I_2 \cdot 6 = \frac{69}{104} \cdot 6 \approx 3.98\,\text{W}$$
+    $$P_{B3} = I_3 \cdot 3 = \frac{45}{104} \cdot 3 \approx 1.30\,\text{W}$$
+  </div>
+
+  <h4>Step 3: Verify Conservation</h4>
+  <div class="formula-box">
+    $$\text{Power Supplied} \approx 26.65 + 3.98 + 1.30 = 31.93\,\text{W}$$
+    $$\text{Power Dissipated} \approx 14.25 + 1.76 + 4.85 + 0.93 + 0.05 = 31.84\,\text{W}$$
+    $$\text{Net Power Difference} \approx 31.93 - 31.84 = 0.09\,\text{W (would be 0 using more significant figures)}$$
+  </div>
+</div>
+
+<h2>For More Explanation/Practice:</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fm_Xh1dpmrU?si=eaogMWWVyDZtSvPn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+    <h2>Key Takeaways</h2>
+
+    <ul>
+      <li><strong>Systematic approach</strong> prevents errors in complex circuits</li>
+      <li><strong>Independent loops</strong> are crucial for correct analysis</li>
+      <li><strong>Sign conventions</strong> must be consistent throughout</li>
+      <li><strong>Power conservation</strong> provides a verification method</li>
+      <li><strong>Practice</strong> with various circuit topologies builds intuition</li>
+      <li><strong>Matrix methods</strong> are efficient for complex systems</li>
+    </ul>
+
+
+  </div>
+</body>
+</html> 

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn electric potential energy for AP Physics C. Study the energy stored in charge configurations, work done by electric forces, and potential energy calculations." />
+  <title>Electric Potential Energy</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .energy-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    .comparison-table th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    .comparison-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    .img-fluid-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      margin-bottom: 2rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Electric Potential Energy</h1>
+
+    <p>
+      Electric potential energy is the energy stored in a system of charges due to their positions relative to each other. It represents the work done to assemble the charge configuration and is a fundamental concept in electrostatics.
+    </p>
+
+    <h2>What is Electric Potential Energy?</h2>
+
+    <div class="formula-box">
+      $$U = k\frac{q_1 q_2}{r}$$
+    </div>
+    <div class="energy-box">
+      <b>What does zero electric potential energy mean?</b><br>
+      The value "zero" for electric potential energy (EPE) is always relative—it depends on where you choose your reference point and the sign of the charges involved. For two charges, we usually define EPE = 0 when they are infinitely far apart. But:
+      <ul>
+        <li>For <b>like charges</b> (both positive or both negative), EPE is positive when they are close, and zero means they are infinitely far apart (no interaction).</li>
+        <li>For <b>unlike charges</b> (one positive, one negative), EPE is negative when they are close, and zero still means infinitely far apart—but in this case, "zero" can mean the system has released a lot of energy as the charges came together.</li>
+      </ul>
+      <b>Bottom line:</b> Zero EPE can mean "no energy stored" or "all the energy has been released," depending on the sign and arrangement of the charges. Always pay attention to the context and the sign!
+    </div>
+
+    <p>
+      Electric potential energy is the work required to bring charges from infinity to their current positions. It depends on the charges involved and their separation distance.
+    </p>
+
+    <ul>
+      <li><strong>U:</strong> Electric potential energy (J)</li>
+      <li><strong>k:</strong> Coulomb's constant = 8.99 × 10⁹ N⋅m²/C²</li>
+      <li><strong>q₁, q₂:</strong> Charges (C)</li>
+      <li><strong>r:</strong> Distance between charges (m)</li>
+    </ul>
+
+    <figure>
+      <img src = "epe.png" alt="EPE" class="img-fluid-center"
+      <figcaption>
+        Work is done to bring charges together, storing potential energy.
+      </figcaption>
+    </figure>
+
+    <h2>Relationship to Work</h2>
+
+    <div class="energy-box">
+      <h3>Work-Energy Principle</h3>
+      <p>The electric potential energy equals the work done by an external force to assemble the charge configuration:</p>
+      <p>$$W = \Delta U = U_f - U_i$$</p>
+    </div>
+
+    <p>
+      When charges are moved by an external force:
+    </p>
+
+    <ul>
+      <li><strong>Positive work:</strong> External force does work on the system (energy increases)</li>
+      <li><strong>Negative work:</strong> Electric force does work (energy decreases)</li>
+      <li><strong>Zero work:</strong> Charges move perpendicular to field lines</li>
+    </ul>
+
+    <h2>Sign of Electric Potential Energy</h2>
+
+    <div class="formula-box">
+      <h3>Energy Sign Rules</h3>
+      <ul>
+        <li><strong>Positive energy:</strong> Like charges (repulsion) - work needed to bring them together</li>
+        <li><strong>Negative energy:</strong> Unlike charges (attraction) - work is released when they come together</li>
+        <li><strong>Zero energy:</strong> At infinite separation</li>
+      </ul>
+    </div>
+
+    <h2>Multiple Charge Systems</h2>
+
+    <div class="formula-box">
+      $$U_{\text{total}} = k\sum_{i < j} \frac{q_i q_j}{r_{ij}}$$
+    </div>
+
+    <p>
+      For multiple charges, the total potential energy is the sum of all pairwise interactions. Each pair contributes a term to the total energy.
+    </p>
+
+    <h3>Example: Three Charges</h3>
+    <p>For three charges q₁, q₂, q₃:</p>
+    <p>$$U = k\left(\frac{q_1 q_2}{r_{12}} + \frac{q_1 q_3}{r_{13}} + \frac{q_2 q_3}{r_{23}}\right)$$</p>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Two Point Charges</h3>
+      <p><strong>Problem:</strong> Calculate the electric potential energy of two charges: +3.0 μC and -2.0 μC, separated by 2.0 m.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> q₁ = +3.0 × 10⁻⁶ C, q₂ = -2.0 × 10⁻⁶ C, r = 2.0 m</li>
+          <li><strong>Formula:</strong> \(U = k\frac{q_1 q_2}{r}\)</li>
+          <li><strong>Substitute:</strong> \(U = (8.99 \times 10^9) \frac{(+3.0 \times 10^{-6})(-2.0 \times 10^{-6})}{2.0}\)</li>
+          <li><strong>Calculate:</strong> \(U = (8.99 \times 10^9) \frac{-6.0 \times 10^{-12}}{2.0}\)</li>
+          <li><strong>Result:</strong> \(U = -2.7 \times 10^{-2} \text{ J}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The electric potential energy is -2.7 × 10⁻² J (negative because unlike charges attract).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Work Required to Separate Charges</h3>
+      <p><strong>Problem:</strong> Two charges of +1.0 μC each are initially 1.0 m apart. How much work is required to separate them to 3.0 m?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Initial energy:</strong> \(U_i = k\frac{(1.0 \times 10^{-6})^2}{1.0} = 9.0 \times 10^{-3} \text{ J}\)</li>
+          <li><strong>Final energy:</strong> \(U_f = k\frac{(1.0 \times 10^{-6})^2}{3.0} = 3.0 \times 10^{-3} \text{ J}\)</li>
+          <li><strong>Work required:</strong> \(W = U_f - U_i = 3.0 \times 10^{-3} - 9.0 \times 10^{-3}\)</li>
+          <li><strong>Result:</strong> \(W = -6.0 \times 10^{-3} \text{ J}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> -6.0 × 10⁻³ J (negative work means the electric force does the work).</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Three Charge System</h3>
+      <p><strong>Problem:</strong> Three charges are placed at the corners of an equilateral triangle: +2.0 μC at each corner. The side length is 1.0 m. Find the total electric potential energy.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Each pair interaction:</strong> \(U_{pair} = k\frac{(2.0 \times 10^{-6})^2}{1.0} = 3.6 \times 10^{-2} \text{ J}\)</li>
+          <li><strong>Three pairs:</strong> Total energy = 3 × U_pair</li>
+          <li><strong>Calculate:</strong> \(U_{total} = 3 \times 3.6 \times 10^{-2} = 1.08 \times 10^{-1} \text{ J}\)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The total electric potential energy is 1.08 × 10⁻¹ J.</p>
+    </div>
+
+    <h2>Electric Potential Energy vs. Electric Potential</h2>
+
+    <table class="comparison-table">
+      <tr>
+        <th>Property</th>
+        <th>Electric Potential Energy (U)</th>
+        <th>Electric Potential (V)</th>
+      </tr>
+      <tr>
+        <td><strong>Definition</strong></td>
+        <td>Energy of charge system</td>
+        <td>Energy per unit charge</td>
+      </tr>
+      <tr>
+        <td><strong>Units</strong></td>
+        <td>Joules (J)</td>
+        <td>Volts (V = J/C)</td>
+      </tr>
+      <tr>
+        <td><strong>Formula</strong></td>
+        <td>U = kq₁q₂/r</td>
+        <td>V = kq/r</td>
+      </tr>
+      <tr>
+        <td><strong>Dependence</strong></td>
+        <td>Depends on all charges</td>
+        <td>Depends on source charge only</td>
+      </tr>
+      <tr>
+        <td><strong>Use</strong></td>
+        <td>System energy analysis</td>
+        <td>Field strength analysis</td>
+      </tr>
+    </table>
+
+    <h2>Applications of Electric Potential Energy</h2>
+
+    <ul>
+      <li><strong>Capacitors:</strong> Energy stored in electric fields between plates</li>
+      <li><strong>Batteries:</strong> Chemical energy converted to electrical potential energy</li>
+      <li><strong>Particle accelerators:</strong> Work done to separate charges</li>
+      <li><strong>Lightning:</strong> Release of stored electric potential energy</li>
+      <li><strong>Electron orbits:</strong> Energy levels in atoms</li>
+    </ul>
+
+    <h2>Conservation of Energy</h2>
+
+    <div class="energy-box">
+      <h3>Energy Conservation Principle</h3>
+      <p>In an isolated system, the total energy (kinetic + potential) remains constant:</p>
+      <p>$$K_i + U_i = K_f + U_f$$</p>
+    </div>
+
+    <p>
+      This principle allows us to:
+    </p>
+
+    <ul>
+      <li><strong>Calculate speeds:</strong> Convert potential energy to kinetic energy</li>
+      <li><strong>Find escape velocities:</strong> Minimum speed to overcome attraction</li>
+      <li><strong>Analyze orbits:</strong> Balance of kinetic and potential energy</li>
+      <li><strong>Predict motion:</strong> How charges will move in electric fields</li>
+    </ul>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A charge of +5.0 μC is moved from infinity to a point 2.0 m from a fixed charge of +3.0 μC. How much work is done?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Initial energy:</strong> U_i = 0 (at infinity)</li>
+            <li><strong>Final energy:</strong> \(U_f = k\frac{(5.0 \times 10^{-6})(3.0 \times 10^{-6})}{2.0}\)</li>
+            <li><strong>Work done:</strong> \(W = U_f - U_i = 6.7 \times 10^{-2} \text{ J}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 6.7 × 10⁻² J</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> Two electrons are initially 1.0 nm apart. What is their electric potential energy?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Electron charge:</strong> q = -1.6 × 10⁻¹⁹ C</li>
+            <li><strong>Distance:</strong> r = 1.0 × 10⁻⁹ m</li>
+            <li><strong>Energy:</strong> \(U = k\frac{(-1.6 \times 10^{-19})^2}{1.0 \times 10^{-9}}\)</li>
+            <li><strong>Result:</strong> \(U = 2.3 \times 10^{-19} \text{ J}\)</li>
+          </ol>
+          <p><strong>Answer:</strong> 2.3 × 10⁻¹⁹ J</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Electric potential energy</strong> is the work required to assemble a charge configuration</li>
+      <li><strong>Positive energy</strong> means like charges (repulsion)</li>
+      <li><strong>Negative energy</strong> means unlike charges (attraction)</li>
+      <li><strong>Energy is conserved</strong> in isolated systems</li>
+      <li><strong>Work equals energy change</strong> when charges are moved</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Two charges:</strong> \(U = k\frac{q_1 q_2}{r}\)</li>
+        <li><strong>Multiple charges:</strong> \(U = k\sum_{i < j} \frac{q_i q_j}{r_{ij}}\)</li>
+        <li><strong>Work:</strong> \(W = \Delta U = U_f - U_i\)</li>
+        <li><strong>Conservation:</strong> \(K_i + U_i = K_f + U_f\)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn electrostatics for AP Physics C: Electric charge, Coulomb's law, electric fields, electric potential, and Gauss's law with interactive examples and practice problems." />
+  <title>Electrostatics</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    color: #212529;
+  }
+
+  h1, h2, h5 {
+    font-weight: 700;
+  }
+  
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6f42c1;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #8e44ad;
+  }
+
+  .question {
+    margin-bottom: 1.8rem;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .question:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+
+  .options button {
+    margin: 0.25rem 0.35rem 0.25rem 0;
+    min-width: 110px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .options button.active {
+    background-color: #6f42c1;
+    color: white;
+    border-color: #6f42c1;
+  }
+  .options button:hover:not(.active):not(:disabled) {
+    background-color: #f3e5ff;
+  }
+
+  .correct {
+    background-color: #e8d5ff !important;
+    border-color: #d1b3ff !important;
+    color: #6f42c1 !important;
+  }
+  .incorrect {
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+    color: #842029 !important;
+  }
+
+  .feedback {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  /* Top content area */
+  .top-content {
+    min-height: 400px;
+    margin-bottom: 3rem;
+    background: #f3e5ff;
+    border: 2px dashed #d1b3ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6f42c1;
+    font-size: 1.2rem;
+    font-style: italic;
+    user-select: none;
+  }
+
+  .center-align {
+    
+    text-align: center;
+  }
+
+  /* Container for left/right text + image */
+  .left-half {
+    width: 100%;
+    font-size: 1.15rem;
+    text-align: left;
+    padding: 1rem 2rem 1rem 0;
+    color: #212529;
+  }
+
+  .right-half {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right-half img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+  }
+  .right-half img:hover {
+    transform: scale(1.03);
+  }
+
+  .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+  /* Controls container */
+  #controls label {
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  #controls input[type=number] {
+    width: 4.5rem;
+    padding: 0.25rem 0.4rem;
+    margin-left: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+  }
+  #controls input[type=number]:focus {
+    border-color: #6f42c1;
+    outline: none;
+  }
+
+  #controls button.btn-success {
+    font-weight: 700;
+    padding: 0.45rem 1.2rem;
+    border-radius: 8px;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #e0e0e0 !important; /* light gray background */
+    color: black !important; /* black text */
+    border-color: #6c757d !important; /* keep default border */
+  }
+
+  .btn-outline-secondary.active {
+    background-color: #6f42c1 !important;
+    color: white !important;
+  }
+
+  /* Canvas container styling */
+  #simCanvas {
+    border: 2px solid #d1b3ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    background-color: #f3e5ff;
+  }
+
+  /* Formulas image */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .img-fluid-center {
+    height: auto;
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-fluid-isacc {
+    width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+    transform: scale(1.5);
+  }
+
+  /* Quiz container animation */
+  .quiz-container {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 900px;
+    margin: 0 auto 4rem;
+  }
+
+  /* Back links & other anchors */
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #6f42c1;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  a:hover {
+    transform: scale(1.1);
+    color: #8e44ad;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Top area for your other content -->
+
+  <!-- Start-->
+
+  <!-- Top area split into two columns -->
+<section class="container mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text -->
+    <div class="col-md-6">
+      <div style="background:#f3e5ff; padding: 1rem; border-radius: 10px;">
+        <h2>Electrostatics</h2>
+        <p>Electrostatics is around 15%–25% of your AP test. This unit focuses on electric charges, fields, and forces at rest. Understanding electric charge, Coulomb's law, and electric fields helps solve problems involving charged particles and conductors.</p>
+        <p>Now let's get into it!</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Cannon Simulation -->
+    <div class="col-md-6 text-center">
+      <img src="gauss.jpg" alt="Electrostatics Diagram" class="img-fluid-isacc" />
+  </div>
+</section>
+
+
+
+
+  <!--Stop-->
+
+  <!-- Hello World Text Box -->
+  <div class="container my-4 d-flex justify-content-between align-items-center">
+    <div class="left-half">
+      Electrostatics is the study of electric charges at rest and the forces they exert on each other. In AP Physics C: Electricity & Magnetism, this unit introduces electric charge, Coulomb's law, electric fields, and electric potential. It focuses on how charged particles interact through electric forces and how electric fields are created and influenced by charge distributions. Mastery of electrostatics helps understand electric forces, field lines, and potential energy in charged systems.
+    </div>
+    <div class="right-half">
+      <img src="e-field-lines.jpg" alt="Electric Field Lines" class="img-fluid" />
+    </div>
+  </div>
+
+  <h1>
+    <p>Relevant Formulas On Equation Sheet:</p>
+  </h1>
+  <div>
+    <img src = "EquationSheetElectrostatics.png" alt="Electrostatics Formulas" class="img-fluid-center"/>
+  </div>
+
+ 
+<h1>Concept 1: Electric Charge and Coulomb's Law</h1>
+<div class="center-align">
+  <p><a href="electric-charge.html">Key Topic 1: Electric Charge and Conservation</a></p>
+</div>
+<div class="center-align">
+  <p><a href="coulombs-law.html">Key Topic 2: Coulomb's Law and Electric Force</a></p>
+</div>
+
+<h1>Concept 2: Electric Fields</h1>
+<div class="center-align">
+  <p><a href="electric-field-definition.html">Key Topic 1: Electric Field Definition and Direction</a></p>
+</div>
+<div class="center-align">
+  <p><a href="electric-field-calculations.html">Key Topic 2: Electric Field Calculations</a></p>
+</div>
+<div class="center-align">
+  <p><a href="electric-field-lines.html">Key Topic 3: Electric Field Lines and Patterns</a></p>
+</div>
+
+<h1>Concept 3: Electric Potential</h1>
+
+<div class="center-align">
+  <p><a href="electric-potential-energy.html">Key Topic 1: Electric Potential Energy</a></p>
+</div>
+<div class="center-align">
+  <p><a href="electric-potential.html">Key Topic 2: Electric Potential and Voltage</a></p>
+</div>
+<div class="center-align">
+  <p><a href="equipotential-surfaces.html">Key Topic 3: Equipotential Surfaces</a></p>
+</div>
+
+<h1>Concept 4: Electric Flux</h1>
+<div class="center-align">
+  <p><a href="electric-flux.html">Key Topic 1: Electric Flux</a></p>
+</div>
+
+<div class="center-align">
+  <p><a href="gauss-law.html">Key Topic 2: Gauss's Law</a></p>
+</div>
+<div class="center-align">
+  <p><a href="gauss-law-applications.html">Key Topic 3: Gauss's Law Applications</a></p>
+</div>
+
+<h1>Practice Tests</h1>
+
+<div class="center-align">
+  <p><a href="practiceElectrostatics1.html">Practice Test 1: Electrostatics</a></p>
+</div>
+
+<div class="center-align">
+  <p><a href="practiceElectrostatics2.html">Practice Test 2: Electrostatics</a></p>
+</div>
+
+
+
+
+
+
+  
+
+
+  
+  
+
+  
+  
+
+
+  
+  <!-- Quiz Section -->
+  <section class="quiz-container container">
+    <h1>⚡ Electrostatics: Check for Understanding</h1>
+    <div id="quiz"></div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button>
+      <div id="scoreDisplay" class="mt-3 fw-bold"></div>
+    </div>
+  </section>
+
+  <script>
+  const questions = [
+  {
+    q: "1. What is the formula for Coulomb's law?",
+    options: ["F = k(q₁q₂)/r²", "F = ma", "F = G(m₁m₂)/r²", "F = qE"],
+    correct: 0
+  },
+  {
+    q: "2. What are the SI units of electric charge?",
+    options: ["Amperes", "Coulombs", "Volts", "Ohms"],
+    correct: 1
+  },
+  {
+    q: "3. Two point charges of +2μC and -3μC are 0.1m apart. What is the force between them?",
+    options: ["5.4 N, attractive", "5.4 N, repulsive", "0.54 N, attractive", "0.54 N, repulsive"],
+    correct: 0
+  },
+  {
+    q: "4. What does the electric field represent?",
+    options: ["Force per unit charge", "Energy per unit charge", "Charge per unit area", "Current per unit time"],
+    correct: 0
+  },
+  {
+    q: "5. If a charge of 5μC experiences a force of 0.1N, what is the electric field strength?",
+    options: ["2×10⁴ N/C", "5×10⁴ N/C", "2×10⁵ N/C", "5×10⁵ N/C"],
+    correct: 0
+  },
+  {
+    q: "6. What is conserved in electric charge interactions?",
+    options: ["Total charge", "Total energy", "Total momentum", "Total mass"],
+    correct: 0
+  },
+  {
+    q: "7. Electric field lines point:",
+    options: ["From positive to negative", "From negative to positive", "In circles", "Randomly"],
+    correct: 0
+  },
+  {
+    q: "8. A 2μC charge is placed in a 5000 N/C electric field. What force does it experience?",
+    options: ["0.01 N", "0.1 N", "1 N", "10 N"],
+    correct: 0
+  },
+  {
+    q: "9. What is the electric potential energy between two charges?",
+    options: ["U = k(q₁q₂)/r", "U = k(q₁q₂)/r²", "U = qE", "U = ½mv²"],
+    correct: 0
+  },
+  {
+    q: "10. The electric field inside a conductor in electrostatic equilibrium is:",
+    options: ["Zero", "Maximum", "Constant", "Variable"],
+    correct: 0
+  },
+  {
+    q: "11. What is the relationship between electric field and electric potential?",
+    options: ["E = -dV/dx", "E = V/x", "E = qV", "E = V²"],
+    correct: 0
+  },
+  {
+    q: "12. Equipotential surfaces are:",
+    options: ["Perpendicular to field lines", "Parallel to field lines", "At 45° to field lines", "Randomly oriented"],
+    correct: 0
+  },
+  {
+    q: "13. In a uniform electric field, the potential difference is:",
+    options: ["V = Ed", "V = E/d", "V = E²d", "V = Ed²"],
+    correct: 0
+  },
+  {
+    q: "14. What is the unit of electric potential?",
+    options: ["Volts", "Joules", "Coulombs", "Amperes"],
+    correct: 0
+  },
+  {
+    q: "15. The electric field due to a point charge is:",
+    options: ["E = kq/r²", "E = kq/r", "E = q/r²", "E = k/r²"],
+    correct: 0
+  }
+];
+
+  let userAnswers = Array(questions.length).fill(null);
+
+  function renderQuiz() {
+    const quizDiv = document.getElementById("quiz");
+    questions.forEach((q, index) => {
+      const qDiv = document.createElement("div");
+      qDiv.className = "question";
+      qDiv.id = `question-${index}`;
+      let html = `<h5>Q${index + 1}: ${q.q.replace(/^\d+\.\s*/, "")}</h5><div class="options">`;
+      q.options.forEach((choice, i) => {
+        html += `<button type="button" class="btn btn-outline-secondary" onclick="selectAnswer(${index}, ${i}, this)">${choice}</button> `;
+      });
+      html += `</div><div class="feedback" id="feedback-${index}"></div>`;
+      qDiv.innerHTML = html;
+      quizDiv.appendChild(qDiv);
+    });
+  }
+
+  function selectAnswer(qIndex, aIndex, button) {
+    userAnswers[qIndex] = aIndex;
+    const options = document.querySelectorAll(`#question-${qIndex} .options button`);
+    options.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  }
+
+  function submitQuiz() {
+    let score = 0;
+    questions.forEach((q, i) => {
+      const selected = userAnswers[i];
+      const feedback = document.getElementById(`feedback-${i}`);
+      const buttons = document.querySelectorAll(`#question-${i} .options button`);
+
+      buttons.forEach((btn, j) => {
+        btn.disabled = true;
+        btn.classList.remove("correct", "incorrect");
+        if (j === q.correct) btn.classList.add("correct");
+        if (j === selected && selected !== q.correct) btn.classList.add("incorrect");
+      });
+
+      if (selected === q.correct) {
+        score++;
+        feedback.innerHTML = "✅ Correct";
+      } else {
+        feedback.innerHTML = `❌ Incorrect (Correct: ${q.options[q.correct]})`;
+      }
+    });
+    document.getElementById("scoreDisplay").innerText = `Your Score: ${score} / ${questions.length}`;
+  }
+
+  renderQuiz();
+</script>
+</body>
+</html>

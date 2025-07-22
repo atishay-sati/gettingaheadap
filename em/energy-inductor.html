@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn energy stored in inductors for AP Physics C. Study inductor energy, energy transfer, and applications in circuits." />
+  <title>Energy Stored in Inductors</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .concept-card {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .concept-card h3 {
+      color: #495057;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .concept-card p {
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+    .concept-card a {
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .concept-card a:hover {
+      text-decoration: underline;
+    }
+    .intro-section {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      color: #155724;
+    }
+    .intro-section h2 {
+      color: #155724;
+      margin-top: 0;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .quiz-container {
+      background: linear-gradient(135deg, #f3e5ff, #f8f4ff);
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .quiz-option {
+      padding: 0.5rem;
+      border: 1px solid #6f42c1;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover {
+      background-color: #f3e5ff;
+    }
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .example-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .example-box h3 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .simulation-container {
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .simulation-container h3 {
+      color: #495057;
+      margin-top: 0;
+    }
+    canvas {
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      background: white;
+    }
+    .controls {
+      margin: 1rem 0;
+    }
+    .controls label {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+    .controls input {
+      margin-right: 1rem;
+      padding: 0.25rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .controls button {
+      background: #6f42c1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background: #5a32a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ElectromagneticInduction.html" class="back-link">← Back to Electromagnetic Induction</a>
+    <h1>Energy Stored in Inductors</h1>
+
+    <div class="intro-section">
+      <h2>Overview of Inductor Energy</h2>
+      <p>
+        Inductors store energy in their magnetic fields when current flows through them. This energy can be released when the current changes, making inductors important components in energy storage and transfer systems. Understanding how energy is stored and released in inductors is crucial for analyzing circuits and electromagnetic devices.
+      </p>
+      <p>
+        The energy stored in an inductor is proportional to the square of the current and the inductance. This relationship is fundamental to understanding power electronics, energy conversion, and electromagnetic applications.
+      </p>
+    </div>
+
+    <h2>Energy Storage Formula</h2>
+    
+    <div class="formula-box">
+      <h3>Energy Stored in Inductor</h3>
+      <p><strong>The energy stored in an inductor is:</strong></p>
+      <p>\[ U_L = \frac{1}{2}LI^2 \]</p>
+      <p>Where:</p>
+      <ul>
+        <li>\(U_L\) is the energy stored in joules (J)</li>
+        <li>\(L\) is the inductance in henrys (H)</li>
+        <li>\(I\) is the current in amperes (A)</li>
+      </ul>
+      <p><strong>Note:</strong> This formula is on the AP Physics C equation sheet.</p>
+    </div>
+
+    <h2>Key Concepts</h2>
+
+    <div class="concept-grid">
+
+
+      <div class="concept-card">
+        <h3>Energy Transfer</h3>
+        <p>
+          When current changes in an inductor, energy is transferred:
+        </p>
+        <ul>
+          <li>Increasing current: energy stored in magnetic field</li>
+          <li>Decreasing current: energy released from magnetic field</li>
+          <li>Constant current: no energy transfer</li>
+          <li>Energy flows between inductor and circuit</li>
+        </ul>
+      </div>
+
+      <div class="concept-card">
+        <h3>Energy Conservation</h3>
+        <p>
+          In an ideal inductor:
+        </p>
+        <ul>
+          <li>Energy stored = \(\frac{1}{2}LI^2\)</li>
+          <li>Energy released = \(\frac{1}{2}LI^2\)</li>
+          <li>No energy loss in storage</li>
+          <li>Energy can be recovered</li>
+        </ul>
+        <p>
+          Real inductors have resistance, causing energy loss as heat.
+        </p>
+      </div>
+
+      <div class="concept-card">
+        <h3>Physical Meaning</h3>
+        <p>
+          Energy is stored in the magnetic field created by the current. The field contains energy that can be released when the current changes.
+        </p>
+        <ul>
+          <li>Magnetic field stores energy</li>
+          <li>Energy proportional to I²</li>
+          <li>Energy proportional to L</li>
+          <li>Energy can be transferred</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <h2>Formula Derivations</h2>
+
+    <div class="example-box">
+      <h3>Derivation 1: Energy Storage Formula</h3>
+      <p><strong>Derive:</strong> \(U_L = \frac{1}{2}LI^2\)</p>
+      
+      <p><strong>Step-by-Step Derivation:</strong></p>
+      <ol>
+        <li>Power in inductor: \(P = \mathcal{E}I = -L\frac{dI}{dt}I\)</li>
+        <li>Energy stored: \(U = \int P \, dt = \int -LI\frac{dI}{dt} \, dt\)</li>
+        <li>Substitute: \(U = \int -LI \, dI\)</li>
+        <li>Integrate: \(U = -\frac{1}{2}LI^2 + C\)</li>
+        <li>At I = 0, U = 0, so C = 0</li>
+        <li>Therefore: \(U_L = \frac{1}{2}LI^2\)</li>
+      </ol>
+      <p><strong>Result:</strong> \(U_L = \frac{1}{2}LI^2\) </p>
+    </div>
+
+
+
+
+
+    <h2>Example Problems</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Calculating Stored Energy</h3>
+      <p><strong>Problem:</strong> A 0.5 H inductor carries a current of 3 A. How much energy is stored?</p>
+      
+      <p><strong>Solution:</strong></p>
+      <ol>
+        <li>Use energy formula: \(U_L = \frac{1}{2}LI^2\)</li>
+        <li>Substitute values: \(U_L = \frac{1}{2}(0.5)(3)^2\)</li>
+        <li>Calculate: \(U_L = \frac{1}{2}(0.5)(9) = 2.25 \text{ J}\)</li>
+      </ol>
+      <p><strong>Answer:</strong> The stored energy is 2.25 J.</p>
+    </div>
+
+
+
+
+
+    <h2>Applications of Inductor Energy</h2>
+    <ul>
+      <li><strong>Energy Storage:</strong> Inductors store energy in magnetic fields</li>
+      <li><strong>Power Supplies:</strong> Smooth current variations and store energy</li>
+      <li><strong>Transformers:</strong> Transfer energy between circuits</li>
+      <li><strong>LC Circuits:</strong> Energy oscillates between inductor and capacitor</li>
+      <li><strong>Filters:</strong> Store and release energy in electronic filters</li>
+      <li><strong>Circuit Protection:</strong> Absorb energy spikes and protect components</li>
+    </ul>
+
+    <div class="quiz-container">
+      <h3>Quick Quiz: Inductor Energy</h3>
+      
+      <div class="quiz-question">
+        <p><strong>1. The energy stored in an inductor is proportional to:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The current</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">The square of the current</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The inductance</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">The voltage</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. When current decreases in an inductor:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy is stored</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Energy is released</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">No energy change</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy is lost</div>
+        </div>
+      </div>
+
+
+
+      <div class="quiz-question">
+        <p><strong>4. What is the energy stored in a 1 H inductor with 2 A current?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">1 J</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">2 J</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">4 J</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">8 J</div>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. When current is constant in an inductor:</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy is stored</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy is released</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'correct')">No energy transfer</div>
+          <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Energy is lost</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li><strong>Calculate Stored Energy:</strong> Use \(U_L = \frac{1}{2}LI^2\) to find energy</li>
+      <li><strong>Understand Energy Transfer:</strong> Know when energy is stored or released</li>
+      <li><strong>Energy Conservation:</strong> Apply energy conservation in circuits</li>
+      <li><strong>Real Applications:</strong> Connect theory to practical energy storage</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li><strong>Energy Storage:</strong> Inductors store energy in magnetic fields</li>
+      <li><strong>Quadratic Dependence:</strong> Energy proportional to I²</li>
+      <li><strong>Energy Transfer:</strong> Energy stored when current increases, released when current decreases</li>
+      <li><strong>Applications:</strong> Essential in circuits and energy systems</li>
+    </ul>
+  </div>
+
+  <script>
+    // Quiz functionality
+    function checkAnswer(element, result) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+      });
+      
+      element.classList.add(result);
+      
+      setTimeout(() => {
+        element.classList.remove('correct', 'incorrect');
+      }, 2000);
+    }
+  </script>
+</body>
+</html> 

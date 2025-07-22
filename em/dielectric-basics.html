@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about dielectrics for AP Physics C. Study dielectric properties, capacitance calculations, and practical applications." />
+  <title>Dielectric Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .dielectric-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+    .comparison-box {
+      background-color: #fce4ec;
+      border-left: 6px solid #e91e63;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .comparison-box h3 {
+      color: #c2185b;
+      margin-top: 0;
+    }
+    .interactive-box {
+      background-color: #f0f8ff;
+      border-left: 6px solid #4169e1;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    .interactive-box h3 {
+      color: #2e4a8f;
+      margin-top: 0;
+    }
+    .control-group {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #6f42c1;
+    }
+    .control-group h4 {
+      margin-top: 0;
+      color: #6f42c1;
+      font-size: 1.2rem;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      gap: 1rem;
+    }
+    .control-row label {
+      min-width: 120px;
+      font-weight: bold;
+    }
+    .control-row input, .control-row select {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .control-row input[type="range"] {
+      flex: 1;
+    }
+    .value-display {
+      min-width: 80px;
+      padding: 0.5rem;
+      background: #e9ecef;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .results-box {
+      background: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .results-box h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .result-item {
+      background: white;
+      padding: 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    .result-item strong {
+      color: #6f42c1;
+    }
+    .capacitor-diagram {
+      width: 100%;
+      height: 200px;
+      background: #f8f9fa;
+      border: 2px solid #6f42c1;
+      border-radius: 8px;
+      position: relative;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .plate {
+      position: absolute;
+      width: 300px;
+      height: 8px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .plate.top {
+      top: 40px;
+    }
+    .plate.bottom {
+      bottom: 40px;
+    }
+    .dielectric-material {
+      position: absolute;
+      width: 300px;
+      height: 80px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .wire {
+      position: absolute;
+      width: 4px;
+      height: 30px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .wire.left {
+      left: 20px;
+      top: 20px;
+    }
+    .wire.right {
+      right: 20px;
+      bottom: 20px;
+    }
+    .battery {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 80px;
+      background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 0.8rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .battery::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 6px;
+      background: #333;
+      border-radius: 1px;
+    }
+    .battery-wire {
+      position: absolute;
+      width: 3px;
+      height: 20px;
+      background: #333;
+      border-radius: 1px;
+    }
+    .battery-wire.top {
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .battery-wire.bottom {
+      left: 40px;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    .connection-wire {
+      position: absolute;
+      background: #333;
+      border-radius: 2px;
+    }
+    .connection-wire.horizontal {
+      height: 3px;
+    }
+    .connection-wire.vertical {
+      width: 3px;
+    }
+    .connection-wire.top-horizontal {
+      left: 40px;
+      top: 20px;
+      width: 300px;
+    }
+    .connection-wire.bottom-horizontal {
+      left: 40px;
+      bottom: 25px;
+      width: 300px;
+    }
+    .connection-wire.top-vertical {
+      left: 40px;
+      top: 20px;
+      height: 32px;
+    }
+    .connection-wire.top-vertical2 {
+      left: 337px;
+      top: 20px;
+      height: 25px;
+    }
+    .connection-wire.bottom-vertical {
+      left: 40px;
+      bottom: 25px;
+      height: 32px;
+    }
+    .connection-wire.bottom-vertical2 {
+      left: 337px;
+      bottom: 25px;
+      height: 20px;
+    }
+    .voltage-label {
+      position: absolute;
+      font-weight: bold;
+      color: #6f42c1;
+    }
+    .voltage-label.positive {
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .voltage-label.negative {
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .table-container {
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Conductors-Capacitors-Dielectrics.html" class="back-link">← Back to Concepts</a>
+    <h1>Dielectric Basics</h1>
+
+    <p>
+      A dielectric is an insulating material that, when placed between the plates of a capacitor, increases its capacitance. Understanding dielectrics is essential for designing capacitors and understanding how they work in various applications.
+    </p>
+
+    <h2>What is a Dielectric?</h2>
+
+    <p>
+      A dielectric is a non-conducting material (insulator) that can be polarized by an electric field. When placed between capacitor plates, it increases the capacitance by reducing the electric field strength and allowing more charge to be stored.
+    </p>
+
+    <div class="dielectric-box">
+      <h3>Key Properties of Dielectrics</h3>
+      <ul>
+        <li><strong>Insulating:</strong> Do not conduct electric current</li>
+        <li><strong>Polarizable:</strong> Can be polarized by an electric field</li>
+        <li><strong>Dielectric constant:</strong> Measure of how much the material increases capacitance</li>
+      </ul>
+    </div>
+
+    <h2>Dielectric Constant (κ)</h2>
+
+    <div class="formula-box">
+      <h3>Dielectric Constant Formula</h3>
+      <p>$$\kappa = \frac{C}{C_0}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>κ</strong> = Dielectric constant (dimensionless)</li>
+        <li><strong>C</strong> = Capacitance with dielectric</li>
+        <li><strong>C₀</strong> = Capacitance without dielectric (vacuum)</li>
+      </ul>
+    </div>
+
+    <p>
+      The dielectric constant (also called relative permittivity) is always greater than 1 for real materials. It tells us how much the capacitance increases when a dielectric is inserted.
+    </p>
+
+    <h3>Common Dielectric Constants</h3>
+    
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Material</th>
+          <th>Dielectric Constant (κ)</th>
+          <th>Common Uses</th>
+        </tr>
+        <tr>
+          <td>Vacuum</td>
+          <td>1.0</td>
+          <td>Reference standard</td>
+        </tr>
+        <tr>
+          <td>Air</td>
+          <td>1.0006</td>
+          <td>Air capacitors</td>
+        </tr>
+        <tr>
+          <td>Paper</td>
+          <td>2.0-3.5</td>
+          <td>Paper capacitors</td>
+        </tr>
+        <tr>
+          <td>Mica</td>
+          <td>3.0-7.0</td>
+          <td>High-voltage capacitors</td>
+        </tr>
+        <tr>
+          <td>Glass</td>
+          <td>4.0-10.0</td>
+          <td>High-voltage applications</td>
+        </tr>
+        <tr>
+          <td>Porcelain</td>
+          <td>5.0-7.0</td>
+          <td>Power capacitors</td>
+        </tr>
+        <tr>
+          <td>Aluminum Oxide</td>
+          <td>8.0-10.0</td>
+          <td>Electrolytic capacitors</td>
+        </tr>
+        <tr>
+          <td>Ceramic (low-k)</td>
+          <td>6.0-15.0</td>
+          <td>General purpose</td>
+        </tr>
+        <tr>
+          <td>Ceramic (high-k)</td>
+          <td>100-10,000</td>
+          <td>Miniature capacitors</td>
+        </tr>
+        <tr>
+          <td>Water</td>
+          <td>80.4</td>
+          <td>Not used in capacitors</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>How Dielectrics Work</h2>
+
+    <h3>Polarization Process</h3>
+    <p>When a dielectric is placed in an electric field, several things happen:</p>
+    
+    <div class="calculation-steps">
+      <h4>Polarization Steps:</h4>
+      <ol>
+        <li><strong>Electric field applied:</strong> External field creates force on charges</li>
+        <li><strong>Charge separation:</strong> Positive and negative charges separate slightly</li>
+        <li><strong>Dipole formation:</strong> Creates many small electric dipoles</li>
+        <li><strong>Internal field:</strong> Dipoles create internal field opposite to external field</li>
+        <li><strong>Net field reduction:</strong> Total field inside dielectric is reduced</li>
+      </ol>
+    </div>
+
+    <figure>
+      <img src="dielectric-polarization.png" alt="Dielectric Polarization" class="img-fluid-center">
+      <figcaption>
+        When an electric field is applied to a dielectric, the molecules become polarized, creating an internal field that opposes the external field.
+      </figcaption>
+    </figure>
+
+    <h3>Effect on Capacitance</h3>
+    <p>The presence of a dielectric increases capacitance in two ways:</p>
+    <ul>
+      <li><strong>Reduced electric field:</strong> The dielectric reduces the electric field strength</li>
+      <li><strong>Increased charge storage:</strong> More charge can be stored for the same voltage</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Capacitance with Dielectric</h3>
+      <p>$$C = \kappa C_0$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>C</strong> = Capacitance with dielectric</li>
+        <li><strong>κ</strong> = Dielectric constant</li>
+        <li><strong>C₀</strong> = Capacitance without dielectric</li>
+      </ul>
+    </div>
+
+    <h2>Types of Dielectric Polarization</h2>
+
+    <div class="property-box">
+      <h3>Electronic Polarization</h3>
+      <p><strong>Mechanism:</strong> Electron clouds shift relative to nuclei</p>
+      <p><strong>Speed:</strong> Very fast (10⁻¹⁵ seconds)</p>
+      <p><strong>Materials:</strong> All materials</p>
+      <p><strong>Frequency response:</strong> Works at all frequencies</p>
+    </div>
+
+    <div class="property-box">
+      <h3>Ionic Polarization</h3>
+      <p><strong>Mechanism:</strong> Positive and negative ions move in opposite directions</p>
+      <p><strong>Speed:</strong> Fast (10⁻¹³ seconds)</p>
+      <p><strong>Materials:</strong> Ionic crystals (NaCl, etc.)</p>
+      <p><strong>Frequency response:</strong> Works up to infrared frequencies</p>
+    </div>
+
+    <div class="property-box">
+      <h3>Oriental Polarization</h3>
+      <p><strong>Mechanism:</strong> Permanent dipoles align with electric field</p>
+      <p><strong>Speed:</strong> Slower (10⁻¹⁰ seconds)</p>
+      <p><strong>Materials:</strong> Polar molecules (water, etc.)</p>
+      <p><strong>Frequency response:</strong> Works up to microwave frequencies</p>
+    </div>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Capacitance with Dielectric</h3>
+      <p><strong>Problem:</strong> A parallel plate capacitor has a capacitance of 10 pF in air. If a dielectric with κ = 4.0 is inserted, what is the new capacitance?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> C₀ = 10 pF, κ = 4.0</li>
+          <li><strong>Formula:</strong> C = κC₀</li>
+          <li><strong>Substitute:</strong> C = 4.0 × 10 pF</li>
+          <li><strong>Calculate:</strong> C = 40 pF</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The capacitance increases to 40 pF.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Finding Dielectric Constant</h3>
+      <p><strong>Problem:</strong> A capacitor has a capacitance of 5 μF in vacuum and 25 μF with a dielectric. What is the dielectric constant?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Given:</strong> C₀ = 5 μF, C = 25 μF</li>
+          <li><strong>Formula:</strong> κ = C/C₀</li>
+          <li><strong>Substitute:</strong> κ = 25/5</li>
+          <li><strong>Calculate:</strong> κ = 5.0</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The dielectric constant is 5.0.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Energy Storage with Dielectric</h3>
+      <p><strong>Problem:</strong> A 2 μF capacitor is charged to 12 V in air, then a dielectric with κ = 3.0 is inserted while maintaining the charge. What is the new voltage and energy?</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Step 1 - Original charge:</strong> Q = CV = 2 × 12 = 24 μC</li>
+          <li><strong>Step 2 - New capacitance:</strong> C_new = κC = 3 × 2 = 6 μF</li>
+          <li><strong>Step 3 - New voltage:</strong> V_new = Q/C_new = 24/6 = 4 V</li>
+          <li><strong>Step 4 - New energy:</strong> E = ½CV² = ½ × 6 × 4² = 48 μJ</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> The voltage drops to 4 V and the energy decreases to 48 μJ.</p>
+    </div>
+
+    <h2>Interactive Dielectric Calculator</h2>
+
+    <div class="interactive-box">
+      <h3>Calculate Capacitance with Dielectric</h3>
+      
+      <div class="control-group">
+        <h4>Capacitor Parameters</h4>
+        <div class="control-row">
+          <label>Base Capacitance (μF):</label>
+          <input type="range" id="baseCapacitanceSlider" min="0.01" max="1.00" value="0.10" step="0.01">
+          <span class="value-display" id="baseCapacitanceDisplay">0.10 μF</span>
+        </div>
+        <div class="control-row">
+          <label>Dielectric Constant:</label>
+          <input type="range" id="dielectricConstantSlider" min="1" max="100" value="4" step="0.1">
+          <span class="value-display" id="dielectricConstantDisplay">4.0</span>
+        </div>
+        <div class="control-row">
+          <label>Voltage (V):</label>
+          <input type="range" id="voltageSlider" min="1" max="50" value="12" step="1">
+          <span class="value-display" id="voltageDisplay">12 V</span>
+        </div>
+      </div>
+
+      <div class="capacitor-diagram" id="capacitorDiagram">
+        <div class="battery" id="battery">12V</div>
+        
+        <div class="connection-wire horizontal top-horizontal"></div>
+        <div class="connection-wire horizontal bottom-horizontal"></div>
+        <div class="connection-wire vertical top-vertical"></div>
+        <div class="connection-wire vertical top-vertical2"></div>
+        <div class="connection-wire vertical bottom-vertical"></div>
+        <div class="connection-wire vertical bottom-vertical2"></div>
+        <div class="plate top"></div>
+        <div class="plate bottom"></div>
+        <div class="dielectric-material" id="dielectricMaterial"></div>
+        
+        
+        <div class="voltage-label positive" id="positiveLabel">+12V</div>
+        <div class="voltage-label negative" id="negativeLabel">0V</div>
+      </div>
+
+      <div class="results-box">
+        <h4>Results</h4>
+        <div class="results-grid" id="dielectricResults">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <h2>Applications of Dielectrics</h2>
+
+    <h3>Capacitor Design</h3>
+    <ul>
+      <li><strong>High capacitance:</strong> High-κ materials for miniature capacitors</li>
+      <li><strong>Temperature stability:</strong> Materials with stable κ over temperature</li>
+      <li><strong>Frequency response:</strong> Materials suitable for specific frequency ranges</li>
+    </ul>
+
+    <h3>Electronic Applications</h3>
+    <ul>
+      <li><strong>Insulation:</strong> Preventing electrical breakdown</li>
+      <li><strong>Energy storage:</strong> Increasing energy density in capacitors</li>
+      <li><strong>Signal processing:</strong> Filtering and coupling circuits</li>
+      <li><strong>Memory devices:</strong> Ferroelectric materials for non-volatile memory</li>
+    </ul>
+
+    <h3>Industrial Applications</h3>
+    <ul>
+      <li><strong>Power transmission:</strong> High-voltage cable insulation</li>
+      <li><strong>Electronics packaging:</strong> Printed circuit board materials</li>
+      <li><strong>Medical devices:</strong> Biocompatible dielectric materials</li>
+      <li><strong>Automotive:</strong> Ignition systems and sensors</li>
+    </ul>
+
+
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Wrong formula:</strong> Using C = κ/C₀ instead of C = κC₀</li>
+        <li><strong>Unit confusion:</strong> Forgetting that κ is dimensionless</li>
+        <li><strong>Frequency effects:</strong> Ignoring dielectric losses at high frequencies</li>
+        <li><strong>Temperature effects:</strong> Not accounting for κ changes with temperature</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A capacitor has a capacitance of 8 pF in air. If a dielectric with κ = 6.0 is inserted, what is the new capacitance?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Given:</strong> C₀ = 8 pF, κ = 6.0</li>
+            <li><strong>Formula:</strong> C = κC₀</li>
+            <li><strong>Substitute:</strong> C = 6.0 × 8 pF</li>
+            <li><strong>Calculate:</strong> C = 48 pF</li>
+          </ol>
+          <p><strong>Answer:</strong> 48 pF</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> A 3 μF capacitor is charged to 15 V, then a dielectric with κ = 2.5 is inserted while maintaining the charge. What is the new voltage?</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Step 1 - Original charge:</strong> Q = CV = 3 × 15 = 45 μC</li>
+            <li><strong>Step 2 - New capacitance:</strong> C_new = κC = 2.5 × 3 = 7.5 μF</li>
+            <li><strong>Step 3 - New voltage:</strong> V_new = Q/C_new = 45/7.5 = 6 V</li>
+          </ol>
+          <p><strong>Answer:</strong> 6 V</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Dielectric constant:</strong> κ = C/C₀, always > 1 for real materials</li>
+      <li><strong>Capacitance increase:</strong> C = κC₀ when dielectric is inserted</li>
+      <li><strong>Polarization:</strong> Dielectrics reduce electric field by creating internal dipoles</li>
+      <li><strong>Energy storage:</strong> Dielectrics can increase or decrease energy depending on conditions</li>
+      <li><strong>Applications:</strong> Used in capacitors, insulation, and electronic devices</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Dielectric constant:</strong> κ = C/C₀</li>
+        <li><strong>Capacitance with dielectric:</strong> C = κC₀</li>
+        <li><strong>Electric field reduction:</strong> E = E₀/κ</li>
+        <li><strong>Energy with constant charge:</strong> E = E₀/κ</li>
+        <li><strong>Energy with constant voltage:</strong> E = κE₀</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    // Interactive dielectric calculator
+    function initDielectricCalculator() {
+      const baseCapacitanceSlider = document.getElementById('baseCapacitanceSlider');
+      const dielectricConstantSlider = document.getElementById('dielectricConstantSlider');
+      const voltageSlider = document.getElementById('voltageSlider');
+      const baseCapacitanceDisplay = document.getElementById('baseCapacitanceDisplay');
+      const dielectricConstantDisplay = document.getElementById('dielectricConstantDisplay');
+      const voltageDisplay = document.getElementById('voltageDisplay');
+      const dielectricResults = document.getElementById('dielectricResults');
+      const dielectricMaterial = document.getElementById('dielectricMaterial');
+      const positiveLabel = document.getElementById('positiveLabel');
+      const negativeLabel = document.getElementById('negativeLabel');
+      const battery = document.getElementById('battery');
+
+      function updateDielectric() {
+        const baseCapacitance = parseFloat(baseCapacitanceSlider.value); // μF
+        const dielectricConstant = parseFloat(dielectricConstantSlider.value);
+        const voltage = parseFloat(voltageSlider.value);
+        
+        // Convert μF to F
+        const baseCapacitanceF = baseCapacitance * 1e-6;
+        const capacitanceWithDielectric = baseCapacitanceF * dielectricConstant;
+        
+        // Calculate charge and energy
+        const charge = capacitanceWithDielectric * voltage;
+        const energy = 0.5 * capacitanceWithDielectric * voltage * voltage;
+        
+        // Update displays
+        baseCapacitanceDisplay.textContent = baseCapacitance.toFixed(2) + ' μF';
+        dielectricConstantDisplay.textContent = dielectricConstant.toFixed(1);
+        voltageDisplay.textContent = voltage + ' V';
+        
+        // Update diagram
+        updateDiagram(dielectricConstant, voltage);
+        
+        dielectricResults.innerHTML = `
+          <div class="result-item">
+            <strong>Capacitance with Dielectric:</strong><br>
+            ${(capacitanceWithDielectric * 1e6).toFixed(2)} μF
+          </div>
+          <div class="result-item">
+            <strong>Charge Stored:</strong><br>
+            ${(charge * 1e6).toFixed(2)} μC
+          </div>
+          <div class="result-item">
+            <strong>Energy Stored:</strong><br>
+            ${(energy * 1000).toFixed(3)} mJ
+          </div>
+          <div class="result-item">
+            <strong>Capacitance Increase:</strong><br>
+            ${(dielectricConstant - 1).toFixed(1)}×
+          </div>
+        `;
+      }
+
+      function updateDiagram(dielectricConstant, voltage) {
+        // Calculate darkness based on dielectric constant
+        // Map dielectric constant from 1-100 to opacity from 0.1-0.9
+        const opacity = Math.min(0.1 + (dielectricConstant - 1) * 0.008, 0.9);
+        const greyValue = Math.floor(255 * (1 - opacity));
+        
+        // Update dielectric material color
+        dielectricMaterial.style.backgroundColor = `rgb(${greyValue}, ${greyValue}, ${greyValue})`;
+        
+        // Update voltage labels and battery
+        positiveLabel.textContent = `+${voltage}V`;
+        negativeLabel.textContent = '0V';
+        battery.textContent = `${voltage}V`;
+        
+        // Add a subtle border to show the dielectric more clearly
+        if (dielectricConstant > 1) {
+          dielectricMaterial.style.border = '1px solid #666';
+        } else {
+          dielectricMaterial.style.border = 'none';
+        }
+      }
+
+      // Add event listeners
+      baseCapacitanceSlider.addEventListener('input', updateDielectric);
+      dielectricConstantSlider.addEventListener('input', updateDielectric);
+      voltageSlider.addEventListener('input', updateDielectric);
+      
+      // Initialize
+      updateDielectric();
+    }
+
+    // Initialize when page loads
+    window.addEventListener('load', initDielectricCalculator);
+  </script>
+</body>
+</html> 

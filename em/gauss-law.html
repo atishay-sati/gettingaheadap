@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Study Gauss's law for AP Physics C. Learn about electric flux, closed surfaces, and using Gauss's law to calculate electric fields for symmetric charge distributions." />
+  <title>Gauss's Law</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #6f42c1;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #8e44ad;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .formula-box {
+      background-color: #f3e5ff;
+      border-left: 6px solid #6f42c1;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .gauss-box {
+      background-color: #e8f5e8;
+      border-left: 6px solid #28a745;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .example-box {
+      background-color: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
+    }
+    .example-box h3 {
+      color: #e65100;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .example-box ol {
+      padding-left: 1.5rem;
+    }
+    .example-box ol li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+    figure {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-placeholder {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: #f3e5ff;
+      border: 3px dashed #6f42c1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6f42c1;
+      font-size: 1rem;
+    }
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #6f42c1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+    .calculation-steps {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    .calculation-steps h4 {
+      color: #28a745;
+      margin-top: 0;
+    }
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffc107;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .note-box h4 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .property-box {
+      background-color: #e3f2fd;
+      border-left: 6px solid #2196f3;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+    .property-box h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="Electrostatics.html" class="back-link">← Back to Concepts</a>
+    <h1>Gauss's Law</h1>
+
+    <p>
+      Gauss's law is one of the four Maxwell equations and is fundamental to understanding electric fields. It relates the electric flux through a closed surface to the total charge enclosed within that surface, providing a powerful tool for calculating electric fields in situations with high symmetry.
+    </p>
+
+    <h2>What is Gauss's Law?</h2>
+
+    <div class="gauss-box">
+      <h3>Fundamental Statement</h3>
+      <p>Gauss's law states that the total electric flux through any closed surface is proportional to the total charge enclosed by that surface.</p>
+    </div>
+
+    <p>
+      This law is a direct consequence of the inverse-square nature of the electric force and provides a powerful method for calculating electric fields in situations with high symmetry, such as spherical, cylindrical, or planar charge distributions.
+    </p>
+
+    <figure>
+      <img src="gauss-law-charge.jpg" alt="Gauss's law" class="img-fluid-center">
+      <figcaption>
+        Electric flux through a closed surface is proportional to enclosed charge.
+      </figcaption>
+    </figure>
+
+    <h2>Mathematical Formulation</h2>
+
+    <div class="formula-box">
+      <h3>Gauss's Law Formula</h3>
+      <p>$$\oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\epsilon_0}$$</p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>∮E·dA:</strong> Electric flux through the closed surface</li>
+        <li><strong>Q_enc:</strong> Total charge enclosed within the surface</li>
+        <li><strong>ε₀:</strong> Permittivity of free space = 8.85 × 10⁻¹² C²/N⋅m²</li>
+      </ul>
+    </div>
+
+    <h3>Understanding the Components</h3>
+    <p>Let's break down what each part means:</p>
+    <ul>
+      <li><strong>Electric flux (∮E·dA):</strong> The total "flow" of electric field lines through the surface</li>
+      <li><strong>Enclosed charge (Q_enc):</strong> The net charge inside the Gaussian surface</li>
+      <li><strong>Closed surface:</strong> A surface that completely encloses a volume</li>
+    </ul>
+
+    <h2>Why Gauss's Law Works</h2>
+
+    <h3>The Physical Intuition</h3>
+    <p>Gauss's law works because:</p>
+    <ol>
+      <li><strong>Electric field lines:</strong> Start on positive charges and end on negative charges</li>
+      <li><strong>Conservation of field lines:</strong> The number of field lines is proportional to charge</li>
+      <li><strong>Inverse square law:</strong> Field strength decreases as 1/r², but area increases as r²</li>
+    </ol>
+
+    <h3>Mathematical Derivation</h3>
+    <p>Gauss's law can be derived from Coulomb's law and the principle of superposition:</p>
+    <div class="calculation-steps">
+      <h4>Key Steps in Derivation:</h4>
+      <ol>
+        <li>Start with Coulomb's law: \(E = \frac{kq}{r^2}\)</li>
+        <li>Consider a spherical surface around a point charge</li>
+        <li>Calculate flux: \(\oint E \cdot dA = E \cdot 4\pi r^2\)</li>
+        <li>Substitute E: \(\oint E \cdot dA = \frac{kq}{r^2} \cdot 4\pi r^2 = 4\pi k q\)</li>
+        <li>Since \(k = \frac{1}{4\pi\epsilon_0}\): \(\oint E \cdot dA = \frac{q}{\epsilon_0}\)</li>
+        <li>Generalize to multiple charges using superposition</li>
+      </ol>
+    </div>
+
+    <h2>Applications of Gauss's Law</h2>
+
+    <h3>When to Use Gauss's Law</h3>
+    <p>Gauss's law is most useful when there is high symmetry in the charge distribution:</p>
+    <ul>
+      <li><strong>Spherical symmetry:</strong> Point charges, charged spheres, spherical shells</li>
+      <li><strong>Cylindrical symmetry:</strong> Long charged wires, coaxial cables</li>
+      <li><strong>Planar symmetry:</strong> Large charged plates, parallel plates</li>
+    </ul>
+
+    <h3>Strategy for Using Gauss's Law</h3>
+    <ol>
+      <li><strong>Identify symmetry:</strong> Look for spherical, cylindrical, or planar symmetry</li>
+      <li><strong>Choose Gaussian surface:</strong> Pick a surface that matches the symmetry</li>
+      <li><strong>Calculate flux:</strong> Evaluate ∮E·dA over the surface</li>
+      <li><strong>Find enclosed charge:</strong> Calculate Q_enc within the surface</li>
+      <li><strong>Solve for E:</strong> Use Gauss's law to find the electric field</li>
+    </ol>
+
+    <h2>Worked Examples</h2>
+
+    <div class="example-box">
+      <h3>Example 1: Electric Field of a Point Charge</h3>
+      <p><strong>Problem:</strong> Use Gauss's law to find the electric field due to a point charge q.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Symmetry:</strong> Spherical symmetry around the point charge</li>
+          <li><strong>Gaussian surface:</strong> Sphere of radius r centered on the charge</li>
+          <li><strong>Flux calculation:</strong> ∮E·dA = E·4πr² (since E is constant on sphere)</li>
+          <li><strong>Enclosed charge:</strong> Q_enc = q</li>
+          <li><strong>Gauss's law:</strong> E·4πr² = q/ε₀</li>
+          <li><strong>Solve for E:</strong> E = q/(4πε₀r²) = kq/r²</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> E = kq/r², which matches Coulomb's law.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 2: Electric Field of an Infinite Line of Charge</h3>
+      <p><strong>Problem:</strong> Find the electric field due to an infinite line of charge with linear charge density λ.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Symmetry:</strong> Cylindrical symmetry around the line</li>
+          <li><strong>Gaussian surface:</strong> Cylinder of radius r and length L</li>
+          <li><strong>Flux calculation:</strong> ∮E·dA = E·2πrL (only side surface contributes)</li>
+          <li><strong>Enclosed charge:</strong> Q_enc = λL</li>
+          <li><strong>Gauss's law:</strong> E·2πrL = λL/ε₀</li>
+          <li><strong>Solve for E:</strong> E = λ/(2πε₀r)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> E = λ/(2πε₀r), directed radially outward from the line.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>Example 3: Electric Field Between Parallel Plates</h3>
+      <p><strong>Problem:</strong> Find the electric field between two large parallel plates with surface charge density ±σ.</p>
+      
+      <div class="calculation-steps">
+        <h4>Solution Steps:</h4>
+        <ol>
+          <li><strong>Symmetry:</strong> Planar symmetry perpendicular to plates</li>
+          <li><strong>Gaussian surface:</strong> Cylinder with faces parallel to plates</li>
+          <li><strong>Flux calculation:</strong> ∮E·dA = EA + EA = 2EA (both faces contribute)</li>
+          <li><strong>Enclosed charge:</strong> Q_enc = σA</li>
+          <li><strong>Gauss's law:</strong> 2EA = σA/ε₀</li>
+          <li><strong>Solve for E:</strong> E = σ/(2ε₀)</li>
+        </ol>
+      </div>
+      
+      <p><strong>Answer:</strong> E = σ/(2ε₀) for one plate, or E = σ/ε₀ between two plates.</p>
+    </div>
+
+    <h2>Gaussian Surfaces</h2>
+
+    <h3>Choosing the Right Surface</h3>
+    <p>The key to using Gauss's law effectively is choosing an appropriate Gaussian surface:</p>
+    <ul>
+      <li><strong>Match the symmetry:</strong> Use spherical surfaces for spherical symmetry</li>
+      <li><strong>Make E constant:</strong> Choose surface where E is constant in magnitude</li>
+      <li><strong>Simplify the integral:</strong> Pick surface where E·dA is easy to evaluate</li>
+      <li><strong>Include all relevant charge:</strong> Ensure surface encloses the charge of interest</li>
+    </ul>
+
+    <h3>Common Gaussian Surfaces</h3>
+    <div class="property-box">
+      <h3>Surface Types by Symmetry</h3>
+      <ul>
+        <li><strong>Spherical:</strong> For point charges, charged spheres, spherical shells</li>
+        <li><strong>Cylindrical:</strong> For line charges, charged cylinders, coaxial cables</li>
+        <li><strong>Planar:</strong> For charged plates, large flat surfaces</li>
+        <li><strong>Cubical:</strong> Sometimes useful for rectangular symmetry</li>
+      </ul>
+    </div>
+
+    
+
+    <h2>Limitations of Gauss's Law</h2>
+
+    <div class="note-box">
+      <h4>When Gauss's Law is Not Useful</h4>
+      <ul>
+        <li><strong>Low symmetry:</strong> Complex charge distributions without clear symmetry</li>
+        <li><strong>Non-uniform fields:</strong> When E varies significantly over the surface</li>
+        <li><strong>Mixed geometries:</strong> Combinations of different charge distributions</li>
+        <li><strong>Time-varying fields:</strong> Gauss's law applies to static electric fields</li>
+      </ul>
+    </div>
+
+    <p>
+      In these cases, other methods like Coulomb's law, superposition, or numerical methods may be more appropriate.
+    </p>
+
+    <h2>Relationship to Other Laws</h2>
+
+    <h3>Gauss's Law and Coulomb's Law</h3>
+    <p>Gauss's law and Coulomb's law are equivalent for static electric fields:</p>
+    <ul>
+      <li><strong>Coulomb's law:</strong> E = kq/r² (direct calculation)</li>
+      <li><strong>Gauss's law:</strong> ∮E·dA = q/ε₀ (integral form)</li>
+      <li><strong>Equivalence:</strong> Both give the same result for point charges</li>
+    </ul>
+
+    <h3>Gauss's Law and Electric Potential</h3>
+    <p>Gauss's law can be used to find electric fields, which can then be integrated to find electric potential:</p>
+    <div class="formula-box">
+      <p>$$V = -\int \vec{E} \cdot d\vec{l}$$</p>
+    </div>
+
+    <h2>Common Mistakes to Avoid</h2>
+
+    <div class="note-box">
+      <h4>⚠️ Common Errors</h4>
+      <ul>
+        <li><strong>Wrong Gaussian surface:</strong> Not matching the symmetry of the problem</li>
+        <li><strong>Ignoring direction:</strong> Forgetting that E·dA is a dot product</li>
+        <li><strong>Wrong enclosed charge:</strong> Not calculating Q_enc correctly</li>
+        <li><strong>Using for low symmetry:</strong> Trying to use Gauss's law when symmetry is poor</li>
+        <li><strong>Forgetting units:</strong> Not keeping track of units in calculations</li>
+      </ul>
+    </div>
+
+    <h2>Practice Problems</h2>
+
+    <div class="example-box">
+      <h3>Practice Problem 1</h3>
+      <p><strong>Problem:</strong> A spherical shell of radius R has a total charge Q distributed uniformly on its surface. Find the electric field inside and outside the shell.</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Inside (r < R):</strong> Gaussian sphere of radius r</li>
+            <li><strong>Enclosed charge:</strong> Q_enc = 0 (no charge inside)</li>
+            <li><strong>Gauss's law:</strong> E·4πr² = 0 → E = 0</li>
+            <li><strong>Outside (r > R):</strong> Gaussian sphere of radius r</li>
+            <li><strong>Enclosed charge:</strong> Q_enc = Q</li>
+            <li><strong>Gauss's law:</strong> E·4πr² = Q/ε₀ → E = Q/(4πε₀r²)</li>
+          </ol>
+          <p><strong>Answer:</strong> E = 0 inside, E = Q/(4πε₀r²) outside</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="example-box">
+      <h3>Practice Problem 2</h3>
+      <p><strong>Problem:</strong> An infinite plane has surface charge density σ. Find the electric field on both sides of the plane.</p>
+      
+      <details>
+        <summary>Click for solution</summary>
+        <div class="calculation-steps">
+          <h4>Solution:</h4>
+          <ol>
+            <li><strong>Symmetry:</strong> Planar symmetry perpendicular to plane</li>
+            <li><strong>Gaussian surface:</strong> Cylinder with faces parallel to plane</li>
+            <li><strong>Flux:</strong> ∮E·dA = 2EA (both faces contribute equally)</li>
+            <li><strong>Enclosed charge:</strong> Q_enc = σA</li>
+            <li><strong>Gauss's law:</strong> 2EA = σA/ε₀</li>
+            <li><strong>Result:</strong> E = σ/(2ε₀) on both sides</li>
+          </ol>
+          <p><strong>Answer:</strong> E = σ/(2ε₀) on both sides of the plane</p>
+        </div>
+      </details>
+    </div>
+
+    <h2>Key Concepts Summary</h2>
+
+    <ul>
+      <li><strong>Gauss's law:</strong> ∮E·dA = Q_enc/ε₀ relates flux to enclosed charge</li>
+      <li><strong>High symmetry required:</strong> Most useful for spherical, cylindrical, or planar symmetry</li>
+      <li><strong>Gaussian surface:</strong> Must match the symmetry of the charge distribution</li>
+      <li><strong>Flux calculation:</strong> ∮E·dA is the key mathematical operation</li>
+      <li><strong>Enclosed charge:</strong> Only charge inside the surface contributes</li>
+      <li><strong>Equivalent to Coulomb's law:</strong> Both give same results for static fields</li>
+    </ul>
+
+    <div class="formula-box">
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>Gauss's law:</strong> \(\oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\epsilon_0}\)</li>
+        <li><strong>Point charge:</strong> \(E = \frac{q}{4\pi\epsilon_0 r^2}\)</li>
+        <li><strong>Line charge:</strong> \(E = \frac{\lambda}{2\pi\epsilon_0 r}\)</li>
+        <li><strong>Plane charge:</strong> \(E = \frac{\sigma}{2\epsilon_0}\)</li>
+        <li><strong>Parallel plates:</strong> \(E = \frac{\sigma}{\epsilon_0}\)</li>
+        <li><strong>Spherical shell:</strong> E = 0 inside, \(E = \frac{Q}{4\pi\epsilon_0 r^2}\) outside</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html> 
