@@ -4,8 +4,8 @@ https://gettingaheadap.org/
 Current Courses:
 * AP Physics C: Mechanics -- LIVE
 * AP Physics C: Electricity & Magnetism -- LIVE
-* AP Comp Sci A: In-Progress
-* AP English Lang: In-Progress
-* AP World History: In-Progress
-* AP Chemistry: In-Progress
+* AP Comp Sci A -- In Progress
+* AP English Lang -- In Progress
+* AP World History -- In Progress
+* AP Chemistry -- In Progress
 
