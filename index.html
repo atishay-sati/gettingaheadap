@@ -289,24 +289,44 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="cover.png" alt="Getting Ahead Logo" style="height: 80px; width: auto; border-radius: 10px;">
-            <div>
-              <h1>Getting Ahead</h1>
-              <div class="tagline">Empowering Education Through Excellence</div>
-            </div>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="cover.png" alt="Getting Ahead Logo" style="height: 80px; width: auto; border-radius: 10px;">
+          <div>
+            <h1>Getting Ahead</h1>
+            <div class="tagline">Empowering Education Through Excellence</div>
           </div>
         </div>
-        <div class="nav-links">
-          <a href="contactus.html" style="color: #1e3c72; text-decoration: none; font-weight: 600; padding: 10px 20px; border: 2px solid #1e3c72; border-radius: 25px; transition: all 0.3s ease; margin-right: 10px;">Contact Us</a>
-          <a href="aboutus.html" style="color: #1e3c72; text-decoration: none; font-weight: 600; padding: 10px 20px; border: 2px solid #1e3c72; border-radius: 25px; transition: all 0.3s ease;">About Us</a>
-        </div>
+      </div>
+      <div class="nav-links" style="display: flex; align-items: center; gap: 15px;">
+        <!-- Drop-down for courses -->
+        <select id="courseSelect" style="padding: 10px; border-radius: 8px; border: 2px solid #1e3c72; font-weight: 600; color: #1e3c72;">
+          <option value="">Our Courses</option>
+          <option value="https://gettingaheadap.org/mechanics/">AP Physics C: Mechanics</option>
+          <option value="https://gettingaheadap.org/em/">AP Physics C: Electricity & Magnetism</option>
+          <option value="building.html">AP Computer Science A</option>
+          <option value="building.html">AP Chemistry</option>
+          <option value="building.html">AP Language & Composition</option>
+          <option value="building.html">AP World History</option>
+        </select>
+
+        <a href="contactus.html" style="color: #1e3c72; text-decoration: none; font-weight: 600; padding: 10px 20px; border: 2px solid #1e3c72; border-radius: 25px; transition: all 0.3s ease; margin-right: 10px;">Contact Us</a>
+        <a href="aboutus.html" style="color: #1e3c72; text-decoration: none; font-weight: 600; padding: 10px 20px; border: 2px solid #1e3c72; border-radius: 25px; transition: all 0.3s ease;">About Us</a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
+<script>
+  document.getElementById("courseSelect").addEventListener("change", function() {
+    if (this.value) {
+      window.location.href = this.value;
+    }
+  });
+</script>
+
 
   <div class="container">
     <!-- Hero Section -->
