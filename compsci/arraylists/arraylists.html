@@ -13,6 +13,38 @@
         <h2>ArrayLists</h2>
         <p>Use dynamic lists for flexible data storage in Java.</p>
         <!-- Add detailed content here -->
+        <section>
+            <h3>ArrayList Basics</h3>
+            <p>An <code>ArrayList</code> is a resizable array from Java's <code>java.util</code> package. It can grow or shrink as needed.</p>
+            <pre><code>import java.util.ArrayList;
+ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();
+names.add(&quot;Alice&quot;);
+names.add(&quot;Bob&quot;);
+System.out.println(names.get(0)); // Output: Alice
+</code></pre>
+        </section>
+        <section>
+            <h3>Common ArrayList Methods</h3>
+            <ul>
+                <li><code>add(value)</code> - Adds an element</li>
+                <li><code>get(index)</code> - Gets element at index</li>
+                <li><code>set(index, value)</code> - Sets element at index</li>
+                <li><code>remove(index)</code> - Removes element at index</li>
+                <li><code>size()</code> - Returns number of elements</li>
+            </ul>
+            <pre><code>names.set(1, &quot;Charlie&quot;);
+names.remove(0);
+System.out.println(names.size()); // Output: 1
+</code></pre>
+        </section>
+        <section>
+            <h3>Traversing ArrayLists</h3>
+            <p>Use loops to access each element in an ArrayList.</p>
+            <pre><code>for (String name : names) {
+    System.out.println(name);
+}
+</code></pre>
+        </section>
     </main>
     <script src="../script.js"></script>
 </body>

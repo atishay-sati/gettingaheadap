@@ -13,6 +13,41 @@
         <h2>Classes & Objects</h2>
         <p>Understand object-oriented programming basics in Java.</p>
         <!-- Add detailed content here -->
+        <section>
+            <h3>What is a Class?</h3>
+            <p>A class is a blueprint for creating objects. It defines properties (fields) and behaviors (methods).</p>
+            <pre><code>public class Dog {
+    String name;
+    int age;
+    public void bark() {
+        System.out.println("Woof!");
+    }
+}
+</code></pre>
+        </section>
+        <section>
+            <h3>Creating Objects</h3>
+            <p>Objects are instances of classes. Use the <code>new</code> keyword to create an object.</p>
+            <pre><code>Dog myDog = new Dog();
+myDog.name = "Buddy";
+myDog.age = 3;
+myDog.bark(); // Output: Woof!
+</code></pre>
+        </section>
+        <section>
+            <h3>Constructors</h3>
+            <p>Constructors initialize new objects. They have the same name as the class.</p>
+            <pre><code>public class Dog {
+    String name;
+    int age;
+    public Dog(String n, int a) {
+        name = n;
+        age = a;
+    }
+}
+Dog d = new Dog("Max", 2);
+</code></pre>
+        </section>
     </main>
     <script src="../script.js"></script>
 </body>

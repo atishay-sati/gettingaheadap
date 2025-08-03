@@ -13,6 +13,72 @@
         <h2>Algorithms</h2>
         <p>Learn about searching, sorting, and analyzing algorithm efficiency.</p>
         <!-- Add detailed content here -->
+        <section>
+            <h3>Searching Algorithms</h3>
+            <p>Algorithms are step-by-step procedures for solving problems. Searching algorithms help you find elements in data structures.</p>
+            <h4>Linear Search</h4>
+            <p>Checks each element one by one until the target is found or the end is reached.</p>
+            <pre><code>int[] arr = {3, 7, 2, 9};
+int target = 7;
+boolean found = false;
+for (int n : arr) {
+    if (n == target) found = true;
+}
+System.out.println(found); // Output: true
+</code></pre>
+            <h4>Binary Search</h4>
+            <p>Efficiently finds an element in a sorted array by repeatedly dividing the search interval in half.</p>
+            <pre><code>int[] arr = {2, 4, 6, 8, 10};
+int target = 6;
+int left = 0, right = arr.length - 1;
+boolean found = false;
+while (left <= right) {
+    int mid = (left + right) / 2;
+    if (arr[mid] == target) {
+        found = true;
+        break;
+    } else if (arr[mid] < target) {
+        left = mid + 1;
+    } else {
+        right = mid - 1;
+    }
+}
+System.out.println(found); // Output: true
+</code></pre>
+        </section>
+        <section>
+            <h3>Sorting Algorithms</h3>
+            <h4>Selection Sort</h4>
+            <p>Finds the smallest element and swaps it with the first unsorted element.</p>
+            <pre><code>int[] arr = {5, 2, 4, 1};
+for (int i = 0; i < arr.length - 1; i++) {
+    int min = i;
+    for (int j = i + 1; j < arr.length; j++) {
+        if (arr[j] < arr[min]) min = j;
+    }
+    int temp = arr[i];
+    arr[i] = arr[min];
+    arr[min] = temp;
+}
+</code></pre>
+            <h4>Insertion Sort</h4>
+            <p>Builds the sorted array one item at a time by inserting elements into their correct position.</p>
+            <pre><code>int[] arr = {5, 2, 4, 1};
+for (int i = 1; i < arr.length; i++) {
+    int key = arr[i];
+    int j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
+        j--;
+    }
+    arr[j + 1] = key;
+}
+</code></pre>
+        </section>
+        <section>
+            <h3>Algorithm Efficiency</h3>
+            <p>Efficiency is measured by time and space complexity. For example, linear search is O(n), binary search is O(log n), and selection/insertion sort are O(n^2).</p>
+        </section>
     </main>
     <script src="../script.js"></script>
 </body>

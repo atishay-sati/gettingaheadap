@@ -13,6 +13,38 @@
         <h2>Recursion</h2>
         <p>Solve problems with recursive methods in Java.</p>
         <!-- Add detailed content here -->
+        <section>
+            <h3>What is Recursion?</h3>
+            <p>Recursion is when a method calls itself to solve a smaller version of a problem. Each recursive call should move closer to a base case.</p>
+            <pre><code>// Print numbers from n down to 1
+public void countdown(int n) {
+    if (n == 0) return; // base case
+    System.out.println(n);
+    countdown(n - 1); // recursive call
+}
+
+countdown(3); // Output: 3 2 1
+</code></pre>
+        </section>
+        <section>
+            <h3>Factorial Example</h3>
+            <p>The factorial of n (n!) is the product of all positive integers up to n. Recursion is a natural fit for this problem.</p>
+            <pre><code>public int factorial(int n) {
+    if (n == 0) return 1; // base case
+    return n * factorial(n - 1);
+}
+
+System.out.println(factorial(4)); // Output: 24
+</code></pre>
+        </section>
+        <section>
+            <h3>When to Use Recursion</h3>
+            <ul>
+                <li>When a problem can be broken into similar subproblems</li>
+                <li>When the problem has a clear base case</li>
+                <li>Examples: factorial, Fibonacci, searching trees</li>
+            </ul>
+        </section>
     </main>
     <script src="../script.js"></script>
 </body>

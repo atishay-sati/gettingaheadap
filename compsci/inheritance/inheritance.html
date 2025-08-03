@@ -13,6 +13,54 @@
         <h2>Inheritance</h2>
         <p>Extend classes and use polymorphism in Java.</p>
         <!-- Add detailed content here -->
+        <section>
+            <h3>Inheritance Basics</h3>
+            <p>Inheritance allows a class to acquire properties and methods from another class. The <code>extends</code> keyword is used.</p>
+            <pre><code>public class Animal {
+    public void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+public class Dog extends Animal {
+    public void bark() {
+        System.out.println("Woof!");
+    }
+}
+
+Dog d = new Dog();
+d.eat(); // Output: Animal eats
+d.bark(); // Output: Woof!
+</code></pre>
+        </section>
+        <section>
+            <h3>Polymorphism</h3>
+            <p>Polymorphism lets you use a superclass reference for subclass objects.</p>
+            <pre><code>Animal a = new Dog();
+a.eat(); // Output: Animal eats
+// a.bark(); // Error: bark() not in Animal
+</code></pre>
+        </section>
+        <section>
+            <h3>Method Overriding</h3>
+            <p>Subclasses can override methods from the superclass.</p>
+            <pre><code>public class Animal {
+    public void speak() {
+        System.out.println("Animal sound");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void speak() {
+        System.out.println("Meow");
+    }
+}
+
+Animal c = new Cat();
+c.speak(); // Output: Meow
+</code></pre>
+        </section>
     </main>
     <script src="../script.js"></script>
 </body>
