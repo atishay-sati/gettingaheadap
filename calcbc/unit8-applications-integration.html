@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 8: Applications of Integration - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 8: Applications of Integration - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #f39c12, #e67e22);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #f39c12;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #f39c12;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #f39c12, #e67e22);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #f39c12;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #fff8e1, #fffbf0);
+      border: 2px solid #f39c12;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #f39c12;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #f39c12;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #f39c12;
+      color: #f39c12;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #f39c12;
+      border-color: #f39c12;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #f39c12;
+      color: white;
+      border-color: #e67e22;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="unit8-applications-integration.html">Unit 8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 8: Applications of Integration</h1>
+      <p class="lead">Master the practical applications of integration in real-world problems</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 8: Applications of Integration</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Unit Overview -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📋 Unit Overview</h3>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-custom">
+            <strong>🎯 Learning Objectives:</strong> This unit focuses on applying integration to solve real-world problems including area, volume, arc length, and work calculations.
+          </div>
+          <p>Unit 8 builds upon the integration techniques from Unit 6 to solve practical problems. You'll learn to calculate areas between curves, volumes of revolution, arc lengths, and work done by variable forces.</p>
+          
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <h5>Key Topics:</h5>
+              <ul>
+                <li>Area between curves</li>
+                <li>Volumes of revolution (disk/washer methods)</li>
+                <li>Volumes by cross-sections</li>
+                <li>Arc length calculations</li>
+                <li>Work and force applications</li>
+                <li>Average value of functions</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Skills You'll Master:</h5>
+              <ul>
+                <li>Setting up integral expressions</li>
+                <li>Choosing appropriate methods</li>
+                <li>Interpreting results in context</li>
+                <li>Solving optimization problems</li>
+                <li>Working with parametric equations</li>
+                <li>Applying to physics problems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area Between Curves -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Area Between Curves</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Basic Concept</h4>
+        </div>
+        <div class="card-body">
+          <p>The area between two curves <span class="formula">y = f(x)</span> and <span class="formula">y = g(x)</span> from <span class="formula">x = a</span> to <span class="formula">x = b</span> is:</p>
+          
+          <div class="formula-box">
+            <div class="formula">A = ∫<sub>a</sub><sup>b</sup> |f(x) - g(x)| dx</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>💡 Key Steps:</h5>
+            <ol>
+              <li>Find points of intersection</li>
+              <li>Determine which function is "on top"</li>
+              <li>Set up the integral with correct bounds</li>
+              <li>Evaluate the integral</li>
+            </ol>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 1: Basic Area Between Curves</h5>
+            <p>Find the area between <span class="formula">y = x²</span> and <span class="formula">y = 2x</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Find intersection points: <span class="formula">x² = 2x</span> → <span class="formula">x = 0, 2</span></p>
+            <p>2) On [0,2], <span class="formula">2x ≥ x²</span></p>
+            <p>3) <span class="formula">A = ∫<sub>0</sub><sup>2</sup> (2x - x²) dx = [x² - x³/3]<sub>0</sub><sup>2</sup> = 4 - 8/3 = 4/3</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volumes of Revolution -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔄 Volumes of Revolution</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Disk Method</h4>
+        </div>
+        <div class="card-body">
+          <p>When rotating around a horizontal axis, the volume is:</p>
+          
+          <div class="formula-box">
+            <div class="formula">V = π ∫<sub>a</sub><sup>b</sup> [f(x)]² dx</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 2: Disk Method</h5>
+            <p>Find the volume when <span class="formula">y = √x</span> from <span class="formula">x = 0</span> to <span class="formula">x = 4</span> is rotated about the x-axis.</p>
+            <p><strong>Solution:</strong></p>
+            <p><span class="formula">V = π ∫<sub>0</sub><sup>4</sup> (√x)² dx = π ∫<sub>0</sub><sup>4</sup> x dx = π[x²/2]<sub>0</sub><sup>4</sup> = π(8) = 8π</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Washer Method</h4>
+        </div>
+        <div class="card-body">
+          <p>When there's a "hole" in the solid, use the washer method:</p>
+          
+          <div class="formula-box">
+            <div class="formula">V = π ∫<sub>a</sub><sup>b</sup> [R(x)² - r(x)²] dx</div>
+          </div>
+          <p>Where <span class="formula">R(x)</span> is the outer radius and <span class="formula">r(x)</span> is the inner radius.</p>
+
+          <div class="example-box">
+            <h5>Example 3: Washer Method</h5>
+            <p>Find the volume when the region between <span class="formula">y = x²</span> and <span class="formula">y = 2x</span> is rotated about the x-axis.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Intersection points: <span class="formula">x = 0, 2</span></p>
+            <p>2) <span class="formula">R(x) = 2x</span>, <span class="formula">r(x) = x²</span></p>
+            <p>3) <span class="formula">V = π ∫<sub>0</sub><sup>2</sup> [(2x)² - (x²)²] dx = π ∫<sub>0</sub><sup>2</sup> (4x² - x⁴) dx</span></p>
+            <p>4) <span class="formula">= π[4x³/3 - x⁵/5]<sub>0</sub><sup>2</sup> = π(32/3 - 32/5) = 64π/15</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volumes by Cross-Sections -->
+    <section class="mb-5">
+      <h2 class="section-heading">📏 Volumes by Cross-Sections</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">General Formula</h4>
+        </div>
+        <div class="card-body">
+          <p>For any cross-sectional area <span class="formula">A(x)</span>:</p>
+          
+          <div class="formula-box">
+            <div class="formula">V = ∫<sub>a</sub><sup>b</sup> A(x) dx</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔍 Common Cross-Sections:</h5>
+            <ul>
+              <li><strong>Squares:</strong> <span class="formula">A(x) = [f(x) - g(x)]²</span></li>
+              <li><strong>Rectangles:</strong> <span class="formula">A(x) = h[f(x) - g(x)]</span></li>
+              <li><strong>Semicircles:</strong> <span class="formula">A(x) = π[f(x) - g(x)]²/8</span></li>
+              <li><strong>Equilateral triangles:</strong> <span class="formula">A(x) = √3[f(x) - g(x)]²/4</span></li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 4: Square Cross-Sections</h5>
+            <p>Find the volume of a solid with square cross-sections perpendicular to the x-axis, where the base is the region between <span class="formula">y = x²</span> and <span class="formula">y = 4</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Intersection: <span class="formula">x² = 4</span> → <span class="formula">x = ±2</span></p>
+            <p>2) <span class="formula">A(x) = (4 - x²)² = 16 - 8x² + x⁴</span></p>
+            <p>3) <span class="formula">V = ∫<sub>-2</sub><sup>2</sup> (16 - 8x² + x⁴) dx = 2∫<sub>0</sub><sup>2</sup> (16 - 8x² + x⁴) dx</span></p>
+            <p>4) <span class="formula">= 2[16x - 8x³/3 + x⁵/5]<sub>0</sub><sup>2</sup> = 2(32 - 64/3 + 32/5) = 512/15</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arc Length -->
+    <section class="mb-5">
+      <h2 class="section-heading">📏 Arc Length</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Arc Length Formula</h4>
+        </div>
+        <div class="card-body">
+          <p>For a function <span class="formula">y = f(x)</span> from <span class="formula">x = a</span> to <span class="formula">x = b</span>:</p>
+          
+          <div class="formula-box">
+            <div class="formula">L = ∫<sub>a</sub><sup>b</sup> √(1 + [f'(x)]²) dx</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 5: Arc Length</h5>
+            <p>Find the arc length of <span class="formula">y = x³/2</span> from <span class="formula">x = 0</span> to <span class="formula">x = 2</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">f'(x) = 3x²/2</span></p>
+            <p>2) <span class="formula">L = ∫<sub>0</sub><sup>2</sup> √(1 + (3x²/2)²) dx = ∫<sub>0</sub><sup>2</sup> √(1 + 9x⁴/4) dx</span></p>
+            <p>3) This requires numerical methods or substitution techniques</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work and Force Applications -->
+    <section class="mb-5">
+      <h2 class="section-heading">⚡ Work and Force Applications</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Work Formula</h4>
+        </div>
+        <div class="card-body">
+          <p>When force varies with position:</p>
+          
+          <div class="formula-box">
+            <div class="formula">W = ∫<sub>a</sub><sup>b</sup> F(x) dx</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔧 Common Applications:</h5>
+            <ul>
+              <li><strong>Springs:</strong> <span class="formula">F(x) = kx</span> (Hooke's Law)</li>
+              <li><strong>Pumping liquids:</strong> <span class="formula">F(x) = ρgA(x)h(x)</span></li>
+              <li><strong>Variable forces:</strong> Any force that depends on position</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 6: Spring Work</h5>
+            <p>A spring has natural length 10 cm and requires 5 N to stretch it 2 cm. How much work is required to stretch it from 12 cm to 15 cm?</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Find spring constant: <span class="formula">F = kx</span> → <span class="formula">5 = k(0.02)</span> → <span class="formula">k = 250 N/m</span></p>
+            <p>2) <span class="formula">W = ∫<sub>0.02</sub><sup>0.05</sup> 250x dx = 250[x²/2]<sub>0.02</sub><sup>0.05</sup></span></p>
+            <p>3) <span class="formula">= 125[(0.05)² - (0.02)²] = 125(0.0025 - 0.0004) = 0.2625 J</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Average Value -->
+    <section class="mb-5">
+      <h2 class="section-heading">📊 Average Value of Functions</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Average Value Formula</h4>
+        </div>
+        <div class="card-body">
+          <p>The average value of <span class="formula">f(x)</span> on <span class="formula">[a,b]</span> is:</p>
+          
+          <div class="formula-box">
+            <div class="formula">f<sub>avg</sub> = (1/(b-a)) ∫<sub>a</sub><sup>b</sup> f(x) dx</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 7: Average Value</h5>
+            <p>Find the average value of <span class="formula">f(x) = x²</span> on <span class="formula">[0,3]</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p><span class="formula">f<sub>avg</sub> = (1/3) ∫<sub>0</sub><sup>3</sup> x² dx = (1/3)[x³/3]<sub>0</sub><sup>3</sup> = (1/3)(9) = 3</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎯 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1: Area Between Curves</h5>
+        <p>Find the area of the region bounded by <span class="formula">y = x³</span> and <span class="formula">y = x</span>.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Find intersections: <span class="formula">x³ = x</span> → <span class="formula">x(x² - 1) = 0</span> → <span class="formula">x = -1, 0, 1</span></p>
+          <p>2) On [-1,0]: <span class="formula">x³ ≥ x</span>, On [0,1]: <span class="formula">x ≥ x³</span></p>
+          <p>3) <span class="formula">A = ∫<sub>-1</sub><sup>0</sup> (x³ - x) dx + ∫<sub>0</sub><sup>1</sup> (x - x³) dx</span></p>
+          <p>4) <span class="formula">= [x⁴/4 - x²/2]<sub>-1</sub><sup>0</sup> + [x²/2 - x⁴/4]<sub>0</sub><sup>1</sup> = 1/4 + 1/4 = 1/2</span></p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2: Volume by Washer Method</h5>
+        <p>Find the volume when the region between <span class="formula">y = x²</span> and <span class="formula">y = x</span> is rotated about <span class="formula">y = 2</span>.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Intersections: <span class="formula">x = 0, 1</span></p>
+          <p>2) <span class="formula">R(x) = 2 - x²</span>, <span class="formula">r(x) = 2 - x</span></p>
+          <p>3) <span class="formula">V = π ∫<sub>0</sub><sup>1</sup> [(2-x²)² - (2-x)²] dx</span></p>
+          <p>4) <span class="formula">= π ∫<sub>0</sub><sup>1</sup> (4-4x²+x⁴-4+4x-x²) dx = π ∫<sub>0</sub><sup>1</sup> (4x-5x²+x⁴) dx</span></p>
+          <p>5) <span class="formula">= π[2x²-5x³/3+x⁵/5]<sub>0</sub><sup>1</sup> = π(2-5/3+1/5) = 8π/15</span></p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3: Work Application</h5>
+        <p>A cable weighing 2 lb/ft is used to lift a 200 lb load 50 ft. How much work is required?</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) At height <span class="formula">x</span>, the cable length is <span class="formula">50-x</span></p>
+          <p>2) Total weight at height <span class="formula">x</span>: <span class="formula">200 + 2(50-x) = 300 - 2x</span></p>
+          <p>3) <span class="formula">W = ∫<sub>0</sub><sup>50</sup> (300 - 2x) dx = [300x - x²]<sub>0</sub><sup>50</sup></span></p>
+          <p>4) <span class="formula">= 15000 - 2500 = 12500 ft-lb</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">💡 Exam Tips & Strategies</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Problem-Solving Strategy:</h5>
+              <ol>
+                <li><strong>Sketch the region</strong> - Always draw a diagram first</li>
+                <li><strong>Find intersection points</strong> - These determine your bounds</li>
+                <li><strong>Identify the method</strong> - Disk, washer, or cross-sections</li>
+                <li><strong>Set up the integral</strong> - Be careful with radius expressions</li>
+                <li><strong>Evaluate carefully</strong> - Check your arithmetic</li>
+              </ol>
+            </div>
+            <div class="col-md-6">
+              <h5>⚠️ Common Mistakes:</h5>
+              <ul>
+                <li>Forgetting to square the radius in volume formulas</li>
+                <li>Using wrong bounds of integration</li>
+                <li>Mixing up inner and outer radius in washer method</li>
+                <li>Not accounting for units in work problems</li>
+                <li>Forgetting the π in volume calculations</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-custom mt-4">
+            <strong>🔑 Key Insight:</strong> Most application problems follow the same pattern: identify the quantity you want to find, express it as a sum of infinitesimal pieces, and convert that sum to an integral.
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6cltaeq6GcE?si=MllPhLj9kugeZofe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Ready to Test Your Knowledge -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">🧠 Ready to Test Your Knowledge?</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <h5>📝 Unit 8 Practice Test</h5>
+              <p>Now that you've mastered the applications of integration, test your understanding with our comprehensive practice test. The test includes:</p>
+              <ul>
+                <li><strong>15 Multiple Choice Questions</strong> - Covering all major topics</li>
+                <li><strong>6 Free Response Questions</strong> - With detailed solutions</li>
+                <li><strong>45-minute timer</strong> - Simulating real exam conditions</li>
+                <li><strong>Instant feedback</strong> - Check your answers as you go</li>
+                <li><strong>Score calculation</strong> - See how you perform</li>
+              </ul>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="mb-3">
+                <i class="fas fa-calculator" style="font-size: 3rem; color: #f39c12;"></i>
+              </div>
+              <a href="practiceunit8.html" class="btn btn-success btn-lg">Take Practice Test</a>
+              <p class="mt-2 text-muted"><small>Recommended after completing all unit content</small></p>
+            </div>
+          </div>
+          
+          <div class="alert alert-custom mt-4">
+            <strong>💡 Pro Tip:</strong> Take the practice test under timed conditions to simulate the real AP exam experience. Review any topics you miss and retake the test to track your improvement!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">➡️ Next Unit Preview</h3>
+        </div>
+        <div class="card-body">
+          <p>Ready for the next challenge? <strong>Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</strong> introduces new coordinate systems and ways to describe curves.</p>
+          <a href="unit9-parametric-polar-vector.html" class="btn btn-outline-primary">Explore Unit 9 →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
