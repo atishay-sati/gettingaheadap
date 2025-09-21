@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 1: Limits and Continuity - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 1: Limits and Continuity - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #e74c3c;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #e74c3c;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #e74c3c;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #ffeaea, #fff5f5);
+      border: 2px solid #e74c3c;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #e74c3c;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #e74c3c;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #e74c3c;
+      color: #e74c3c;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #e74c3c;
+      border-color: #e74c3c;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #e74c3c;
+      color: white;
+      border-color: #c0392b;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 1: Limits and Continuity</h1>
+      <p class="lead">Master the foundation of calculus with limits and continuity</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 1: Limits and Continuity</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Overview Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📋 Unit Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Unit 1</strong> establishes the foundation for all of calculus. You'll learn how to:
+          </p>
+          <ul>
+            <li>Evaluate limits using various methods</li>
+            <li>Understand one-sided and two-sided limits</li>
+            <li>Determine continuity of functions</li>
+            <li>Apply the Intermediate Value Theorem</li>
+            <li>Use limits to find asymptotes</li>
+          </ul>
+          <div class="alert alert-custom">
+            <strong>💡 Key Insight:</strong> Limits are the bridge between algebra and calculus. They allow us to study behavior as we approach specific values, even when direct substitution isn't possible.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Limits Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔍 Understanding Limits</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">What is a Limit?</h3>
+        </div>
+        <div class="card-body">
+          <p>A limit describes the value that a function approaches as the input approaches a certain value. We write:</p>
+          <div class="formula-box">
+            <div class="formula">lim<sub>x→a</sub> f(x) = L</div>
+            <p class="mb-0 mt-2">"The limit of f(x) as x approaches a equals L"</p>
+          </div>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Limits don't care about what happens AT the point x = a, only what happens NEAR it.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 1.1: Basic Limit</h5>
+            <p>Find lim<sub>x→2</sub> (x² + 3)</p>
+            <p><strong>Solution:</strong> As x approaches 2, x² approaches 4, so the limit is 4 + 3 = 7</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Methods for Evaluating Limits</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>1. Direct Substitution</h5>
+              <p>Try plugging in the value directly first.</p>
+              <div class="example-box">
+                <p>lim<sub>x→3</sub> (2x + 1) = 2(3) + 1 = 7 ✓</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>2. Factoring</h5>
+              <p>When you get 0/0, try factoring to cancel common terms.</p>
+              <div class="example-box">
+                <p>lim<sub>x→2</sub> (x²-4)/(x-2) = lim<sub>x→2</sub> (x+2) = 4</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <h5>3. Rationalizing</h5>
+              <p>For expressions with radicals, multiply by conjugate.</p>
+            </div>
+            <div class="col-md-6">
+              <h5>4. Special Limits</h5>
+              <p>Memorize key limits like lim<sub>x→0</sub> sin(x)/x = 1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- One-Sided Limits Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">⬅️➡️ One-Sided Limits</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>One-sided limits approach a value from only one direction:</p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">lim<sub>x→a⁻</sub> f(x)</div>
+                <p class="mb-0">Left-hand limit (approaching from below)</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">lim<sub>x→a⁺</sub> f(x)</div>
+                <p class="mb-0">Right-hand limit (approaching from above)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔑 Important Rule</h5>
+            <p><strong>A two-sided limit exists if and only if both one-sided limits exist and are equal.</strong></p>
+            <p class="mb-0">lim<sub>x→a</sub> f(x) = L ⇔ lim<sub>x→a⁻</sub> f(x) = lim<sub>x→a⁺</sub> f(x) = L</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 1.2: One-Sided Limits</h5>
+            <p>For f(x) = |x|/x, find lim<sub>x→0</sub> f(x)</p>
+            <p><strong>Solution:</strong></p>
+            <ul>
+              <li>lim<sub>x→0⁻</sub> f(x) = lim<sub>x→0⁻</sub> (-x)/x = -1</li>
+              <li>lim<sub>x→0⁺</sub> f(x) = lim<sub>x→0⁺</sub> x/x = 1</li>
+              <li>Since -1 ≠ 1, lim<sub>x→0</sub> f(x) does not exist</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continuity Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔗 Continuity</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Definition of Continuity</h3>
+        </div>
+        <div class="card-body">
+          <p>A function f(x) is continuous at x = a if:</p>
+          <div class="formula-box">
+            <div class="formula">1. f(a) is defined</div>
+            <div class="formula">2. lim<sub>x→a</sub> f(x) exists</div>
+            <div class="formula">3. lim<sub>x→a</sub> f(x) = f(a)</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Visual Understanding</h5>
+            <p>A function is continuous if you can draw its graph without lifting your pencil. No jumps, breaks, or holes!</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 1.3: Checking Continuity</h5>
+            <p>Is f(x) = x² continuous at x = 2?</p>
+            <p><strong>Solution:</strong></p>
+            <ol>
+              <li>f(2) = 4 ✓ (defined)</li>
+              <li>lim<sub>x→2</sub> x² = 4 ✓ (exists)</li>
+              <li>lim<sub>x→2</sub> x² = f(2) ✓ (equal)</li>
+            </ol>
+            <p><strong>Answer:</strong> Yes, f(x) is continuous at x = 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Types of Discontinuities</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Removable</strong></td>
+                  <td>Hole in the graph</td>
+                  <td>f(x) = (x²-1)/(x-1) at x = 1</td>
+                </tr>
+                <tr>
+                  <td><strong>Jump</strong></td>
+                  <td>Function "jumps" to different value</td>
+                  <td>f(x) = |x|/x at x = 0</td>
+                </tr>
+                <tr>
+                  <td><strong>Infinite</strong></td>
+                  <td>Function approaches ±∞</td>
+                  <td>f(x) = 1/x at x = 0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Limits Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">⭐ Special Limits to Memorize</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">lim<sub>x→0</sub> sin(x)/x = 1</div>
+                <p class="mb-0">Sine limit</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">lim<sub>x→0</sub> (1-cos(x))/x = 0</div>
+                <p class="mb-0">Cosine limit</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">lim<sub>x→∞</sub> (1+1/x)ˣ = e</div>
+                <p class="mb-0">Natural number e</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">lim<sub>x→0</sub> (eˣ-1)/x = 1</div>
+                <p class="mb-0">Exponential limit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🧮 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1</h5>
+        <p>Find lim<sub>x→3</sub> (x²-9)/(x-3)</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>This gives us 0/0 when we substitute x = 3, so we need to factor:</p>
+          <p>(x²-9)/(x-3) = (x+3)(x-3)/(x-3) = x+3</p>
+          <p>Therefore, lim<sub>x→3</sub> (x²-9)/(x-3) = lim<sub>x→3</sub> (x+3) = 6</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2</h5>
+        <p>Is the function f(x) = 1/x continuous at x = 0? Explain.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>No, f(x) = 1/x is NOT continuous at x = 0 because:</p>
+          <ol>
+            <li>f(0) is undefined (division by zero)</li>
+            <li>lim<sub>x→0</sub> 1/x does not exist (approaches ±∞)</li>
+          </ol>
+          <p>This is an infinite discontinuity.</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3</h5>
+        <p>Find lim<sub>x→0</sub> sin(3x)/x</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>We can use the special limit lim<sub>x→0</sub> sin(x)/x = 1</p>
+          <p>Let u = 3x, then as x → 0, u → 0</p>
+          <p>lim<sub>x→0</sub> sin(3x)/x = lim<sub>u→0</sub> sin(u)/(u/3) = 3 × lim<sub>u→0</sub> sin(u)/u = 3 × 1 = 3</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">💡 Exam Tips</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Multiple Choice</h5>
+              <ul>
+                <li>Always try direct substitution first</li>
+                <li>Look for patterns in answer choices</li>
+                <li>Use calculator to check your work</li>
+                <li>Remember special limits</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>✍️ Free Response</h5>
+              <ul>
+                <li>Show all steps clearly</li>
+                <li>State which method you're using</li>
+                <li>Check your answer makes sense</li>
+                <li>Use proper limit notation</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-warning mt-3">
+            <strong>⚠️ Common Mistakes:</strong>
+            <ul class="mb-0">
+              <li>Forgetting to check one-sided limits</li>
+              <li>Not factoring when you get 0/0</li>
+              <li>Confusing continuity with differentiability</li>
+              <li>Forgetting special limits</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G8zkXA5TXgg?si=zr4cK8yLYpjLTpmy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Practice Test Call-to-Action -->
+    <section class="mb-5">
+      <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body text-center text-white p-5">
+          <h2 class="mb-3">🚀 Ready to Test Your Knowledge?</h2>
+          <p class="lead mb-4">Take our comprehensive Unit 1 practice test with 15 multiple choice questions and 3 free response problems!</p>
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">📊</div>
+                <h5>15 MC Questions</h5>
+                <p class="small opacity-75">Progressive difficulty levels</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">✍️</div>
+                <h5>3 Free Response</h5>
+                <p class="small opacity-75">Show your work</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">⏱️</div>
+                <h5>45 Min Timer</h5>
+                <p class="small opacity-75">Real exam conditions</p>
+              </div>
+            </div>
+          </div>
+          <a href="practiceunit1.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="font-size: 1.2rem; border-radius: 50px; transition: all 0.3s ease; text-decoration: none;">
+            🎯 Start Practice Test Now
+          </a>
+          <p class="mt-3 mb-0 opacity-75">Get instant feedback and detailed solutions!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ What's Next?</h2>
+      
+      <div class="card">
+        <div class="card-body text-center">
+          <h5>Ready for the next challenge?</h5>
+          <p>In Unit 2, you'll learn about differentiation and its fundamental properties.</p>
+          <a href="unit2-differentiation-definition.html" class="btn btn-outline-primary">Go to Unit 2: Differentiation →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
