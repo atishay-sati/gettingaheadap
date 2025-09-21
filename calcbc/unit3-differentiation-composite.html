@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 3: Differentiation - Composite, Implicit, and Inverse Functions - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 3: Differentiation - Composite, Implicit, and Inverse Functions - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #9b59b6, #8e44ad);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #9b59b6;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #9b59b6;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #9b59b6, #8e44ad);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #f3e5f5, #e8d5f2);
+      border: 2px solid #9b59b6;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #9b59b6;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #9b59b6;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #9b59b6;
+      color: #9b59b6;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #9b59b6;
+      border-color: #9b59b6;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #9b59b6;
+      color: white;
+      border-color: #8e44ad;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 3: Differentiation</h1>
+      <p class="lead">Composite, Implicit, and Inverse Functions</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 3: Differentiation - Composite, Implicit, and Inverse Functions</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Overview Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📋 Unit Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Unit 3</strong> extends your differentiation skills to more complex functions. You'll learn how to:
+          </p>
+          <ul>
+            <li>Differentiate composite functions using the chain rule</li>
+            <li>Find derivatives of implicitly defined functions</li>
+            <li>Differentiate inverse functions</li>
+            <li>Apply logarithmic differentiation</li>
+            <li>Use higher-order derivatives</li>
+            <li>Solve related rates problems</li>
+          </ul>
+          <div class="alert alert-custom">
+            <strong>💡 Key Insight:</strong> This unit builds on the basic differentiation rules from Unit 2, but now you'll work with functions that are "nested" inside other functions, defined implicitly, or are inverses of other functions. These techniques are essential for advanced calculus applications.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chain Rule Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔗 The Chain Rule</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Understanding Composite Functions</h3>
+        </div>
+        <div class="card-body">
+          <p>A composite function is a function within a function: f(g(x)). The chain rule tells us how to differentiate these:</p>
+          <div class="formula-box">
+            <div class="formula">d/dx[f(g(x))] = f'(g(x)) · g'(x)</div>
+            <p class="mb-0">"Derivative of outside times derivative of inside"</p>
+          </div>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Think of it as: "What's the derivative of the outside function, evaluated at the inside function, times the derivative of the inside function."</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 3.1: Basic Chain Rule</h5>
+            <p>Find the derivative of f(x) = (x² + 3x)⁵</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let g(x) = x² + 3x (inside function)</p>
+            <p>Let f(u) = u⁵ (outside function)</p>
+            <p>g'(x) = 2x + 3</p>
+            <p>f'(u) = 5u⁴</p>
+            <p>Using chain rule: f'(x) = f'(g(x)) · g'(x) = 5(x² + 3x)⁴ · (2x + 3)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Multiple Chain Rule Applications</h3>
+        </div>
+        <div class="card-body">
+          <p>Sometimes you need to apply the chain rule multiple times:</p>
+          
+          <div class="example-box">
+            <h5>📝 Example 3.2: Multiple Chain Rules</h5>
+            <p>Find the derivative of f(x) = sin(cos(x²))</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let u = x², v = cos(u), f(x) = sin(v)</p>
+            <p>du/dx = 2x</p>
+            <p>dv/du = -sin(u) = -sin(x²)</p>
+            <p>df/dv = cos(v) = cos(cos(x²))</p>
+            <p>Using chain rule: f'(x) = (df/dv)(dv/du)(du/dx)</p>
+            <p>= cos(cos(x²)) · (-sin(x²)) · 2x</p>
+            <p>= -2x sin(x²) cos(cos(x²))</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implicit Differentiation Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔍 Implicit Differentiation</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">What is Implicit Differentiation?</h3>
+        </div>
+        <div class="card-body">
+          <p>When a function is defined implicitly (not solved for y), we use implicit differentiation:</p>
+          <div class="formula-box">
+            <div class="formula">Differentiate both sides with respect to x</div>
+            <div class="formula">Solve for dy/dx</div>
+            <p class="mb-0">Remember: d/dx[y] = dy/dx</p>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>When you see y in an equation, treat it as a function of x and use the chain rule: d/dx[y²] = 2y · dy/dx</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 3.3: Basic Implicit Differentiation</h5>
+            <p>Find dy/dx for x² + y² = 25</p>
+            <p><strong>Solution:</strong></p>
+            <p>Differentiate both sides with respect to x:</p>
+            <p>d/dx[x²] + d/dx[y²] = d/dx[25]</p>
+            <p>2x + 2y · dy/dx = 0</p>
+            <p>2y · dy/dx = -2x</p>
+            <p>dy/dx = -x/y</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">More Complex Implicit Functions</h3>
+        </div>
+        <div class="card-body">
+          <div class="example-box">
+            <h5>📝 Example 3.4: Complex Implicit Differentiation</h5>
+            <p>Find dy/dx for x³ + y³ = 3xy</p>
+            <p><strong>Solution:</strong></p>
+            <p>Differentiate both sides:</p>
+            <p>3x² + 3y² · dy/dx = 3y + 3x · dy/dx</p>
+            <p>3y² · dy/dx - 3x · dy/dx = 3y - 3x²</p>
+            <p>dy/dx(3y² - 3x) = 3y - 3x²</p>
+            <p>dy/dx = (3y - 3x²)/(3y² - 3x) = (y - x²)/(y² - x)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inverse Functions Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔄 Inverse Functions</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Derivative of Inverse Functions</h3>
+        </div>
+        <div class="card-body">
+          <p>If f and g are inverse functions, then:</p>
+          <div class="formula-box">
+            <div class="formula">g'(x) = 1/f'(g(x))</div>
+            <p class="mb-0">The derivative of an inverse function</p>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>To find the derivative of an inverse function, take the reciprocal of the derivative of the original function, evaluated at the inverse function.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 3.5: Derivative of Inverse</h5>
+            <p>If f(x) = x³ + 2x + 1, find (f⁻¹)'(4)</p>
+            <p><strong>Solution:</strong></p>
+            <p>First, find f'(x) = 3x² + 2</p>
+            <p>We need to find f⁻¹(4), which means f(x) = 4</p>
+            <p>x³ + 2x + 1 = 4 → x³ + 2x - 3 = 0 → x = 1</p>
+            <p>So f⁻¹(4) = 1</p>
+            <p>(f⁻¹)'(4) = 1/f'(f⁻¹(4)) = 1/f'(1) = 1/(3(1)² + 2) = 1/5</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Common Inverse Function Derivatives</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Function</th>
+                  <th>Inverse</th>
+                  <th>Derivative of Inverse</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>sin(x)</strong></td>
+                  <td>arcsin(x)</td>
+                  <td>1/√(1-x²)</td>
+                </tr>
+                <tr>
+                  <td><strong>cos(x)</strong></td>
+                  <td>arccos(x)</td>
+                  <td>-1/√(1-x²)</td>
+                </tr>
+                <tr>
+                  <td><strong>tan(x)</strong></td>
+                  <td>arctan(x)</td>
+                  <td>1/(1+x²)</td>
+                </tr>
+                <tr>
+                  <td><strong>eˣ</strong></td>
+                  <td>ln(x)</td>
+                  <td>1/x</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logarithmic Differentiation Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📊 Logarithmic Differentiation</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>Use logarithmic differentiation when you have functions of the form f(x)^(g(x)) or complex products/quotients:</p>
+          <div class="formula-box">
+            <div class="formula">1. Take the natural log of both sides</div>
+            <div class="formula">2. Use log properties to simplify</div>
+            <div class="formula">3. Differentiate implicitly</div>
+            <div class="formula">4. Solve for dy/dx</div>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 3.6: Logarithmic Differentiation</h5>
+            <p>Find the derivative of f(x) = x^x</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let y = x^x</p>
+            <p>Take natural log: ln(y) = ln(x^x) = x ln(x)</p>
+            <p>Differentiate implicitly: (1/y) · dy/dx = ln(x) + x · (1/x) = ln(x) + 1</p>
+            <p>Solve for dy/dx: dy/dx = y(ln(x) + 1) = x^x(ln(x) + 1)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Higher-Order Derivatives Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📈 Higher-Order Derivatives</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>Higher-order derivatives are derivatives of derivatives:</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="formula-box">
+                <div class="formula">f''(x) = d²y/dx²</div>
+                <p class="mb-0">Second derivative</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="formula-box">
+                <div class="formula">f'''(x) = d³y/dx³</div>
+                <p class="mb-0">Third derivative</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="formula-box">
+                <div class="formula">f⁽ⁿ⁾(x) = dⁿy/dxⁿ</div>
+                <p class="mb-0">nth derivative</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 3.7: Higher-Order Derivatives</h5>
+            <p>Find f''(x) for f(x) = x⁴ - 3x² + 2x</p>
+            <p><strong>Solution:</strong></p>
+            <p>f'(x) = 4x³ - 6x + 2</p>
+            <p>f''(x) = 12x² - 6</p>
+            <p>f'''(x) = 24x</p>
+            <p>f⁽⁴⁾(x) = 24</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🧮 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1</h5>
+        <p>Find the derivative of f(x) = (x² + 1)³(2x - 3)⁴</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>Use product rule with chain rule:</p>
+          <p>Let u = (x² + 1)³ and v = (2x - 3)⁴</p>
+          <p>u' = 3(x² + 1)² · 2x = 6x(x² + 1)²</p>
+          <p>v' = 4(2x - 3)³ · 2 = 8(2x - 3)³</p>
+          <p>f'(x) = u'v + uv' = 6x(x² + 1)²(2x - 3)⁴ + (x² + 1)³ · 8(2x - 3)³</p>
+          <p>= 2(x² + 1)²(2x - 3)³[3x(2x - 3) + 4(x² + 1)]</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2</h5>
+        <p>Find dy/dx for x²y + y³ = 6x</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>Differentiate implicitly:</p>
+          <p>d/dx[x²y] + d/dx[y³] = d/dx[6x]</p>
+          <p>2xy + x² · dy/dx + 3y² · dy/dx = 6</p>
+          <p>dy/dx(x² + 3y²) = 6 - 2xy</p>
+          <p>dy/dx = (6 - 2xy)/(x² + 3y²)</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3</h5>
+        <p>Find the derivative of f(x) = arcsin(2x)</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>Using the derivative of inverse sine with chain rule:</p>
+          <p>f'(x) = 1/√(1 - (2x)²) · d/dx[2x]</p>
+          <p>= 1/√(1 - 4x²) · 2</p>
+          <p>= 2/√(1 - 4x²)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">💡 Exam Tips</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Multiple Choice</h5>
+              <ul>
+                <li>Look for chain rule patterns in composite functions</li>
+                <li>Remember to multiply by dy/dx in implicit differentiation</li>
+                <li>Use logarithmic differentiation for complex functions</li>
+                <li>Check your work by taking derivatives of answers</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>✍️ Free Response</h5>
+              <ul>
+                <li>Show all steps clearly</li>
+                <li>State which rule you're using</li>
+                <li>Be careful with implicit differentiation notation</li>
+                <li>Simplify your final answers</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-warning mt-3">
+            <strong>⚠️ Common Mistakes:</strong>
+            <ul class="mb-0">
+              <li>Forgetting to multiply by dy/dx in implicit differentiation</li>
+              <li>Not applying the chain rule correctly</li>
+              <li>Mixing up inverse function derivatives</li>
+              <li>Not simplifying complex expressions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/41ekroROgpk?si=98tnk52RI_mxHroL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <!-- Practice Test Call-to-Action -->
+    <section class="mb-5">
+      <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body text-center text-white p-5">
+          <h2 class="mb-3">🚀 Ready to Test Your Knowledge?</h2>
+          <p class="lead mb-4">Take our comprehensive Unit 3 practice test with 15 multiple choice questions and 6 free response problems!</p>
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">📊</div>
+                <h5>15 MC Questions</h5>
+                <p class="small opacity-75">Progressive difficulty levels</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">✍️</div>
+                <h5>6 Free Response</h5>
+                <p class="small opacity-75">Show your work</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">⏱️</div>
+                <h5>45 Min Timer</h5>
+                <p class="small opacity-75">Real exam conditions</p>
+              </div>
+            </div>
+          </div>
+          <a href="practiceunit3.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="font-size: 1.2rem; border-radius: 50px; transition: all 0.3s ease; text-decoration: none;">
+            🎯 Start Practice Test Now
+          </a>
+          <p class="mt-3 mb-0 opacity-75">Get instant feedback and detailed solutions!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ What's Next?</h2>
+      
+      <div class="card">
+        <div class="card-body text-center">
+          <h5>Ready for the next challenge?</h5>
+          <p>In Unit 4, you'll learn about applications of derivatives including optimization and related rates.</p>
+          <a href="#" class="btn btn-outline-primary">Go to Unit 4: Applications of Derivatives →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
