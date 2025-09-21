@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 1 Practice Test: Limits and Continuity - Comprehensive practice with solutions">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 1 Practice Test: Limits and Continuity - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #e74c3c;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #e74c3c;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #e74c3c, #c0392b);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .question-box {
+      background-color: #ffffff;
+      border: 2px solid #e74c3c;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .question-number {
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #e74c3c;
+      color: #e74c3c;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #e74c3c;
+      border-color: #e74c3c;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .btn-info {
+      border-radius: 30px;
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+    }
+
+    .btn-info:hover {
+      background-color: #138496;
+      border-color: #117a8b;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .formula {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e74c3c;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .timer {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .timer h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .score-display {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .multiple-choice {
+      margin: 1rem 0;
+    }
+
+    .form-check {
+      margin: 0.5rem 0;
+    }
+
+    .form-check-input:checked {
+      background-color: #e74c3c;
+      border-color: #e74c3c;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="unit1-limits-continuity.html">Unit 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 1 Practice Test</h1>
+      <p class="lead">Limits and Continuity - 15 Multiple Choice + 6 Free Response Questions</p>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <a href="unit1-limits-continuity.html" class="btn btn-outline-light">← Back to Unit 1</a>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-info" onclick="startTimer()">Start Timer</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success" onclick="calculateFinalScore()">Calculate Score</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="unit1-limits-continuity.html">Unit 1: Limits and Continuity</a></li>
+        <li class="breadcrumb-item active">Practice Test</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Timer Section -->
+  <div class="container">
+    <div class="timer">
+      <h5>⏱️ Test Timer</h5>
+      <div id="timerDisplay" class="h4">00:00</div>
+      <p class="mb-0">Recommended time: 45 minutes</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Instructions -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📋 Test Instructions</h3>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-custom">
+            <strong>💡 Important:</strong> This practice test covers all topics from Unit 1: Limits and Continuity. 
+            Take your time and show all your work for free-response questions.
+          </div>
+          <ul>
+            <li><strong>Multiple Choice:</strong> Select the best answer for each question</li>
+            <li><strong>Free Response:</strong> Show all steps and justify your reasoning</li>
+            <li><strong>Time Limit:</strong> 45 minutes recommended (AP exam timing)</li>
+            <li><strong>Calculator:</strong> Graphing calculator allowed for some questions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section A: Multiple Choice (15 questions) -->
+    <section class="mb-5">
+      <h2 class="section-heading">📝 Section A: Multiple Choice (15 questions)</h2>
+      
+      <!-- Question 1 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">1</span>
+          <h5 class="mb-0">Find lim<sub>x→2</sub> (x²-4)/(x-2)</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+            <label class="form-check-label" for="q1a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+            <label class="form-check-label" for="q1b">B) 2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+            <label class="form-check-label" for="q1c">C) 4</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1d" value="d">
+            <label class="form-check-label" for="q1d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q1', 'c')">Check Answer</button>
+        <div id="q1result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">2</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> sin(3x)/x</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2a" value="a">
+            <label class="form-check-label" for="q2a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+            <label class="form-check-label" for="q2b">B) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+            <label class="form-check-label" for="q2c">C) 3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2d" value="d">
+            <label class="form-check-label" for="q2d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q2', 'c')">Check Answer</button>
+        <div id="q2result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">3</span>
+          <h5 class="mb-0">Find lim<sub>x→∞</sub> (2x²+3x+1)/(x²+5)</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3a" value="a">
+            <label class="form-check-label" for="q3a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+            <label class="form-check-label" for="q3b">B) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+            <label class="form-check-label" for="q3c">C) 2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3d" value="d">
+            <label class="form-check-label" for="q3d">D) ∞</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q3', 'c')">Check Answer</button>
+        <div id="q3result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">4</span>
+          <h5 class="mb-0">Is f(x) = 1/x continuous at x = 0?</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4a" value="a">
+            <label class="form-check-label" for="q4a">A) Yes, it's continuous</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4b" value="b">
+            <label class="form-check-label" for="q4b">B) No, it has a removable discontinuity</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4c" value="c">
+            <label class="form-check-label" for="q4c">C) No, it has a jump discontinuity</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4d" value="d">
+            <label class="form-check-label" for="q4d">D) No, it has an infinite discontinuity</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q4', 'd')">Check Answer</button>
+        <div id="q4result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">5</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (√(x+4) - 2)/x</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5a" value="a">
+            <label class="form-check-label" for="q5a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5b" value="b">
+            <label class="form-check-label" for="q5b">B) 1/4</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5c" value="c">
+            <label class="form-check-label" for="q5c">C) 1/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5d" value="d">
+            <label class="form-check-label" for="q5d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q5', 'b')">Check Answer</button>
+        <div id="q5result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">6</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (1-cos(x))/x²</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6a" value="a">
+            <label class="form-check-label" for="q6a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6b" value="b">
+            <label class="form-check-label" for="q6b">B) 1/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6c" value="c">
+            <label class="form-check-label" for="q6c">C) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6d" value="d">
+            <label class="form-check-label" for="q6d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q6', 'b')">Check Answer</button>
+        <div id="q6result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">7</span>
+          <h5 class="mb-0">Find lim<sub>x→∞</sub> (3x+2)/(2x-1)</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7a" value="a">
+            <label class="form-check-label" for="q7a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7b" value="b">
+            <label class="form-check-label" for="q7b">B) 1/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7c" value="c">
+            <label class="form-check-label" for="q7c">C) 3/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7d" value="d">
+            <label class="form-check-label" for="q7d">D) ∞</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q7', 'c')">Check Answer</button>
+        <div id="q7result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">8</span>
+          <h5 class="mb-0">Find lim<sub>x→2</sub> |x-2|/(x-2)</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8a" value="a">
+            <label class="form-check-label" for="q8a">A) -1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8b" value="b">
+            <label class="form-check-label" for="q8b">B) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8c" value="c">
+            <label class="form-check-label" for="q8c">C) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8d" value="d">
+            <label class="form-check-label" for="q8d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q8', 'd')">Check Answer</button>
+        <div id="q8result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">9</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (√(x²+9) - 3)/x²</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9a" value="a">
+            <label class="form-check-label" for="q9a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9b" value="b">
+            <label class="form-check-label" for="q9b">B) 1/6</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9c" value="c">
+            <label class="form-check-label" for="q9c">C) 1/3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9d" value="d">
+            <label class="form-check-label" for="q9d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q9', 'b')">Check Answer</button>
+        <div id="q9result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">10</span>
+          <h5 class="mb-0">Find lim<sub>x→∞</sub> (1+2/x)ˣ</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10a" value="a">
+            <label class="form-check-label" for="q10a">A) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10b" value="b">
+            <label class="form-check-label" for="q10b">B) e</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10c" value="c">
+            <label class="form-check-label" for="q10c">C) e²</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10d" value="d">
+            <label class="form-check-label" for="q10d">D) ∞</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q10', 'c')">Check Answer</button>
+        <div id="q10result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">11</span>
+          <h5 class="mb-0">Is f(x) = {x² if x≠2, 5 if x=2} continuous at x=2?</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11a" value="a">
+            <label class="form-check-label" for="q11a">A) Yes, it's continuous</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11b" value="b">
+            <label class="form-check-label" for="q11b">B) No, it has a removable discontinuity</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11c" value="c">
+            <label class="form-check-label" for="q11c">C) No, it has a jump discontinuity</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11d" value="d">
+            <label class="form-check-label" for="q11d">D) No, it has an infinite discontinuity</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q11', 'b')">Check Answer</button>
+        <div id="q11result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">12</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> tan(x)/x</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12a" value="a">
+            <label class="form-check-label" for="q12a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12b" value="b">
+            <label class="form-check-label" for="q12b">B) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12c" value="c">
+            <label class="form-check-label" for="q12c">C) Does not exist</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12d" value="d">
+            <label class="form-check-label" for="q12d">D) ∞</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q12', 'b')">Check Answer</button>
+        <div id="q12result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">13</span>
+          <h5 class="mb-0">Find lim<sub>x→1</sub> ln(x)/(x-1)</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13a" value="a">
+            <label class="form-check-label" for="q13a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13b" value="b">
+            <label class="form-check-label" for="q13b">B) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13c" value="c">
+            <label class="form-check-label" for="q13c">C) e</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13d" value="d">
+            <label class="form-check-label" for="q13d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q13', 'b')">Check Answer</button>
+        <div id="q13result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 14 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">14</span>
+          <h5 class="mb-0">Find lim<sub>x→∞</sub> √(x²+3x) - x</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14a" value="a">
+            <label class="form-check-label" for="q14a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14b" value="b">
+            <label class="form-check-label" for="q14b">B) 1/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14c" value="c">
+            <label class="form-check-label" for="q14c">C) 3/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14d" value="d">
+            <label class="form-check-label" for="q14d">D) ∞</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q14', 'c')">Check Answer</button>
+        <div id="q14result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 15 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">15</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (sin(x) - x)/x³</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15a" value="a">
+            <label class="form-check-label" for="q15a">A) 0</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15b" value="b">
+            <label class="form-check-label" for="q15b">B) -1/6</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15c" value="c">
+            <label class="form-check-label" for="q15c">C) 1/6</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15d" value="d">
+            <label class="form-check-label" for="q15d">D) Does not exist</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q15', 'b')">Check Answer</button>
+        <div id="q15result" class="mt-2"></div>
+      </div>
+    </section>
+
+    <!-- Section B: Free Response (6 questions) -->
+    <section class="mb-5">
+      <h2 class="section-heading">✍️ Section B: Free Response (6 questions)</h2>
+      
+      <!-- Question 1 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">1</span>
+          <h5 class="mb-0">Find lim<sub>x→1</sub> (x³-1)/(x-1) using factoring.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr1" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr1" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr1sol')">Show Solution</button>
+        <div id="fr1sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Factor the numerator: x³-1 = (x-1)(x²+x+1)</p>
+          <p>2) Cancel common factor: (x³-1)/(x-1) = (x-1)(x²+x+1)/(x-1) = x²+x+1</p>
+          <p>3) Take the limit: lim<sub>x→1</sub> (x²+x+1) = 1²+1+1 = 3</p>
+          <p><strong>Answer: 3</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">2</span>
+          <h5 class="mb-0">For what value(s) of k is f(x) = {kx+2 if x≤1, x² if x>1} continuous at x=1?</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr2" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr2" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr2sol')">Show Solution</button>
+        <div id="fr2sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) For continuity at x=1, we need: lim<sub>x→1⁻</sub> f(x) = lim<sub>x→1⁺</sub> f(x) = f(1)</p>
+          <p>2) lim<sub>x→1⁻</sub> f(x) = lim<sub>x→1⁻</sub> (kx+2) = k(1)+2 = k+2</p>
+          <p>3) lim<sub>x→1⁺</sub> f(x) = lim<sub>x→1⁺</sub> x² = 1² = 1</p>
+          <p>4) f(1) = k(1)+2 = k+2 (using the first piece since x≤1)</p>
+          <p>5) Set equal: k+2 = 1, so k = -1</p>
+          <p><strong>Answer: k = -1</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">3</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (eˣ-1)/x using the special limit.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr3" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr3" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr3sol')">Show Solution</button>
+        <div id="fr3sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) This is a special limit: lim<sub>x→0</sub> (eˣ-1)/x = 1</p>
+          <p>2) No additional work needed - this is a memorized result</p>
+          <p>3) The limit equals 1 by definition</p>
+          <p><strong>Answer: 1</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">4</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (√(x+4) - 2)/x using rationalization.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr4" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr4" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr4sol')">Show Solution</button>
+        <div id="fr4sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Multiply numerator and denominator by conjugate: (√(x+4) + 2)</p>
+          <p>2) (√(x+4) - 2)(√(x+4) + 2) = (x+4) - 4 = x</p>
+          <p>3) Denominator becomes: x(√(x+4) + 2)</p>
+          <p>4) Cancel x: 1/(√(x+4) + 2)</p>
+          <p>5) Take limit: 1/(√(0+4) + 2) = 1/(2+2) = 1/4</p>
+          <p><strong>Answer: 1/4</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">5</span>
+          <h5 class="mb-0">Find lim<sub>x→∞</sub> √(x²+3x) - x using rationalization.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr5" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr5" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr5sol')">Show Solution</button>
+        <div id="fr5sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Multiply by conjugate: (√(x²+3x) + x)/(√(x²+3x) + x)</p>
+          <p>2) Numerator: (√(x²+3x))² - x² = x²+3x - x² = 3x</p>
+          <p>3) Denominator: √(x²+3x) + x ≈ √x² + x = x + x = 2x (for large x)</p>
+          <p>4) Limit becomes: lim<sub>x→∞</sub> 3x/(2x) = 3/2</p>
+          <p><strong>Answer: 3/2</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">6</span>
+          <h5 class="mb-0">Find lim<sub>x→0</sub> (sin(x) - x)/x³ using Taylor series or L'Hôpital's rule.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr6" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr6" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr6sol')">Show Solution</button>
+        <div id="fr6sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Using L'Hôpital's rule (0/0 form):</p>
+          <p>2) lim<sub>x→0</sub> (cos(x) - 1)/(3x²) = 0/0</p>
+          <p>3) Apply again: lim<sub>x→0</sub> (-sin(x))/(6x) = 0/0</p>
+          <p>4) Apply once more: lim<sub>x→0</sub> (-cos(x))/6 = -1/6</p>
+          <p><strong>Answer: -1/6</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Score Summary -->
+    <section class="mb-5">
+      <div class="score-display">
+        <h3>📊 Test Results</h3>
+        <div id="scoreResult" class="mb-3"></div>
+        <div id="scoreBreakdown" class="mb-3"></div>
+        <button class="btn btn-primary btn-lg" onclick="calculateFinalScore()">Calculate Final Score</button>
+      </div>
+    </section>
+
+    <!-- Study Recommendations -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📚 Study Recommendations</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>If you scored 80%+:</h5>
+              <ul>
+                <li>Great job! You have a solid foundation</li>
+                <li>Focus on the few topics you missed</li>
+                <li>Move on to Unit 2: Differentiation</li>
+                <li>Practice more challenging problems</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>If you scored below 80%:</h5>
+              <ul>
+                <li>Review the concepts you struggled with</li>
+                <li>Practice more basic limit problems</li>
+                <li>Focus on continuity definitions</li>
+                <li>Use the main Unit 1 page for review</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    let startTime = null;
+    let timerInterval = null;
+
+    function startTimer() {
+      if (startTime === null) {
+        startTime = Date.now();
+        timerInterval = setInterval(updateTimer, 1000);
+        document.querySelector('button[onclick="startTimer()"]').textContent = 'Timer Running...';
+        document.querySelector('button[onclick="startTimer()"]').disabled = true;
+      }
+    }
+
+    function updateTimer() {
+      if (startTime === null) return;
+      
+      const elapsed = Date.now() - startTime;
+      const minutes = Math.floor(elapsed / 60000);
+      const seconds = Math.floor((elapsed % 60000) / 1000);
+      
+      document.getElementById('timerDisplay').textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function checkAnswer(questionName, correctAnswer) {
+      const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+      const resultDiv = document.getElementById(questionName + 'result');
+      
+      if (!selectedAnswer) {
+        resultDiv.innerHTML = '<div class="alert alert-warning">Please select an answer first!</div>';
+        return;
+      }
+      
+      if (selectedAnswer.value === correctAnswer) {
+        resultDiv.innerHTML = '<div class="alert alert-success">✅ Correct! Great job!</div>';
+      } else {
+        resultDiv.innerHTML = '<div class="alert alert-danger">❌ Incorrect. The correct answer is ' + correctAnswer.toUpperCase() + '.</div>';
+      }
+    }
+
+    function showSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+
+
+
+    function calculateFinalScore() {
+      const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15'];
+      const correctAnswers = ['c', 'c', 'c', 'd', 'b', 'b', 'c', 'd', 'b', 'c', 'b', 'b', 'b', 'c', 'b'];
+      let correct = 0;
+      let total = questions.length;
+      
+      questions.forEach((question, index) => {
+        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        if (selectedAnswer && selectedAnswer.value === correctAnswers[index]) {
+          correct++;
+        }
+      });
+      
+      const percentage = Math.round((correct / total) * 100);
+      const scoreResult = document.getElementById('scoreResult');
+      const scoreBreakdown = document.getElementById('scoreBreakdown');
+      
+      let grade = '';
+      if (percentage >= 90) grade = 'A';
+      else if (percentage >= 80) grade = 'B';
+      else if (percentage >= 70) grade = 'C';
+      else if (percentage >= 60) grade = 'D';
+      else grade = 'F';
+      
+      scoreResult.innerHTML = `
+        <h4>Your Score: ${correct}/${total} (${percentage}%)</h4>
+        <h5>Grade: ${grade}</h5>
+      `;
+      
+      scoreBreakdown.innerHTML = `
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Multiple Choice: ${correct}/${total}</h6>
+          </div>
+          <div class="col-md-6">
+            <h6>Free Response: Check solutions above</h6>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
