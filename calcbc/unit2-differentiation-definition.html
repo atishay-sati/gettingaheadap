@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 2: Differentiation - Definition and Basic Rules - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 2: Differentiation - Definition and Basic Rules - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #3498db, #2980b9);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #3498db;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #3498db;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #3498db, #2980b9);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+      border: 2px solid #3498db;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3498db;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #3498db;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #3498db;
+      color: #3498db;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #3498db;
+      border-color: #3498db;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #3498db;
+      color: white;
+      border-color: #2980b9;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 2: Differentiation</h1>
+      <p class="lead">Master the definition and basic rules of derivatives</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 2: Differentiation</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Overview Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📋 Unit Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Unit 2</strong> introduces the fundamental concept of differentiation. You'll learn how to:
+          </p>
+          <ul>
+            <li>Understand the definition of the derivative</li>
+            <li>Calculate derivatives using the limit definition</li>
+            <li>Apply basic differentiation rules</li>
+            <li>Find derivatives of polynomial and power functions</li>
+            <li>Use the product and quotient rules</li>
+            <li>Apply the chain rule for composite functions</li>
+          </ul>
+          <div class="alert alert-custom">
+            <strong>💡 Key Insight:</strong> The derivative represents the instantaneous rate of change of a function. It tells us how fast a function is changing at any given point, which is crucial for understanding motion, optimization, and many real-world applications.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Definition of Derivative Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Definition of the Derivative</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">The Limit Definition</h3>
+        </div>
+        <div class="card-body">
+          <p>The derivative of a function f(x) at a point x = a is defined as:</p>
+          <div class="formula-box">
+            <div class="formula">f'(a) = lim<sub>h→0</sub> [f(a+h) - f(a)]/h</div>
+            <p class="mb-0">This is the slope of the tangent line at x = a</p>
+          </div>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>The derivative f'(x) gives us the slope of the tangent line to the curve y = f(x) at any point x.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.1: Using the Definition</h5>
+            <p>Find f'(2) for f(x) = x² using the limit definition.</p>
+            <p><strong>Solution:</strong></p>
+            <p>f'(2) = lim<sub>h→0</sub> [f(2+h) - f(2)]/h</p>
+            <p>= lim<sub>h→0</sub> [(2+h)² - 2²]/h</p>
+            <p>= lim<sub>h→0</sub> [4 + 4h + h² - 4]/h</p>
+            <p>= lim<sub>h→0</sub> [4h + h²]/h</p>
+            <p>= lim<sub>h→0</sub> (4 + h) = 4</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Alternative Notation</h3>
+        </div>
+        <div class="card-body">
+          <p>There are several ways to write the derivative:</p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">f'(x)</div>
+                <p class="mb-0">Prime notation</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">dy/dx</div>
+                <p class="mb-0">Leibniz notation</p>
+              </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">D<sub>x</sub>f(x)</div>
+                <p class="mb-0">Operator notation</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="formula-box">
+                <div class="formula">d/dx[f(x)]</div>
+                <p class="mb-0">Differential operator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Basic Rules Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">⚡ Basic Differentiation Rules</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Power Rule</h3>
+        </div>
+        <div class="card-body">
+          <p>For any real number n:</p>
+          <div class="formula-box">
+            <div class="formula">d/dx[xⁿ] = nxⁿ⁻¹</div>
+            <p class="mb-0">The most fundamental rule</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.2: Power Rule</h5>
+            <p>Find the derivative of f(x) = x⁵</p>
+            <p><strong>Solution:</strong> f'(x) = 5x⁴</p>
+            <p>Find the derivative of g(x) = x⁻³</p>
+            <p><strong>Solution:</strong> g'(x) = -3x⁻⁴ = -3/x⁴</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Constant Multiple Rule</h3>
+        </div>
+        <div class="card-body">
+          <div class="formula-box">
+            <div class="formula">d/dx[cf(x)] = c · f'(x)</div>
+            <p class="mb-0">Constants can be factored out</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.3: Constant Multiple</h5>
+            <p>Find the derivative of f(x) = 7x³</p>
+            <p><strong>Solution:</strong> f'(x) = 7 · d/dx[x³] = 7 · 3x² = 21x²</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Sum and Difference Rules</h3>
+        </div>
+        <div class="card-body">
+          <div class="formula-box">
+            <div class="formula">d/dx[f(x) ± g(x)] = f'(x) ± g'(x)</div>
+            <p class="mb-0">Derivatives can be added and subtracted</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.4: Sum Rule</h5>
+            <p>Find the derivative of f(x) = x⁴ + 3x² - 5x + 2</p>
+            <p><strong>Solution:</strong></p>
+            <p>f'(x) = d/dx[x⁴] + d/dx[3x²] - d/dx[5x] + d/dx[2]</p>
+            <p>= 4x³ + 6x - 5 + 0</p>
+            <p>= 4x³ + 6x - 5</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product and Quotient Rules Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">✖️➗ Product and Quotient Rules</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Product Rule</h3>
+        </div>
+        <div class="card-body">
+          <div class="formula-box">
+            <div class="formula">d/dx[f(x) · g(x)] = f'(x) · g(x) + f(x) · g'(x)</div>
+            <p class="mb-0">"First times derivative of second, plus second times derivative of first"</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.5: Product Rule</h5>
+            <p>Find the derivative of f(x) = (x² + 1)(x³ - 2x)</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let f(x) = x² + 1 and g(x) = x³ - 2x</p>
+            <p>f'(x) = 2x and g'(x) = 3x² - 2</p>
+            <p>Using the product rule:</p>
+            <p>d/dx[f(x) · g(x)] = (2x)(x³ - 2x) + (x² + 1)(3x² - 2)</p>
+            <p>= 2x⁴ - 4x² + 3x⁴ - 2x² + 3x² - 2</p>
+            <p>= 5x⁴ - 3x² - 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Quotient Rule</h3>
+        </div>
+        <div class="card-body">
+          <div class="formula-box">
+            <div class="formula">d/dx[f(x)/g(x)] = [f'(x) · g(x) - f(x) · g'(x)] / [g(x)]²</div>
+            <p class="mb-0">"Low d-high minus high d-low, over low squared"</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.6: Quotient Rule</h5>
+            <p>Find the derivative of f(x) = (x² + 1)/(x - 1)</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let f(x) = x² + 1 and g(x) = x - 1</p>
+            <p>f'(x) = 2x and g'(x) = 1</p>
+            <p>Using the quotient rule:</p>
+            <p>d/dx[f(x)/g(x)] = [(2x)(x - 1) - (x² + 1)(1)] / (x - 1)²</p>
+            <p>= [2x² - 2x - x² - 1] / (x - 1)²</p>
+            <p>= (x² - 2x - 1) / (x - 1)²</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chain Rule Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔗 Chain Rule</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>The chain rule is used for composite functions (functions within functions):</p>
+          <div class="formula-box">
+            <div class="formula">d/dx[f(g(x))] = f'(g(x)) · g'(x)</div>
+            <p class="mb-0">"Derivative of outside times derivative of inside"</p>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Think of it as: "What's the derivative of the outside function, evaluated at the inside function, times the derivative of the inside function."</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 2.7: Chain Rule</h5>
+            <p>Find the derivative of f(x) = (x² + 3x)⁵</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let g(x) = x² + 3x (inside function)</p>
+            <p>Let f(u) = u⁵ (outside function)</p>
+            <p>g'(x) = 2x + 3</p>
+            <p>f'(u) = 5u⁴</p>
+            <p>Using the chain rule:</p>
+            <p>f'(x) = f'(g(x)) · g'(x) = 5(x² + 3x)⁴ · (2x + 3)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Derivatives Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">⭐ Special Derivatives to Memorize</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Function</th>
+                  <th>Derivative</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>sin(x)</strong></td>
+                  <td>cos(x)</td>
+                  <td>Trigonometric</td>
+                </tr>
+                <tr>
+                  <td><strong>cos(x)</strong></td>
+                  <td>-sin(x)</td>
+                  <td>Trigonometric</td>
+                </tr>
+                <tr>
+                  <td><strong>eˣ</strong></td>
+                  <td>eˣ</td>
+                  <td>Exponential</td>
+                </tr>
+                <tr>
+                  <td><strong>ln(x)</strong></td>
+                  <td>1/x</td>
+                  <td>Logarithmic</td>
+                </tr>
+                <tr>
+                  <td><strong>aˣ</strong></td>
+                  <td>aˣ ln(a)</td>
+                  <td>General exponential</td>
+                </tr>
+                <tr>
+                  <td><strong>log<sub>a</sub>(x)</strong></td>
+                  <td>1/(x ln(a))</td>
+                  <td>General logarithm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fC6hYVrYdgk?si=jpIbyx2AZhky-5kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Practice Problems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🧮 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1</h5>
+        <p>Find the derivative of f(x) = 3x⁴ - 2x³ + 5x - 7</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>f'(x) = d/dx[3x⁴] - d/dx[2x³] + d/dx[5x] - d/dx[7]</p>
+          <p>= 3 · 4x³ - 2 · 3x² + 5 · 1 - 0</p>
+          <p>= 12x³ - 6x² + 5</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2</h5>
+        <p>Find the derivative of f(x) = (x² + 1)(x³ - 2)</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>Using the product rule with f(x) = x² + 1 and g(x) = x³ - 2:</p>
+          <p>f'(x) = 2x and g'(x) = 3x²</p>
+          <p>d/dx[f(x) · g(x)] = (2x)(x³ - 2) + (x² + 1)(3x²)</p>
+          <p>= 2x⁴ - 4x + 3x⁴ + 3x²</p>
+          <p>= 5x⁴ + 3x² - 4x</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3</h5>
+        <p>Find the derivative of f(x) = (2x + 1)⁴</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>Using the chain rule with g(x) = 2x + 1 and f(u) = u⁴:</p>
+          <p>g'(x) = 2 and f'(u) = 4u³</p>
+          <p>f'(x) = f'(g(x)) · g'(x) = 4(2x + 1)³ · 2</p>
+          <p>= 8(2x + 1)³</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">💡 Exam Tips</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Multiple Choice</h5>
+              <ul>
+                <li>Always check your work by taking the derivative of your answer</li>
+                <li>Look for patterns in the answer choices</li>
+                <li>Use the power rule for polynomials</li>
+                <li>Remember the chain rule for composite functions</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>✍️ Free Response</h5>
+              <ul>
+                <li>Show all steps clearly</li>
+                <li>State which rule you're using</li>
+                <li>Simplify your final answer</li>
+                <li>Check that your answer makes sense</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-warning mt-3">
+            <strong>⚠️ Common Mistakes:</strong>
+            <ul class="mb-0">
+              <li>Forgetting the chain rule for composite functions</li>
+              <li>Mixing up the product and quotient rules</li>
+              <li>Not simplifying the final answer</li>
+              <li>Forgetting to apply the power rule correctly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Test Call-to-Action -->
+    <section class="mb-5">
+      <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body text-center text-white p-5">
+          <h2 class="mb-3">🚀 Ready to Test Your Knowledge?</h2>
+          <p class="lead mb-4">Take our comprehensive Unit 2 practice test with 15 multiple choice questions and 6 free response problems!</p>
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">📊</div>
+                <h5>15 MC Questions</h5>
+                <p class="small opacity-75">Progressive difficulty levels</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">✍️</div>
+                <h5>6 Free Response</h5>
+                <p class="small opacity-75">Show your work</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">⏱️</div>
+                <h5>45 Min Timer</h5>
+                <p class="small opacity-75">Real exam conditions</p>
+              </div>
+            </div>
+          </div>
+          <a href="practiceunit2.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="font-size: 1.2rem; border-radius: 50px; transition: all 0.3s ease; text-decoration: none;">
+            🎯 Start Practice Test Now
+          </a>
+          <p class="mt-3 mb-0 opacity-75">Get instant feedback and detailed solutions!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ What's Next?</h2>
+      
+      <div class="card">
+        <div class="card-body text-center">
+          <h5>Ready for the next challenge?</h5>
+          <p>In Unit 3, you'll learn about applications of derivatives including optimization and related rates.</p>
+          <a href="#" class="btn btn-outline-primary">Go to Unit 3: Applications of Derivatives →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
