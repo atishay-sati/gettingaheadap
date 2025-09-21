@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 4: Contextual Applications of Differentiation - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 4: Contextual Applications of Differentiation - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #27ae60, #229954);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #27ae60;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #27ae60;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #27ae60, #229954);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #27ae60;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+      border: 2px solid #27ae60;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #27ae60;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #27ae60;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #27ae60;
+      color: #27ae60;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #27ae60;
+      border-color: #27ae60;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #27ae60;
+      color: white;
+      border-color: #229954;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 4: Contextual Applications</h1>
+      <p class="lead">Real-world applications of differentiation</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 4: Contextual Applications of Differentiation</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Overview Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📋 Unit Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Unit 4</strong> brings calculus to life with real-world applications. You'll learn how to:
+          </p>
+          <ul>
+            <li>Interpret derivatives in context</li>
+            <li>Solve related rates problems</li>
+            <li>Find local and global extrema</li>
+            <li>Apply the Mean Value Theorem</li>
+            <li>Use derivatives to analyze functions</li>
+            <li>Solve optimization problems</li>
+          </ul>
+          <div class="alert alert-custom">
+            <strong>💡 Key Insight:</strong> This unit shows why calculus is so powerful - it helps us solve real problems! From finding the optimal dimensions of a box to determining when a population is growing fastest, derivatives give us the tools to make informed decisions in the real world.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interpreting Derivatives Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📊 Interpreting Derivatives in Context</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">What Does a Derivative Tell Us?</h3>
+        </div>
+        <div class="card-body">
+          <p>In real-world contexts, derivatives represent rates of change:</p>
+          <div class="formula-box">
+            <div class="formula">f'(x) = rate of change of f(x) with respect to x</div>
+            <p class="mb-0">Units: (units of f) per (units of x)</p>
+          </div>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Always include units when interpreting derivatives in context. The derivative tells us how fast something is changing at a specific moment.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 4.1: Population Growth</h5>
+            <p>If P(t) represents the population of a city at time t (in years), then P'(t) represents:</p>
+            <ul>
+              <li><strong>P'(5) = 2,000</strong> means the population is growing at 2,000 people per year when t = 5</li>
+              <li><strong>P'(10) = -500</strong> means the population is decreasing at 500 people per year when t = 10</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Common Derivative Interpretations</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Context</th>
+                  <th>Function</th>
+                  <th>Derivative Meaning</th>
+                  <th>Units</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Position</strong></td>
+                  <td>s(t)</td>
+                  <td>Velocity</td>
+                  <td>m/s or ft/s</td>
+                </tr>
+                <tr>
+                  <td><strong>Velocity</strong></td>
+                  <td>v(t)</td>
+                  <td>Acceleration</td>
+                  <td>m/s² or ft/s²</td>
+                </tr>
+                <tr>
+                  <td><strong>Volume</strong></td>
+                  <td>V(r)</td>
+                  <td>Rate of volume change</td>
+                  <td>cm³/cm or in³/in</td>
+                </tr>
+                <tr>
+                  <td><strong>Temperature</strong></td>
+                  <td>T(t)</td>
+                  <td>Rate of temperature change</td>
+                  <td>°C/min or °F/hour</td>
+                </tr>
+                <tr>
+                  <td><strong>Cost</strong></td>
+                  <td>C(x)</td>
+                  <td>Marginal cost</td>
+                  <td>$ per item</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Rates Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">⚡ Related Rates</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Understanding Related Rates</h3>
+        </div>
+        <div class="card-body">
+          <p>Related rates problems involve finding how one quantity changes with respect to time when you know how another related quantity changes:</p>
+          <div class="formula-box">
+            <div class="formula">1. Identify what you're looking for</div>
+            <div class="formula">2. Write an equation relating the variables</div>
+            <div class="formula">3. Differentiate with respect to time</div>
+            <div class="formula">4. Substitute known values and solve</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Always draw a diagram and label all known and unknown quantities. This helps you see the relationships between variables.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 4.2: Expanding Circle</h5>
+            <p>A circle's radius is increasing at 3 cm/s. How fast is the area increasing when the radius is 5 cm?</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) We want dA/dt when r = 5</p>
+            <p>2) A = πr² (area of circle)</p>
+            <p>3) dA/dt = 2πr · dr/dt (chain rule)</p>
+            <p>4) dA/dt = 2π(5)(3) = 30π cm²/s</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Common Related Rates Problems</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Geometry Problems</h5>
+              <ul>
+                <li>Expanding/contracting shapes</li>
+                <li>Ladder sliding down wall</li>
+                <li>Conical tank filling</li>
+                <li>Distance between moving objects</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Physics Problems</hh5>
+              <ul>
+                <li>Particle motion</li>
+                <li>Volume of expanding gas</li>
+                <li>Temperature changes</li>
+                <li>Pressure variations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local and Global Extrema Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📈 Local and Global Extrema</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Finding Critical Points</h3>
+        </div>
+        <div class="card-body">
+          <p>Critical points occur where f'(x) = 0 or f'(x) is undefined:</p>
+          <div class="formula-box">
+            <div class="formula">1. Find f'(x)</div>
+            <div class="formula">2. Set f'(x) = 0 and solve for x</div>
+            <div class="formula">3. Find where f'(x) is undefined</div>
+            <div class="formula">4. Check endpoints if applicable</div>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 4.3: Finding Critical Points</h5>
+            <p>Find all critical points of f(x) = x³ - 3x² + 2 on [-1, 3]</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) f'(x) = 3x² - 6x = 3x(x - 2)</p>
+            <p>2) Set f'(x) = 0: 3x(x - 2) = 0</p>
+            <p>3) So x = 0 or x = 2</p>
+            <p>4) Check endpoints: x = -1 and x = 3</p>
+            <p>5) Critical points: x = -1, 0, 2, 3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">First and Second Derivative Tests</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>First Derivative Test</h5>
+              <p>For a critical point x = c:</p>
+              <ul>
+                <li>If f' changes from + to - at c: local maximum</li>
+                <li>If f' changes from - to + at c: local minimum</li>
+                <li>If f' doesn't change sign: neither</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Second Derivative Test</h5>
+              <p>For a critical point x = c:</p>
+              <ul>
+                <li>If f''(c) > 0: local minimum</li>
+                <li>If f''(c) < 0: local maximum</li>
+                <li>If f''(c) = 0: test is inconclusive</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mean Value Theorem Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Mean Value Theorem</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>The Mean Value Theorem (MVT) states:</p>
+          <div class="formula-box">
+            <div class="formula">If f is continuous on [a,b] and differentiable on (a,b),</div>
+            <div class="formula">then there exists c in (a,b) such that:</div>
+            <div class="formula">f'(c) = [f(b) - f(a)]/(b - a)</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>The MVT guarantees that somewhere between a and b, the instantaneous rate of change equals the average rate of change.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 4.4: Applying MVT</h5>
+            <p>For f(x) = x² on [1, 3], find the value of c guaranteed by MVT</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) f'(x) = 2x</p>
+            <p>2) f(1) = 1, f(3) = 9</p>
+            <p>3) Average rate: [f(3) - f(1)]/(3 - 1) = (9 - 1)/2 = 4</p>
+            <p>4) Set f'(c) = 4: 2c = 4, so c = 2</p>
+            <p>5) Check: 2 is in (1, 3) ✓</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optimization Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎯 Optimization Problems</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Steps for Optimization</h3>
+        </div>
+        <div class="card-body">
+          <p>To solve optimization problems:</p>
+          <div class="formula-box">
+            <div class="formula">1. Identify what you want to maximize/minimize</div>
+            <div class="formula">2. Write an equation for the quantity to optimize</div>
+            <div class="formula">3. Use constraints to eliminate variables</div>
+            <div class="formula">4. Find critical points</div>
+            <div class="formula">5. Check endpoints and critical points</div>
+            <div class="formula">6. Answer the question</div>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 4.5: Box Optimization</h5>
+            <p>Find the dimensions of a rectangular box with volume 1000 cm³ that has minimum surface area.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Let x, y, z be the dimensions</p>
+            <p>2) Volume: V = xyz = 1000, so z = 1000/(xy)</p>
+            <p>3) Surface area: S = 2xy + 2xz + 2yz = 2xy + 2000/y + 2000/x</p>
+            <p>4) Find critical points: ∂S/∂x = 2y - 2000/x² = 0</p>
+            <p>5) This gives x = y = 10, so z = 10</p>
+            <p>6) The optimal box is a cube: 10 × 10 × 10 cm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🧮 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1</h5>
+        <p>A spherical balloon is being inflated at a rate of 10 cm³/s. How fast is the radius increasing when the radius is 5 cm?</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) We want dr/dt when r = 5</p>
+          <p>2) Volume: V = (4/3)πr³</p>
+          <p>3) Differentiate: dV/dt = 4πr² · dr/dt</p>
+          <p>4) Substitute: 10 = 4π(5)² · dr/dt</p>
+          <p>5) Solve: dr/dt = 10/(100π) = 1/(10π) cm/s</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2</h5>
+        <p>Find the maximum area of a rectangle inscribed in a semicircle of radius 2.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Let the rectangle have width 2x and height y</p>
+          <p>2) From the semicircle: x² + y² = 4, so y = √(4 - x²)</p>
+          <p>3) Area: A = 2xy = 2x√(4 - x²)</p>
+          <p>4) Find critical points: A' = 2√(4 - x²) + 2x(-x)/√(4 - x²) = 0</p>
+          <p>5) This gives x = √2, so y = √2</p>
+          <p>6) Maximum area: A = 2(√2)(√2) = 4</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3</h5>
+        <p>A ladder 10 feet long rests against a vertical wall. If the bottom of the ladder slides away from the wall at 1 ft/s, how fast is the top sliding down when the bottom is 6 feet from the wall?</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) We want dy/dt when x = 6</p>
+          <p>2) From Pythagorean theorem: x² + y² = 100</p>
+          <p>3) When x = 6: y = 8</p>
+          <p>4) Differentiate: 2x(dx/dt) + 2y(dy/dt) = 0</p>
+          <p>5) Substitute: 2(6)(1) + 2(8)(dy/dt) = 0</p>
+          <p>6) Solve: dy/dt = -12/16 = -3/4 ft/s</p>
+          <p>7) The top is sliding down at 3/4 ft/s</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">💡 Exam Tips</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Multiple Choice</h5>
+              <ul>
+                <li>Always include units in your answers</li>
+                <li>Draw diagrams for related rates problems</li>
+                <li>Check that your answer makes sense</li>
+                <li>Remember to check endpoints in optimization</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>✍️ Free Response</h5>
+              <ul>
+                <li>Show all steps clearly</li>
+                <li>State what you're looking for</li>
+                <li>Write the equation before differentiating</li>
+                <li>Answer the question asked</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-warning mt-3">
+            <strong>⚠️ Common Mistakes:</strong>
+            <ul class="mb-0">
+              <li>Forgetting to include units</li>
+              <li>Not checking endpoints in optimization</li>
+              <li>Mixing up what you're looking for</li>
+              <li>Not drawing diagrams for related rates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wtJJkZW6n1s?si=fYmKyvricxiUt1Be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Practice Test Call-to-Action -->
+    <section class="mb-5">
+      <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body text-center text-white p-5">
+          <h2 class="mb-3">🚀 Ready to Test Your Knowledge?</h2>
+          <p class="lead mb-4">Take our comprehensive Unit 4 practice test with 15 multiple choice questions and 6 free response problems!</p>
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">📊</div>
+                <h5>15 MC Questions</h5>
+                <p class="small opacity-75">Progressive difficulty levels</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">✍️</div>
+                <h5>6 Free Response</h5>
+                <p class="small opacity-75">Show your work</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">⏱️</div>
+                <h5>45 Min Timer</h5>
+                <p class="small opacity-75">Real exam conditions</p>
+              </div>
+            </div>
+          </div>
+          <a href="practiceunit4.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="font-size: 1.2rem; border-radius: 50px; transition: all 0.3s ease; text-decoration: none;">
+            🎯 Start Practice Test Now
+          </a>
+          <p class="mt-3 mb-0 opacity-75">Get instant feedback and detailed solutions!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ What's Next?</h2>
+      
+      <div class="card">
+        <div class="card-body text-center">
+          <h5>Ready for the next challenge?</h5>
+          <p>In Unit 5, you'll learn about analytical applications of differentiation including L'Hôpital's rule and advanced curve sketching.</p>
+          <a href="#" class="btn btn-outline-primary">Go to Unit 5: Analytical Applications →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
