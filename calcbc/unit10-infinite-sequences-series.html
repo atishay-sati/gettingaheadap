@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 10: Infinite Sequences and Series - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 10: Infinite Sequences and Series - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #34495e, #2c3e50);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #34495e;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #34495e;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #34495e, #2c3e50);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #34495e;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #ecf0f1, #f8f9fa);
+      border: 2px solid #34495e;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #34495e;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #34495e;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #34495e;
+      color: #34495e;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #34495e;
+      border-color: #34495e;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #34495e;
+      color: white;
+      border-color: #2c3e50;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="unit10-infinite-sequences-series.html">Unit 10</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 10: Infinite Sequences and Series</h1>
+      <p class="lead">Master the culmination of AP Calculus BC with convergence, power series, and Taylor polynomials</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 10: Infinite Sequences and Series</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Unit Overview -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📋 Unit Overview</h3>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-custom">
+            <strong>🎯 Learning Objectives:</strong> This unit represents the pinnacle of AP Calculus BC, exploring infinite processes and their applications in approximating functions and solving complex problems.
+          </div>
+          <p>Unit 10 introduces the fascinating world of infinite sequences and series, where we explore convergence, power series, and Taylor polynomials. These concepts are essential for understanding advanced mathematics and have applications in physics, engineering, and computer science.</p>
+          
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <h5>Key Topics:</h5>
+              <ul>
+                <li>Infinite sequences and convergence</li>
+                <li>Infinite series and convergence tests</li>
+                <li>Power series and radius of convergence</li>
+                <li>Taylor and Maclaurin series</li>
+                <li>Function approximation</li>
+                <li>Error bounds and remainders</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Skills You'll Master:</h5>
+              <ul>
+                <li>Determining sequence convergence</li>
+                <li>Applying convergence tests</li>
+                <li>Finding power series representations</li>
+                <li>Constructing Taylor polynomials</li>
+                <li>Estimating function values</li>
+                <li>Analyzing error in approximations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Sequences -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔢 Infinite Sequences</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Basic Concepts</h4>
+        </div>
+        <div class="card-body">
+          <p>A sequence is an ordered list of numbers: <span class="formula">{a₁, a₂, a₃, ...}</span> or <span class="formula">{aₙ}</span></p>
+          
+          <div class="key-concept">
+            <h5>💡 Key Definitions:</h5>
+            <ul>
+              <li><strong>Convergent:</strong> lim<sub>n→∞</sub> aₙ = L (finite limit)</li>
+              <li><strong>Divergent:</strong> lim<sub>n→∞</sub> aₙ does not exist or is infinite</li>
+              <li><strong>Monotonic:</strong> Always increasing or always decreasing</li>
+              <li><strong>Bounded:</strong> All terms lie between two fixed numbers</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 1: Sequence Convergence</h5>
+            <p>Determine if the sequence <span class="formula">aₙ = (n² + 1)/(2n² - 3)</span> converges.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">lim<sub>n→∞</sub> (n² + 1)/(2n² - 3)</span></p>
+            <p>2) Divide by highest power: <span class="formula">lim<sub>n→∞</sub> (1 + 1/n²)/(2 - 3/n²)</span></p>
+            <p>3) <span class="formula">= (1 + 0)/(2 - 0) = 1/2</span></p>
+            <p>4) The sequence converges to 1/2.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Series -->
+    <section class="mb-5">
+      <h2 class="section-heading">➕ Infinite Series</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Definition and Convergence</h4>
+        </div>
+        <div class="card-body">
+          <p>An infinite series is the sum of an infinite sequence:</p>
+          
+          <div class="formula-box">
+            <div class="formula">∑<sub>n=1</sub><sup>∞</sup> aₙ = a₁ + a₂ + a₃ + ...</div>
+          </div>
+
+          <p>The series converges if the sequence of partial sums <span class="formula">Sₙ = a₁ + a₂ + ... + aₙ</span> converges.</p>
+
+          <div class="example-box">
+            <h5>Example 2: Geometric Series</h5>
+            <p>Determine if <span class="formula">∑<sub>n=0</sub><sup>∞</sup> (1/3)ⁿ</span> converges and find its sum.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) This is a geometric series with <span class="formula">a = 1</span> and <span class="formula">r = 1/3</span></p>
+            <p>2) Since <span class="formula">|r| = 1/3 < 1</span>, the series converges</p>
+            <p>3) Sum = <span class="formula">a/(1-r) = 1/(1-1/3) = 1/(2/3) = 3/2</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Convergence Tests -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔍 Convergence Tests</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Essential Tests</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Basic Tests:</h5>
+              <ul>
+                <li><strong>nth Term Test:</strong> If lim aₙ ≠ 0, series diverges</li>
+                <li><strong>Integral Test:</strong> Compare to ∫f(x)dx</li>
+                <li><strong>p-Series:</strong> ∑1/nᵖ converges if p > 1</li>
+                <li><strong>Geometric:</strong> ∑arⁿ converges if |r| < 1</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Comparison Tests:</h5>
+              <ul>
+                <li><strong>Direct Comparison:</strong> Compare term by term</li>
+                <li><strong>Limit Comparison:</strong> Compare ratios</li>
+                <li><strong>Ratio Test:</strong> lim |aₙ₊₁/aₙ|</li>
+                <li><strong>Root Test:</strong> lim ⁿ√|aₙ|</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 3: Ratio Test</h5>
+            <p>Test <span class="formula">∑<sub>n=1</sub><sup>∞</sup> n!/nⁿ</span> for convergence.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">aₙ = n!/nⁿ</span></p>
+            <p>2) <span class="formula">aₙ₊₁ = (n+1)!/(n+1)ⁿ⁺¹</span></p>
+            <p>3) <span class="formula">|aₙ₊₁/aₙ| = [(n+1)!/(n+1)ⁿ⁺¹] / [n!/nⁿ]</span></p>
+            <p>4) <span class="formula">= (n+1) · nⁿ / (n+1)ⁿ⁺¹ = nⁿ / (n+1)ⁿ</span></p>
+            <p>5) <span class="formula">= (n/(n+1))ⁿ = (1/(1+1/n))ⁿ → 1/e < 1</span></p>
+            <p>6) Since limit < 1, series converges by Ratio Test</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Power Series -->
+    <section class="mb-5">
+      <h2 class="section-heading">⚡ Power Series</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Definition and Radius of Convergence</h4>
+        </div>
+        <div class="card-body">
+          <p>A power series centered at <span class="formula">x = a</span> is:</p>
+          
+          <div class="formula-box">
+            <div class="formula">∑<sub>n=0</sub><sup>∞</sup> cₙ(x-a)ⁿ = c₀ + c₁(x-a) + c₂(x-a)² + ...</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔍 Radius of Convergence:</h5>
+            <ul>
+              <li>Use Ratio Test: <span class="formula">R = lim |cₙ/cₙ₊₁|</span></li>
+              <li>If <span class="formula">R = 0</span>: converges only at center</li>
+              <li>If <span class="formula">R = ∞</span>: converges for all x</li>
+              <li>If <span class="formula">0 < R < ∞</span>: converges for |x-a| < R</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 4: Finding Radius of Convergence</h5>
+            <p>Find the radius of convergence for <span class="formula">∑<sub>n=0</sub><sup>∞</sup> xⁿ/n!</span></p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">cₙ = 1/n!</span></p>
+            <p>2) <span class="formula">|cₙ₊₁/cₙ| = (1/(n+1)!) / (1/n!) = n!/(n+1)! = 1/(n+1)</span></p>
+            <p>3) <span class="formula">R = lim<sub>n→∞</sub> |cₙ/cₙ₊₁| = lim<sub>n→∞</sub> (n+1) = ∞</span></p>
+            <p>4) Radius of convergence is ∞ (converges for all x)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Taylor and Maclaurin Series -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Taylor and Maclaurin Series</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Taylor Series Formula</h4>
+        </div>
+        <div class="card-body">
+          <p>The Taylor series for <span class="formula">f(x)</span> centered at <span class="formula">x = a</span> is:</p>
+          
+          <div class="formula-box">
+            <div class="formula">f(x) = ∑<sub>n=0</sub><sup>∞</sup> [f⁽ⁿ⁾(a)/n!] (x-a)ⁿ</div>
+          </div>
+
+          <p>When <span class="formula">a = 0</span>, this becomes the Maclaurin series.</p>
+
+          <div class="example-box">
+            <h5>Example 5: Maclaurin Series for eˣ</h5>
+            <p>Find the Maclaurin series for <span class="formula">f(x) = eˣ</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">f(x) = eˣ</span>, so <span class="formula">f⁽ⁿ⁾(x) = eˣ</span> for all n</p>
+            <p>2) <span class="formula">f⁽ⁿ⁾(0) = e⁰ = 1</span> for all n</p>
+            <p>3) <span class="formula">eˣ = ∑<sub>n=0</sub><sup>∞</sup> (1/n!) xⁿ</span></p>
+            <p>4) <span class="formula">= 1 + x + x²/2! + x³/3! + x⁴/4! + ...</span></p>
+          </div>
+
+          <div class="key-concept">
+            <h5>📚 Common Maclaurin Series:</h5>
+            <ul>
+              <li><span class="formula">eˣ = ∑<sub>n=0</sub><sup>∞</sup> xⁿ/n!</span></li>
+              <li><span class="formula">sin(x) = ∑<sub>n=0</sub><sup>∞</sup> (-1)ⁿ x²ⁿ⁺¹/(2n+1)!</span></li>
+              <li><span class="formula">cos(x) = ∑<sub>n=0</sub><sup>∞</sup> (-1)ⁿ x²ⁿ/(2n)!</span></li>
+              <li><span class="formula">1/(1-x) = ∑<sub>n=0</sub><sup>∞</sup> xⁿ</span> for |x| < 1</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Function Approximation -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎯 Function Approximation</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Taylor Polynomials</h4>
+        </div>
+        <div class="card-body">
+          <p>The nth-degree Taylor polynomial is the first n+1 terms of the Taylor series:</p>
+          
+          <div class="formula-box">
+            <div class="formula">Pₙ(x) = ∑<sub>k=0</sub><sup>n</sup> [f⁽ᵏ⁾(a)/k!] (x-a)ᵏ</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 6: Taylor Polynomial</h5>
+            <p>Find the 3rd-degree Taylor polynomial for <span class="formula">f(x) = ln(x)</span> centered at <span class="formula">x = 1</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">f(x) = ln(x)</span>, <span class="formula">f(1) = 0</span></p>
+            <p>2) <span class="formula">f'(x) = 1/x</span>, <span class="formula">f'(1) = 1</span></p>
+            <p>3) <span class="formula">f''(x) = -1/x²</span>, <span class="formula">f''(1) = -1</span></p>
+            <p>4) <span class="formula">f'''(x) = 2/x³</span>, <span class="formula">f'''(1) = 2</span></p>
+            <p>5) <span class="formula">P₃(x) = 0 + 1(x-1) + (-1/2)(x-1)² + (2/6)(x-1)³</span></p>
+            <p>6) <span class="formula">= (x-1) - (x-1)²/2 + (x-1)³/3</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎯 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1: Sequence Convergence</h5>
+        <p>Determine if <span class="formula">aₙ = (3n² + 2n)/(n² + 1)</span> converges.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) <span class="formula">lim<sub>n→∞</sub> (3n² + 2n)/(n² + 1)</span></p>
+          <p>2) Divide by n²: <span class="formula">lim<sub>n→∞</sub> (3 + 2/n)/(1 + 1/n²)</span></p>
+          <p>3) <span class="formula">= (3 + 0)/(1 + 0) = 3</span></p>
+          <p>4) The sequence converges to 3.</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2: Series Convergence</h5>
+        <p>Test <span class="formula">∑<sub>n=1</sub><sup>∞</sup> 1/(n² + 1)</span> for convergence.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Compare to p-series <span class="formula">∑1/n²</span> (converges since p = 2 > 1)</p>
+          <p>2) <span class="formula">1/(n² + 1) < 1/n²</span> for all n ≥ 1</p>
+          <p>3) By Direct Comparison Test, since <span class="formula">∑1/n²</span> converges, <span class="formula">∑1/(n² + 1)</span> also converges</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3: Power Series</h5>
+        <p>Find the radius of convergence for <span class="formula">∑<sub>n=0</sub><sup>∞</sup> (x-2)ⁿ/n</span>.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) <span class="formula">cₙ = 1/n</span></p>
+          <p>2) <span class="formula">|cₙ₊₁/cₙ| = (1/(n+1)) / (1/n) = n/(n+1)</span></p>
+          <p>3) <span class="formula">R = lim<sub>n→∞</sub> |cₙ/cₙ₊₁| = lim<sub>n→∞</sub> (n+1)/n = 1</span></p>
+          <p>4) Radius of convergence is 1</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">💡 Exam Tips & Strategies</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Problem-Solving Strategy:</h5>
+              <ol>
+                <li><strong>Identify the type</strong> - sequence, series, or power series</li>
+                <li><strong>Choose appropriate test</strong> - start with simplest tests</li>
+                <li><strong>Check conditions</strong> - ensure test requirements are met</li>
+                <li><strong>Apply systematically</strong> - follow test procedures carefully</li>
+                <li><strong>State conclusion clearly</strong> - convergence or divergence</li>
+              </ol>
+            </div>
+            <div class="col-md-6">
+              <h5>⚠️ Common Mistakes:</h5>
+              <ul>
+                <li>Using wrong convergence test</li>
+                <li>Not checking test conditions</li>
+                <li>Confusing sequences and series</li>
+                <li>Incorrect radius of convergence</li>
+                <li>Mixing up Taylor and Maclaurin series</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-custom mt-4">
+            <strong>🔑 Key Insight:</strong> This unit represents the culmination of calculus. Master the convergence tests and Taylor series, and you'll have the tools to approximate any function and analyze infinite processes.
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VZs81fFXnnQ?si=t41-iaugjAlhhRD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Ready to Test Your Knowledge -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">🧠 Ready to Test Your Knowledge?</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <h5>📝 Unit 10 Practice Test</h5>
+              <p>Now that you've mastered infinite sequences and series, test your understanding with our comprehensive practice test. The test includes:</p>
+              <ul>
+                <li><strong>15 Multiple Choice Questions</strong> - Covering all major topics</li>
+                <li><strong>6 Free Response Questions</strong> - With detailed solutions</li>
+                <li><strong>45-minute timer</strong> - Simulating real exam conditions</li>
+                <li><strong>Instant feedback</strong> - Check your answers as you go</li>
+                <li><strong>Score calculation</strong> - See how you perform</li>
+              </ul>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="mb-3">
+                <i class="fas fa-infinity" style="font-size: 3rem; color: #34495e;"></i>
+              </div>
+              <a href="practiceunit10.html" class="btn btn-success btn-lg">Take Practice Test</a>
+              <p class="mt-2 text-muted"><small>Recommended after completing all unit content</small></p>
+            </div>
+          </div>
+          
+          <div class="alert alert-custom mt-4">
+            <strong>💡 Pro Tip:</strong> This is the final unit of AP Calculus BC! Master convergence tests and Taylor series to complete your calculus journey. The practice test will help you identify any remaining gaps before the AP exam.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
