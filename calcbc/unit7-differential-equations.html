@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 7: Differential Equations - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 7: Differential Equations - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #27ae60, #2ecc71);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #27ae60;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #27ae60;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #27ae60, #2ecc71);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #27ae60;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #eafaf1, #f0f9f4);
+      border: 2px solid #27ae60;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #27ae60;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #27ae60;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #27ae60;
+      color: #27ae60;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #27ae60;
+      border-color: #27ae60;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #27ae60;
+      color: white;
+      border-color: #2ecc71;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 7: Differential Equations</h1>
+      <p class="lead">Master the art of solving differential equations and modeling real-world phenomena</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 7: Differential Equations</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Overview Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📋 Unit Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Unit 7</strong> focuses on differential equations and their applications. You'll learn how to:
+          </p>
+          <ul>
+            <li>Solve separable differential equations</li>
+            <li>Use slope fields to visualize solutions</li>
+            <li>Apply Euler's method for approximation</li>
+            <li>Model exponential growth and decay</li>
+            <li>Solve logistic growth problems</li>
+          </ul>
+          <div class="alert alert-custom">
+            <strong>💡 Key Insight:</strong> Differential equations describe how quantities change over time. They're essential for modeling population growth, radioactive decay, and many other real-world phenomena.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction to Differential Equations Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔍 Introduction to Differential Equations</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">What is a Differential Equation?</h3>
+        </div>
+        <div class="card-body">
+          <p>A differential equation is an equation that relates a function with its derivatives. The general form is:</p>
+          <div class="formula-box">
+            <div class="formula">F(x, y, y', y'', ..., y⁽ⁿ⁾) = 0</div>
+            <p class="mb-0">where y' = dy/dx, y'' = d²y/dx², etc.</p>
+          </div>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Differential equations describe how a quantity changes in relation to itself and other variables.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.1: Basic Differential Equation</h5>
+            <p>dy/dx = 2x</p>
+            <p><strong>Solution:</strong> y = ∫2x dx = x² + C</p>
+            <p>This is a family of parabolas, each with a different y-intercept.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Types of Differential Equations</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Form</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Separable</strong></td>
+                  <td>dy/dx = f(x)g(y)</td>
+                  <td>dy/dx = xy</td>
+                </tr>
+                <tr>
+                  <td><strong>Linear</strong></td>
+                  <td>dy/dx + P(x)y = Q(x)</td>
+                  <td>dy/dx + 2y = x</td>
+                </tr>
+                <tr>
+                  <td><strong>Homogeneous</strong></td>
+                  <td>dy/dx = f(y/x)</td>
+                  <td>dy/dx = (x+y)/(x-y)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separable Differential Equations Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔧 Separable Differential Equations</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>A separable differential equation can be written in the form:</p>
+          <div class="formula-box">
+            <div class="formula">dy/dx = f(x)g(y)</div>
+            <p class="mb-0">We can separate variables and integrate both sides</p>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔑 Solution Method</h5>
+            <ol>
+              <li><strong>Separate variables:</strong> dy/g(y) = f(x)dx</li>
+              <li><strong>Integrate both sides:</strong> ∫dy/g(y) = ∫f(x)dx</li>
+              <li><strong>Solve for y:</strong> Express y as a function of x</li>
+            </ol>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.2: Separable Equation</h5>
+            <p>Solve: dy/dx = xy</p>
+            <p><strong>Solution:</strong></p>
+            <ol>
+              <li>Separate: dy/y = x dx</li>
+              <li>Integrate: ∫dy/y = ∫x dx</li>
+              <li>ln|y| = x²/2 + C</li>
+              <li>y = e^(x²/2 + C) = Ce^(x²/2)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slope Fields Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📈 Slope Fields</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Understanding Slope Fields</h3>
+        </div>
+        <div class="card-body">
+          <p>A slope field (or direction field) is a graphical representation of a differential equation. At each point (x,y), we draw a small line segment with slope equal to dy/dx at that point.</p>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Slope fields help us visualize the family of solutions to a differential equation without solving it analytically.</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.3: Creating a Slope Field</h5>
+            <p>For dy/dx = x - y:</p>
+            <ul>
+              <li>At (0,0): slope = 0 - 0 = 0 (horizontal line)</li>
+              <li>At (1,0): slope = 1 - 0 = 1 (45° line)</li>
+              <li>At (0,1): slope = 0 - 1 = -1 (downward 45° line)</li>
+            </ul>
+            <p>Draw small line segments at each point with these slopes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Using Slope Fields</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>1. Sketch Solutions</h5>
+              <p>Follow the slope field to sketch approximate solution curves.</p>
+            </div>
+            <div class="col-md-6">
+              <h5>2. Find Particular Solutions</h5>
+              <p>Use initial conditions to find specific solution curves.</p>
+            </div>
+          </div>
+          
+          <div class="example-box">
+            <h5>📝 Example 7.4: Particular Solution</h5>
+            <p>Given dy/dx = x - y and y(0) = 1, sketch the solution curve.</p>
+            <p><strong>Solution:</strong> Start at (0,1) and follow the slope field to sketch the curve that passes through this point.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Euler's Method Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔢 Euler's Method</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>Euler's method is a numerical technique for approximating solutions to differential equations:</p>
+          <div class="formula-box">
+            <div class="formula">yₙ₊₁ = yₙ + h · f(xₙ, yₙ)</div>
+            <p class="mb-0">where h is the step size</p>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔑 Algorithm Steps</h5>
+            <ol>
+              <li><strong>Start with initial condition:</strong> (x₀, y₀)</li>
+              <li><strong>Choose step size:</strong> h</li>
+              <li><strong>Calculate next point:</strong> x₁ = x₀ + h, y₁ = y₀ + h·f(x₀, y₀)</li>
+              <li><strong>Repeat:</strong> Continue the process</li>
+            </ol>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.5: Euler's Method</h5>
+            <p>Approximate y(1) for dy/dx = x + y, y(0) = 1, using h = 0.5</p>
+            <p><strong>Solution:</strong></p>
+            <ul>
+              <li>Step 1: x₁ = 0.5, y₁ = 1 + 0.5(0 + 1) = 1.5</li>
+              <li>Step 2: x₂ = 1.0, y₂ = 1.5 + 0.5(0.5 + 1.5) = 2.5</li>
+            </ul>
+            <p>So y(1) ≈ 2.5</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exponential Growth and Decay Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📊 Exponential Growth and Decay</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Exponential Growth</h3>
+        </div>
+        <div class="card-body">
+          <p>The differential equation for exponential growth is:</p>
+          <div class="formula-box">
+            <div class="formula">dy/dt = ky</div>
+            <p class="mb-0">where k > 0 is the growth constant</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.6: Population Growth</h5>
+            <p>A population grows at a rate proportional to its size. If P(0) = 1000 and P(2) = 2000, find P(t).</p>
+            <p><strong>Solution:</strong></p>
+            <ol>
+              <li>dP/dt = kP</li>
+              <li>Separate: dP/P = k dt</li>
+              <li>Integrate: ln|P| = kt + C</li>
+              <li>P = Ce^(kt)</li>
+              <li>Use P(0) = 1000: C = 1000</li>
+              <li>Use P(2) = 2000: 2000 = 1000e^(2k), so k = ln(2)/2</li>
+              <li>P(t) = 1000e^(t·ln(2)/2) = 1000·2^(t/2)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Exponential Decay</h3>
+        </div>
+        <div class="card-body">
+          <p>For exponential decay, the equation is the same but k < 0:</p>
+          <div class="formula-box">
+            <div class="formula">y = y₀e^(kt)</div>
+            <p class="mb-0">where k < 0 and y₀ is the initial amount</p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.7: Radioactive Decay</h5>
+            <p>A radioactive substance decays at a rate proportional to its mass. If 50% remains after 10 years, find the half-life.</p>
+            <p><strong>Solution:</strong></p>
+            <ol>
+              <li>y = y₀e^(kt)</li>
+              <li>0.5y₀ = y₀e^(10k), so k = ln(0.5)/10</li>
+              <li>For half-life: 0.5y₀ = y₀e^(kt), so t = ln(0.5)/k = 10 years</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logistic Growth Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📈 Logistic Growth</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>Logistic growth models situations where growth is limited by carrying capacity:</p>
+          <div class="formula-box">
+            <div class="formula">dy/dt = ky(L - y)</div>
+            <p class="mb-0">where L is the carrying capacity and k > 0</p>
+          </div>
+
+          <div class="key-concept">
+            <h5>🎯 Key Features</h5>
+            <ul>
+              <li><strong>Carrying capacity:</strong> Maximum sustainable population</li>
+              <li><strong>S-shaped curve:</strong> Slow growth, then rapid, then slow again</li>
+              <li><strong>Realistic model:</strong> Accounts for limited resources</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 7.8: Logistic Growth</h5>
+            <p>Solve dy/dt = 0.1y(100 - y) with y(0) = 10</p>
+            <p><strong>Solution:</strong></p>
+            <ol>
+              <li>Separate: dy/[y(100-y)] = 0.1 dt</li>
+              <li>Use partial fractions: 1/[y(100-y)] = A/y + B/(100-y)</li>
+              <li>Integrate and solve: y = 100/(1 + 9e^(-10t))</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🧮 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1</h5>
+        <p>Solve the separable differential equation: dy/dx = x²y</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Separate variables: dy/y = x² dx</p>
+          <p>2) Integrate both sides: ∫dy/y = ∫x² dx</p>
+          <p>3) ln|y| = x³/3 + C</p>
+          <p>4) y = e^(x³/3 + C) = Ce^(x³/3)</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2</h5>
+        <p>Use Euler's method with h = 0.5 to approximate y(1) for dy/dx = 2x + y, y(0) = 1.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>Step 1: x₁ = 0.5, y₁ = 1 + 0.5(2(0) + 1) = 1 + 0.5 = 1.5</p>
+          <p>Step 2: x₂ = 1.0, y₂ = 1.5 + 0.5(2(0.5) + 1.5) = 1.5 + 0.5(2.5) = 2.75</p>
+          <p>Therefore, y(1) ≈ 2.75</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3</h5>
+        <p>A bacteria culture grows exponentially. If it doubles every 3 hours and starts with 100 bacteria, find the population after 6 hours.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) P(t) = P₀e^(kt) where P₀ = 100</p>
+          <p>2) P(3) = 200 = 100e^(3k), so e^(3k) = 2</p>
+          <p>3) k = ln(2)/3</p>
+          <p>4) P(6) = 100e^(6·ln(2)/3) = 100e^(2ln(2)) = 100·2² = 400</p>
+          <p>After 6 hours, there are 400 bacteria.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">💡 Exam Tips</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Multiple Choice</h5>
+              <ul>
+                <li>Look for separable equations first</li>
+                <li>Check if you can use slope fields</li>
+                <li>Remember exponential growth/decay formulas</li>
+                <li>Use Euler's method for approximations</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>✍️ Free Response</h5>
+              <ul>
+                <li>Show all steps in separation of variables</li>
+                <li>Include initial conditions in your solution</li>
+                <li>Sketch slope fields carefully</li>
+                <li>Interpret your results in context</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-warning mt-3">
+            <strong>⚠️ Common Mistakes:</strong>
+            <ul class="mb-0">
+              <li>Forgetting the constant of integration</li>
+              <li>Not applying initial conditions correctly</li>
+              <li>Confusing growth and decay constants</li>
+              <li>Making errors in Euler's method calculations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eRFlWSfOarE?si=mU2X1H1wVc6Vfa3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Practice Test Call-to-Action -->
+    <section class="mb-5">
+      <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body text-center text-white p-5">
+          <h2 class="mb-3">🚀 Ready to Test Your Knowledge?</h2>
+          <p class="lead mb-4">Take our comprehensive Unit 7 practice test with 15 multiple choice questions and 3 free response problems!</p>
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">📊</div>
+                <h5>15 MC Questions</h5>
+                <p class="small opacity-75">Progressive difficulty levels</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">✍️</div>
+                <h5>3 Free Response</h5>
+                <p class="small opacity-75">Show your work</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">⏱️</div>
+                <h5>45 Min Timer</h5>
+                <p class="small opacity-75">Real exam conditions</p>
+              </div>
+            </div>
+          </div>
+          <a href="practiceunit7.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="font-size: 1.2rem; border-radius: 50px; transition: all 0.3s ease; text-decoration: none;">
+            🎯 Start Practice Test Now
+          </a>
+          <p class="mt-3 mb-0 opacity-75">Get instant feedback and detailed solutions!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ What's Next?</h2>
+      
+      <div class="card">
+        <div class="card-body text-center">
+          <h5>Ready for the next challenge?</h5>
+          <p>In Unit 8, you'll learn about applications of integration including area, volume, and arc length.</p>
+          <a href="unit8-applications-integration.html" class="btn btn-outline-primary">Go to Unit 8: Applications of Integration →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
