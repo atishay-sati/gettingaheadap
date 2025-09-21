@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #9b59b6, #8e44ad);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #9b59b6;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #9b59b6;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #9b59b6, #8e44ad);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #f3e5f5, #f8f4ff);
+      border: 2px solid #9b59b6;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #9b59b6;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #9b59b6;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #9b59b6;
+      color: #9b59b6;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #9b59b6;
+      border-color: #9b59b6;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #9b59b6;
+      color: white;
+      border-color: #8e44ad;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="unit9-parametric-polar-vector.html">Unit 9</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</h1>
+      <p class="lead">Master advanced coordinate systems and vector calculus</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Unit Overview -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📋 Unit Overview</h3>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-custom">
+            <strong>🎯 Learning Objectives:</strong> This unit introduces advanced coordinate systems and vector calculus, expanding your mathematical toolkit for describing curves and motion in multiple dimensions.
+          </div>
+          <p>Unit 9 explores three powerful mathematical systems: parametric equations for describing curves with a parameter, polar coordinates for circular and spiral patterns, and vector-valued functions for motion in space.</p>
+          
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <h5>Key Topics:</h5>
+              <ul>
+                <li>Parametric equations and curves</li>
+                <li>Derivatives and integrals of parametric functions</li>
+                <li>Polar coordinates and graphs</li>
+                <li>Area and arc length in polar coordinates</li>
+                <li>Vector-valued functions</li>
+                <li>Motion in space and velocity vectors</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Skills You'll Master:</h5>
+              <ul>
+                <li>Converting between coordinate systems</li>
+                <li>Finding derivatives of parametric functions</li>
+                <li>Calculating areas in polar coordinates</li>
+                <li>Working with vector operations</li>
+                <li>Analyzing motion in multiple dimensions</li>
+                <li>Solving optimization problems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parametric Equations -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Parametric Equations</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Basic Concepts</h4>
+        </div>
+        <div class="card-body">
+          <p>Parametric equations describe curves using a third variable (parameter) <span class="formula">t</span>:</p>
+          
+          <div class="formula-box">
+            <div class="formula">x = f(t), y = g(t)</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>💡 Key Ideas:</h5>
+            <ul>
+              <li>The parameter <span class="formula">t</span> represents time or another independent variable</li>
+              <li>Each value of <span class="formula">t</span> gives a point <span class="formula">(x, y)</span></li>
+              <li>Parametric equations can describe curves that aren't functions</li>
+              <li>They're excellent for describing motion and complex curves</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 1: Basic Parametric Curve</h5>
+            <p>Sketch the curve defined by <span class="formula">x = t², y = 2t</span> for <span class="formula">-2 ≤ t ≤ 2</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>Create a table of values:</p>
+            <table class="table table-bordered">
+              <thead>
+                <tr><th>t</th><th>x = t²</th><th>y = 2t</th><th>(x, y)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>-2</td><td>4</td><td>-4</td><td>(4, -4)</td></tr>
+                <tr><td>-1</td><td>1</td><td>-2</td><td>(1, -2)</td></tr>
+                <tr><td>0</td><td>0</td><td>0</td><td>(0, 0)</td></tr>
+                <tr><td>1</td><td>1</td><td>2</td><td>(1, 2)</td></tr>
+                <tr><td>2</td><td>4</td><td>4</td><td>(4, 4)</td></tr>
+              </tbody>
+            </table>
+            <p>This traces a parabola opening to the right.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Derivatives of Parametric Functions -->
+    <section class="mb-5">
+      <h2 class="section-heading">📈 Derivatives of Parametric Functions</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">First and Second Derivatives</h4>
+        </div>
+        <div class="card-body">
+          <p>For parametric equations <span class="formula">x = f(t), y = g(t)</span>:</p>
+          
+          <div class="formula-box">
+            <div class="formula">dy/dx = (dy/dt)/(dx/dt) = g'(t)/f'(t)</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula">d²y/dx² = (d/dt)(dy/dx) / (dx/dt)</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 2: Finding Derivatives</h5>
+            <p>Find dy/dx and d²y/dx² for <span class="formula">x = t³ - t, y = t² + 1</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">dx/dt = 3t² - 1</span>, <span class="formula">dy/dt = 2t</span></p>
+            <p>2) <span class="formula">dy/dx = (2t)/(3t² - 1)</span></p>
+            <p>3) For second derivative: <span class="formula">d²y/dx² = (d/dt)[(2t)/(3t² - 1)] / (3t² - 1)</span></p>
+            <p>4) Using quotient rule: <span class="formula">d²y/dx² = [(2)(3t² - 1) - (2t)(6t)]/(3t² - 1)³</span></p>
+            <p>5) <span class="formula">= (6t² - 2 - 12t²)/(3t² - 1)³ = (-6t² - 2)/(3t² - 1)³</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Polar Coordinates -->
+    <section class="mb-5">
+      <h2 class="section-heading">🌊 Polar Coordinates</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Coordinate System</h4>
+        </div>
+        <div class="card-body">
+          <p>Polar coordinates use <span class="formula">(r, θ)</span> where:</p>
+          <ul>
+            <li><span class="formula">r</span> = distance from origin</li>
+            <li><span class="formula">θ</span> = angle from positive x-axis</li>
+          </ul>
+
+          <div class="formula-box">
+            <div class="formula">x = r cos(θ), y = r sin(θ)</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula">r = √(x² + y²), θ = arctan(y/x)</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 3: Converting Coordinates</h5>
+            <p>Convert <span class="formula">(3, π/4)</span> to rectangular coordinates.</p>
+            <p><strong>Solution:</strong></p>
+            <p><span class="formula">x = 3 cos(π/4) = 3(√2/2) = 3√2/2</span></p>
+            <p><span class="formula">y = 3 sin(π/4) = 3(√2/2) = 3√2/2</span></p>
+            <p>Rectangular coordinates: <span class="formula">(3√2/2, 3√2/2)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Common Polar Graphs</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Basic Curves:</h5>
+              <ul>
+                <li><strong>Circle:</strong> <span class="formula">r = a</span></li>
+                <li><strong>Line:</strong> <span class="formula">θ = α</span></li>
+                <li><strong>Cardioid:</strong> <span class="formula">r = a(1 ± cos θ)</span></li>
+                <li><strong>Rose:</strong> <span class="formula">r = a cos(nθ)</span></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Advanced Curves:</h5>
+              <ul>
+                <li><strong>Lemniscate:</strong> <span class="formula">r² = a² cos(2θ)</span></li>
+                <li><strong>Spiral:</strong> <span class="formula">r = aθ</span></li>
+                <li><strong>Limaçon:</strong> <span class="formula">r = a ± b cos θ</span></li>
+                <li><strong>Conic:</strong> <span class="formula">r = ed/(1 ± e cos θ)</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area in Polar Coordinates -->
+    <section class="mb-5">
+      <h2 class="section-heading">📏 Area in Polar Coordinates</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Area Formula</h4>
+        </div>
+        <div class="card-body">
+          <p>The area bounded by the polar curve <span class="formula">r = f(θ)</span> from <span class="formula">θ = α</span> to <span class="formula">θ = β</span> is:</p>
+          
+          <div class="formula-box">
+            <div class="formula">A = (1/2) ∫<sub>α</sub><sup>β</sup> [f(θ)]² dθ</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 4: Area of a Cardioid</h5>
+            <p>Find the area inside the cardioid <span class="formula">r = 2(1 + cos θ)</span>.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) The cardioid is traced once as <span class="formula">θ</span> goes from 0 to 2π</p>
+            <p>2) <span class="formula">A = (1/2) ∫<sub>0</sub><sup>2π</sup> [2(1 + cos θ)]² dθ</span></p>
+            <p>3) <span class="formula">= (1/2) ∫<sub>0</sub><sup>2π</sup> 4(1 + 2cos θ + cos² θ) dθ</span></p>
+            <p>4) <span class="formula">= 2 ∫<sub>0</sub><sup>2π</sup> (1 + 2cos θ + cos² θ) dθ</span></p>
+            <p>5) <span class="formula">= 2[θ + 2sin θ + (θ/2 + sin(2θ)/4)]<sub>0</sub><sup>2π</sup> = 6π</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vector-Valued Functions -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ Vector-Valued Functions</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Basic Concepts</h4>
+        </div>
+        <div class="card-body">
+          <p>A vector-valued function assigns a vector to each value of a parameter:</p>
+          
+          <div class="formula-box">
+            <div class="formula">r(t) = ⟨f(t), g(t), h(t)⟩ = f(t)i + g(t)j + h(t)k</div>
+          </div>
+
+          <div class="key-concept">
+            <h5>🔍 Key Components:</h5>
+            <ul>
+              <li><strong>Position vector:</strong> <span class="formula">r(t)</span> gives position at time t</li>
+              <li><strong>Velocity vector:</strong> <span class="formula">v(t) = r'(t)</span></li>
+              <li><strong>Speed:</strong> <span class="formula">|v(t)|</span> (magnitude of velocity)</li>
+              <li><strong>Acceleration vector:</strong> <span class="formula">a(t) = v'(t) = r''(t)</span></li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 5: Motion in Space</h5>
+            <p>For <span class="formula">r(t) = ⟨t², 2t, t³⟩</span>, find velocity, speed, and acceleration at t = 1.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">v(t) = r'(t) = ⟨2t, 2, 3t²⟩</span></p>
+            <p>2) <span class="formula">v(1) = ⟨2, 2, 3⟩</span></p>
+            <p>3) <span class="formula">|v(1)| = √(2² + 2² + 3²) = √17</span></p>
+            <p>4) <span class="formula">a(t) = v'(t) = ⟨2, 0, 6t⟩</span></p>
+            <p>5) <span class="formula">a(1) = ⟨2, 0, 6⟩</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arc Length -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Arc Length</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h4 class="mb-0">Parametric and Polar Arc Length</h4>
+        </div>
+        <div class="card-body">
+          <p><strong>Parametric Arc Length:</strong></p>
+          <div class="formula-box">
+            <div class="formula">L = ∫<sub>a</sub><sup>b</sup> √[(dx/dt)² + (dy/dt)²] dt</div>
+          </div>
+
+          <p><strong>Polar Arc Length:</strong></p>
+          <div class="formula-box">
+            <div class="formula">L = ∫<sub>α</sub><sup>β</sup> √[r² + (dr/dθ)²] dθ</div>
+          </div>
+
+          <div class="example-box">
+            <h5>Example 6: Parametric Arc Length</h5>
+            <p>Find the arc length of <span class="formula">x = t², y = t³</span> from t = 0 to t = 2.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) <span class="formula">dx/dt = 2t</span>, <span class="formula">dy/dt = 3t²</span></p>
+            <p>2) <span class="formula">L = ∫<sub>0</sub><sup>2</sup> √[(2t)² + (3t²)²] dt = ∫<sub>0</sub><sup>2</sup> √(4t² + 9t⁴) dt</span></p>
+            <p>3) <span class="formula">= ∫<sub>0</sub><sup>2</sup> t√(4 + 9t²) dt</span></p>
+            <p>4) Let <span class="formula">u = 4 + 9t²</span>, then <span class="formula">du = 18t dt</span></p>
+            <p>5) <span class="formula">L = (1/18) ∫<sub>4</sub><sup>40</sup> √u du = (1/18)[(2/3)u^(3/2)]<sub>4</sub><sup>40</sup> = (1/27)(40^(3/2) - 4^(3/2))</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎯 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1: Parametric Derivatives</h5>
+        <p>Find dy/dx for the parametric equations <span class="formula">x = sin(t), y = cos(2t)</span>.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) <span class="formula">dx/dt = cos(t)</span>, <span class="formula">dy/dt = -2sin(2t)</span></p>
+          <p>2) <span class="formula">dy/dx = (dy/dt)/(dx/dt) = (-2sin(2t))/(cos(t))</span></p>
+          <p>3) Using double angle identity: <span class="formula">sin(2t) = 2sin(t)cos(t)</span></p>
+          <p>4) <span class="formula">dy/dx = (-2)(2sin(t)cos(t))/(cos(t)) = -4sin(t)</span></p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2: Polar Area</h5>
+        <p>Find the area inside the rose <span class="formula">r = 3cos(3θ)</span>.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) The rose has 3 petals, traced once as θ goes from 0 to π</p>
+          <p>2) <span class="formula">A = (1/2) ∫<sub>0</sub><sup>π</sup> [3cos(3θ)]² dθ</span></p>
+          <p>3) <span class="formula">= (9/2) ∫<sub>0</sub><sup>π</sup> cos²(3θ) dθ</span></p>
+          <p>4) Using identity: <span class="formula">cos²(3θ) = (1 + cos(6θ))/2</span></p>
+          <p>5) <span class="formula">= (9/4) ∫<sub>0</sub><sup>π</sup> (1 + cos(6θ)) dθ = (9/4)[θ + sin(6θ)/6]<sub>0</sub><sup>π</sup> = 9π/4</span></p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3: Vector Motion</h5>
+        <p>A particle moves with position vector <span class="formula">r(t) = ⟨t², 2t, t³⟩</span>. Find the speed when t = 2.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) <span class="formula">v(t) = r'(t) = ⟨2t, 2, 3t²⟩</span></p>
+          <p>2) <span class="formula">v(2) = ⟨4, 2, 12⟩</span></p>
+          <p>3) <span class="formula">|v(2)| = √(4² + 2² + 12²) = √(16 + 4 + 144) = √164 = 2√41</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">💡 Exam Tips & Strategies</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Problem-Solving Strategy:</h5>
+              <ol>
+                <li><strong>Identify the coordinate system</strong> - parametric, polar, or rectangular</li>
+                <li><strong>Use appropriate formulas</strong> - derivatives, integrals, or conversions</li>
+                <li><strong>Check your work</strong> - verify units and reasonable answers</li>
+                <li><strong>Sketch when helpful</strong> - visualize the curve or motion</li>
+                <li><strong>Practice conversions</strong> - between coordinate systems</li>
+              </ol>
+            </div>
+            <div class="col-md-6">
+              <h5>⚠️ Common Mistakes:</h5>
+              <ul>
+                <li>Forgetting to square r in polar area formulas</li>
+                <li>Mixing up parameter and angle variables</li>
+                <li>Not using the correct derivative formulas</li>
+                <li>Forgetting the 1/2 factor in polar area</li>
+                <li>Confusing velocity and speed in vector problems</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-custom mt-4">
+            <strong>🔑 Key Insight:</strong> These coordinate systems are powerful tools for describing complex curves and motion. Master the conversion formulas and derivative rules, and you'll be able to tackle any problem in this unit.
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/or54t799MNw?si=3xv91mmWL30ColFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Ready to Test Your Knowledge -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">🧠 Ready to Test Your Knowledge?</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <h5>📝 Unit 9 Practice Test</h5>
+              <p>Now that you've mastered parametric equations, polar coordinates, and vector-valued functions, test your understanding with our comprehensive practice test. The test includes:</p>
+              <ul>
+                <li><strong>15 Multiple Choice Questions</strong> - Covering all major topics</li>
+                <li><strong>6 Free Response Questions</strong> - With detailed solutions</li>
+                <li><strong>45-minute timer</strong> - Simulating real exam conditions</li>
+                <li><strong>Instant feedback</strong> - Check your answers as you go</li>
+                <li><strong>Score calculation</strong> - See how you perform</li>
+              </ul>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="mb-3">
+                <i class="fas fa-vector-square" style="font-size: 3rem; color: #9b59b6;"></i>
+              </div>
+              <a href="practiceunit9.html" class="btn btn-success btn-lg">Take Practice Test</a>
+              <p class="mt-2 text-muted"><small>Recommended after completing all unit content</small></p>
+            </div>
+          </div>
+          
+          <div class="alert alert-custom mt-4">
+            <strong>💡 Pro Tip:</strong> This unit covers advanced coordinate systems and vector calculus. Take the practice test to ensure you can convert between coordinate systems and work with parametric derivatives confidently!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">➡️ Next Unit Preview</h3>
+        </div>
+        <div class="card-body">
+          <p>Ready for the final challenge? <strong>Unit 10: Infinite Sequences and Series</strong> explores convergence, power series, and Taylor polynomials - the culmination of AP Calculus BC.</p>
+          <a href="unit10-sequences-series.html" class="btn btn-outline-primary">Explore Unit 10 →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
