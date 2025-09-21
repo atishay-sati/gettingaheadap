@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 8 Practice Test: Applications of Integration - Comprehensive practice with solutions">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 8 Practice Test: Applications of Integration - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #f39c12, #e67e22);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #f39c12;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #f39c12;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #f39c12, #e67e22);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .question-box {
+      background-color: #ffffff;
+      border: 2px solid #f39c12;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .question-number {
+      background-color: #f39c12;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #f39c12;
+      color: #f39c12;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #f39c12;
+      border-color: #f39c12;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .btn-info {
+      border-radius: 30px;
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+    }
+
+    .btn-info:hover {
+      background-color: #138496;
+      border-color: #117a8b;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .formula {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f39c12;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .timer {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .timer h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .score-display {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .multiple-choice {
+      margin: 1rem 0;
+    }
+
+    .form-check {
+      margin: 0.5rem 0;
+    }
+
+    .form-check-input:checked {
+      background-color: #f39c12;
+      border-color: #f39c12;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="unit8-applications-integration.html">Unit 8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 8 Practice Test</h1>
+      <p class="lead">Applications of Integration - 15 Multiple Choice + 6 Free Response Questions</p>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <a href="unit8-applications-integration.html" class="btn btn-outline-light">← Back to Unit 8</a>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-info" onclick="startTimer()">Start Timer</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success" onclick="calculateFinalScore()">Calculate Score</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="unit8-applications-integration.html">Unit 8: Applications of Integration</a></li>
+        <li class="breadcrumb-item active">Practice Test</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Timer Section -->
+  <div class="container">
+    <div class="timer">
+      <h5>⏱️ Test Timer</h5>
+      <div id="timerDisplay" class="h4">00:00</div>
+      <p class="mb-0">Recommended time: 45 minutes</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Instructions -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📋 Test Instructions</h3>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-custom">
+            <strong>💡 Important:</strong> This practice test covers all topics from Unit 8: Applications of Integration. 
+            Take your time and show all your work for free-response questions.
+          </div>
+          <ul>
+            <li><strong>Multiple Choice:</strong> Select the best answer for each question</li>
+            <li><strong>Free Response:</strong> Show all steps and justify your reasoning</li>
+            <li><strong>Time Limit:</strong> 45 minutes recommended (AP exam timing)</li>
+            <li><strong>Calculator:</strong> Graphing calculator allowed for some questions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section A: Multiple Choice (15 questions) -->
+    <section class="mb-5">
+      <h2 class="section-heading">📝 Section A: Multiple Choice (15 questions)</h2>
+      
+      <!-- Question 1 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">1</span>
+          <h5 class="mb-0">Find the area between y = x² and y = 2x from x = 0 to x = 2.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+            <label class="form-check-label" for="q1a">A) 4/3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+            <label class="form-check-label" for="q1b">B) 8/3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+            <label class="form-check-label" for="q1c">C) 4</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q1" id="q1d" value="d">
+            <label class="form-check-label" for="q1d">D) 16/3</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q1', 'a')">Check Answer</button>
+        <div id="q1result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">2</span>
+          <h5 class="mb-0">Find the volume when y = √x from x = 0 to x = 4 is rotated about the x-axis.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2a" value="a">
+            <label class="form-check-label" for="q2a">A) 4π</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+            <label class="form-check-label" for="q2b">B) 8π</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+            <label class="form-check-label" for="q2c">C) 16π</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="q2d" value="d">
+            <label class="form-check-label" for="q2d">D) 32π</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q2', 'b')">Check Answer</button>
+        <div id="q2result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">3</span>
+          <h5 class="mb-0">Find the volume when the region between y = x² and y = 2x is rotated about the x-axis.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3a" value="a">
+            <label class="form-check-label" for="q3a">A) 16π/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+            <label class="form-check-label" for="q3b">B) 32π/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+            <label class="form-check-label" for="q3c">C) 64π/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q3" id="q3d" value="d">
+            <label class="form-check-label" for="q3d">D) 128π/15</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q3', 'c')">Check Answer</button>
+        <div id="q3result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">4</span>
+          <h5 class="mb-0">A spring requires 10 N to stretch it 2 cm. How much work is required to stretch it from 2 cm to 5 cm?</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4a" value="a">
+            <label class="form-check-label" for="q4a">A) 0.525 J</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4b" value="b">
+            <label class="form-check-label" for="q4b">B) 1.05 J</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4c" value="c">
+            <label class="form-check-label" for="q4c">C) 2.1 J</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="q4d" value="d">
+            <label class="form-check-label" for="q4d">D) 4.2 J</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q4', 'a')">Check Answer</button>
+        <div id="q4result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">5</span>
+          <h5 class="mb-0">Find the average value of f(x) = x² on the interval [0, 3].</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5a" value="a">
+            <label class="form-check-label" for="q5a">A) 3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5b" value="b">
+            <label class="form-check-label" for="q5b">B) 6</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5c" value="c">
+            <label class="form-check-label" for="q5c">C) 9</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q5" id="q5d" value="d">
+            <label class="form-check-label" for="q5d">D) 12</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q5', 'a')">Check Answer</button>
+        <div id="q5result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">6</span>
+          <h5 class="mb-0">Find the volume of a solid with square cross-sections perpendicular to the x-axis, where the base is the region between y = x² and y = 4.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6a" value="a">
+            <label class="form-check-label" for="q6a">A) 128/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6b" value="b">
+            <label class="form-check-label" for="q6b">B) 256/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6c" value="c">
+            <label class="form-check-label" for="q6c">C) 512/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q6" id="q6d" value="d">
+            <label class="form-check-label" for="q6d">D) 1024/15</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q6', 'c')">Check Answer</button>
+        <div id="q6result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">7</span>
+          <h5 class="mb-0">Find the area between y = x³ and y = x from x = -1 to x = 1.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7a" value="a">
+            <label class="form-check-label" for="q7a">A) 1/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7b" value="b">
+            <label class="form-check-label" for="q7b">B) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7c" value="c">
+            <label class="form-check-label" for="q7c">C) 3/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q7" id="q7d" value="d">
+            <label class="form-check-label" for="q7d">D) 2</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q7', 'a')">Check Answer</button>
+        <div id="q7result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">8</span>
+          <h5 class="mb-0">Find the volume when y = x² from x = 0 to x = 2 is rotated about the y-axis.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8a" value="a">
+            <label class="form-check-label" for="q8a">A) 4π</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8b" value="b">
+            <label class="form-check-label" for="q8b">B) 8π</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8c" value="c">
+            <label class="form-check-label" for="q8c">C) 16π</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q8" id="q8d" value="d">
+            <label class="form-check-label" for="q8d">D) 32π</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q8', 'b')">Check Answer</button>
+        <div id="q8result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">9</span>
+          <h5 class="mb-0">A cable weighing 3 lb/ft is used to lift a 100 lb load 20 ft. How much work is required?</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9a" value="a">
+            <label class="form-check-label" for="q9a">A) 2000 ft-lb</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9b" value="b">
+            <label class="form-check-label" for="q9b">B) 2200 ft-lb</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9c" value="c">
+            <label class="form-check-label" for="q9c">C) 2400 ft-lb</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q9" id="q9d" value="d">
+            <label class="form-check-label" for="q9d">D) 2600 ft-lb</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q9', 'd')">Check Answer</button>
+        <div id="q9result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">10</span>
+          <h5 class="mb-0">Find the volume when the region between y = x and y = x² is rotated about the line y = 1.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10a" value="a">
+            <label class="form-check-label" for="q10a">A) π/6</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10b" value="b">
+            <label class="form-check-label" for="q10b">B) π/3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10c" value="c">
+            <label class="form-check-label" for="q10c">C) π/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q10" id="q10d" value="d">
+            <label class="form-check-label" for="q10d">D) 2π/3</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q10', 'a')">Check Answer</button>
+        <div id="q10result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">11</span>
+          <h5 class="mb-0">Find the arc length of y = x³/2 from x = 0 to x = 2.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11a" value="a">
+            <label class="form-check-label" for="q11a">A) 8/27</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11b" value="b">
+            <label class="form-check-label" for="q11b">B) 16/27</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11c" value="c">
+            <label class="form-check-label" for="q11c">C) 8/9</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q11" id="q11d" value="d">
+            <label class="form-check-label" for="q11d">D) 16/9</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q11', 'a')">Check Answer</button>
+        <div id="q11result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">12</span>
+          <h5 class="mb-0">Find the volume of a solid with semicircular cross-sections perpendicular to the x-axis, where the base is the region between y = x² and y = 4.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12a" value="a">
+            <label class="form-check-label" for="q12a">A) 32π/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12b" value="b">
+            <label class="form-check-label" for="q12b">B) 64π/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12c" value="c">
+            <label class="form-check-label" for="q12c">C) 128π/15</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q12" id="q12d" value="d">
+            <label class="form-check-label" for="q12d">D) 256π/15</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q12', 'b')">Check Answer</button>
+        <div id="q12result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">13</span>
+          <h5 class="mb-0">Find the area between y = sin(x) and y = cos(x) from x = 0 to x = π/2.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13a" value="a">
+            <label class="form-check-label" for="q13a">A) √2 - 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13b" value="b">
+            <label class="form-check-label" for="q13b">B) 2√2 - 2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13c" value="c">
+            <label class="form-check-label" for="q13c">C) √2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q13" id="q13d" value="d">
+            <label class="form-check-label" for="q13d">D) 2√2</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q13', 'b')">Check Answer</button>
+        <div id="q13result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 14 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">14</span>
+          <h5 class="mb-0">Find the volume when y = e^x from x = 0 to x = 1 is rotated about the x-axis.</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14a" value="a">
+            <label class="form-check-label" for="q14a">A) π(e² - 1)/2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14b" value="b">
+            <label class="form-check-label" for="q14b">B) π(e - 1)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14c" value="c">
+            <label class="form-check-label" for="q14c">C) π(e² - 1)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q14" id="q14d" value="d">
+            <label class="form-check-label" for="q14d">D) 2π(e² - 1)</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q14', 'a')">Check Answer</button>
+        <div id="q14result" class="mt-2"></div>
+      </div>
+
+      <!-- Question 15 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">15</span>
+          <h5 class="mb-0">Find the average value of f(x) = 1/x on the interval [1, e].</h5>
+        </div>
+        <div class="multiple-choice">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15a" value="a">
+            <label class="form-check-label" for="q15a">A) 1/(e-1)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15b" value="b">
+            <label class="form-check-label" for="q15b">B) 1/e</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15c" value="c">
+            <label class="form-check-label" for="q15c">C) 1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q15" id="q15d" value="d">
+            <label class="form-check-label" for="q15d">D) e</label>
+          </div>
+        </div>
+        <button class="btn btn-success" onclick="checkAnswer('q15', 'a')">Check Answer</button>
+        <div id="q15result" class="mt-2"></div>
+      </div>
+    </section>
+
+    <!-- Section B: Free Response (6 questions) -->
+    <section class="mb-5">
+      <h2 class="section-heading">✍️ Section B: Free Response (6 questions)</h2>
+      
+      <!-- Question 1 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">1</span>
+          <h5 class="mb-0">Find the area of the region bounded by y = x³ and y = x.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr1" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr1" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr1sol')">Show Solution</button>
+        <div id="fr1sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Find intersection points: x³ = x → x(x² - 1) = 0 → x = -1, 0, 1</p>
+          <p>2) On [-1,0]: x³ ≥ x, On [0,1]: x ≥ x³</p>
+          <p>3) A = ∫<sub>-1</sub><sup>0</sup> (x³ - x) dx + ∫<sub>0</sub><sup>1</sup> (x - x³) dx</p>
+          <p>4) = [x⁴/4 - x²/2]<sub>-1</sub><sup>0</sup> + [x²/2 - x⁴/4]<sub>0</sub><sup>1</sup></p>
+          <p>5) = (0 - 0) - (1/4 - 1/2) + (1/2 - 1/4) - (0 - 0) = 1/4 + 1/4 = 1/2</p>
+          <p><strong>Answer: 1/2</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">2</span>
+          <h5 class="mb-0">Find the volume when the region between y = x² and y = 2x is rotated about the x-axis.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr2" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr2" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr2sol')">Show Solution</button>
+        <div id="fr2sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Find intersection points: x² = 2x → x = 0, 2</p>
+          <p>2) On [0,2]: 2x ≥ x², so R(x) = 2x, r(x) = x²</p>
+          <p>3) V = π ∫<sub>0</sub><sup>2</sup> [(2x)² - (x²)²] dx = π ∫<sub>0</sub><sup>2</sup> (4x² - x⁴) dx</p>
+          <p>4) = π[4x³/3 - x⁵/5]<sub>0</sub><sup>2</sup> = π(32/3 - 32/5)</p>
+          <p>5) = π(160/15 - 96/15) = 64π/15</p>
+          <p><strong>Answer: 64π/15</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">3</span>
+          <h5 class="mb-0">A spring requires 8 N to stretch it 4 cm. How much work is required to stretch it from 4 cm to 8 cm?</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr3" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr3" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr3sol')">Show Solution</button>
+        <div id="fr3sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Find spring constant: F = kx → 8 = k(0.04) → k = 200 N/m</p>
+          <p>2) W = ∫<sub>0.04</sub><sup>0.08</sup> 200x dx = 200[x²/2]<sub>0.04</sub><sup>0.08</sup></p>
+          <p>3) = 100[(0.08)² - (0.04)²] = 100(0.0064 - 0.0016)</p>
+          <p>4) = 100(0.0048) = 0.48 J</p>
+          <p><strong>Answer: 0.48 J</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">4</span>
+          <h5 class="mb-0">Find the volume of a solid with square cross-sections perpendicular to the x-axis, where the base is the region between y = x² and y = 4.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr4" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr4" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr4sol')">Show Solution</button>
+        <div id="fr4sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Find intersection: x² = 4 → x = ±2</p>
+          <p>2) A(x) = (4 - x²)² = 16 - 8x² + x⁴</p>
+          <p>3) V = ∫<sub>-2</sub><sup>2</sup> (16 - 8x² + x⁴) dx = 2∫<sub>0</sub><sup>2</sup> (16 - 8x² + x⁴) dx</p>
+          <p>4) = 2[16x - 8x³/3 + x⁵/5]<sub>0</sub><sup>2</sup></p>
+          <p>5) = 2(32 - 64/3 + 32/5) = 2(480/15 - 320/15 + 96/15) = 512/15</p>
+          <p><strong>Answer: 512/15</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">5</span>
+          <h5 class="mb-0">Find the average value of f(x) = x² on the interval [0, 3].</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr5" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr5" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr5sol')">Show Solution</button>
+        <div id="fr5sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) f<sub>avg</sub> = (1/(3-0)) ∫<sub>0</sub><sup>3</sup> x² dx</p>
+          <p>2) = (1/3) ∫<sub>0</sub><sup>3</sup> x² dx = (1/3)[x³/3]<sub>0</sub><sup>3</sup></p>
+          <p>3) = (1/3)(27/3) = (1/3)(9) = 3</p>
+          <p><strong>Answer: 3</strong></p>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-box">
+        <div class="d-flex align-items-center mb-3">
+          <span class="question-number">6</span>
+          <h5 class="mb-0">Find the volume when y = x² from x = 0 to x = 2 is rotated about the y-axis.</h5>
+        </div>
+        <div class="mb-3">
+          <label for="fr6" class="form-label">Show your work:</label>
+          <textarea class="form-control" id="fr6" rows="4" placeholder="Write your solution here..."></textarea>
+        </div>
+        <button class="btn btn-success" onclick="showSolution('fr6sol')">Show Solution</button>
+        <div id="fr6sol" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Using shell method: V = 2π ∫<sub>0</sub><sup>2</sup> x(x²) dx</p>
+          <p>2) = 2π ∫<sub>0</sub><sup>2</sup> x³ dx = 2π[x⁴/4]<sub>0</sub><sup>2</sup></p>
+          <p>3) = 2π(16/4) = 2π(4) = 8π</p>
+          <p><strong>Answer: 8π</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Score Summary -->
+    <section class="mb-5">
+      <div class="score-display">
+        <h3>📊 Test Results</h3>
+        <div id="scoreResult" class="mb-3"></div>
+        <div id="scoreBreakdown" class="mb-3"></div>
+        <button class="btn btn-primary btn-lg" onclick="calculateFinalScore()">Calculate Final Score</button>
+      </div>
+    </section>
+
+    <!-- Study Recommendations -->
+    <section class="mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">📚 Study Recommendations</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>If you scored 80%+:</h5>
+              <ul>
+                <li>Excellent work! You have a strong grasp of integration applications</li>
+                <li>Focus on any specific topics you missed</li>
+                <li>Move on to Unit 9: Parametric Equations and Polar Coordinates</li>
+                <li>Practice more challenging volume and work problems</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>If you scored below 80%:</h5>
+              <ul>
+                <li>Review area between curves calculations</li>
+                <li>Practice setting up volume integrals (disk/washer methods)</li>
+                <li>Focus on work and force applications</li>
+                <li>Use the main Unit 8 page for additional review</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    let startTime = null;
+    let timerInterval = null;
+
+    function startTimer() {
+      if (startTime === null) {
+        startTime = Date.now();
+        timerInterval = setInterval(updateTimer, 1000);
+        document.querySelector('button[onclick="startTimer()"]').textContent = 'Timer Running...';
+        document.querySelector('button[onclick="startTimer()"]').disabled = true;
+      }
+    }
+
+    function updateTimer() {
+      if (startTime === null) return;
+      
+      const elapsed = Date.now() - startTime;
+      const minutes = Math.floor(elapsed / 60000);
+      const seconds = Math.floor((elapsed % 60000) / 1000);
+      
+      document.getElementById('timerDisplay').textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function checkAnswer(questionName, correctAnswer) {
+      const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+      const resultDiv = document.getElementById(questionName + 'result');
+      
+      if (!selectedAnswer) {
+        resultDiv.innerHTML = '<div class="alert alert-warning">Please select an answer first!</div>';
+        return;
+      }
+      
+      if (selectedAnswer.value === correctAnswer) {
+        resultDiv.innerHTML = '<div class="alert alert-success">✅ Correct! Great job!</div>';
+      } else {
+        resultDiv.innerHTML = '<div class="alert alert-danger">❌ Incorrect. The correct answer is ' + correctAnswer.toUpperCase() + '.</div>';
+      }
+    }
+
+    function showSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+
+    function calculateFinalScore() {
+      const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15'];
+      const correctAnswers = ['a', 'b', 'c', 'a', 'a', 'c', 'a', 'b', 'd', 'a', 'a', 'b', 'b', 'a', 'a'];
+      let correct = 0;
+      let total = questions.length;
+      
+      questions.forEach((question, index) => {
+        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        if (selectedAnswer && selectedAnswer.value === correctAnswers[index]) {
+          correct++;
+        }
+      });
+      
+      const percentage = Math.round((correct / total) * 100);
+      const scoreResult = document.getElementById('scoreResult');
+      const scoreBreakdown = document.getElementById('scoreBreakdown');
+      
+      let grade = '';
+      if (percentage >= 90) grade = 'A';
+      else if (percentage >= 80) grade = 'B';
+      else if (percentage >= 70) grade = 'C';
+      else if (percentage >= 60) grade = 'D';
+      else grade = 'F';
+      
+      scoreResult.innerHTML = `
+        <h4>Your Score: ${correct}/${total} (${percentage}%)</h4>
+        <h5>Grade: ${grade}</h5>
+      `;
+      
+      scoreBreakdown.innerHTML = `
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Multiple Choice: ${correct}/${total}</h6>
+          </div>
+          <div class="col-md-6">
+            <h6>Free Response: Check solutions above</h6>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
