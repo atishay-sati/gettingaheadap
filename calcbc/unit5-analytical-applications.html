@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Calculus BC Unit 5: Analytical Applications of Differentiation - Comprehensive study guide with examples and practice problems">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 5: Analytical Applications of Differentiation - AP Calculus BC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #e67e22, #d35400);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #e67e22;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #e67e22;
+      padding-left: 1rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: linear-gradient(to right, #e67e22, #d35400);
+      color: white;
+      border-radius: 1rem 1rem 0 0 !important;
+      font-weight: 600;
+    }
+
+    .example-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #e67e22;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+    }
+
+    .formula-box {
+      background: linear-gradient(135deg, #fef5e7, #fdebd0);
+      border: 2px solid #e67e22;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .formula {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #e67e22;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .practice-problem {
+      background-color: #ffffff;
+      border: 2px solid #e67e22;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .solution {
+      background-color: #f8f9fa;
+      border-left: 4px solid #28a745;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      display: none;
+    }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      border-color: #e67e22;
+      color: #e67e22;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #e67e22;
+      border-color: #e67e22;
+    }
+
+    .btn-success {
+      border-radius: 30px;
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .nav-breadcrumb {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .key-concept {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border: 1px solid #ffc107;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .key-concept h5 {
+      color: #856404;
+      margin-bottom: 0.5rem;
+    }
+
+    .table th {
+      background-color: #e67e22;
+      color: white;
+      border-color: #d35400;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .alert-custom {
+      background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+      border: 1px solid #bee5eb;
+      color: #0c5460;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">📊 AP Calculus BC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Unit 5: Analytical Applications</h1>
+      <p class="lead">Advanced techniques for analyzing functions</p>
+      <a href="index.html" class="btn btn-outline-light">← Back to Units</a>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="nav-breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Unit 5: Analytical Applications of Differentiation</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Overview Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📋 Unit Overview</h2>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>Unit 5</strong> focuses on advanced analytical techniques using derivatives. You'll learn how to:
+          </p>
+          <ul>
+            <li>Use L'Hôpital's rule to evaluate indeterminate forms</li>
+            <li>Analyze function behavior using derivatives</li>
+            <li>Sketch curves using calculus techniques</li>
+            <li>Apply the Extreme Value Theorem</li>
+            <li>Use Rolle's Theorem and the Mean Value Theorem</li>
+            <li>Solve advanced optimization problems</li>
+          </ul>
+          <div class="alert alert-custom">
+            <strong>💡 Key Insight:</strong> This unit brings together all the differentiation techniques you've learned to create a powerful toolkit for analyzing any function. You'll be able to determine where functions increase, decrease, have extrema, and much more!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- L'Hôpital's Rule Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🔢 L'Hôpital's Rule</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Understanding Indeterminate Forms</h3>
+        </div>
+        <div class="card-body">
+          <p>L'Hôpital's rule helps us evaluate limits that result in indeterminate forms:</p>
+          <div class="formula-box">
+            <div class="formula">If lim<sub>x→a</sub> f(x)/g(x) = 0/0 or ∞/∞</div>
+            <div class="formula">Then lim<sub>x→a</sub> f(x)/g(x) = lim<sub>x→a</sub> f'(x)/g'(x)</div>
+            <p class="mb-0">(provided the limit on the right exists)</p>
+          </div>
+          
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>L'Hôpital's rule can be applied repeatedly until you get a determinate form. Always check that you have 0/0 or ∞/∞ before applying!</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 5.1: Basic L'Hôpital's Rule</h5>
+            <p>Find lim<sub>x→0</sub> (sin(x))/x</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Direct substitution gives 0/0 (indeterminate)</p>
+            <p>2) Apply L'Hôpital's rule: lim<sub>x→0</sub> (sin(x))/x = lim<sub>x→0</sub> cos(x)/1</p>
+            <p>3) Evaluate: cos(0)/1 = 1/1 = 1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Other Indeterminate Forms</h3>
+        </div>
+        <div class="card-body">
+          <p>Sometimes you need to manipulate the expression first:</p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Form</th>
+                  <th>Strategy</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>0 · ∞</strong></td>
+                  <td>Rewrite as 0/(1/∞) or ∞/(1/0)</td>
+                  <td>x ln(x) as x→0⁺</td>
+                </tr>
+                <tr>
+                  <td><strong>∞ - ∞</strong></td>
+                  <td>Factor or rationalize</td>
+                  <td>√(x²+1) - x as x→-∞</td>
+                </tr>
+                <tr>
+                  <td><strong>0⁰, 1^∞, ∞⁰</strong></td>
+                  <td>Take natural log</td>
+                  <td>x^x as x→0⁺</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Function Analysis Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📊 Function Analysis</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">First and Second Derivative Tests</h3>
+        </div>
+        <div class="card-body">
+          <p>Use derivatives to analyze function behavior:</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>First Derivative Test</h5>
+              <ul>
+                <li>f'(x) > 0 → f(x) increasing</li>
+                <li>f'(x) < 0 → f(x) decreasing</li>
+                <li>f'(x) = 0 → possible extrema</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Second Derivative Test</h5>
+              <ul>
+                <li>f''(x) > 0 → concave up</li>
+                <li>f''(x) < 0 → concave down</li>
+                <li>f''(x) = 0 → possible inflection point</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 5.2: Analyzing f(x) = x³ - 3x² + 2</h5>
+            <p><strong>Solution:</strong></p>
+            <p>1) f'(x) = 3x² - 6x = 3x(x - 2)</p>
+            <p>2) Critical points: x = 0, x = 2</p>
+            <p>3) f''(x) = 6x - 6 = 6(x - 1)</p>
+            <p>4) Inflection point: x = 1</p>
+            <p>5) Analysis:</p>
+            <ul>
+              <li>Increasing on (-∞, 0) and (2, ∞)</li>
+              <li>Decreasing on (0, 2)</li>
+              <li>Concave up on (1, ∞), concave down on (-∞, 1)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curve Sketching Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎨 Curve Sketching</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Steps for Curve Sketching</h3>
+        </div>
+        <div class="card-body">
+          <p>Follow these steps to sketch any function:</p>
+          <div class="formula-box">
+            <div class="formula">1. Find domain and intercepts</div>
+            <div class="formula">2. Find asymptotes (vertical, horizontal, oblique)</div>
+            <div class="formula">3. Find critical points and intervals of increase/decrease</div>
+            <div class="formula">4. Find inflection points and concavity</div>
+            <div class="formula">5. Sketch the curve</div>
+          </div>
+
+          <div class="example-box">
+            <h5>📝 Example 5.3: Sketch f(x) = (x²-1)/(x²-4)</h5>
+            <p><strong>Solution:</strong></p>
+            <p>1) Domain: x ≠ ±2</p>
+            <p>2) Intercepts: (0, 1/4), (±1, 0)</p>
+            <p>3) Asymptotes: x = ±2 (vertical), y = 1 (horizontal)</p>
+            <p>4) f'(x) = 6x/(x²-4)², critical point at x = 0</p>
+            <p>5) f''(x) = -6(3x²+4)/(x²-4)³, always negative</p>
+            <p>6) Function is concave down everywhere</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theorems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">📐 Important Theorems</h2>
+      
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Extreme Value Theorem</h3>
+        </div>
+        <div class="card-body">
+          <p>If f is continuous on [a,b], then f has both an absolute maximum and absolute minimum on [a,b].</p>
+          <div class="key-concept">
+            <h5>🎯 Key Concept</h5>
+            <p><strong>Always check the endpoints when finding absolute extrema on a closed interval!</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Rolle's Theorem</h3>
+        </div>
+        <div class="card-body">
+          <p>If f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b), then there exists c in (a,b) such that f'(c) = 0.</p>
+          <div class="example-box">
+            <h5>📝 Example 5.4: Applying Rolle's Theorem</h5>
+            <p>For f(x) = x² - 4x + 3 on [1, 3], find c guaranteed by Rolle's theorem.</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) f(1) = 0 and f(3) = 0, so f(1) = f(3)</p>
+            <p>2) f'(x) = 2x - 4</p>
+            <p>3) Set f'(c) = 0: 2c - 4 = 0, so c = 2</p>
+            <p>4) Check: 2 is in (1, 3) ✓</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Optimization Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🎯 Advanced Optimization</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <p>Optimization problems can involve multiple variables and constraints:</p>
+          <div class="example-box">
+            <h5>📝 Example 5.5: Advanced Optimization</h5>
+            <p>Find the point on the parabola y = x² closest to the point (0, 1).</p>
+            <p><strong>Solution:</strong></p>
+            <p>1) Distance formula: D = √(x² + (x²-1)²)</p>
+            <p>2) Minimize D² = x² + (x²-1)² = x⁴ - x² + 1</p>
+            <p>3) d(D²)/dx = 4x³ - 2x = 2x(2x² - 1) = 0</p>
+            <p>4) Critical points: x = 0, x = ±1/√2</p>
+            <p>5) Check second derivative: d²(D²)/dx² = 12x² - 2</p>
+            <p>6) At x = ±1/√2: 12(1/2) - 2 = 4 > 0, so minimum</p>
+            <p>7) Closest points: (±1/√2, 1/2)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Problems Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">🧮 Practice Problems</h2>
+      
+      <div class="practice-problem">
+        <h5>Problem 1</h5>
+        <p>Find lim<sub>x→0</sub> (e^x - 1 - x)/x² using L'Hôpital's rule.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol1')">Show Solution</button>
+        <div id="sol1" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) Direct substitution gives 0/0</p>
+          <p>2) Apply L'Hôpital's rule: lim<sub>x→0</sub> (e^x - 1)/(2x)</p>
+          <p>3) Still 0/0, apply again: lim<sub>x→0</sub> e^x/2</p>
+          <p>4) Evaluate: e^0/2 = 1/2</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 2</h5>
+        <p>Find all critical points and inflection points of f(x) = x⁴ - 4x³ + 6x² - 4x + 1.</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol2')">Show Solution</button>
+        <div id="sol2" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) f'(x) = 4x³ - 12x² + 12x - 4 = 4(x³ - 3x² + 3x - 1)</p>
+          <p>2) Factor: f'(x) = 4(x - 1)³</p>
+          <p>3) Critical point: x = 1</p>
+          <p>4) f''(x) = 12x² - 24x + 12 = 12(x² - 2x + 1) = 12(x - 1)²</p>
+          <p>5) f''(x) = 0 when x = 1, but f''(x) ≥ 0 everywhere</p>
+          <p>6) No inflection points (function is always concave up)</p>
+        </div>
+      </div>
+
+      <div class="practice-problem">
+        <h5>Problem 3</h5>
+        <p>Find the absolute maximum and minimum of f(x) = x³ - 3x + 1 on [-2, 2].</p>
+        <button class="btn btn-success" onclick="toggleSolution('sol3')">Show Solution</button>
+        <div id="sol3" class="solution">
+          <p><strong>Solution:</strong></p>
+          <p>1) f'(x) = 3x² - 3 = 3(x² - 1) = 3(x - 1)(x + 1)</p>
+          <p>2) Critical points: x = ±1</p>
+          <p>3) Check endpoints and critical points:</p>
+          <p>   - f(-2) = -8 + 6 + 1 = -1</p>
+          <p>   - f(-1) = -1 + 3 + 1 = 3</p>
+          <p>   - f(1) = 1 - 3 + 1 = -1</p>
+          <p>   - f(2) = 8 - 6 + 1 = 3</p>
+          <p>4) Absolute maximum: 3 at x = ±1</p>
+          <p>5) Absolute minimum: -1 at x = ±2</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="mb-5">
+      <h2 class="section-heading">💡 Exam Tips</h2>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5>🎯 Multiple Choice</h5>
+              <ul>
+                <li>Always check if L'Hôpital's rule applies</li>
+                <li>Remember to check endpoints for absolute extrema</li>
+                <li>Use the second derivative test when possible</li>
+                <li>Look for patterns in function behavior</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>✍️ Free Response</h5>
+              <ul>
+                <li>Show all steps in L'Hôpital's rule applications</li>
+                <li>Justify your analysis with derivatives</li>
+                <li>Check all conditions for theorems</li>
+                <li>Draw clear, labeled graphs</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-warning mt-3">
+            <strong>⚠️ Common Mistakes:</strong>
+            <ul class="mb-0">
+              <li>Applying L'Hôpital's rule to non-indeterminate forms</li>
+              <li>Forgetting to check endpoints in optimization</li>
+              <li>Not verifying theorem conditions</li>
+              <li>Mixing up concavity and increasing/decreasing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dzAcyxYfRaE?si=ej-0keRMTCJOCjm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Practice Test Call-to-Action -->
+    <section class="mb-5">
+      <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body text-center text-white p-5">
+          <h2 class="mb-3">🚀 Ready to Test Your Knowledge?</h2>
+          <p class="lead mb-4">Take our comprehensive Unit 5 practice test with 15 multiple choice questions and 6 free response problems!</p>
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">📊</div>
+                <h5>15 MC Questions</h5>
+                <p class="small opacity-75">Progressive difficulty levels</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">✍️</div>
+                <h5>6 Free Response</h5>
+                <p class="small opacity-75">Show your work</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="text-center">
+                <div class="h2 mb-2">⏱️</div>
+                <h5>45 Min Timer</h5>
+                <p class="small opacity-75">Real exam conditions</p>
+              </div>
+            </div>
+          </div>
+          <a href="practiceunit5.html" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="font-size: 1.2rem; border-radius: 50px; transition: all 0.3s ease; text-decoration: none;">
+            🎯 Start Practice Test Now
+          </a>
+          <p class="mt-3 mb-0 opacity-75">Get instant feedback and detailed solutions!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Unit Preview -->
+    <section class="mb-5">
+      <h2 class="section-heading">➡️ What's Next?</h2>
+      
+      <div class="card">
+        <div class="card-body text-center">
+          <h5>Ready for the next challenge?</h5>
+          <p>In Unit 6, you'll learn about integration and accumulation of change, building the foundation for integral calculus.</p>
+          <a href="#" class="btn btn-outline-primary">Go to Unit 6: Integration and Accumulation →</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">📊 AP Calculus BC Study Resource | Built for students, by students</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script>
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      if (solution.style.display === 'none' || solution.style.display === '') {
+        solution.style.display = 'block';
+      } else {
+        solution.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
