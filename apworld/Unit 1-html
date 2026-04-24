@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP World History: Modern Unit 1 — The Global Tapestry (c. 1200–1450). Timeline, comprehensive notes covering East Asia, Dar al-Islam, South & Southeast Asia, the Americas, Africa, Europe, and comparison, plus MCQs and SAQs." />
+  <title>Unit 1: The Global Tapestry (c. 1200–1450)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #faf6f1;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #8b4513;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: #d2691e;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #d2691e;
+      padding-bottom: 0.3rem;
+    }
+    h3 { color: #a0522d; margin-top: 1.5rem; }
+    h4 { color: #8b4513; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #8b4513;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box {
+      background: linear-gradient(135deg, #fde7c9, #fff3e0);
+      border-left: 6px solid #d2691e;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+ 
+    .weighting-badge {
+      display: inline-block;
+      background: #8b4513;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+ 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #d2691e;
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #fff8ef;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #8b4513;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #d2691e;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #8b4513;
+      margin-right: 0.5rem;
+    }
+ 
+    /* Region cards */
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region-east-asia   { border-color: #c62828; background: #fff5f5; }
+    .region-islam       { border-color: #2e7d32; background: #f1f8e9; }
+    .region-south-asia  { border-color: #ef6c00; background: #fff3e0; }
+    .region-americas    { border-color: #6a1b9a; background: #f3e5f5; }
+    .region-africa      { border-color: #c2185b; background: #fce4ec; }
+    .region-europe      { border-color: #1565c0; background: #e3f2fd; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .vocab-item {
+      background: #fff8ef;
+      border: 1px solid #e0c9a6;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+    .vocab-term {
+      font-weight: 700;
+      color: #8b4513;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #e0c9a6;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .compare-table thead {
+      background: linear-gradient(to right, #8b4513, #d2691e);
+      color: white;
+    }
+    .compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+ 
+    /* Quiz */
+    .quiz-container {
+      background: linear-gradient(135deg, #fde7c9, #fff8ef);
+      border: 2px solid #8b4513;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #8b4513;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #fff3e0; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #8b4513;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .explanation.show { display: block; }
+ 
+    /* SAQ */
+    .saq-box {
+      background: #fff;
+      border: 2px solid #d2691e;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #fff8ef;
+      border: 1px dashed #8b4513;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #8b4513;
+    }
+ 
+    .key-takeaways {
+      background: linear-gradient(135deg, #fff3e0, #fde7c9);
+      border: 2px solid #d2691e;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+    <h1>Unit 1: The Global Tapestry</h1>
+    <p class="subtitle">c. 1200 – c. 1450 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 8–10%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🌍 Unit Overview</h3>
+      <p>
+        Between roughly 1200 and 1450, the world was organized into a "global tapestry" of distinct but
+        increasingly interconnected societies. Powerful states flourished across every populated continent:
+        Song China led in technology and commerce, the Islamic world fragmented politically but expanded
+        culturally, new empires rose in the Americas and Africa, and Europe recovered from political
+        fragmentation. No single civilization dominated — instead, regional states developed unique political,
+        religious, and economic systems that would shape the interconnected world of the following periods.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How did state-building, belief systems, and economies develop differently
+        across the major world regions between 1200 and 1450 — and what did they have in common?
+      </p>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 1 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">960–1279:</span> Song Dynasty in China — economic revolution, Neo-Confucian revival.</div>
+      <div class="timeline-event"><span class="timeline-date">1000s–1200s:</span> Feudalism and manorialism dominate medieval Europe.</div>
+      <div class="timeline-event"><span class="timeline-date">1054:</span> Great Schism splits Christianity into Roman Catholic and Eastern Orthodox branches.</div>
+      <div class="timeline-event"><span class="timeline-date">1095–1291:</span> The Crusades connect Europe to the Islamic world and stimulate trade.</div>
+      <div class="timeline-event"><span class="timeline-date">1206:</span> Delhi Sultanate founded in northern India by Turkic Muslim rulers.</div>
+      <div class="timeline-event"><span class="timeline-date">1230s:</span> Mali Empire rises in West Africa under Sundiata Keita.</div>
+      <div class="timeline-event"><span class="timeline-date">1258:</span> Mongols sack Baghdad, ending the Abbasid Caliphate.</div>
+      <div class="timeline-event"><span class="timeline-date">1270:</span> Solomonic dynasty established in Christian Ethiopia.</div>
+      <div class="timeline-event"><span class="timeline-date">1324–25:</span> Mansa Musa's hajj to Mecca demonstrates Mali's wealth.</div>
+      <div class="timeline-event"><span class="timeline-date">1325:</span> Aztecs (Mexica) found Tenochtitlán.</div>
+      <div class="timeline-event"><span class="timeline-date">1337–1453:</span> Hundred Years' War between England and France.</div>
+      <div class="timeline-event"><span class="timeline-date">1346–1353:</span> Black Death kills roughly one-third of Europe's population.</div>
+      <div class="timeline-event"><span class="timeline-date">1368:</span> Ming Dynasty replaces the Mongol Yuan in China.</div>
+      <div class="timeline-event"><span class="timeline-date">1438:</span> Inca Empire founded by Pachacuti in the Andes.</div>
+      <div class="timeline-event"><span class="timeline-date">c. 1450:</span> Renaissance gains momentum in Italy; end of the Unit 1 period.</div>
+    </div>
+ 
+    <!-- TOPIC 1.1 -->
+    <h2>Topic 1.1 — Developments in East Asia</h2>
+    <div class="region-card region-east-asia">
+      <h3>🏯 Song China (960–1279) &amp; Its Neighbors</h3>
+      <p>Song China was arguably the most advanced society in the world at the start of the period. It combined a strong Confucian bureaucracy, a commercial revolution, and major technological innovation.</p>
+ 
+      <h4>Government &amp; Ideology</h4>
+      <ul>
+        <li><strong>Meritocratic bureaucracy:</strong> The Song expanded the civil service exam based on Confucian classics, creating a scholar-gentry class.</li>
+        <li><strong>Neo-Confucianism:</strong> Synthesized Confucian ethics with Buddhist and Daoist metaphysics; emphasized filial piety, hierarchy, and women's subordination.</li>
+        <li><strong>Foot binding:</strong> Spread among elite women as a marker of status, reflecting tightening patriarchal norms.</li>
+      </ul>
+ 
+      <h4>Economy &amp; Technology</h4>
+      <ul>
+        <li><strong>Agricultural revolution:</strong> Champa rice from Vietnam (fast-ripening, drought-resistant) enabled population growth to 100+ million.</li>
+        <li><strong>Commercial revolution:</strong> Paper money ("flying cash"), credit, and proto-banking; artisans produced porcelain, silk, and steel for export.</li>
+        <li><strong>Technology:</strong> Gunpowder, the magnetic compass, improved printing, and the sternpost rudder.</li>
+        <li><strong>Urbanization:</strong> Cities like Hangzhou reached over 1 million people.</li>
+      </ul>
+ 
+      <h4>Influence on Neighbors</h4>
+      <ul>
+        <li><strong>Japan:</strong> Heian court culture gave way to a feudal warrior system; samurai, daimyo, and the shogun under the Kamakura &amp; Ashikaga shogunates. Zen Buddhism flourished.</li>
+        <li><strong>Korea (Goryeo):</strong> Adopted Chinese bureaucracy, civil exams, and Buddhism, but preserved a hereditary aristocracy (yangban).</li>
+        <li><strong>Vietnam:</strong> Resisted full Sinicization, retained stronger rights for women (e.g., dowry rights, village councils), used the nom script.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.2 -->
+    <h2>Topic 1.2 — Developments in Dar al-Islam</h2>
+    <div class="region-card region-islam">
+      <h3>☪️ The Islamic World (Dar al-Islam)</h3>
+      <p>By 1200 the political unity of the Abbasid Caliphate was crumbling, but Islamic civilization continued to expand through trade, Sufi missionaries, and new Turkic states.</p>
+ 
+      <h4>Political Fragmentation</h4>
+      <ul>
+        <li><strong>Abbasid decline:</strong> Caliphs became figureheads; real power passed to Turkic sultans.</li>
+        <li><strong>Seljuk Turks:</strong> Controlled much of the Middle East; their defeat of Byzantium at Manzikert (1071) helped trigger the Crusades.</li>
+        <li><strong>Mamluks:</strong> Slave-soldier dynasty ruling Egypt; defeated the Mongols at Ain Jalut (1260).</li>
+        <li><strong>Delhi Sultanate (1206–1526):</strong> Turkic Muslim rule over much of northern India.</li>
+        <li><strong>1258:</strong> Mongols sack Baghdad, ending the Abbasid Caliphate.</li>
+      </ul>
+ 
+      <h4>Cultural &amp; Intellectual Life</h4>
+      <ul>
+        <li><strong>House of Wisdom (Baghdad):</strong> Preserved and translated Greek, Persian, and Indian works; Muslim scholars advanced algebra (al-Khwarizmi), medicine (Ibn Sina), and philosophy (Ibn Rushd).</li>
+        <li><strong>Sufism:</strong> Mystical Islam that emphasized personal union with God; Sufi missionaries spread Islam into South Asia, Southeast Asia, and Sub-Saharan Africa.</li>
+        <li><strong>Travel accounts:</strong> Ibn Battuta's journeys show an interconnected Islamic world from West Africa to China.</li>
+      </ul>
+ 
+      <h4>Economy</h4>
+      <ul>
+        <li>Muslim merchants linked the Indian Ocean, Mediterranean, and Saharan trade networks.</li>
+        <li>Common use of Arabic, Islamic law (sharia), and currency (dinar) facilitated long-distance trade.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.3 -->
+    <h2>Topic 1.3 — Developments in South &amp; Southeast Asia</h2>
+    <div class="region-card region-south-asia">
+      <h3>🐘 South &amp; Southeast Asia</h3>
+ 
+      <h4>South Asia</h4>
+      <ul>
+        <li><strong>Delhi Sultanate (1206–1526):</strong> Imposed Muslim rule over a majority-Hindu population; introduced a jizya tax on non-Muslims.</li>
+        <li><strong>Vijayanagara Empire (1336–1646):</strong> Hindu kingdom in southern India that pushed back against Muslim expansion.</li>
+        <li><strong>Rajput kingdoms:</strong> Hindu warrior states resisted the Sultanate in the north.</li>
+        <li><strong>Bhakti movement:</strong> Hindu devotional movement emphasizing personal love of a deity; often led by women and lower castes, it challenged caste hierarchy.</li>
+      </ul>
+ 
+      <h4>Southeast Asia</h4>
+      <ul>
+        <li><strong>Sea-based states:</strong> Srivijaya (Buddhist, Sumatra, 7th–13th c.) and Majapahit (Hindu-Buddhist, Java, 1293–1527) controlled Indian Ocean trade through Malacca Strait.</li>
+        <li><strong>Land-based states:</strong> Khmer Empire / Angkor (Cambodia) built Angkor Wat (Hindu) and later Angkor Thom (Buddhist); Sukhothai (Thailand) adopted Theravada Buddhism.</li>
+        <li><strong>Cultural diffusion:</strong> Indian religion, writing, and political ideas spread via merchants rather than conquest (a process called "Indianization").</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.4 -->
+    <h2>Topic 1.4 — State Building in the Americas</h2>
+    <div class="region-card region-americas">
+      <h3>🗿 The Americas</h3>
+ 
+      <h4>Mesoamerica</h4>
+      <ul>
+        <li><strong>Maya city-states:</strong> Classic Maya had declined by 900 CE, but Maya culture persisted in the Yucatán; independent city-states shared writing, mathematics, and religion.</li>
+        <li><strong>Aztec / Mexica Empire (c. 1345–1521):</strong> Capital Tenochtitlán on an island in Lake Texcoco; tribute-based empire ruled through subject city-states; extensive human sacrifice tied to religion and politics; <em>chinampas</em> (floating agriculture) supported ~200,000 people in the capital.</li>
+      </ul>
+ 
+      <h4>Andes</h4>
+      <ul>
+        <li><strong>Inca Empire (1438–1533):</strong> Stretched along the Andes from modern Colombia to Chile; capital at Cuzco.</li>
+        <li><strong>Mit'a system:</strong> Mandatory labor tribute from all subjects for state projects (roads, terraces, temples).</li>
+        <li><strong>Administration without writing:</strong> Quipu (knotted cords) recorded data; an enormous road system and relay runners (chasquis) tied the empire together.</li>
+      </ul>
+ 
+      <h4>North America</h4>
+      <ul>
+        <li><strong>Mississippian culture:</strong> Mound-building society centered on Cahokia (near modern St. Louis); declined by 1450.</li>
+        <li><strong>Chaco &amp; Mesa Verde:</strong> Ancestral Puebloan cliff dwellings in the American Southwest.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.5 -->
+    <h2>Topic 1.5 — State Building in Africa</h2>
+    <div class="region-card region-africa">
+      <h3>🌍 Sub-Saharan Africa</h3>
+ 
+      <h4>West Africa</h4>
+      <ul>
+        <li><strong>Mali Empire (c. 1235–1600):</strong> Founded by Sundiata Keita; grew wealthy on trans-Saharan gold and salt trade.</li>
+        <li><strong>Mansa Musa (r. 1312–1337):</strong> His 1324 hajj to Mecca flooded Egypt with gold and put Mali on European maps; he made Timbuktu an Islamic intellectual center.</li>
+        <li><strong>Hausa Kingdoms:</strong> Seven loosely connected city-states in modern Nigeria; adopted Islam.</li>
+      </ul>
+ 
+      <h4>East Africa</h4>
+      <ul>
+        <li><strong>Swahili Coast:</strong> City-states (Kilwa, Mombasa, Zanzibar) linked the African interior to the Indian Ocean; <strong>Swahili</strong>, a Bantu language with Arabic loanwords, emerged as the trade language; Islam spread through merchants.</li>
+        <li><strong>Ethiopia:</strong> Christian kingdom (Solomonic dynasty, 1270–1974) — famous for the rock-hewn churches at Lalibela; stayed Christian while surrounded by Muslim neighbors.</li>
+      </ul>
+ 
+      <h4>Southern Africa</h4>
+      <ul>
+        <li><strong>Great Zimbabwe:</strong> Massive stone-walled city (11th–15th c.) that controlled the gold trade; abandoned around 1450, possibly due to environmental stress.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.6 -->
+    <h2>Topic 1.6 — Developments in Europe</h2>
+    <div class="region-card region-europe">
+      <h3>🏰 Medieval &amp; Early Renaissance Europe</h3>
+ 
+      <h4>Political Structure</h4>
+      <ul>
+        <li><strong>Feudalism:</strong> Decentralized political system in which lords granted fiefs to vassals in exchange for military service.</li>
+        <li><strong>Manorialism:</strong> Economic side of feudalism — self-sufficient estates worked by serfs legally bound to the land.</li>
+        <li><strong>Rise of monarchies:</strong> England's Magna Carta (1215) limited royal power; France consolidated under the Capetians; the Holy Roman Empire remained fragmented.</li>
+        <li><strong>Hundred Years' War (1337–1453):</strong> England vs. France; strengthened national identity and royal power; longbow &amp; early cannons shifted military technology.</li>
+      </ul>
+ 
+      <h4>Religion</h4>
+      <ul>
+        <li><strong>Roman Catholic Church:</strong> Dominated daily life, education, and politics in western Europe.</li>
+        <li><strong>Great Schism (1054):</strong> Permanent split between Roman Catholicism and Eastern Orthodoxy.</li>
+        <li><strong>Crusades (1095–1291):</strong> Series of military campaigns to reclaim the Holy Land; failed militarily, but increased trade, cultural exchange, and the power of Italian city-states.</li>
+      </ul>
+ 
+      <h4>Crisis &amp; Recovery</h4>
+      <ul>
+        <li><strong>Black Death (1346–1353):</strong> Bubonic plague killed ~1/3 of Europe's population; labor shortages weakened serfdom and empowered surviving peasants.</li>
+        <li><strong>Rise of towns and universities:</strong> Growth of a merchant class, banking houses (e.g., the Medici), and universities like Bologna, Paris, and Oxford.</li>
+        <li><strong>Renaissance (begins c. 1350):</strong> Revival of Greco-Roman learning starting in Italian city-states; humanism emphasized human potential and secular learning.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.7 -->
+    <h2>Topic 1.7 — Comparison in the Period c. 1200–1450</h2>
+    <p>The CED asks you to compare how states and societies developed across regions. Use this table as a starting point.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Dominant Belief System(s)</th>
+            <th>Political Organization</th>
+            <th>Economic Base</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>East Asia (Song)</td><td>Neo-Confucianism, Buddhism, Daoism</td><td>Centralized bureaucracy, civil service exams</td><td>Commerce, paper money, Champa rice</td></tr>
+          <tr><td>Dar al-Islam</td><td>Islam (Sunni/Shia), Sufism</td><td>Caliphates &amp; sultanates (decentralized)</td><td>Indian Ocean &amp; Saharan trade</td></tr>
+          <tr><td>South Asia</td><td>Hinduism, Islam, Bhakti</td><td>Delhi Sultanate vs. Hindu kingdoms (Vijayanagara)</td><td>Agriculture, Indian Ocean trade</td></tr>
+          <tr><td>Americas</td><td>Polytheism (Aztec, Inca)</td><td>Tribute empires (Aztec), bureaucratic empire (Inca)</td><td>Chinampas, terraced agriculture, mit'a labor</td></tr>
+          <tr><td>Africa</td><td>Islam (W./E. Africa), Christianity (Ethiopia), indigenous</td><td>Empires (Mali), city-states (Swahili, Hausa)</td><td>Gold-salt trade, Indian Ocean trade</td></tr>
+          <tr><td>Europe</td><td>Roman Catholic &amp; Orthodox Christianity</td><td>Feudal monarchies, Holy Roman Empire</td><td>Manorialism, growing urban commerce</td></tr>
+        </tbody>
+      </table>
+    </div>
+ 
+    <h3>Cross-Regional Continuities &amp; Change</h3>
+    <ul>
+      <li><strong>Continuity:</strong> Agriculture remained the economic base; patriarchal social structures dominated; religion legitimized rulers.</li>
+      <li><strong>Change:</strong> New belief systems (Neo-Confucianism, Bhakti, Sufism) reshaped existing traditions; new political forms (feudalism, bureaucratic empire, tribute system) emerged; urbanization and trade accelerated.</li>
+      <li><strong>Similarities:</strong> Nearly every region used religion to justify hierarchy and organized long-distance trade networks.</li>
+    </ul>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Neo-Confucianism</span>Song-era revival of Confucianism incorporating Buddhist and Daoist ideas.</div>
+      <div class="vocab-item"><span class="vocab-term">Champa rice</span>Fast-ripening rice from Vietnam that enabled Song China's population boom.</div>
+      <div class="vocab-item"><span class="vocab-term">Foot binding</span>Painful practice that tightly bound women's feet in elite Chinese households.</div>
+      <div class="vocab-item"><span class="vocab-term">Shogun / samurai</span>Military ruler and warrior class of feudal Japan.</div>
+      <div class="vocab-item"><span class="vocab-term">Dar al-Islam</span>"The house of Islam" — the lands where Islamic law was practiced.</div>
+      <div class="vocab-item"><span class="vocab-term">Sufism</span>Mystical branch of Islam that helped spread the religion through missionaries.</div>
+      <div class="vocab-item"><span class="vocab-term">Delhi Sultanate</span>Turkic Muslim state that ruled northern India from 1206 to 1526.</div>
+      <div class="vocab-item"><span class="vocab-term">Bhakti movement</span>Hindu devotional movement that challenged caste hierarchy.</div>
+      <div class="vocab-item"><span class="vocab-term">Chinampas</span>Aztec "floating gardens" used for intensive agriculture in Lake Texcoco.</div>
+      <div class="vocab-item"><span class="vocab-term">Mit'a</span>Inca labor tribute system requiring public work from subjects.</div>
+      <div class="vocab-item"><span class="vocab-term">Quipu</span>Knotted cords used by the Inca to record numeric data.</div>
+      <div class="vocab-item"><span class="vocab-term">Mansa Musa</span>Wealthy Mali ruler whose 1324 hajj spread knowledge of West African gold.</div>
+      <div class="vocab-item"><span class="vocab-term">Swahili</span>Bantu/Arabic hybrid language and coastal East African culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Great Zimbabwe</span>Stone-walled city controlling Southern African gold trade.</div>
+      <div class="vocab-item"><span class="vocab-term">Feudalism</span>Medieval European political system of lords, vassals, and fiefs.</div>
+      <div class="vocab-item"><span class="vocab-term">Manorialism</span>Self-sufficient rural economic system based on serf labor.</div>
+      <div class="vocab-item"><span class="vocab-term">Black Death</span>Plague pandemic (1346–53) that killed about a third of Europeans.</div>
+      <div class="vocab-item"><span class="vocab-term">Renaissance</span>Revival of classical learning beginning in Italian city-states c. 1350.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+ 
+      <div class="quiz-question">
+        <p><strong>1. The introduction of Champa rice in Song China most directly contributed to which of the following?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) The spread of Neo-Confucianism into Korea and Japan.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Rapid population growth and urbanization in China.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) The collapse of the Abbasid Caliphate.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) The decline of the civil service examination system.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> Champa rice was drought-resistant and fast-ripening, allowing two harvests per year. This dramatically increased food supply, which fueled population growth past 100 million and supported massive cities like Hangzhou.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. Which of the following best describes the political situation of Dar al-Islam around 1250?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) A unified caliphate ruled from Baghdad over all Islamic lands.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(B) Islam had been politically replaced by Mongol shamanism across the Middle East.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(C) Political power was fragmented among Turkic sultanates and regional dynasties, even as Islamic culture and trade continued to expand.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Islam had become confined entirely to the Arabian Peninsula.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: C.</strong> By the 13th century, the Abbasid caliph was a figurehead, and real power lay with Seljuks, Mamluks, and the Delhi Sultanate. Cultural and economic unity persisted through shared language, law, and trade networks — and would survive even the 1258 Mongol sack of Baghdad.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. Which pair most accurately matches a state with its method of labor or tribute?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Inca Empire — manorialism.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) Aztec Empire — tribute from conquered city-states.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Mali Empire — chinampas.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Song Dynasty — mit'a labor.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: B.</strong> The Aztecs ran a tribute empire: conquered city-states kept their local rulers but sent goods, labor, and sacrificial victims to Tenochtitlán. The Inca used mit'a (labor tribute), the Aztecs used chinampas (agriculture), and Song China used a monetary-tax system — so the other pairs are mismatched.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>4. Which statement best describes the long-term effect of the Black Death on European society?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) It strengthened manorialism by increasing the supply of serfs.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) It caused labor shortages that undermined serfdom and increased peasant bargaining power.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) It led directly to the rise of the Delhi Sultanate.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) It ended all long-distance trade between Europe and Asia.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> With ~1/3 of Europe's population dead, surviving peasants could demand higher wages and better conditions. Serfdom weakened in Western Europe, and this labor shift contributed to the transition out of feudalism.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. Which of the following best explains the spread of Islam into Sub-Saharan Africa and Southeast Asia during this period?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Military conquest by Ottoman armies.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Muslim merchants and Sufi missionaries operating along trade routes.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) Mongol imperial policy enforcing conversion.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) European crusaders bringing Islam back from the Holy Land.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: B.</strong> Islam spread into West Africa via trans-Saharan trade and into the Swahili Coast and Southeast Asia through Indian Ocean merchants and Sufi missionaries, not through large-scale conquest.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+    <p>SAQs ask you to respond in complete sentences — no thesis needed, but be specific and use evidence. Aim for 2–4 sentences per part.</p>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — State Building (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE similarity between the political organization of the Inca Empire and Song Dynasty China in the period c. 1200–1450.</li>
+        <li>Identify ONE difference between the political organization of the Inca Empire and Song Dynasty China in the period c. 1200–1450.</li>
+        <li>Explain ONE way religion or belief systems supported state power in EITHER East Asia OR the Andes in the period c. 1200–1450.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Both the Inca Empire and Song China relied on a centralized bureaucracy staffed by officials accountable to the ruler to administer a large territory.</p>
+        <p><strong>(b)</strong> The Song recruited officials through Confucian civil service examinations open to (male) candidates from multiple classes, while the Inca assigned administrators based on hereditary status and ethnicity, with the Sapa Inca at the top.</p>
+        <p><strong>(c)</strong> In Song China, Neo-Confucianism legitimized imperial rule by portraying the emperor as the "Son of Heaven" whose moral authority maintained cosmic order, and by requiring officials to master Confucian texts that emphasized loyalty and hierarchy.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+      <p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+        "This sultan is a mighty ruler... He is one of seven kings of the world. Among the admirable qualities of these people... is the abundance of their gold. They respect strangers, they treat them well, and their women are shown great respect."<br>
+        <em>— Ibn Battuta, describing Mali, c. 1352</em>
+      </p>
+      <ol type="a">
+        <li>Identify ONE piece of evidence from Ibn Battuta's account that reflects the wealth of Mali in the 14th century.</li>
+        <li>Explain ONE reason for the wealth described in the excerpt.</li>
+        <li>Explain ONE way Islam influenced state building in West Africa during the period c. 1200–1450.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Ibn Battuta refers to the "abundance of their gold" and calls the Mali ruler "one of seven kings of the world," reflecting Mali's famous gold reserves.</p>
+        <p><strong>(b)</strong> Mali's wealth came from its control of the trans-Saharan trade in gold (mined in West Africa) and salt (from the Sahara), which Mansa Musa's hajj famously advertised to the wider Islamic world.</p>
+        <p><strong>(c)</strong> Rulers like Mansa Musa used Islam to legitimize their authority both at home and abroad: converting to Islam connected Mali to a cosmopolitan trading network, brought Muslim scholars and architects to Timbuktu, and made Mali's rulers recognized members of Dar al-Islam.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>No single power dominated.</strong> The world of 1200–1450 was a tapestry of regional states: Song China, Dar al-Islam, Delhi Sultanate, Aztec, Inca, Mali, Swahili city-states, and feudal Europe.</li>
+        <li><strong>Belief systems adapted.</strong> Neo-Confucianism, Sufism, Bhakti, and Catholic/Orthodox Christianity all reshaped older traditions to fit new political and social realities.</li>
+        <li><strong>Bureaucracies &amp; tribute systems organized power.</strong> Civil service exams (Song), mit'a labor (Inca), tribute (Aztec), feudal hierarchies (Europe), and sultanates (Dar al-Islam) all solved the problem of ruling large populations.</li>
+        <li><strong>Trade knit regions together.</strong> Indian Ocean, trans-Saharan, Silk Road, and Mediterranean networks moved gold, rice, silk, spices, ideas, and people.</li>
+        <li><strong>Crisis drove change.</strong> Black Death, the fall of Baghdad, and the Mongol conquests reshaped political and economic structures — setting up the transitions in Unit 2.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
