@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TMSR9LD4H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AP World History: Modern Unit 6 — Consequences of Industrialization (c. 1750–1900). In-depth notes on imperialism, state expansion, indigenous responses, economic imperialism, global migration, and causation — with photos, MCQs, and SAQs." />
+<title>Unit 6: Consequences of Industrialization (c. 1750–1900)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf6f1; color: #333; line-height: 1.6; }
+.container { max-width: 980px; margin: 2rem auto; padding: 2rem 1.5rem; background: white; border-radius: 10px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }
+h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: #8b4513; }
+h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+.subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+h3 { color: #a0522d; margin-top: 1.5rem; }
+h4 { color: #8b4513; margin-top: 1rem; }
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+.back-link { display: inline-block; margin-bottom: 1rem; color: #8b4513; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+.back-link:hover { text-decoration: underline; transform: scale(1.02); }
+.overview-box { background: linear-gradient(135deg, #fde7c9, #fff3e0); border-left: 6px solid #d2691e; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+.weighting-badge { display: inline-block; background: #8b4513; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+figure.photo { margin: 1.2rem 0; text-align: center; }
+figure.photo img { width: 100%; max-width: 640px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+figure.photo figcaption { font-size: 0.92rem; color: #666; margin-top: 0.4rem; font-style: italic; }
+.timeline { position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 4px solid #d2691e; }
+.timeline-event { position: relative; margin-bottom: 1.4rem; padding: 0.8rem 1rem; background: #fff8ef; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+.timeline-event::before { content: ""; position: absolute; left: -2.55rem; top: 1.1rem; width: 14px; height: 14px; background: #8b4513; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #d2691e; }
+.timeline-date { display: inline-block; font-weight: 700; color: #8b4513; margin-right: 0.5rem; }
+.region-card { border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-left: 6px solid; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.region-rationale { border-color: #5e35b1; background: #ede7f6; }
+.region-africa { border-color: #2e7d32; background: #e8f5e9; }
+.region-asia { border-color: #c62828; background: #ffebee; }
+.region-response { border-color: #ef6c00; background: #fff3e0; }
+.region-economy { border-color: #00695c; background: #e0f2f1; }
+.region-ecoimp { border-color: #0277bd; background: #e1f5fe; }
+.region-migrate { border-color: #ad1457; background: #fce4ec; }
+.region-effects { border-color: #4e342e; background: #efebe9; }
+.region-causation { border-color: #455a64; background: #eceff1; }
+.region-card h3 { margin-top: 0; }
+.vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+.vocab-item { background: #fff8ef; border: 1px solid #e0c9a6; border-radius: 8px; padding: 0.8rem 1rem; }
+.vocab-term { font-weight: 700; color: #8b4513; display: block; margin-bottom: 0.2rem; }
+.compare-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+.compare-table th, .compare-table td { border: 1px solid #e0c9a6; padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+.compare-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: white; }
+.compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+.quiz-container { background: linear-gradient(135deg, #fde7c9, #fff8ef); border: 2px solid #8b4513; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+.quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+.quiz-subheading { font-family: 'Montserrat', sans-serif; color: #a0522d; font-weight: 700; margin-top: 1.5rem; border-bottom: 1px dashed #a0522d; padding-bottom: 0.2rem; }
+.quiz-question { margin-bottom: 1.5rem; }
+.quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.quiz-option { padding: 0.6rem 0.8rem; border: 1px solid #8b4513; border-radius: 6px; cursor: pointer; background: white; transition: background-color 0.2s; }
+.quiz-option:hover { background-color: #fff3e0; }
+.quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+.quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+.explanation { display: none; margin-top: 0.6rem; padding: 0.8rem; background: #fff; border-left: 4px solid #8b4513; border-radius: 6px; font-size: 0.95rem; }
+.explanation.show { display: block; }
+.saq-box { background: #fff; border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; }
+.saq-box h3 { margin-top: 0; }
+details.saq-sample { margin-top: 0.8rem; background: #fff8ef; border: 1px dashed #8b4513; border-radius: 6px; padding: 0.6rem 0.9rem; }
+details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+.key-takeaways { background: linear-gradient(135deg, #fff3e0, #fde7c9); border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+<h1>Unit 6: Consequences of Industrialization</h1>
+<p class="subtitle">c. 1750 – c. 1900 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–15%</span></p>
+<!-- OVERVIEW -->
+<div class="overview-box">
+<h3 style="margin-top:0;">🏭 Unit Overview</h3>
+<p>
+Industrialization transformed Europe, the U.S., and Japan — but its <strong>consequences</strong>
+reshaped the entire world. Industrial powers hunted for raw materials and markets, launching the
+<strong>New Imperialism</strong> that carved up Africa and extended European control over Asia.
+In places that avoided formal colonization (Qing China, Ottoman Empire, Latin America), industrial
+powers exerted <strong>economic imperialism</strong>. Non-European societies resisted, reformed,
+rebelled, or collaborated. Meanwhile, industrial demand for labor and cheap steam transport
+unleashed the largest migrations in human history.
+</p>
+<p style="margin-bottom:0;">
+<strong>Big question:</strong> How did industrialization drive the New Imperialism, economic
+imperialism, and mass migration between 1750 and 1900 — and how did peoples around the world
+respond?
+</p>
+</div>
+<!-- TIMELINE -->
+<h2>🗓️ Unit 6 Timeline</h2>
+<div class="timeline">
+<div class="timeline-event"><span class="timeline-date">1757:</span> British East India Company victory at <strong>Plassey</strong> begins direct British rule in Bengal.</div>
+<div class="timeline-event"><span class="timeline-date">1788:</span> Britain founds penal colony at <strong>Botany Bay</strong>, Australia.</div>
+<div class="timeline-event"><span class="timeline-date">1799–1842:</span> British extend control across India; <strong>First Opium War</strong> (1839–1842) forces open Chinese ports.</div>
+<div class="timeline-event"><span class="timeline-date">1830:</span> France invades <strong>Algeria</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1839–1876:</span> Ottoman <strong>Tanzimat</strong> reforms modernize law, army, administration.</div>
+<div class="timeline-event"><span class="timeline-date">1850–1864:</span> <strong>Taiping Rebellion</strong> ravages Qing China.</div>
+<div class="timeline-event"><span class="timeline-date">1856–1860:</span> <strong>Second Opium War</strong>; Qing concedes further treaty ports.</div>
+<div class="timeline-event"><span class="timeline-date">1857–1858:</span> <strong>Indian Rebellion</strong>; British Crown replaces the East India Company — the British Raj begins.</div>
+<div class="timeline-event"><span class="timeline-date">1860s–1890s:</span> Qing <strong>Self-Strengthening Movement</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1868:</span> <strong>Meiji Restoration</strong> in Japan.</div>
+<div class="timeline-event"><span class="timeline-date">1869:</span> <strong>Suez Canal</strong> opens.</div>
+<div class="timeline-event"><span class="timeline-date">1876:</span> King Leopold II founds the International African Association (leads to the Congo Free State).</div>
+<div class="timeline-event"><span class="timeline-date">1879:</span> <strong>Anglo-Zulu War</strong>; Zulu victory at Isandlwana followed by British conquest.</div>
+<div class="timeline-event"><span class="timeline-date">1882:</span> Britain occupies <strong>Egypt</strong> (controls Suez).</div>
+<div class="timeline-event"><span class="timeline-date">1884–1885:</span> <strong>Berlin Conference</strong>: European powers partition Africa.</div>
+<div class="timeline-event"><span class="timeline-date">1885:</span> Indian National Congress founded.</div>
+<div class="timeline-event"><span class="timeline-date">1894–1895:</span> <strong>First Sino-Japanese War</strong>; Japan defeats Qing, takes Taiwan.</div>
+<div class="timeline-event"><span class="timeline-date">1896:</span> <strong>Battle of Adwa</strong>: Ethiopia defeats Italy — a major anti-colonial victory.</div>
+<div class="timeline-event"><span class="timeline-date">1898:</span> <strong>Spanish–American War</strong>; U.S. takes Philippines, Puerto Rico, Guam.</div>
+<div class="timeline-event"><span class="timeline-date">1899–1901:</span> <strong>Boxer Rebellion</strong> in China; Eight-Nation Alliance crushes it.</div>
+</div>
+<!-- TOPIC 6.1 -->
+<h2>Topic 6.1 — Rationales for Imperialism</h2>
+<div class="region-card region-rationale">
+<h3>🧠 Why Did Industrial Powers Build Empires?</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Punch_Rhodes_Colossus.png?width=600" alt="The Rhodes Colossus" />
+<figcaption>"The Rhodes Colossus" (<em>Punch</em>, 1892). Cecil Rhodes bestrides Africa from Cape to Cairo — a visual shorthand for British imperial ambition.</figcaption>
+</figure>
+<h4>Economic Motives</h4>
+<ul>
+<li><strong>Raw materials</strong>: cotton, rubber, copper, oil, palm oil, tin, gold, diamonds, ivory.</li>
+<li><strong>Markets</strong> for industrial goods (especially after overproduction crises of the 1870s–90s).</li>
+<li><strong>Investment outlets</strong> for surplus European capital (railways, mines, plantations).</li>
+<li><strong>Strategic resources</strong>: coaling stations for steamships, cable relay points.</li>
+</ul>
+<h4>Political &amp; Strategic Motives</h4>
+<ul>
+<li><strong>Great-power competition</strong>: Britain, France, Germany, Russia, U.S., Japan racing for territory and prestige.</li>
+<li><strong>Nationalism</strong>: empires as symbols of national greatness.</li>
+<li><strong>Naval strategy</strong>: Alfred Thayer Mahan's <em>Influence of Sea Power</em> (1890) pushed control of global chokepoints.</li>
+</ul>
+<h4>Ideological and Cultural Rationales</h4>
+<ul>
+<li><strong>Social Darwinism</strong>: "survival of the fittest" applied to nations and races.</li>
+<li><strong>Scientific racism</strong>: pseudo-scientific hierarchies of race used to justify rule over non-Europeans.</li>
+<li><strong>"Civilizing mission" / <em>mission civilisatrice</em></strong> (France), <strong>"White Man's Burden"</strong> (Kipling, 1899) — imperialism framed as paternalistic uplift.</li>
+<li><strong>Christian missionary</strong> work: converting "heathens" and providing schools and medicine (often intertwined with colonial rule).</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_White_Man%27s_Burden_%28Kipling%29.jpg?width=500" alt="The White Man's Burden, cartoon" />
+<figcaption>A 1899 cartoon based on Kipling's "The White Man's Burden" depicts Britain and the U.S. bearing colonial peoples "upward" — the ideology of civilizing mission in visual form.</figcaption>
+</figure>
+<h4>Technological Enablers</h4>
+<ul>
+<li><strong>Steamships and canals</strong> (Suez 1869, Panama 1914) shortened voyages.</li>
+<li><strong>Rifles and machine guns</strong> (breech-loaders, Maxim gun 1884) gave Europeans massive battlefield advantage.</li>
+<li><strong>Quinine</strong> prophylaxis allowed Europeans to survive in malarial zones.</li>
+<li><strong>Telegraph</strong>: instant command and control across oceans.</li>
+</ul>
+</div>
+<!-- TOPIC 6.2 -->
+<h2>Topic 6.2 — State Expansion: The "New Imperialism"</h2>
+<div class="region-card region-africa">
+<h3>🌍 The Scramble for Africa (c. 1880–1914)</h3>
+<p>
+In 1870, about 10% of Africa was under European control. By 1914, <strong>over 90%</strong> was —
+every part except Ethiopia and Liberia. This dramatic shift is the "<strong>New Imperialism</strong>."
+</p>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kongokonferenz.jpg?width=700" alt="Berlin Conference 1884-85" />
+<figcaption>The <strong>Berlin Conference</strong> (1884–1885). European powers (with no African delegates present) agreed on rules for partitioning Africa.</figcaption>
+</figure>
+<h4>Berlin Conference (1884–1885)</h4>
+<ul>
+<li>Convened by Bismarck; 14 European powers attended, no Africans.</li>
+<li>Required "<strong>effective occupation</strong>" to claim territory — spurred a race for inland conquest.</li>
+<li>Recognized King Leopold II's personal control of the <strong>Congo Free State</strong>.</li>
+<li>Drew colonial borders that often ignored ethnic and linguistic boundaries — a long legacy.</li>
+</ul>
+<h4>Key Colonial Territories</h4>
+<ul>
+<li><strong>Britain</strong>: Egypt (1882), Sudan, Nigeria, Gold Coast, Kenya, Uganda, Rhodesia, South Africa (after the Boer Wars 1899–1902).</li>
+<li><strong>France</strong>: Algeria (1830), Tunisia, West Africa (Senegal, Mali, Ivory Coast), Equatorial Africa, Madagascar.</li>
+<li><strong>Belgium</strong>: Congo Free State (1885) — direct royal property of Leopold II; infamous for forced labor and atrocities in rubber extraction.</li>
+<li><strong>Germany</strong>: Cameroon, Togo, German East Africa, German Southwest Africa (site of the 1904–1908 Herero and Nama genocide).</li>
+<li><strong>Portugal</strong>: Angola, Mozambique.</li>
+<li><strong>Italy</strong>: Libya, Somalia, Eritrea — defeated trying to take Ethiopia in 1896.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colonial_Africa_1913_map.svg?width=700" alt="Map of colonial Africa 1913" />
+<figcaption>Africa in 1913. Only Ethiopia and Liberia remained independent.</figcaption>
+</figure>
+</div>
+<div class="region-card region-asia">
+<h3>🌏 Expansion in Asia and the Pacific</h3>
+<h4>British India</h4>
+<ul>
+<li><strong>East India Company</strong> ruled much of India after Plassey (1757); after the 1857 Rebellion the British Crown took over — the <strong>British Raj</strong> (1858–1947).</li>
+<li>India as the "<strong>jewel in the crown</strong>": source of cotton, tea, opium; market for British textiles.</li>
+<li>Built extensive <strong>railroads and telegraph</strong> networks; introduced English-language higher education; caused widespread famines partly due to export-oriented policy.</li>
+</ul>
+<h4>Southeast Asia</h4>
+<ul>
+<li><strong>Dutch</strong>: Netherlands East Indies (Indonesia).</li>
+<li><strong>British</strong>: Burma, Malaya, Singapore.</li>
+<li><strong>French</strong>: French Indochina (Vietnam, Laos, Cambodia).</li>
+<li><strong>U.S.</strong>: Philippines (after 1898; put down Filipino independence movement).</li>
+<li><strong>Siam (Thailand)</strong>: The only Southeast Asian state to retain independence, through diplomatic balancing between Britain and France.</li>
+</ul>
+<h4>China — "Informal Empire"</h4>
+<ul>
+<li>After the <strong>Opium Wars</strong> (1839–1842; 1856–1860), Britain, France, Russia, Germany, Japan, and the U.S. extracted <strong>unequal treaties</strong>.</li>
+<li><strong>Treaty ports</strong> (Shanghai, Canton, Tianjin), <strong>extraterritoriality</strong>, low tariffs, and <strong>spheres of influence</strong> carved China into zones of economic privilege — without formal colonization.</li>
+<li><strong>Open Door Policy</strong> (U.S., 1899) tried to preserve equal commercial access.</li>
+</ul>
+<h4>Japan &amp; Russia</h4>
+<ul>
+<li><strong>Meiji Japan</strong>, industrialized after 1868, became an imperial power: Taiwan (1895), Korea (protectorate 1905, annexed 1910), Manchuria (after 1905).</li>
+<li><strong>Russia</strong> expanded into Central Asia (Kazakh, Uzbek lands), the Caucasus, and the Pacific (Vladivostok 1860, Trans-Siberian Railway).</li>
+</ul>
+<h4>Australia and the Pacific</h4>
+<ul>
+<li>Britain's <strong>Australia</strong>: penal colony 1788 → six colonies → Commonwealth 1901. Catastrophic impact on Aboriginal peoples.</li>
+<li><strong>New Zealand</strong>: Treaty of Waitangi (1840) with Māori; colonial wars followed.</li>
+<li>Pacific islands divided among Britain, France, Germany, U.S. (e.g., Hawaii annexed by U.S., 1898).</li>
+</ul>
+<h4>U.S. Continental and Overseas Expansion</h4>
+<ul>
+<li>"<strong>Manifest Destiny</strong>" justified westward expansion; Mexican-American War (1846–48) added half of Mexico's territory.</li>
+<li>Wars with Plains Indian nations (Sioux, Apache, Cheyenne); reservation system and Dawes Act (1887).</li>
+<li><strong>Spanish-American War</strong> (1898): U.S. acquired Philippines, Puerto Rico, Guam; Cuba made a protectorate.</li>
+</ul>
+</div>
+<!-- TOPIC 6.3 -->
+<h2>Topic 6.3 — Indigenous Responses to State Expansion</h2>
+<div class="region-card region-response">
+<h3>✊ Resistance, Rebellion, and Reform</h3>
+<h4>Armed Resistance</h4>
+<ul>
+<li><strong>Zulu Kingdom</strong> under Cetshwayo defeated the British at <strong>Isandlwana</strong> (1879) before being crushed.</li>
+<li><strong>Ethiopia</strong> under <strong>Menelik II</strong> decisively defeated Italy at <strong>Adwa</strong> (1896), preserving independence.</li>
+<li><strong>Samory Touré</strong> resisted French expansion in West Africa for nearly two decades.</li>
+<li><strong>Mahdist state</strong> in Sudan defeated Egyptian and British forces (killing General Gordon at Khartoum, 1885) before British reconquest at Omdurman (1898).</li>
+<li><strong>Herero and Nama</strong> uprisings in German Southwest Africa (1904–1908) were met with genocidal violence.</li>
+<li><strong>Boxer Rebellion</strong> (1899–1901) in China targeted foreigners and Christian converts; crushed by Eight-Nation Alliance.</li>
+<li><strong>Taiping Rebellion</strong> (1850–1864) — a massive internal revolt shaped partly by Western influence.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emperor_Menelik_II.jpg?width=500" alt="Emperor Menelik II of Ethiopia" />
+<figcaption>Emperor <strong>Menelik II</strong>, whose army defeated the Italians at the Battle of Adwa (1896) — the most decisive African victory over a European colonial army.</figcaption>
+</figure>
+<h4>Rebellion Within Colonial Systems</h4>
+<ul>
+<li><strong>Indian Rebellion of 1857</strong> ("Sepoy Mutiny"): Indian soldiers, princes, and peasants revolted against the East India Company; led to direct Crown rule.</li>
+<li><strong>Yaa Asantewaa War</strong> (1900, Gold Coast): Asante queen mother led revolt against British.</li>
+<li><strong>Ghost Dance</strong> movement (1890, U.S.) — spiritual revival ending in the massacre at Wounded Knee.</li>
+<li><strong>Xhosa Cattle Killing</strong> (1856–57): prophetic movement in Southern Africa responding to colonial pressure.</li>
+</ul>
+<h4>Reform and Modernization</h4>
+<ul>
+<li><strong>Ottoman Tanzimat</strong> (1839–1876): legal equality, conscript army, education reform, 1876 constitution (soon suspended).</li>
+<li><strong>Qing Self-Strengthening Movement</strong> (1860s–1890s): Western weapons, arsenals, shipyards — but limited political reform.</li>
+<li><strong>Meiji Restoration</strong> (1868): wholesale modernization transformed Japan into an industrial power.</li>
+<li><strong>Siamese reforms</strong> under Kings Mongkut and Chulalongkorn preserved independence.</li>
+</ul>
+<h4>Nationalism and Political Organizing</h4>
+<ul>
+<li><strong>Indian National Congress</strong> (founded 1885): initially a moderate professional body, later the spearhead of Indian nationalism.</li>
+<li><strong>Young Ottomans</strong> and later <strong>Young Turks</strong> pushed for constitutional, nationalist reform.</li>
+<li><strong>Pan-African</strong> and <strong>Pan-Islamic</strong> ideas emerged as diasporic/religious responses to imperialism.</li>
+<li>Cuba's <strong>José Martí</strong> led independence movement against Spain (died 1895).</li>
+</ul>
+</div>
+<!-- TOPIC 6.4 -->
+<h2>Topic 6.4 — Global Economic Development</h2>
+<div class="region-card region-economy">
+<h3>🌐 One World Economy, Unequal Roles</h3>
+<p>
+Industrialization created the first truly <strong>global economy</strong>, but it built in a sharp
+division of labor: an industrial <strong>core</strong> (Britain, France, Germany, U.S., Japan) that
+manufactured goods and finance, and a <strong>periphery</strong> (colonies, Latin America, much of
+Asia) that supplied raw materials and consumed finished goods.
+</p>
+<h4>Cash-Crop Economies</h4>
+<ul>
+<li><strong>Cotton</strong>: India, Egypt, U.S. South.</li>
+<li><strong>Sugar</strong>: Caribbean, Brazil, Hawaii, Java.</li>
+<li><strong>Rubber</strong>: Brazil, Congo, Malaya — demand soared with bicycles and cars.</li>
+<li><strong>Tea</strong>: India, Ceylon.</li>
+<li><strong>Coffee</strong>: Brazil, Central America, Ceylon.</li>
+<li><strong>Palm oil</strong>: West Africa.</li>
+<li><strong>Opium</strong>: India → China (a British imperial triangle).</li>
+<li><strong>Tobacco, bananas, cocoa</strong>: Latin America and West Africa.</li>
+</ul>
+<h4>Mineral Extraction</h4>
+<ul>
+<li><strong>Gold and diamonds</strong>: South Africa (Witwatersrand, Kimberley).</li>
+<li><strong>Copper</strong>: Chile, Katanga (Congo).</li>
+<li><strong>Tin</strong>: Malaya, Bolivia.</li>
+<li><strong>Guano &amp; nitrates</strong>: Peru, Chile — essential fertilizer and explosives raw material.</li>
+</ul>
+<h4>Transport and Finance</h4>
+<ul>
+<li>European-built <strong>railroads</strong> (India, Argentina, Egypt) moved cash crops and minerals to ports.</li>
+<li><strong>Steamship lines</strong> (P&amp;O, Lloyd, Hamburg-Amerika) linked global markets.</li>
+<li><strong>British capital</strong> financed much of the world's infrastructure; by 1914 Britain had invested ~£4 billion abroad.</li>
+<li><strong>Gold standard</strong>, <strong>London financial markets</strong>, and <strong>sterling</strong> as a reserve currency tied everyone together.</li>
+</ul>
+<h4>Environmental Consequences</h4>
+<ul>
+<li>Large-scale <strong>deforestation</strong> for plantations and fuel.</li>
+<li>Soil exhaustion and erosion in monoculture zones.</li>
+<li>Air and water pollution around industrial and mining centers.</li>
+<li>Mass destruction of American bison; near-extinction of passenger pigeon; widespread hunting of elephants (ivory).</li>
+</ul>
+</div>
+<!-- TOPIC 6.5 -->
+<h2>Topic 6.5 — Economic Imperialism</h2>
+<div class="region-card region-ecoimp">
+<h3>💼 Control Without a Flag</h3>
+<p>
+In places European powers did not formally colonize, they often exerted <strong>economic
+imperialism</strong>: domination of finance, trade, and infrastructure backed by the threat of
+force.
+</p>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Destruction_of_Opium.jpg?width=700" alt="Destruction of the opium during the First Opium War" />
+<figcaption>Commissioner Lin Zexu orders the destruction of British opium at Canton (1839) — the event that triggered the First Opium War and the start of China's "Century of Humiliation."</figcaption>
+</figure>
+<h4>Qing China</h4>
+<ul>
+<li><strong>Treaty of Nanjing</strong> (1842) ended the First Opium War — ceded Hong Kong, opened five treaty ports, imposed indemnity, legalized British trade.</li>
+<li><strong>Unequal treaties</strong> after 1860 added more ports, extraterritoriality, Christian missionary access.</li>
+<li><strong>Customs service</strong> run by a British national (Robert Hart) — foreign control of Chinese tariffs.</li>
+<li><strong>Spheres of influence</strong>: Britain in the Yangzi; Russia in Manchuria; France in the south; Germany in Shandong; Japan in the northeast.</li>
+</ul>
+<h4>Ottoman Empire — "Sick Man of Europe"</h4>
+<ul>
+<li>European loans led to the <strong>Ottoman Public Debt Administration</strong> (1881) — European creditors controlled major revenues.</li>
+<li><strong>Capitulations</strong>: long-standing treaty privileges exempted Europeans from Ottoman law and taxes.</li>
+<li>British occupation of <strong>Egypt</strong> (1882) secured the Suez Canal.</li>
+</ul>
+<h4>Latin America — "Informal British Empire"</h4>
+<ul>
+<li>After independence, Latin American states entered global markets on disadvantageous terms.</li>
+<li>British (then later U.S.) firms built <strong>railroads</strong> (especially in Argentina), <strong>ports</strong>, <strong>utilities</strong>, and owned major ranching and mining operations.</li>
+<li>Countries specialized in one or two exports (<strong>monoculture</strong>): Argentina (beef/wheat), Brazil (coffee/rubber), Chile (nitrates/copper), Cuba (sugar).</li>
+<li>U.S. <strong>Monroe Doctrine</strong> (1823) and Roosevelt Corollary (1904) asserted U.S. primacy in the hemisphere; U.S. intervened repeatedly in Central America and the Caribbean.</li>
+<li>Enclave industries like <strong>United Fruit Company</strong> produced "<strong>banana republics</strong>" — states politically dominated by foreign capital.</li>
+</ul>
+<h4>Results</h4>
+<ul>
+<li>States kept nominal independence but lost real economic sovereignty.</li>
+<li>Export dependence made these economies vulnerable to global price swings.</li>
+<li>Economic imperialism often preceded or substituted for formal colonization.</li>
+</ul>
+</div>
+<!-- TOPIC 6.6 -->
+<h2>Topic 6.6 — Causes of Migration in an Interconnected World</h2>
+<div class="region-card region-migrate">
+<h3>🚢 The Great Migration (c. 1820–1914)</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Immigrants_at_Ellis_Island_%28William_H._Rau%29.jpg?width=700" alt="Immigrants at Ellis Island" />
+<figcaption>Immigrants arriving at Ellis Island, New York, c. 1900. Between 1820 and 1914, roughly 55 million Europeans left Europe — the largest voluntary migration in history.</figcaption>
+</figure>
+<h4>Push Factors</h4>
+<ul>
+<li><strong>Population growth</strong>: Europe's population doubled 1800–1900.</li>
+<li><strong>Rural displacement</strong>: enclosure, mechanization, landlessness.</li>
+<li><strong>Famine</strong>: Irish Potato Famine (1845–52) displaced ~2 million; Indian famines under British rule.</li>
+<li><strong>Persecution</strong>: Russian pogroms sent Jews to the Americas and Britain.</li>
+<li><strong>Political repression</strong>: refugees from failed revolutions (1848), Polish uprisings.</li>
+<li><strong>Abolition of slavery</strong> created labor shortages → indentured labor demand.</li>
+</ul>
+<h4>Pull Factors</h4>
+<ul>
+<li><strong>Industrial labor demand</strong> in the Americas and Australia.</li>
+<li><strong>Gold rushes</strong>: California (1849), Australia (1851), South Africa (1886), Klondike (1896).</li>
+<li><strong>Cheap land</strong>: U.S. Homestead Act (1862), Argentine pampas, Canadian prairies.</li>
+<li><strong>Recruitment</strong>: railroad companies, plantation owners recruited aggressively.</li>
+</ul>
+<h4>Transportation Revolution</h4>
+<ul>
+<li><strong>Steamships</strong> cut Atlantic crossing from 6 weeks (sail) to ~10 days by 1900.</li>
+<li><strong>Railroads</strong> moved migrants inland — within Europe to ports, within the U.S. to western territories.</li>
+<li><strong>Cheap steerage fares</strong> (~$25 by 1900) made migration affordable for working families.</li>
+</ul>
+<h4>Types of Migration</h4>
+<ul>
+<li><strong>Voluntary European migration</strong>: ~55 million to the Americas, Australia, New Zealand, South Africa.</li>
+<li><strong>Asian indentured labor</strong>: ~2.5 million Chinese and ~1.5 million Indian workers to the Caribbean, Peru, South Africa, Mauritius, Fiji, Southeast Asia.</li>
+<li><strong>Internal migration</strong>: from rural to urban areas (e.g., Chinese to Southeast Asia, Russian peasants to Siberia, African workers to South African mines).</li>
+<li><strong>Forced or semi-forced labor</strong> continued: convict labor (Australia), sharecropping (U.S. South), forced porters and rubber gatherers (Congo).</li>
+</ul>
+</div>
+<!-- TOPIC 6.7 -->
+<h2>Topic 6.7 — Effects of Migration</h2>
+<div class="region-card region-effects">
+<h3>🏙️ Demographic and Cultural Transformation</h3>
+<h4>Demographic Effects</h4>
+<ul>
+<li><strong>Reshaping of the Americas</strong>: U.S. population grew from ~5 million (1800) to ~76 million (1900); Argentina and Brazil were transformed by European arrivals.</li>
+<li><strong>Asian diasporas</strong> expanded in Southeast Asia (Chinese merchants and laborers) and across the Indian Ocean (Indians in South Africa, Mauritius, Fiji).</li>
+<li><strong>Gendered migration</strong>: many early migrants were young men, creating unbalanced sex ratios that encouraged later family migration.</li>
+</ul>
+<h4>Ethnic Enclaves and Identity</h4>
+<ul>
+<li><strong>Chinatowns</strong>, <strong>Little Italys</strong>, <strong>Jewish Lower East Sides</strong> formed in host cities.</li>
+<li>Strong <strong>mutual aid societies</strong>, newspapers, religious institutions.</li>
+<li>Migrants maintained ties with homelands through remittances and return migration.</li>
+</ul>
+<h4>Nativist Backlash and Legal Restrictions</h4>
+<ul>
+<li><strong>Chinese Exclusion Act</strong> (U.S., 1882): first U.S. law banning immigrants by nationality; inspired similar acts (e.g., 1901 Australian "White Australia" policy).</li>
+<li>Immigration quotas debated in Canada, Argentina, New Zealand.</li>
+<li>Racist and anti-Semitic movements across Europe (Dreyfus Affair, 1894–1906).</li>
+</ul>
+<h4>Cultural Effects</h4>
+<ul>
+<li><strong>New cuisines, religions, languages</strong> spread with migrants (Italian food in Argentina; Hindu festivals in Trinidad; Chinese temples in San Francisco).</li>
+<li><strong>Hybrid cultures</strong>: creole languages, Trinidadian calypso, Indo-Caribbean music, U.S. jazz (rooted in African American, but spreading via migration).</li>
+<li>Spread of global sports (cricket in Caribbean and South Asia; soccer worldwide).</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_store_San_Francisco_Chinatown_c1900.jpg?width=600" alt="San Francisco Chinatown c. 1900" />
+<figcaption>San Francisco's Chinatown c. 1900. Despite the 1882 Chinese Exclusion Act, Chinese immigrants built enduring urban communities across the Americas and Pacific.</figcaption>
+</figure>
+<h4>Political Effects</h4>
+<ul>
+<li>Diaspora communities funded homeland nationalist movements (Irish Americans, Indian diaspora, Chinese reformers).</li>
+<li>Migration helped spread revolutionary and socialist ideas across continents.</li>
+</ul>
+</div>
+<!-- TOPIC 6.8 -->
+<h2>Topic 6.8 — Causation in the Imperial Age</h2>
+<div class="region-card region-causation">
+<h3>🔄 Synthesizing Unit 6</h3>
+<div style="overflow-x:auto;">
+<table class="compare-table">
+<thead>
+<tr>
+<th>Imperial Form</th>
+<th>Example</th>
+<th>Tools of Control</th>
+<th>Key Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Settler colony</strong></td><td>Australia, Algeria, Southern Africa</td><td>Mass European settlement, land seizure, indigenous displacement</td><td>Fundamental demographic and cultural transformation</td></tr>
+<tr><td><strong>Administrative colony</strong></td><td>British India, French Indochina, Congo</td><td>Small European elite ruling through local intermediaries; export economy</td><td>Restructured economies for metropole benefit; nationalist reaction</td></tr>
+<tr><td><strong>Informal / economic empire</strong></td><td>Qing China, Ottoman Empire, Latin America</td><td>Unequal treaties, loans, foreign-owned firms, gunboat threats</td><td>Lost economic sovereignty without losing the flag</td></tr>
+<tr><td><strong>Protectorate</strong></td><td>Egypt, Korea (Japan), Tunisia</td><td>Local rulers kept on the throne under imperial supervision</td><td>Facade of independence; tight strategic and economic control</td></tr>
+<tr><td><strong>Imperial neighbor expansion</strong></td><td>Russia in Central Asia, U.S. westward</td><td>Military conquest, railroad settlement, forced assimilation</td><td>Continental empires incorporating diverse peoples</td></tr>
+</tbody>
+</table>
+</div>
+<h4>Continuities with Earlier Periods</h4>
+<ul>
+<li>European overseas empires (Spain, Portugal, Netherlands) existed long before 1750.</li>
+<li>Land-based imperial expansion (Russia, Qing, Ottomans) continued.</li>
+<li>Coercive labor systems (slavery, encomienda) transformed but did not vanish — replaced by indentured and semi-free labor.</li>
+</ul>
+<h4>Changes</h4>
+<ul>
+<li><strong>Scale</strong>: European empires now covered most of Africa and much of Asia.</li>
+<li><strong>Speed</strong>: steamships, rails, telegraph made distant rule practical.</li>
+<li><strong>Integration</strong>: a single world economy under a gold standard.</li>
+<li><strong>Ideology</strong>: imperialism framed in new, scientific-racist, nationalist terms.</li>
+<li><strong>Non-European powers</strong>: Japan and the U.S. joined the imperial club.</li>
+</ul>
+<h4>Legacies (Looking Forward to Unit 7)</h4>
+<ul>
+<li>Imperial rivalries among European powers fed tensions that produced <strong>World War I</strong>.</li>
+<li>Colonial borders and economies shaped 20th-century decolonization struggles.</li>
+<li>Nationalist movements created in this era (Indian National Congress, Vietnamese, Egyptian, Pan-African) matured into independence movements after 1914.</li>
+<li>Economic imperialism and dependence shaped the 20th-century "Global South."</li>
+</ul>
+</div>
+<!-- VOCAB -->
+<h2>📚 Key Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-item"><span class="vocab-term">New Imperialism</span>Late-19th-c. European, U.S., and Japanese push to acquire colonies, especially in Africa and Asia.</div>
+<div class="vocab-item"><span class="vocab-term">Civilizing mission</span>Ideology that Europeans had a duty to "uplift" non-European peoples.</div>
+<div class="vocab-item"><span class="vocab-term">White Man's Burden</span>Kipling's 1899 poem encapsulating paternalistic imperial ideology.</div>
+<div class="vocab-item"><span class="vocab-term">Social Darwinism</span>Misapplication of evolution to justify racial and national hierarchies.</div>
+<div class="vocab-item"><span class="vocab-term">Scientific racism</span>Pseudo-scientific ranking of races used to rationalize imperial rule.</div>
+<div class="vocab-item"><span class="vocab-term">Berlin Conference</span>1884–85 meeting partitioning Africa among European powers.</div>
+<div class="vocab-item"><span class="vocab-term">Effective occupation</span>Berlin Conference rule requiring on-the-ground presence for territorial claims.</div>
+<div class="vocab-item"><span class="vocab-term">Scramble for Africa</span>European rush to claim African territory c. 1880–1914.</div>
+<div class="vocab-item"><span class="vocab-term">Congo Free State</span>King Leopold II's personal colony notorious for rubber atrocities.</div>
+<div class="vocab-item"><span class="vocab-term">British Raj</span>Direct British Crown rule of India, 1858–1947.</div>
+<div class="vocab-item"><span class="vocab-term">Sepoy Mutiny / Indian Rebellion (1857)</span>Major Indian revolt against East India Company rule.</div>
+<div class="vocab-item"><span class="vocab-term">Opium Wars</span>Two wars (1839–42, 1856–60) that forced Qing China open to trade.</div>
+<div class="vocab-item"><span class="vocab-term">Unequal treaties</span>Treaties imposed on China (and others) with extraterritoriality and tariff limits.</div>
+<div class="vocab-item"><span class="vocab-term">Treaty ports</span>Cities in Qing China opened to foreign trade and residence under treaty.</div>
+<div class="vocab-item"><span class="vocab-term">Spheres of influence</span>Regions (e.g., in China) where one foreign power had privileged economic rights.</div>
+<div class="vocab-item"><span class="vocab-term">Open Door Policy</span>1899 U.S. proposal for equal commercial access to China.</div>
+<div class="vocab-item"><span class="vocab-term">Boxer Rebellion</span>1899–1901 anti-foreign uprising in China.</div>
+<div class="vocab-item"><span class="vocab-term">Self-Strengthening Movement</span>Qing effort (1860s–1890s) to adopt Western military tech without political change.</div>
+<div class="vocab-item"><span class="vocab-term">Tanzimat</span>Ottoman reforms (1839–1876) aimed at modernization.</div>
+<div class="vocab-item"><span class="vocab-term">Capitulations</span>Treaties granting Europeans legal privileges inside the Ottoman Empire.</div>
+<div class="vocab-item"><span class="vocab-term">Battle of Adwa</span>1896 Ethiopian victory over Italy preserving independence.</div>
+<div class="vocab-item"><span class="vocab-term">Indian National Congress</span>1885-founded organization that led Indian nationalism.</div>
+<div class="vocab-item"><span class="vocab-term">Economic imperialism</span>Foreign control of an economy without formal colonization.</div>
+<div class="vocab-item"><span class="vocab-term">Monoculture</span>Economic dependence on a single cash crop.</div>
+<div class="vocab-item"><span class="vocab-term">Monroe Doctrine</span>1823 U.S. policy opposing European colonization in the Americas.</div>
+<div class="vocab-item"><span class="vocab-term">Roosevelt Corollary</span>1904 U.S. claim of right to intervene in Latin America.</div>
+<div class="vocab-item"><span class="vocab-term">Banana republic</span>Latin American state dominated by foreign agribusiness.</div>
+<div class="vocab-item"><span class="vocab-term">Manifest Destiny</span>19th-c. U.S. belief in continental expansion as a mission.</div>
+<div class="vocab-item"><span class="vocab-term">Settler colony</span>Colony in which European settlers became demographically dominant.</div>
+<div class="vocab-item"><span class="vocab-term">Indentured labor</span>Contract labor (often Chinese or Indian) replacing enslaved workers.</div>
+<div class="vocab-item"><span class="vocab-term">Diaspora</span>Dispersed population maintaining ties with a homeland.</div>
+<div class="vocab-item"><span class="vocab-term">Chinese Exclusion Act (1882)</span>U.S. law banning Chinese immigration.</div>
+<div class="vocab-item"><span class="vocab-term">Pan-Africanism</span>Movement asserting solidarity among peoples of African descent.</div>
+<div class="vocab-item"><span class="vocab-term">Maxim gun</span>1884 machine gun that transformed colonial warfare.</div>
+</div>
+<!-- MCQs -->
+<div class="quiz-container">
+<h2>📝 Multiple Choice Practice</h2>
+<p>Three questions per sub-topic (24 total). Click an answer to check it.</p>
+<!-- 6.1 -->
+<h3 class="quiz-subheading">Topic 6.1 — Rationales for Imperialism</h3>
+<div class="quiz-question">
+<p><strong>1. Which of the following was the MOST important economic motive for the New Imperialism of the late 19th century?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Rebuilding medieval trade routes.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Securing raw materials for industrial production and markets for manufactured goods.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Spreading Enlightenment philosophy.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Importing finished goods from Asia to Europe.</div>
+</div>
+<div class="explanation" id="exp-1"><strong>Answer: B.</strong> Industrial economies needed rubber, cotton, copper, and oil, and needed markets for their output — central economic drivers of imperialism.</div>
+</div>
+<div class="quiz-question">
+<p><strong>2. Rudyard Kipling's "The White Man's Burden" (1899) is BEST understood as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) A critique of imperialism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) A justification for imperialism framed as a moral duty to "civilize" other peoples.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) A call for proletarian revolution.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) A rejection of Social Darwinism.</div>
+</div>
+<div class="explanation" id="exp-2"><strong>Answer: B.</strong> Kipling addressed the U.S. acquisition of the Philippines, framing imperial rule as a burdensome obligation — a classic "civilizing mission" argument.</div>
+</div>
+<div class="quiz-question">
+<p><strong>3. Which technological development MOST enabled European conquest in tropical Africa by the 1880s?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) The printing press.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) Quinine prophylaxis against malaria, combined with breech-loading rifles and steam-powered riverboats.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Nuclear weapons.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) The internet.</div>
+</div>
+<div class="explanation" id="exp-3"><strong>Answer: B.</strong> Quinine lowered European mortality in malarial zones; modern rifles and river steamers allowed deep penetration into Africa.</div>
+</div>
+<!-- 6.2 -->
+<h3 class="quiz-subheading">Topic 6.2 — State Expansion</h3>
+<div class="quiz-question">
+<p><strong>4. The 1884–1885 Berlin Conference</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) Granted independence to African nations.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) Established rules among European powers for partitioning Africa, with no African delegates present.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) Ended European colonization in Africa.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) Was called by the Ethiopian emperor.</div>
+</div>
+<div class="explanation" id="exp-4"><strong>Answer: B.</strong> The conference regulated competition between European powers and accelerated the Scramble for Africa.</div>
+</div>
+<div class="quiz-question">
+<p><strong>5. Which statement BEST describes the status of China by 1900?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) A formal colony of Great Britain.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Nominally independent but dominated by European, Japanese, and U.S. spheres of influence under unequal treaties.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) A unified communist state.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) An industrial equal of Britain.</div>
+</div>
+<div class="explanation" id="exp-5"><strong>Answer: B.</strong> The Qing retained formal sovereignty but foreign powers controlled treaty ports, tariffs, and wide spheres of influence — classic informal empire.</div>
+</div>
+<div class="quiz-question">
+<p><strong>6. Japan's acquisition of Taiwan (1895) and Korea (1910) demonstrates that</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Only Europeans pursued empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) A non-Western industrialized state could become a major imperial power in its own right.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) Japan remained a victim of imperialism throughout the period.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Japan sought colonies only in Europe.</div>
+</div>
+<div class="explanation" id="exp-6"><strong>Answer: B.</strong> Meiji industrialization enabled Japan to defeat China (1895) and Russia (1905) and build its own empire.</div>
+</div>
+<!-- 6.3 -->
+<h3 class="quiz-subheading">Topic 6.3 — Indigenous Responses</h3>
+<div class="quiz-question">
+<p><strong>7. The Battle of Adwa (1896) is significant because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) Ended World War I.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) Saw Ethiopia decisively defeat an invading Italian army, preserving Ethiopian independence.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) Allowed Italy to colonize Ethiopia.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Was a French victory in Vietnam.</div>
+</div>
+<div class="explanation" id="exp-7"><strong>Answer: B.</strong> Emperor Menelik II modernized his army and defeated the Italians — making Ethiopia (with Liberia) one of the only African states to escape colonization.</div>
+</div>
+<div class="quiz-question">
+<p><strong>8. A direct consequence of the 1857 Indian Rebellion was</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) Indian independence.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 8)">(B) The British Crown assumed direct rule of India, ending the East India Company's administration.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(C) Indian colonization of Britain.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) The partition of India.</div>
+</div>
+<div class="explanation" id="exp-8"><strong>Answer: B.</strong> In 1858 the Crown took direct control — the start of the British Raj — and restructured governance to prevent future uprisings.</div>
+</div>
+<div class="quiz-question">
+<p><strong>9. Which of the following BEST illustrates a reformist (rather than rebellious) response to Western pressure?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) The Taiping Rebellion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(B) The Boxer Rebellion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 9)">(C) The Ottoman Tanzimat reforms or the Meiji Restoration.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) The Herero uprising.</div>
+</div>
+<div class="explanation" id="exp-9"><strong>Answer: C.</strong> Both the Tanzimat and Meiji restructured state and society to adapt to — not merely resist — Western power.</div>
+</div>
+<!-- 6.4 -->
+<h3 class="quiz-subheading">Topic 6.4 — Global Economic Development</h3>
+<div class="quiz-question">
+<p><strong>10. Which of the following cash crops tied India to the British Empire in the 19th century?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) Potatoes.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) Cotton, tea, and opium.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) Bananas.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) Coffee and cocoa.</div>
+</div>
+<div class="explanation" id="exp-10"><strong>Answer: B.</strong> Indian cotton supplied British mills; Indian tea supplied British consumers; Indian opium was exported to China in exchange for silver and tea.</div>
+</div>
+<div class="quiz-question">
+<p><strong>11. The "core–periphery" model of the late-19th-century world economy argues that</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(A) All regions industrialized equally.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 11)">(B) Industrialized regions (core) exchanged manufactures for raw materials from non-industrial regions (periphery), producing structural inequality.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Peripheries controlled cores.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) Gold rushes had no global effects.</div>
+</div>
+<div class="explanation" id="exp-11"><strong>Answer: B.</strong> The imperial economy was structurally uneven — an important long-term legacy of this period.</div>
+</div>
+<div class="quiz-question">
+<p><strong>12. Which of the following describes an environmental consequence of industrial-era global commerce?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Total preservation of rainforests.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 12)">(B) Large-scale deforestation for plantations, soil depletion, and near-extinction of animals hunted for commerce (e.g., bison, elephants).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(C) A decline in world population.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) The disappearance of coal mining.</div>
+</div>
+<div class="explanation" id="exp-12"><strong>Answer: B.</strong> Industrial and imperial economies transformed landscapes worldwide — one of the period's most lasting physical legacies.</div>
+</div>
+<!-- 6.5 -->
+<h3 class="quiz-subheading">Topic 6.5 — Economic Imperialism</h3>
+<div class="quiz-question">
+<p><strong>13. The Ottoman Public Debt Administration (1881) is an example of</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(A) Ottoman control of European finance.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 13)">(B) European creditors taking over significant Ottoman revenue streams to repay foreign loans — a form of economic imperialism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(C) A Tanzimat military reform.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(D) An Ottoman factory.</div>
+</div>
+<div class="explanation" id="exp-13"><strong>Answer: B.</strong> It was a foreign-run body that collected Ottoman revenues and paid European bondholders — a paradigmatic case of economic imperialism.</div>
+</div>
+<div class="quiz-question">
+<p><strong>14. Which phrase best captures Latin America's place in the late-19th-century world economy?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(A) A major industrial power.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 14)">(B) Politically independent but economically dependent on European (and later U.S.) capital and markets.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(C) Formally colonized by Germany.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(D) Controlled by the Qing dynasty.</div>
+</div>
+<div class="explanation" id="exp-14"><strong>Answer: B.</strong> Post-independence Latin America integrated into the global economy as a raw-material exporter dependent on foreign capital — "informal empire."</div>
+</div>
+<div class="quiz-question">
+<p><strong>15. The term "banana republic" was coined to describe</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(A) European monarchies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 15)">(B) Central American states whose politics and economies were dominated by foreign (often U.S.) agricultural corporations like United Fruit.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(C) Soviet satellite states.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(D) Chinese treaty ports.</div>
+</div>
+<div class="explanation" id="exp-15"><strong>Answer: B.</strong> The phrase captures how U.S. capital and military power shaped Caribbean and Central American states without formal colonization.</div>
+</div>
+<!-- 6.6 -->
+<h3 class="quiz-subheading">Topic 6.6 — Causes of Migration</h3>
+<div class="quiz-question">
+<p><strong>16. Which of the following is the BEST example of a "push" factor driving European emigration in the 19th century?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(A) Available farmland in the U.S.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 16)">(B) The Irish Potato Famine (1845–52).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(C) The California Gold Rush.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(D) Argentine beef demand.</div>
+</div>
+<div class="explanation" id="exp-16"><strong>Answer: B.</strong> Famine displaced ~2 million Irish — a paradigmatic push factor. A, C, and D are pull factors.</div>
+</div>
+<div class="quiz-question">
+<p><strong>17. Asian indentured labor in the 19th century largely</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(A) Preceded the abolition of slavery.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 17)">(B) Replaced enslaved African labor on plantations and mines after abolition in various parts of the Atlantic and Indian Ocean worlds.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(C) Was limited to China alone.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(D) Never crossed the Pacific.</div>
+</div>
+<div class="explanation" id="exp-17"><strong>Answer: B.</strong> Chinese and Indian indentured workers filled labor gaps in Caribbean sugar, South African mines, Southeast Asian rubber, Peruvian guano, and Pacific plantations.</div>
+</div>
+<div class="quiz-question">
+<p><strong>18. Cheap, fast steamship travel in the late 19th century</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(A) Made migration harder for working-class families.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 18)">(B) Dramatically lowered the cost and time of ocean travel, enabling mass voluntary migration.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(C) Eliminated all migration.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(D) Was relevant only to the Pacific.</div>
+</div>
+<div class="explanation" id="exp-18"><strong>Answer: B.</strong> Steamships transformed migration from a weeks-long ordeal into a ~10-day crossing by 1900.</div>
+</div>
+<!-- 6.7 -->
+<h3 class="quiz-subheading">Topic 6.7 — Effects of Migration</h3>
+<div class="quiz-question">
+<p><strong>19. The 1882 Chinese Exclusion Act is significant because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(A) Welcomed Chinese immigrants.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 19)">(B) Was the first U.S. federal law to ban immigration based on nationality and reflected rising nativist backlash.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(C) Admitted only Chinese immigrants.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(D) Was passed by the Qing government.</div>
+</div>
+<div class="explanation" id="exp-19"><strong>Answer: B.</strong> The law marked a sharp turn toward racialized immigration restriction in the U.S.</div>
+</div>
+<div class="quiz-question">
+<p><strong>20. Ethnic enclaves like New York's Chinatown and Little Italy functioned as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(A) Isolated regions with no contact with host societies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 20)">(B) Networks of mutual aid, cultural continuity, and economic niche-making within larger host societies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(C) Military bases.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(D) Government-run relocation camps.</div>
+</div>
+<div class="explanation" id="exp-20"><strong>Answer: B.</strong> Ethnic enclaves preserved language and culture while integrating migrants into broader urban economies.</div>
+</div>
+<div class="quiz-question">
+<p><strong>21. Remittances sent by 19th-century migrants to their home countries BEST illustrate which effect of global migration?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(A) Complete severance from homelands.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 21)">(B) Transnational economic ties linking sending and receiving societies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(C) Imperial conquest.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(D) Environmental destruction.</div>
+</div>
+<div class="explanation" id="exp-21"><strong>Answer: B.</strong> Migrants sent money, letters, and sometimes returned — integrating economies across oceans.</div>
+</div>
+<!-- 6.8 -->
+<h3 class="quiz-subheading">Topic 6.8 — Causation in the Imperial Age</h3>
+<div class="quiz-question">
+<p><strong>22. Which of the following is the BEST example of continuity between the earlier (c. 1450–1750) and later (c. 1750–1900) periods of European expansion?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(A) The rise of steam-powered gunboats.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 22)">(B) Continued European extraction of wealth from non-European societies, including coerced labor systems.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(C) The partition of Africa by European powers.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(D) The Berlin Conference.</div>
+</div>
+<div class="explanation" id="exp-22"><strong>Answer: B.</strong> Coerced labor and resource extraction were pre-existing patterns intensified by industrialization. B, C, D are distinctive changes of the later period.</div>
+</div>
+<div class="quiz-question">
+<p><strong>23. Which of the following is the MOST distinctive CHANGE about imperialism in the period 1750–1900, compared to earlier European empires?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(A) The use of ships for transportation.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 23)">(B) The unprecedented scale and speed of conquest enabled by industrial technology, and the participation of non-European industrial powers (Japan, U.S.).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(C) The existence of overseas empires.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(D) The use of written treaties.</div>
+</div>
+<div class="explanation" id="exp-23"><strong>Answer: B.</strong> Industrial technology made the speed and scale of imperial conquest (and the entry of Japan and the U.S.) qualitatively new.</div>
+</div>
+<div class="quiz-question">
+<p><strong>24. Which of the following BEST describes a long-term consequence of 19th-century imperialism that shaped the 20th century?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(A) Universal adoption of the gold standard.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 24)">(B) Nationalist movements in colonized societies that later drove decolonization after 1914.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(C) End of industrial capitalism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(D) Conquest of Europe by Africa.</div>
+</div>
+<div class="explanation" id="exp-24"><strong>Answer: B.</strong> Organizations like the Indian National Congress and emerging Vietnamese, Egyptian, and Pan-African movements evolved into anti-colonial independence movements.</div>
+</div>
+</div>
+<!-- SAQs -->
+<h2>✍️ Short-Answer Practice (SAQ)</h2>
+<div class="saq-box">
+<h3>SAQ 1 — Industrialization &amp; Imperialism (No Stimulus)</h3>
+<ol type="a">
+<li>Identify ONE way industrialization contributed to European imperial expansion in the period c. 1750–1900.</li>
+<li>Identify ONE specific indigenous response to European imperialism in this period.</li>
+<li>Explain ONE long-term consequence of 19th-century imperialism for the 20th century.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> Industrialization created an unprecedented demand for raw materials (especially rubber, cotton, and oil) and for markets for manufactured goods, motivating European states to acquire colonies in Africa and Asia where those materials could be extracted and manufactures could be sold.</p>
+<p><strong>(b)</strong> In 1896, the Ethiopian army under Emperor Menelik II defeated Italy at the Battle of Adwa, preserving Ethiopian independence and standing out as one of the few major African military victories over a European colonial army.</p>
+<p><strong>(c)</strong> Nationalist organizations created in the colonial period — such as the Indian National Congress (1885) — matured in the 20th century into mass movements that eventually led to independence after World War II, fundamentally transforming the global political map.</p>
+</details>
+</div>
+<div class="saq-box">
+<h3>SAQ 2 — Stimulus (Colonial Africa Map)</h3>
+<p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+"By 1914, after about three decades of rapid European expansion, the colonial map of Africa showed
+only two independent states — Ethiopia and Liberia. France controlled most of West and Central
+Africa; Britain ran a line of colonies 'from the Cape to Cairo'; Belgium held the vast Congo;
+Germany, Portugal, and Italy held smaller possessions."
+<br><em>— summary of a 1913 colonial map</em>
+</p>
+<ol type="a">
+<li>Identify ONE factor that explains why the partition of Africa happened so rapidly between c. 1880 and 1914.</li>
+<li>Explain ONE specific African response to European colonization between 1880 and 1914.</li>
+<li>Explain ONE way that the partition of Africa had long-term consequences after 1914.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The Berlin Conference (1884–1885) established the rule of "effective occupation," turning imperial claims into a race for inland conquest; combined with steamships, Maxim guns, and quinine, this made fast large-scale conquest practical.</p>
+<p><strong>(b)</strong> Ethiopia's army under Menelik II defeated Italy at Adwa in 1896, demonstrating that African states could win against European armies when they modernized their forces and used strategic terrain — one of the few successful military resistances of the Scramble.</p>
+<p><strong>(c)</strong> The borders drawn at and after the Berlin Conference cut across ethnic and linguistic groups; those borders were largely inherited by African states at independence after 1960 and contributed to post-colonial conflicts (e.g., in Nigeria, Rwanda, Sudan).</p>
+</details>
+</div>
+<!-- KEY TAKEAWAYS -->
+<h2>⭐ Key Takeaways</h2>
+<div class="key-takeaways">
+<ul>
+<li><strong>Industrialization produced imperialism.</strong> Demand for raw materials, markets, and strategic control — enabled by steamships, rifles, and quinine — drove the New Imperialism.</li>
+<li><strong>Africa was carved up fast.</strong> Between 1880 and 1914 virtually the entire continent fell to European powers, with the partition formalized at the Berlin Conference.</li>
+<li><strong>Asia experienced multiple imperial forms.</strong> Formal colonies (India, Indochina, Indonesia, Philippines) coexisted with "informal empire" over China.</li>
+<li><strong>Non-European powers joined in.</strong> Meiji Japan and the U.S. became imperial powers in their own right.</li>
+<li><strong>Non-Western responses varied.</strong> Armed resistance (Ethiopia, Zulu, Boxers), reform (Tanzimat, Meiji, Self-Strengthening), and early nationalist organizing (Indian National Congress) all appeared.</li>
+<li><strong>A single global economy emerged.</strong> Industrial cores exchanged manufactures for raw materials and agricultural products from the periphery under a gold standard backed by London finance.</li>
+<li><strong>Mass migration reshaped the world.</strong> About 55 million Europeans crossed oceans; millions of Chinese and Indians crossed as indentured laborers. Host societies responded with both opportunity and exclusion.</li>
+<li><strong>Setup for Unit 7.</strong> Imperial rivalries, nationalist backlash, and unequal economic structures laid the groundwork for World War I and anticolonial movements.</li>
+</ul>
+</div>
+<p style="text-align:center; margin-top:2rem;">
+<a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+</p>
+</div>
+<script>
+function checkAnswer(element, isCorrect, qNum) {
+const options = element.parentElement.querySelectorAll('.quiz-option');
+options.forEach(o => o.classList.remove('correct', 'incorrect'));
+element.classList.add(isCorrect ? 'correct' : 'incorrect');
+const exp = document.getElementById('exp-' + qNum);
+if (exp) exp.classList.add('show');
+}
+</script>
+</body>
+</html>
