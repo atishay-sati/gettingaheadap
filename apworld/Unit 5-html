@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   gtag('config', 'G-6TMSR9LD4H');
+ </script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="description" content="AP World History: Modern Unit 5 — Revolutions (c. 1750–1900). In-depth notes on the Enlightenment, Atlantic revolutions, nationalism, the Industrial Revolution, economic transformations, and social change, with photos, MCQs, and SAQs." />
+ <title>Unit 5: Revolutions (c. 1750–1900)</title>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+ <style>
+   * { box-sizing: border-box; }
+   body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf6f1; color: #333; line-height: 1.6; }
+   .container { max-width: 980px; margin: 2rem auto; padding: 2rem 1.5rem; background: white; border-radius: 10px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }
+   h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: #8b4513; }
+   h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+   .subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+   h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+   h3 { color: #a0522d; margin-top: 1.5rem; }
+   h4 { color: #8b4513; margin-top: 1rem; }
+   p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+   ul, ol { padding-left: 1.3rem; }
+   li { margin-bottom: 0.5rem; }
+   .back-link { display: inline-block; margin-bottom: 1rem; color: #8b4513; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+   .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+   .overview-box { background: linear-gradient(135deg, #fde7c9, #fff3e0); border-left: 6px solid #d2691e; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+   .weighting-badge { display: inline-block; background: #8b4513; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+   figure.photo { margin: 1.2rem 0; text-align: center; }
+   figure.photo img { width: 100%; max-width: 640px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+   figure.photo figcaption { font-size: 0.92rem; color: #666; margin-top: 0.4rem; font-style: italic; }
+   .timeline { position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 4px solid #d2691e; }
+   .timeline-event { position: relative; margin-bottom: 1.4rem; padding: 0.8rem 1rem; background: #fff8ef; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+   .timeline-event::before { content: ""; position: absolute; left: -2.55rem; top: 1.1rem; width: 14px; height: 14px; background: #8b4513; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #d2691e; }
+   .timeline-date { display: inline-block; font-weight: 700; color: #8b4513; margin-right: 0.5rem; }
+   .region-card { border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-left: 6px solid; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+   .region-enlight   { border-color: #5e35b1; background: #ede7f6; }
+   .region-revolt    { border-color: #c62828; background: #ffebee; }
+   .region-industry  { border-color: #37474f; background: #eceff1; }
+   .region-spread    { border-color: #ef6c00; background: #fff3e0; }
+   .region-tech      { border-color: #0277bd; background: #e1f5fe; }
+   .region-gov       { border-color: #2e7d32; background: #e8f5e9; }
+   .region-economy   { border-color: #00695c; background: #e0f2f1; }
+   .region-react     { border-color: #ad1457; background: #fce4ec; }
+   .region-society   { border-color: #4e342e; background: #efebe9; }
+   .region-compare   { border-color: #455a64; background: #eceff1; }
+   .region-card h3 { margin-top: 0; }
+   .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+   .vocab-item { background: #fff8ef; border: 1px solid #e0c9a6; border-radius: 8px; padding: 0.8rem 1rem; }
+   .vocab-term { font-weight: 700; color: #8b4513; display: block; margin-bottom: 0.2rem; }
+   .compare-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+   .compare-table th, .compare-table td { border: 1px solid #e0c9a6; padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+   .compare-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: white; }
+   .compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+   .quiz-container { background: linear-gradient(135deg, #fde7c9, #fff8ef); border: 2px solid #8b4513; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+   .quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+   .quiz-subheading { font-family: 'Montserrat', sans-serif; color: #a0522d; font-weight: 700; margin-top: 1.5rem; border-bottom: 1px dashed #a0522d; padding-bottom: 0.2rem; }
+   .quiz-question { margin-bottom: 1.5rem; }
+   .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+   .quiz-option { padding: 0.6rem 0.8rem; border: 1px solid #8b4513; border-radius: 6px; cursor: pointer; background: white; transition: background-color 0.2s; }
+   .quiz-option:hover { background-color: #fff3e0; }
+   .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+   .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+   .explanation { display: none; margin-top: 0.6rem; padding: 0.8rem; background: #fff; border-left: 4px solid #8b4513; border-radius: 6px; font-size: 0.95rem; }
+   .explanation.show { display: block; }
+   .saq-box { background: #fff; border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; }
+   .saq-box h3 { margin-top: 0; }
+   details.saq-sample { margin-top: 0.8rem; background: #fff8ef; border: 1px dashed #8b4513; border-radius: 6px; padding: 0.6rem 0.9rem; }
+   details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+   .key-takeaways { background: linear-gradient(135deg, #fff3e0, #fde7c9); border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+ </style>
+</head>
+<body>
+ <div class="container">
+   <a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+   <h1>Unit 5: Revolutions</h1>
+   <p class="subtitle">c. 1750 – c. 1900 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–15%</span></p>
+   <!-- OVERVIEW -->
+   <div class="overview-box">
+     <h3 style="margin-top:0;">⚡ Unit Overview</h3>
+     <p>
+       Between 1750 and 1900 the world was remade by two overlapping revolutions: <strong>political</strong>
+       and <strong>industrial</strong>. Enlightenment ideas about natural rights and popular sovereignty sparked
+       revolts in North America, France, Haiti, and across Latin America. At the same time, new machines,
+       factories, and energy sources turned Britain — and then much of the rest of the world — into
+       industrial societies. Nationalism, capitalism, socialism, and imperialism were all born or
+       transformed in this period.
+     </p>
+     <p style="margin-bottom:0;">
+       <strong>Big question:</strong> How did political revolutions and industrial revolutions between 1750
+       and 1900 transform the political, economic, and social order of the world?
+     </p>
+   </div>
+   <!-- TIMELINE -->
+   <h2>🗓️ Unit 5 Timeline</h2>
+   <div class="timeline">
+     <div class="timeline-event"><span class="timeline-date">c. 1687–1789:</span> Enlightenment: Locke, Montesquieu, Rousseau, Voltaire, Wollstonecraft publish foundational works.</div>
+     <div class="timeline-event"><span class="timeline-date">1769:</span> James Watt patents an improved <strong>steam engine</strong>.</div>
+     <div class="timeline-event"><span class="timeline-date">1776:</span> American <strong>Declaration of Independence</strong>; Adam Smith publishes <em>Wealth of Nations</em>.</div>
+     <div class="timeline-event"><span class="timeline-date">1789:</span> <strong>French Revolution</strong> begins; Declaration of the Rights of Man.</div>
+     <div class="timeline-event"><span class="timeline-date">1791–1804:</span> <strong>Haitian Revolution</strong>; first successful slave revolt creates the first Black-led republic.</div>
+     <div class="timeline-event"><span class="timeline-date">1804–1815:</span> <strong>Napoleonic Era</strong>; Napoleonic Code spreads Enlightenment legal ideas.</div>
+     <div class="timeline-event"><span class="timeline-date">1810–1825:</span> <strong>Latin American wars of independence</strong> led by Bolívar, San Martín, Hidalgo.</div>
+     <div class="timeline-event"><span class="timeline-date">1814–1815:</span> <strong>Congress of Vienna</strong> restores conservative order in Europe.</div>
+     <div class="timeline-event"><span class="timeline-date">1830 / 1848:</span> Revolutionary waves across Europe ("Springtime of Nations").</div>
+     <div class="timeline-event"><span class="timeline-date">1833 / 1865:</span> Britain abolishes slavery in its empire (1833); U.S. 13th Amendment (1865).</div>
+     <div class="timeline-event"><span class="timeline-date">1839–1876:</span> Ottoman <strong>Tanzimat reforms</strong>.</div>
+     <div class="timeline-event"><span class="timeline-date">1848:</span> Marx &amp; Engels publish <strong><em>Communist Manifesto</em></strong>.</div>
+     <div class="timeline-event"><span class="timeline-date">1850–1864:</span> <strong>Taiping Rebellion</strong> in Qing China.</div>
+     <div class="timeline-event"><span class="timeline-date">1851:</span> <strong>Great Exhibition</strong> at the Crystal Palace, London.</div>
+     <div class="timeline-event"><span class="timeline-date">1861:</span> Russia emancipates the serfs.</div>
+     <div class="timeline-event"><span class="timeline-date">1868:</span> <strong>Meiji Restoration</strong> in Japan.</div>
+     <div class="timeline-event"><span class="timeline-date">1869:</span> <strong>Suez Canal</strong> opens.</div>
+     <div class="timeline-event"><span class="timeline-date">1871:</span> <strong>Unification of Germany</strong> and Italy complete; rise of nationalism.</div>
+     <div class="timeline-event"><span class="timeline-date">1876–1914:</span> Second Industrial Revolution: electricity, steel, chemicals, internal combustion.</div>
+     <div class="timeline-event"><span class="timeline-date">1886 / 1900:</span> Gompers founds AFL (1886); Progressive reforms accelerate worldwide.</div>
+   </div>
+   <!-- TOPIC 5.1 -->
+   <h2>Topic 5.1 — The Enlightenment</h2>
+   <div class="region-card region-enlight">
+     <h3>💡 Ideas That Lit the Fuse</h3>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Voltaire.jpg?width=500" alt="Portrait of Voltaire" />
+       <figcaption>Voltaire (1694–1778), champion of free speech, religious tolerance, and reason. A leading figure of the Enlightenment.</figcaption>
+     </figure>
+     <p>
+       The <strong>Enlightenment</strong> was an 18th-century intellectual movement that applied reason and
+       empirical observation — the tools of the Scientific Revolution — to human society, government, and
+       religion. Enlightenment ideas directly fueled the Atlantic revolutions and later reform movements.
+     </p>
+     <h4>Core Ideas</h4>
+     <ul>
+       <li><strong>Natural rights:</strong> Humans possess inherent rights to life, liberty, and property (<strong>Locke</strong>).</li>
+       <li><strong>Social contract:</strong> Governments derive legitimacy from the consent of the governed; tyrants may be overthrown (<strong>Locke, Rousseau</strong>).</li>
+       <li><strong>Separation of powers:</strong> Governmental power should be divided to prevent tyranny (<strong>Montesquieu</strong>).</li>
+       <li><strong>Popular sovereignty &amp; general will:</strong> Legitimate authority comes from the people (<strong>Rousseau</strong>).</li>
+       <li><strong>Religious tolerance &amp; free speech:</strong> (<strong>Voltaire</strong>).</li>
+       <li><strong>Deism:</strong> Belief in a God who created the universe but does not intervene — nature revealed through reason.</li>
+       <li><strong>Utilitarianism:</strong> Greatest good for the greatest number (<strong>Bentham, Mill</strong>, later).</li>
+       <li><strong>Feminism:</strong> <strong>Mary Wollstonecraft</strong>'s <em>A Vindication of the Rights of Woman</em> (1792) demanded equal education.</li>
+       <li><strong>Abolitionism:</strong> Enlightenment-influenced critiques of slavery (Wilberforce, Olaudah Equiano).</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Jacques_Rousseau_%28painted_portrait%29.jpg?width=500" alt="Portrait of Jean-Jacques Rousseau" />
+       <figcaption>Jean-Jacques Rousseau (1712–1778), whose <em>Social Contract</em> (1762) argued that political authority must rest on the "general will" of the people.</figcaption>
+     </figure>
+     <h4>Ripple Effects</h4>
+     <ul>
+       <li>Challenged <strong>absolute monarchy</strong> and divine-right theory.</li>
+       <li>Inspired <strong>republican</strong> government and written constitutions with bills of rights.</li>
+       <li>Fueled anti-slavery, women's rights, prison reform, religious toleration movements.</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.2 -->
+   <h2>Topic 5.2 — Nationalism and Revolutions</h2>
+   <div class="region-card region-revolt">
+     <h3>🚩 The Age of Atlantic Revolutions (and More)</h3>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Prise_de_la_Bastille.jpg?width=800" alt="Storming of the Bastille" />
+       <figcaption>The <strong>Storming of the Bastille</strong>, 14 July 1789 — the symbolic start of the French Revolution.</figcaption>
+     </figure>
+     <h4>American Revolution (1776–1783)</h4>
+     <ul>
+       <li>Causes: British post-1763 taxes (Stamp Act, Townshend, Tea Act); Enlightenment ideas; mercantilist restrictions.</li>
+       <li>Declaration of Independence (1776) invoked natural rights and consent of the governed.</li>
+       <li>Constitution (1787) created a federal republic with separation of powers.</li>
+       <li>Served as a model and test case for later revolutions.</li>
+     </ul>
+     <h4>French Revolution (1789–1799)</h4>
+     <ul>
+       <li>Causes: fiscal crisis after funding American Revolution; bread shortages; Enlightenment; resentment of the <strong>Three Estates</strong> system.</li>
+       <li>Phases: moderate (1789–1792) → radical <strong>Jacobin</strong>/<strong>Reign of Terror</strong> under Robespierre (1793–1794) → <strong>Directory</strong> → Napoleon.</li>
+       <li>Abolished feudalism; <strong>Declaration of the Rights of Man and Citizen</strong> (1789); revolutionary calendar; women (Olympe de Gouges) demanded rights but were largely excluded.</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Kunsthistorisches_Museum.jpg?width=500" alt="Napoleon Crossing the Alps by Jacques-Louis David" />
+       <figcaption>Jacques-Louis David, <em>Napoleon Crossing the Alps</em> (1801). Napoleon spread French revolutionary principles — and French armies — across Europe.</figcaption>
+     </figure>
+     <h4>Haitian Revolution (1791–1804)</h4>
+     <ul>
+       <li>Only successful slave revolt in modern history. Led by <strong>Toussaint Louverture</strong>, then Jean-Jacques Dessalines.</li>
+       <li>Independence declared in 1804, making Haiti the first independent Black-led republic and the second independent nation in the Americas.</li>
+       <li>Caused fear across slaveholding societies and strengthened U.S./European resistance to abolition.</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toussaint_Louverture.jpg?width=500" alt="Portrait of Toussaint Louverture" />
+       <figcaption>Toussaint Louverture, military and political leader of the Haitian Revolution, captured by the French in 1802 and died in prison in 1803.</figcaption>
+     </figure>
+     <h4>Latin American Wars of Independence (c. 1810–1825)</h4>
+     <ul>
+       <li><strong>Creole elites</strong>, resentful of peninsular Spanish privileges, led most movements.</li>
+       <li><strong>Simón Bolívar</strong> ("The Liberator") freed Venezuela, Colombia, Ecuador, Peru, and Bolivia.</li>
+       <li><strong>José de San Martín</strong> liberated Argentina, Chile, and Peru.</li>
+       <li><strong>Miguel Hidalgo</strong> &amp; <strong>José María Morelos</strong> led popular uprisings in Mexico; independence achieved 1821.</li>
+       <li><strong>Brazil</strong>: Pedro I declared independence from Portugal in 1822 — a rare monarchy-based independence.</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Simon_Bolivar.jpg?width=400" alt="Simón Bolívar portrait" />
+       <figcaption>Simón Bolívar, "The Liberator" of northern South America, dreamed of a unified Gran Colombia.</figcaption>
+     </figure>
+     <h4>Nationalism and European Revolutions</h4>
+     <ul>
+       <li><strong>Nationalism</strong>: shared language, culture, history, and loyalty to a nation-state as the basis of legitimacy.</li>
+       <li><strong>1830 and 1848 revolutions</strong> across Europe demanded constitutions, liberal rights, and national unification; most failed in the short run but spread ideas.</li>
+       <li><strong>Italian unification</strong> (Mazzini, Garibaldi, Cavour) completed 1870.</li>
+       <li><strong>German unification</strong> under <strong>Otto von Bismarck</strong>'s "blood and iron" Realpolitik completed 1871.</li>
+       <li><strong>Greek independence</strong> (1821–1832), <strong>Balkan nationalism</strong> against the Ottomans.</li>
+     </ul>
+     <h4>Other Major Rebellions</h4>
+     <ul>
+       <li><strong>Taiping Rebellion</strong> (1850–1864): Hong Xiuquan's millennial Christian movement nearly toppled the Qing; ~20 million dead.</li>
+       <li><strong>Indian Rebellion of 1857</strong> ("Sepoy Mutiny"): Indian soldiers and princes revolted against the British East India Company; led to the British Raj.</li>
+       <li><strong>Decembrist Revolt</strong> (1825, Russia): Liberal officers failed to block Nicholas I but inspired later Russian radicals.</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.3 -->
+   <h2>Topic 5.3 — The Industrial Revolution Begins</h2>
+   <div class="region-card region-industry">
+     <h3>🏭 Britain Leads the Industrial Revolution</h3>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Philipp_Jakob_Loutherbourg_d._J._002.jpg?width=800" alt="Coalbrookdale by Night" />
+       <figcaption>Philip James de Loutherbourg, <em>Coalbrookdale by Night</em> (1801). Coalbrookdale, in Shropshire, is often called the birthplace of the Industrial Revolution.</figcaption>
+     </figure>
+     <h4>Why Britain First?</h4>
+     <ul>
+       <li><strong>Coal and iron</strong> in abundance — cheap energy and materials.</li>
+       <li><strong>Navigable rivers and coasts</strong>: cheap internal transport.</li>
+       <li><strong>Agricultural revolution</strong>: enclosure movement, selective breeding, crop rotation → higher yields and surplus labor.</li>
+       <li><strong>Population growth</strong> provided workers and consumers.</li>
+       <li><strong>Stable government</strong>, strong property rights, relatively free markets.</li>
+       <li><strong>Colonies</strong> supplied raw materials (cotton) and demanded finished goods.</li>
+       <li><strong>Capital</strong> from Atlantic trade (including the slave trade) available for investment.</li>
+       <li><strong>Scientific Revolution and Enlightenment</strong> culture that valued practical invention.</li>
+     </ul>
+     <h4>Early Industries</h4>
+     <ul>
+       <li><strong>Textiles</strong>: cotton transformed from a cottage craft to factory production.</li>
+       <li><strong>Iron &amp; coal</strong>: new smelting techniques (Darby's coke-fueled blast furnace).</li>
+       <li><strong>Steam power</strong>: Newcomen's atmospheric engine (1712), <strong>James Watt</strong>'s separate condenser (1769) made steam efficient enough to drive factories.</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spinning_jenny.jpg?width=500" alt="Spinning jenny" />
+       <figcaption>A spinning jenny. James Hargreaves's 1764 invention allowed a single worker to spin multiple threads simultaneously — one of the key machines of the early textile revolution.</figcaption>
+     </figure>
+     <h4>Key Innovations in Textiles</h4>
+     <ul>
+       <li><strong>Flying shuttle</strong> (Kay, 1733)</li>
+       <li><strong>Spinning jenny</strong> (Hargreaves, 1764)</li>
+       <li><strong>Water frame</strong> (Arkwright, 1769) — required water-powered factories.</li>
+       <li><strong>Spinning mule</strong> (Crompton, 1779)</li>
+       <li><strong>Power loom</strong> (Cartwright, 1785)</li>
+       <li><strong>Cotton gin</strong> (Whitney, 1793) — in the U.S., dramatically increased cotton output and tied slavery to industrial supply chains.</li>
+     </ul>
+     <h4>The Factory System</h4>
+     <ul>
+       <li>Centralized production in one building near power sources (river, later steam).</li>
+       <li>Time discipline replaced seasonal/agricultural rhythms.</li>
+       <li>Deskilling — workers performed repetitive tasks rather than making whole goods.</li>
+       <li>Cities like Manchester ("Cottonopolis") grew explosively.</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.4 -->
+   <h2>Topic 5.4 — Industrialization Spreads</h2>
+   <div class="region-card region-spread">
+     <h3>🌍 From Britain to the World</h3>
+     <p>Britain tried to keep its industrial "secrets" — but industrialization spread rapidly through migration, espionage, and strategic state policy.</p>
+     <h4>Belgium, France, Germany</h4>
+     <ul>
+       <li><strong>Belgium</strong>: First continental country to industrialize, especially coal and textiles.</li>
+       <li><strong>France</strong>: Slower, more artisanal; state-driven in some sectors.</li>
+       <li><strong>Germany</strong>: After 1850 rapid growth, especially in heavy industry and chemicals. Used <strong>Zollverein</strong> customs union (1834), state-sponsored universities, and cartels.</li>
+     </ul>
+     <h4>United States</h4>
+     <ul>
+       <li>Samuel Slater brought British textile designs from memory in the 1790s.</li>
+       <li>Lowell system: young women working in textile mills in Massachusetts.</li>
+       <li>Railroads (transcontinental completed 1869), steel (Carnegie), oil (Rockefeller) made the U.S. the world's largest industrial economy by ~1900.</li>
+     </ul>
+     <h4>Russia</h4>
+     <ul>
+       <li>Late industrializer; <strong>Sergei Witte</strong>'s program built railroads (including the Trans-Siberian) and heavy industry.</li>
+       <li>Still primarily agrarian; rising industrial working class produced revolutionary potential (Unit 7).</li>
+     </ul>
+     <h4>Meiji Japan</h4>
+     <ul>
+       <li>The <strong>Meiji Restoration</strong> (1868) ended the Tokugawa shogunate.</li>
+       <li>State-directed industrialization: imported experts, built railroads, shipyards, modern army and navy, universal education, and a constitution (1889).</li>
+       <li>Japan became the first non-Western industrial power.</li>
+     </ul>
+     <h4>Egypt Under Muhammad Ali</h4>
+     <ul>
+       <li>Tried to industrialize cotton textiles and build a modern army in the early 1800s.</li>
+       <li>European pressure (1838 treaty forcing free trade on the Ottoman Empire) dismantled Egyptian protections; industrialization stalled.</li>
+     </ul>
+     <h4>Ottomans, Qing China, India</h4>
+     <ul>
+       <li><strong>Ottoman Tanzimat</strong> (1839–1876): legal, military, and administrative reform — but limited industrial transformation.</li>
+       <li><strong>Qing</strong>: "Self-Strengthening Movement" (1860s–1890s) — attempted modernization failed partly due to Taiping trauma and foreign pressures.</li>
+       <li><strong>India</strong>: Deindustrialization under British rule as Indian textiles were undercut by British imports; shift to raw-cotton exports.</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.5 -->
+   <h2>Topic 5.5 — Technology in the Industrial Age</h2>
+   <div class="region-card region-tech">
+     <h3>🚂 Steam, Steel, Electricity, and Information</h3>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stephenson%27s_Rocket_drawing.jpg?width=600" alt="Stephenson's Rocket" />
+       <figcaption>Stephenson's <em>Rocket</em> (1829). The locomotive's victory in the Rainhill Trials launched the age of mass passenger and freight rail.</figcaption>
+     </figure>
+     <h4>First Industrial Revolution (c. 1780–1850)</h4>
+     <ul>
+       <li><strong>Steam engines</strong> in factories and mines.</li>
+       <li><strong>Locomotives</strong> and rail networks (<strong>Stephenson</strong>'s <em>Rocket</em>, 1829); first passenger railway, Liverpool–Manchester, 1830.</li>
+       <li><strong>Steamships</strong> crossed the Atlantic by the 1830s; iron-hulled steamers dominated by mid-century.</li>
+       <li><strong>Macadamized roads</strong> and canals (Erie Canal 1825).</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maquina_vapor_Watt_ETSIIM.jpg?width=500" alt="Watt steam engine" />
+       <figcaption>A James Watt steam engine (1788). Watt's separate condenser, governor, and rotary motion made steam efficient enough to power factories.</figcaption>
+     </figure>
+     <h4>Second Industrial Revolution (c. 1870–1914)</h4>
+     <ul>
+       <li><strong>Steel</strong>: <strong>Bessemer</strong> process (1856) made cheap, strong steel for rails, ships, and skyscrapers.</li>
+       <li><strong>Electricity</strong>: Edison's light bulb (1879), power grids, electric motors.</li>
+       <li><strong>Internal combustion engine</strong> (Otto 1876, Daimler &amp; Benz 1880s) → automobiles.</li>
+       <li><strong>Chemicals</strong>: German dominance (dyes, fertilizers, explosives).</li>
+       <li><strong>Communications</strong>: telegraph (1840s), transatlantic cable (1866), telephone (1876), radio (1890s).</li>
+     </ul>
+     <h4>Shrinking the World</h4>
+     <ul>
+       <li><strong>Suez Canal</strong> (1869) shortened Europe-Asia sea travel dramatically.</li>
+       <li><strong>Panama Canal</strong> (completed 1914) linked Atlantic and Pacific.</li>
+       <li>Railroads across continents (Trans-Siberian finished 1916).</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Crystal_Palace.jpg?width=700" alt="Crystal Palace" />
+       <figcaption>The <strong>Crystal Palace</strong>, site of the 1851 Great Exhibition in London — a celebration of British industrial supremacy and the first "world's fair."</figcaption>
+     </figure>
+   </div>
+   <!-- TOPIC 5.6 -->
+   <h2>Topic 5.6 — Government's Role in Industrialization</h2>
+   <div class="region-card region-gov">
+     <h3>🏛️ States That Led vs. States That Followed</h3>
+     <h4>State-Led Industrialization</h4>
+     <ul>
+       <li><strong>Meiji Japan</strong>: Government built railroads, shipyards, and model factories, then sold them to private zaibatsu conglomerates (Mitsui, Mitsubishi).</li>
+       <li><strong>Germany</strong>: State supported railroads, universities, and cartels. Protective tariffs under Bismarck.</li>
+       <li><strong>Russia</strong>: Under Witte, state financed the Trans-Siberian Railway and heavy industry.</li>
+       <li><strong>Egypt</strong>: Muhammad Ali tried state-led industrialization — ultimately blocked by European pressure.</li>
+     </ul>
+     <h4>Market-Led Industrialization</h4>
+     <ul>
+       <li><strong>Britain</strong>: Largely private enterprise; state provided legal framework, property rights, navy.</li>
+       <li><strong>United States</strong>: Private industry dominated, but government provided land grants (especially for railroads), tariffs, and, later, antitrust oversight.</li>
+     </ul>
+     <h4>Tools States Used</h4>
+     <ul>
+       <li><strong>Tariffs</strong> (to protect domestic industry).</li>
+       <li><strong>Infrastructure</strong> (railroads, canals, telegraph lines).</li>
+       <li><strong>Education</strong> (technical schools, universal schooling).</li>
+       <li><strong>Central banks</strong> and standardized currencies.</li>
+       <li><strong>Legal reforms</strong> (corporate law, limited liability).</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.7 -->
+   <h2>Topic 5.7 — Economic Developments and Innovations</h2>
+   <div class="region-card region-economy">
+     <h3>💼 Capitalism Goes Global</h3>
+     <h4>Finance and Business</h4>
+     <ul>
+       <li><strong>Corporations</strong> with limited liability allowed larger investment pools.</li>
+       <li><strong>Stock markets</strong> (London, New York, Frankfurt) funded industrial expansion.</li>
+       <li><strong>Banks</strong> (Rothschild, Deutsche Bank, Morgan) financed infrastructure and states.</li>
+       <li><strong>Insurance</strong> (Lloyd's of London), actuarial science, futures markets.</li>
+     </ul>
+     <h4>New Business Structures</h4>
+     <ul>
+       <li><strong>Monopolies and trusts</strong>: Standard Oil (Rockefeller), U.S. Steel (Carnegie/Morgan), HSBC.</li>
+       <li><strong>Cartels</strong>: German industries coordinated prices and output.</li>
+       <li><strong>Multinational corporations</strong>: Unilever, United Fruit, Siemens — produced and sold globally.</li>
+       <li><strong>Vertical and horizontal integration</strong>: Controlling supply chains and competitors.</li>
+     </ul>
+     <h4>Global Economic Integration</h4>
+     <ul>
+       <li><strong>Free trade</strong> era: Britain repealed Corn Laws (1846); Cobden-Chevalier Treaty (1860) reduced European tariffs.</li>
+       <li><strong>Gold standard</strong> by the 1870s created stable international currency exchange.</li>
+       <li><strong>New raw-material demands</strong> — cotton from India/Egypt/U.S. South, rubber from Brazil/Congo, minerals from colonies — tied the industrial and non-industrial world into a single system.</li>
+       <li>Movement of labor (European migration to the Americas; Indian and Chinese indentured workers) and capital across oceans.</li>
+     </ul>
+     <h4>Classical Economic Theory</h4>
+     <ul>
+       <li><strong>Adam Smith</strong> (<em>Wealth of Nations</em>, 1776): "invisible hand," specialization, free trade.</li>
+       <li><strong>David Ricardo</strong>: comparative advantage.</li>
+       <li><strong>Thomas Malthus</strong>: warned about population outstripping food.</li>
+       <li><strong>Laissez-faire</strong> capitalism became the dominant ideology — government should not interfere in markets.</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.8 -->
+   <h2>Topic 5.8 — Reactions to the Industrial Economy</h2>
+   <div class="region-card region-react">
+     <h3>✊ Workers, Socialists, and Reformers Push Back</h3>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Karl_Marx_001.jpg?width=500" alt="Karl Marx" />
+       <figcaption>Karl Marx (1818–1883), whose <em>Communist Manifesto</em> (1848, with Engels) and <em>Das Kapital</em> (1867) offered the most influential critique of industrial capitalism.</figcaption>
+     </figure>
+     <h4>Socialism and Communism</h4>
+     <ul>
+       <li><strong>Utopian socialists</strong>: Robert Owen (New Lanark, New Harmony), Charles Fourier, Saint-Simon imagined planned communities.</li>
+       <li><strong>Marx &amp; Engels</strong> ("scientific socialism"): history is class struggle; capitalism will be overthrown by the <strong>proletariat</strong>; property will be collectively owned.</li>
+       <li><strong>Anarchism</strong>: Bakunin, Kropotkin rejected all state power.</li>
+       <li>Socialist parties formed across Europe (German SPD, British Labour).</li>
+     </ul>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Engels.jpg?width=400" alt="Friedrich Engels" />
+       <figcaption>Friedrich Engels (1820–1895), Marx's collaborator, author of <em>The Condition of the Working Class in England</em> (1845).</figcaption>
+     </figure>
+     <h4>Labor Movements</h4>
+     <ul>
+       <li><strong>Luddites</strong> (early 1800s, England): smashed machines they blamed for job loss.</li>
+       <li><strong>Trade unions</strong> grew despite legal bans (Combination Acts in Britain repealed 1824).</li>
+       <li><strong>Strikes</strong> and collective bargaining: Haymarket Affair (1886, U.S.), London Dock Strike (1889).</li>
+       <li><strong>Eight-hour day</strong>, child-labor laws, factory inspections passed gradually.</li>
+     </ul>
+     <h4>Reform Movements</h4>
+     <ul>
+       <li><strong>Abolition of slavery</strong>: Britain (1807 slave trade; 1833 slavery in colonies); U.S. 13th Amendment (1865); Brazil (1888).</li>
+       <li><strong>Women's suffrage</strong>: Seneca Falls (1848), suffragettes in Britain (Pankhursts), New Zealand became first country to grant women's vote (1893).</li>
+       <li><strong>Temperance, prison, education reform</strong>.</li>
+     </ul>
+     <h4>Cultural/Religious Reactions</h4>
+     <ul>
+       <li><strong>Romanticism</strong>: rejected industrial ugliness; celebrated nature, emotion, nationalism (Wordsworth, Beethoven, Delacroix).</li>
+       <li><strong>Pope Leo XIII</strong>'s <em>Rerum Novarum</em> (1891) — Catholic social teaching condemning both unregulated capitalism and socialism.</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.9 -->
+   <h2>Topic 5.9 — Society and the Industrial Age</h2>
+   <div class="region-card region-society">
+     <h3>🏙️ Cities, Families, and Class</h3>
+     <figure class="photo">
+       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lewis_Hine_Power_house_mechanic_working_on_steam_pump.jpg?width=600" alt="Power house mechanic by Lewis Hine" />
+       <figcaption>Lewis Hine, <em>Power House Mechanic Working on Steam Pump</em> (1920). Hine's photographs documented industrial labor and exposed child labor in the U.S.</figcaption>
+     </figure>
+     <h4>Urbanization</h4>
+     <ul>
+       <li>Manchester's population grew from ~75,000 (1801) to ~600,000 (1901).</li>
+       <li><strong>Overcrowded tenements</strong>, disease (cholera epidemics), coal pollution.</li>
+       <li>By 1900, most of Britain lived in urban areas; continental Europe followed.</li>
+     </ul>
+     <h4>Class Structure</h4>
+     <ul>
+       <li><strong>Industrial bourgeoisie</strong> (factory owners, bankers): rose in wealth and political power.</li>
+       <li><strong>Middle class</strong> (managers, professionals, clerks): grew with industry.</li>
+       <li><strong>Industrial working class (proletariat)</strong>: long hours, dangerous conditions, low wages — but real wages slowly rose, especially after 1850.</li>
+       <li><strong>Aristocracy</strong> lost economic dominance but retained political influence.</li>
+     </ul>
+     <h4>Gender and Family</h4>
+     <ul>
+       <li><strong>Separation of home and workplace</strong> reshaped middle-class gender roles — "cult of domesticity."</li>
+       <li>Working-class women and children labored in factories and mines; gradually restricted by factory acts.</li>
+       <li>Rise of public education and literacy, especially after compulsory schooling laws.</li>
+     </ul>
+     <h4>Science, Race, and Empire</h4>
+     <ul>
+       <li><strong>Social Darwinism</strong>: Herbert Spencer's misapplication of Darwin to justify inequality and imperialism.</li>
+       <li><strong>Scientific racism</strong>: justified hierarchies of race.</li>
+       <li><strong>Eugenics</strong> gained respectability in the late 19th century.</li>
+     </ul>
+     <h4>Migration</h4>
+     <ul>
+       <li><strong>European migration</strong>: ~55 million left Europe (1820–1914), mostly to the Americas, Australia, and South Africa.</li>
+       <li><strong>Asian labor migration</strong>: ~2.5 million Chinese and ~1.5 million Indian <strong>indentured</strong> workers went to plantations and mines in the Caribbean, Peru, South Africa, Southeast Asia, Fiji.</li>
+       <li><strong>Ethnic enclaves</strong> (Chinatowns, Little Italys) formed; host societies often reacted with restrictions (1882 U.S. Chinese Exclusion Act).</li>
+     </ul>
+   </div>
+   <!-- TOPIC 5.10 -->
+   <h2>Topic 5.10 — Continuity and Change in the Industrial Age</h2>
+   <div class="region-card region-compare">
+     <h3>🔄 Comparing Revolutions</h3>
+     <div style="overflow-x:auto;">
+       <table class="compare-table">
+         <thead>
+           <tr>
+             <th>Revolution</th>
+             <th>Key Leader(s)</th>
+             <th>Main Causes</th>
+             <th>Outcome</th>
+             <th>Distinctive Feature</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr><td><strong>American</strong> (1776–1783)</td><td>Washington, Jefferson</td><td>British taxes, Enlightenment ideas</td><td>Independent federal republic</td><td>First successful anti-colonial revolt</td></tr>
+           <tr><td><strong>French</strong> (1789–1799)</td><td>Lafayette → Robespierre → Napoleon</td><td>Fiscal crisis, inequality, Enlightenment</td><td>End of feudalism; Napoleonic reforms</td><td>Most radical in social transformation</td></tr>
+           <tr><td><strong>Haitian</strong> (1791–1804)</td><td>Toussaint Louverture, Dessalines</td><td>Slavery, French revolutionary ideals</td><td>First Black-led republic; abolition of slavery</td><td>Only successful slave revolt</td></tr>
+           <tr><td><strong>Latin American</strong> (c. 1810–1825)</td><td>Bolívar, San Martín, Hidalgo</td><td>Creole resentment, Napoleonic disruption</td><td>Independent states in Central/South America</td><td>Led by creoles, not lower classes</td></tr>
+           <tr><td><strong>Italian / German Unification</strong> (to 1871)</td><td>Garibaldi, Cavour / Bismarck</td><td>Nationalism, great-power rivalry</td><td>New unified nation-states</td><td>State-building more than regime change</td></tr>
+         </tbody>
+       </table>
+     </div>
+     <h4>Major Changes</h4>
+     <ul>
+       <li><strong>Rise of the nation-state</strong> as the dominant form of political organization.</li>
+       <li><strong>Industrial capitalism</strong> replaces agrarian economies in parts of Europe, the U.S., and Japan.</li>
+       <li><strong>New ideologies</strong>: liberalism, nationalism, socialism, conservatism, feminism.</li>
+       <li><strong>Urbanization</strong> and industrial class structure.</li>
+       <li><strong>Abolition</strong> of slavery and serfdom in most of the Atlantic world by 1890.</li>
+     </ul>
+     <h4>Continuities</h4>
+     <ul>
+       <li>Most people (globally) still farmed and lived rurally.</li>
+       <li>Gender and racial hierarchies persisted even where legal structures changed.</li>
+       <li>Empires remained — and in fact grew larger (Unit 6).</li>
+       <li>Religion remained culturally powerful despite secularizing trends.</li>
+     </ul>
+   </div>
+   <!-- VOCAB -->
+   <h2>📚 Key Vocabulary</h2>
+   <div class="vocab-grid">
+     <div class="vocab-item"><span class="vocab-term">Enlightenment</span>18th-c. movement applying reason to society and government.</div>
+     <div class="vocab-item"><span class="vocab-term">Natural rights</span>Inherent rights to life, liberty, and property (Locke).</div>
+     <div class="vocab-item"><span class="vocab-term">Social contract</span>Idea that governments derive authority from the consent of the governed.</div>
+     <div class="vocab-item"><span class="vocab-term">Popular sovereignty</span>Legitimate political power resides in the people.</div>
+     <div class="vocab-item"><span class="vocab-term">Deism</span>Belief in a non-interventionist creator, compatible with reason.</div>
+     <div class="vocab-item"><span class="vocab-term">Declaration of the Rights of Man</span>1789 French document proclaiming natural rights.</div>
+     <div class="vocab-item"><span class="vocab-term">Jacobins</span>Radical French revolutionaries who led the Reign of Terror.</div>
+     <div class="vocab-item"><span class="vocab-term">Napoleonic Code</span>1804 legal code spreading rationalized law across Europe.</div>
+     <div class="vocab-item"><span class="vocab-term">Creole</span>Person of European descent born in the Americas.</div>
+     <div class="vocab-item"><span class="vocab-term">Nationalism</span>Ideology tying political legitimacy to a shared nation.</div>
+     <div class="vocab-item"><span class="vocab-term">Realpolitik</span>Bismarck's pragmatic, power-focused politics.</div>
+     <div class="vocab-item"><span class="vocab-term">Zollverein</span>Early 19th-c. German customs union.</div>
+     <div class="vocab-item"><span class="vocab-term">Tanzimat</span>Ottoman reform era (1839–1876).</div>
+     <div class="vocab-item"><span class="vocab-term">Meiji Restoration</span>1868 Japanese overthrow of the shogunate and rapid modernization.</div>
+     <div class="vocab-item"><span class="vocab-term">Industrial Revolution</span>Transformation of production by machinery, factories, and fossil fuels.</div>
+     <div class="vocab-item"><span class="vocab-term">Enclosure</span>Conversion of English common land to private farms.</div>
+     <div class="vocab-item"><span class="vocab-term">Factory system</span>Centralized production in power-driven workplaces.</div>
+     <div class="vocab-item"><span class="vocab-term">Steam engine</span>Watt's machine that converted heat into mechanical work.</div>
+     <div class="vocab-item"><span class="vocab-term">Bessemer process</span>Method for cheap mass production of steel.</div>
+     <div class="vocab-item"><span class="vocab-term">Second Industrial Revolution</span>Late 19th-c. surge in steel, chemicals, electricity, and petroleum.</div>
+     <div class="vocab-item"><span class="vocab-term">Laissez-faire</span>Minimum-government economic doctrine.</div>
+     <div class="vocab-item"><span class="vocab-term">Free trade</span>Policy of low tariffs and open markets.</div>
+     <div class="vocab-item"><span class="vocab-term">Gold standard</span>International system pegging currencies to gold.</div>
+     <div class="vocab-item"><span class="vocab-term">Multinational corporation</span>Firm producing and selling across multiple countries.</div>
+     <div class="vocab-item"><span class="vocab-term">Monopoly / Trust</span>Concentrated control of a market (e.g., Standard Oil).</div>
+     <div class="vocab-item"><span class="vocab-term">Proletariat</span>Marx's term for the industrial working class.</div>
+     <div class="vocab-item"><span class="vocab-term">Bourgeoisie</span>Middle class; in Marxist use, owners of capital.</div>
+     <div class="vocab-item"><span class="vocab-term">Luddites</span>Early-19th-c. English workers who destroyed machinery.</div>
+     <div class="vocab-item"><span class="vocab-term">Utopian socialism</span>Early socialist visions (Owen, Fourier) of planned communities.</div>
+     <div class="vocab-item"><span class="vocab-term">Scientific socialism</span>Marx &amp; Engels's materialist theory of class struggle.</div>
+     <div class="vocab-item"><span class="vocab-term">Trade union</span>Worker organization for collective bargaining.</div>
+     <div class="vocab-item"><span class="vocab-term">Indentured labor</span>Contract labor (especially Chinese and Indian) in post-slavery plantations.</div>
+     <div class="vocab-item"><span class="vocab-term">Social Darwinism</span>Misapplication of evolutionary theory to justify inequality.</div>
+     <div class="vocab-item"><span class="vocab-term">Romanticism</span>Cultural reaction against industrial rationalism, emphasizing emotion and nature.</div>
+   </div>
+   <!-- MCQs -->
+   <div class="quiz-container">
+     <h2>📝 Multiple Choice Practice</h2>
+     <p>Three questions per sub-topic (30 total). Click an answer to check it.</p>
+     <!-- 5.1 -->
+     <h3 class="quiz-subheading">Topic 5.1 — The Enlightenment</h3>
+     <div class="quiz-question">
+       <p><strong>1. Which Enlightenment thinker argued that governments derive their legitimacy from the consent of the governed and that people have natural rights to life, liberty, and property?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Voltaire</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) John Locke</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Karl Marx</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Adam Smith</div>
+       </div>
+       <div class="explanation" id="exp-1"><strong>Answer: B.</strong> Locke's <em>Two Treatises of Government</em> (1689) directly shaped the U.S. Declaration of Independence.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>2. Mary Wollstonecraft's <em>A Vindication of the Rights of Woman</em> (1792) is best understood as</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) A defense of absolute monarchy.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) An extension of Enlightenment rights arguments to women and a call for equal education.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) A socialist critique of capitalism.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) A rejection of Enlightenment reason.</div>
+       </div>
+       <div class="explanation" id="exp-2"><strong>Answer: B.</strong> Wollstonecraft argued women appeared inferior only because they were denied education, and applied Enlightenment arguments about rights to them.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>3. Which of the following is the MOST direct link between the Enlightenment and political revolutions of 1750–1900?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) It provided the technology of revolution.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) It provided ideological justifications (natural rights, social contract, popular sovereignty) that revolutionaries used to challenge monarchs and colonial rule.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) It provided economic theories of industrial growth.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) It was officially endorsed by European monarchs.</div>
+       </div>
+       <div class="explanation" id="exp-3"><strong>Answer: B.</strong> The ideas were the revolutionaries' intellectual toolkit — cited explicitly in the Declaration of Independence and the Declaration of the Rights of Man.</div>
+     </div>
+     <!-- 5.2 -->
+     <h3 class="quiz-subheading">Topic 5.2 — Nationalism and Revolutions</h3>
+     <div class="quiz-question">
+       <p><strong>4. The Haitian Revolution (1791–1804) is historically significant because it</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) Restored the French monarchy in the Caribbean.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) Was the only successful slave revolt in modern history and produced the first Black-led republic.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) Led directly to Cuban independence.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) Prevented any further Atlantic revolutions.</div>
+       </div>
+       <div class="explanation" id="exp-4"><strong>Answer: B.</strong> Led by Toussaint Louverture and Dessalines, it created the second independent nation in the Americas and the first Black-led republic.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>5. Latin American wars of independence differed from the Haitian Revolution primarily because</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) They were led by European monarchs.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) They were mainly led by <em>creole</em> elites who kept existing social hierarchies largely intact.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) They abolished slavery and racial hierarchies everywhere.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) They produced a single unified nation across all of Latin America.</div>
+       </div>
+       <div class="explanation" id="exp-5"><strong>Answer: B.</strong> Creoles like Bolívar and San Martín won independence from Spain but did not transform race or class hierarchies as dramatically as Haiti's revolution did.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>6. German unification in 1871 is BEST associated with</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Liberal reformers at the 1848 Frankfurt Parliament.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) Otto von Bismarck's "blood and iron" policies and a series of wars.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) A peaceful vote of the German states.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) A socialist revolution.</div>
+       </div>
+       <div class="explanation" id="exp-6"><strong>Answer: B.</strong> Bismarck unified Germany under Prussian leadership through wars with Denmark (1864), Austria (1866), and France (1870–71).</div>
+     </div>
+     <!-- 5.3 -->
+     <h3 class="quiz-subheading">Topic 5.3 — Industrial Revolution Begins</h3>
+     <div class="quiz-question">
+       <p><strong>7. Which factor BEST explains why Britain industrialized first?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) It had no colonies.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) A combination of coal, navigable waterways, surplus agricultural labor, Atlantic trade capital, and a stable legal environment.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) A large population in isolated, rural communities.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Strict state control of all industry by the crown.</div>
+       </div>
+       <div class="explanation" id="exp-7"><strong>Answer: B.</strong> No single factor explains Britain's lead — the combination of resources, institutions, and capital did.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>8. The enclosure movement in 18th-century Britain most directly contributed to industrialization by</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) Increasing serfdom.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 8)">(B) Pushing rural laborers into cities, creating a workforce for factories.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 8)">(C) Reducing agricultural output.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) Banning private farming.</div>
+       </div>
+       <div class="explanation" id="exp-8"><strong>Answer: B.</strong> Enclosure privatized common lands, consolidating them into larger farms and displacing small tenants who moved to cities seeking wage work.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>9. Which statement best describes the impact of James Watt's steam engine (1769)?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) It eliminated water-powered factories instantly.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 9)">(B) By making steam power efficient, it allowed factories to be located anywhere and drove locomotives and ships.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 9)">(C) It ended the need for human labor.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) It was a Chinese invention.</div>
+       </div>
+       <div class="explanation" id="exp-9"><strong>Answer: B.</strong> Watt's separate condenser dramatically improved efficiency, freeing factories from rivers and enabling railroads and steamships.</div>
+     </div>
+     <!-- 5.4 -->
+     <h3 class="quiz-subheading">Topic 5.4 — Industrialization Spreads</h3>
+     <div class="quiz-question">
+       <p><strong>10. Meiji Japan's approach to industrialization is best described as</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) Passive imitation of the United States.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) Deliberate state-led modernization: importing experts, building infrastructure, establishing universal education, and adopting a constitution.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) Maintaining the Tokugawa feudal system indefinitely.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) Rejecting all foreign technology.</div>
+       </div>
+       <div class="explanation" id="exp-10"><strong>Answer: B.</strong> The Meiji government adopted a strategy of "rich country, strong army" and industrialized rapidly under state direction.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>11. India's industrial experience under British rule is best described as</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 11)">(A) Rapid industrialization matching Britain.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 11)">(B) Deindustrialization of its textile sector and a shift toward raw-material exports.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Complete isolation from world markets.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) Communist industrialization.</div>
+       </div>
+       <div class="explanation" id="exp-11"><strong>Answer: B.</strong> Indian handloom textiles were undercut by machine-made British cloth, and India shifted toward supplying raw cotton — an example of colonial deindustrialization.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>12. The main reason Egypt's industrialization under Muhammad Ali faltered was</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Muhammad Ali's refusal to use European technology.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 12)">(B) European pressure (e.g., the 1838 free-trade treaty imposed on the Ottomans) that dismantled Egyptian protections for local industry.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 12)">(C) Lack of Egyptian interest in modernization.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) The end of the Ottoman Empire in 1830.</div>
+       </div>
+       <div class="explanation" id="exp-12"><strong>Answer: B.</strong> Egyptian protectionism was undercut by treaties Europe imposed on the Ottomans — a pattern of "informal empire" even before direct colonization.</div>
+     </div>
+     <!-- 5.5 -->
+     <h3 class="quiz-subheading">Topic 5.5 — Technology in the Industrial Age</h3>
+     <div class="quiz-question">
+       <p><strong>13. The Bessemer process (1856) is most directly associated with</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 13)">(A) Automobile production.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 13)">(B) Mass production of cheap, strong steel for rails and construction.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 13)">(C) The telegraph.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 13)">(D) The cotton gin.</div>
+       </div>
+       <div class="explanation" id="exp-13"><strong>Answer: B.</strong> The Bessemer converter made steel — previously expensive — affordable for railroads, ships, and buildings, fueling the Second Industrial Revolution.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>14. Which technological advance most "shrank the world" between 1850 and 1914?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 14)">(A) The cotton gin.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 14)">(B) Telegraph cables, steamships, and railroads — which drastically cut travel and communication times.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 14)">(C) The spinning jenny.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 14)">(D) The printing press.</div>
+       </div>
+       <div class="explanation" id="exp-14"><strong>Answer: B.</strong> By 1900 it took days, not months, to move messages or goods across oceans — a change that enabled imperialism, mass migration, and global business.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>15. The Suez Canal (opened 1869) is significant because it</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 15)">(A) Eliminated the need for railroads.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 15)">(B) Dramatically shortened sea routes between Europe and Asia, boosting European imperial and commercial reach.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 15)">(C) Was an Ottoman victory against Britain.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 15)">(D) Primarily served domestic U.S. trade.</div>
+       </div>
+       <div class="explanation" id="exp-15"><strong>Answer: B.</strong> It cut the voyage between Britain and India by thousands of miles and was later controlled by Britain, underwriting its eastern empire.</div>
+     </div>
+     <!-- 5.6 -->
+     <h3 class="quiz-subheading">Topic 5.6 — Government's Role</h3>
+     <div class="quiz-question">
+       <p><strong>16. Which BEST characterizes the role of government in German industrialization?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 16)">(A) Strict laissez-faire with no state involvement.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 16)">(B) Active state support through tariffs, technical education, infrastructure, and coordination with large firms.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 16)">(C) Full nationalization of industry.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 16)">(D) Banning industrial development for religious reasons.</div>
+       </div>
+       <div class="explanation" id="exp-16"><strong>Answer: B.</strong> Germany's "catch-up" industrialization relied heavily on state partnership with industry, especially in railroads, heavy industry, and chemistry.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>17. Which of the following countries is the BEST example of relatively market-led industrialization in the 19th century?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, true, 17)">(A) Britain, where private capital and limited state intervention drove growth.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 17)">(B) Japan, where the state built model factories.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 17)">(C) Russia, where Witte directed state investment.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 17)">(D) Egypt under Muhammad Ali.</div>
+       </div>
+       <div class="explanation" id="exp-17"><strong>Answer: A.</strong> British industrialization, while not purely laissez-faire, relied much more on private capital than the other examples.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>18. Russia's Sergei Witte is associated with</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 18)">(A) The abolition of the Russian monarchy.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 18)">(B) A state-led program of railroad construction (including the Trans-Siberian) and heavy industry.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 18)">(C) The Taiping Rebellion.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 18)">(D) The emancipation of serfs in 1861.</div>
+       </div>
+       <div class="explanation" id="exp-18"><strong>Answer: B.</strong> As finance minister, Witte used foreign loans and tariffs to push industrialization; the Trans-Siberian Railway was one of its most visible results.</div>
+     </div>
+     <!-- 5.7 -->
+     <h3 class="quiz-subheading">Topic 5.7 — Economic Developments</h3>
+     <div class="quiz-question">
+       <p><strong>19. Adam Smith's <em>Wealth of Nations</em> (1776) argued that</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, true, 19)">(A) Markets driven by self-interest tend, through competition, to produce general prosperity.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 19)">(B) Governments should tightly regulate all trade.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 19)">(C) Class struggle is the engine of history.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 19)">(D) Mercantilism was the ideal economic policy.</div>
+       </div>
+       <div class="explanation" id="exp-19"><strong>Answer: A.</strong> Smith argued for free markets and division of labor as the foundation of national wealth.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>20. The establishment of the gold standard by the 1870s most directly enabled</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 20)">(A) The abolition of banks.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 20)">(B) More stable international exchange and an explosion of global trade and finance.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 20)">(C) The rise of mercantilism.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 20)">(D) The end of stock markets.</div>
+       </div>
+       <div class="explanation" id="exp-20"><strong>Answer: B.</strong> Pegging currencies to gold reduced exchange-rate risk and helped make the late 19th century an era of rapid global economic integration.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>21. The emergence of multinational corporations like Unilever and United Fruit in the late 19th century reflected</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 21)">(A) The decline of the corporation as a form of business.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 21)">(B) The integration of global supply chains tying industrial economies to colonial and peripheral regions.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 21)">(C) Complete independence from states and colonies.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 21)">(D) A return to medieval guild structures.</div>
+       </div>
+       <div class="explanation" id="exp-21"><strong>Answer: B.</strong> Multinationals thrived by linking raw-material production in colonies to industrial manufacturing and distribution.</div>
+     </div>
+     <!-- 5.8 -->
+     <h3 class="quiz-subheading">Topic 5.8 — Reactions to the Industrial Economy</h3>
+     <div class="quiz-question">
+       <p><strong>22. Marx and Engels's <em>Communist Manifesto</em> (1848) argued that</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 22)">(A) Capitalism would lead to a universal middle class.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 22)">(B) Human history is driven by class struggle, and capitalism would ultimately be overthrown by the proletariat.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 22)">(C) Governments should enforce pure laissez-faire.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 22)">(D) Religion was the best way to organize society.</div>
+       </div>
+       <div class="explanation" id="exp-22"><strong>Answer: B.</strong> Marx and Engels outlined "scientific socialism" based on historical materialism and inevitable proletarian revolution.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>23. The Luddite movement in early-19th-century England is BEST understood as</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 23)">(A) A religious revival movement.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 23)">(B) Skilled textile workers' resistance to mechanization that threatened their livelihoods.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 23)">(C) A political campaign for women's suffrage.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 23)">(D) An imperial war against France.</div>
+       </div>
+       <div class="explanation" id="exp-23"><strong>Answer: B.</strong> Luddites smashed textile machines in protest against the factory system's destruction of their trade.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>24. Which of the following best illustrates a 19th-century REFORM response to industrial society (as opposed to a revolutionary one)?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 24)">(A) The Paris Commune of 1871.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 24)">(B) British factory acts, child labor laws, and the ten-hour day.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 24)">(C) The 1917 Russian Revolution.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 24)">(D) The founding of the Soviet Union.</div>
+       </div>
+       <div class="explanation" id="exp-24"><strong>Answer: B.</strong> Reformers sought to soften — not overthrow — capitalism through legislation improving working conditions.</div>
+     </div>
+     <!-- 5.9 -->
+     <h3 class="quiz-subheading">Topic 5.9 — Society and the Industrial Age</h3>
+     <div class="quiz-question">
+       <p><strong>25. The "cult of domesticity" associated with the 19th-century middle class held that</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 25)">(A) Working-class women should perform factory labor.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 25)">(B) Middle-class women should manage the home as a moral sphere separate from work.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 25)">(C) Men should not engage in politics.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 25)">(D) Women should serve as heads of corporations.</div>
+       </div>
+       <div class="explanation" id="exp-25"><strong>Answer: B.</strong> With home and workplace separated by industrial wage labor, middle-class ideology praised women as moral stewards of a "domestic sphere." Working-class women continued to labor for wages.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>26. Asian indentured labor in the 19th century was most commonly used for</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 26)">(A) Mining gold in Spain.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 26)">(B) Plantations and mines in the Caribbean, South America, South Africa, and Southeast Asia after the abolition of slavery.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 26)">(C) Running banks in New York.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 26)">(D) Napoleonic armies.</div>
+       </div>
+       <div class="explanation" id="exp-26"><strong>Answer: B.</strong> Chinese and Indian indentured laborers partially replaced enslaved Africans on sugar, rubber, and other plantations after emancipation in the British Empire and elsewhere.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>27. Social Darwinism in the late 19th century is BEST described as</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 27)">(A) A scientifically validated extension of Darwin's evolutionary theory.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 27)">(B) A misapplication of evolutionary ideas used to justify imperialism and social inequality.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 27)">(C) A socialist critique of industrial society.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 27)">(D) A religious revival movement.</div>
+       </div>
+       <div class="explanation" id="exp-27"><strong>Answer: B.</strong> Associated with Herbert Spencer, it misread Darwin to argue "the fittest" societies and races naturally dominated — useful ideology for empire and laissez-faire.</div>
+     </div>
+     <!-- 5.10 -->
+     <h3 class="quiz-subheading">Topic 5.10 — Continuity and Change</h3>
+     <div class="quiz-question">
+       <p><strong>28. Which of the following is best described as a continuity across the period c. 1750–1900?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 28)">(A) Agriculture disappeared as a major economic activity.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 28)">(B) Patriarchal family structures persisted even as political systems changed.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 28)">(C) Empires were dissolved worldwide.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 28)">(D) Nationalism completely replaced religion.</div>
+       </div>
+       <div class="explanation" id="exp-28"><strong>Answer: B.</strong> Even revolutionary movements left gender hierarchies largely intact.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>29. Which comparison between the French and Haitian revolutions is MOST accurate?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 29)">(A) Both abolished monarchy but preserved slavery.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 29)">(B) Both drew on Enlightenment ideals of rights, but only the Haitian Revolution permanently abolished slavery within its territory.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 29)">(C) Both were led by European monarchs.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 29)">(D) Neither involved violent conflict.</div>
+       </div>
+       <div class="explanation" id="exp-29"><strong>Answer: B.</strong> France wavered on slavery (abolished 1794, restored by Napoleon 1802); Haiti ended slavery permanently at independence in 1804.</div>
+     </div>
+     <div class="quiz-question">
+       <p><strong>30. By 1900, which of the following was TRUE about the global industrial order?</strong></p>
+       <div class="quiz-options">
+         <div class="quiz-option" onclick="checkAnswer(this, false, 30)">(A) Britain, France, Germany, the U.S., and Japan — plus European colonies supplying raw materials — formed the core of the world economy.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 30)">(B) Qing China was the world's leading industrial power.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, true, 30)">(C) Both A and a global division of labor in which industrialized cores manufactured goods and peripheries supplied raw materials.</div>
+         <div class="quiz-option" onclick="checkAnswer(this, false, 30)">(D) The Ottoman Empire led Europe in steel production.</div>
+       </div>
+       <div class="explanation" id="exp-30"><strong>Answer: C.</strong> The industrial core/non-industrial periphery structure is a defining feature of the global economy by 1900. (A is true but incomplete; C captures the broader pattern.)</div>
+     </div>
+   </div>
+   <!-- SAQs -->
+   <h2>✍️ Short-Answer Practice (SAQ)</h2>
+   <div class="saq-box">
+     <h3>SAQ 1 — Atlantic Revolutions (No Stimulus)</h3>
+     <ol type="a">
+       <li>Identify ONE way that Enlightenment ideas influenced a specific revolution in the Atlantic world between 1775 and 1825.</li>
+       <li>Identify ONE significant DIFFERENCE between two Atlantic revolutions of your choice.</li>
+       <li>Explain ONE effect of the Atlantic revolutions on other regions of the world in the period c. 1750–1900.</li>
+     </ol>
+     <details class="saq-sample">
+       <summary>Click to see a sample response</summary>
+       <p><strong>(a)</strong> John Locke's argument that government derives its legitimacy from the consent of the governed directly shaped the 1776 U.S. Declaration of Independence, which justified breaking from Britain on the basis of the colonists' natural rights.</p>
+       <p><strong>(b)</strong> While the American Revolution produced a federal republic that preserved slavery, the Haitian Revolution abolished slavery immediately and permanently upon independence — making it the most radical of the Atlantic revolutions in terms of social transformation.</p>
+       <p><strong>(c)</strong> The example of the Haitian and American revolutions inspired creole leaders in Spanish America such as Simón Bolívar to launch independence movements in the 1810s–1820s, using similar Enlightenment language of natural rights to justify breaking from Spain.</p>
+     </details>
+   </div>
+   <div class="saq-box">
+     <h3>SAQ 2 — Stimulus (Marx &amp; Engels)</h3>
+     <p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+       "The history of all hitherto existing society is the history of class struggles. Freeman and slave,
+       patrician and plebeian, lord and serf, guild-master and journeyman, in a word, oppressor and
+       oppressed, stood in constant opposition to one another..."
+       <br><em>— Karl Marx &amp; Friedrich Engels, The Communist Manifesto, 1848</em>
+     </p>
+     <ol type="a">
+       <li>Identify ONE piece of historical context in the mid-19th century that helps explain Marx and Engels's argument.</li>
+       <li>Explain ONE way that Marxist or socialist ideas influenced political or labor movements in the period 1848–1900.</li>
+       <li>Explain ONE way that other 19th-century thinkers or movements responded to industrial capitalism DIFFERENTLY than Marx and Engels.</li>
+     </ol>
+     <details class="saq-sample">
+       <summary>Click to see a sample response</summary>
+       <p><strong>(a)</strong> Marx and Engels wrote during the 1848 revolutions that swept Europe, in the context of rapid industrialization that created large, impoverished urban working classes in cities like Manchester (which Engels described in detail) — conditions that made their diagnosis of class struggle feel urgent and timely.</p>
+       <p><strong>(b)</strong> Marxist and socialist ideas shaped the formation of socialist political parties across Europe, most notably the German Social Democratic Party (SPD) founded in 1875, which sought to organize industrial workers to demand both political rights and economic reforms.</p>
+       <p><strong>(c)</strong> Liberal reformers such as John Stuart Mill accepted industrial capitalism but advocated for piecemeal reforms — extending the franchise, passing factory acts, and regulating working conditions — rather than overthrowing the capitalist system as Marx and Engels proposed.</p>
+     </details>
+   </div>
+   <!-- KEY TAKEAWAYS -->
+   <h2>⭐ Key Takeaways</h2>
+   <div class="key-takeaways">
+     <ul>
+       <li><strong>Two revolutions, one period.</strong> Political revolutions (American, French, Haitian, Latin American, unification movements) and the Industrial Revolution redefined the world between 1750 and 1900.</li>
+       <li><strong>Enlightenment ideas armed revolutionaries.</strong> Natural rights, popular sovereignty, and the social contract became the common language of political change.</li>
+       <li><strong>Industrial change began in Britain but did not stay there.</strong> Belgium, France, Germany, the U.S., Japan, and Russia industrialized through different mixtures of private and state action.</li>
+       <li><strong>Capitalism went global.</strong> Corporations, gold standard, and free trade tied the industrial core to a raw-material periphery.</li>
+       <li><strong>Industrial society provoked powerful reactions.</strong> Socialism, unionism, abolition, feminism, Romanticism, and religious critiques all pushed back against aspects of industrial life.</li>
+       <li><strong>Nationalism reshaped politics.</strong> New nation-states emerged (Germany, Italy) while older empires (Ottoman, Qing, Russian) came under nationalist strain.</li>
+       <li><strong>Setup for Unit 6.</strong> Industrial capacity + nationalism + Social Darwinism fed the New Imperialism after 1870.</li>
+     </ul>
+   </div>
+   <p style="text-align:center; margin-top:2rem;">
+     <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+   </p>
+ </div>
+ <script>
+   function checkAnswer(element, isCorrect, qNum) {
+     const options = element.parentElement.querySelectorAll('.quiz-option');
+     options.forEach(o => o.classList.remove('correct', 'incorrect'));
+     element.classList.add(isCorrect ? 'correct' : 'incorrect');
+     const exp = document.getElementById('exp-' + qNum);
+     if (exp) exp.classList.add('show');
+   }
+ </script>
+</body>
+</html>
