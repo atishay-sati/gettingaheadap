@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TMSR9LD4H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AP World History: Modern Unit 8 — Cold War and Decolonization (c. 1900–present). In-depth notes on the U.S.–Soviet rivalry, spread of communism, decolonization, newly independent states, global resistance, and the end of the Cold War — with photos, MCQs, and SAQs." />
+<title>Unit 8: Cold War and Decolonization (c. 1900–present)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf6f1; color: #333; line-height: 1.6; }
+.container { max-width: 980px; margin: 2rem auto; padding: 2rem 1.5rem; background: white; border-radius: 10px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }
+h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: #8b4513; }
+h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+.subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+h3 { color: #a0522d; margin-top: 1.5rem; }
+h4 { color: #8b4513; margin-top: 1rem; }
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+.back-link { display: inline-block; margin-bottom: 1rem; color: #8b4513; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+.back-link:hover { text-decoration: underline; transform: scale(1.02); }
+.overview-box { background: linear-gradient(135deg, #fde7c9, #fff3e0); border-left: 6px solid #d2691e; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+.weighting-badge { display: inline-block; background: #8b4513; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+figure.photo { margin: 1.2rem 0; text-align: center; }
+figure.photo img { width: 100%; max-width: 640px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+figure.photo figcaption { font-size: 0.92rem; color: #666; margin-top: 0.4rem; font-style: italic; }
+.timeline { position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 4px solid #d2691e; }
+.timeline-event { position: relative; margin-bottom: 1.4rem; padding: 0.8rem 1rem; background: #fff8ef; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+.timeline-event::before { content: ""; position: absolute; left: -2.55rem; top: 1.1rem; width: 14px; height: 14px; background: #8b4513; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #d2691e; }
+.timeline-date { display: inline-block; font-weight: 700; color: #8b4513; margin-right: 0.5rem; }
+.region-card { border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-left: 6px solid; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.region-stage { border-color: #5e35b1; background: #ede7f6; }
+.region-coldwar { border-color: #c62828; background: #ffebee; }
+.region-effects { border-color: #37474f; background: #eceff1; }
+.region-comm { border-color: #b71c1c; background: #ffebee; }
+.region-decol { border-color: #2e7d32; background: #e8f5e9; }
+.region-newstate { border-color: #ef6c00; background: #fff3e0; }
+.region-resist { border-color: #ad1457; background: #fce4ec; }
+.region-endcold { border-color: #0277bd; background: #e1f5fe; }
+.region-causation { border-color: #455a64; background: #eceff1; }
+.region-card h3 { margin-top: 0; }
+.vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+.vocab-item { background: #fff8ef; border: 1px solid #e0c9a6; border-radius: 8px; padding: 0.8rem 1rem; }
+.vocab-term { font-weight: 700; color: #8b4513; display: block; margin-bottom: 0.2rem; }
+.compare-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+.compare-table th, .compare-table td { border: 1px solid #e0c9a6; padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+.compare-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: white; }
+.compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+.quiz-container { background: linear-gradient(135deg, #fde7c9, #fff8ef); border: 2px solid #8b4513; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+.quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+.quiz-subheading { font-family: 'Montserrat', sans-serif; color: #a0522d; font-weight: 700; margin-top: 1.5rem; border-bottom: 1px dashed #a0522d; padding-bottom: 0.2rem; }
+.quiz-question { margin-bottom: 1.5rem; }
+.quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.quiz-option { padding: 0.6rem 0.8rem; border: 1px solid #8b4513; border-radius: 6px; cursor: pointer; background: white; transition: background-color 0.2s; }
+.quiz-option:hover { background-color: #fff3e0; }
+.quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+.quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+.explanation { display: none; margin-top: 0.6rem; padding: 0.8rem; background: #fff; border-left: 4px solid #8b4513; border-radius: 6px; font-size: 0.95rem; }
+.explanation.show { display: block; }
+.saq-box { background: #fff; border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; }
+.saq-box h3 { margin-top: 0; }
+details.saq-sample { margin-top: 0.8rem; background: #fff8ef; border: 1px dashed #8b4513; border-radius: 6px; padding: 0.6rem 0.9rem; }
+details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+.key-takeaways { background: linear-gradient(135deg, #fff3e0, #fde7c9); border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+<h1>Unit 8: Cold War and Decolonization</h1>
+<p class="subtitle">c. 1900 – present &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 8–10%</span></p>
+<!-- OVERVIEW -->
+<div class="overview-box">
+<h3 style="margin-top:0;">🕊️ Unit Overview</h3>
+<p>
+After 1945, the world was reshaped by two parallel revolutions: the <strong>Cold War</strong>
+between the United States and the Soviet Union, and the <strong>decolonization</strong> of Africa,
+Asia, and the Caribbean. These processes intersected: superpowers competed for influence over
+newly independent states, and decolonization movements were often shaped by Cold War ideologies.
+Meanwhile, social movements worldwide — civil rights, feminism, anti-apartheid, student protest —
+challenged entrenched hierarchies. By the late 1980s, the Soviet system collapsed, ending the Cold
+War and opening a new era.
+</p>
+<p style="margin-bottom:0;">
+<strong>Big question:</strong> How did the Cold War rivalry, decolonization, and global resistance
+movements reshape the world between 1945 and 1991?
+</p>
+</div>
+<!-- TIMELINE -->
+<h2>🗓️ Unit 8 Timeline</h2>
+<div class="timeline">
+<div class="timeline-event"><span class="timeline-date">1945:</span> Yalta and Potsdam conferences; UN founded; Germany and Korea divided.</div>
+<div class="timeline-event"><span class="timeline-date">1947:</span> <strong>Truman Doctrine</strong> and <strong>Marshall Plan</strong>; <strong>Indian independence</strong> and partition.</div>
+<div class="timeline-event"><span class="timeline-date">1948–49:</span> <strong>Berlin Blockade</strong> and Airlift; creation of Israel (1948); NATO founded (1949).</div>
+<div class="timeline-event"><span class="timeline-date">1949:</span> <strong>Chinese Communist Revolution</strong>; USSR tests atomic bomb.</div>
+<div class="timeline-event"><span class="timeline-date">1950–53:</span> <strong>Korean War</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1954:</span> French defeated at <strong>Dien Bien Phu</strong>; Vietnam split; Algerian War of Independence begins.</div>
+<div class="timeline-event"><span class="timeline-date">1955:</span> <strong>Bandung Conference</strong> &amp; birth of the Non-Aligned Movement; Warsaw Pact formed.</div>
+<div class="timeline-event"><span class="timeline-date">1956:</span> Suez Crisis; Hungarian Revolution crushed by USSR.</div>
+<div class="timeline-event"><span class="timeline-date">1957–1960:</span> <strong>Ghana</strong> independent (1957); "Year of Africa" (1960) — 17 African states gain independence.</div>
+<div class="timeline-event"><span class="timeline-date">1959:</span> <strong>Cuban Revolution</strong> brings Castro to power.</div>
+<div class="timeline-event"><span class="timeline-date">1961:</span> Berlin Wall built; Bay of Pigs.</div>
+<div class="timeline-event"><span class="timeline-date">1962:</span> <strong>Cuban Missile Crisis</strong> — closest approach to nuclear war.</div>
+<div class="timeline-event"><span class="timeline-date">1965–1975:</span> Escalation and end of the <strong>Vietnam War</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1966–76:</span> Mao's <strong>Cultural Revolution</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1968:</span> Global youth movements; Prague Spring crushed by Soviet tanks.</div>
+<div class="timeline-event"><span class="timeline-date">1979:</span> <strong>Iranian Revolution</strong>; Soviet invasion of Afghanistan; China–U.S. normalization.</div>
+<div class="timeline-event"><span class="timeline-date">1985:</span> <strong>Gorbachev</strong> launches <em>glasnost</em> and <em>perestroika</em>.</div>
+<div class="timeline-event"><span class="timeline-date">1989:</span> Tiananmen Square crackdown; <strong>fall of the Berlin Wall</strong>; Eastern European communist regimes collapse.</div>
+<div class="timeline-event"><span class="timeline-date">1990:</span> <strong>Nelson Mandela</strong> freed; Namibian independence; German reunification.</div>
+<div class="timeline-event"><span class="timeline-date">1991:</span> <strong>Dissolution of the Soviet Union</strong>; end of the Cold War.</div>
+</div>
+<!-- TOPIC 8.1 -->
+<h2>Topic 8.1 — Setting the Stage for the Cold War and Decolonization</h2>
+<div class="region-card region-stage">
+<h3>🌍 A New Postwar Order (1945)</h3>
+<h4>Consequences of World War II</h4>
+<ul>
+<li>Europe devastated: 60–80 million dead worldwide; whole cities (Warsaw, Dresden, Stalingrad, Hiroshima) destroyed.</li>
+<li>European powers <strong>economically exhausted</strong>; Britain and France dependent on U.S. aid.</li>
+<li><strong>U.S. and USSR</strong> emerged as the only remaining great powers — with opposing systems (capitalist democracy vs. communist dictatorship).</li>
+<li>Nuclear weapons created the possibility of civilization-ending war.</li>
+</ul>
+<h4>Wartime Conferences</h4>
+<ul>
+<li><strong>Yalta (February 1945):</strong> Stalin, Roosevelt, Churchill agree on occupation zones for Germany, Soviet entry into the Pacific war, and "free elections" in Eastern Europe — which Stalin violated.</li>
+<li><strong>Potsdam (July–August 1945):</strong> Truman replaced the deceased Roosevelt; tensions over Poland and reparations increased.</li>
+</ul>
+<h4>New International Institutions</h4>
+<ul>
+<li><strong>United Nations</strong> (1945): Security Council with 5 permanent members (U.S., USSR, UK, France, China) each with veto.</li>
+<li><strong>Bretton Woods</strong> (1944): <strong>IMF</strong> and <strong>World Bank</strong>; U.S. dollar pegged to gold and other currencies pegged to dollar — U.S. at the center of the postwar economy.</li>
+<li><strong>GATT</strong> (1947) promoted freer trade.</li>
+</ul>
+<h4>Ideological Lines Drawn</h4>
+<ul>
+<li><strong>Churchill's "Iron Curtain"</strong> speech (Fulton, Missouri, 1946).</li>
+<li><strong>Kennan's "long telegram"</strong> (1946) argued for <strong>containment</strong> of Soviet expansion.</li>
+<li>Soviet forces remained in Eastern Europe; "people's democracies" installed as Soviet satellites by 1948.</li>
+</ul>
+<h4>The Stage for Decolonization</h4>
+<ul>
+<li>European empires weakened by war; many colonial soldiers returned demanding rights.</li>
+<li><strong>Atlantic Charter</strong> (1941) invoked self-determination; colonized peoples cited it against their European rulers.</li>
+<li>Both superpowers — for different reasons — opposed traditional European imperialism, creating political space for independence movements.</li>
+</ul>
+</div>
+<!-- TOPIC 8.2 -->
+<h2>Topic 8.2 — The Cold War</h2>
+<div class="region-card region-coldwar">
+<h3>❄️ Two Superpowers, One World</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Berlin_Wall_1961-11-20.jpg?width=700" alt="Berlin Wall" />
+<figcaption>The <strong>Berlin Wall</strong>, begun in August 1961, became the most visible symbol of Cold War division. It stood until its fall in November 1989.</figcaption>
+</figure>
+<h4>Containment and Early Crises (1945–1953)</h4>
+<ul>
+<li><strong>Truman Doctrine</strong> (1947): U.S. pledged to support "free peoples" resisting communism — aid to Greece and Turkey.</li>
+<li><strong>Marshall Plan</strong> (1948): ~$13 billion to rebuild Western Europe and bind it to the U.S. economically.</li>
+<li><strong>Berlin Blockade and Airlift</strong> (1948–49): Soviets cut off West Berlin; U.S. and UK airlifted supplies for nearly a year.</li>
+<li><strong>NATO</strong> (1949): Western alliance guaranteeing collective defense. USSR responded with the <strong>Warsaw Pact</strong> (1955).</li>
+<li><strong>Chinese Communist Revolution</strong> (1949): Mao Zedong's CCP won the civil war; China aligned with USSR (1950 treaty).</li>
+<li><strong>Korean War</strong> (1950–1953): Communist North Korea invaded the South; U.S./UN forces intervened; ended in stalemate at the 38th parallel.</li>
+</ul>
+<h4>Superpower Competition in the Third World</h4>
+<ul>
+<li><strong>Proxy wars</strong> replaced direct confrontation: each superpower backed client regimes or insurgencies worldwide.</li>
+<li>Major theaters: Vietnam, Afghanistan, Angola, Nicaragua, Ethiopia-Somalia.</li>
+<li><strong>CIA and KGB</strong> covert operations, coups, and assassinations (e.g., U.S.-backed coups in Iran 1953, Guatemala 1954, Chile 1973).</li>
+</ul>
+<h4>Arms Race and Nuclear Brinkmanship</h4>
+<ul>
+<li><strong>USSR detonated an atomic bomb</strong> (1949) and hydrogen bomb (1953); U.S. responded with H-bomb (1952).</li>
+<li>Doctrine of <strong>mutually assured destruction (MAD)</strong>: overwhelming retaliation deterred first use.</li>
+<li><strong>Space race</strong>: Sputnik (1957), Gagarin (1961), Apollo moon landing (1969).</li>
+<li><strong>Cuban Missile Crisis</strong> (October 1962): USSR deployed missiles in Cuba; Kennedy blockade; resolved by Soviet withdrawal in exchange for U.S. missiles removed from Turkey.</li>
+</ul>
+<h4>Détente and Renewed Tensions (1960s–80s)</h4>
+<ul>
+<li><strong>Détente</strong> (1960s–70s): Nuclear Non-Proliferation Treaty (1968), SALT I (1972), Helsinki Accords (1975).</li>
+<li><strong>Nixon to China</strong> (1972) split the communist bloc further (Sino-Soviet split had deepened since 1960).</li>
+<li><strong>Second Cold War</strong> (late 1970s–early 80s): Soviet invasion of Afghanistan (1979), Reagan's SDI/"Star Wars" and military buildup.</li>
+</ul>
+</div>
+<!-- TOPIC 8.3 -->
+<h2>Topic 8.3 — Effects of the Cold War</h2>
+<div class="region-card region-effects">
+<h3>🌐 How the Superpower Rivalry Shaped the World</h3>
+<h4>Military Alliances and Divided States</h4>
+<ul>
+<li><strong>NATO vs. Warsaw Pact</strong> in Europe.</li>
+<li><strong>Divided nations</strong>: Germany (1949–1990), Korea (1945–present), Vietnam (1954–1975), China/Taiwan (1949–present).</li>
+<li><strong>Berlin Wall</strong> (1961–1989) symbolized the split within Germany and Europe.</li>
+</ul>
+<h4>Proxy Wars and Interventions</h4>
+<ul>
+<li><strong>Vietnam War</strong> (1955–1975): U.S. poured in over 500,000 troops; ended with communist victory and U.S. withdrawal.</li>
+<li><strong>Afghan War</strong> (1979–1989): Soviet invasion, U.S. arming of mujahideen — a contributing factor to Soviet collapse.</li>
+<li><strong>Angola and Mozambique</strong>: Cold War-aligned civil wars after Portuguese decolonization.</li>
+<li><strong>Latin America</strong>: U.S. backed right-wing regimes (Chile 1973 Pinochet coup, Argentina, Nicaragua's Contras); Cubans supported left-wing guerrillas.</li>
+</ul>
+<h4>Nuclear Arms and Fear</h4>
+<ul>
+<li>By the 1980s, U.S. and USSR each possessed tens of thousands of nuclear warheads.</li>
+<li>Culture of Cold War fear: civil defense drills, fallout shelters, nuclear-themed films and literature.</li>
+</ul>
+<h4>Cultural and Economic Effects</h4>
+<ul>
+<li><strong>Peace movements</strong>: anti-nuclear ("Ban the Bomb," CND in Britain; Europe's nuclear freeze).</li>
+<li>Global spread of U.S. <strong>consumer culture</strong> (Coca-Cola, Hollywood, rock 'n' roll) and Soviet-bloc cultural exchanges (ballet, cinema).</li>
+<li>Massive military spending shaped both economies; "<strong>military-industrial complex</strong>" (Eisenhower's warning, 1961).</li>
+</ul>
+<h4>Non-Aligned Movement</h4>
+<ul>
+<li><strong>Bandung Conference</strong> (1955, Indonesia): 29 African and Asian states affirmed solidarity against colonialism and Cold War blocs.</li>
+<li><strong>Non-Aligned Movement</strong> (formalized 1961, Belgrade): led by Nehru (India), Tito (Yugoslavia), Nasser (Egypt), Sukarno (Indonesia), Nkrumah (Ghana).</li>
+<li>Attempted a "Third Way" — economic development without committing to either superpower.</li>
+</ul>
+</div>
+<!-- TOPIC 8.4 -->
+<h2>Topic 8.4 — Spread of Communism after 1900</h2>
+<div class="region-card region-comm">
+<h3>🚩 Revolutions and Regimes</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mao_Zedong_portrait.jpg?width=500" alt="Mao Zedong portrait" />
+<figcaption><strong>Mao Zedong</strong> (1893–1976), founder of the People's Republic of China (1949) and leader of the Cultural Revolution (1966–76).</figcaption>
+</figure>
+<h4>Russia/USSR (1917–1991)</h4>
+<ul>
+<li><strong>Bolshevik Revolution</strong> (1917) — first communist state.</li>
+<li><strong>Stalin's USSR</strong>: Five-Year Plans, forced collectivization, Great Purges (1936–38), Gulag.</li>
+<li>After WWII, the USSR created a ring of <strong>satellite states</strong> in Eastern Europe (Poland, Hungary, Czechoslovakia, East Germany, Bulgaria, Romania).</li>
+</ul>
+<h4>China (1949– )</h4>
+<ul>
+<li>Mao's <strong>CCP</strong> defeated the Guomindang in the civil war; founded the <strong>People's Republic of China</strong> (1949).</li>
+<li><strong>Great Leap Forward</strong> (1958–62): attempted rapid industrialization through communes; caused the deadliest famine in history (tens of millions dead).</li>
+<li><strong>Cultural Revolution</strong> (1966–76): Mao mobilized Red Guards against "bourgeois" elements; destroyed much of traditional culture, persecuted intellectuals.</li>
+<li>After Mao's death (1976), <strong>Deng Xiaoping</strong> introduced market reforms while keeping one-party rule.</li>
+</ul>
+<h4>Latin America — Cuba and Beyond</h4>
+<ul>
+<li><strong>Cuban Revolution</strong> (1959): <strong>Fidel Castro</strong> and Che Guevara overthrew Batista; Cuba became a Soviet-aligned communist state.</li>
+<li><strong>Nicaragua</strong>: Sandinistas took power (1979); U.S. backed Contras in the 1980s.</li>
+<li><strong>Chile</strong>: socialist Salvador Allende elected (1970); overthrown in a U.S.-backed coup (1973) by Pinochet.</li>
+</ul>
+<h4>Asia</h4>
+<ul>
+<li><strong>North Korea</strong> (1948): Kim Il-sung's dynastic communist state.</li>
+<li><strong>Vietnam</strong>: Ho Chi Minh led nationalist communist movement from 1941; after defeating the French (1954) and the U.S. (1975), reunified Vietnam as communist (1976).</li>
+<li><strong>Cambodia</strong>: Khmer Rouge under <strong>Pol Pot</strong> seized power (1975–79); roughly 1.7–2 million people killed in the Cambodian genocide.</li>
+</ul>
+<h4>Africa</h4>
+<ul>
+<li><strong>Angola</strong>: MPLA (backed by USSR/Cuba) vs. UNITA (backed by U.S./South Africa).</li>
+<li><strong>Mozambique</strong>: FRELIMO government aligned with socialist states.</li>
+<li><strong>Ethiopia</strong>: Mengistu's Derg regime (1974–91) aligned with the USSR.</li>
+</ul>
+</div>
+<!-- TOPIC 8.5 -->
+<h2>Topic 8.5 — Decolonization after 1900</h2>
+<div class="region-card region-decol">
+<h3>🕊️ Independence Movements in Africa, Asia, and the Caribbean</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mahatma-Gandhi%2C_studio%2C_1931.jpg?width=500" alt="Mahatma Gandhi" />
+<figcaption><strong>Mohandas K. "Mahatma" Gandhi</strong> (1869–1948). Using <em>satyagraha</em> (nonviolent resistance), he led India's independence movement through campaigns such as the 1930 Salt March.</figcaption>
+</figure>
+<h4>India</h4>
+<ul>
+<li><strong>Indian National Congress</strong> (founded 1885) grew into a mass movement after WWI.</li>
+<li><strong>Gandhi</strong>'s <em>satyagraha</em>: nonviolent civil disobedience, symbolized by the <strong>Salt March</strong> (1930).</li>
+<li><strong>Jawaharlal Nehru</strong> led political strategy; <strong>Muhammad Ali Jinnah</strong> and the Muslim League demanded a separate Muslim state.</li>
+<li><strong>1947 independence and partition</strong>: British India split into India and Pakistan; ~14 million displaced and ~1 million killed in the violence that followed.</li>
+</ul>
+<h4>Middle East and North Africa</h4>
+<ul>
+<li><strong>Egypt</strong>: <strong>Gamal Abdel Nasser</strong> seized power (1952); nationalized the Suez Canal (1956). The <strong>Suez Crisis</strong> embarrassed Britain and France and signaled the end of old-style European imperialism.</li>
+<li><strong>Israel</strong> declared independence (1948) amid conflict with neighboring Arab states; produced the Palestinian <em>nakba</em> ("catastrophe") displacing ~700,000 Palestinians.</li>
+<li><strong>Algeria</strong>: eight-year war of independence against France (1954–62); extraordinarily violent; led by the FLN.</li>
+</ul>
+<h4>Sub-Saharan Africa</h4>
+<ul>
+<li><strong>Ghana</strong>: <strong>Kwame Nkrumah</strong> led the first sub-Saharan African colony to independence (1957).</li>
+<li><strong>"Year of Africa"</strong> (1960): 17 countries gained independence.</li>
+<li><strong>Kenya</strong>: <strong>Mau Mau Uprising</strong> (1952–60) preceded independence (1963) under Jomo Kenyatta.</li>
+<li><strong>Congo</strong>: chaotic decolonization from Belgium (1960); Patrice Lumumba assassinated (1961).</li>
+<li>Portuguese Africa (<strong>Angola, Mozambique, Guinea-Bissau</strong>): prolonged wars of liberation; independent 1975.</li>
+<li><strong>Zimbabwe</strong>: independence from white-minority Rhodesia (1980).</li>
+<li><strong>South Africa</strong>: apartheid (1948–94) maintained white minority rule despite global sanctions; Nelson Mandela imprisoned 1962–1990.</li>
+</ul>
+<h4>Southeast Asia</h4>
+<ul>
+<li><strong>Indonesia</strong>: Sukarno declared independence from the Netherlands (1945); formally recognized 1949.</li>
+<li><strong>Vietnam</strong>: Ho Chi Minh declared independence (1945); defeated France at <strong>Dien Bien Phu</strong> (1954), then the U.S. in 1975.</li>
+<li><strong>Philippines</strong>: independence from the U.S. (1946).</li>
+</ul>
+<h4>Caribbean</h4>
+<ul>
+<li><strong>Jamaica and Trinidad &amp; Tobago</strong> gained independence from Britain (1962).</li>
+<li><strong>Barbados</strong> (1966), Bahamas (1973).</li>
+<li><strong>Cuba</strong>: independence long since achieved (1902); 1959 revolution transformed it into a communist state.</li>
+</ul>
+<h4>Methods of Decolonization</h4>
+<ul>
+<li><strong>Nonviolence</strong>: India, Ghana, much of sub-Saharan Africa.</li>
+<li><strong>Armed struggle</strong>: Algeria, Vietnam, Angola, Mozambique, Kenya.</li>
+<li><strong>Negotiated transitions</strong>: Most British and French possessions eventually negotiated terms.</li>
+<li><strong>Cold War alignment</strong> often shaped which superpower backed which movement.</li>
+</ul>
+</div>
+<!-- TOPIC 8.6 -->
+<h2>Topic 8.6 — Newly Independent States</h2>
+<div class="region-card region-newstate">
+<h3>🏛️ Building Nations in a Cold War World</h3>
+<h4>Political Challenges</h4>
+<ul>
+<li><strong>Colonial borders</strong> often cut across ethnic and linguistic groups — a recipe for future conflict (e.g., Nigeria, Sudan, Rwanda).</li>
+<li><strong>Civil wars</strong>: Biafra (Nigeria, 1967–70), Congo, Sudan, Ethiopia-Eritrea.</li>
+<li><strong>Coups and authoritarian rule</strong> became common as young militaries seized power (e.g., Idi Amin, Uganda, 1971).</li>
+<li><strong>One-party states</strong> and <strong>presidents-for-life</strong> emerged even in places that had begun as democracies.</li>
+</ul>
+<h4>Economic Strategies</h4>
+<ul>
+<li><strong>Import substitution industrialization (ISI)</strong>: state-led industry behind tariff walls (widespread in Latin America, India).</li>
+<li><strong>Export-led growth</strong>: the "<strong>Asian Tigers</strong>" (South Korea, Taiwan, Hong Kong, Singapore) industrialized rapidly through export-oriented policies.</li>
+<li><strong>Resource-based economies</strong>: oil wealth made states like Saudi Arabia, Iran, Venezuela, and Nigeria geopolitically important.</li>
+<li><strong>Dependency and debt</strong>: many countries borrowed heavily in the 1970s; 1980s debt crises led to IMF structural adjustment programs with painful effects.</li>
+</ul>
+<h4>Important Examples</h4>
+<ul>
+<li><strong>India</strong>: Largest democracy; Nehru's mixed economy; 1971 war created Bangladesh; Indira Gandhi's emergency rule (1975–77).</li>
+<li><strong>Egypt</strong>: Nasser's pan-Arabism, Aswan High Dam (1970), 1967 Six-Day War defeat, 1979 peace with Israel under Sadat.</li>
+<li><strong>Ghana</strong>: Nkrumah's dream of African socialism faltered; overthrown 1966.</li>
+<li><strong>South Korea</strong>: dictatorship under Park Chung-hee built a modern industrial economy; democratized in the late 1980s.</li>
+<li><strong>Iran</strong>: U.S.-backed Shah modernized rapidly; overthrown in the <strong>1979 Islamic Revolution</strong> — Ayatollah Khomeini established the Islamic Republic.</li>
+</ul>
+<h4>Migration</h4>
+<ul>
+<li><strong>Postcolonial migration</strong>: South Asians to Britain, North Africans to France, Caribbean migrants to the U.S. and UK.</li>
+<li>Formation of <strong>multicultural societies</strong> in former imperial centers.</li>
+<li><strong>Refugee flows</strong> tied to war and partition (Palestinian, Bangladeshi, Vietnamese "boat people").</li>
+</ul>
+</div>
+<!-- TOPIC 8.7 -->
+<h2>Topic 8.7 — Global Resistance to Established Power Structures</h2>
+<div class="region-card region-resist">
+<h3>🪧 Movements from Below</h3>
+<h4>Civil Rights and Racial Equality</h4>
+<ul>
+<li><strong>U.S. Civil Rights Movement</strong>: Brown v. Board (1954), Montgomery Bus Boycott (1955–56), March on Washington (1963), Civil Rights Act (1964), Voting Rights Act (1965). Leaders: Martin Luther King Jr., Rosa Parks, Malcolm X.</li>
+<li><strong>South African Anti-Apartheid</strong>: Sharpeville Massacre (1960); African National Congress (<strong>Nelson Mandela</strong>); global boycotts and sanctions. Apartheid dismantled 1990–94; Mandela elected president 1994.</li>
+<li><strong>Indigenous rights</strong>: American Indian Movement (AIM, founded 1968); global push for indigenous recognition.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nelson_Mandela_1994_%28cropped%29.jpg?width=500" alt="Nelson Mandela in 1994" />
+<figcaption><strong>Nelson Mandela</strong> in 1994, the year he was inaugurated as the first president of a fully democratic South Africa, ending the apartheid system.</figcaption>
+</figure>
+<h4>Women's Rights</h4>
+<ul>
+<li><strong>Second-wave feminism</strong> (1960s–70s): Betty Friedan (<em>The Feminine Mystique</em>, 1963), Simone de Beauvoir, NOW, Gloria Steinem.</li>
+<li><strong>UN Decade for Women</strong> (1975–85); Mexico City (1975) and Beijing (1995) conferences.</li>
+<li>Growing legal reforms: contraception access, anti-discrimination laws, property rights, women's suffrage spreading to remaining holdouts (e.g., Swiss women gained federal vote 1971; Saudi women in municipal elections 2015).</li>
+</ul>
+<h4>Student and Youth Movements</h4>
+<ul>
+<li><strong>1968 global wave</strong>: Paris (May 1968), Prague Spring (crushed by Soviet tanks), Mexico City (Tlatelolco massacre), U.S. anti-Vietnam protests.</li>
+<li>Cultural transformation: rock music, counterculture, sexual revolution, critique of bureaucratic society.</li>
+</ul>
+<h4>Environmental Movement</h4>
+<ul>
+<li>Rachel Carson's <em>Silent Spring</em> (1962).</li>
+<li>First Earth Day (1970); Greenpeace (1971).</li>
+<li>Stockholm (1972), Rio (1992) UN environmental conferences.</li>
+</ul>
+<h4>LGBTQ+ Rights</h4>
+<ul>
+<li><strong>Stonewall riots</strong> (New York, 1969) helped launch the modern gay-rights movement; decades of activism followed.</li>
+</ul>
+<h4>Religious Resurgence</h4>
+<ul>
+<li><strong>Islamic revivalism</strong>: Muslim Brotherhood (Egypt), Iranian Revolution (1979), Afghan mujahideen.</li>
+<li><strong>Christian evangelical movements</strong> in the Americas and Africa.</li>
+<li><strong>Hindu nationalism</strong> in India (rise of the BJP from the 1980s).</li>
+</ul>
+<h4>Terrorism</h4>
+<ul>
+<li>Nationalist (IRA, ETA, PLO), ideological (Red Brigades, Baader-Meinhof), and religious extremist (al-Qaeda after 1988) terrorism rose in this period.</li>
+</ul>
+</div>
+<!-- TOPIC 8.8 -->
+<h2>Topic 8.8 — End of the Cold War</h2>
+<div class="region-card region-endcold">
+<h3>🕊️ 1985–1991</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg?width=700" alt="East and West Germans at Brandenburg Gate, 1989" />
+<figcaption>East and West Germans together atop the Berlin Wall at the Brandenburg Gate, November 1989 — an iconic image of the Cold War's end.</figcaption>
+</figure>
+<h4>Causes of Soviet Decline</h4>
+<ul>
+<li><strong>Economic stagnation</strong>: planned economy unable to match Western innovation or consumer goods.</li>
+<li><strong>Arms race</strong>: Reagan-era U.S. military buildup strained Soviet budgets.</li>
+<li><strong>Afghanistan quagmire</strong> (1979–89): the USSR's "Vietnam."</li>
+<li><strong>Nationalist unrest</strong> in the Baltic republics, Ukraine, and the Caucasus.</li>
+<li><strong>Dissidents</strong> (Solzhenitsyn, Sakharov) and Eastern European opposition (Poland's <strong>Solidarity</strong>, 1980).</li>
+</ul>
+<h4>Gorbachev's Reforms</h4>
+<ul>
+<li><strong>Mikhail Gorbachev</strong> became General Secretary in 1985.</li>
+<li><strong>Glasnost</strong> ("openness"): loosened censorship, encouraged public debate.</li>
+<li><strong>Perestroika</strong> ("restructuring"): limited market reforms to the Soviet economy.</li>
+<li>Renounced the <strong>Brezhnev Doctrine</strong> — signaling that the USSR would not intervene militarily to save communist regimes in Eastern Europe.</li>
+</ul>
+<h4>Revolutions of 1989</h4>
+<ul>
+<li><strong>Poland</strong>: Solidarity won semi-free elections.</li>
+<li><strong>Hungary</strong> opened its border with Austria.</li>
+<li><strong>East Germany</strong>: mass protests; the <strong>Berlin Wall fell</strong> on 9 November 1989.</li>
+<li><strong>Czechoslovakia</strong>: Velvet Revolution (Václav Havel).</li>
+<li><strong>Romania</strong>: violent overthrow of Ceaușescu.</li>
+</ul>
+<h4>China's Divergent Path — Tiananmen Square</h4>
+<ul>
+<li>In 1989, Chinese students occupied Tiananmen Square demanding political reform.</li>
+<li>On 4 June 1989, the Chinese Communist Party crushed the protests — preserving one-party rule even as Deng continued market reforms.</li>
+</ul>
+<h4>Collapse of the Soviet Union</h4>
+<ul>
+<li>Baltic states declared independence (1990); Ukraine, Belarus, Russia, and other republics followed.</li>
+<li>Failed August 1991 coup against Gorbachev by hardliners accelerated the end.</li>
+<li>On <strong>25 December 1991</strong>, Gorbachev resigned; the USSR formally dissolved into 15 independent states.</li>
+</ul>
+<h4>Immediate Consequences</h4>
+<ul>
+<li><strong>Unipolar moment</strong>: U.S. as sole superpower.</li>
+<li>Former Warsaw Pact members joined NATO and the EU in the 1990s-2000s.</li>
+<li><strong>Yugoslavia</strong> disintegrated into bloody wars (1991–99) — including the Bosnian War and Kosovo.</li>
+<li>Post-Soviet economic turmoil in Russia; rise of oligarchs; later Putin's authoritarianism (from 2000).</li>
+</ul>
+</div>
+<!-- TOPIC 8.9 -->
+<h2>Topic 8.9 — Causation in the Age of the Cold War and Decolonization</h2>
+<div class="region-card region-causation">
+<h3>🔄 Synthesizing Unit 8</h3>
+<div style="overflow-x:auto;">
+<table class="compare-table">
+<thead>
+<tr>
+<th>Path to Independence</th>
+<th>Example</th>
+<th>Key Method</th>
+<th>Cold War Involvement</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Mass nonviolence</strong></td><td>India (1947)</td><td>Gandhi's satyagraha; negotiation with Britain</td><td>Limited; India led the Non-Aligned Movement</td></tr>
+<tr><td><strong>Negotiated transfer</strong></td><td>Ghana (1957)</td><td>Strikes and political mobilization under Nkrumah</td><td>Ghana flirted with both blocs; eventually tilted leftward</td></tr>
+<tr><td><strong>Armed liberation</strong></td><td>Algeria (1962), Vietnam (1945–75)</td><td>Guerrilla war against European power</td><td>Intense — especially in Vietnam</td></tr>
+<tr><td><strong>Revolutionary communism</strong></td><td>Cuba (1959)</td><td>Guerrilla insurgency</td><td>Direct Soviet alignment</td></tr>
+<tr><td><strong>Apartheid-era struggle</strong></td><td>South Africa (to 1994)</td><td>ANC politics, boycotts, sanctions, armed wing</td><td>Some Soviet support for ANC; Cold War ended before apartheid did</td></tr>
+</tbody>
+</table>
+</div>
+<h4>Continuities</h4>
+<ul>
+<li>Industrial, globally connected economies continued to integrate through the Cold War era.</li>
+<li>Nationalism remained a dominant political force.</li>
+<li>Inequalities between global "North" and "South" persisted and in some ways deepened.</li>
+<li>Violent conflict continued worldwide, often fueled by superpower competition.</li>
+</ul>
+<h4>Changes</h4>
+<ul>
+<li><strong>End of formal European empires</strong>: new sovereign states in Africa, Asia, and the Caribbean.</li>
+<li><strong>Rise and fall of Soviet communism</strong>; Chinese communism reshaped into a market-Leninist system.</li>
+<li><strong>Superpower rivalry replaced multipolar great-power politics</strong>, then gave way in 1991 to a U.S.-led "unipolar moment."</li>
+<li><strong>Global human rights regime</strong> (UN, civil rights, women's rights) shaped political vocabulary worldwide.</li>
+</ul>
+<h4>Looking Forward to Unit 9</h4>
+<ul>
+<li>Post-1991 <strong>globalization</strong> accelerated with the end of the Cold War.</li>
+<li>Ethnic and religious conflicts reemerged (Yugoslavia, Rwanda, Chechnya).</li>
+<li>Technology (internet, mobile phones) revolutionized communication.</li>
+<li>New challenges emerged: climate change, terrorism, pandemics, rising inequality.</li>
+</ul>
+</div>
+<!-- VOCAB -->
+<h2>📚 Key Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-item"><span class="vocab-term">Cold War</span>1945–1991 geopolitical rivalry between the U.S. and the USSR.</div>
+<div class="vocab-item"><span class="vocab-term">Iron Curtain</span>Churchill's term for the Soviet-dominated boundary in Europe.</div>
+<div class="vocab-item"><span class="vocab-term">Containment</span>U.S. strategy of preventing the spread of communism (Kennan).</div>
+<div class="vocab-item"><span class="vocab-term">Truman Doctrine</span>1947 U.S. pledge to support "free peoples" resisting communism.</div>
+<div class="vocab-item"><span class="vocab-term">Marshall Plan</span>U.S. economic aid program to rebuild postwar Western Europe.</div>
+<div class="vocab-item"><span class="vocab-term">NATO</span>1949 U.S.-led Western military alliance.</div>
+<div class="vocab-item"><span class="vocab-term">Warsaw Pact</span>1955 Soviet-led Eastern European military alliance.</div>
+<div class="vocab-item"><span class="vocab-term">Berlin Airlift</span>1948–49 U.S./UK supply of West Berlin during Soviet blockade.</div>
+<div class="vocab-item"><span class="vocab-term">Berlin Wall</span>1961–89 fortified wall dividing East and West Berlin.</div>
+<div class="vocab-item"><span class="vocab-term">Proxy war</span>Third-party conflict in which superpowers backed opposing sides.</div>
+<div class="vocab-item"><span class="vocab-term">Korean War</span>1950–53 war that entrenched Cold War divisions in East Asia.</div>
+<div class="vocab-item"><span class="vocab-term">Vietnam War</span>1955–75 conflict ending in communist victory.</div>
+<div class="vocab-item"><span class="vocab-term">Cuban Revolution</span>1959 Castro-led revolution producing a Soviet-aligned Cuba.</div>
+<div class="vocab-item"><span class="vocab-term">Cuban Missile Crisis</span>1962 nuclear confrontation over Soviet missiles in Cuba.</div>
+<div class="vocab-item"><span class="vocab-term">Mutually Assured Destruction (MAD)</span>Doctrine that nuclear retaliation would destroy both sides.</div>
+<div class="vocab-item"><span class="vocab-term">Détente</span>Period of reduced Cold War tensions in the 1960s–70s.</div>
+<div class="vocab-item"><span class="vocab-term">Non-Aligned Movement</span>Coalition of states refusing Cold War alignment.</div>
+<div class="vocab-item"><span class="vocab-term">Bandung Conference</span>1955 meeting of African and Asian states promoting non-alignment.</div>
+<div class="vocab-item"><span class="vocab-term">Decolonization</span>Process by which colonies gained independence, esp. 1945–1980.</div>
+<div class="vocab-item"><span class="vocab-term">Satyagraha</span>Gandhi's philosophy of nonviolent civil disobedience.</div>
+<div class="vocab-item"><span class="vocab-term">Salt March</span>Gandhi's 1930 anti-tax march to the sea.</div>
+<div class="vocab-item"><span class="vocab-term">Partition of India</span>1947 split of British India into India and Pakistan.</div>
+<div class="vocab-item"><span class="vocab-term">Nakba</span>Palestinian displacement during the 1948 Arab–Israeli war.</div>
+<div class="vocab-item"><span class="vocab-term">Suez Crisis</span>1956 British-French-Israeli attack on Egypt over the Suez Canal.</div>
+<div class="vocab-item"><span class="vocab-term">Pan-Africanism</span>Movement asserting solidarity among peoples of African descent.</div>
+<div class="vocab-item"><span class="vocab-term">Apartheid</span>South African system of racial segregation (1948–1994).</div>
+<div class="vocab-item"><span class="vocab-term">African National Congress (ANC)</span>South African anti-apartheid organization.</div>
+<div class="vocab-item"><span class="vocab-term">Mau Mau Uprising</span>1952–60 Kenyan armed resistance to British rule.</div>
+<div class="vocab-item"><span class="vocab-term">Cultural Revolution</span>Mao's 1966–76 mass political campaign in China.</div>
+<div class="vocab-item"><span class="vocab-term">Great Leap Forward</span>1958–62 Chinese industrialization/commune drive; catastrophic famine.</div>
+<div class="vocab-item"><span class="vocab-term">Asian Tigers</span>South Korea, Taiwan, Hong Kong, Singapore — rapid export growth.</div>
+<div class="vocab-item"><span class="vocab-term">Import substitution industrialization</span>Protectionist strategy to build domestic industry.</div>
+<div class="vocab-item"><span class="vocab-term">Islamic Revolution (Iran, 1979)</span>Overthrow of the Shah; creation of the Islamic Republic.</div>
+<div class="vocab-item"><span class="vocab-term">Glasnost</span>Gorbachev's "openness" policy.</div>
+<div class="vocab-item"><span class="vocab-term">Perestroika</span>Gorbachev's "restructuring" of the Soviet economy.</div>
+<div class="vocab-item"><span class="vocab-term">Solidarity</span>Polish labor-led movement challenging communist rule.</div>
+<div class="vocab-item"><span class="vocab-term">Tiananmen Square</span>Site of 1989 Chinese pro-democracy protests and crackdown.</div>
+<div class="vocab-item"><span class="vocab-term">Dissolution of the USSR</span>December 1991 breakup of the Soviet Union into 15 states.</div>
+</div>
+<!-- MCQs -->
+<div class="quiz-container">
+<h2>📝 Multiple Choice Practice</h2>
+<p>Three questions per sub-topic (27 total). Click an answer to check it.</p>
+<!-- 8.1 -->
+<h3 class="quiz-subheading">Topic 8.1 — Setting the Stage</h3>
+<div class="quiz-question">
+<p><strong>1. Which of the following BEST describes the postwar international system established in 1945?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) A continuation of the 1919 system.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) A bipolar order dominated by the U.S. and USSR, with new institutions (UN, IMF, World Bank) and an emerging U.S.–Soviet ideological rivalry.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) A return to 19th-century multipolar great-power balance.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) An Axis-dominated world.</div>
+</div>
+<div class="explanation" id="exp-1"><strong>Answer: B.</strong> By 1945 only the U.S. and USSR had global power projection, and new institutions and ideologies shaped the emerging Cold War.</div>
+</div>
+<div class="quiz-question">
+<p><strong>2. The Bretton Woods system (1944) established</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) NATO.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) The IMF, the World Bank, and a dollar-centered international monetary order.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) The Warsaw Pact.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) The Comintern.</div>
+</div>
+<div class="explanation" id="exp-2"><strong>Answer: B.</strong> Bretton Woods created the postwar financial architecture with the U.S. dollar at its center.</div>
+</div>
+<div class="quiz-question">
+<p><strong>3. Which factor MOST directly weakened European empires after 1945?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) A massive increase in European wealth.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) Economic and political exhaustion from WWII combined with strengthened colonial nationalist movements.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) An absence of nationalist organizing in colonies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Full Soviet conquest of Western Europe.</div>
+</div>
+<div class="explanation" id="exp-3"><strong>Answer: B.</strong> Europeans could not afford empire, and colonized peoples were better organized and more insistent than ever.</div>
+</div>
+<!-- 8.2 -->
+<h3 class="quiz-subheading">Topic 8.2 — The Cold War</h3>
+<div class="quiz-question">
+<p><strong>4. The U.S. strategy of "containment" (Kennan, 1946–47) held that</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) The U.S. should invade the USSR.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) The U.S. should block the expansion of Soviet influence through a combination of aid, alliances, and sometimes military response, expecting the Soviet system would eventually mellow or collapse.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) The U.S. should retreat to isolationism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) The USSR should be appeased indefinitely.</div>
+</div>
+<div class="explanation" id="exp-4"><strong>Answer: B.</strong> Containment shaped U.S. policy from the Truman Doctrine through Reagan.</div>
+</div>
+<div class="quiz-question">
+<p><strong>5. The Cuban Missile Crisis (October 1962)</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Was a minor Caribbean skirmish.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Brought the superpowers to the brink of nuclear war and ended with Soviet withdrawal of missiles in exchange for a U.S. pledge not to invade Cuba and the quiet removal of U.S. missiles from Turkey.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) Resulted in U.S. invasion of Cuba.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Led to the fall of the Soviet Union.</div>
+</div>
+<div class="explanation" id="exp-5"><strong>Answer: B.</strong> The crisis prompted later arms-control agreements and a hotline between Moscow and Washington.</div>
+</div>
+<div class="quiz-question">
+<p><strong>6. Which statement about Cold War military alliances is MOST accurate?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) NATO was a Soviet-led alliance.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) NATO (1949) was the U.S.-led Western alliance; the Warsaw Pact (1955) was the Soviet response in Eastern Europe.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) The Warsaw Pact included the U.S.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Both alliances merged in 1960.</div>
+</div>
+<div class="explanation" id="exp-6"><strong>Answer: B.</strong> The alliances structured the European Cold War.</div>
+</div>
+<!-- 8.3 -->
+<h3 class="quiz-subheading">Topic 8.3 — Effects of the Cold War</h3>
+<div class="quiz-question">
+<p><strong>7. The Non-Aligned Movement, associated with the 1955 Bandung Conference, sought to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) Join NATO.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) Chart a "Third Way" for newly independent states to avoid commitments to either Cold War bloc.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) Join the Warsaw Pact.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Revive formal European empire.</div>
+</div>
+<div class="explanation" id="exp-7"><strong>Answer: B.</strong> Leaders like Nehru, Tito, Nasser, and Nkrumah promoted nonalignment and solidarity among former colonies.</div>
+</div>
+<div class="quiz-question">
+<p><strong>8. Which country is the BEST example of a divided Cold War-era state?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) Switzerland.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 8)">(B) Korea (split at the 38th parallel in 1945 and still divided today).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(C) Brazil.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) Australia.</div>
+</div>
+<div class="explanation" id="exp-8"><strong>Answer: B.</strong> Korea is the most enduring Cold War-era division.</div>
+</div>
+<div class="quiz-question">
+<p><strong>9. The "military-industrial complex" described by Eisenhower in 1961 referred to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) Trade unions.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 9)">(B) The powerful alliance of the U.S. military, defense industries, and political supporters, whose interests shaped Cold War policy.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(C) Civilian consumer industries.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) Environmental organizations.</div>
+</div>
+<div class="explanation" id="exp-9"><strong>Answer: B.</strong> Eisenhower warned about the scale of permanent peacetime military spending.</div>
+</div>
+<!-- 8.4 -->
+<h3 class="quiz-subheading">Topic 8.4 — Spread of Communism</h3>
+<div class="quiz-question">
+<p><strong>10. Mao Zedong's Great Leap Forward (1958–1962)</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) Doubled Chinese GDP successfully.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) Attempted to collectivize agriculture and rapidly industrialize through communes; produced one of the deadliest famines in human history.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) Privatized Chinese industry.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) Restored the Qing dynasty.</div>
+</div>
+<div class="explanation" id="exp-10"><strong>Answer: B.</strong> Tens of millions are estimated to have died in the resulting famine.</div>
+</div>
+<div class="quiz-question">
+<p><strong>11. The 1959 Cuban Revolution led to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(A) Democratic elections under the Platt Amendment.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 11)">(B) Castro's establishment of a one-party communist state aligned with the USSR and a long U.S. embargo.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Cuban membership in NATO.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) A restoration of the monarchy.</div>
+</div>
+<div class="explanation" id="exp-11"><strong>Answer: B.</strong> Cuba became the most prominent communist state in the Western Hemisphere.</div>
+</div>
+<div class="quiz-question">
+<p><strong>12. The Khmer Rouge under Pol Pot (1975–1979) is associated with</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Establishment of democracy in Cambodia.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 12)">(B) A radical communist regime that carried out mass killings and forced labor, producing the Cambodian genocide.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(C) A pro-Western monarchy.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) The Chinese Cultural Revolution.</div>
+</div>
+<div class="explanation" id="exp-12"><strong>Answer: B.</strong> The Khmer Rouge killed roughly 1.7–2 million Cambodians.</div>
+</div>
+<!-- 8.5 -->
+<h3 class="quiz-subheading">Topic 8.5 — Decolonization</h3>
+<div class="quiz-question">
+<p><strong>13. Gandhi's strategy of satyagraha relied primarily on</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(A) Armed guerrilla warfare.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 13)">(B) Mass nonviolent civil disobedience, boycotts, and marches.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(C) Assassination of British officials.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(D) Support from the Soviet Union.</div>
+</div>
+<div class="explanation" id="exp-13"><strong>Answer: B.</strong> The Salt March (1930) and other nonviolent campaigns were hallmarks of Gandhi's strategy.</div>
+</div>
+<div class="quiz-question">
+<p><strong>14. The 1947 partition of India</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(A) Was a peaceful and smooth process.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 14)">(B) Divided British India into two states — India and Pakistan — and produced massive refugee flows and communal violence killing hundreds of thousands.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(C) Created a single Hindu state.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(D) Occurred in 1960.</div>
+</div>
+<div class="explanation" id="exp-14"><strong>Answer: B.</strong> ~14 million were displaced and ~1 million killed; partition also produced enduring India-Pakistan conflict (especially Kashmir).</div>
+</div>
+<div class="quiz-question">
+<p><strong>15. The Algerian War of Independence (1954–62) illustrates</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(A) A peaceful negotiated transition.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 15)">(B) A violent armed struggle against a European power, involving guerrilla warfare, urban terrorism, and French military counterinsurgency with widespread human-rights abuses.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(C) A Soviet invasion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(D) A purely political victory with no violence.</div>
+</div>
+<div class="explanation" id="exp-15"><strong>Answer: B.</strong> Algeria's war was one of the bloodiest decolonization conflicts and brought down the French Fourth Republic.</div>
+</div>
+<!-- 8.6 -->
+<h3 class="quiz-subheading">Topic 8.6 — Newly Independent States</h3>
+<div class="quiz-question">
+<p><strong>16. The "Asian Tigers" of the late 20th century (South Korea, Taiwan, Hong Kong, Singapore) grew rapidly through</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(A) Strict import substitution policies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 16)">(B) Export-led industrialization encouraged by state-directed investment in education and manufacturing.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(C) Rejection of global trade.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(D) Collective farming.</div>
+</div>
+<div class="explanation" id="exp-16"><strong>Answer: B.</strong> Export-led growth became the dominant development model in East Asia.</div>
+</div>
+<div class="quiz-question">
+<p><strong>17. Many postcolonial states used import substitution industrialization (ISI) to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(A) Increase dependence on foreign manufactures.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 17)">(B) Build domestic industries behind tariff walls and reduce dependence on imports.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(C) Abolish currencies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(D) Fully liberalize trade.</div>
+</div>
+<div class="explanation" id="exp-17"><strong>Answer: B.</strong> Widely used in Latin America and parts of Africa and Asia, ISI had mixed results and often led to debt by the 1980s.</div>
+</div>
+<div class="quiz-question">
+<p><strong>18. The 1979 Iranian Revolution</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(A) Restored Shah Reza Pahlavi.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 18)">(B) Overthrew the U.S.-backed Shah and established an Islamic Republic under Ayatollah Khomeini, shaping global politics and the Middle East for decades.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(C) Established a communist regime.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(D) Made Iran a NATO member.</div>
+</div>
+<div class="explanation" id="exp-18"><strong>Answer: B.</strong> The revolution introduced a new form of religiously grounded politics and reshaped U.S.–Iran relations.</div>
+</div>
+<!-- 8.7 -->
+<h3 class="quiz-subheading">Topic 8.7 — Global Resistance</h3>
+<div class="quiz-question">
+<p><strong>19. The U.S. Civil Rights Movement and the South African anti-apartheid movement</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(A) Had no international influence.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 19)">(B) Shared strategies (nonviolent protest, international pressure) and inspired each other across decades.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(C) Were both strictly armed movements.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(D) Opposed the UN.</div>
+</div>
+<div class="explanation" id="exp-19"><strong>Answer: B.</strong> Activists like King and Mandela drew on shared traditions of civil disobedience and international solidarity.</div>
+</div>
+<div class="quiz-question">
+<p><strong>20. Second-wave feminism in the 1960s–1970s primarily focused on</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(A) Securing women's suffrage for the first time.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 20)">(B) Equal opportunity in work and education, reproductive rights, and challenging gender-based discrimination beyond formal legal rights.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(C) Restoring traditional gender roles.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(D) Abolishing capitalism entirely.</div>
+</div>
+<div class="explanation" id="exp-20"><strong>Answer: B.</strong> Second-wave feminism extended earlier suffrage gains into workplace and personal life.</div>
+</div>
+<div class="quiz-question">
+<p><strong>21. Which of the following BEST illustrates the global student/youth movements of 1968?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(A) The Congress of Vienna.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 21)">(B) Simultaneous protests in Paris, Mexico City, Prague, and U.S. campuses challenging war, authoritarianism, and bureaucratic society.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(C) The Marshall Plan.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(D) The Truman Doctrine.</div>
+</div>
+<div class="explanation" id="exp-21"><strong>Answer: B.</strong> 1968 is often identified as a global year of youth revolt.</div>
+</div>
+<!-- 8.8 -->
+<h3 class="quiz-subheading">Topic 8.8 — End of the Cold War</h3>
+<div class="quiz-question">
+<p><strong>22. Gorbachev's policies of glasnost and perestroika aimed to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(A) Tighten totalitarian control.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 22)">(B) Modernize the USSR through greater openness and limited market reforms — reforms that ultimately loosened controls beyond his intent.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(C) Restore Stalinism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(D) Re-install the Romanov dynasty.</div>
+</div>
+<div class="explanation" id="exp-22"><strong>Answer: B.</strong> Glasnost and perestroika transformed Soviet politics and contributed to the collapse of the USSR.</div>
+</div>
+<div class="quiz-question">
+<p><strong>23. The fall of the Berlin Wall in November 1989 was significant because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(A) Triggered WWIII.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 23)">(B) Symbolized the collapse of communist regimes across Eastern Europe and the imminent end of the Cold War.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(C) Was rebuilt a year later.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(D) Was ordered by Stalin.</div>
+</div>
+<div class="explanation" id="exp-23"><strong>Answer: B.</strong> The wall's fall accompanied peaceful revolutions across Poland, Hungary, Czechoslovakia, and elsewhere.</div>
+</div>
+<div class="quiz-question">
+<p><strong>24. The 1989 Tiananmen Square crackdown illustrated that</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(A) Communist regimes everywhere were collapsing.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 24)">(B) Even as the Soviet bloc crumbled, the Chinese Communist Party was determined to suppress political liberalization while continuing economic reform.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(C) The CCP had lost all control.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(D) Deng Xiaoping resigned.</div>
+</div>
+<div class="explanation" id="exp-24"><strong>Answer: B.</strong> China's path diverged sharply from that of Eastern Europe.</div>
+</div>
+<!-- 8.9 -->
+<h3 class="quiz-subheading">Topic 8.9 — Causation</h3>
+<div class="quiz-question">
+<p><strong>25. Which of the following is the BEST example of how the Cold War shaped decolonization?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 25)">(A) European imperial expansion into Africa.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 25)">(B) Superpowers backing opposing factions in Angola's civil war after Portuguese withdrawal.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 25)">(C) The Berlin Conference.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 25)">(D) Mughal succession.</div>
+</div>
+<div class="explanation" id="exp-25"><strong>Answer: B.</strong> Angola's MPLA–UNITA conflict is a classic Cold War proxy war intersecting with decolonization.</div>
+</div>
+<div class="quiz-question">
+<p><strong>26. A major continuity from 1945 through 1991 was</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 26)">(A) The absence of nuclear weapons.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 26)">(B) The persistence of nationalism as a driver of political mobilization, including among decolonizing peoples and inside the USSR.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 26)">(C) The expansion of European formal empires.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 26)">(D) The disappearance of inequality.</div>
+</div>
+<div class="explanation" id="exp-26"><strong>Answer: B.</strong> Nationalism animated independence movements, European integration debates, and ultimately the Soviet Union's own dissolution.</div>
+</div>
+<div class="quiz-question">
+<p><strong>27. Which is a long-term change produced by the Cold War and decolonization by 1991?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 27)">(A) A more divided Europe than in 1945.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 27)">(B) A sharp expansion of the number of sovereign states (nearly tripling in the UN) and a global human rights vocabulary.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 27)">(C) The return of Europe's colonial empires.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 27)">(D) The abolition of nuclear weapons.</div>
+</div>
+<div class="explanation" id="exp-27"><strong>Answer: B.</strong> The UN grew from ~51 founding members (1945) to ~180 by 1991; the rise of formal human rights discourse is another major legacy.</div>
+</div>
+</div>
+<!-- SAQs -->
+<h2>✍️ Short-Answer Practice (SAQ)</h2>
+<div class="saq-box">
+<h3>SAQ 1 — Cold War and Decolonization (No Stimulus)</h3>
+<ol type="a">
+<li>Identify ONE way the Cold War shaped decolonization in the period 1945–1991.</li>
+<li>Explain ONE method colonized peoples used to gain independence from a European power.</li>
+<li>Explain ONE challenge faced by newly independent states after 1945.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The Cold War shaped decolonization by turning independence struggles into proxy wars: in Angola, for example, the Soviet Union and Cuba backed the MPLA while the U.S. and South Africa backed UNITA, making postcolonial politics a site of superpower rivalry rather than purely local concerns.</p>
+<p><strong>(b)</strong> In India, Mohandas Gandhi led a campaign of nonviolent civil disobedience — <em>satyagraha</em> — including the 1930 Salt March and mass boycotts of British goods, which along with the Indian National Congress's political mobilization forced Britain to negotiate independence in 1947.</p>
+<p><strong>(c)</strong> Many newly independent African states inherited borders drawn at the Berlin Conference that cut across ethnic and linguistic lines; this contributed to civil wars and separatist movements, such as the Biafran War in Nigeria (1967–70), as new states struggled to build unity.</p>
+</details>
+</div>
+<div class="saq-box">
+<h3>SAQ 2 — Stimulus (Kennedy on the Berlin Wall, 1963)</h3>
+<p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+"Freedom has many difficulties and democracy is not perfect, but we have never had to put a wall up
+to keep our people in, to prevent them from leaving us... All free men, wherever they may live, are
+citizens of Berlin, and, therefore, as a free man, I take pride in the words 'Ich bin ein Berliner.'"
+<br><em>— President John F. Kennedy, speech in West Berlin, 1963</em>
+</p>
+<ol type="a">
+<li>Identify ONE purpose of Kennedy's use of the image of the Berlin Wall in this speech.</li>
+<li>Explain ONE specific historical context from the early 1960s that helps explain Kennedy's speech.</li>
+<li>Explain ONE long-term consequence for Europe of the division symbolized by the Berlin Wall.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> Kennedy uses the Berlin Wall as concrete evidence that communist regimes had to physically imprison their own citizens, framing the Cold War as a moral contest between freedom and tyranny in order to rally Western Europeans behind U.S. leadership.</p>
+<p><strong>(b)</strong> The Wall had been built only two years earlier, in August 1961, amid sharp U.S.–Soviet tension that had just culminated in the Cuban Missile Crisis (October 1962); Kennedy's visit sought to reassure West Germans that the United States remained committed to defending them despite those tensions.</p>
+<p><strong>(c)</strong> The Berlin Wall symbolized the division of Germany and Europe into NATO and Warsaw Pact blocs for nearly three decades; when it fell in November 1989, its collapse triggered the rapid unraveling of communist regimes in Eastern Europe and the end of the Cold War in 1991.</p>
+</details>
+</div>
+<!-- KEY TAKEAWAYS -->
+<h2>⭐ Key Takeaways</h2>
+<div class="key-takeaways">
+<ul>
+<li><strong>A bipolar world replaced European hegemony.</strong> The U.S. and USSR structured global politics from 1945 through 1991.</li>
+<li><strong>Cold War rivalry was fought mostly through proxies.</strong> Korea, Vietnam, Afghanistan, Angola, Latin American coups — not direct U.S.–Soviet combat.</li>
+<li><strong>Decolonization transformed the map.</strong> Nearly all of Africa, Asia, and the Caribbean gained independence, mostly between 1945 and 1975.</li>
+<li><strong>Non-alignment mattered.</strong> Leaders like Nehru, Nasser, and Nkrumah worked to keep the Global South from becoming mere Cold War pawns.</li>
+<li><strong>Communism expanded then contracted.</strong> From the USSR and China through Cuba and Indochina — before Eastern European collapse and the Soviet dissolution in 1991.</li>
+<li><strong>Social movements reshaped politics.</strong> Civil rights, anti-apartheid, feminism, student protest, environmentalism, LGBTQ+ rights, and religious revival all rose globally in this era.</li>
+<li><strong>1989–91 was a turning point.</strong> Soviet collapse ended the Cold War and opened the door to post-1991 globalization and new challenges (→ Unit 9).</li>
+</ul>
+</div>
+<p style="text-align:center; margin-top:2rem;">
+<a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+</p>
+</div>
+<script>
+function checkAnswer(element, isCorrect, qNum) {
+const options = element.parentElement.querySelectorAll('.quiz-option');
+options.forEach(o => o.classList.remove('correct', 'incorrect'));
+element.classList.add(isCorrect ? 'correct' : 'incorrect');
+const exp = document.getElementById('exp-' + qNum);
+if (exp) exp.classList.add('show');
+}
+</script>
+</body>
+</html>
