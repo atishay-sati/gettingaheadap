@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TMSR9LD4H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AP World History: Modern Unit 7 — Global Conflict (c. 1900–present). In-depth notes on World War I, the interwar period, World War II, mass atrocities, and causation — with photos, MCQs, and SAQs." />
+<title>Unit 7: Global Conflict (c. 1900–present)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf6f1; color: #333; line-height: 1.6; }
+.container { max-width: 980px; margin: 2rem auto; padding: 2rem 1.5rem; background: white; border-radius: 10px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }
+h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: #8b4513; }
+h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+.subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+h3 { color: #a0522d; margin-top: 1.5rem; }
+h4 { color: #8b4513; margin-top: 1rem; }
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+.back-link { display: inline-block; margin-bottom: 1rem; color: #8b4513; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+.back-link:hover { text-decoration: underline; transform: scale(1.02); }
+.overview-box { background: linear-gradient(135deg, #fde7c9, #fff3e0); border-left: 6px solid #d2691e; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+.weighting-badge { display: inline-block; background: #8b4513; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+figure.photo { margin: 1.2rem 0; text-align: center; }
+figure.photo img { width: 100%; max-width: 640px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+figure.photo figcaption { font-size: 0.92rem; color: #666; margin-top: 0.4rem; font-style: italic; }
+.timeline { position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 4px solid #d2691e; }
+.timeline-event { position: relative; margin-bottom: 1.4rem; padding: 0.8rem 1rem; background: #fff8ef; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+.timeline-event::before { content: ""; position: absolute; left: -2.55rem; top: 1.1rem; width: 14px; height: 14px; background: #8b4513; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #d2691e; }
+.timeline-date { display: inline-block; font-weight: 700; color: #8b4513; margin-right: 0.5rem; }
+.region-card { border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-left: 6px solid; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.region-shift { border-color: #5e35b1; background: #ede7f6; }
+.region-wwi-cause { border-color: #c62828; background: #ffebee; }
+.region-wwi-fight { border-color: #37474f; background: #eceff1; }
+.region-interwar { border-color: #ef6c00; background: #fff3e0; }
+.region-tension { border-color: #ad1457; background: #fce4ec; }
+.region-wwii-cause{ border-color: #b71c1c; background: #ffebee; }
+.region-wwii-fight{ border-color: #0277bd; background: #e1f5fe; }
+.region-atrocity { border-color: #4e342e; background: #efebe9; }
+.region-causation { border-color: #455a64; background: #eceff1; }
+.region-card h3 { margin-top: 0; }
+.vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+.vocab-item { background: #fff8ef; border: 1px solid #e0c9a6; border-radius: 8px; padding: 0.8rem 1rem; }
+.vocab-term { font-weight: 700; color: #8b4513; display: block; margin-bottom: 0.2rem; }
+.compare-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+.compare-table th, .compare-table td { border: 1px solid #e0c9a6; padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+.compare-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: white; }
+.compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+.quiz-container { background: linear-gradient(135deg, #fde7c9, #fff8ef); border: 2px solid #8b4513; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+.quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+.quiz-subheading { font-family: 'Montserrat', sans-serif; color: #a0522d; font-weight: 700; margin-top: 1.5rem; border-bottom: 1px dashed #a0522d; padding-bottom: 0.2rem; }
+.quiz-question { margin-bottom: 1.5rem; }
+.quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.quiz-option { padding: 0.6rem 0.8rem; border: 1px solid #8b4513; border-radius: 6px; cursor: pointer; background: white; transition: background-color 0.2s; }
+.quiz-option:hover { background-color: #fff3e0; }
+.quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+.quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+.explanation { display: none; margin-top: 0.6rem; padding: 0.8rem; background: #fff; border-left: 4px solid #8b4513; border-radius: 6px; font-size: 0.95rem; }
+.explanation.show { display: block; }
+.saq-box { background: #fff; border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; }
+.saq-box h3 { margin-top: 0; }
+details.saq-sample { margin-top: 0.8rem; background: #fff8ef; border: 1px dashed #8b4513; border-radius: 6px; padding: 0.6rem 0.9rem; }
+details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+.key-takeaways { background: linear-gradient(135deg, #fff3e0, #fde7c9); border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+<h1>Unit 7: Global Conflict</h1>
+<p class="subtitle">c. 1900 – present &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 8–10%</span></p>
+<!-- OVERVIEW -->
+<div class="overview-box">
+<h3 style="margin-top:0;">💣 Unit Overview</h3>
+<p>
+The first half of the 20th century was the most destructive period in human history. Two
+<strong>world wars</strong>, a <strong>global depression</strong>, and new <strong>totalitarian
+ideologies</strong> killed tens of millions, produced unprecedented atrocities including the
+<strong>Holocaust</strong>, and redrew the map of the world. Old empires collapsed; the United
+States and the Soviet Union emerged as superpowers; colonized peoples used the wars to accelerate
+demands for independence.
+</p>
+<p style="margin-bottom:0;">
+<strong>Big question:</strong> Why did the early 20th century produce two world wars and mass
+atrocities, and how did these conflicts transform the global political, economic, and social order?
+</p>
+</div>
+<!-- TIMELINE -->
+<h2>🗓️ Unit 7 Timeline</h2>
+<div class="timeline">
+<div class="timeline-event"><span class="timeline-date">1904–05:</span> <strong>Russo-Japanese War</strong> — Japan defeats a European great power.</div>
+<div class="timeline-event"><span class="timeline-date">1911:</span> <strong>Chinese Revolution</strong> ends the Qing dynasty.</div>
+<div class="timeline-event"><span class="timeline-date">1914:</span> Assassination of <strong>Archduke Franz Ferdinand</strong>; <strong>World War I</strong> begins.</div>
+<div class="timeline-event"><span class="timeline-date">1915:</span> <strong>Armenian Genocide</strong> begins under the Ottomans.</div>
+<div class="timeline-event"><span class="timeline-date">1917:</span> <strong>Russian Revolution</strong>; U.S. enters WWI.</div>
+<div class="timeline-event"><span class="timeline-date">1918:</span> Armistice ends WWI; global <strong>influenza pandemic</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1919:</span> <strong>Treaty of Versailles</strong>; League of Nations; May Fourth Movement (China).</div>
+<div class="timeline-event"><span class="timeline-date">1922:</span> Mussolini comes to power in <strong>Italy</strong>; USSR founded.</div>
+<div class="timeline-event"><span class="timeline-date">1929:</span> U.S. stock market crash triggers the <strong>Great Depression</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1931:</span> Japan invades <strong>Manchuria</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1933:</span> <strong>Hitler</strong> appointed Chancellor of Germany; New Deal begins in U.S.</div>
+<div class="timeline-event"><span class="timeline-date">1935–39:</span> Italy invades Ethiopia; Spanish Civil War; Germany remilitarizes &amp; annexes Austria and Czechoslovakia.</div>
+<div class="timeline-event"><span class="timeline-date">1937:</span> Japan invades China; <strong>Rape of Nanjing</strong>.</div>
+<div class="timeline-event"><span class="timeline-date">1939:</span> <strong>Germany invades Poland</strong>; WWII in Europe begins.</div>
+<div class="timeline-event"><span class="timeline-date">1941:</span> Germany invades USSR; Japan attacks <strong>Pearl Harbor</strong>; U.S. enters WWII.</div>
+<div class="timeline-event"><span class="timeline-date">1942–43:</span> <strong>Stalingrad</strong>, Midway, El Alamein — turning points.</div>
+<div class="timeline-event"><span class="timeline-date">1941–45:</span> <strong>Holocaust</strong>: Nazi Germany murders six million Jews and millions of others.</div>
+<div class="timeline-event"><span class="timeline-date">1945:</span> Germany surrenders; atomic bombs on <strong>Hiroshima &amp; Nagasaki</strong>; Japan surrenders; UN founded.</div>
+<div class="timeline-event"><span class="timeline-date">1947:</span> Indian independence and partition.</div>
+<div class="timeline-event"><span class="timeline-date">1948–49:</span> Creation of Israel; Berlin Airlift; Chinese Communist Revolution.</div>
+</div>
+<!-- TOPIC 7.1 -->
+<h2>Topic 7.1 — Shifting Power After 1900</h2>
+<div class="region-card region-shift">
+<h3>🔄 Old Empires Crumble, New Powers Rise</h3>
+<p>Entering the 20th century, the great empires of the 19th century were under stress. Industrialization had produced new powers; nationalism challenged multi-ethnic empires from within; Japan and the U.S. joined the imperial club.</p>
+<h4>Decline of the Traditional Land Empires</h4>
+<ul>
+<li><strong>Ottoman Empire</strong>: "Sick Man of Europe." <strong>Young Turk Revolution</strong> (1908) restored the 1876 constitution; nationalist movements in the Balkans broke away (1878 and 1912–1913).</li>
+<li><strong>Qing China</strong>: <strong>Boxer Rebellion</strong> (1899–1901) humiliated by the Eight-Nation Alliance; <strong>1911 Revolution</strong> overthrew the dynasty; <strong>Sun Yat-sen</strong> founded the Republic of China.</li>
+<li><strong>Russia</strong>: Defeated by Japan in <strong>1905</strong>; <strong>Revolution of 1905</strong> forced the Tsar to accept a Duma; autocracy survived weakened.</li>
+</ul>
+<h4>Rise of New Powers</h4>
+<ul>
+<li><strong>Germany</strong> under Kaiser Wilhelm II pursued <em>Weltpolitik</em> — a global role, large navy, African and Pacific colonies.</li>
+<li><strong>United States</strong>: victory in the <strong>Spanish-American War</strong> (1898) produced an overseas empire (Philippines, Puerto Rico, Guam); Roosevelt Corollary (1904) asserted hegemony in the Americas.</li>
+<li><strong>Japan</strong>: defeated China (1895) and Russia (1905), making it the first non-Western industrial power to defeat a European empire — inspiring colonized peoples worldwide.</li>
+</ul>
+<h4>Revolutionary Currents</h4>
+<ul>
+<li><strong>Mexican Revolution</strong> (1910–1920) — peasant revolt under Zapata and Villa; produced the 1917 Constitution.</li>
+<li><strong>Chinese Revolution</strong> (1911) ended 2,000+ years of imperial rule.</li>
+<li>Widespread <strong>labor and socialist movements</strong> across Europe, the Americas, and the colonies.</li>
+</ul>
+</div>
+<!-- TOPIC 7.2 -->
+<h2>Topic 7.2 — Causes of World War I</h2>
+<div class="region-card region-wwi-cause">
+<h3>🎯 Why 1914?</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Archduke_Franz_Ferdinand_of_Austria_and_Sophie_Chotek.jpg?width=500" alt="Franz Ferdinand and Sophie" />
+<figcaption>Archduke <strong>Franz Ferdinand</strong> of Austria-Hungary and his wife Sophie. Their assassination in Sarajevo on 28 June 1914 by <strong>Gavrilo Princip</strong> triggered the outbreak of World War I.</figcaption>
+</figure>
+<h4>Long-Term Causes (The "MAIN" Causes)</h4>
+<ul>
+<li><strong>M</strong>ilitarism — especially the Anglo-German naval race and glorification of war.</li>
+<li><strong>A</strong>lliances — <strong>Triple Entente</strong> (Britain, France, Russia) vs. <strong>Triple Alliance</strong> (Germany, Austria-Hungary, Italy) made local crises continental.</li>
+<li><strong>I</strong>mperialism — colonial rivalries (Morocco, Balkans, Africa) produced repeated war scares.</li>
+<li><strong>N</strong>ationalism — aggressive state nationalism and ethnic nationalisms in the Balkans.</li>
+</ul>
+<h4>The Balkans Powder Keg</h4>
+<ul>
+<li>Ottoman decline in the Balkans created unstable new states (Serbia, Bulgaria, Greece).</li>
+<li>Austria-Hungary, a multinational empire, feared Serbian-led South Slav nationalism.</li>
+<li>The <strong>Balkan Wars</strong> (1912–1913) redrew the region and left Serbia strengthened.</li>
+</ul>
+<h4>The Immediate Crisis</h4>
+<ol>
+<li><strong>28 June 1914</strong>: Assassination of Franz Ferdinand by Gavrilo Princip (Young Bosnia).</li>
+<li><strong>Austria-Hungary</strong> issued an ultimatum to Serbia.</li>
+<li><strong>Russia</strong> mobilized to defend Serbia.</li>
+<li><strong>Germany</strong> declared war on Russia, then France; invaded neutral Belgium (Schlieffen Plan).</li>
+<li><strong>Britain</strong> entered to defend Belgian neutrality.</li>
+<li>By early August 1914, all the major powers were at war.</li>
+</ol>
+</div>
+<!-- TOPIC 7.3 -->
+<h2>Topic 7.3 — Conducting World War I</h2>
+<div class="region-card region-wwi-fight">
+<h3>⚔️ Total War, Global War</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cheshire_Regiment_trench_Somme_1916.jpg?width=700" alt="British trench on the Somme, 1916" />
+<figcaption>Men of the Cheshire Regiment in a trench near La Boisselle on the Somme, July 1916. Trench warfare produced years of stalemate and massive casualties on the Western Front.</figcaption>
+</figure>
+<h4>New Warfare</h4>
+<ul>
+<li><strong>Trench warfare</strong> dominated the Western Front.</li>
+<li>Industrial-scale firepower: <strong>machine guns</strong>, rapid-fire artillery, <strong>barbed wire</strong>.</li>
+<li>New weapons: <strong>poison gas</strong>, tanks (1916), submarines (U-boats), and <strong>airplanes</strong>.</li>
+<li>Massive battles: <strong>Somme</strong> and <strong>Verdun</strong> (1916) each cost about a million casualties.</li>
+</ul>
+<h4>Total War &amp; Home Fronts</h4>
+<ul>
+<li>Governments <strong>directed economies</strong>: rationing, war bonds, price controls.</li>
+<li><strong>Propaganda</strong> targeted civilians to sustain morale.</li>
+<li><strong>Women</strong> entered factories, public transport, and nursing in unprecedented numbers — contributing to post-war expansions of women's suffrage (UK 1918/28, U.S. 1920, Germany 1919).</li>
+<li><strong>Colonial soldiers &amp; laborers</strong>: ~1 million Indians, ~600,000 French colonial troops, African porters, Chinese laborers served on and behind the fronts.</li>
+</ul>
+<h4>A Truly Global War</h4>
+<ul>
+<li><strong>Ottoman Empire</strong> joined the Central Powers (1914) — fighting in the Caucasus, Gallipoli, Arab revolt (T. E. Lawrence).</li>
+<li><strong>Japan</strong> joined the Allies, seizing German possessions in Asia and the Pacific.</li>
+<li>Campaigns in <strong>East Africa</strong>, Mesopotamia, Palestine.</li>
+<li><strong>U.S. entry</strong> (April 1917) provided decisive manpower and resources.</li>
+</ul>
+<h4>Russia Exits, Germany Collapses</h4>
+<ul>
+<li><strong>Russian Revolution</strong> (1917): Tsar Nicholas II abdicated in February; <strong>Bolsheviks</strong> under Lenin took power in October.</li>
+<li><strong>Treaty of Brest-Litovsk</strong> (March 1918) pulled Russia out of the war.</li>
+<li>Germany's Spring Offensives (1918) failed; Allied counterattacks forced armistice on <strong>11 November 1918</strong>.</li>
+</ul>
+<h4>Treaty of Versailles (1919)</h4>
+<ul>
+<li>Placed sole <strong>"war guilt"</strong> on Germany (Article 231).</li>
+<li>Demanded heavy <strong>reparations</strong>.</li>
+<li>Reduced German military, stripped Germany of colonies and territories.</li>
+<li>Created new states (Poland, Czechoslovakia, Yugoslavia); redrew Ottoman and Austro-Hungarian borders.</li>
+<li>Established the <strong>League of Nations</strong> — without U.S. membership, weakening it.</li>
+<li>Ottoman territories partitioned (Sykes-Picot, 1916; <strong>Mandate system</strong>): Britain got Iraq, Palestine, Transjordan; France got Syria, Lebanon.</li>
+</ul>
+</div>
+<!-- TOPIC 7.4 -->
+<h2>Topic 7.4 — The Economy in the Interwar Period</h2>
+<div class="region-card region-interwar">
+<h3>📉 Boom, Bust, and the Great Depression</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lange-MigrantMother02.jpg?width=500" alt="Dorothea Lange, Migrant Mother" />
+<figcaption>Dorothea Lange, <em>Migrant Mother</em> (1936). The photograph came to symbolize the human toll of the Great Depression on rural America.</figcaption>
+</figure>
+<h4>The Roaring Twenties and Its Fault Lines</h4>
+<ul>
+<li>The U.S. became the world's leading industrial and creditor nation.</li>
+<li>Europe's recovery depended heavily on <strong>American loans</strong> (Dawes Plan, 1924).</li>
+<li><strong>Weimar Germany</strong> faced hyperinflation (1923), then stabilized — but politics remained fragile.</li>
+<li>Agricultural overproduction and farm debt were chronic problems worldwide.</li>
+</ul>
+<h4>The Great Depression (1929–c. 1939)</h4>
+<ul>
+<li>Began with the <strong>Wall Street Crash</strong> (October 1929).</li>
+<li>U.S. bank failures, contraction of credit, and trade barriers (<strong>Smoot-Hawley Tariff</strong>, 1930) turned a U.S. recession into a worldwide depression.</li>
+<li>Unemployment: roughly 25% in the U.S., ~30% in Germany.</li>
+<li>Global trade collapsed by about two-thirds.</li>
+<li>Commodity-exporting economies (Latin America, colonies) were devastated by collapsing prices.</li>
+</ul>
+<h4>Responses</h4>
+<ul>
+<li><strong>U.S.:</strong> Franklin D. Roosevelt's <strong>New Deal</strong> (1933) — government jobs, bank reform (FDIC), Social Security, labor protections.</li>
+<li><strong>UK and France:</strong> more cautious government spending; gold standard abandoned (Britain, 1931).</li>
+<li><strong>USSR:</strong> insulated from the capitalist depression by the planned economy; Stalin's <strong>Five-Year Plans</strong> (1928 onward) forced rapid industrialization.</li>
+<li><strong>Nazi Germany:</strong> public works (autobahns), rearmament, and state-controlled wage and price policies reduced unemployment — but on a war footing.</li>
+<li><strong>Latin America:</strong> many states adopted <strong>import substitution industrialization (ISI)</strong>, trying to build local industry behind tariff walls.</li>
+</ul>
+<h4>Ideological Consequences</h4>
+<ul>
+<li>Many saw liberal capitalism as discredited; fascism and communism gained appeal.</li>
+<li>The Depression helped bring Hitler to power in Germany (1933) and strengthened militarists in Japan.</li>
+</ul>
+</div>
+<!-- TOPIC 7.5 -->
+<h2>Topic 7.5 — Unresolved Tensions After World War I</h2>
+<div class="region-card region-tension">
+<h3>⚠️ An Unfinished Peace</h3>
+<h4>Colonial Disillusionment and Nationalism</h4>
+<ul>
+<li>Wilson's <strong>"Fourteen Points"</strong> and rhetoric of self-determination raised expectations in colonized societies that were not honored for non-European peoples.</li>
+<li><strong>May Fourth Movement</strong> (1919, China): protest against Shandong being awarded to Japan at Versailles — radicalized Chinese nationalism and helped birth the <strong>Chinese Communist Party</strong> (1921).</li>
+<li><strong>Egyptian Revolution</strong> (1919), <strong>Gandhi</strong>'s satyagraha campaigns in India (from 1919), Indochinese and African nationalist activism.</li>
+<li><strong>Pan-African Congresses</strong> (W. E. B. Du Bois, from 1919) and <strong>Marcus Garvey</strong>'s Universal Negro Improvement Association.</li>
+</ul>
+<h4>Middle East: Mandates and Conflict</h4>
+<ul>
+<li>The <strong>Balfour Declaration</strong> (1917) supported a Jewish national home in Palestine — while Britain also promised Arab leaders independence.</li>
+<li>British Mandate of <strong>Palestine</strong> became a zone of Arab-Jewish conflict.</li>
+<li>Atatürk's <strong>Republic of Turkey</strong> (1923) emerged from the Ottoman collapse — secular, nationalist, modernizing.</li>
+</ul>
+<h4>Rise of Authoritarianism and Ideology</h4>
+<ul>
+<li><strong>Italian Fascism</strong>: Mussolini's March on Rome (1922); corporatist, nationalist, militarist.</li>
+<li><strong>Nazism</strong>: Hitler's NSDAP combined extreme racial nationalism, antisemitism, anti-communism, and violent mass politics.</li>
+<li><strong>Stalinism</strong>: USSR under Stalin (from 1924) combined planned economy, forced collectivization, and terror.</li>
+<li><strong>Japanese militarism</strong>: elected government increasingly dominated by military and ultranationalist circles.</li>
+</ul>
+<h4>Failures of Collective Security</h4>
+<ul>
+<li>The <strong>League of Nations</strong> lacked U.S. membership and real enforcement power.</li>
+<li>It failed to stop <strong>Japanese aggression in Manchuria</strong> (1931), the <strong>Italian invasion of Ethiopia</strong> (1935), German remilitarization of the Rhineland (1936), or the Anschluss (1938).</li>
+<li>Britain and France's <strong>appeasement</strong> — epitomized by the <strong>Munich Agreement</strong> (1938) surrendering the Czech Sudetenland — emboldened Hitler.</li>
+</ul>
+</div>
+<!-- TOPIC 7.6 -->
+<h2>Topic 7.6 — Causes of World War II</h2>
+<div class="region-card region-wwii-cause">
+<h3>🔥 The Road to 1939–41</h3>
+<h4>Unresolved Issues from WWI</h4>
+<ul>
+<li>Resentment of the Versailles settlement.</li>
+<li>Economic collapse of the Depression.</li>
+<li>Weak international institutions.</li>
+</ul>
+<h4>Ideological Drivers</h4>
+<ul>
+<li><strong>Nazi ideology</strong>: racial hierarchy, <em>Lebensraum</em> ("living space") to be conquered in Eastern Europe, destruction of "Judeo-Bolshevism."</li>
+<li><strong>Italian Fascism</strong>: <em>Italia Irredenta</em>, "New Roman Empire" in the Mediterranean and Africa.</li>
+<li><strong>Japanese ultranationalism</strong>: "Greater East Asia Co-Prosperity Sphere," aspiration to replace European empires in Asia.</li>
+</ul>
+<h4>Japanese Expansion in Asia</h4>
+<ul>
+<li>Invasion of <strong>Manchuria</strong> (1931) and creation of Manchukuo.</li>
+<li><strong>Second Sino-Japanese War</strong> (1937–1945): full invasion of China, including the <strong>Rape of Nanjing</strong> (1937–38).</li>
+<li>Occupation of French Indochina (1940–41) pushed Japan and the U.S. toward conflict.</li>
+</ul>
+<h4>European Expansion and Alliances</h4>
+<ul>
+<li>Germany remilitarized the Rhineland (1936), annexed Austria (Anschluss, 1938), took the Sudetenland (1938), then the rest of Czechoslovakia (1939).</li>
+<li><strong>Molotov–Ribbentrop Pact</strong> (August 1939) — Nazi-Soviet non-aggression and secret partition of Eastern Europe.</li>
+<li><strong>Invasion of Poland</strong>, 1 September 1939. Britain and France declared war two days later.</li>
+</ul>
+<h4>U.S. and USSR Enter</h4>
+<ul>
+<li><strong>Operation Barbarossa</strong> (June 1941): Germany invaded the USSR, breaking the pact.</li>
+<li><strong>Pearl Harbor</strong> (7 December 1941): Japan attacked the U.S. Pacific Fleet; Germany declared war on the U.S. four days later.</li>
+<li>By December 1941, the <strong>Allies</strong> (U.S., UK, USSR, China, and many others) faced the <strong>Axis</strong> (Germany, Italy, Japan).</li>
+</ul>
+</div>
+<!-- TOPIC 7.7 -->
+<h2>Topic 7.7 — Conducting World War II</h2>
+<div class="region-card region-wwii-fight">
+<h3>🌐 Total War on a Global Scale</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Soviet_flag_on_the_Reichstag_roof_Khaldei.jpg?width=600" alt="Soviet flag over the Reichstag, 1945" />
+<figcaption>Yevgeny Khaldei, <em>Raising a flag over the Reichstag</em> (2 May 1945). The Soviet capture of Berlin ended the European war. The USSR lost an estimated 27 million people.</figcaption>
+</figure>
+<h4>The European Theater</h4>
+<ul>
+<li><strong>Blitzkrieg</strong>: fast combined-arms offensives swept through Poland (1939), Denmark, Norway, the Low Countries, and France (1940).</li>
+<li><strong>Battle of Britain</strong> (1940): RAF repelled the Luftwaffe.</li>
+<li><strong>Operation Barbarossa</strong> (June 1941): largest invasion in history. <strong>Stalingrad</strong> (1942–43) was the turning point — Soviet victory shattered the Wehrmacht.</li>
+<li><strong>North African</strong> campaign (El Alamein 1942); <strong>Italy</strong> invaded 1943.</li>
+<li><strong>D-Day</strong> (6 June 1944): Allied invasion of Normandy.</li>
+<li><strong>Soviet advance</strong> to Berlin; Germany surrendered <strong>8 May 1945</strong> (V-E Day).</li>
+</ul>
+<h4>The Pacific Theater</h4>
+<ul>
+<li>Japan overran Southeast Asia and Pacific islands (Philippines, Hong Kong, Singapore, Indonesia, Burma) by mid-1942.</li>
+<li><strong>Midway</strong> (June 1942) halted Japanese expansion.</li>
+<li><strong>Island-hopping</strong> campaign pushed U.S. forces toward Japan.</li>
+<li>Soviet entry (August 1945) and U.S. <strong>atomic bombs</strong> on <strong>Hiroshima (6 August)</strong> and <strong>Nagasaki (9 August)</strong> precipitated Japan's surrender <strong>15 August 1945</strong>.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Atomic_cloud_over_Hiroshima.jpg?width=500" alt="Atomic cloud over Hiroshima, 1945" />
+<figcaption>Mushroom cloud over Hiroshima, 6 August 1945. The atomic bombings killed over 200,000 people and ushered in the nuclear age.</figcaption>
+</figure>
+<h4>Total War and Home Fronts</h4>
+<ul>
+<li>Civilian economies fully mobilized; women joined war industries (e.g., "Rosie the Riveter" in the U.S., massive Soviet conscription of female labor).</li>
+<li><strong>Strategic bombing</strong> of cities (London Blitz, Dresden, Tokyo) made civilians direct targets.</li>
+<li><strong>Japanese American internment</strong> (U.S., 1942–45) forcibly relocated ~120,000 people of Japanese descent.</li>
+<li><strong>Colonial contributions</strong>: India sent ~2.5 million soldiers; African soldiers fought for Britain and France.</li>
+</ul>
+<h4>New Technology and Scale of Destruction</h4>
+<ul>
+<li>Aircraft carriers, submarines, long-range bombers, radar, jet engines, V-2 rockets, atomic weapons.</li>
+<li>Perhaps <strong>60–80 million people</strong> died, the majority civilians.</li>
+</ul>
+</div>
+<!-- TOPIC 7.8 -->
+<h2>Topic 7.8 — Mass Atrocities After 1900</h2>
+<div class="region-card region-atrocity">
+<h3>💀 Industrial-Scale Violence Against Civilians</h3>
+<h4>Armenian Genocide (1915–1923)</h4>
+<ul>
+<li>Ottoman government deported and killed ~1–1.5 million Armenians.</li>
+<li>Often cited as the first modern genocide and a precursor to later state-organized mass murder.</li>
+</ul>
+<h4>Holodomor (1932–1933)</h4>
+<ul>
+<li>Soviet <strong>forced collectivization</strong> and grain requisitions produced a man-made famine in Ukraine.</li>
+<li>Estimates of deaths range from about 3 to 5 million or more.</li>
+<li>Widely recognized as a genocide by many states and scholars.</li>
+</ul>
+<h4>The Holocaust (Shoah, 1941–1945)</h4>
+<ul>
+<li>Nazi Germany murdered approximately <strong>six million Jews</strong> — two-thirds of European Jewry.</li>
+<li>Also murdered millions of Roma, Soviet POWs, Poles, disabled people, homosexuals, and political dissidents.</li>
+<li>Industrial methods: <strong>Einsatzgruppen</strong> mass shootings; ghettos; <strong>extermination camps</strong> (Auschwitz-Birkenau, Treblinka, Sobibor) using gas chambers.</li>
+<li><strong>Wannsee Conference</strong> (January 1942) formalized the "Final Solution."</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Selection_Birkenau_ramp.jpg?width=600" alt="Selection at Birkenau" />
+<figcaption>"Selection" on the ramp at Auschwitz-Birkenau (May 1944). SS officers separated new arrivals into those sent to forced labor and those sent immediately to the gas chambers.</figcaption>
+</figure>
+<h4>Japanese War Crimes</h4>
+<ul>
+<li><strong>Rape of Nanjing</strong> (1937–38): mass murder and rape of up to 300,000 Chinese civilians.</li>
+<li>"<strong>Comfort women</strong>" — up to ~200,000 women, especially from Korea and China, forced into sexual slavery by the Japanese military.</li>
+<li>Unit 731 biological and chemical experimentation in Manchuria.</li>
+</ul>
+<h4>Postwar Responses</h4>
+<ul>
+<li><strong>Nuremberg Trials</strong> (1945–46) and <strong>Tokyo Tribunal</strong> (1946–48) prosecuted war criminals.</li>
+<li>UN <strong>Universal Declaration of Human Rights</strong> (1948) and <strong>Genocide Convention</strong> (1948).</li>
+<li><strong>State of Israel</strong> established (1948), partly in response to the Holocaust; deep and lasting impact on Middle East politics.</li>
+<li><strong>Cold War</strong> context often limited prosecutions; some atrocities (Unit 731, Soviet Holodomor) were downplayed.</li>
+</ul>
+</div>
+<!-- TOPIC 7.9 -->
+<h2>Topic 7.9 — Causation in Global Conflict</h2>
+<div class="region-card region-causation">
+<h3>🔄 Synthesizing Unit 7</h3>
+<div style="overflow-x:auto;">
+<table class="compare-table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>World War I</th>
+<th>World War II</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Main cause</strong></td><td>Alliance/imperial/nationalist rivalries + Balkan crisis</td><td>Axis revisionism (Germany, Italy, Japan) unchecked by weak collective security</td></tr>
+<tr><td><strong>Ideology</strong></td><td>Nationalism, militarism</td><td>Fascism vs. liberal democracy vs. communism</td></tr>
+<tr><td><strong>Fronts</strong></td><td>Mainly Europe &amp; Middle East</td><td>Truly global: Europe, Asia-Pacific, Africa, Atlantic</td></tr>
+<tr><td><strong>Technology</strong></td><td>Trenches, machine guns, gas, early tanks and planes</td><td>Blitzkrieg, aircraft carriers, strategic bombing, atomic weapons</td></tr>
+<tr><td><strong>Civilian impact</strong></td><td>~10 million military dead; significant civilian</td><td>60–80 million dead; majority civilians; Holocaust</td></tr>
+<tr><td><strong>Peace settlement</strong></td><td>Versailles — punitive, unstable</td><td>UN, Bretton Woods, division of Germany, bipolar world</td></tr>
+<tr><td><strong>Empire effect</strong></td><td>Old land empires collapsed (Ottoman, Habsburg, Russian, German)</td><td>European overseas empires fatally weakened; decolonization accelerates</td></tr>
+</tbody>
+</table>
+</div>
+<h4>Continuities 1900 → 1945</h4>
+<ul>
+<li>Great-power rivalries driven by industrial and imperial competition.</li>
+<li>Rising nationalism (European and non-European).</li>
+<li>Industrial technology applied to warfare at ever-greater scale.</li>
+<li>State-directed economies in wartime (and beyond).</li>
+</ul>
+<h4>Major Changes</h4>
+<ul>
+<li><strong>New superpowers</strong>: U.S. and USSR replaced Britain and France as global powers.</li>
+<li><strong>Nuclear age</strong> (August 1945): weapons capable of ending civilization.</li>
+<li><strong>International institutions</strong>: UN, Bretton Woods (IMF, World Bank), GATT.</li>
+<li><strong>Human rights</strong> framework: Universal Declaration (1948), Genocide Convention (1948).</li>
+<li><strong>Decolonization</strong> accelerated rapidly after 1945 (→ Unit 8).</li>
+</ul>
+</div>
+<!-- VOCAB -->
+<h2>📚 Key Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-item"><span class="vocab-term">Total war</span>Mobilization of entire society and economy for war.</div>
+<div class="vocab-item"><span class="vocab-term">Militarism</span>Glorification of the military and aggressive war preparation.</div>
+<div class="vocab-item"><span class="vocab-term">Triple Entente</span>Pre-WWI alliance: Britain, France, Russia.</div>
+<div class="vocab-item"><span class="vocab-term">Triple Alliance</span>Pre-WWI alliance: Germany, Austria-Hungary, Italy.</div>
+<div class="vocab-item"><span class="vocab-term">Central Powers</span>WWI: Germany, Austria-Hungary, Ottoman Empire, Bulgaria.</div>
+<div class="vocab-item"><span class="vocab-term">Allied Powers</span>WWI: UK, France, Russia (until 1917), Italy (after 1915), U.S. (after 1917), etc.</div>
+<div class="vocab-item"><span class="vocab-term">Schlieffen Plan</span>German plan to knock France out quickly before fighting Russia.</div>
+<div class="vocab-item"><span class="vocab-term">Trench warfare</span>Stalemated Western Front warfare from entrenched positions.</div>
+<div class="vocab-item"><span class="vocab-term">Armenian Genocide</span>Ottoman campaign (1915–23) killing ~1–1.5 million Armenians.</div>
+<div class="vocab-item"><span class="vocab-term">Russian Revolution</span>1917 overthrow of the tsar and Bolshevik seizure of power.</div>
+<div class="vocab-item"><span class="vocab-term">Bolsheviks</span>Lenin's radical Marxist faction that took power in October 1917.</div>
+<div class="vocab-item"><span class="vocab-term">Fourteen Points</span>Wilson's WWI peace program emphasizing self-determination.</div>
+<div class="vocab-item"><span class="vocab-term">Treaty of Versailles</span>1919 peace treaty imposing heavy terms on Germany.</div>
+<div class="vocab-item"><span class="vocab-term">War guilt clause</span>Article 231 of Versailles assigning sole blame to Germany.</div>
+<div class="vocab-item"><span class="vocab-term">League of Nations</span>1920 international body; predecessor of the UN; lacked enforcement.</div>
+<div class="vocab-item"><span class="vocab-term">Mandate system</span>League-approved European rule of former Ottoman and German colonies.</div>
+<div class="vocab-item"><span class="vocab-term">Sykes–Picot Agreement</span>1916 secret Anglo-French partition of the Ottoman Middle East.</div>
+<div class="vocab-item"><span class="vocab-term">Balfour Declaration</span>1917 British statement supporting a Jewish home in Palestine.</div>
+<div class="vocab-item"><span class="vocab-term">May Fourth Movement</span>1919 Chinese nationalist protest against Versailles.</div>
+<div class="vocab-item"><span class="vocab-term">Mexican Revolution</span>1910–20 revolution producing the 1917 Constitution.</div>
+<div class="vocab-item"><span class="vocab-term">Great Depression</span>Worldwide economic collapse beginning in 1929.</div>
+<div class="vocab-item"><span class="vocab-term">New Deal</span>FDR's depression-era program of U.S. government reforms.</div>
+<div class="vocab-item"><span class="vocab-term">Keynesian economics</span>Government spending to stabilize demand in downturns.</div>
+<div class="vocab-item"><span class="vocab-term">Fascism</span>Ultra-nationalist, authoritarian ideology (Italy, Germany, etc.).</div>
+<div class="vocab-item"><span class="vocab-term">Nazism</span>German fascism adding extreme racism and antisemitism.</div>
+<div class="vocab-item"><span class="vocab-term">Lebensraum</span>Nazi doctrine of conquering "living space" in Eastern Europe.</div>
+<div class="vocab-item"><span class="vocab-term">Five-Year Plans</span>Stalin's forced industrialization of the USSR.</div>
+<div class="vocab-item"><span class="vocab-term">Collectivization</span>Soviet consolidation of peasant farms into state farms.</div>
+<div class="vocab-item"><span class="vocab-term">Holodomor</span>Soviet man-made famine in Ukraine, 1932–33.</div>
+<div class="vocab-item"><span class="vocab-term">Appeasement</span>British/French policy of concessions to Hitler before 1939.</div>
+<div class="vocab-item"><span class="vocab-term">Munich Agreement</span>1938 deal handing Czech Sudetenland to Germany.</div>
+<div class="vocab-item"><span class="vocab-term">Blitzkrieg</span>Fast combined-arms German offensive strategy.</div>
+<div class="vocab-item"><span class="vocab-term">Axis Powers</span>WWII: Germany, Italy, Japan (and allies).</div>
+<div class="vocab-item"><span class="vocab-term">Holocaust (Shoah)</span>Nazi genocide of ~6 million Jews and millions of others.</div>
+<div class="vocab-item"><span class="vocab-term">Rape of Nanjing</span>1937–38 mass atrocity by Japanese forces in China.</div>
+<div class="vocab-item"><span class="vocab-term">Comfort women</span>Women forced into sexual slavery by the Japanese military.</div>
+<div class="vocab-item"><span class="vocab-term">Nuremberg Trials</span>Post-WWII trials of Nazi leaders for war crimes.</div>
+<div class="vocab-item"><span class="vocab-term">United Nations</span>International body founded 1945 to prevent war and protect rights.</div>
+</div>
+<!-- MCQs -->
+<div class="quiz-container">
+<h2>📝 Multiple Choice Practice</h2>
+<p>Three questions per sub-topic (27 total). Click an answer to check it.</p>
+<!-- 7.1 -->
+<h3 class="quiz-subheading">Topic 7.1 — Shifting Power After 1900</h3>
+<div class="quiz-question">
+<p><strong>1. Japan's victory in the Russo-Japanese War (1904–05) was significant because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Created a European superpower.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Was the first time a non-Western industrialized state decisively defeated a European great power, shifting perceptions of global power.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Ended Japanese imperialism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Restored Qing rule in China.</div>
+</div>
+<div class="explanation" id="exp-1"><strong>Answer: B.</strong> The Japanese victory shocked colonized peoples and European audiences, demonstrating that European dominance was not inevitable.</div>
+</div>
+<div class="quiz-question">
+<p><strong>2. The 1911 Chinese Revolution is BEST described as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) A communist revolution.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) The overthrow of the Qing dynasty and the establishment of a republic under nationalist leaders like Sun Yat-sen.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) A restoration of the Ming dynasty.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) An Ottoman-backed coup.</div>
+</div>
+<div class="explanation" id="exp-2"><strong>Answer: B.</strong> The Xinhai Revolution ended 2,000+ years of imperial rule and established the Republic of China.</div>
+</div>
+<div class="quiz-question">
+<p><strong>3. Which of the following describes the condition of the great land-based empires (Ottoman, Russian, Qing) circa 1900?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) All three were industrial leaders.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) All three were under severe internal and external pressure and would collapse within a generation.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) All three were democratic republics.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) All three had abolished their monarchies by 1900.</div>
+</div>
+<div class="explanation" id="exp-3"><strong>Answer: B.</strong> Ottoman, Qing, and Russian empires all fell between 1911 and 1922, under pressure from nationalism, economic strain, and (for Russia) war and revolution.</div>
+</div>
+<!-- 7.2 -->
+<h3 class="quiz-subheading">Topic 7.2 — Causes of WWI</h3>
+<div class="quiz-question">
+<p><strong>4. The pre-war alliance systems contributed to WWI primarily because</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) They prevented any war from occurring.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) They turned a local Balkan crisis into a continent-wide conflict by binding great powers to go to war together.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) They were secret and unknown to any leaders.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) They replaced nationalism.</div>
+</div>
+<div class="explanation" id="exp-4"><strong>Answer: B.</strong> The Triple Entente and Triple Alliance linked the fate of each power to the others — escalating the Sarajevo crisis into WWI.</div>
+</div>
+<div class="quiz-question">
+<p><strong>5. Pre-war militarism in Europe is BEST illustrated by</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) German and French disarmament.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) The Anglo-German naval arms race and the glorification of war in public culture.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) The League of Nations.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Widespread pacifist governments.</div>
+</div>
+<div class="explanation" id="exp-5"><strong>Answer: B.</strong> The naval race (dreadnoughts) and cultural glorification of war are hallmark features of pre-WWI militarism.</div>
+</div>
+<div class="quiz-question">
+<p><strong>6. The assassination of Archduke Franz Ferdinand in June 1914</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Was the sole cause of WWI.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) Was the immediate trigger that activated existing alliance and mobilization plans, launching the July Crisis.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) Ended the Ottoman Empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Had no connection to the war.</div>
+</div>
+<div class="explanation" id="exp-6"><strong>Answer: B.</strong> Historians distinguish the trigger (the assassination) from long-term causes (alliances, imperialism, nationalism, militarism) — both mattered.</div>
+</div>
+<!-- 7.3 -->
+<h3 class="quiz-subheading">Topic 7.3 — Conducting WWI</h3>
+<div class="quiz-question">
+<p><strong>7. Trench warfare on the Western Front primarily produced</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) Rapid decisive victories.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) A lengthy stalemate with enormous casualties and limited territorial change.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) Easy maneuver warfare.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Quick German defeat.</div>
+</div>
+<div class="explanation" id="exp-7"><strong>Answer: B.</strong> Industrial firepower (machine guns, artillery) combined with trenches and barbed wire produced years of grinding stalemate.</div>
+</div>
+<div class="quiz-question">
+<p><strong>8. "Total war" on the WWI home front meant that</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) Only soldiers were mobilized.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 8)">(B) Governments directed whole economies, used propaganda, rationed goods, and drew women into industrial labor to support the war effort.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(C) Warfare avoided civilians.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) Only the U.S. mobilized.</div>
+</div>
+<div class="explanation" id="exp-8"><strong>Answer: B.</strong> Total war fused civilian and military spheres — with lasting effects on women's rights and the size of government.</div>
+</div>
+<div class="quiz-question">
+<p><strong>9. Which statement about the Treaty of Versailles is MOST accurate?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) It created a stable, lasting peace.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 9)">(B) It imposed heavy reparations and territorial losses on Germany and created a framework (League of Nations, mandates) that contributed to later instability.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(C) It had no effect on Germany.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) It abolished all European armies.</div>
+</div>
+<div class="explanation" id="exp-9"><strong>Answer: B.</strong> The punitive terms and weak enforcement helped produce grievances and power vacuums that fed into WWII.</div>
+</div>
+<!-- 7.4 -->
+<h3 class="quiz-subheading">Topic 7.4 — Interwar Economy</h3>
+<div class="quiz-question">
+<p><strong>10. The Great Depression spread worldwide primarily because</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) Countries had unrelated economies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) The world economy was tightly linked by finance and trade, so a U.S. banking/credit collapse propagated through American loans to Europe and the gold standard.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) Of the Treaty of Versailles alone.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) Of communist intervention.</div>
+</div>
+<div class="explanation" id="exp-10"><strong>Answer: B.</strong> Interwar globalization (especially the U.S. creditor role and the gold standard) transmitted the shock worldwide.</div>
+</div>
+<div class="quiz-question">
+<p><strong>11. The U.S. New Deal (1933–) is BEST described as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(A) Laissez-faire retreat from the economy.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 11)">(B) Expanded federal government involvement: work programs, banking regulation, Social Security, and protections for labor.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Abolition of capitalism.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) A communist revolution.</div>
+</div>
+<div class="explanation" id="exp-11"><strong>Answer: B.</strong> The New Deal significantly expanded federal activity while preserving capitalism.</div>
+</div>
+<div class="quiz-question">
+<p><strong>12. Stalin's Five-Year Plans aimed to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Privatize Soviet industry.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 12)">(B) Rapidly industrialize the USSR through central planning and forced collectivization of agriculture.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(C) Restore the tsar.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) Liberalize Soviet politics.</div>
+</div>
+<div class="explanation" id="exp-12"><strong>Answer: B.</strong> The Plans built heavy industry at enormous human cost, including the Holodomor famine.</div>
+</div>
+<!-- 7.5 -->
+<h3 class="quiz-subheading">Topic 7.5 — Unresolved Tensions</h3>
+<div class="quiz-question">
+<p><strong>13. The May Fourth Movement in China (1919) was primarily a response to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(A) The Russian Revolution.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 13)">(B) The Versailles settlement's transfer of German rights in Shandong to Japan — seen by Chinese as a betrayal of Wilson's self-determination rhetoric.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(C) Japan's defeat of Germany.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(D) The founding of the Qing dynasty.</div>
+</div>
+<div class="explanation" id="exp-13"><strong>Answer: B.</strong> The movement radicalized Chinese intellectuals and contributed to the founding of the Chinese Communist Party in 1921.</div>
+</div>
+<div class="quiz-question">
+<p><strong>14. Which is an example of the failure of collective security in the 1930s?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(A) The founding of NATO.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 14)">(B) The League of Nations' inability to stop Japan's invasion of Manchuria (1931) or Italy's invasion of Ethiopia (1935).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(C) The UN Charter.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(D) The Marshall Plan.</div>
+</div>
+<div class="explanation" id="exp-14"><strong>Answer: B.</strong> The League's lack of enforcement and great-power unity showed the weakness of the interwar order.</div>
+</div>
+<div class="quiz-question">
+<p><strong>15. The Balfour Declaration (1917) contributed to long-term Middle East tension by</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(A) Establishing a pan-Arab state.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 15)">(B) Expressing British support for a Jewish "national home" in Palestine while Britain also made conflicting promises to Arab leaders.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(C) Creating the state of Lebanon.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(D) Abolishing the Ottoman Empire.</div>
+</div>
+<div class="explanation" id="exp-15"><strong>Answer: B.</strong> Balfour, Sykes-Picot, and the Hussein-McMahon correspondence produced overlapping promises that drove later Palestinian/Israeli conflict.</div>
+</div>
+<!-- 7.6 -->
+<h3 class="quiz-subheading">Topic 7.6 — Causes of WWII</h3>
+<div class="quiz-question">
+<p><strong>16. Which statement BEST captures how WWII began in Asia?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(A) With the Battle of Britain.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 16)">(B) With Japan's invasion of Manchuria (1931) and the full invasion of China (1937).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(C) With the invasion of Poland.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(D) With the atomic bombs.</div>
+</div>
+<div class="explanation" id="exp-16"><strong>Answer: B.</strong> The Asian front of WWII had already begun well before Hitler's 1939 invasion of Poland.</div>
+</div>
+<div class="quiz-question">
+<p><strong>17. Appeasement policies of Britain and France in the 1930s</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(A) Stopped Hitler's aggression decisively.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 17)">(B) Sought to avoid another great war through concessions, most notably at Munich (1938), but ultimately emboldened Axis expansion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(C) Were mainly directed at the Soviet Union.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(D) Had no effect on events.</div>
+</div>
+<div class="explanation" id="exp-17"><strong>Answer: B.</strong> The lesson drawn from Munich shaped Cold War-era "hawkish" resistance to dictators.</div>
+</div>
+<div class="quiz-question">
+<p><strong>18. The Molotov–Ribbentrop Pact (August 1939)</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(A) Was an Anglo-French alliance.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 18)">(B) Was a Nazi-Soviet non-aggression pact with a secret protocol dividing Eastern Europe between Germany and the USSR.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(C) Created the United Nations.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(D) Ended World War I.</div>
+</div>
+<div class="explanation" id="exp-18"><strong>Answer: B.</strong> The pact allowed Hitler's invasion of Poland and Soviet occupation of the Baltics and eastern Poland.</div>
+</div>
+<!-- 7.7 -->
+<h3 class="quiz-subheading">Topic 7.7 — Conducting WWII</h3>
+<div class="quiz-question">
+<p><strong>19. The turning point of the European war on the Eastern Front was</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(A) The Battle of Britain.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 19)">(B) The Battle of Stalingrad (1942–43).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(C) D-Day.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(D) The Munich Agreement.</div>
+</div>
+<div class="explanation" id="exp-19"><strong>Answer: B.</strong> Stalingrad halted the German advance and began a long Soviet counter-offensive that reached Berlin.</div>
+</div>
+<div class="quiz-question">
+<p><strong>20. The U.S. justification for the atomic bombings of Hiroshima and Nagasaki (1945) most commonly emphasized</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(A) Punishing Germany.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 20)">(B) Forcing Japan to surrender without a bloody invasion and ending WWII quickly.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(C) Testing the bomb's yield.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(D) Helping the Japanese economy.</div>
+</div>
+<div class="explanation" id="exp-20"><strong>Answer: B.</strong> This was the main U.S. rationale, though historians debate its adequacy, and the bombings also shaped early Cold War dynamics.</div>
+</div>
+<div class="quiz-question">
+<p><strong>21. Which of the following BEST describes the role of colonial soldiers and labor in WWII?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(A) Colonial empires fought alone without any colonial soldiers.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 21)">(B) Millions of Indian, African, Caribbean, and other colonial troops and laborers served, strengthening nationalist demands for postwar independence.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(C) Only European troops fought.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(D) Colonies refused to participate.</div>
+</div>
+<div class="explanation" id="exp-21"><strong>Answer: B.</strong> Colonial contributions to a war fought for "freedom" accelerated demands that freedom extend to the colonies.</div>
+</div>
+<!-- 7.8 -->
+<h3 class="quiz-subheading">Topic 7.8 — Mass Atrocities</h3>
+<div class="quiz-question">
+<p><strong>22. The Holocaust (1941–1945)</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(A) Was an unplanned accident of the war.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 22)">(B) Was the systematic, state-organized murder of about six million Jews and millions of others by Nazi Germany, using industrial methods.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(C) Was limited to Germany's borders.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(D) Ended before 1939.</div>
+</div>
+<div class="explanation" id="exp-22"><strong>Answer: B.</strong> Extermination camps like Auschwitz-Birkenau were central instruments of state-planned genocide.</div>
+</div>
+<div class="quiz-question">
+<p><strong>23. The Armenian Genocide (1915–1923) is considered significant in the history of 20th-century atrocities because</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(A) It was a local quarrel of no lasting importance.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 23)">(B) It was one of the first modern state-organized genocides and helped shape later international debates about defining and preventing genocide.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(C) It was committed by the Habsburg Empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(D) It was universally recognized and prosecuted immediately.</div>
+</div>
+<div class="explanation" id="exp-23"><strong>Answer: B.</strong> The genocide is often invoked alongside the Holocaust in discussions of state-organized mass murder.</div>
+</div>
+<div class="quiz-question">
+<p><strong>24. Which of the following BEST describes the postwar international response to mass atrocities?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(A) No response at all.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 24)">(B) The Nuremberg and Tokyo war crimes trials, the 1948 UN Universal Declaration of Human Rights, and the Genocide Convention (1948).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(C) The Treaty of Versailles.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(D) The Congress of Vienna.</div>
+</div>
+<div class="explanation" id="exp-24"><strong>Answer: B.</strong> These institutions formed the backbone of the modern human rights regime.</div>
+</div>
+<!-- 7.9 -->
+<h3 class="quiz-subheading">Topic 7.9 — Causation in Global Conflict</h3>
+<div class="quiz-question">
+<p><strong>25. Which of the following is a major CONTINUITY between WWI and WWII?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 25)">(A) Use of atomic weapons.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 25)">(B) Industrial mobilization of society for "total war," including civilians as targets and participants.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 25)">(C) Absence of great-power rivalry.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 25)">(D) End of imperialism.</div>
+</div>
+<div class="explanation" id="exp-25"><strong>Answer: B.</strong> Both conflicts used whole-of-society mobilization; A is WWII-specific.</div>
+</div>
+<div class="quiz-question">
+<p><strong>26. Which outcome of WWII most directly shaped the Cold War?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 26)">(A) The abolition of all armies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 26)">(B) The emergence of the U.S. and USSR as superpowers with opposing ideologies and the division of Germany and Europe.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 26)">(C) The rebirth of the Ottoman Empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 26)">(D) The revival of the League of Nations.</div>
+</div>
+<div class="explanation" id="exp-26"><strong>Answer: B.</strong> The bipolar order of 1945–1991 grew directly out of WWII's ending.</div>
+</div>
+<div class="quiz-question">
+<p><strong>27. Which of the following BEST explains why decolonization accelerated after WWII?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 27)">(A) European colonial powers were enriched by the war.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 27)">(B) European powers were economically exhausted; wartime rhetoric of freedom, colonial military service, and strong nationalist movements made continued empire unsustainable.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 27)">(C) The U.S. conquered Europe.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 27)">(D) Nationalism disappeared after 1945.</div>
+</div>
+<div class="explanation" id="exp-27"><strong>Answer: B.</strong> All three factors — exhaustion, ideology, and organized nationalism — combined to make postwar decolonization rapid (→ Unit 8).</div>
+</div>
+</div>
+<!-- SAQs -->
+<h2>✍️ Short-Answer Practice (SAQ)</h2>
+<div class="saq-box">
+<h3>SAQ 1 — WWI and its Aftermath (No Stimulus)</h3>
+<ol type="a">
+<li>Identify ONE long-term cause of World War I.</li>
+<li>Explain ONE way that the aftermath of WWI contributed to conditions that led to WWII.</li>
+<li>Explain ONE way that WWI affected a region OUTSIDE Europe.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The alliance system — especially the Triple Entente and Triple Alliance — transformed a local Balkan crisis in 1914 into a continent-wide war by binding each great power to defend its allies.</p>
+<p><strong>(b)</strong> The Treaty of Versailles imposed heavy reparations and "war guilt" on Germany, producing resentments and economic instability that Hitler and the Nazi Party later exploited to win power in 1933.</p>
+<p><strong>(c)</strong> WWI fueled Chinese nationalism: the 1919 Versailles decision to transfer German concessions in Shandong to Japan (rather than return them to China) sparked the May Fourth Movement, which radicalized students and intellectuals and helped lead to the founding of the Chinese Communist Party in 1921.</p>
+</details>
+</div>
+<div class="saq-box">
+<h3>SAQ 2 — Stimulus (Churchill on Appeasement)</h3>
+<p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+"You were given the choice between war and dishonour. You chose dishonour, and you will have war."
+<br><em>— Winston Churchill, speech in the House of Commons on the Munich Agreement, 1938</em>
+</p>
+<ol type="a">
+<li>Identify the historical event that Churchill is commenting on in this quotation.</li>
+<li>Explain ONE reason British and French leaders pursued the policy Churchill is criticizing.</li>
+<li>Explain ONE consequence of that policy for the outbreak of World War II.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> Churchill is criticizing the Munich Agreement of September 1938, in which Britain and France agreed to allow Nazi Germany to annex the Sudetenland region of Czechoslovakia.</p>
+<p><strong>(b)</strong> British and French leaders sought to avoid another catastrophic war like WWI; memory of the enormous casualties of 1914–1918 and weak rearmament left democracies unwilling to confront Hitler militarily over eastern Europe.</p>
+<p><strong>(c)</strong> Appeasement emboldened Hitler by showing that western democracies would not resist aggressive expansion; within six months he seized the rest of Czechoslovakia, and in September 1939 his invasion of Poland triggered WWII.</p>
+</details>
+</div>
+<!-- KEY TAKEAWAYS -->
+<h2>⭐ Key Takeaways</h2>
+<div class="key-takeaways">
+<ul>
+<li><strong>Old empires collapsed.</strong> WWI ended the Ottoman, Russian, Habsburg, and German imperial monarchies.</li>
+<li><strong>Industrial total war reshaped modern conflict.</strong> Machine guns, trenches, poison gas, and strategic bombing redefined the scale and character of war.</li>
+<li><strong>The Versailles settlement was unstable.</strong> Reparations, the mandate system, and U.S. absence from the League weakened the interwar order.</li>
+<li><strong>The Great Depression fueled radicalism.</strong> Economic collapse helped bring fascists to power and discredited liberal capitalism.</li>
+<li><strong>WWII was truly global and more destructive.</strong> 60–80 million dead, mostly civilians.</li>
+<li><strong>Mass atrocities marked the era.</strong> Armenian Genocide, Holodomor, Holocaust, Rape of Nanjing, comfort women, and more.</li>
+<li><strong>New international order emerged in 1945.</strong> UN, Bretton Woods, Universal Declaration of Human Rights, superpower bipolarity.</li>
+<li><strong>Setup for Unit 8.</strong> Weakened European empires, mobilized colonial populations, and new superpower rivalry drove postwar decolonization and the Cold War.</li>
+</ul>
+</div>
+<p style="text-align:center; margin-top:2rem;">
+<a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+</p>
+</div>
+<script>
+function checkAnswer(element, isCorrect, qNum) {
+const options = element.parentElement.querySelectorAll('.quiz-option');
+options.forEach(o => o.classList.remove('correct', 'incorrect'));
+element.classList.add(isCorrect ? 'correct' : 'incorrect');
+const exp = document.getElementById('exp-' + qNum);
+if (exp) exp.classList.add('show');
+}
+</script>
+</body>
+</html>
