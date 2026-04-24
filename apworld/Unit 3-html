@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TMSR9LD4H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AP World History: Modern Unit 3 — Land-Based Empires (c. 1450–1750). In-depth notes on the Ottoman, Safavid, Mughal, Ming/Qing, Russian, and European empires, with photos, MCQs, and SAQs." />
+<title>Unit 3: Land-Based Empires (c. 1450–1750)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; }
+body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+background: #faf6f1;
+color: #333;
+line-height: 1.6;
+}
+.container {
+max-width: 980px;
+margin: 2rem auto;
+padding: 2rem 1.5rem;
+background: white;
+border-radius: 10px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+h1, h2, h3, h4 {
+font-family: 'Montserrat', sans-serif;
+color: #8b4513;
+}
+h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+.subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+h3 { color: #a0522d; margin-top: 1.5rem; }
+h4 { color: #8b4513; margin-top: 1rem; }
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+.back-link {
+display: inline-block;
+margin-bottom: 1rem;
+color: #8b4513;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.5rem;
+}
+.back-link:hover { text-decoration: underline; transform: scale(1.02); }
+.overview-box {
+background: linear-gradient(135deg, #fde7c9, #fff3e0);
+border-left: 6px solid #d2691e;
+padding: 1.2rem 1.5rem;
+border-radius: 8px;
+margin: 1.5rem 0;
+}
+.weighting-badge {
+display: inline-block;
+background: #8b4513;
+color: white;
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+font-weight: 600;
+font-size: 0.95rem;
+}
+/* Image */
+figure.photo {
+margin: 1.2rem 0;
+text-align: center;
+}
+figure.photo img {
+width: 100%;
+max-width: 640px;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+figure.photo figcaption {
+font-size: 0.92rem;
+color: #666;
+margin-top: 0.4rem;
+font-style: italic;
+}
+.photo-row {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 1rem;
+margin: 1.2rem 0;
+}
+.photo-row figure.photo { margin: 0; }
+.photo-row figure.photo img { max-width: 100%; }
+/* Timeline */
+.timeline {
+position: relative;
+margin: 2rem 0;
+padding-left: 2rem;
+border-left: 4px solid #d2691e;
+}
+.timeline-event {
+position: relative;
+margin-bottom: 1.4rem;
+padding: 0.8rem 1rem;
+background: #fff8ef;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.timeline-event::before {
+content: "";
+position: absolute;
+left: -2.55rem;
+top: 1.1rem;
+width: 14px;
+height: 14px;
+background: #8b4513;
+border-radius: 50%;
+border: 3px solid #fff;
+box-shadow: 0 0 0 2px #d2691e;
+}
+.timeline-date {
+display: inline-block;
+font-weight: 700;
+color: #8b4513;
+margin-right: 0.5rem;
+}
+/* Empire cards */
+.region-card {
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 1.2rem 0;
+border-left: 6px solid;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.region-ottoman { border-color: #c62828; background: #fff5f5; }
+.region-safavid { border-color: #2e7d32; background: #f1f8e9; }
+.region-mughal { border-color: #ef6c00; background: #fff3e0; }
+.region-china { border-color: #b71c1c; background: #fff0f0; }
+.region-russia { border-color: #1565c0; background: #e3f2fd; }
+.region-europe { border-color: #4a148c; background: #f3e5f5; }
+.region-admin { border-color: #4e342e; background: #efebe9; }
+.region-belief { border-color: #ad1457; background: #fce4ec; }
+.region-card h3 { margin-top: 0; }
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 0.8rem;
+margin: 1.2rem 0;
+}
+.vocab-item {
+background: #fff8ef;
+border: 1px solid #e0c9a6;
+border-radius: 8px;
+padding: 0.8rem 1rem;
+}
+.vocab-term {
+font-weight: 700;
+color: #8b4513;
+display: block;
+margin-bottom: 0.2rem;
+}
+.compare-table {
+width: 100%;
+border-collapse: collapse;
+margin: 1rem 0;
+font-size: 0.95rem;
+}
+.compare-table th, .compare-table td {
+border: 1px solid #e0c9a6;
+padding: 0.55rem 0.7rem;
+text-align: left;
+vertical-align: top;
+}
+.compare-table thead {
+background: linear-gradient(to right, #8b4513, #d2691e);
+color: white;
+}
+.compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+/* Quiz */
+.quiz-container {
+background: linear-gradient(135deg, #fde7c9, #fff8ef);
+border: 2px solid #8b4513;
+border-radius: 10px;
+padding: 1.5rem;
+margin: 2rem 0;
+}
+.quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+.quiz-subheading {
+font-family: 'Montserrat', sans-serif;
+color: #a0522d;
+font-weight: 700;
+margin-top: 1.5rem;
+border-bottom: 1px dashed #a0522d;
+padding-bottom: 0.2rem;
+}
+.quiz-question { margin-bottom: 1.5rem; }
+.quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.quiz-option {
+padding: 0.6rem 0.8rem;
+border: 1px solid #8b4513;
+border-radius: 6px;
+cursor: pointer;
+background: white;
+transition: background-color 0.2s;
+}
+.quiz-option:hover { background-color: #fff3e0; }
+.quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+.quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+.explanation {
+display: none;
+margin-top: 0.6rem;
+padding: 0.8rem;
+background: #fff;
+border-left: 4px solid #8b4513;
+border-radius: 6px;
+font-size: 0.95rem;
+}
+.explanation.show { display: block; }
+/* SAQ */
+.saq-box {
+background: #fff;
+border: 2px solid #d2691e;
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 1.2rem 0;
+}
+.saq-box h3 { margin-top: 0; }
+details.saq-sample {
+margin-top: 0.8rem;
+background: #fff8ef;
+border: 1px dashed #8b4513;
+border-radius: 6px;
+padding: 0.6rem 0.9rem;
+}
+details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+.key-takeaways {
+background: linear-gradient(135deg, #fff3e0, #fde7c9);
+border: 2px solid #d2691e;
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 2rem 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+<h1>Unit 3: Land-Based Empires</h1>
+<p class="subtitle">c. 1450 – c. 1750 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–15%</span></p>
+<!-- OVERVIEW -->
+<div class="overview-box">
+<h3 style="margin-top:0;">🏰 Unit Overview</h3>
+<p>
+Between 1450 and 1750, a handful of massive "gunpowder empires" reshaped Eurasia. The
+<strong>Ottoman</strong>, <strong>Safavid</strong>, and <strong>Mughal</strong> empires dominated the
+Islamic world; Ming and <strong>Qing</strong> China consolidated the largest empire in East Asia;
+<strong>Russia</strong> expanded into Siberia; and Europe's new centralized monarchies (France, Spain,
+Habsburg Austria, the Tudors) rose alongside the Protestant Reformation. These empires shared
+remarkable similarities — centralized bureaucracies, gunpowder militaries, religious patronage, and
+monumental architecture — even as they differed in religion and political culture.
+</p>
+<p style="margin-bottom:0;">
+<strong>Big question:</strong> How did rulers between 1450 and 1750 build, legitimize, and administer
+enormous land-based empires — and how did they manage religious diversity?
+</p>
+</div>
+<!-- TIMELINE -->
+<h2>🗓️ Unit 3 Timeline</h2>
+<div class="timeline">
+<div class="timeline-event"><span class="timeline-date">1453:</span> Ottoman sultan <strong>Mehmed II</strong> captures Constantinople, ending the Byzantine Empire.</div>
+<div class="timeline-event"><span class="timeline-date">c. 1469:</span> <strong>Guru Nanak</strong> born; founds Sikhism, blending elements of Hinduism and Islam.</div>
+<div class="timeline-event"><span class="timeline-date">1501:</span> <strong>Shah Ismail</strong> founds the Safavid Empire and imposes Twelver Shia Islam on Iran.</div>
+<div class="timeline-event"><span class="timeline-date">1514:</span> <strong>Battle of Chaldiran</strong> — Ottomans defeat Safavids; cements the Sunni-Shia border.</div>
+<div class="timeline-event"><span class="timeline-date">1517:</span> <strong>Martin Luther</strong> posts the 95 Theses, launching the Protestant Reformation. Ottomans conquer Mamluk Egypt.</div>
+<div class="timeline-event"><span class="timeline-date">1520–1566:</span> Reign of <strong>Suleiman the Magnificent</strong> — Ottoman peak.</div>
+<div class="timeline-event"><span class="timeline-date">1526:</span> <strong>Babur</strong> defeats the Delhi Sultanate at Panipat and founds the Mughal Empire.</div>
+<div class="timeline-event"><span class="timeline-date">1533–1584:</span> Reign of <strong>Ivan IV ("the Terrible")</strong> — first Tsar of Russia; expands east into Siberia.</div>
+<div class="timeline-event"><span class="timeline-date">1545–1563:</span> <strong>Council of Trent</strong> launches the Catholic Counter-Reformation.</div>
+<div class="timeline-event"><span class="timeline-date">1556–1605:</span> Reign of <strong>Akbar</strong> — Mughal policy of religious tolerance (<em>sulh-i kul</em>).</div>
+<div class="timeline-event"><span class="timeline-date">1587–1629:</span> Reign of <strong>Shah Abbas I</strong> — Safavid peak; Isfahan rebuilt as a new capital.</div>
+<div class="timeline-event"><span class="timeline-date">1603:</span> Tokugawa shogunate established in Japan (not an empire, but parallel centralization).</div>
+<div class="timeline-event"><span class="timeline-date">1644:</span> Manchus overthrow the Ming and establish the <strong>Qing Dynasty</strong> in China.</div>
+<div class="timeline-event"><span class="timeline-date">1648:</span> Peace of Westphalia ends the Thirty Years' War; emergence of the sovereign-state system in Europe.</div>
+<div class="timeline-event"><span class="timeline-date">1658–1707:</span> Reign of <strong>Aurangzeb</strong> — Mughal Empire at greatest extent but religious tensions rise.</div>
+<div class="timeline-event"><span class="timeline-date">1661–1722:</span> Reign of the <strong>Kangxi Emperor</strong> — Qing peak of administration, scholarship, and expansion.</div>
+<div class="timeline-event"><span class="timeline-date">1682–1725:</span> Reign of <strong>Peter the Great</strong> — Russia "westernizes," founds St. Petersburg.</div>
+<div class="timeline-event"><span class="timeline-date">1683:</span> Ottoman siege of Vienna fails; start of Ottoman decline in Europe.</div>
+<div class="timeline-event"><span class="timeline-date">c. 1750:</span> All major land-based empires still exist, but internal strains and European commercial pressure point toward the transitions of Unit 5.</div>
+</div>
+<!-- TOPIC 3.1 EMPIRES EXPAND -->
+<h2>Topic 3.1 — Empires Expand</h2>
+<p>
+Between 1450 and 1750, a new wave of empires used gunpowder weapons, professional armies, and
+centralized taxation to build states on a scale not seen since the Mongols. Historians call the three
+major Islamic empires — the Ottomans, Safavids, and Mughals — the <strong>"gunpowder empires"</strong>
+because artillery played a central role in their success.
+</p>
+<!-- OTTOMAN -->
+<div class="region-card region-ottoman">
+<h3>🔱 The Ottoman Empire (c. 1299–1922)</h3>
+<p>
+Founded by Osman in Anatolia, the Ottomans grew from a small frontier state into a superpower
+straddling three continents. By 1683 they governed the Balkans, Anatolia, the Arab Middle East, Egypt,
+North Africa, and parts of the Caucasus.
+</p>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/EmperorSuleiman.jpg?width=500" alt="Portrait of Suleiman the Magnificent" />
+<figcaption>Suleiman the Magnificent (r. 1520–1566), the sultan who took the Ottoman Empire to its peak.</figcaption>
+</figure>
+<h4>Rise &amp; Key Conquests</h4>
+<ul>
+<li><strong>Mehmed II "the Conqueror":</strong> Captured <strong>Constantinople</strong> in 1453 after an eight-week siege using massive bronze cannons — arguably the symbolic end of the Middle Ages. Renamed the city Istanbul and turned the Hagia Sophia into a mosque.</li>
+<li><strong>Selim I ("the Grim"):</strong> Defeated the Safavids at Chaldiran (1514) and conquered Mamluk Egypt (1517), giving the Ottomans control of the Islamic holy cities of Mecca and Medina and the title of caliph.</li>
+<li><strong>Suleiman the Magnificent:</strong> Expanded deep into Europe (took Belgrade 1521, besieged Vienna 1529) and reformed law. Ottoman Europeans called him "the Magnificent"; Turks called him <em>Kanuni</em> ("the Lawgiver") for his codification of sultanic law alongside sharia.</li>
+</ul>
+<h4>Military</h4>
+<ul>
+<li><strong>Devshirme system:</strong> A levy of Christian boys (mostly from the Balkans) who were converted to Islam and trained as elite soldiers or administrators. The military products of this system were the <strong>janissaries</strong>, one of the first standing infantry forces in the world to use firearms.</li>
+<li><strong>Gunpowder artillery:</strong> The Ottomans were early adopters of massive cannons and of musket-armed infantry.</li>
+<li><strong>Timar system:</strong> Land grants to sipahi cavalrymen who owed the sultan military service.</li>
+</ul>
+<h4>Religion &amp; Society</h4>
+<ul>
+<li><strong>Sunni Islam</strong> was the official faith; the sultan eventually claimed the title of caliph.</li>
+<li><strong>Millet system:</strong> Non-Muslim religious communities (Orthodox Christians, Armenians, Jews) were allowed internal self-government under their own religious leaders — a form of bounded tolerance rooted in Islamic law's protected status for "people of the book."</li>
+<li>Huge Armenian, Greek, Jewish, and Arab populations gave the empire a cosmopolitan character.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_Mars_2013.jpg?width=900" alt="Hagia Sophia" />
+<figcaption>The Hagia Sophia in Istanbul — originally a Byzantine cathedral (537), converted to a mosque after the Ottoman conquest of 1453, with minarets added afterward. Ottoman architecture (and the later Blue Mosque) consciously imitated its dome.</figcaption>
+</figure>
+</div>
+<!-- SAFAVID -->
+<div class="region-card region-safavid">
+<h3>🕌 The Safavid Empire (1501–1736)</h3>
+<p>
+Centered in modern Iran, the Safavids converted Iran from a majority-Sunni to a majority-<strong>Twelver Shia</strong>
+society — a religious transformation whose effects are still visible today. Their conflict with the
+Ottomans gave the Sunni–Shia division geopolitical as well as theological dimensions.
+</p>
+<h4>Rise</h4>
+<ul>
+<li><strong>Shah Ismail I</strong> (r. 1501–1524): Founded the dynasty at age 14. He claimed descent from Shia imams and used religious fervor — his Turkic military followers, the <strong>Qizilbash</strong> ("Red Heads") cavalry, saw him as a semi-divine figure.</li>
+<li><strong>Battle of Chaldiran (1514):</strong> Ottoman musketeers and cannons shattered Ismail's cavalry, showing the gap between an empire that had adopted gunpowder infantry and one that still relied on horsemen. Chaldiran fixed the Ottoman–Safavid border in roughly its modern location.</li>
+</ul>
+<h4>Peak under Shah Abbas I (r. 1587–1629)</h4>
+<ul>
+<li>Built a modernized army modeled on Ottoman janissaries — <strong>ghulams</strong>, mostly Christian-born slave soldiers loyal only to the shah.</li>
+<li>Moved the capital to <strong>Isfahan</strong> and made it a showcase of Persian architecture ("Isfahan is half the world").</li>
+<li>Promoted carpet-weaving and silk industries; Safavid silk was sold across Europe through Armenian merchants in New Julfa.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shah_Abbas_I.jpg?width=400" alt="Shah Abbas I" />
+<figcaption>Shah Abbas I (r. 1587–1629) — the Safavid ruler who modernized the army, moved the capital to Isfahan, and built a centralized Shia state.</figcaption>
+</figure>
+<h4>Long-term Challenges</h4>
+<ul>
+<li>Dependence on the Qizilbash weakened the state when their factions quarreled.</li>
+<li>Closed location between the Ottomans and Mughals limited maritime expansion.</li>
+<li>The empire collapsed in 1722 after an Afghan invasion, illustrating the limits of a religiously exclusive empire surrounded by rivals.</li>
+</ul>
+</div>
+<!-- MUGHAL -->
+<div class="region-card region-mughal">
+<h3>🐘 The Mughal Empire (1526–1857)</h3>
+<p>
+Founded by <strong>Babur</strong>, a Turkic-Mongol prince from Central Asia who traced his ancestry to
+both Timur and Genghis Khan, the Mughals built the wealthiest state of the early modern world in a
+land where Muslims ruled a majority-Hindu population.
+</p>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Akbar_the_Great.jpg?width=500" alt="Akbar the Great" />
+<figcaption>Akbar the Great (r. 1556–1605) — the ruler who used religious tolerance and administrative reform to stabilize Mughal rule over a Hindu majority.</figcaption>
+</figure>
+<h4>Key Rulers</h4>
+<ul>
+<li><strong>Babur (r. 1526–1530):</strong> Defeated the Delhi Sultanate at the <strong>First Battle of Panipat (1526)</strong> using gunpowder artillery — a decisive demonstration of the gunpowder revolution in South Asia.</li>
+<li><strong>Akbar (r. 1556–1605):</strong> Expanded the empire to cover most of the Indian subcontinent. Practiced <strong>sulh-i kul</strong> ("universal peace"): abolished the jizya on non-Muslims (1564), married Hindu Rajput princesses, recruited Rajputs into the Mughal officer corps, and created the experimental syncretic faith <strong>Din-i Ilahi</strong>.</li>
+<li><strong>Shah Jahan (r. 1628–1658):</strong> Built the <strong>Taj Mahal</strong> as a tomb for his wife Mumtaz Mahal and the Red Fort in Delhi. His reign was the architectural peak of the dynasty.</li>
+<li><strong>Aurangzeb (r. 1658–1707):</strong> Expanded the empire to its greatest territorial extent (~150 million subjects) but reimposed the <strong>jizya</strong> and persecuted Sikhs, Hindus, and Shia Muslims — policies that sparked rebellions (Rajputs, Marathas, Sikhs) that weakened the empire after his death.</li>
+</ul>
+<h4>Administration</h4>
+<ul>
+<li><strong>Mansabdari system:</strong> A ranked officer corps where each <em>mansabdar</em> received a rank (<em>zat</em>) and a number of cavalry he had to supply (<em>sawar</em>); his pay came from revenue assigned to a territory (<em>jagir</em>). This tied the nobility's income directly to the state.</li>
+<li><strong>Zamindars:</strong> Local tax collectors (often hereditary Hindu landlords) linked imperial authority to the countryside.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Mahal_(Edited).jpeg?width=900" alt="Taj Mahal" />
+<figcaption>The Taj Mahal (c. 1632–1653) — Shah Jahan's white marble mausoleum in Agra; a symbol of Mughal wealth that blended Persian, Timurid, and Indian architectural traditions.</figcaption>
+</figure>
+</div>
+<!-- MING / QING -->
+<div class="region-card region-china">
+<h3>🏯 Ming &amp; Qing China (1368–1912)</h3>
+<p>
+While the Islamic gunpowder empires rose, China was led by two successive dynasties — the Han Chinese
+<strong>Ming</strong> (1368–1644) and the Manchu <strong>Qing</strong> (1644–1912) — that together
+ruled the world's most populous empire.
+</p>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Forbidden_City_-_View_from_Coal_Hill.jpg?width=900" alt="The Forbidden City in Beijing" />
+<figcaption>The Forbidden City in Beijing — the imperial palace complex begun by the Yongle Emperor c. 1406. Both Ming and Qing emperors ruled from here.</figcaption>
+</figure>
+<h4>The Ming (1368–1644)</h4>
+<ul>
+<li><strong>Yongle Emperor (r. 1402–1424):</strong> Moved the capital to Beijing, built the Forbidden City, and sponsored Zheng He's Indian Ocean voyages (1405–1433).</li>
+<li><strong>Scholar-gentry bureaucracy:</strong> Restored the Confucian civil service exams and rebuilt the examination hall system.</li>
+<li><strong>Tribute system:</strong> Neighboring states (Korea, Vietnam, Ryukyu, occasionally Japan) sent gifts to the emperor and received larger gifts in return — a trade relationship dressed in ritual subordination.</li>
+<li><strong>Decline:</strong> Corruption, Japanese pirate raids, and silver-inflation crises (imported silver from Japan and the Americas flooded the economy and then dried up) fatally weakened the dynasty.</li>
+</ul>
+<h4>The Qing (1644–1912)</h4>
+<ul>
+<li><strong>Manchu conquest (1644):</strong> A non-Han people from beyond the Great Wall took advantage of Ming collapse and founded the Qing.</li>
+<li><strong>Queue order:</strong> Required Han Chinese men to shave the front of their heads and grow a long braid as a sign of submission.</li>
+<li><strong>Kangxi (r. 1661–1722) &amp; Qianlong (r. 1735–1796):</strong> Presided over Qing prosperity, expansion into Tibet, Mongolia, and Xinjiang, and a population boom to ~300 million.</li>
+<li><strong>Confucian scholarship:</strong> The Qing sponsored massive encyclopedias and dictionaries, tying themselves to Confucian legitimacy.</li>
+</ul>
+</div>
+<!-- RUSSIA -->
+<div class="region-card region-russia">
+<h3>❄️ The Russian Empire (c. 1547–1917)</h3>
+<div class="photo-row">
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vasnetsov_Ioann_4.jpg?width=400" alt="Ivan the Terrible" />
+<figcaption>Ivan IV "the Terrible" (r. 1533–1584), first ruler to be officially crowned "Tsar."</figcaption>
+</figure>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Basil%27s_Cathedral_Moscow.jpg?width=500" alt="St. Basil's Cathedral" />
+<figcaption>St. Basil's Cathedral, Moscow — commissioned by Ivan IV to commemorate his conquest of Kazan (1552).</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Ivan III ("the Great"):</strong> Ended Mongol tribute (1480) and married Sophia Palaiologos, the last Byzantine heiress, positioning Moscow as the "Third Rome."</li>
+<li><strong>Ivan IV "the Terrible" (r. 1533–1584):</strong> First to be crowned "Tsar" (1547); conquered the Muslim khanates of Kazan and Astrakhan and began Russia's long march into Siberia; created the <strong>Oprichnina</strong>, a personal police state that killed or deported many boyars (nobles) he suspected of treason.</li>
+<li><strong>Romanov dynasty (from 1613):</strong> After the Time of Troubles, the Romanovs restored order and kept pushing eastward; Russian traders and Cossacks reached the Pacific by the mid-17th century.</li>
+<li><strong>Peter the Great (r. 1682–1725):</strong> Toured Western Europe, forced the nobility to adopt European dress and customs, founded <strong>St. Petersburg</strong> (1703) as a "window on the West," reformed the army along European lines, and created a Table of Ranks tying noble status to state service.</li>
+</ul>
+</div>
+<!-- EUROPEAN MONARCHIES -->
+<div class="region-card region-europe">
+<h3>👑 European Absolutist Monarchies</h3>
+<p>
+Europe's fragmented medieval kingdoms consolidated into large, centralized states during this period.
+They are not always called "land-based empires" but they share the same story of centralization,
+standing armies, taxation, and religious legitimation.
+</p>
+<ul>
+<li><strong>Spain:</strong> Ferdinand and Isabella unified Castile and Aragon (1469), completed the Reconquista (1492), and expelled Jews and later Muslims. Habsburg Spain — under Philip II — combined New World silver with a Counter-Reformation mission, though at huge long-term cost.</li>
+<li><strong>France:</strong> Louis XIV (r. 1643–1715) built <strong>Versailles</strong> to tame the nobility; claimed "L'État, c'est moi" ("I am the state"); revoked the Edict of Nantes in 1685, driving Huguenots (Protestants) out of France.</li>
+<li><strong>England:</strong> Tudor centralization (Henry VIII, Elizabeth I), followed by civil war, the execution of Charles I (1649), and the 1688 Glorious Revolution, which limited royal power — an alternative path from absolutism.</li>
+<li><strong>Holy Roman Empire &amp; Prussia:</strong> The HRE remained fragmented; Prussia and Austria emerged as rising powers by 1750.</li>
+</ul>
+</div>
+<!-- TOPIC 3.2 ADMINISTRATION -->
+<h2>Topic 3.2 — Empires: Methods of Consolidating and Maintaining Power</h2>
+<div class="region-card region-admin">
+<h3>🏛️ How Rulers Held These Empires Together</h3>
+<p>Across continents, the period 1450–1750 saw rulers use strikingly similar tools. The CED asks you to compare them — do not just memorize what each empire did, but notice the patterns.</p>
+<h4>Bureaucracy &amp; Administration</h4>
+<ul>
+<li><strong>Ottoman devshirme &amp; janissaries:</strong> Loyal to the sultan, not a noble family.</li>
+<li><strong>Mughal mansabdari:</strong> Ranked officer corps; salaries tied to state-controlled land.</li>
+<li><strong>Chinese scholar-gentry &amp; civil service exam:</strong> Educated elite whose status came from merit and Confucian learning.</li>
+<li><strong>Russian Table of Ranks (1722):</strong> Peter I forced the nobility to earn rank through state service.</li>
+<li><strong>European intendants (France):</strong> Royal officials who bypassed traditional nobles to enforce royal policy in the provinces.</li>
+</ul>
+<h4>Taxation &amp; Revenue</h4>
+<ul>
+<li><strong>Tax farming:</strong> Common in the Ottoman and Mughal empires; local tax farmers purchased the right to collect taxes and kept a share. Efficient short-term but often corrupt and exploitative long-term.</li>
+<li><strong>Zamindars (Mughal)</strong> and <strong>timariots (Ottoman)</strong>: Regional landholders who collected taxes and supplied troops.</li>
+<li><strong>Jizya:</strong> Tax on non-Muslims in Islamic states — charged, abolished by Akbar, and reimposed by Aurangzeb — illustrating how tax policy was also religious policy.</li>
+<li><strong>Sale of offices:</strong> Both the French monarchy and the Ottoman court sold offices for short-term revenue (long-term corruption).</li>
+</ul>
+<h4>Military Power</h4>
+<ul>
+<li><strong>Gunpowder weapons:</strong> Mehmed II's cannons at Constantinople, Babur's artillery at Panipat, and Russian muskets all show how firearms favored centralized states that could afford them.</li>
+<li><strong>Professional standing armies:</strong> Janissaries, ghulams, mansabdari cavalry, Qing bannermen, and European royal regiments replaced feudal levies.</li>
+</ul>
+<h4>Religion &amp; Ideology as Legitimation</h4>
+<ul>
+<li><strong>Divine right</strong> in France, combined with Catholic identity.</li>
+<li><strong>Caliph of Sunni Islam</strong> — claimed by Ottoman sultans after 1517.</li>
+<li><strong>Semi-divine ruler</strong> — Shah Ismail among the Qizilbash; "Son of Heaven" in China under the Mandate of Heaven.</li>
+<li><strong>Syncretic legitimation</strong> — Akbar's sulh-i kul and Din-i Ilahi.</li>
+</ul>
+<h4>Art, Architecture, and Monumental Building</h4>
+<ul>
+<li><strong>Suleymaniye Mosque</strong> (Istanbul), <strong>Isfahan's Naqsh-e Jahan Square</strong>, the <strong>Taj Mahal</strong>, the <strong>Forbidden City</strong>, <strong>Versailles</strong>, and <strong>St. Basil's</strong> are all deliberate political statements: each projects imperial majesty, religious identity, and permanence.</li>
+</ul>
+</div>
+<!-- TOPIC 3.3 BELIEF SYSTEMS -->
+<h2>Topic 3.3 — Empires: Belief Systems</h2>
+<div class="region-card region-belief">
+<h3>🛐 Religion, Reform, and Rupture</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_Chaldiran.jpg?width=700" alt="Battle of Chaldiran" />
+<figcaption>Battle of Chaldiran (1514) — a Persian-style miniature showing the Ottoman victory over the Safavids, which cemented the Sunni–Shia divide into geography.</figcaption>
+</figure>
+<h4>Sunni–Shia Split Becomes Geopolitical</h4>
+<ul>
+<li>The theological split dates to the 7th century, but the Ottoman–Safavid rivalry — especially after Chaldiran (1514) — turned it into a fixed political boundary.</li>
+<li>The Ottomans, as Sunni caliphs, positioned themselves as protectors of Sunni orthodoxy; the Safavids made Twelver Shia the state religion.</li>
+<li>Persecution flowed both ways: Sunnis in Iran were pressured to convert, while the Ottomans suppressed Shia-leaning Alevi and Qizilbash minorities in Anatolia.</li>
+</ul>
+<h4>Mughal Syncretism vs. Orthodoxy</h4>
+<ul>
+<li><strong>Akbar's experiments:</strong> Held interfaith dialogues at his "House of Worship" with Hindus, Sunnis, Shia Muslims, Jains, Zoroastrians, and Portuguese Jesuits; tried to distill a court religion (<em>Din-i Ilahi</em>) — though it never spread beyond a small circle of courtiers.</li>
+<li><strong>Aurangzeb's reversal:</strong> Strict Sunni policies — reimposition of the jizya, destruction of some Hindu temples, war with Sikh gurus — reflect anxiety over ruling non-Muslim subjects.</li>
+</ul>
+<h4>The Protestant Reformation</h4>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Martin_Luther_by_Cranach-restoration.jpg?width=400" alt="Martin Luther portrait" />
+<figcaption>Martin Luther (painted by Lucas Cranach the Elder). His 1517 <strong>95 Theses</strong> launched the Protestant Reformation.</figcaption>
+</figure>
+<ul>
+<li><strong>Martin Luther (1517):</strong> Posted the 95 Theses at Wittenberg, attacking the sale of indulgences. Argued for justification by faith alone and the authority of scripture (<em>sola scriptura</em>).</li>
+<li><strong>Printing press:</strong> Gutenberg's press (c. 1450) let Luther's ideas spread across Germany in months, not years.</li>
+<li><strong>Further reformers:</strong> John Calvin (predestination; Geneva), Huldrych Zwingli (Switzerland), and Henry VIII (Church of England, for personal and political reasons).</li>
+<li><strong>Peasant revolts and religious wars:</strong> German Peasants' War (1524–25), French Wars of Religion, the Dutch Revolt, and the Thirty Years' War (1618–48).</li>
+</ul>
+<h4>The Catholic Counter-Reformation</h4>
+<ul>
+<li><strong>Council of Trent (1545–1563):</strong> Reaffirmed Catholic doctrine, tightened clerical discipline, launched seminaries.</li>
+<li><strong>Jesuits (Society of Jesus, 1540):</strong> Founded by Ignatius of Loyola; ran schools and missions to Asia and the Americas (Matteo Ricci in Ming China, Francis Xavier in Japan).</li>
+<li><strong>Baroque art:</strong> Emotional religious art (Bernini, Caravaggio) as counter-propaganda.</li>
+</ul>
+<h4>Sikhism</h4>
+<ul>
+<li>Founded in the Punjab by <strong>Guru Nanak</strong> (c. 1469–1539) in the context of Hindu–Muslim interaction.</li>
+<li>Teaches one formless God, equality of all humans, rejection of caste, and ritualized devotion.</li>
+<li>Became militarized under later gurus in response to Mughal persecution — especially under Aurangzeb.</li>
+</ul>
+</div>
+<!-- TOPIC 3.4 COMPARISON -->
+<h2>Topic 3.4 — Comparison of Land-Based Empires</h2>
+<p>Use this table to structure comparison responses. Notice both shared tools of rule and empire-specific choices.</p>
+<div style="overflow-x:auto;">
+<table class="compare-table">
+<thead>
+<tr>
+<th>Empire</th>
+<th>Rulers / Peak</th>
+<th>Religion(s)</th>
+<th>Administration</th>
+<th>Military</th>
+<th>Legitimation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ottoman</strong></td>
+<td>Mehmed II, Suleiman (1520–66)</td>
+<td>Sunni Islam; millet system for non-Muslims</td>
+<td>Devshirme &amp; timar; sultanic law (<em>kanun</em>)</td>
+<td>Janissaries, cannons, sipahi cavalry</td>
+<td>Caliphate after 1517; monumental mosques</td>
+</tr>
+<tr>
+<td><strong>Safavid</strong></td>
+<td>Ismail I, Abbas I (1587–1629)</td>
+<td>Twelver Shia (state religion from 1501)</td>
+<td>Qizilbash nobles; later ghulams</td>
+<td>Cavalry &amp; later muskets; defeated at Chaldiran</td>
+<td>Claim to Shia imamate; Isfahan's architecture</td>
+</tr>
+<tr>
+<td><strong>Mughal</strong></td>
+<td>Akbar (1556–1605); Aurangzeb (1658–1707)</td>
+<td>Sunni Muslim rulers over Hindu majority; Sikh minority</td>
+<td>Mansabdari &amp; zamindars</td>
+<td>Cavalry, artillery, elephants</td>
+<td>Akbar: sulh-i kul; Aurangzeb: sharia</td>
+</tr>
+<tr>
+<td><strong>Ming / Qing</strong></td>
+<td>Yongle (Ming); Kangxi &amp; Qianlong (Qing)</td>
+<td>Confucianism (state); Buddhism, Daoism, folk religion</td>
+<td>Scholar-gentry, civil service exams</td>
+<td>Qing banner system; firearms gradually</td>
+<td>Mandate of Heaven; Confucian classics</td>
+</tr>
+<tr>
+<td><strong>Russia</strong></td>
+<td>Ivan IV, Peter I (1682–1725)</td>
+<td>Russian Orthodox Christianity</td>
+<td>Oprichnina (Ivan IV); Table of Ranks (Peter I)</td>
+<td>Cossacks; Europeanized army under Peter</td>
+<td>"Third Rome"; autocrat; Europeanization</td>
+</tr>
+<tr>
+<td><strong>European (France)</strong></td>
+<td>Louis XIV (1643–1715)</td>
+<td>Catholicism; Huguenots expelled 1685</td>
+<td>Intendants, venal offices</td>
+<td>Royal standing army</td>
+<td>Divine right; Versailles</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Key Similarities</h3>
+<ul>
+<li>All used <strong>gunpowder militaries</strong> and centralized bureaucracies.</li>
+<li>All used <strong>religion</strong> to legitimize rule, often favoring one faith but tolerating minorities when politically useful.</li>
+<li>All built <strong>monumental architecture</strong> to project imperial authority.</li>
+<li>All struggled over succession and court politics; harems (Ottoman), queen mothers (Safavid), and favoritism (Louis XIV's Versailles) shaped politics.</li>
+</ul>
+<h3>Key Differences</h3>
+<ul>
+<li><strong>Recruitment of elites:</strong> Merit-based (China's exams, Ottoman devshirme) vs. hereditary (Russian boyars, European nobility, Mughal mansabdars tied to lineage).</li>
+<li><strong>Religious policy:</strong> Bounded tolerance (Ottoman millet, Akbar's sulh-i kul) vs. exclusive orthodoxy (Safavid Shia, late Aurangzeb, Louis XIV's Catholic France).</li>
+<li><strong>Economy:</strong> Mughals on a vast agrarian tax base; Ottomans on land grants + trade; Ming/Qing on agriculture + internal commerce; European states increasingly on overseas trade.</li>
+</ul>
+<!-- VOCAB -->
+<h2>📚 Key Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-item"><span class="vocab-term">Gunpowder empires</span>The Ottoman, Safavid, and Mughal empires, which relied on gunpowder militaries to consolidate power.</div>
+<div class="vocab-item"><span class="vocab-term">Devshirme</span>Ottoman levy of Christian boys who became janissaries or officials.</div>
+<div class="vocab-item"><span class="vocab-term">Janissaries</span>Elite Ottoman infantry force armed with firearms; loyal to the sultan.</div>
+<div class="vocab-item"><span class="vocab-term">Millet system</span>Ottoman system that let non-Muslim religious communities govern themselves.</div>
+<div class="vocab-item"><span class="vocab-term">Timar / sipahi</span>Ottoman land grant and the cavalryman who held it.</div>
+<div class="vocab-item"><span class="vocab-term">Qizilbash</span>Turkic cavalry who fought for Shah Ismail and saw him as semi-divine.</div>
+<div class="vocab-item"><span class="vocab-term">Ghulams</span>Slave-soldiers in the Safavid army created by Shah Abbas I.</div>
+<div class="vocab-item"><span class="vocab-term">Twelver Shia</span>Form of Shia Islam made Safavid state religion.</div>
+<div class="vocab-item"><span class="vocab-term">Mansabdari</span>Mughal ranked officer system tying salary to state-controlled land.</div>
+<div class="vocab-item"><span class="vocab-term">Zamindars</span>Mughal local tax collectors, often hereditary landlords.</div>
+<div class="vocab-item"><span class="vocab-term">Jizya</span>Tax on non-Muslims; abolished by Akbar, reimposed by Aurangzeb.</div>
+<div class="vocab-item"><span class="vocab-term">Sulh-i kul</span>"Universal peace" — Akbar's policy of religious tolerance.</div>
+<div class="vocab-item"><span class="vocab-term">Din-i Ilahi</span>Akbar's experimental syncretic faith.</div>
+<div class="vocab-item"><span class="vocab-term">Scholar-gentry</span>Chinese educated elite who passed the civil service exams.</div>
+<div class="vocab-item"><span class="vocab-term">Mandate of Heaven</span>Chinese idea that Heaven grants (and can withdraw) a dynasty's right to rule.</div>
+<div class="vocab-item"><span class="vocab-term">Tsar</span>Russian term for "Caesar"; title first used by Ivan IV.</div>
+<div class="vocab-item"><span class="vocab-term">Oprichnina</span>Ivan IV's personal fiefdom and secret police that purged boyars.</div>
+<div class="vocab-item"><span class="vocab-term">Table of Ranks</span>Peter the Great's 1722 system tying noble status to state service.</div>
+<div class="vocab-item"><span class="vocab-term">Divine right</span>European theory that monarchs rule by God's authority.</div>
+<div class="vocab-item"><span class="vocab-term">95 Theses</span>Martin Luther's 1517 attack on indulgences that launched the Reformation.</div>
+<div class="vocab-item"><span class="vocab-term">Counter-Reformation</span>Catholic revival after the Council of Trent (1545–63).</div>
+<div class="vocab-item"><span class="vocab-term">Jesuits</span>Catholic order (Society of Jesus) known for missions and education.</div>
+<div class="vocab-item"><span class="vocab-term">Sikhism</span>Monotheistic religion founded by Guru Nanak in Punjab c. 1500.</div>
+</div>
+<!-- MCQs -->
+<div class="quiz-container">
+<h2>📝 Multiple Choice Practice</h2>
+<p>Three questions per sub-topic. Click an answer to check it.</p>
+<h3 class="quiz-subheading">Topic 3.1 — Empires Expand</h3>
+<div class="quiz-question">
+<p><strong>1. The Ottoman capture of Constantinople in 1453 was most directly enabled by which of the following?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) A coordinated European effort to reinforce the city.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(B) Defeat of the Safavid Empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 1)">(C) The use of massive gunpowder-powered cannons against the city walls.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) The support of the Mughal Empire.</div>
+</div>
+<div class="explanation" id="exp-1"><strong>Answer: C.</strong> Mehmed II commissioned enormous bronze cannons (including the famous "Basilic" built by Orban) that breached the Theodosian walls after weeks of bombardment. Gunpowder artillery made the centuries-old fortifications obsolete.</div>
+</div>
+<div class="quiz-question">
+<p><strong>2. Babur's victory at Panipat in 1526 is best seen as an example of</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) The success of Hindu resistance to Muslim rule.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) The ability of gunpowder forces to defeat larger, traditionally-armed armies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) Chinese influence on Indian warfare.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) The integration of Mughal and Safavid armies.</div>
+</div>
+<div class="explanation" id="exp-2"><strong>Answer: B.</strong> Babur's smaller force used artillery and matchlock muskets tied together with carts to break the larger army of the Delhi Sultanate. The battle is a textbook example of the gunpowder revolution in South Asia.</div>
+</div>
+<div class="quiz-question">
+<p><strong>3. Which ruler is correctly paired with a major action?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Shah Abbas I — conquered Constantinople.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(B) Akbar — reimposed the jizya and waged war against the Sikhs.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 3)">(C) Peter the Great — founded St. Petersburg and reformed the Russian army along European lines.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Ivan III — crowned himself Qing emperor.</div>
+</div>
+<div class="explanation" id="exp-3"><strong>Answer: C.</strong> Peter I founded St. Petersburg in 1703 and remade Russia along European lines. Akbar <em>abolished</em> the jizya (that was Aurangzeb), and Shah Abbas never took Constantinople.</div>
+</div>
+<h3 class="quiz-subheading">Topic 3.2 — Methods of Consolidating Power</h3>
+<div class="quiz-question">
+<p><strong>4. The Ottoman devshirme system is best understood as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) A form of hereditary nobility.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) A method of recruiting loyal soldiers and officials from Christian boys who converted to Islam.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) A trade system linking the Ottomans to Indian Ocean commerce.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) A religious school for Shia clerics.</div>
+</div>
+<div class="explanation" id="exp-4"><strong>Answer: B.</strong> The devshirme took boys from Christian villages (mostly in the Balkans), converted them to Islam, and trained them as either janissaries (elite infantry) or palace officials. Because they had no tribal or family base, they were loyal directly to the sultan.</div>
+</div>
+<div class="quiz-question">
+<p><strong>5. Which pair correctly matches an empire with its method of tying the nobility to the state?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Mughal Empire — oprichnina.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Russia — mansabdari.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 5)">(C) Russia — Table of Ranks.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Ming China — millet system.</div>
+</div>
+<div class="explanation" id="exp-5"><strong>Answer: C.</strong> Peter's 1722 Table of Ranks forced Russian nobles to earn their rank by serving the tsar in the military or bureaucracy. Mansabdari was Mughal; the millet system was Ottoman religious policy; the oprichnina was Ivan IV's secret police.</div>
+</div>
+<div class="quiz-question">
+<p><strong>6. The construction of the Taj Mahal, the Forbidden City, and Versailles can best be understood as examples of</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Private commercial ventures funded by merchant classes.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) Monumental architecture used by rulers to project legitimacy and permanence.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) Religious reforms designed to purify worship.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Attempts to copy European architectural styles.</div>
+</div>
+<div class="explanation" id="exp-6"><strong>Answer: B.</strong> Each of these was a state project expressing imperial power — the Taj Mahal (Mughal wealth and Persian-Islamic aesthetic), the Forbidden City (Chinese cosmological order), and Versailles (Louis XIV's control over the French nobility).</div>
+</div>
+<h3 class="quiz-subheading">Topic 3.3 — Belief Systems</h3>
+<div class="quiz-question">
+<p><strong>7. The Battle of Chaldiran (1514) is historically significant primarily because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) Ended the Mughal Empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) Established a durable Sunni–Shia geopolitical frontier between the Ottomans and Safavids.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) Led to the conversion of the Ottoman Empire to Shia Islam.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Opened the Indian Ocean to European powers.</div>
+</div>
+<div class="explanation" id="exp-7"><strong>Answer: B.</strong> Ottoman muskets and artillery shattered the Qizilbash cavalry. The border set at Chaldiran roughly matches today's Turkey–Iran border, and it solidified the political split between Sunni Ottoman and Shia Safavid spheres.</div>
+</div>
+<div class="quiz-question">
+<p><strong>8. Which of the following best describes the religious policies of Akbar and Aurangzeb?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) Both actively persecuted Hindus.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(B) Both abolished the jizya on non-Muslims.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 8)">(C) Akbar pursued religious tolerance and sulh-i kul, while Aurangzeb reimposed the jizya and enforced stricter Sunni policies.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) Both banned Sikhism.</div>
+</div>
+<div class="explanation" id="exp-8"><strong>Answer: C.</strong> Akbar's policies explicitly welcomed Hindus into government and abolished the jizya. Aurangzeb reversed this direction — reimposing jizya (1679), destroying some temples, and fighting the Sikh gurus — which helped destabilize the empire after his death.</div>
+</div>
+<div class="quiz-question">
+<p><strong>9. The rapid spread of Protestant ideas after Luther's 1517 95 Theses was most directly enabled by</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) Support from the papacy.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 9)">(B) The printing press, which allowed pamphlets and Bibles to circulate widely.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(C) The Council of Trent's endorsement.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) The Jesuits' international network.</div>
+</div>
+<div class="explanation" id="exp-9"><strong>Answer: B.</strong> Gutenberg's printing press, developed around 1450, let Luther's theses, pamphlets, and translated Bibles spread across Germany in weeks. The Council of Trent (D) was the Catholic response and the Jesuits (C) were Counter-Reformation.</div>
+</div>
+<h3 class="quiz-subheading">Topic 3.4 — Comparison</h3>
+<div class="quiz-question">
+<p><strong>10. Which of the following is a similarity between the Ottoman and Mughal empires in the period 1450–1750?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) Both established Shia Islam as the state religion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) Both ruled religiously diverse populations and used forms of bounded tolerance to maintain stability.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) Both were non-Muslim empires.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) Both relied exclusively on hereditary nobles for military service.</div>
+</div>
+<div class="explanation" id="exp-10"><strong>Answer: B.</strong> The Ottoman millet system and Akbar's sulh-i kul are classic examples of diverse imperial societies in which Muslim rulers governed Christians, Jews, Hindus, and others through institutions tailored to those communities.</div>
+</div>
+<div class="quiz-question">
+<p><strong>11. Which of the following represents a key difference between Qing China and Safavid Persia?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, true, 11)">(A) Qing China recruited officials through a merit-based civil service exam, while the Safavids relied on tribal loyalties (Qizilbash) and later on slave soldiers (ghulams).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(B) Qing China adopted Twelver Shia Islam as its state religion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Both empires shared identical systems of tax collection.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) The Safavids used Confucian classics to train administrators.</div>
+</div>
+<div class="explanation" id="exp-11"><strong>Answer: A.</strong> Confucian civil service exams gave Chinese administration a meritocratic character unusual among world empires. The Safavids depended on loyalty networks (Qizilbash first, then ghulams).</div>
+</div>
+<div class="quiz-question">
+<p><strong>12. Which pair best illustrates how rulers in different empires legitimized their authority?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Louis XIV — claimed the Mandate of Heaven.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(B) Kangxi Emperor — claimed the Catholic divine right of kings.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 12)">(C) Suleiman the Magnificent — claimed the title of caliph after the Ottoman conquest of Egypt in 1517.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) Shah Abbas I — claimed descent from Confucius.</div>
+</div>
+<div class="explanation" id="exp-12"><strong>Answer: C.</strong> After Selim I's conquest of Egypt in 1517 and capture of the Islamic holy cities, Ottoman sultans — including Suleiman — could credibly claim the caliphate, combining political and religious leadership of Sunni Islam.</div>
+</div>
+</div>
+<!-- SAQs -->
+<h2>✍️ Short-Answer Practice (SAQ)</h2>
+<div class="saq-box">
+<h3>SAQ 1 — Consolidating Power (No Stimulus)</h3>
+<ol type="a">
+<li>Identify ONE way rulers used religion to legitimize their authority in a land-based empire in the period c. 1450–1750.</li>
+<li>Explain ONE way rulers used bureaucracy to consolidate power in the period c. 1450–1750.</li>
+<li>Explain ONE similarity between the methods of consolidating power used in TWO different land-based empires in the period c. 1450–1750.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> Ottoman sultans used their control of Mecca, Medina, and Jerusalem after the 1517 conquest of Mamluk Egypt to claim the title of caliph, which presented them as religious leaders of all Sunni Muslims and not merely regional monarchs.</p>
+<p><strong>(b)</strong> In Mughal India, Akbar consolidated power through the <em>mansabdari</em> system, which ranked officials by the number of cavalry they were required to supply to the state and paid them through revenue from assigned land. This tied the loyalty and income of the nobility directly to the emperor.</p>
+<p><strong>(c)</strong> Both the Ottomans and the Mughals consolidated power by recruiting elite officials whose loyalty was to the ruler rather than to a hereditary nobility. The Ottomans' devshirme converted Christian boys into janissaries and palace officials dependent on the sultan, while the Mughal mansabdari system rewarded officers with state-controlled revenue rather than permanent estates — making their wealth contingent on the emperor's favor.</p>
+</details>
+</div>
+<div class="saq-box">
+<h3>SAQ 2 — Belief Systems (Stimulus)</h3>
+<p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+"By the grace of God the Almighty… the Emperor commands that no one shall interfere with any man on account of his religion… Hindus, Muslims, Christians, Jews, and others shall all be allowed to live and worship according to their beliefs, and shall not be subjected to the jizya."<br>
+<em>— Paraphrased Mughal court decree, late 16th century</em>
+</p>
+<ol type="a">
+<li>Identify the ruler most likely associated with the policy described.</li>
+<li>Explain ONE reason why this ruler adopted this policy.</li>
+<li>Explain ONE way that a DIFFERENT ruler in a land-based empire in the period c. 1450–1750 took a contrasting approach to religious diversity.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The decree reflects the religious policy of Akbar the Great (r. 1556–1605), whose doctrine of <em>sulh-i kul</em> ("universal peace") included abolishing the jizya on non-Muslims in 1564.</p>
+<p><strong>(b)</strong> Akbar ruled over a majority-Hindu population, and alienating Hindus — especially the militarily powerful Rajputs — would have destabilized Mughal rule. By taking Hindu wives, appointing Hindus to high office, and ending the jizya, Akbar reduced resistance and built a broad ruling coalition.</p>
+<p><strong>(c)</strong> Louis XIV of France took a contrasting approach: in 1685 he revoked the Edict of Nantes, which had granted French Protestants (Huguenots) limited toleration. The revocation produced mass emigration of skilled Huguenots, but Louis calculated that a religiously unified Catholic state supported the image of an absolute monarch ruling by divine right.</p>
+</details>
+</div>
+<!-- KEY TAKEAWAYS -->
+<h2>⭐ Key Takeaways</h2>
+<div class="key-takeaways">
+<ul>
+<li><strong>Parallel empires.</strong> Between 1450 and 1750, strikingly similar centralized, gunpowder-based empires emerged in regions that had little direct contact with each other.</li>
+<li><strong>Shared toolkit.</strong> Bureaucratic service elites, standing armies, monumental architecture, and state religion were used across Eurasia to consolidate power.</li>
+<li><strong>Religion as politics.</strong> The Sunni–Shia split, Mughal syncretism, the Protestant Reformation, and the Counter-Reformation all show that religion was a political tool in this period as much as a matter of personal belief.</li>
+<li><strong>Tolerance was bounded.</strong> Akbar's sulh-i kul and the Ottoman millet system were remarkable, but they were structured tolerance inside a Muslim-ruled order — not modern religious freedom.</li>
+<li><strong>Seeds of later change.</strong> Aurangzeb's rigidity weakened the Mughals, French absolutism sowed resentment that fed into revolution, and Russia's westernization under Peter pointed toward the modern age — setting up Units 4 and 5.</li>
+</ul>
+</div>
+<p style="text-align:center; margin-top:2rem;">
+<a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+</p>
+</div>
+<script>
+function checkAnswer(element, isCorrect, qNum) {
+const options = element.parentElement.querySelectorAll('.quiz-option');
+options.forEach(o => o.classList.remove('correct', 'incorrect'));
+element.classList.add(isCorrect ? 'correct' : 'incorrect');
+const exp = document.getElementById('exp-' + qNum);
+if (exp) exp.classList.add('show');
+}
+</script>
+</body>
+</html>
