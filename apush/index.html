@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Welcome to the homepage of this AP U.S. History learning resource.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Getting Ahead: AP U.S. History</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #002868, #bf0a30);
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .topics-list a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topics-list li {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 0.75rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      transition: 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .topics-list li:hover {
+      background: linear-gradient(to right, #e6eefc, #ffe6eb);
+      transform: scale(1.02);
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #002868;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: none;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      color: #002868;
+      border-color: #002868;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #002868;
+      border-color: #002868;
+      color: #ffffff;
+    }
+
+    .hero-image-clickable {
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-image-clickable:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .exam-table {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .exam-table thead {
+      background: linear-gradient(to right, #002868, #bf0a30);
+      color: #ffffff;
+    }
+
+    .exam-table th, .exam-table td {
+      vertical-align: middle;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 2rem 0;
+      margin-top: 4rem;
+      border-radius: 20px 20px 0 0;
+    }
+
+    footer p::before {
+      content: "🌟 ";
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🇺🇸 AP U.S. History</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-4 fw-bold">Getting Ahead: AP U.S. History</h1>
+          <p class="lead">Explore American history from 1491 to today. Get ready to earn that 5!</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <a href="https://gettingaheadap.org">
+            <img src="apush-cover.png" alt="AP U.S. History Logo" class="img-fluid hero-image-clickable"
+              style="max-height: 300px; border-radius: 15px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📝 AP Exam Breakdown</h2>
+    <p class="text-center mb-4">The AP U.S. History exam is <strong>3 hours and 15 minutes</strong> long and has two sections.</p>
+    <div class="card p-4">
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table mb-0">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Question Type</th>
+              <th># of Questions</th>
+              <th>Time</th>
+              <th>% of Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><strong>Section I</strong></td>
+              <td>Part A: Multiple Choice</td>
+              <td>55 questions</td>
+              <td>55 minutes</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <td>Part B: Short Answer</td>
+              <td>3 questions</td>
+              <td>40 minutes</td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><strong>Section II</strong></td>
+              <td>Part A: Document-Based Question (DBQ)</td>
+              <td>1 question</td>
+              <td>60 minutes</td>
+              <td>25%</td>
+            </tr>
+            <tr>
+              <td>Part B: Long Essay Question (LEQ)</td>
+              <td>1 question</td>
+              <td>40 minutes</td>
+              <td>15%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📘 Core Units You'll Learn</h2>
+    <ul class="list-group topics-list">
+      <a href="Unit1-Period1.html"><li class="list-group-item">🌎 Unit 1: Period 1: 1491–1607 — 4–6%</li></a>
+      <a href="Unit2-Period2.html"><li class="list-group-item">⛵ Unit 2: Period 2: 1607–1754 — 6–8%</li></a>
+      <a href="Unit3-Period3.html"><li class="list-group-item">🦅 Unit 3: Period 3: 1754–1800 — 10–17%</li></a>
+      <a href="Unit4-Period4.html"><li class="list-group-item">🏛️ Unit 4: Period 4: 1800–1848 — 10–17%</li></a>
+      <a href="Unit5-Period5.html"><li class="list-group-item">⚔️ Unit 5: Period 5: 1844–1877 — 10–17%</li></a>
+      <a href="Unit6-Period6.html"><li class="list-group-item">🏭 Unit 6: Period 6: 1865–1898 — 10–17%</li></a>
+      <a href="Unit7-Period7.html"><li class="list-group-item">🌆 Unit 7: Period 7: 1890–1945 — 10–17%</li></a>
+      <a href="Unit8-Period8.html"><li class="list-group-item">🕊️ Unit 8: Period 8: 1945–1980 — 10–17%</li></a>
+      <a href="Unit9-Period9.html"><li class="list-group-item">🌐 Unit 9: Period 9: 1980–Present — 4–6%</li></a>
+    </ul>
+  </section>
+
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip</h5>
+        <p class="card-text">Practice SAQs, DBQs, and LEQs weekly. Focus on historical reasoning skills like causation, comparison, continuity and change, and using evidence to support a clear argument.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-united-states-history" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
