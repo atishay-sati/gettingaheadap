@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TMSR9LD4H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AP World History: Modern Unit 2 — Networks of Exchange (c. 1200–1450). Timeline, in-depth notes on the Silk Roads, Mongols, Indian Ocean, trans-Saharan trade, and cultural/environmental consequences, with MCQs and SAQs." />
+<title>Unit 2: Networks of Exchange (c. 1200–1450)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; }
+body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+background: #faf6f1;
+color: #333;
+line-height: 1.6;
+}
+.container {
+max-width: 960px;
+margin: 2rem auto;
+padding: 2rem 1.5rem;
+background: white;
+border-radius: 10px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+h1, h2, h3, h4 {
+font-family: 'Montserrat', sans-serif;
+color: #8b4513;
+}
+h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+.subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+h3 { color: #a0522d; margin-top: 1.5rem; }
+h4 { color: #8b4513; margin-top: 1rem; }
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+.back-link {
+display: inline-block;
+margin-bottom: 1rem;
+color: #8b4513;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.5rem;
+}
+.back-link:hover { text-decoration: underline; transform: scale(1.02); }
+.overview-box {
+background: linear-gradient(135deg, #fde7c9, #fff3e0);
+border-left: 6px solid #d2691e;
+padding: 1.2rem 1.5rem;
+border-radius: 8px;
+margin: 1.5rem 0;
+}
+.weighting-badge {
+display: inline-block;
+background: #8b4513;
+color: white;
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+font-weight: 600;
+font-size: 0.95rem;
+}
+/* Timeline */
+.timeline {
+position: relative;
+margin: 2rem 0;
+padding-left: 2rem;
+border-left: 4px solid #d2691e;
+}
+.timeline-event {
+position: relative;
+margin-bottom: 1.5rem;
+padding: 0.8rem 1rem;
+background: #fff8ef;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.timeline-event::before {
+content: "";
+position: absolute;
+left: -2.55rem;
+top: 1.1rem;
+width: 14px;
+height: 14px;
+background: #8b4513;
+border-radius: 50%;
+border: 3px solid #fff;
+box-shadow: 0 0 0 2px #d2691e;
+}
+.timeline-date {
+display: inline-block;
+font-weight: 700;
+color: #8b4513;
+margin-right: 0.5rem;
+}
+/* Topic cards */
+.region-card {
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 1.2rem 0;
+border-left: 6px solid;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.region-silk { border-color: #c9a227; background: #fffbe7; }
+.region-mongol { border-color: #5d4037; background: #efebe9; }
+.region-indian { border-color: #006064; background: #e0f7fa; }
+.region-sahara { border-color: #e65100; background: #fff3e0; }
+.region-culture { border-color: #6a1b9a; background: #f3e5f5; }
+.region-env { border-color: #2e7d32; background: #e8f5e9; }
+.region-card h3 { margin-top: 0; }
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 0.8rem;
+margin: 1.2rem 0;
+}
+.vocab-item {
+background: #fff8ef;
+border: 1px solid #e0c9a6;
+border-radius: 8px;
+padding: 0.8rem 1rem;
+}
+.vocab-term {
+font-weight: 700;
+color: #8b4513;
+display: block;
+margin-bottom: 0.2rem;
+}
+.compare-table {
+width: 100%;
+border-collapse: collapse;
+margin: 1rem 0;
+font-size: 0.98rem;
+}
+.compare-table th, .compare-table td {
+border: 1px solid #e0c9a6;
+padding: 0.6rem 0.8rem;
+text-align: left;
+vertical-align: top;
+}
+.compare-table thead {
+background: linear-gradient(to right, #8b4513, #d2691e);
+color: white;
+}
+.compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+/* Quiz */
+.quiz-container {
+background: linear-gradient(135deg, #fde7c9, #fff8ef);
+border: 2px solid #8b4513;
+border-radius: 10px;
+padding: 1.5rem;
+margin: 2rem 0;
+}
+.quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+.quiz-question { margin-bottom: 1.5rem; }
+.quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.quiz-option {
+padding: 0.6rem 0.8rem;
+border: 1px solid #8b4513;
+border-radius: 6px;
+cursor: pointer;
+background: white;
+transition: background-color 0.2s;
+}
+.quiz-option:hover { background-color: #fff3e0; }
+.quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+.quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+.explanation {
+display: none;
+margin-top: 0.6rem;
+padding: 0.8rem;
+background: #fff;
+border-left: 4px solid #8b4513;
+border-radius: 6px;
+font-size: 0.95rem;
+}
+.explanation.show { display: block; }
+/* SAQ */
+.saq-box {
+background: #fff;
+border: 2px solid #d2691e;
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 1.2rem 0;
+}
+.saq-box h3 { margin-top: 0; }
+details.saq-sample {
+margin-top: 0.8rem;
+background: #fff8ef;
+border: 1px dashed #8b4513;
+border-radius: 6px;
+padding: 0.6rem 0.9rem;
+}
+details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+.key-takeaways {
+background: linear-gradient(135deg, #fff3e0, #fde7c9);
+border: 2px solid #d2691e;
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 2rem 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+<h1>Unit 2: Networks of Exchange</h1>
+<p class="subtitle">c. 1200 – c. 1450 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 8–10%</span></p>
+<!-- OVERVIEW -->
+<div class="overview-box">
+<h3 style="margin-top:0;">🕸️ Unit Overview</h3>
+<p>
+Between 1200 and 1450, long-distance trade networks intensified and tied the world's regions together
+as never before. The <strong>Silk Roads</strong> carried luxury goods across Eurasia, the
+<strong>Indian Ocean</strong> became the world's busiest maritime system, <strong>trans-Saharan</strong>
+caravans linked West Africa to the Mediterranean, and the <strong>Mongol Empire</strong> — the largest
+contiguous land empire in history — secured safe passage across Eurasia. Along with goods came
+religions, technologies, diseases, and new urban cultures.
+</p>
+<p style="margin-bottom:0;">
+<strong>Big question:</strong> How did expanding networks of exchange from 1200 to 1450 transform
+societies culturally, economically, and environmentally?
+</p>
+</div>
+<!-- TIMELINE -->
+<h2>🗓️ Unit 2 Timeline</h2>
+<div class="timeline">
+<div class="timeline-event"><span class="timeline-date">c. 1200:</span> Indian Ocean trade surges; Srivijaya, Swahili Coast, and Gujarati merchants dominate Indian Ocean commerce.</div>
+<div class="timeline-event"><span class="timeline-date">1206:</span> Temujin is proclaimed <strong>Genghis Khan</strong> and unites the Mongol tribes.</div>
+<div class="timeline-event"><span class="timeline-date">1227:</span> Genghis Khan dies; empire divided into four khanates.</div>
+<div class="timeline-event"><span class="timeline-date">1250s:</span> Pax Mongolica secures the Silk Roads; travelers move freely from China to Europe.</div>
+<div class="timeline-event"><span class="timeline-date">1258:</span> Mongols (Hulagu Khan) sack Baghdad, end the Abbasid Caliphate.</div>
+<div class="timeline-event"><span class="timeline-date">1271–1295:</span> <strong>Marco Polo</strong> travels to Yuan China.</div>
+<div class="timeline-event"><span class="timeline-date">1279:</span> Kublai Khan completes conquest of Song China; founds Yuan Dynasty.</div>
+<div class="timeline-event"><span class="timeline-date">1304–1369:</span> Lifetime of <strong>Ibn Battuta</strong>; his Rihla documents the Islamic world.</div>
+<div class="timeline-event"><span class="timeline-date">1324–25:</span> <strong>Mansa Musa</strong>'s hajj broadcasts Mali's gold across the Islamic world.</div>
+<div class="timeline-event"><span class="timeline-date">1325–1354:</span> Ibn Battuta travels from North Africa to China, across the Sahara, and to Sub-Saharan Africa.</div>
+<div class="timeline-event"><span class="timeline-date">1346–1353:</span> <strong>Black Death</strong> spreads west from Central Asia along trade routes; kills about one-third of Europeans and devastates North Africa and the Middle East.</div>
+<div class="timeline-event"><span class="timeline-date">1368:</span> Ming Dynasty overthrows the Yuan; Pax Mongolica ends.</div>
+<div class="timeline-event"><span class="timeline-date">1405–1433:</span> <strong>Zheng He</strong>'s seven voyages project Ming power across the Indian Ocean.</div>
+<div class="timeline-event"><span class="timeline-date">c. 1450:</span> Portuguese begin maritime exploration, opening the transition to Unit 3.</div>
+</div>
+<!-- TOPIC 2.1 SILK ROADS -->
+<h2>Topic 2.1 — The Silk Roads</h2>
+<div class="region-card region-silk">
+<h3>🐫 The Silk Roads</h3>
+<p>A network of overland caravan routes connecting China, Central Asia, the Middle East, and Europe. Active for centuries, but intensified between 1200 and 1450 due to commercial innovations, Mongol stability, and rising demand for luxury goods.</p>
+<h4>Why Trade Expanded</h4>
+<ul>
+<li><strong>Rising demand for luxury goods</strong> from wealthy urban elites — silk, porcelain, spices, precious metals.</li>
+<li><strong>Commercial innovations:</strong> paper money, bills of exchange (hundi in India, sakk in Dar al-Islam), caravanserais, credit, and banking houses.</li>
+<li><strong>Improved technologies:</strong> saddles for camels, magnetic compass (for ocean trade), more efficient money systems.</li>
+<li><strong>Pax Mongolica (c. 1250–1350):</strong> Mongol control created stability, standardized weights, and protected trade caravans.</li>
+</ul>
+<h4>Key Cities &amp; Nodes</h4>
+<ul>
+<li><strong>Kashgar &amp; Samarkand:</strong> Central Asian hubs for merchants and craftsmen.</li>
+<li><strong>Baghdad (pre-1258):</strong> Intellectual and commercial capital of the Islamic world.</li>
+<li><strong>Constantinople:</strong> Gateway between Asia and Europe.</li>
+<li><strong>Caravanserai:</strong> Roadside inns spaced ~20 miles apart where merchants rested and traded.</li>
+</ul>
+<h4>Effects</h4>
+<ul>
+<li>Spread of Buddhism, Islam, and Christianity along the routes.</li>
+<li>Diffusion of gunpowder, paper, and printing from China to the Islamic world and Europe.</li>
+<li>Emergence of <strong>diasporic merchant communities</strong> (Sogdians, Uyghurs, Jewish traders) that settled in foreign cities.</li>
+</ul>
+</div>
+<!-- TOPIC 2.2 MONGOLS -->
+<h2>Topic 2.2 — The Mongol Empire &amp; Its Consequences</h2>
+<div class="region-card region-mongol">
+<h3>🏹 The Mongol Empire</h3>
+<p>The largest contiguous land empire in history (at its peak, ~9 million square miles). Its conquests brought destruction but also Pax Mongolica — a period of relative stability that made the Silk Roads safer than ever before.</p>
+<h4>Rise Under Genghis Khan</h4>
+<ul>
+<li><strong>Temujin (Genghis Khan):</strong> Unified Mongol clans in 1206 and used a meritocratic, disciplined military built around mobile cavalry and compound bows.</li>
+<li><strong>Tactics:</strong> Feigned retreats, rapid horse archers, siege engineering (often adopted from conquered peoples), strategic use of terror to induce surrender.</li>
+<li><strong>Tolerance:</strong> Generally allowed conquered peoples to keep their religion and local administration as long as they paid tribute.</li>
+</ul>
+<h4>The Four Khanates</h4>
+<ul>
+<li><strong>Yuan Dynasty (China):</strong> Founded by Kublai Khan (1271); welcomed foreign merchants like Marco Polo; kept Mongols socially separate from Chinese.</li>
+<li><strong>Il-Khanate (Persia):</strong> Converted to Islam; rebuilt Persian infrastructure and patronized arts and sciences.</li>
+<li><strong>Golden Horde (Russia):</strong> Ruled through tribute; kept Russian princes as subordinate rulers; isolated Russia from Western Europe.</li>
+<li><strong>Chagatai Khanate (Central Asia):</strong> Controlled key Silk Road cities.</li>
+</ul>
+<h4>Long-Term Consequences</h4>
+<ul>
+<li><strong>Pax Mongolica:</strong> Reopened and protected Eurasian trade routes.</li>
+<li><strong>Technology transfer:</strong> Chinese innovations (gunpowder, printing, the compass) moved west under Mongol patronage.</li>
+<li><strong>Destroyed states:</strong> Abbasid Caliphate (1258), Kievan Rus, Song China.</li>
+<li><strong>Disease:</strong> Mongol networks helped spread the Black Death across Eurasia.</li>
+<li><strong>Rise of Moscow:</strong> Muscovite princes used tribute collection under the Golden Horde to grow their power.</li>
+</ul>
+</div>
+<!-- TOPIC 2.3 INDIAN OCEAN -->
+<h2>Topic 2.3 — Exchange in the Indian Ocean</h2>
+<div class="region-card region-indian">
+<h3>🚢 The Indian Ocean World</h3>
+<p>The Indian Ocean became the world's most active maritime trade system, connecting East Africa, the Arabian Peninsula, South Asia, Southeast Asia, and China. Its trade was seasonal and predictable, making merchants wealthy and coastal cities powerful.</p>
+<h4>Why It Expanded</h4>
+<ul>
+<li><strong>Monsoon winds:</strong> Predictable seasonal winds — southwest (summer) toward India and Southeast Asia, northeast (winter) back — made long-haul sailing possible.</li>
+<li><strong>Navigation technology:</strong> the <strong>magnetic compass</strong> (China), <strong>astrolabe</strong> (Islamic world), <strong>lateen sail</strong> (triangular, allows sailing against the wind), <strong>dhows</strong>, and Chinese <strong>junks</strong>.</li>
+<li><strong>Commercial cities &amp; emporia</strong> provided safe harbors and stable law.</li>
+</ul>
+<h4>Key Trading Cities</h4>
+<ul>
+<li><strong>Swahili city-states</strong> (Kilwa, Mombasa, Zanzibar): exported gold, ivory, and enslaved peoples.</li>
+<li><strong>Hormuz &amp; Aden:</strong> Persian Gulf and Arabian gateways.</li>
+<li><strong>Calicut &amp; Gujarat:</strong> Indian hubs for cotton textiles and spices.</li>
+<li><strong>Malacca:</strong> Strategic strait choke point; collected duties on passing ships.</li>
+<li><strong>Quanzhou &amp; Guangzhou:</strong> Chinese ports open to foreign merchants.</li>
+</ul>
+<h4>Key Goods</h4>
+<ul>
+<li><strong>From Africa:</strong> gold, ivory, enslaved peoples.</li>
+<li><strong>From Arabia:</strong> frankincense, myrrh, horses.</li>
+<li><strong>From India:</strong> cotton textiles, pepper, gems.</li>
+<li><strong>From Southeast Asia:</strong> nutmeg, cloves (the "Spice Islands"), pepper.</li>
+<li><strong>From China:</strong> silk, porcelain, tea.</li>
+</ul>
+<h4>Zheng He's Voyages (1405–1433)</h4>
+<ul>
+<li>Seven enormous Ming naval expeditions that reached East Africa, with ships far larger than anything in Europe at the time.</li>
+<li>Goal was <strong>tribute and prestige</strong>, not conquest.</li>
+<li>Ming court ended the voyages in 1433 due to cost and Confucian distrust of commerce, turning China inward just before European expansion.</li>
+</ul>
+<h4>Cultural &amp; Demographic Effects</h4>
+<ul>
+<li><strong>Diasporic communities:</strong> Arab and Persian merchants settled along the Swahili Coast; Chinese merchants in Southeast Asia; Muslim merchants in India's Malabar Coast.</li>
+<li><strong>Spread of Islam</strong> via merchants and Sufi missionaries into East Africa, South Asia, and Southeast Asia.</li>
+<li><strong>Swahili language</strong> (Bantu + Arabic) emerged as a trade language.</li>
+</ul>
+</div>
+<!-- TOPIC 2.4 TRANS-SAHARAN -->
+<h2>Topic 2.4 — Trans-Saharan Trade Routes</h2>
+<div class="region-card region-sahara">
+<h3>🐪 Trans-Saharan Trade</h3>
+<p>Camel caravans linked West Africa's gold and salt to the Mediterranean and Islamic world. Trade networks crossed the Sahara in both directions, making West African empires some of the wealthiest in the world.</p>
+<h4>Why It Expanded</h4>
+<ul>
+<li><strong>The camel saddle</strong> and the Arabian one-hump camel made caravans more efficient.</li>
+<li><strong>Caravans</strong> of hundreds to thousands of camels reduced risk.</li>
+<li>Growing Islamic world to the north created demand for West African gold.</li>
+</ul>
+<h4>Key Goods</h4>
+<ul>
+<li><strong>Northbound:</strong> gold, ivory, enslaved peoples, kola nuts.</li>
+<li><strong>Southbound:</strong> salt (from Taghaza), textiles, horses, books.</li>
+</ul>
+<h4>States That Dominated</h4>
+<ul>
+<li><strong>Ghana, Mali, and Songhai</strong> controlled the West African end of the trade in succession.</li>
+<li><strong>Mali Empire:</strong> Founded by Sundiata; Mansa Musa's 1324 hajj famously destabilized Egypt's gold prices for a decade.</li>
+<li><strong>Timbuktu:</strong> became a major center of Islamic learning, with mosques and universities (Sankore).</li>
+</ul>
+<h4>Effects</h4>
+<ul>
+<li><strong>Spread of Islam</strong> into West African urban elites; rural areas often blended Islam with indigenous traditions.</li>
+<li><strong>Urbanization:</strong> Trade cities like Timbuktu, Gao, and Djenné grew.</li>
+<li><strong>State building:</strong> Trade wealth supported centralizing monarchies.</li>
+</ul>
+</div>
+<!-- TOPIC 2.5 CULTURAL CONSEQUENCES -->
+<h2>Topic 2.5 — Cultural Consequences of Connectivity</h2>
+<div class="region-card region-culture">
+<h3>🌐 Cultural Diffusion &amp; Exchange</h3>
+<h4>Spread of Religion</h4>
+<ul>
+<li><strong>Islam</strong> spread to West Africa (trans-Saharan), Swahili Coast &amp; Southeast Asia (Indian Ocean), and South Asia (Delhi Sultanate + Sufis).</li>
+<li><strong>Buddhism</strong> was carried along the Silk Roads into Central Asia, China, Korea, and Japan; also established in Southeast Asia.</li>
+<li><strong>Christianity:</strong> Missionaries and merchants carried it along Silk Roads (e.g., Nestorian churches in China) and to the East African interior (Ethiopia).</li>
+</ul>
+<h4>Spread of Technology &amp; Ideas</h4>
+<ul>
+<li><strong>Paper, printing, gunpowder, the compass:</strong> Chinese inventions that diffused west via the Silk Roads and Mongol networks.</li>
+<li><strong>Mathematics:</strong> Indian numerals and the concept of zero spread through the Islamic world to Europe.</li>
+<li><strong>Astronomy &amp; medicine:</strong> Islamic scholars preserved and extended Greek knowledge; their works reached Europe through Spain and Sicily.</li>
+</ul>
+<h4>Travelers &amp; Observers</h4>
+<ul>
+<li><strong>Marco Polo</strong> (Italian, 1271–1295): described Yuan China and made the Silk Roads famous in Europe.</li>
+<li><strong>Ibn Battuta</strong> (Moroccan, 1325–1354): travel covered roughly 75,000 miles through Dar al-Islam and beyond.</li>
+<li><strong>Xuanzang</strong> (Chinese, 7th c., but still studied): Buddhist monk whose account shaped Chinese understanding of India.</li>
+<li><strong>Margery Kempe</strong> (English, c. 1373–1440): Christian pilgrim whose autobiography illustrates female religious experience and long-distance pilgrimage.</li>
+</ul>
+<h4>Urban Growth &amp; Decline</h4>
+<ul>
+<li><strong>Growth:</strong> Hangzhou, Samarkand, Delhi, Timbuktu, Malacca, Kilwa, Venice.</li>
+<li><strong>Decline:</strong> Baghdad after 1258; Constantinople economically overshadowed by Italian merchants.</li>
+<li><strong>Venice &amp; Genoa</strong> grew rich on Mediterranean trade with the Islamic world.</li>
+</ul>
+</div>
+<!-- TOPIC 2.6 ENV CONSEQUENCES -->
+<h2>Topic 2.6 — Environmental Consequences of Connectivity</h2>
+<div class="region-card region-env">
+<h3>🌱 Environmental &amp; Biological Exchange</h3>
+<h4>Crops</h4>
+<ul>
+<li><strong>Champa rice</strong> spread from Vietnam to China, boosting population.</li>
+<li><strong>Bananas</strong> moved from Southeast Asia across the Indian Ocean to Sub-Saharan Africa, supporting settlement in rainforest zones.</li>
+<li><strong>Citrus fruits</strong> spread from South Asia to the Mediterranean.</li>
+<li><strong>Sugar</strong> moved from South Asia to the Mediterranean and eventually into Europe (foreshadowing plantation systems).</li>
+<li><strong>Cotton</strong> spread throughout the Islamic world.</li>
+</ul>
+<h4>Disease — The Black Death</h4>
+<ul>
+<li>The <strong>bubonic plague</strong> originated in Central Asia and spread west along Mongol trade routes in the 1340s.</li>
+<li>Reached the Crimea by 1347; Italian merchants carried it to Mediterranean ports.</li>
+<li><strong>Mortality:</strong> ~1/3 of Europe, similar rates in North Africa and the Middle East.</li>
+<li><strong>Consequences:</strong> labor shortages, decline of serfdom in western Europe, weakening of Islamic Mediterranean societies, and religious turmoil.</li>
+</ul>
+<h4>Environmental Strain</h4>
+<ul>
+<li>Growing cities required more food and fuel; deforestation increased in places like Europe and China.</li>
+<li>Overgrazing and drought may have contributed to the abandonment of Great Zimbabwe around 1450.</li>
+</ul>
+</div>
+<!-- TOPIC 2.7 COMPARISON -->
+<h2>Topic 2.7 — Comparison of Economic Exchange</h2>
+<p>Use this table to compare the three great trade networks of the period.</p>
+<div style="overflow-x:auto;">
+<table class="compare-table">
+<thead>
+<tr>
+<th>Network</th>
+<th>Geography</th>
+<th>Main Goods</th>
+<th>Key Technology</th>
+<th>Main Cultural Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Silk Roads</strong></td>
+<td>Overland Eurasia</td>
+<td>Silk, porcelain, spices, gems</td>
+<td>Caravanserais, paper money</td>
+<td>Spread of Buddhism, Islam, and Chinese tech</td>
+</tr>
+<tr>
+<td><strong>Indian Ocean</strong></td>
+<td>Maritime from East Africa to East Asia</td>
+<td>Cotton, spices, porcelain, ivory, gold</td>
+<td>Monsoon winds, compass, dhow, junk</td>
+<td>Spread of Islam, Swahili culture, merchant diasporas</td>
+</tr>
+<tr>
+<td><strong>Trans-Saharan</strong></td>
+<td>North Africa ↔ West Africa</td>
+<td>Gold, salt, slaves, textiles</td>
+<td>Camel saddle, caravan organization</td>
+<td>Spread of Islam; rise of Timbuktu as Islamic learning center</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Cross-Network Patterns</h3>
+<ul>
+<li><strong>Similar:</strong> Each network moved luxury goods, supported diasporic merchant communities, and carried religions along with goods.</li>
+<li><strong>Similar:</strong> All were enabled by technological and organizational innovations (ships, caravans, credit).</li>
+<li><strong>Different:</strong> Maritime networks moved larger volumes than overland routes; Silk Roads were especially vulnerable to political instability, while the Indian Ocean remained more decentralized.</li>
+</ul>
+<!-- VOCAB -->
+<h2>📚 Key Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-item"><span class="vocab-term">Pax Mongolica</span>"Mongol peace" — period of stability and safe trade across Eurasia under Mongol rule.</div>
+<div class="vocab-item"><span class="vocab-term">Caravanserai</span>Roadside inns along overland trade routes where merchants rested and traded.</div>
+<div class="vocab-item"><span class="vocab-term">Flying cash</span>Song-era paper money that enabled long-distance commerce.</div>
+<div class="vocab-item"><span class="vocab-term">Bill of exchange</span>Credit instrument (hundi/sakk) that moved value without moving coin.</div>
+<div class="vocab-item"><span class="vocab-term">Astrolabe</span>Navigation tool used to determine latitude from the stars.</div>
+<div class="vocab-item"><span class="vocab-term">Dhow</span>Arab sailing ship using lateen sails, common in Indian Ocean trade.</div>
+<div class="vocab-item"><span class="vocab-term">Junk</span>Large Chinese trading ship with multiple masts and watertight compartments.</div>
+<div class="vocab-item"><span class="vocab-term">Monsoon winds</span>Seasonal wind patterns that governed Indian Ocean sailing.</div>
+<div class="vocab-item"><span class="vocab-term">Diasporic community</span>Merchant settlements far from their homeland (e.g., Arabs on the Swahili Coast).</div>
+<div class="vocab-item"><span class="vocab-term">Malacca</span>Southeast Asian port that controlled the strait linking the Indian Ocean to East Asia.</div>
+<div class="vocab-item"><span class="vocab-term">Zheng He</span>Ming admiral whose 1405–1433 fleets projected Chinese power across the Indian Ocean.</div>
+<div class="vocab-item"><span class="vocab-term">Ibn Battuta</span>Moroccan Muslim traveler whose Rihla documented the 14th-century Islamic world.</div>
+<div class="vocab-item"><span class="vocab-term">Marco Polo</span>Venetian merchant whose account of Yuan China fascinated Europe.</div>
+<div class="vocab-item"><span class="vocab-term">Kublai Khan</span>Grandson of Genghis Khan; founder of China's Yuan Dynasty (1271).</div>
+<div class="vocab-item"><span class="vocab-term">Il-Khanate</span>Mongol state in Persia that eventually converted to Islam.</div>
+<div class="vocab-item"><span class="vocab-term">Golden Horde</span>Mongol khanate ruling Russia; isolated Russia from Western Europe.</div>
+<div class="vocab-item"><span class="vocab-term">Timbuktu</span>Mali trading city that became a major Islamic center of learning.</div>
+<div class="vocab-item"><span class="vocab-term">Black Death</span>Bubonic plague pandemic (1346–1353) spread along trade routes.</div>
+</div>
+<!-- MCQs -->
+<div class="quiz-container">
+<h2>📝 Multiple Choice Practice</h2>
+<p>Click an answer to check it. Each question includes an explanation.</p>
+<div class="quiz-question">
+<p><strong>1. Which of the following best explains the expansion of the Silk Roads between c. 1200 and c. 1350?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) European colonization of Central Asia.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) The political stability of the Mongol Empire and the spread of commercial innovations like paper money.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) The collapse of the Indian Ocean trade network.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) The defeat of the Mongols by Ming China.</div>
+</div>
+<div class="explanation" id="exp-1"><strong>Answer: B.</strong> Pax Mongolica secured the routes, while innovations like flying cash, bills of exchange, and caravanserais reduced the cost and risk of long-distance trade. European colonization (A) comes after 1450, and the Indian Ocean actually grew in this period (C).</div>
+</div>
+<div class="quiz-question">
+<p><strong>2. The expansion of Indian Ocean trade most directly depended on which of the following?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) Mongol control of the sea lanes.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) Knowledge of monsoon winds combined with navigation tools such as the compass and astrolabe.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) The unification of the region under a single empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Portuguese monopoly over the spice trade.</div>
+</div>
+<div class="explanation" id="exp-2"><strong>Answer: B.</strong> Monsoons made seasonal voyages predictable, and navigation technology plus ships like the dhow and junk made them practical. The Mongols did not dominate sea routes (A), and the ocean basin was famously multipolar (C). Portuguese dominance (D) is 16th-century.</div>
+</div>
+<div class="quiz-question">
+<p><strong>3. Which of the following is the best example of a cultural consequence of the trans-Saharan trade?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) The spread of Hinduism into West Africa.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) The rise of Timbuktu as an Islamic center of learning.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) The conversion of West African rulers to Christianity.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) The adoption of Chinese writing in Mali.</div>
+</div>
+<div class="explanation" id="exp-3"><strong>Answer: B.</strong> Islamic trade networks brought scholars, books, and architects to cities like Timbuktu, which hosted mosques and the Sankore madrasa. Hinduism (A) did not spread across the Sahara, and West African rulers adopted Islam rather than Christianity (C).</div>
+</div>
+<div class="quiz-question">
+<p><strong>4. Zheng He's voyages (1405–1433) are best understood as an example of</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) European-style colonization of the Indian Ocean.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(B) Commercial expeditions organized by private Chinese merchants.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 4)">(C) State-sponsored projection of power and tribute across the Indian Ocean.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) The first contact between China and the Islamic world.</div>
+</div>
+<div class="explanation" id="exp-4"><strong>Answer: C.</strong> The Ming funded enormous fleets to project imperial prestige and collect tribute. They were not colonizing (A) or private-merchant ventures (B), and Chinese contact with the Islamic world long predated them (D).</div>
+</div>
+<div class="quiz-question">
+<p><strong>5. The spread of the Black Death in the mid-14th century most directly illustrates which of the following?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) A deliberate Mongol military strategy.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) How intensified trade networks could also transmit disease.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) A consequence of Zheng He's voyages.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) The failure of European farming techniques.</div>
+</div>
+<div class="explanation" id="exp-5"><strong>Answer: B.</strong> The same Silk Road and Mediterranean routes that carried silk and spices also carried the rats and fleas that spread bubonic plague from Central Asia to Europe and North Africa.</div>
+</div>
+<div class="quiz-question">
+<p><strong>6. Which of the following best describes a similarity between the Silk Roads and Indian Ocean trade networks in the period c. 1200–1450?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Both were controlled by a single empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(B) Both primarily carried bulk agricultural goods.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 6)">(C) Both created diasporic merchant communities and facilitated the spread of religion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Both collapsed as a result of the Black Death.</div>
+</div>
+<div class="explanation" id="exp-6"><strong>Answer: C.</strong> Merchants from the Islamic world, China, and India settled abroad along both networks, and both networks carried religions (Islam, Buddhism, Christianity) along with goods.</div>
+</div>
+</div>
+<!-- SAQs -->
+<h2>✍️ Short-Answer Practice (SAQ)</h2>
+<p>Respond in complete sentences. No thesis required — just be specific and use evidence. Aim for 2–4 sentences per part.</p>
+<div class="saq-box">
+<h3>SAQ 1 — Networks of Exchange (No Stimulus)</h3>
+<ol type="a">
+<li>Identify ONE specific technology that contributed to the expansion of trade in Afro-Eurasia in the period c. 1200–1450.</li>
+<li>Explain ONE way the expansion of trade networks led to cultural change in this period.</li>
+<li>Explain ONE way the expansion of trade networks had an environmental OR demographic consequence in this period.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The magnetic compass, originally developed in Song China, spread west and enabled more reliable long-distance sea travel across the Indian Ocean.</p>
+<p><strong>(b)</strong> Expanded Indian Ocean trade spread Islam from the Arabian Peninsula to the Swahili Coast and Southeast Asia, as Muslim merchants and Sufi missionaries settled in port cities like Kilwa and Malacca and gradually converted local elites.</p>
+<p><strong>(c)</strong> The same trade networks that moved silks and spices also transmitted disease: bubonic plague spread from Central Asia along Mongol and Mediterranean trade routes in the 1340s, killing about one-third of Europe's population and devastating economies from Egypt to England.</p>
+</details>
+</div>
+<div class="saq-box">
+<h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+<p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+"When I entered this vast city... I found a large quantity of merchandise from all parts of the world — silk, musk, pearls, porcelain, jewels, satin, and every kind of spice. Foreign merchants from all nations are met here..."<br>
+<em>— Description of a Yuan-era port city, 14th century</em>
+</p>
+<ol type="a">
+<li>Identify ONE piece of evidence from the passage that reflects the nature of trade in Yuan China.</li>
+<li>Explain ONE reason for the commercial prosperity described in the passage.</li>
+<li>Explain ONE way the Mongol Empire more broadly transformed Afro-Eurasian exchange in the period c. 1200–1450.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The passage mentions "silk, musk, pearls, porcelain" and "foreign merchants from all nations," showing that Yuan ports were major nodes of long-distance luxury trade with merchants from across Afro-Eurasia.</p>
+<p><strong>(b)</strong> Yuan rulers like Kublai Khan welcomed foreign merchants and protected trade routes, and their use of paper currency, standardized weights, and open ports made it practical for traders from the Islamic world and Southeast Asia to operate in Chinese cities.</p>
+<p><strong>(c)</strong> Beyond China, the Mongol Empire created "Pax Mongolica," a period of relative safety on the Silk Roads that allowed travelers like Marco Polo to cross Eurasia and accelerated the westward diffusion of Chinese technology, including gunpowder, printing, and the compass.</p>
+</details>
+</div>
+<!-- KEY TAKEAWAYS -->
+<h2>⭐ Key Takeaways</h2>
+<div class="key-takeaways">
+<ul>
+<li><strong>Intensification, not invention.</strong> These trade networks existed before 1200, but they expanded dramatically in volume, speed, and cultural impact during this period.</li>
+<li><strong>Innovations enabled expansion.</strong> Paper money, bills of exchange, the compass, astrolabe, and lateen sail all lowered the cost and risk of long-distance trade.</li>
+<li><strong>Mongols reshaped Eurasia.</strong> Their conquests destroyed some states but created Pax Mongolica, which tied Asia and Europe more tightly together than ever before.</li>
+<li><strong>Religion traveled with goods.</strong> Islam, Buddhism, and Christianity all spread along trade routes, often through merchants and missionaries rather than armies.</li>
+<li><strong>Not all consequences were economic.</strong> The Black Death, urbanization, environmental strain, and diasporic communities show that connectivity transformed culture, demography, and the environment.</li>
+</ul>
+</div>
+<p style="text-align:center; margin-top:2rem;">
+<a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+</p>
+</div>
+<script>
+function checkAnswer(element, isCorrect, qNum) {
+const options = element.parentElement.querySelectorAll('.quiz-option');
+options.forEach(o => o.classList.remove('correct', 'incorrect'));
+element.classList.add(isCorrect ? 'correct' : 'incorrect');
+const exp = document.getElementById('exp-' + qNum);
+if (exp) exp.classList.add('show');
+}
+</script>
+</body>
+</html>
