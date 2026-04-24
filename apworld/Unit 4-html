@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TMSR9LD4H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AP World History: Modern Unit 4 — Transoceanic Interconnections (c. 1450–1750). In-depth notes on maritime technology, European exploration, the Columbian Exchange, maritime empires, mercantilism, resistance, and changing social hierarchies, with photos, MCQs, and SAQs." />
+<title>Unit 4: Transoceanic Interconnections (c. 1450–1750)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; }
+body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+background: #faf6f1;
+color: #333;
+line-height: 1.6;
+}
+.container {
+max-width: 980px;
+margin: 2rem auto;
+padding: 2rem 1.5rem;
+background: white;
+border-radius: 10px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+h1, h2, h3, h4 {
+font-family: 'Montserrat', sans-serif;
+color: #8b4513;
+}
+h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+.subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+h3 { color: #a0522d; margin-top: 1.5rem; }
+h4 { color: #8b4513; margin-top: 1rem; }
+p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.5rem; }
+.back-link {
+display: inline-block;
+margin-bottom: 1rem;
+color: #8b4513;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.5rem;
+}
+.back-link:hover { text-decoration: underline; transform: scale(1.02); }
+.overview-box {
+background: linear-gradient(135deg, #fde7c9, #fff3e0);
+border-left: 6px solid #d2691e;
+padding: 1.2rem 1.5rem;
+border-radius: 8px;
+margin: 1.5rem 0;
+}
+.weighting-badge {
+display: inline-block;
+background: #8b4513;
+color: white;
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+font-weight: 600;
+font-size: 0.95rem;
+}
+/* Image */
+figure.photo { margin: 1.2rem 0; text-align: center; }
+figure.photo img {
+width: 100%;
+max-width: 640px;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+figure.photo figcaption {
+font-size: 0.92rem;
+color: #666;
+margin-top: 0.4rem;
+font-style: italic;
+}
+.photo-row {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 1rem;
+margin: 1.2rem 0;
+}
+.photo-row figure.photo { margin: 0; }
+.photo-row figure.photo img { max-width: 100%; }
+/* Timeline */
+.timeline {
+position: relative;
+margin: 2rem 0;
+padding-left: 2rem;
+border-left: 4px solid #d2691e;
+}
+.timeline-event {
+position: relative;
+margin-bottom: 1.4rem;
+padding: 0.8rem 1rem;
+background: #fff8ef;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.timeline-event::before {
+content: "";
+position: absolute;
+left: -2.55rem;
+top: 1.1rem;
+width: 14px;
+height: 14px;
+background: #8b4513;
+border-radius: 50%;
+border: 3px solid #fff;
+box-shadow: 0 0 0 2px #d2691e;
+}
+.timeline-date { display: inline-block; font-weight: 700; color: #8b4513; margin-right: 0.5rem; }
+/* Topic cards */
+.region-card {
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 1.2rem 0;
+border-left: 6px solid;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.region-tech { border-color: #0277bd; background: #e1f5fe; }
+.region-explore { border-color: #c62828; background: #fff5f5; }
+.region-columbian { border-color: #2e7d32; background: #f1f8e9; }
+.region-maritime { border-color: #4a148c; background: #f3e5f5; }
+.region-mercantile{ border-color: #bf360c; background: #fff3e0; }
+.region-resist { border-color: #ad1457; background: #fce4ec; }
+.region-social { border-color: #4e342e; background: #efebe9; }
+.region-compare { border-color: #455a64; background: #eceff1; }
+.region-card h3 { margin-top: 0; }
+.vocab-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 0.8rem;
+margin: 1.2rem 0;
+}
+.vocab-item {
+background: #fff8ef;
+border: 1px solid #e0c9a6;
+border-radius: 8px;
+padding: 0.8rem 1rem;
+}
+.vocab-term {
+font-weight: 700;
+color: #8b4513;
+display: block;
+margin-bottom: 0.2rem;
+}
+.compare-table {
+width: 100%;
+border-collapse: collapse;
+margin: 1rem 0;
+font-size: 0.95rem;
+}
+.compare-table th, .compare-table td {
+border: 1px solid #e0c9a6;
+padding: 0.55rem 0.7rem;
+text-align: left;
+vertical-align: top;
+}
+.compare-table thead {
+background: linear-gradient(to right, #8b4513, #d2691e);
+color: white;
+}
+.compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+/* Quiz */
+.quiz-container {
+background: linear-gradient(135deg, #fde7c9, #fff8ef);
+border: 2px solid #8b4513;
+border-radius: 10px;
+padding: 1.5rem;
+margin: 2rem 0;
+}
+.quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+.quiz-subheading {
+font-family: 'Montserrat', sans-serif;
+color: #a0522d;
+font-weight: 700;
+margin-top: 1.5rem;
+border-bottom: 1px dashed #a0522d;
+padding-bottom: 0.2rem;
+}
+.quiz-question { margin-bottom: 1.5rem; }
+.quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.quiz-option {
+padding: 0.6rem 0.8rem;
+border: 1px solid #8b4513;
+border-radius: 6px;
+cursor: pointer;
+background: white;
+transition: background-color 0.2s;
+}
+.quiz-option:hover { background-color: #fff3e0; }
+.quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+.quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+.explanation {
+display: none;
+margin-top: 0.6rem;
+padding: 0.8rem;
+background: #fff;
+border-left: 4px solid #8b4513;
+border-radius: 6px;
+font-size: 0.95rem;
+}
+.explanation.show { display: block; }
+/* SAQ */
+.saq-box {
+background: #fff;
+border: 2px solid #d2691e;
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 1.2rem 0;
+}
+.saq-box h3 { margin-top: 0; }
+details.saq-sample {
+margin-top: 0.8rem;
+background: #fff8ef;
+border: 1px dashed #8b4513;
+border-radius: 6px;
+padding: 0.6rem 0.9rem;
+}
+details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+.key-takeaways {
+background: linear-gradient(135deg, #fff3e0, #fde7c9);
+border: 2px solid #d2691e;
+border-radius: 10px;
+padding: 1.2rem 1.5rem;
+margin: 2rem 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+<h1>Unit 4: Transoceanic Interconnections</h1>
+<p class="subtitle">c. 1450 – c. 1750 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–15%</span></p>
+<!-- OVERVIEW -->
+<div class="overview-box">
+<h3 style="margin-top:0;">⛵ Unit Overview</h3>
+<p>
+Between 1450 and 1750, Europeans used new shipbuilding and navigation technologies to cross the
+Atlantic and round Africa. The result was a truly <strong>global</strong> economy for the first time
+in history. Portuguese, Spanish, Dutch, English, and French empires stitched together the Americas,
+Africa, Europe, and Asia through maritime trade; the <strong>Columbian Exchange</strong> moved crops,
+diseases, and people across oceans at catastrophic and transformative scale; and a new
+<strong>Atlantic economy</strong> — built on silver, sugar, and enslaved African labor — reshaped
+every region it touched.
+</p>
+<p style="margin-bottom:0;">
+<strong>Big question:</strong> How did transoceanic connections between 1450 and 1750 integrate world
+economies, transform societies, and produce resistance?
+</p>
+</div>
+<!-- TIMELINE -->
+<h2>🗓️ Unit 4 Timeline</h2>
+<div class="timeline">
+<div class="timeline-event"><span class="timeline-date">c. 1415–1460:</span> Prince Henry the Navigator sponsors Portuguese exploration down the West African coast.</div>
+<div class="timeline-event"><span class="timeline-date">1453:</span> Fall of Constantinople motivates Europeans to seek new trade routes bypassing Ottoman-controlled Mediterranean.</div>
+<div class="timeline-event"><span class="timeline-date">1488:</span> <strong>Bartolomeu Dias</strong> rounds the Cape of Good Hope.</div>
+<div class="timeline-event"><span class="timeline-date">1492:</span> <strong>Columbus</strong> reaches the Caribbean; same year, the Reconquista ends in Spain.</div>
+<div class="timeline-event"><span class="timeline-date">1494:</span> <strong>Treaty of Tordesillas</strong> divides the non-European world between Spain and Portugal.</div>
+<div class="timeline-event"><span class="timeline-date">1498:</span> <strong>Vasco da Gama</strong> reaches Calicut, India, opening direct sea trade between Europe and Asia.</div>
+<div class="timeline-event"><span class="timeline-date">1519–1521:</span> <strong>Cortés</strong> conquers the Aztec Empire; Magellan's expedition begins circumnavigation (completed 1522).</div>
+<div class="timeline-event"><span class="timeline-date">1532–1533:</span> <strong>Pizarro</strong> conquers the Inca Empire.</div>
+<div class="timeline-event"><span class="timeline-date">1545:</span> Silver strike at <strong>Potosí</strong> (Bolivia) creates the richest mine in the world.</div>
+<div class="timeline-event"><span class="timeline-date">1565:</span> Spanish establish the <strong>Manila Galleon</strong> trade linking Acapulco to the Philippines.</div>
+<div class="timeline-event"><span class="timeline-date">1600 / 1602:</span> British East India Company (1600) and Dutch <strong>VOC</strong> (1602) founded as joint-stock companies.</div>
+<div class="timeline-event"><span class="timeline-date">1607 / 1608:</span> First permanent English colony at Jamestown (1607); French at Quebec (1608).</div>
+<div class="timeline-event"><span class="timeline-date">1620:</span> Plymouth Colony founded; Mayflower Compact signed.</div>
+<div class="timeline-event"><span class="timeline-date">1680:</span> <strong>Pueblo Revolt</strong> temporarily expels Spanish from New Mexico.</div>
+<div class="timeline-event"><span class="timeline-date">1688:</span> English <strong>Glorious Revolution</strong> strengthens Parliament and limits royal power.</div>
+<div class="timeline-event"><span class="timeline-date">1713:</span> <strong>Treaty of Utrecht</strong> gives Britain the <em>asiento</em> (monopoly on slave trade to Spanish America).</div>
+<div class="timeline-event"><span class="timeline-date">1739:</span> <strong>Stono Rebellion</strong> — one of the largest slave uprisings in colonial North America.</div>
+<div class="timeline-event"><span class="timeline-date">c. 1750:</span> Atlantic economy at full scale; European maritime powers dominate global shipping.</div>
+</div>
+<!-- TOPIC 4.1 -->
+<h2>Topic 4.1 — Technological Innovations from 1450 to 1750</h2>
+<div class="region-card region-tech">
+<h3>🧭 Ships, Tools, and Knowledge</h3>
+<p>
+European maritime expansion depended on a cluster of technologies — many of them <em>borrowed</em>
+from the Islamic world, China, and the Mediterranean. Most were not new inventions but improvements
+and combinations that made long-distance ocean travel practical.
+</p>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nao_Victoria.jpg?width=800" alt="Replica of Magellan's ship Victoria" />
+<figcaption>Replica of the <em>Victoria</em>, the only ship in Magellan's fleet to complete the first circumnavigation (1519–1522). Carracks and galleons like this combined square and lateen rigs, a stern rudder, and enough cargo space for long voyages.</figcaption>
+</figure>
+<h4>Ships</h4>
+<ul>
+<li><strong>Caravel</strong> (Portuguese, 15th c.): Small, maneuverable ship with lateen sails; ideal for exploration along coastlines.</li>
+<li><strong>Carrack (nau):</strong> Larger 3–4 masted ship combining square sails for speed and lateen sails for handling — capable of crossing open ocean and carrying heavy cargo.</li>
+<li><strong>Galleon</strong> (16th c.): Armed, large-bellied ship used for Spanish treasure fleets and Manila Galleons.</li>
+<li><strong>Fluyt</strong> (Dutch, late 16th c.): Cheap, efficient cargo ship with a small crew — a key reason the Dutch dominated carrying trade.</li>
+</ul>
+<h4>Navigation Tools</h4>
+<ul>
+<li><strong>Magnetic compass</strong> — Chinese origin; essential for directional navigation out of sight of land.</li>
+<li><strong>Astrolabe &amp; quadrant</strong> — Islamic-world refinements; measured the altitude of stars to determine latitude.</li>
+<li><strong>Stern-post rudder</strong> — Chinese innovation that gave larger ships reliable steering.</li>
+<li><strong>Portolan charts</strong> and, later, more accurate world maps — improved knowledge of winds and currents.</li>
+<li><strong>Lateen sail</strong> — triangular sail (Arab origin) that allowed sailing into the wind.</li>
+</ul>
+<h4>Cartographic &amp; Conceptual Shifts</h4>
+<ul>
+<li>Ptolemy's geography, reintroduced through Islamic copies, gave Europeans a new framework for mapping the world.</li>
+<li>Systematic knowledge of the Atlantic's <strong>volta do mar</strong> (the wind system in the North Atlantic used for return voyages to Europe) was a Portuguese specialty.</li>
+</ul>
+<h4>Gunpowder at Sea</h4>
+<ul>
+<li>Shipborne cannon — pioneered by the Portuguese in the Indian Ocean — gave small European fleets overwhelming advantages over merchants who were not used to armed trading.</li>
+</ul>
+</div>
+<!-- TOPIC 4.2 -->
+<h2>Topic 4.2 — Exploration: Causes and Events</h2>
+<div class="region-card region-explore">
+<h3>🌍 Why Europe — and Why Then?</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vasco_da_Gama_-_1838.png?width=500" alt="Portrait of Vasco da Gama" />
+<figcaption>Vasco da Gama, whose 1498 voyage to Calicut opened the first direct European sea route to South Asia.</figcaption>
+</figure>
+<h4>Why Exploration Started in Europe</h4>
+<ul>
+<li><strong>Demand for Asian goods:</strong> Spices, silk, and porcelain had reached Europe through Venetian and Ottoman middlemen, who charged steep markups. European monarchs wanted to go directly to the source.</li>
+<li><strong>Fall of Constantinople (1453):</strong> Reinforced the feeling that land routes were controlled by Muslim rivals.</li>
+<li><strong>Renaissance curiosity &amp; Christian missionary zeal:</strong> Summed up as "God, Gold, and Glory" — religious mission, wealth, and royal prestige.</li>
+<li><strong>State competition:</strong> Portugal, Spain, England, France, and the Dutch Republic competed to claim trade and territory.</li>
+<li><strong>Technology and capital:</strong> Ships, guns, and investment instruments made voyages feasible.</li>
+</ul>
+<h4>Iberian Voyages</h4>
+<ul>
+<li><strong>Prince Henry "the Navigator" (d. 1460):</strong> Funded a school of navigation at Sagres and Portuguese expeditions along the West African coast, ultimately reaching the Gold Coast and founding Elmina (1482).</li>
+<li><strong>Bartolomeu Dias (1488):</strong> Rounded the Cape of Good Hope.</li>
+<li><strong>Christopher Columbus (1492):</strong> Backed by Ferdinand and Isabella of Spain, sailed west in hopes of reaching Asia; made landfall in the Bahamas.</li>
+<li><strong>Vasco da Gama (1498):</strong> Sailed around Africa to India, opening the all-sea route to Asia.</li>
+<li><strong>Ferdinand Magellan (1519–1522):</strong> Spanish expedition completed the first circumnavigation of the globe.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cristobal_Colon.jpg?width=400" alt="Portrait of Columbus" />
+<figcaption>Christopher Columbus, whose 1492 Atlantic crossing for Ferdinand and Isabella of Spain opened contact between Europe and the Americas.</figcaption>
+</figure>
+<h4>Conquest of the Americas</h4>
+<ul>
+<li><strong>Treaty of Tordesillas (1494):</strong> Papally-mediated split of the non-European world between Spain and Portugal — one reason Portuguese Brazil is Portuguese-speaking.</li>
+<li><strong>Hernán Cortés (1519–1521):</strong> Conquered the Aztec Empire with ~500 men, gunpowder weapons, horses, Tlaxcalan and other Native allies resentful of Aztec rule, and — crucially — smallpox.</li>
+<li><strong>Francisco Pizarro (1532–1533):</strong> Conquered the Inca Empire after capturing and executing Atahualpa during a civil war between him and his brother Huáscar.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cort%C3%A9s_y_la_Malinche.jpg?width=600" alt="Cortés and La Malinche" />
+<figcaption>Hernán Cortés and <strong>La Malinche</strong> (Doña Marina), the Nahua translator and advisor whose role was crucial in the Spanish conquest of the Aztec Empire.</figcaption>
+</figure>
+<h4>Northern European Explorers</h4>
+<ul>
+<li><strong>John Cabot</strong> (English, 1497): Claimed Newfoundland.</li>
+<li><strong>Jacques Cartier</strong> (French, 1534): Explored the St. Lawrence River.</li>
+<li><strong>Henry Hudson</strong> (Dutch/English, early 1600s): Sought a Northwest Passage; explored the Hudson River and Bay.</li>
+</ul>
+</div>
+<!-- TOPIC 4.3 -->
+<h2>Topic 4.3 — The Columbian Exchange</h2>
+<div class="region-card region-columbian">
+<h3>🌽 The Columbian Exchange</h3>
+<p>
+Named by historian Alfred Crosby, the <strong>Columbian Exchange</strong> is the vast two-way
+transfer of plants, animals, diseases, ideas, and people between the Americas ("New World") and
+Afro-Eurasia ("Old World") after 1492. It reshaped populations, diets, and ecologies everywhere.
+</p>
+<h4>From the Americas to Afro-Eurasia</h4>
+<ul>
+<li><strong>Crops:</strong> Potatoes, maize (corn), tomatoes, cassava/manioc, cacao, tobacco, chili peppers, vanilla, pineapples.</li>
+<li><strong>Effects:</strong> The potato and maize caused major population booms in Ireland, China, and Sub-Saharan Africa; cassava became a staple in Central Africa; tomatoes became essential in Italian cooking; chili peppers transformed cuisines from India to Korea.</li>
+</ul>
+<h4>From Afro-Eurasia to the Americas</h4>
+<ul>
+<li><strong>Crops:</strong> Wheat, rice, sugar, bananas, grapes, coffee, citrus.</li>
+<li><strong>Animals:</strong> Horses (transformed Plains Indian societies), cattle, pigs, sheep, goats, chickens.</li>
+<li><strong>Livestock</strong> reshaped Native land use and, on many islands, turned rainforest into pasture.</li>
+</ul>
+<h4>Disease</h4>
+<ul>
+<li><strong>Smallpox, measles, influenza, typhus, mumps</strong> devastated Native American populations with no prior immunity. Estimated mortality: 75–90% of pre-contact Indigenous populations in the first 150 years.</li>
+<li><strong>Syphilis</strong> may have spread the other direction, from the Americas to Eurasia.</li>
+</ul>
+<h4>People &amp; Labor</h4>
+<ul>
+<li>Millions of Europeans migrated to the Americas; an estimated 12.5 million Africans were forcibly transported across the Atlantic between 1500 and 1866.</li>
+<li>Native societies were decimated by disease and labor demands; Africa lost population and stable states as slave raiding intensified.</li>
+</ul>
+<h4>Environmental Effects</h4>
+<ul>
+<li>Deforestation for sugar, tobacco, and silver mining (especially at Potosí, where mercury amalgamation poisoned landscapes and workers).</li>
+<li>"Ghost acres" in Europe and Asia fed by calories grown in American soil.</li>
+</ul>
+</div>
+<!-- TOPIC 4.4 -->
+<h2>Topic 4.4 — Maritime Empires Established</h2>
+<div class="region-card region-maritime">
+<h3>🗺️ The First Global Empires</h3>
+<p>Maritime empires focused on coastal bases, trade, and plantations rather than vast interior conquest. Each European state built its empire differently, based on geography and economic strategy.</p>
+<h4>Portuguese Empire — <em>Estado da Índia</em></h4>
+<ul>
+<li>A chain of coastal forts and trading posts from Mozambique to Macau, plus Brazil.</li>
+<li><strong>Goa</strong> (1510): Portuguese capital in India.</li>
+<li><strong>Malacca</strong> (1511): Strategic chokepoint between the Indian Ocean and South China Sea.</li>
+<li><strong>Hormuz</strong> (1515) and <strong>Macau</strong> (1557): Key bases.</li>
+<li><strong>Cartaz system:</strong> Ships paying a fee to Portuguese authorities received a license; ships without one were seized. Not an empire of land, but a "protection racket" on the seas.</li>
+<li><strong>Brazil</strong> became Portugal's great plantation colony, based on sugar and, by 1700, gold.</li>
+</ul>
+<h4>Spanish Empire</h4>
+<ul>
+<li>Large <strong>land-based</strong> empire in the Americas centered on Mexico City and Lima, built atop the conquered Aztec and Inca states.</li>
+<li><strong>Encomienda</strong> and later <strong>hacienda</strong> systems organized Native labor on Spanish estates.</li>
+<li><strong>Silver mining</strong> at <strong>Potosí</strong> (Bolivia, from 1545) and <strong>Zacatecas</strong> (Mexico) poured silver into the global economy.</li>
+<li><strong>Manila</strong> (founded 1571) linked Spanish America to Ming/Qing China through the Manila Galleon.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Potosi.jpg?width=800" alt="Potosí, Bolivia" />
+<figcaption>Potosí, Bolivia — site of the richest silver mine in the world. At its peak the city had a population of ~160,000, rivalling London, and its silver fueled global trade through Spanish and Manila Galleon fleets.</figcaption>
+</figure>
+<h4>Dutch Empire</h4>
+<ul>
+<li>Built largely by the <strong>VOC (Dutch East India Company, 1602)</strong>, the world's first multinational joint-stock company.</li>
+<li>Dominated the spice trade in the <strong>Indonesian archipelago</strong>, forcing monopolies on nutmeg (Banda Islands) and cloves.</li>
+<li>Colonies at the Cape of Good Hope (1652), New Amsterdam (1624–1664), and Batavia (Jakarta).</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/VOC_Amsterdam.jpg?width=700" alt="VOC ship Amsterdam" />
+<figcaption>A replica of the VOC ship <em>Amsterdam</em>. Dutch VOC ships carried spices from the Indonesian archipelago to European markets and made Amsterdam the financial capital of the 17th century.</figcaption>
+</figure>
+<h4>English Empire</h4>
+<ul>
+<li><strong>British East India Company (EIC, 1600):</strong> Focused on cotton textiles from India.</li>
+<li><strong>Jamestown</strong> (1607), Massachusetts Bay (1620–1630), Caribbean sugar colonies (Barbados by 1627, Jamaica 1655).</li>
+<li>Increasingly took over Dutch and French commercial positions during the 17th–18th centuries.</li>
+</ul>
+<h4>French Empire</h4>
+<ul>
+<li><strong>New France</strong> (Quebec 1608, Montreal 1642): Fur-trading empire reliant on alliances with Native peoples.</li>
+<li>Caribbean sugar colonies: <strong>Saint-Domingue</strong> (Haiti) became the wealthiest colony in the world by the 18th century.</li>
+<li>Trading posts in India (Pondicherry) and the Mississippi Valley (Louisiana, 1682).</li>
+</ul>
+<h4>The Atlantic Slave Trade</h4>
+<ul>
+<li><strong>Triangular trade:</strong> European manufactured goods → Africa; enslaved Africans → Americas (the Middle Passage); American plantation products (sugar, tobacco, later cotton) → Europe.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Triangular_trade.png?width=700" alt="Triangular trade diagram" />
+<figcaption>The triangular trade: a simplified model of the three-cornered Atlantic system connecting Europe, Africa, and the Americas.</figcaption>
+</figure>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Slave_ship_diagram.png?width=700" alt="Slave ship stowage plan" />
+<figcaption>Stowage plan of the British slave ship <em>Brookes</em> (1788). Published by abolitionists, this diagram illustrates the brutal conditions of the Middle Passage, in which an estimated 12.5 million Africans were forcibly transported, about 2 million of whom died en route.</figcaption>
+</figure>
+</div>
+<!-- TOPIC 4.5 -->
+<h2>Topic 4.5 — Maritime Empires Maintained and Developed</h2>
+<div class="region-card region-mercantile">
+<h3>💰 Mercantilism, Joint-Stock Companies, and the Silver Trade</h3>
+<p>
+Controlling an empire required new financial and political institutions. The 16th–18th centuries saw
+the rise of <strong>mercantilism</strong>, joint-stock companies, and a truly global silver-based
+economy.
+</p>
+<h4>Mercantilism</h4>
+<ul>
+<li>Economic theory that the world's wealth was fixed and measured in bullion (gold and silver).</li>
+<li>Governments promoted <strong>exports</strong>, restricted <strong>imports</strong>, and kept colonial trade in their own merchants' hands.</li>
+<li>Examples: English <strong>Navigation Acts</strong> (from 1651), French <strong>Colbertism</strong>, Spanish monopoly on trade with its American colonies (Seville, later Cádiz).</li>
+</ul>
+<h4>Joint-Stock Companies</h4>
+<ul>
+<li><strong>English EIC (1600)</strong> and <strong>Dutch VOC (1602)</strong>: Investors bought shares to pool capital and spread risk. These companies had quasi-state powers — their own armies, coinage, and ability to wage war.</li>
+<li>Eventually the VOC employed more soldiers than most European states and ruled territory in Asia.</li>
+</ul>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/East_India_House_THS_1817_edited.jpg?width=700" alt="East India House, London" />
+<figcaption>East India House, London — headquarters of the English East India Company. Companies like the EIC and VOC combined private investment with state-backed violence.</figcaption>
+</figure>
+<h4>Silver and the Global Economy</h4>
+<ul>
+<li>Spanish silver from Potosí and Zacatecas flowed across the Atlantic to Europe and across the Pacific on the <strong>Manila Galleon</strong>.</li>
+<li>Ming (and later Qing) China demanded silver as payment after switching to a <strong>"single-whip" tax system</strong> that required silver payment; this created huge Chinese demand that kept the global silver trade running.</li>
+<li>Silver flowing into Europe caused the <strong>price revolution</strong> — long-term inflation that disrupted feudal incomes and benefited merchants.</li>
+</ul>
+<h4>Commercial Revolution in Europe</h4>
+<ul>
+<li><strong>Banking houses</strong> (Fugger, Medici), stock exchanges (Amsterdam 1602, London 1698), insurance (Lloyd's of London).</li>
+<li><strong>New forms of credit</strong>: futures, shares, bonds.</li>
+<li>Rise of a <strong>merchant middle class</strong> (bourgeoisie) whose wealth increasingly rivalled that of landed nobles.</li>
+</ul>
+<h4>Labor Systems</h4>
+<ul>
+<li><strong>Encomienda &amp; repartimiento</strong> (Spanish Americas): forced Native labor.</li>
+<li><strong>Mit'a</strong> (repurposed Inca labor tax): used in Potosí silver mines.</li>
+<li><strong>Chattel slavery</strong> of Africans in plantation colonies: the dominant form of bound labor in the Atlantic world by the 17th c.</li>
+<li><strong>Indentured servitude</strong>: Europeans (and later Asians) contracted to labor for a set term in exchange for passage.</li>
+<li><strong>Serfdom</strong> expanded in Russia and Eastern Europe even as it declined in the West — "second serfdom."</li>
+</ul>
+</div>
+<!-- TOPIC 4.6 -->
+<h2>Topic 4.6 — Internal and External Challenges to State Power</h2>
+<div class="region-card region-resist">
+<h3>✊ Revolts, Rebellions, and Limits of Empire</h3>
+<p>
+No empire's rule went unchallenged. Europeans, enslaved Africans, indigenous peoples, and subject
+classes pushed back against imperial and state power in different ways.
+</p>
+<h4>European Challenges to Absolutism</h4>
+<ul>
+<li><strong>Fronde (France, 1648–1653):</strong> Noble and popular revolts against royal centralization; ultimately helped Louis XIV consolidate power.</li>
+<li><strong>Glorious Revolution (England, 1688):</strong> Parliament invited William and Mary to replace James II; English Bill of Rights (1689) established parliamentary supremacy and limited monarchy.</li>
+</ul>
+<h4>Resistance in the Americas</h4>
+<ul>
+<li><strong>Pueblo Revolt (1680):</strong> Led by Popé; Pueblo peoples in present-day New Mexico expelled the Spanish for 12 years after decades of forced Catholic conversions and labor demands.</li>
+<li><strong>Metacom's War (King Philip's War, 1675–1676):</strong> Wampanoag, Nipmuc, and allied peoples fought against English expansion in New England.</li>
+<li><strong>Maroon societies:</strong> Escaped enslaved Africans built independent communities in Jamaica, Suriname (Saramaka), Brazil (<strong>Quilombo dos Palmares</strong>, which at its height held 20,000 people).</li>
+<li><strong>Stono Rebellion (1739):</strong> Enslaved Africans in South Carolina marched toward Spanish Florida; suppressed but influenced later slave codes.</li>
+<li><strong>Túpac Amaru II (1780)</strong> in Peru — at the tail end of the period — led a major uprising of Native peoples and mestizos against Spanish rule.</li>
+</ul>
+<h4>Resistance by Enslaved Africans</h4>
+<ul>
+<li>On ships: mutinies on the Middle Passage.</li>
+<li>On plantations: sabotage, escape, feigned illness, religious syncretism (Vodou in Haiti, Candomblé in Brazil, Santería in Cuba).</li>
+<li>Major revolts: the precursor to Unit 5's Haitian Revolution (1791–1804), but rooted in the resistance traditions of this period.</li>
+</ul>
+<h4>Asian Powers Push Back</h4>
+<ul>
+<li><strong>Tokugawa Japan</strong>: Expelled Portuguese missionaries and largely closed the country (<em>sakoku</em>, from the 1630s), keeping only limited Dutch and Chinese trade at Nagasaki.</li>
+<li><strong>Ming/Qing China</strong>: Restricted European trade to Canton under the <strong>Canton system</strong>; Chinese officials remained the gatekeepers of foreign trade until 1842.</li>
+<li><strong>Ottomans, Mughals, and Safavids</strong>: Still far stronger than European powers on land; European expansion into these regions was still limited before 1750.</li>
+</ul>
+<h4>State Responses</h4>
+<ul>
+<li><strong>Slave codes</strong> (e.g., the French <em>Code Noir</em>, 1685; English and Spanish versions) aimed to regulate the growing enslaved population.</li>
+<li><strong>Missionary efforts</strong> (Jesuits, Franciscans, Dominicans) were both agents of empire and, occasionally, critics of it (e.g., Bartolomé de Las Casas defended Indigenous peoples).</li>
+</ul>
+</div>
+<!-- TOPIC 4.7 -->
+<h2>Topic 4.7 — Changing Social Hierarchies</h2>
+<div class="region-card region-social">
+<h3>👥 Race, Class, and New Social Orders</h3>
+<figure class="photo">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Casta_painting_all.jpg?width=800" alt="Casta painting from colonial Mexico" />
+<figcaption>An 18th-century <strong>casta painting</strong> from New Spain, illustrating the colonial racial hierarchy. Each panel shows a mixed-race family and labels their socially defined category.</figcaption>
+</figure>
+<h4>Colonial Latin America — The <em>Casta</em> System</h4>
+<ul>
+<li><strong>Peninsulares:</strong> Spaniards born in Spain; held the highest offices.</li>
+<li><strong>Creoles (<em>criollos</em>):</strong> People of European descent born in the Americas; wealthy but barred from top posts.</li>
+<li><strong>Mestizos:</strong> European-Indigenous mixed ancestry.</li>
+<li><strong>Mulattoes:</strong> European-African mixed ancestry.</li>
+<li><strong>Indigenous peoples and enslaved Africans</strong> held the lowest status.</li>
+<li>The casta system attempted to define dozens of racial categories, reflecting anxiety about mixing in an increasingly mestizo society.</li>
+</ul>
+<h4>North America</h4>
+<ul>
+<li>Racial slavery became increasingly entrenched and race-based: by the late 1600s, English colonies like Virginia codified that Africans and their descendants were enslaved for life and that slave status passed through the mother.</li>
+<li>Rise of a small but important free Black community, especially in the Chesapeake and Louisiana.</li>
+</ul>
+<h4>Europe</h4>
+<ul>
+<li>Rise of the <strong>bourgeoisie</strong> (urban merchant and professional classes) challenged the social dominance of the old landed nobility.</li>
+<li>The Dutch Republic — dominated by urban merchants — was the template for a commercial society.</li>
+<li>Status increasingly tied to <strong>wealth</strong>, not just birth — but aristocracy remained politically dominant.</li>
+</ul>
+<h4>Africa</h4>
+<ul>
+<li>Slave-raiding warfare reshaped political structures. <strong>Oyo</strong>, <strong>Asante</strong>, <strong>Benin</strong>, and <strong>Dahomey</strong> expanded in part by acquiring firearms in exchange for enslaved people.</li>
+<li>Gender imbalances in West and Central Africa as mostly male captives were sent across the Atlantic reshaped family structures.</li>
+<li>The <strong>Kingdom of Kongo</strong> converted to Catholicism (first contact 1483) but was weakened by the slave trade.</li>
+</ul>
+<h4>Asia</h4>
+<ul>
+<li>Chinese and Indian merchant networks remained strong. Europeans operated inside existing systems — e.g., trading at Canton — rather than replacing them.</li>
+<li>Opium and cotton textiles began to reshape the Asian–European–American trade triangle in ways that would become dramatic in Unit 5.</li>
+</ul>
+</div>
+<!-- TOPIC 4.8 -->
+<h2>Topic 4.8 — Continuity and Change: 1450–1750</h2>
+<div class="region-card region-compare">
+<h3>🔄 What Changed — and What Stayed the Same?</h3>
+<h4>Major Changes</h4>
+<ul>
+<li><strong>Global economy:</strong> For the first time, the Americas, Africa, Europe, and Asia were tied into a single trading system.</li>
+<li><strong>Demographic revolution:</strong> Native American populations collapsed; European and African populations in the Americas grew; new biological exchanges transformed diets and populations worldwide.</li>
+<li><strong>Rise of Atlantic economies:</strong> Sugar, tobacco, and silver made the Atlantic the most dynamic economic zone in the world by 1750.</li>
+<li><strong>Race-based slavery:</strong> Though slavery was old, the Atlantic system created an unprecedented system of <strong>chattel slavery based on race</strong>.</li>
+<li><strong>New financial institutions:</strong> Joint-stock companies, stock exchanges, and public debt transformed European economies.</li>
+</ul>
+<h4>Continuities</h4>
+<ul>
+<li><strong>Agriculture</strong> remained the basis of most economies — most people still farmed.</li>
+<li><strong>Patriarchal societies</strong> dominated worldwide.</li>
+<li><strong>Religion</strong> still legitimized rulers and ordered daily life.</li>
+<li><strong>Land-based empires</strong> (Ottoman, Safavid, Mughal, Qing, Russian) remained powerful — Europeans did not yet dominate Asia.</li>
+<li>Asian economies — particularly Indian textiles and Chinese manufacturing — were still larger and more productive than Europe's.</li>
+</ul>
+<div style="overflow-x:auto;">
+<table class="compare-table">
+<thead>
+<tr>
+<th>Empire</th>
+<th>Main Region</th>
+<th>Key Industry</th>
+<th>Labor System</th>
+<th>Distinctive Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Portuguese</strong></td><td>African coast, Brazil, Indian Ocean, Macau</td><td>Spices, sugar, gold</td><td>Encomienda-like, African slavery</td><td>Trading-post empire (<em>Estado da Índia</em>)</td></tr>
+<tr><td><strong>Spanish</strong></td><td>Americas, Philippines</td><td>Silver, sugar, cacao</td><td>Encomienda, mit'a, African slavery</td><td>Largest land empire in the Americas</td></tr>
+<tr><td><strong>Dutch (VOC)</strong></td><td>Indonesia, Cape, New Amsterdam</td><td>Spices, carrying trade</td><td>Forced cultivation, slavery</td><td>First major joint-stock empire</td></tr>
+<tr><td><strong>English</strong></td><td>North America, Caribbean, India</td><td>Sugar, tobacco, Indian textiles</td><td>Indentured servitude, African slavery</td><td>Navigation Acts + EIC</td></tr>
+<tr><td><strong>French</strong></td><td>Canada, Caribbean, India, Louisiana</td><td>Furs, sugar, indigo</td><td>Native alliances, African slavery</td><td>Alliance-heavy colonial strategy</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- VOCAB -->
+<h2>📚 Key Vocabulary</h2>
+<div class="vocab-grid">
+<div class="vocab-item"><span class="vocab-term">Caravel</span>Small, maneuverable Portuguese exploration ship with lateen sails.</div>
+<div class="vocab-item"><span class="vocab-term">Carrack</span>Large multi-mast ship combining square and lateen sails for long voyages.</div>
+<div class="vocab-item"><span class="vocab-term">Astrolabe</span>Instrument used to determine latitude by measuring star altitudes.</div>
+<div class="vocab-item"><span class="vocab-term">Volta do mar</span>Portuguese knowledge of Atlantic wind patterns used for return voyages.</div>
+<div class="vocab-item"><span class="vocab-term">Treaty of Tordesillas</span>1494 agreement splitting the non-European world between Spain and Portugal.</div>
+<div class="vocab-item"><span class="vocab-term">Columbian Exchange</span>Transatlantic exchange of plants, animals, diseases, and people after 1492.</div>
+<div class="vocab-item"><span class="vocab-term">Encomienda</span>Spanish system granting colonists the right to demand labor from Native peoples.</div>
+<div class="vocab-item"><span class="vocab-term">Hacienda</span>Large Spanish American estate worked by dependent laborers.</div>
+<div class="vocab-item"><span class="vocab-term">Mit'a (colonial)</span>Spanish adaptation of Inca labor tribute, used at Potosí.</div>
+<div class="vocab-item"><span class="vocab-term">Chattel slavery</span>Form of slavery treating people as property; core to Atlantic plantation economies.</div>
+<div class="vocab-item"><span class="vocab-term">Middle Passage</span>Trans-Atlantic leg of the triangular trade carrying enslaved Africans.</div>
+<div class="vocab-item"><span class="vocab-term">Triangular trade</span>Three-cornered Atlantic trade: goods, slaves, and plantation products.</div>
+<div class="vocab-item"><span class="vocab-term">Mercantilism</span>Economic theory favoring bullion, protected trade, and favorable balance.</div>
+<div class="vocab-item"><span class="vocab-term">Joint-stock company</span>Business pooling investor capital; model of EIC and VOC.</div>
+<div class="vocab-item"><span class="vocab-term">VOC (Dutch East India Co.)</span>1602 company that dominated the spice trade in Southeast Asia.</div>
+<div class="vocab-item"><span class="vocab-term">Manila Galleon</span>Annual Spanish trade route between Acapulco and Manila.</div>
+<div class="vocab-item"><span class="vocab-term">Potosí</span>Bolivian mountain and city site of the richest silver mine.</div>
+<div class="vocab-item"><span class="vocab-term">Price revolution</span>Long-term inflation in Europe fueled by American silver.</div>
+<div class="vocab-item"><span class="vocab-term">Peninsulares / Creoles</span>Top two layers of the Spanish American casta hierarchy.</div>
+<div class="vocab-item"><span class="vocab-term">Casta system</span>Colonial Latin American racial hierarchy categorizing mixed-ancestry peoples.</div>
+<div class="vocab-item"><span class="vocab-term">Mestizo / Mulatto</span>People of European-Indigenous and European-African mixed ancestry.</div>
+<div class="vocab-item"><span class="vocab-term">Maroon</span>Escaped enslaved African who lived in independent communities.</div>
+<div class="vocab-item"><span class="vocab-term">Quilombo dos Palmares</span>Large maroon community in colonial Brazil.</div>
+<div class="vocab-item"><span class="vocab-term">Pueblo Revolt</span>1680 uprising that expelled Spanish from New Mexico for 12 years.</div>
+<div class="vocab-item"><span class="vocab-term">Stono Rebellion</span>1739 slave uprising in South Carolina.</div>
+<div class="vocab-item"><span class="vocab-term">Sakoku</span>Tokugawa policy of closed-country isolation from most foreigners.</div>
+<div class="vocab-item"><span class="vocab-term">Canton System</span>Qing restriction of European trade to the port of Canton.</div>
+</div>
+<!-- MCQs -->
+<div class="quiz-container">
+<h2>📝 Multiple Choice Practice</h2>
+<p>Three questions per sub-topic (24 total). Click an answer to check it.</p>
+<!-- 4.1 -->
+<h3 class="quiz-subheading">Topic 4.1 — Technological Innovations</h3>
+<div class="quiz-question">
+<p><strong>1. Which combination of technologies was most important for European transoceanic voyages in the 15th and 16th centuries?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Steam engines and railroads.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) The caravel, magnetic compass, astrolabe, and lateen sail.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Gunpowder rockets and telescopes.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Printing press and mechanical clocks.</div>
+</div>
+<div class="explanation" id="exp-1"><strong>Answer: B.</strong> These four combined ship design, direction-finding, latitude measurement, and wind handling — making long open-ocean voyages possible. Many were adapted from Chinese, Islamic, and Mediterranean precedents.</div>
+</div>
+<div class="quiz-question">
+<p><strong>2. The lateen sail was especially useful because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) Allowed ships to reach higher top speeds than square sails.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) Allowed ships to sail effectively against the wind.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) Was developed in China and transmitted through Japan.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Eliminated the need for a compass.</div>
+</div>
+<div class="explanation" id="exp-2"><strong>Answer: B.</strong> The triangular lateen sail (Arab/Mediterranean origin) could catch wind from various angles, letting ships tack into headwinds — essential for coastal navigation.</div>
+</div>
+<div class="quiz-question">
+<p><strong>3. Which statement best captures the origins of the key navigation technologies used by Europeans in 1450–1750?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Europeans invented all of them independently during the Renaissance.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) Many were adopted or adapted from Chinese and Islamic antecedents (e.g., compass, astrolabe, stern rudder, lateen sail).</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Europeans developed them from scratch after 1500.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Most were developed by Native American peoples and adopted by Europeans.</div>
+</div>
+<div class="explanation" id="exp-3"><strong>Answer: B.</strong> Europeans were skilled adopters and integrators, not solo inventors.</div>
+</div>
+<!-- 4.2 -->
+<h3 class="quiz-subheading">Topic 4.2 — Exploration: Causes and Events</h3>
+<div class="quiz-question">
+<p><strong>4. Which of the following BEST explains why European states, rather than Chinese or Ottoman states, led transoceanic exploration in the 15th century?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) European states had a much larger population than China.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) European states faced intense rivalry and lacked direct access to Asian trade, giving them strong incentive to find new sea routes.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) Europeans had vastly superior ships compared to Chinese junks.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) European states had no interest in land-based empires.</div>
+</div>
+<div class="explanation" id="exp-4"><strong>Answer: B.</strong> China's Ming state already controlled a huge domestic economy and chose to abandon Zheng He's voyages; the Ottomans controlled overland routes. European states, especially Portugal and Spain, were small, competitive, and commercially motivated to bypass Muslim middlemen.</div>
+</div>
+<div class="quiz-question">
+<p><strong>5. The Spanish conquest of the Aztec Empire (1519–1521) most directly depended on</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) The technological inferiority of Aztec cities.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Alliances with Native peoples hostile to the Aztecs and the spread of smallpox among Indigenous populations.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) The total numerical superiority of Spanish forces.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Direct support from Portuguese Brazil.</div>
+</div>
+<div class="explanation" id="exp-5"><strong>Answer: B.</strong> Cortés had only ~500 men. He exploited anti-Aztec sentiment among peoples like the Tlaxcalans, relied on the translator Malinche, and — critically — benefited from a smallpox epidemic that devastated Tenochtitlán during the siege.</div>
+</div>
+<div class="quiz-question">
+<p><strong>6. The Treaty of Tordesillas (1494) is historically significant because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Ended the Ottoman Empire.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) Divided the non-European world between Spain and Portugal along a papal-mediated line.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) Granted England the right to colonize India.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Prohibited the Atlantic slave trade.</div>
+</div>
+<div class="explanation" id="exp-6"><strong>Answer: B.</strong> It is the reason Brazil speaks Portuguese while most of the Americas speaks Spanish — a vivid example of how early modern imperialism was shaped by European diplomacy.</div>
+</div>
+<!-- 4.3 -->
+<h3 class="quiz-subheading">Topic 4.3 — The Columbian Exchange</h3>
+<div class="quiz-question">
+<p><strong>7. Which of the following crops from the Americas had the greatest long-term demographic impact on Afro-Eurasia?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) Tobacco and cacao.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) Potatoes and maize.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) Pineapples and vanilla.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Sugar and coffee.</div>
+</div>
+<div class="explanation" id="exp-7"><strong>Answer: B.</strong> Calorie-dense potatoes (northern Europe, Ireland) and maize (China, Sub-Saharan Africa) fed population booms across the Old World. Sugar and coffee (D) are Old World crops spread to the Americas.</div>
+</div>
+<div class="quiz-question">
+<p><strong>8. Which statement best explains the catastrophic decline of Native American populations after 1492?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) Widespread African slavery on Native lands.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(B) Climate change caused by deforestation.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 8)">(C) Native peoples had no prior immunity to Eurasian diseases such as smallpox and measles.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) Mass migration of Native peoples to Europe.</div>
+</div>
+<div class="explanation" id="exp-8"><strong>Answer: C.</strong> Although warfare and forced labor added to the toll, the overwhelming share of deaths came from epidemics — estimates suggest 75–90% mortality within a century and a half.</div>
+</div>
+<div class="quiz-question">
+<p><strong>9. The introduction of the horse to the Americas most directly transformed which group?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) Enslaved Africans in Saint-Domingue.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(B) Mayan city-state nobility.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 9)">(C) Plains Indian peoples in North America, who became mounted nomadic hunters.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) Inca elites in the Andes.</div>
+</div>
+<div class="explanation" id="exp-9"><strong>Answer: C.</strong> Peoples like the Lakota, Comanche, and Cheyenne adopted horses (descended from Spanish escapees) and transformed into mounted bison-hunting societies — one of the most dramatic cultural revolutions of the Columbian Exchange.</div>
+</div>
+<!-- 4.4 -->
+<h3 class="quiz-subheading">Topic 4.4 — Maritime Empires Established</h3>
+<div class="quiz-question">
+<p><strong>10. The Portuguese <em>Estado da Índia</em> is best described as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) A land-based empire that colonized most of the Indian subcontinent.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) A network of coastal forts, trading posts, and maritime chokepoints linking Europe to Asia.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) A Spanish mission to convert the Mughal emperor.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) A Dutch trading venture based in Batavia.</div>
+</div>
+<div class="explanation" id="exp-10"><strong>Answer: B.</strong> The Portuguese held relatively little territory on land but controlled strategic points (Hormuz, Goa, Malacca, Macau) and charged ships fees via the cartaz system.</div>
+</div>
+<div class="quiz-question">
+<p><strong>11. The Dutch East India Company (VOC), founded in 1602, was distinctive in that it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(A) Was a religious mission run by Jesuits.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 11)">(B) Was a joint-stock company with quasi-governmental powers including armies and courts.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Focused primarily on silver mining in the Americas.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) Was state-owned by the King of Spain.</div>
+</div>
+<div class="explanation" id="exp-11"><strong>Answer: B.</strong> The VOC could wage war, mint coins, sign treaties, and govern territory — making it something between a corporation and a state, operating on the Dutch model of commercial capitalism.</div>
+</div>
+<div class="quiz-question">
+<p><strong>12. The Manila Galleon trade (1565–1815) is historically significant because it</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Connected North America to India without intermediaries.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 12)">(B) Tied American silver to Chinese demand, creating the first truly global trade system.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(C) Replaced the Atlantic slave trade.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) Was the main route for Dutch spices to reach Europe.</div>
+</div>
+<div class="explanation" id="exp-12"><strong>Answer: B.</strong> Galleons sailed annually between Acapulco and Manila, exchanging Mexican and Peruvian silver for Chinese silks and porcelain. Combined with Atlantic trade, this produced a truly global system.</div>
+</div>
+<!-- 4.5 -->
+<h3 class="quiz-subheading">Topic 4.5 — Maintaining and Developing Maritime Empires</h3>
+<div class="quiz-question">
+<p><strong>13. Mercantilism was based on the idea that</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(A) Free trade benefits all countries equally.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 13)">(B) National wealth was measured in bullion and governments should promote exports while restricting imports.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(C) Religious conversion should take priority over profit.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 13)">(D) Slavery was economically inefficient.</div>
+</div>
+<div class="explanation" id="exp-13"><strong>Answer: B.</strong> Mercantilism saw global wealth as finite and zero-sum. Tariffs, navigation acts, and colonial monopolies were its characteristic policies.</div>
+</div>
+<div class="quiz-question">
+<p><strong>14. Chinese demand for silver in the 16th and 17th centuries was driven most directly by</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(A) Chinese conquest of Japan.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 14)">(B) The Ming (and later Qing) single-whip tax system, which required tax payment in silver.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(C) A Chinese ban on all foreign trade.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 14)">(D) The Columbian Exchange introducing the potato to China.</div>
+</div>
+<div class="explanation" id="exp-14"><strong>Answer: B.</strong> Chinese monetization and the single-whip (yitiaobian) tax reform made silver essential, which in turn pulled American and Japanese silver into Chinese markets via the Manila Galleon and European traders.</div>
+</div>
+<div class="quiz-question">
+<p><strong>15. Which labor system was most closely associated with Spanish silver mining at Potosí?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(A) Indentured servitude of English colonists.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(B) African chattel slavery imported through the VOC.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 15)">(C) The colonial adaptation of the Inca mit'a labor draft.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 15)">(D) Free-wage labor under state salaries.</div>
+</div>
+<div class="explanation" id="exp-15"><strong>Answer: C.</strong> The Spanish repurposed the existing Inca mit'a to compel rotations of Indigenous Andean men to labor in the mines, often under deadly conditions. African slavery was present but secondary at Potosí.</div>
+</div>
+<!-- 4.6 -->
+<h3 class="quiz-subheading">Topic 4.6 — Challenges to State Power</h3>
+<div class="quiz-question">
+<p><strong>16. The Pueblo Revolt of 1680 is best understood as a response to</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(A) French expansion into the Mississippi Valley.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 16)">(B) Spanish demands for forced labor and suppression of Indigenous religion.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(C) English slavery on sugar plantations.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 16)">(D) Incan efforts to restore the Sapa Inca.</div>
+</div>
+<div class="explanation" id="exp-16"><strong>Answer: B.</strong> After decades of forced conversions, encomienda-style labor demands, and attacks on kivas, Pueblo leader Popé led a coordinated uprising that drove Spanish colonists out of New Mexico for 12 years.</div>
+</div>
+<div class="quiz-question">
+<p><strong>17. Maroon communities like Quilombo dos Palmares illustrate</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(A) Cooperation between European colonial powers.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 17)">(B) Enslaved Africans actively resisting slavery by escaping and founding independent communities.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(C) Native American alliances with the Dutch.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 17)">(D) Successful abolition of slavery by colonial governments.</div>
+</div>
+<div class="explanation" id="exp-17"><strong>Answer: B.</strong> Maroons formed communities in remote areas (mountains, jungles, swamps) throughout the Americas. Palmares, in northeastern Brazil, lasted a century and at its peak held tens of thousands of people.</div>
+</div>
+<div class="quiz-question">
+<p><strong>18. The Tokugawa policy of sakoku (closed country) in 17th-century Japan is an example of</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(A) Enthusiastic embrace of European missionaries.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 18)">(B) An Asian state tightly restricting European access and Christian missionary activity.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(C) A failed Chinese attempt to conquer Japan.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 18)">(D) A political alliance with Portugal.</div>
+</div>
+<div class="explanation" id="exp-18"><strong>Answer: B.</strong> The Tokugawa limited foreign trade to Dutch and Chinese merchants at Nagasaki, banned Christianity, and executed missionaries and converts — showing that "European expansion" was something Asian states could still resist effectively in this period.</div>
+</div>
+<!-- 4.7 -->
+<h3 class="quiz-subheading">Topic 4.7 — Changing Social Hierarchies</h3>
+<div class="quiz-question">
+<p><strong>19. The Spanish American <em>casta</em> system is best described as</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(A) A religious hierarchy of Catholic orders.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(B) A Portuguese trade network in the Indian Ocean.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 19)">(C) A racial-social hierarchy in colonial Latin America based on European, Indigenous, and African ancestry.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 19)">(D) A military rank system used by the Dutch.</div>
+</div>
+<div class="explanation" id="exp-19"><strong>Answer: C.</strong> The casta system placed <em>peninsulares</em> at the top and Indigenous/African-descended people at the bottom, with dozens of named categories for mixed-ancestry people in between.</div>
+</div>
+<div class="quiz-question">
+<p><strong>20. The Atlantic slave trade most directly contributed to which of the following in West Africa?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(A) A population surge across the continent.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 20)">(B) The rise of militarized states (e.g., Asante, Dahomey) that acquired guns in exchange for captives.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(C) The collapse of Islam in West Africa.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 20)">(D) The establishment of the Mughal Empire in Africa.</div>
+</div>
+<div class="explanation" id="exp-20"><strong>Answer: B.</strong> Access to European firearms incentivized some African states to expand through slave-raiding warfare, disrupting long-standing political balances and depopulating entire regions.</div>
+</div>
+<div class="quiz-question">
+<p><strong>21. Which of the following best describes the rise of the European bourgeoisie in the period 1450–1750?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(A) They replaced nobles as the ruling political class across Europe.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 21)">(B) Urban merchant and professional classes gained wealth and social influence, especially in commercial centers like Amsterdam and London.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(C) They were forbidden from owning property.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 21)">(D) They consisted mainly of Catholic clergy.</div>
+</div>
+<div class="explanation" id="exp-21"><strong>Answer: B.</strong> Commercial capitalism created a wealthy non-noble class whose economic power grew even as formal political power still mostly belonged to landed aristocrats.</div>
+</div>
+<!-- 4.8 -->
+<h3 class="quiz-subheading">Topic 4.8 — Continuity and Change</h3>
+<div class="quiz-question">
+<p><strong>22. Which of the following represents a major CHANGE from c. 1450 to c. 1750?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(A) Agriculture became less important than manufacturing.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 22)">(B) The Americas, Africa, Europe, and Asia were integrated into a single global economy for the first time.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(C) European powers replaced the Mughal, Qing, and Ottoman empires.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 22)">(D) Patriarchal family structures disappeared.</div>
+</div>
+<div class="explanation" id="exp-22"><strong>Answer: B.</strong> The Columbian Exchange and maritime empires tied the four major world regions into a linked system. Land empires still dominated Eurasia (C) and agriculture still fed most of humanity (A).</div>
+</div>
+<div class="quiz-question">
+<p><strong>23. Which of the following is an example of CONTINUITY during the period 1450–1750?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, true, 23)">(A) Most of the world's population remained engaged in agriculture.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(B) The Aztec Empire continued to expand.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(C) The Silk Road remained the primary trade route linking Asia and Europe.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 23)">(D) Native American populations grew substantially.</div>
+</div>
+<div class="explanation" id="exp-23"><strong>Answer: A.</strong> Even with all the global changes, the vast majority of people worldwide still farmed for a living — industrial and wage labor would become dominant only later.</div>
+</div>
+<div class="quiz-question">
+<p><strong>24. Which of the following best compares the Spanish and Portuguese empires in the period c. 1450–1750?</strong></p>
+<div class="quiz-options">
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(A) Both focused primarily on East Asian conquest.</div>
+<div class="quiz-option" onclick="checkAnswer(this, true, 24)">(B) Spain built a large land-based empire in the Americas, while Portugal built a maritime trading-post empire across the Indian Ocean and focused on Brazil in the Americas.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(C) Both relied exclusively on Native American labor, with no African slavery.</div>
+<div class="quiz-option" onclick="checkAnswer(this, false, 24)">(D) Both were peripheral to the silver economy.</div>
+</div>
+<div class="explanation" id="exp-24"><strong>Answer: B.</strong> Spain's American holdings, built atop conquered Aztec and Inca lands, had a very different structure than Portugal's string of forts and trading ports from Mozambique to Macau.</div>
+</div>
+</div>
+<!-- SAQs -->
+<h2>✍️ Short-Answer Practice (SAQ)</h2>
+<div class="saq-box">
+<h3>SAQ 1 — Columbian Exchange (No Stimulus)</h3>
+<ol type="a">
+<li>Identify ONE specific effect of the Columbian Exchange on Afro-Eurasia in the period c. 1492–1750.</li>
+<li>Identify ONE specific effect of the Columbian Exchange on the Americas in the period c. 1492–1750.</li>
+<li>Explain ONE way the Columbian Exchange contributed to the development of a global economy in the period c. 1450–1750.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> The introduction of calorie-dense American crops such as the potato and maize into Afro-Eurasia contributed to significant population growth — the potato, for example, supported a population boom in northern Europe, while maize became a staple in parts of Qing China and Sub-Saharan Africa.</p>
+<p><strong>(b)</strong> Indigenous populations in the Americas experienced catastrophic demographic collapse, often 75–90%, due to exposure to Eurasian diseases (especially smallpox) against which they had no immunity.</p>
+<p><strong>(c)</strong> The Columbian Exchange linked American silver from Potosí and Zacatecas to Chinese demand through the Manila Galleon and European merchants, creating the first truly global trade system by tying American, European, African, and Asian economies together through bullion, plantation goods, and enslaved labor.</p>
+</details>
+</div>
+<div class="saq-box">
+<h3>SAQ 2 — Stimulus (Casta Painting)</h3>
+<p style="background:#fff8ef; padding:0.8rem; border-radius:6px; border-left:4px solid #8b4513;">
+Refer to the 18th-century <strong>casta painting</strong> from colonial Mexico shown earlier in this unit, in which each panel depicts a family of mixed ancestry labeled with a specific racial category (e.g., "De español y india, mestizo").
+</p>
+<ol type="a">
+<li>Identify ONE piece of evidence from casta paintings about colonial Latin American society.</li>
+<li>Explain ONE reason why Spanish authorities developed elaborate casta categories in the 18th century.</li>
+<li>Explain ONE way that social hierarchies in another region of the world in the period c. 1450–1750 were structured differently from the Spanish American casta system.</li>
+</ol>
+<details class="saq-sample">
+<summary>Click to see a sample response</summary>
+<p><strong>(a)</strong> Casta paintings show that colonial Latin America was a racially mixed society in which people of European, Indigenous, and African ancestry lived together and formed families, and that Spanish colonial authorities labeled and ranked those combinations — evidence of both racial mixing and a formalized hierarchy.</p>
+<p><strong>(b)</strong> As the mestizo and mulatto population grew, it became harder for a small Spanish-born (peninsular) elite to dominate society purely by birth. Casta paintings and classifications were attempts to reassert hierarchy — keeping peninsulares and creoles on top — in a society where racial boundaries were blurring.</p>
+<p><strong>(c)</strong> In Qing China, social status was organized primarily through Confucian classifications (scholar-gentry, farmers, artisans, merchants) and access to the civil-service examinations rather than through racial categories of ancestry. This meant that — at least in theory — a man's rank depended on educational achievement, a very different hierarchy from the race-based casta system of Spanish America.</p>
+</details>
+</div>
+<!-- KEY TAKEAWAYS -->
+<h2>⭐ Key Takeaways</h2>
+<div class="key-takeaways">
+<ul>
+<li><strong>Globalization began here.</strong> Between 1450 and 1750, the world's four major populated landmasses were tied into a single economic and biological system for the first time.</li>
+<li><strong>Europe led maritime expansion — but did not yet dominate Asia.</strong> Portuguese, Spanish, Dutch, English, and French empires built trading posts and plantation colonies, while Ming/Qing China, Mughal India, the Ottomans, and Tokugawa Japan remained powerful.</li>
+<li><strong>The Columbian Exchange was transformative and brutal.</strong> New crops supported population growth in the Old World; Old World diseases devastated the Americas.</li>
+<li><strong>New institutions fueled new economies.</strong> Joint-stock companies, mercantilism, stock exchanges, and the silver trade underwrote a commercial revolution.</li>
+<li><strong>Atlantic slavery reshaped three continents.</strong> Africa lost millions of people and developed militarized slaving states; the Americas built plantation economies; Europe grew rich on sugar and textiles.</li>
+<li><strong>Resistance was everywhere.</strong> Pueblo Revolt, Metacom's War, maroon communities, the Stono Rebellion, the Fronde, and the Glorious Revolution all show that power was continually contested — setting up the revolutions of Unit 5.</li>
+</ul>
+</div>
+<p style="text-align:center; margin-top:2rem;">
+<a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+</p>
+</div>
+<script>
+function checkAnswer(element, isCorrect, qNum) {
+const options = element.parentElement.querySelectorAll('.quiz-option');
+options.forEach(o => o.classList.remove('correct', 'incorrect'));
+element.classList.add(isCorrect ? 'correct' : 'incorrect');
+const exp = document.getElementById('exp-' + qNum);
+if (exp) exp.classList.add('show');
+}
+</script>
+</body>
+</html>
