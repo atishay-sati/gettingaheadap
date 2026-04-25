@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP United States History Unit 3 — Period 3: 1754–1800. Timeline, comprehensive notes covering the French and Indian War, American Revolution, Articles of Confederation, Constitution, early republic, Washington, Adams, political parties, plus MCQs and SAQs." />
+  <title>Unit 3: Period 3 (1754–1800)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f3a5f;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: #b22234;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #b22234;
+      padding-bottom: 0.3rem;
+    }
+    h3 { color: #2f5d8c; margin-top: 1.5rem; }
+    h4 { color: #1f3a5f; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box {
+      background: linear-gradient(135deg, #dbeafe, #eef4ff);
+      border-left: 6px solid #b22234;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+ 
+    .weighting-badge {
+      display: inline-block;
+      background: #1f3a5f;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+ 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #b22234;
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8fbff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f3a5f;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #b22234;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f3a5f;
+      margin-right: 0.5rem;
+    }
+ 
+    /* Region cards */
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region-context     { border-color: #8b1e3f; background: #fff1f4; }
+    .region-war         { border-color: #174ea6; background: #e8f1ff; }
+    .region-revolution  { border-color: #b22234; background: #fff1f4; }
+    .region-government  { border-color: #2f6f73; background: #eef9f9; }
+    .region-republic    { border-color: #5b3f8c; background: #f3efff; }
+    .region-comparison  { border-color: #7b2d43; background: #fff0f3; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f3a5f;
+      background: #eef4ff;
+      font-weight: 600;
+    }
+ 
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .vocab-item {
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+    .vocab-term {
+      font-weight: 700;
+      color: #1f3a5f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #b8c7dc;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .compare-table thead {
+      background: linear-gradient(to right, #1f3a5f, #b22234);
+      color: white;
+    }
+    .compare-table tbody tr:nth-child(even) { background: #f8fbff; }
+ 
+    /* Quiz */
+    .quiz-container {
+      background: linear-gradient(135deg, #dbeafe, #f8fbff);
+      border: 2px solid #1f3a5f;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-container h2 { margin-top: 0; border: none; color: #1f3a5f; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f3a5f;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #eef4ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f3a5f;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .explanation.show { display: block; }
+ 
+    /* SAQ */
+    .saq-box {
+      background: #fff;
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8fbff;
+      border: 1px dashed #1f3a5f;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f3a5f;
+    }
+ 
+    .key-takeaways {
+      background: linear-gradient(135deg, #eef4ff, #dbeafe);
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP United States History</a>
+    <h1>Unit 3: Period 3</h1>
+    <p class="subtitle">1754 – 1800 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 10–17%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🇺🇸 Unit Overview</h3>
+      <p>
+        APUSH Unit 3 covers the road to the American Revolution, the Revolution itself, the creation of the United States government,
+        and the early republic. This period begins with the French and Indian War, which changed the relationship between Britain and
+        its colonies. It then follows colonial resistance, independence, the Articles of Confederation, the Constitution, Washington's presidency,
+        the rise of political parties, and growing debates over the meaning of the Revolution.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How did imperial conflict, Enlightenment ideas, colonial resistance, and debates over government
+        lead to the American Revolution and the creation of a new republic between 1754 and 1800?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Washington_Crossing_the_Delaware_by_Emanuel_Leutze%2C_MMA-NYC%2C_1851.jpg?width=1000" alt="Washington Crossing the Delaware painting" class="unit-image">
+      <div class="image-caption">Washington Crossing the Delaware — connects to the American Revolution and the struggle for independence.</div>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 3 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">1754:</span> French and Indian War begins; Albany Plan of Union proposes colonial cooperation.</div>
+      <div class="timeline-event"><span class="timeline-date">1763:</span> Treaty of Paris ends the French and Indian War; Proclamation Line of 1763 limits colonial settlement west of the Appalachians.</div>
+      <div class="timeline-event"><span class="timeline-date">1765:</span> Stamp Act taxes paper goods; colonial protests argue “no taxation without representation.”</div>
+      <div class="timeline-event"><span class="timeline-date">1770:</span> Boston Massacre increases colonial anger against British troops.</div>
+      <div class="timeline-event"><span class="timeline-date">1773:</span> Boston Tea Party protests the Tea Act.</div>
+      <div class="timeline-event"><span class="timeline-date">1774:</span> First Continental Congress meets after Britain passes the Coercive/Intolerable Acts.</div>
+      <div class="timeline-event"><span class="timeline-date">1775:</span> Battles of Lexington and Concord begin the Revolutionary War.</div>
+      <div class="timeline-event"><span class="timeline-date">1776:</span> Declaration of Independence states the colonies are independent and explains natural rights.</div>
+      <div class="timeline-event"><span class="timeline-date">1777:</span> Battle of Saratoga becomes a turning point by helping secure French alliance.</div>
+      <div class="timeline-event"><span class="timeline-date">1781:</span> Articles of Confederation are ratified; British surrender at Yorktown.</div>
+      <div class="timeline-event"><span class="timeline-date">1783:</span> Treaty of Paris officially ends the American Revolution and recognizes U.S. independence.</div>
+      <div class="timeline-event"><span class="timeline-date">1786–1787:</span> Shays' Rebellion exposes weaknesses in the Articles of Confederation.</div>
+      <div class="timeline-event"><span class="timeline-date">1787:</span> Constitutional Convention creates a stronger federal government.</div>
+      <div class="timeline-event"><span class="timeline-date">1788:</span> Constitution is ratified after Federalist and Anti-Federalist debates.</div>
+      <div class="timeline-event"><span class="timeline-date">1791:</span> Bill of Rights is ratified.</div>
+      <div class="timeline-event"><span class="timeline-date">1794:</span> Whiskey Rebellion tests the power of the new federal government.</div>
+      <div class="timeline-event"><span class="timeline-date">1796:</span> Washington's Farewell Address warns against political parties and permanent foreign alliances.</div>
+      <div class="timeline-event"><span class="timeline-date">1798:</span> Alien and Sedition Acts trigger the Virginia and Kentucky Resolutions.</div>
+      <div class="timeline-event"><span class="timeline-date">1800:</span> Election of 1800 marks the peaceful transfer of power from Federalists to Democratic-Republicans.</div>
+    </div>
+ 
+    <!-- TOPIC 3.1 -->
+    <h2>Topic 3.1 — Contextualizing Period 3</h2>
+    <div class="region-card region-context">
+      <h3>🌎 From British Colonies to New Nation</h3>
+      <p>Period 3 is about how British colonists became Americans. The period starts with Britain winning a huge empire after the French and Indian War, but that victory created debt, conflict, and new imperial policies that angered colonists.</p>
+ 
+      <h4>Major Themes</h4>
+      <ul>
+        <li><strong>Imperial conflict:</strong> Britain and France fought for control of North America during the French and Indian War.</li>
+        <li><strong>Taxation and representation:</strong> Colonists resisted British taxes because they lacked direct representation in Parliament.</li>
+        <li><strong>Enlightenment ideas:</strong> Natural rights, consent of the governed, and republicanism shaped revolutionary thinking.</li>
+        <li><strong>Debates over power:</strong> Americans argued over how strong the national government should be.</li>
+      </ul>
+ 
+      <h4>Why This Matters</h4>
+      <ul>
+        <li>The American Revolution was both a war for independence and a debate over political ideals.</li>
+        <li>The Constitution created a stronger federal government than the Articles of Confederation.</li>
+        <li>Early political conflicts over banks, taxes, foreign policy, and states' rights shaped U.S. politics for decades.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 3.2 -->
+    <h2>Topic 3.2 — The Seven Years' War / French and Indian War</h2>
+    <div class="region-card region-war">
+      <h3>⚔️ War Changes the British Empire</h3>
+      <p>The French and Indian War was the North American part of the larger Seven Years' War. Britain and France fought over land, trade, and control of the Ohio River Valley.</p>
+ 
+      <h4>Causes</h4>
+      <ul>
+        <li><strong>Ohio River Valley:</strong> Both Britain and France wanted control of this valuable region.</li>
+        <li><strong>Imperial rivalry:</strong> Britain and France competed globally for empire and trade.</li>
+        <li><strong>Native alliances:</strong> Many Native groups allied with France because French settlement was smaller and focused more on trade.</li>
+      </ul>
+ 
+      <h4>Results</h4>
+      <ul>
+        <li><strong>Treaty of Paris 1763:</strong> Britain gained Canada and land east of the Mississippi River from France.</li>
+        <li><strong>British debt:</strong> The war was expensive, so Britain began taxing colonists more directly.</li>
+        <li><strong>Proclamation of 1763:</strong> Britain tried to stop colonists from settling west of the Appalachian Mountains to avoid conflict with Native peoples.</li>
+        <li><strong>Colonial resentment:</strong> Colonists were angry because they believed they had helped win western lands but were blocked from settling them.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/French_and_indian_war_map.svg?width=1000" alt="Map of the French and Indian War" class="unit-image">
+      <div class="image-caption">French and Indian War map — connects to imperial conflict over North America.</div>
+    </div>
+ 
+    <!-- TOPIC 3.3 -->
+    <h2>Topic 3.3 — Taxation Without Representation</h2>
+    <div class="region-card region-revolution">
+      <h3>📜 British Policies and Colonial Resistance</h3>
+      <p>After 1763, Britain tried to tighten control over the colonies and raise revenue. Colonists responded with protests, boycotts, petitions, and eventually armed resistance.</p>
+ 
+      <h4>British Policies</h4>
+      <ul>
+        <li><strong>Sugar Act:</strong> Taxed sugar and molasses to raise revenue.</li>
+        <li><strong>Stamp Act:</strong> Taxed paper goods like newspapers, legal documents, and playing cards.</li>
+        <li><strong>Townshend Acts:</strong> Taxed imported goods such as glass, paper, paint, lead, and tea.</li>
+        <li><strong>Tea Act:</strong> Gave the British East India Company an advantage in the tea trade.</li>
+        <li><strong>Coercive/Intolerable Acts:</strong> Punished Massachusetts after the Boston Tea Party.</li>
+      </ul>
+ 
+      <h4>Colonial Arguments</h4>
+      <ul>
+        <li><strong>No taxation without representation:</strong> Colonists argued Parliament could not tax them because they had no elected representatives there.</li>
+        <li><strong>Rights of Englishmen:</strong> Colonists claimed they deserved the same legal rights as British citizens.</li>
+        <li><strong>Virtual representation rejected:</strong> Britain argued Parliament represented all British subjects, but colonists rejected this idea.</li>
+      </ul>
+ 
+      <h4>Resistance</h4>
+      <ul>
+        <li><strong>Sons of Liberty:</strong> Organized protests against British policies.</li>
+        <li><strong>Daughters of Liberty:</strong> Supported boycotts by making homespun cloth and avoiding British goods.</li>
+        <li><strong>Committees of Correspondence:</strong> Spread political information between colonies.</li>
+        <li><strong>Continental Congress:</strong> Colonial leaders met to coordinate resistance.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 3.4 -->
+    <h2>Topic 3.4 — Philosophical Foundations of the American Revolution</h2>
+    <div class="region-card region-revolution">
+      <h3>💡 Enlightenment and Republican Ideas</h3>
+      <p>The American Revolution was influenced by Enlightenment ideas about natural rights, government by consent, and the right to resist tyranny.</p>
+ 
+      <h4>Important Ideas</h4>
+      <ul>
+        <li><strong>Natural rights:</strong> John Locke argued that people have rights to life, liberty, and property.</li>
+        <li><strong>Consent of the governed:</strong> Governments get power from the people.</li>
+        <li><strong>Social contract:</strong> People agree to form governments to protect their rights.</li>
+        <li><strong>Right of revolution:</strong> If a government violates rights, people can change or overthrow it.</li>
+        <li><strong>Republicanism:</strong> A government should be based on elected representatives and civic virtue.</li>
+      </ul>
+ 
+      <h4>Key Documents</h4>
+      <ul>
+        <li><strong>Common Sense:</strong> Thomas Paine argued that monarchy was corrupt and independence made sense.</li>
+        <li><strong>Declaration of Independence:</strong> Written mostly by Thomas Jefferson, it argued that all men are created equal and listed grievances against King George III.</li>
+        <li><strong>State constitutions:</strong> Many states wrote constitutions that expanded republican government but still limited political rights for women, enslaved people, and many poor men.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg?width=1000" alt="John Trumbull painting of the Declaration of Independence" class="unit-image">
+      <div class="image-caption">Declaration of Independence painting — connects to revolutionary ideals and independence.</div>
+    </div>
+ 
+    <!-- TOPIC 3.5 -->
+    <h2>Topic 3.5 — The American Revolution</h2>
+    <div class="region-card region-revolution">
+      <h3>🗽 War for Independence</h3>
+      <p>The American Revolution was fought between Patriot colonists and Britain, but not all colonists supported independence. The war also involved Loyalists, Native Americans, enslaved people, women, and foreign allies.</p>
+ 
+      <h4>Patriots, Loyalists, and Others</h4>
+      <ul>
+        <li><strong>Patriots:</strong> Supported independence from Britain.</li>
+        <li><strong>Loyalists:</strong> Remained loyal to Britain, often because of economic ties, fear of disorder, or belief in monarchy.</li>
+        <li><strong>Native Americans:</strong> Many sided with Britain because they hoped Britain would limit American westward expansion.</li>
+        <li><strong>Enslaved African Americans:</strong> Some fought for Britain because Britain offered freedom to enslaved people who escaped Patriot masters.</li>
+        <li><strong>Women:</strong> Supported the war by boycotting goods, managing farms and businesses, making supplies, and sometimes serving near armies.</li>
+      </ul>
+ 
+      <h4>Major Turning Points</h4>
+      <ul>
+        <li><strong>Lexington and Concord:</strong> First battles of the Revolutionary War.</li>
+        <li><strong>Bunker Hill:</strong> Showed colonists could fight British regulars, even though Britain won the battle.</li>
+        <li><strong>Saratoga:</strong> Major American victory that convinced France to ally with the United States.</li>
+        <li><strong>Yorktown:</strong> Final major battle where British General Cornwallis surrendered in 1781.</li>
+      </ul>
+ 
+      <h4>Why America Won</h4>
+      <ul>
+        <li><strong>French alliance:</strong> France provided troops, ships, money, and supplies.</li>
+        <li><strong>Home-field advantage:</strong> Patriots knew the land and had local support.</li>
+        <li><strong>British difficulties:</strong> Britain fought far from home and struggled to control a large territory.</li>
+        <li><strong>Washington's leadership:</strong> George Washington kept the Continental Army together during difficult years.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 3.6 -->
+    <h2>Topic 3.6 — The Influence of Revolutionary Ideals</h2>
+    <div class="region-card region-comparison">
+      <h3>⚖️ Freedom, Equality, and Contradictions</h3>
+      <p>The Revolution promoted ideas of liberty and equality, but those ideals were applied unevenly. Many groups used revolutionary language to challenge inequality, even when they did not immediately gain full rights.</p>
+ 
+      <h4>Women</h4>
+      <ul>
+        <li><strong>Republican motherhood:</strong> Women were expected to raise educated, virtuous sons for the republic.</li>
+        <li><strong>Abigail Adams:</strong> Asked John Adams to “remember the ladies,” showing that some women challenged male political power.</li>
+        <li><strong>Limits:</strong> Women generally did not gain voting rights or equal legal status.</li>
+      </ul>
+ 
+      <h4>African Americans</h4>
+      <ul>
+        <li><strong>Revolutionary contradiction:</strong> A nation built on liberty still allowed slavery.</li>
+        <li><strong>Northern gradual emancipation:</strong> Some northern states began passing laws to slowly end slavery.</li>
+        <li><strong>Southern slavery:</strong> Slavery remained deeply rooted in the South.</li>
+      </ul>
+ 
+      <h4>Native Americans</h4>
+      <ul>
+        <li><strong>Western expansion:</strong> After independence, American settlers pushed westward onto Native lands.</li>
+        <li><strong>Limited protection:</strong> Native peoples were generally excluded from the new republic's political system.</li>
+        <li><strong>Ongoing resistance:</strong> Native groups continued resisting U.S. expansion in the Ohio Valley and beyond.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 3.7 -->
+    <h2>Topic 3.7 — The Articles of Confederation</h2>
+    <div class="region-card region-government">
+      <h3>📄 America's First Government</h3>
+      <p>The Articles of Confederation created the first national government of the United States. Americans feared tyranny, so they made the national government weak and gave most power to the states.</p>
+ 
+      <h4>Strengths</h4>
+      <ul>
+        <li><strong>Won the Revolution:</strong> The Articles government helped guide the country through the end of the war.</li>
+        <li><strong>Land Ordinance of 1785:</strong> Created a system for surveying and selling western lands.</li>
+        <li><strong>Northwest Ordinance of 1787:</strong> Created a process for territories to become states and banned slavery in the Northwest Territory.</li>
+      </ul>
+ 
+      <h4>Weaknesses</h4>
+      <ul>
+        <li><strong>No power to tax:</strong> The national government could request money but not force states to pay.</li>
+        <li><strong>No executive branch:</strong> There was no president to enforce laws.</li>
+        <li><strong>No national court system:</strong> There was no strong federal judiciary.</li>
+        <li><strong>Hard to amend:</strong> Changes required unanimous state approval.</li>
+        <li><strong>Weak military:</strong> The national government struggled to respond to rebellions or threats.</li>
+      </ul>
+ 
+      <h4>Shays' Rebellion</h4>
+      <ul>
+        <li><strong>Cause:</strong> Farmers in Massachusetts protested debt, taxes, and foreclosures.</li>
+        <li><strong>Significance:</strong> The rebellion convinced many elites that the Articles were too weak and needed replacement.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 3.8 -->
+    <h2>Topic 3.8 — The Constitutional Convention and Debates Over Ratification</h2>
+    <div class="region-card region-government">
+      <h3>🏛️ Creating the Constitution</h3>
+      <p>In 1787, delegates met in Philadelphia to revise the Articles of Confederation. Instead, they created a new Constitution with a stronger federal government.</p>
+ 
+      <h4>Major Compromises</h4>
+      <ul>
+        <li><strong>Great Compromise:</strong> Created a bicameral legislature with the House based on population and the Senate giving each state equal representation.</li>
+        <li><strong>Three-Fifths Compromise:</strong> Counted three-fifths of enslaved people for representation and taxation, increasing Southern political power.</li>
+        <li><strong>Electoral College:</strong> Created an indirect system for electing the president.</li>
+      </ul>
+ 
+      <h4>Principles of the Constitution</h4>
+      <ul>
+        <li><strong>Federalism:</strong> Power is divided between national and state governments.</li>
+        <li><strong>Separation of powers:</strong> Government is divided into legislative, executive, and judicial branches.</li>
+        <li><strong>Checks and balances:</strong> Each branch can limit the power of the others.</li>
+        <li><strong>Popular sovereignty:</strong> The government's authority comes from the people.</li>
+      </ul>
+ 
+      <h4>Federalists vs. Anti-Federalists</h4>
+      <ul>
+        <li><strong>Federalists:</strong> Supported the Constitution and wanted a stronger national government. Key figures included Alexander Hamilton, James Madison, and John Jay.</li>
+        <li><strong>Anti-Federalists:</strong> Opposed or feared the Constitution because it gave too much power to the national government and lacked a bill of rights.</li>
+        <li><strong>Bill of Rights:</strong> Added in 1791 to protect individual liberties and help secure ratification.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Constitution_of_the_United_States%2C_page_1.jpg?width=1000" alt="First page of the United States Constitution" class="unit-image">
+      <div class="image-caption">The United States Constitution — connects to federalism, checks and balances, and ratification debates.</div>
+    </div>
+ 
+    <!-- TOPIC 3.9 -->
+    <h2>Topic 3.9 — The Early Republic</h2>
+    <div class="region-card region-republic">
+      <h3>🦅 Washington, Hamilton, Jefferson, and Adams</h3>
+      <p>After the Constitution was ratified, the United States had to prove that the new government could actually work. Washington's presidency set important precedents, while debates over Hamilton's financial plan and foreign policy created the first political parties.</p>
+ 
+      <h4>Washington's Presidency</h4>
+      <ul>
+        <li><strong>Cabinet:</strong> Washington created a group of advisers, including Hamilton as Secretary of the Treasury and Jefferson as Secretary of State.</li>
+        <li><strong>Two-term precedent:</strong> Washington stepped down after two terms, setting an important example.</li>
+        <li><strong>Neutrality Proclamation:</strong> Washington tried to keep the U.S. out of war between France and Britain.</li>
+        <li><strong>Whiskey Rebellion:</strong> Washington used federal power to enforce a tax, showing the new government was stronger than under the Articles.</li>
+      </ul>
+ 
+      <h4>Hamilton's Financial Plan</h4>
+      <ul>
+        <li><strong>Assumption of state debts:</strong> Federal government would take on state debts from the Revolution.</li>
+        <li><strong>National bank:</strong> Hamilton wanted a Bank of the United States to stabilize the economy.</li>
+        <li><strong>Protective tariffs:</strong> Hamilton wanted tariffs to support American manufacturing.</li>
+        <li><strong>Loose construction:</strong> Hamilton argued the Constitution allowed implied powers through the necessary and proper clause.</li>
+      </ul>
+ 
+      <h4>Rise of Political Parties</h4>
+      <ul>
+        <li><strong>Federalists:</strong> Led by Hamilton and Adams; supported strong federal government, national bank, manufacturing, and closer ties with Britain.</li>
+        <li><strong>Democratic-Republicans:</strong> Led by Jefferson and Madison; supported states' rights, agriculture, strict construction, and sympathy for France.</li>
+      </ul>
+ 
+      <h4>Adams Presidency</h4>
+      <ul>
+        <li><strong>XYZ Affair:</strong> French officials demanded bribes from American diplomats, increasing tensions with France.</li>
+        <li><strong>Alien and Sedition Acts:</strong> Federalist laws made it harder for immigrants to become citizens and punished criticism of the government.</li>
+        <li><strong>Virginia and Kentucky Resolutions:</strong> Jefferson and Madison argued that states could challenge unconstitutional federal laws.</li>
+        <li><strong>Election of 1800:</strong> Jefferson defeated Adams, marking the first peaceful transfer of power between political parties.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 3.10 -->
+    <h2>Topic 3.10 — Comparison in Period 3</h2>
+    <p>The CED asks you to compare political ideas, government systems, and groups during Period 3. Use this table as a starting point.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Comparison</th>
+            <th>Side 1</th>
+            <th>Side 2</th>
+            <th>Main Difference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Patriots vs. Loyalists</td><td>Patriots wanted independence from Britain</td><td>Loyalists wanted to remain part of the British Empire</td><td>Different views on liberty, stability, and loyalty</td></tr>
+          <tr><td>Articles vs. Constitution</td><td>Articles created a weak national government</td><td>Constitution created a stronger federal government</td><td>Different balance between state and national power</td></tr>
+          <tr><td>Federalists vs. Anti-Federalists</td><td>Federalists supported ratification</td><td>Anti-Federalists feared centralized power</td><td>Disagreement over national power and individual rights</td></tr>
+          <tr><td>Hamilton vs. Jefferson</td><td>Hamilton favored industry, national bank, and loose construction</td><td>Jefferson favored agriculture, states' rights, and strict construction</td><td>Different visions for America's economy and government</td></tr>
+          <tr><td>Federalists vs. Democratic-Republicans</td><td>Federalists supported strong federal power and Britain</td><td>Democratic-Republicans supported states' rights and France</td><td>First major political party divide</td></tr>
+        </tbody>
+      </table>
+    </div>
+ 
+    <h3>Cross-Regional Continuities &amp; Change</h3>
+    <ul>
+      <li><strong>Continuity:</strong> Americans continued debating liberty, representation, taxation, and the proper role of government.</li>
+      <li><strong>Change:</strong> The colonies became independent states, then joined under a stronger federal Constitution.</li>
+      <li><strong>Similarities:</strong> Patriots, Federalists, and Democratic-Republicans all claimed to defend liberty and republican government.</li>
+      <li><strong>Differences:</strong> Different groups disagreed over how much power the national government should have and who should benefit from the Revolution.</li>
+    </ul>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">French and Indian War</span>North American part of the Seven Years' War between Britain and France.</div>
+      <div class="vocab-item"><span class="vocab-term">Proclamation of 1763</span>British order limiting colonial settlement west of the Appalachian Mountains.</div>
+      <div class="vocab-item"><span class="vocab-term">Stamp Act</span>1765 tax on paper goods that sparked colonial protest.</div>
+      <div class="vocab-item"><span class="vocab-term">No Taxation Without Representation</span>Colonial argument that Parliament could not tax colonies without colonial representatives.</div>
+      <div class="vocab-item"><span class="vocab-term">Sons of Liberty</span>Patriot group that organized protests against British policies.</div>
+      <div class="vocab-item"><span class="vocab-term">Common Sense</span>Thomas Paine pamphlet that argued for American independence.</div>
+      <div class="vocab-item"><span class="vocab-term">Declaration of Independence</span>1776 document declaring independence and explaining natural rights.</div>
+      <div class="vocab-item"><span class="vocab-term">Saratoga</span>American victory that helped secure French alliance.</div>
+      <div class="vocab-item"><span class="vocab-term">Yorktown</span>Final major Revolutionary War battle where Britain surrendered.</div>
+      <div class="vocab-item"><span class="vocab-term">Republican Motherhood</span>Idea that women should raise educated, virtuous citizens for the republic.</div>
+      <div class="vocab-item"><span class="vocab-term">Articles of Confederation</span>First U.S. government; created a weak national government.</div>
+      <div class="vocab-item"><span class="vocab-term">Northwest Ordinance</span>1787 law creating a process for western territories to become states.</div>
+      <div class="vocab-item"><span class="vocab-term">Shays' Rebellion</span>Farmers' rebellion that exposed weaknesses of the Articles of Confederation.</div>
+      <div class="vocab-item"><span class="vocab-term">Federalism</span>Division of power between national and state governments.</div>
+      <div class="vocab-item"><span class="vocab-term">Great Compromise</span>Created a bicameral Congress with proportional representation in the House and equal representation in the Senate.</div>
+      <div class="vocab-item"><span class="vocab-term">Three-Fifths Compromise</span>Counted three-fifths of enslaved people for representation and taxation.</div>
+      <div class="vocab-item"><span class="vocab-term">Bill of Rights</span>First ten amendments protecting individual liberties.</div>
+      <div class="vocab-item"><span class="vocab-term">Alien and Sedition Acts</span>Federalist laws that targeted immigrants and criticism of the government.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+ 
+      <div class="quiz-question">
+        <p><strong>1. Which of the following was a major effect of the French and Indian War on the relationship between Britain and its colonies?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Britain ended all efforts to control colonial trade.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Britain tried to tax and regulate the colonies more strictly to pay war debts.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) The colonies immediately gained independence from Britain.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) France gained control of all British colonies.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> The war left Britain deeply in debt, so Parliament tried to raise revenue from the colonies through laws like the Sugar Act and Stamp Act, increasing colonial resistance.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. The phrase “no taxation without representation” was mainly a protest against which British policy?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) Allowing colonists to elect members of Parliament.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(B) Ending all taxes on imported goods.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(C) Taxing colonists without their direct representation in Parliament.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Giving Native Americans control over colonial assemblies.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: C.</strong> Colonists argued that Parliament could not tax them because they had no elected representatives in Parliament.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. Which Enlightenment idea most directly influenced the Declaration of Independence?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Absolute monarchy protects liberty best.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) People have natural rights and may alter a government that violates them.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Government power should come only from hereditary rulers.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Colonies should never trade with other nations.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: B.</strong> The Declaration used John Locke's ideas of natural rights, consent of the governed, and the right to revolution.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>4. Which of the following best explains why the Constitution replaced the Articles of Confederation?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) The Articles gave the national government too much power over the states.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) The Articles created a weak national government that could not tax, regulate trade, or respond effectively to crises.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) The Articles banned all western settlement.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) The Articles created a powerful executive branch.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> The Articles created a weak central government. Shays' Rebellion helped convince many leaders that a stronger federal government was needed.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. Which issue most clearly divided Hamilton's Federalists from Jefferson's Democratic-Republicans?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Whether the United States should return to British rule.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Whether the federal government should be strong and support a national bank.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) Whether the Declaration of Independence should be repealed.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Whether the Constitution should ban all political debate.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: B.</strong> Hamilton's Federalists supported a strong national government, national bank, and commercial economy, while Jefferson's Democratic-Republicans favored states' rights, strict construction, and agriculture.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+    <p>SAQs ask you to respond in complete sentences — no thesis needed, but be specific and use evidence. Aim for 2–4 sentences per part.</p>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — Causes of the Revolution (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE cause of colonial resistance to British rule after 1763.</li>
+        <li>Identify ONE way colonists resisted British policies before the Revolution.</li>
+        <li>Explain ONE way the French and Indian War contributed to the American Revolution.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> One cause of colonial resistance was British taxation after the French and Indian War, such as the Stamp Act, because colonists argued they were being taxed without representation.</p>
+        <p><strong>(b)</strong> Colonists resisted British policies through boycotts of British goods, protests organized by groups like the Sons of Liberty, and committees of correspondence.</p>
+        <p><strong>(c)</strong> The French and Indian War contributed to the Revolution because it left Britain in debt, leading Parliament to tax the colonies more directly and tighten imperial control.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+      <p style="background:#f8fbff; padding:0.8rem; border-radius:6px; border-left:4px solid #1f3a5f;">
+        "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights..."
+        <br>
+        <em>— Declaration of Independence, 1776</em>
+      </p>
+      <ol type="a">
+        <li>Identify ONE Enlightenment idea reflected in the excerpt.</li>
+        <li>Explain ONE way revolutionary ideals influenced women or African Americans during this period.</li>
+        <li>Explain ONE contradiction between revolutionary ideals and American society during this period.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The excerpt reflects the Enlightenment idea of natural rights, meaning people are born with rights that government should protect.</p>
+        <p><strong>(b)</strong> Revolutionary ideals influenced women through republican motherhood, which argued that women had an important role in raising educated citizens for the republic.</p>
+        <p><strong>(c)</strong> A major contradiction was that the United States claimed liberty and equality while slavery continued, especially in the South.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>The French and Indian War changed everything.</strong> Britain's victory created debt and led to stricter colonial policies, which increased resistance.</li>
+        <li><strong>Colonists protested taxation without representation.</strong> Resistance grew from petitions and boycotts to armed conflict and independence.</li>
+        <li><strong>Enlightenment ideas shaped the Revolution.</strong> Natural rights, consent of the governed, and republicanism influenced American political thought.</li>
+        <li><strong>The Revolution had limits.</strong> It expanded ideas of liberty but did not create equal rights for women, enslaved people, or Native Americans.</li>
+        <li><strong>The Articles were too weak for many leaders.</strong> Shays' Rebellion and financial problems pushed Americans toward the Constitution.</li>
+        <li><strong>The Constitution created a stronger federal government.</strong> Federalism, checks and balances, and the Bill of Rights became central features of the new system.</li>
+        <li><strong>Political parties emerged quickly.</strong> Federalists and Democratic-Republicans disagreed over federal power, the economy, foreign policy, and constitutional interpretation.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP United States History</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
+
