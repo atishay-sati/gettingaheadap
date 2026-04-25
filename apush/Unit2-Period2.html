@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP United States History Unit 2 — Period 2: 1607–1754. Timeline, comprehensive notes covering European colonization, Spanish, French, Dutch, and British colonies, colonial society, slavery, Native resistance, and comparison, plus MCQs and SAQs." />
+  <title>Unit 2: Period 2 (1607–1754)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f3a5f;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: #b22234;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #b22234;
+      padding-bottom: 0.3rem;
+    }
+    h3 { color: #2f5d8c; margin-top: 1.5rem; }
+    h4 { color: #1f3a5f; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box {
+      background: linear-gradient(135deg, #dbeafe, #eef4ff);
+      border-left: 6px solid #b22234;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+ 
+    .weighting-badge {
+      display: inline-block;
+      background: #1f3a5f;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+ 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #b22234;
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8fbff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f3a5f;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #b22234;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f3a5f;
+      margin-right: 0.5rem;
+    }
+ 
+    /* Region cards */
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region-context     { border-color: #8b1e3f; background: #fff1f4; }
+    .region-spanish     { border-color: #c45a1b; background: #eef4ff; }
+    .region-french      { border-color: #174ea6; background: #e8f1ff; }
+    .region-english     { border-color: #2f6f73; background: #eef9f9; }
+    .region-slavery     { border-color: #5b3f8c; background: #f3efff; }
+    .region-comparison  { border-color: #7b2d43; background: #fff0f3; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .vocab-item {
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+    .vocab-term {
+      font-weight: 700;
+      color: #1f3a5f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #b8c7dc;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .compare-table thead {
+      background: linear-gradient(to right, #1f3a5f, #b22234);
+      color: white;
+    }
+    .compare-table tbody tr:nth-child(even) { background: #f8fbff; }
+ 
+    /* Quiz */
+    .quiz-container {
+      background: linear-gradient(135deg, #dbeafe, #f8fbff);
+      border: 2px solid #1f3a5f;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-container h2 { margin-top: 0; border: none; color: #1f3a5f; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f3a5f;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #eef4ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f3a5f;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .explanation.show { display: block; }
+ 
+    /* SAQ */
+    .saq-box {
+      background: #fff;
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8fbff;
+      border: 1px dashed #1f3a5f;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f3a5f;
+    }
+ 
+    .key-takeaways {
+      background: linear-gradient(135deg, #eef4ff, #dbeafe);
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f3a5f;
+      background: #eef4ff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP United States History</a>
+    <h1>Unit 2: Period 2</h1>
+    <p class="subtitle">1607 – 1754 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 6–8%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🇺🇸 Unit Overview</h3>
+      <p>
+        APUSH Unit 2 covers the growth of European colonies in North America from the founding of Jamestown
+        to the beginning of the French and Indian War. During this period, Spanish, French, Dutch, and English
+        colonies developed different goals, economies, labor systems, and relationships with Native Americans.
+        The English colonies grew especially quickly and became divided into distinct regional societies in New England,
+        the Middle Colonies, the Chesapeake, and the Southern Colonies.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How did European colonies in North America develop differently, and how did those
+        differences shape labor systems, Native relations, religion, economics, and colonial society between 1607 and 1754?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/JamestownShips.jpg?width=1000" alt="Replica ships at Jamestown Settlement" class="unit-image">
+      <div class="image-caption">Jamestown Settlement replica ships — connects to early English colonization in Virginia.</div>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 2 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">1607:</span> Jamestown is founded in Virginia, becoming the first permanent English settlement in North America.</div>
+      <div class="timeline-event"><span class="timeline-date">1619:</span> Virginia creates the House of Burgesses; the first recorded Africans arrive in English North America.</div>
+      <div class="timeline-event"><span class="timeline-date">1620:</span> Pilgrims settle Plymouth and sign the Mayflower Compact.</div>
+      <div class="timeline-event"><span class="timeline-date">1630:</span> Puritans establish Massachusetts Bay Colony under John Winthrop.</div>
+      <div class="timeline-event"><span class="timeline-date">1636:</span> Roger Williams founds Rhode Island, supporting religious toleration and separation of church and state.</div>
+      <div class="timeline-event"><span class="timeline-date">1639:</span> Fundamental Orders of Connecticut create an early written colonial constitution.</div>
+      <div class="timeline-event"><span class="timeline-date">1649:</span> Maryland passes the Act of Toleration for Christians.</div>
+      <div class="timeline-event"><span class="timeline-date">1675–1676:</span> King Philip's War devastates New England Native communities and expands English control.</div>
+      <div class="timeline-event"><span class="timeline-date">1676:</span> Bacon's Rebellion exposes class tensions in Virginia and helps push elites toward African slavery.</div>
+      <div class="timeline-event"><span class="timeline-date">1680:</span> Pueblo Revolt drives Spanish colonists out of New Mexico for over a decade.</div>
+      <div class="timeline-event"><span class="timeline-date">1681:</span> William Penn founds Pennsylvania as a Quaker colony.</div>
+      <div class="timeline-event"><span class="timeline-date">1730s–1740s:</span> First Great Awakening spreads evangelical revivalism through the colonies.</div>
+      <div class="timeline-event"><span class="timeline-date">1739:</span> Stono Rebellion occurs in South Carolina, one of the largest slave uprisings in colonial America.</div>
+      <div class="timeline-event"><span class="timeline-date">1754:</span> French and Indian War begins; Albany Plan of Union proposes colonial cooperation.</div>
+    </div>
+ 
+    <!-- TOPIC 2.1 -->
+    <h2>Topic 2.1 — Contextualizing Period 2</h2>
+    <div class="region-card region-context">
+      <h3>🌎 Europe Competes for North America</h3>
+      <p>After 1607, European colonization in North America became more permanent and competitive. Different European powers used colonies to gain wealth, spread religion, increase trade, and expand imperial power.</p>
+ 
+      <h4>Big Trends</h4>
+      <ul>
+        <li><strong>European rivalry:</strong> Spain, France, the Netherlands, and England competed for land, trade, and influence.</li>
+        <li><strong>Mercantilism:</strong> European powers believed colonies existed to enrich the mother country through raw materials, trade, and markets.</li>
+        <li><strong>Native diplomacy and resistance:</strong> Native peoples traded with, allied with, and fought against Europeans to protect their interests.</li>
+        <li><strong>Labor systems:</strong> Colonies used different types of labor, including family labor, indentured servitude, Native labor, and enslaved African labor.</li>
+      </ul>
+ 
+      <h4>Why This Matters</h4>
+      <ul>
+        <li>Colonial regions developed differently because of climate, geography, religion, labor needs, and economic goals.</li>
+        <li>Differences between colonial regions later shaped politics, identity, and sectional conflict.</li>
+        <li>This period sets up major conflicts over empire, slavery, and self-government.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 2.2 -->
+    <h2>Topic 2.2 — European Colonization</h2>
+    <div class="region-card region-spanish">
+      <h3>👑 Spanish, French, Dutch, and English Colonies</h3>
+      <p>European colonies were not all the same. Each empire had different priorities, which shaped its economy, settlement patterns, and relationships with Native Americans.</p>
+ 
+      <h4>Spanish Colonies</h4>
+      <ul>
+        <li><strong>Main goals:</strong> Extract wealth, spread Catholicism, and maintain imperial control.</li>
+        <li><strong>Location:</strong> Florida, New Mexico, Texas, California, Mexico, the Caribbean, and South America.</li>
+        <li><strong>Mission system:</strong> Catholic missions were used to convert Native peoples and organize labor.</li>
+        <li><strong>Native resistance:</strong> The Pueblo Revolt of 1680 showed that Native peoples resisted Spanish religious and labor control.</li>
+      </ul>
+ 
+      <h4>French Colonies</h4>
+      <ul>
+        <li><strong>Main goals:</strong> Fur trade, Catholic missionary work, and alliances with Native peoples.</li>
+        <li><strong>Location:</strong> Canada, Great Lakes, Mississippi River Valley, and Louisiana.</li>
+        <li><strong>Settlement pattern:</strong> Smaller population than English colonies because France focused more on trade than mass settlement.</li>
+        <li><strong>Native relations:</strong> French traders often depended on Native alliances and intermarriage for the fur trade.</li>
+      </ul>
+ 
+      <h4>Dutch Colonies</h4>
+      <ul>
+        <li><strong>Main goals:</strong> Trade and profit.</li>
+        <li><strong>New Netherland:</strong> Centered on New Amsterdam, later renamed New York after English takeover in 1664.</li>
+        <li><strong>Diversity:</strong> Dutch colonies were religiously and ethnically diverse because of trade connections.</li>
+      </ul>
+ 
+      <h4>English Colonies</h4>
+      <ul>
+        <li><strong>Main goals:</strong> Settlement, agriculture, trade, religious communities, and economic opportunity.</li>
+        <li><strong>Population growth:</strong> English colonies attracted more settlers and grew faster than French and Spanish colonies in North America.</li>
+        <li><strong>Regional differences:</strong> New England, Middle, Chesapeake, and Southern colonies developed distinct economies and cultures.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Castelloplan.jpg?width=1000" alt="Castello Plan map of New Amsterdam in 1660" class="unit-image">
+      <div class="image-caption">New Amsterdam map — connects to Dutch trade, diversity, and the later English takeover of New York.</div>
+    </div>
+ 
+    <!-- TOPIC 2.3 -->
+    <h2>Topic 2.3 — The Regions of British Colonies</h2>
+    <div class="region-card region-english">
+      <h3>🏘️ Regional Development in English North America</h3>
+      <p>The English colonies developed into different regions because of climate, geography, religion, labor systems, and economic goals.</p>
+ 
+      <h4>New England Colonies</h4>
+      <ul>
+        <li><strong>Colonies:</strong> Massachusetts, Connecticut, Rhode Island, New Hampshire.</li>
+        <li><strong>Religion:</strong> Puritanism shaped government, education, and daily life in Massachusetts.</li>
+        <li><strong>Economy:</strong> Fishing, shipbuilding, small farms, lumber, and trade.</li>
+        <li><strong>Society:</strong> Towns, families, churches, schools, and relatively longer life expectancy.</li>
+        <li><strong>Dissenters:</strong> Roger Williams and Anne Hutchinson challenged Puritan authority and helped expand religious diversity.</li>
+      </ul>
+ 
+      <h4>Middle Colonies</h4>
+      <ul>
+        <li><strong>Colonies:</strong> New York, New Jersey, Pennsylvania, Delaware.</li>
+        <li><strong>Economy:</strong> Grain farming, trade, ports, and small manufacturing.</li>
+        <li><strong>Diversity:</strong> Many ethnic and religious groups, including Dutch, Germans, Quakers, Jews, and others.</li>
+        <li><strong>Pennsylvania:</strong> Founded by William Penn as a Quaker colony with religious tolerance and better relations with Native peoples at first.</li>
+      </ul>
+ 
+      <h4>Chesapeake Colonies</h4>
+      <ul>
+        <li><strong>Colonies:</strong> Virginia and Maryland.</li>
+        <li><strong>Economy:</strong> Tobacco plantations became the center of colonial life.</li>
+        <li><strong>Labor:</strong> First relied heavily on indentured servants, then shifted toward enslaved African labor.</li>
+        <li><strong>Society:</strong> More spread-out plantations, wealthy planters, fewer towns, and high death rates early on.</li>
+      </ul>
+ 
+      <h4>Southern Colonies</h4>
+      <ul>
+        <li><strong>Colonies:</strong> North Carolina, South Carolina, Georgia.</li>
+        <li><strong>Economy:</strong> Rice, indigo, and plantation agriculture.</li>
+        <li><strong>Labor:</strong> Enslaved African labor became central, especially in South Carolina.</li>
+        <li><strong>Caribbean influence:</strong> Plantation slavery in the South was influenced by Barbados and other Caribbean colonies.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mayflowercompact.jpg?width=1000" alt="Signing of the Mayflower Compact" class="unit-image">
+      <div class="image-caption">Signing of the Mayflower Compact — connects to early colonial self-government.</div>
+    </div>
+ 
+    <!-- TOPIC 2.4 -->
+    <h2>Topic 2.4 — Transatlantic Trade</h2>
+    <div class="region-card region-french">
+      <h3>🚢 The Atlantic Economy</h3>
+      <p>By the 1600s and 1700s, the Atlantic Ocean connected Europe, Africa, and the Americas through trade, migration, and forced labor. Colonies produced raw materials while European nations tried to control colonial commerce.</p>
+ 
+      <h4>Mercantilism</h4>
+      <ul>
+        <li><strong>Definition:</strong> Economic system where colonies exist to benefit the mother country.</li>
+        <li><strong>Goal:</strong> Export more than import, gain wealth, and control trade.</li>
+        <li><strong>Colonial role:</strong> Colonies provided raw materials and bought manufactured goods from the mother country.</li>
+      </ul>
+ 
+      <h4>Navigation Acts</h4>
+      <ul>
+        <li><strong>Purpose:</strong> England passed these laws to control colonial trade and make sure profits benefited England.</li>
+        <li><strong>Rules:</strong> Certain goods had to be shipped on English ships and sold through English ports.</li>
+        <li><strong>Effect:</strong> These acts increased English control but also encouraged smuggling and colonial resentment.</li>
+      </ul>
+ 
+      <h4>Triangular Trade</h4>
+      <ul>
+        <li><strong>Europe to Africa:</strong> Manufactured goods were traded for enslaved Africans.</li>
+        <li><strong>Africa to Americas:</strong> Enslaved Africans were forced across the Atlantic through the Middle Passage.</li>
+        <li><strong>Americas to Europe:</strong> Raw materials like sugar, tobacco, rice, indigo, and rum entered Atlantic markets.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 2.5 -->
+    <h2>Topic 2.5 — Interactions Between American Indians and Europeans</h2>
+    <div class="region-card region-context">
+      <h3>🪶 Cooperation, Conflict, and Resistance</h3>
+      <p>Native Americans were not passive during colonization. They made alliances, traded, negotiated, adapted, and resisted European expansion.</p>
+ 
+      <h4>Native-European Trade</h4>
+      <ul>
+        <li><strong>Fur trade:</strong> French and Dutch traders relied heavily on Native hunters and alliances.</li>
+        <li><strong>European goods:</strong> Native peoples gained access to guns, metal tools, textiles, and alcohol.</li>
+        <li><strong>Power shifts:</strong> Trade goods changed Native warfare, diplomacy, and relationships between tribes.</li>
+      </ul>
+ 
+      <h4>Conflict Over Land</h4>
+      <ul>
+        <li><strong>English settlement:</strong> English colonies usually brought more settlers, which created more direct land conflict with Native peoples.</li>
+        <li><strong>Pequot War:</strong> Conflict in New England that showed English willingness to use extreme violence to expand control.</li>
+        <li><strong>King Philip's War:</strong> A major Native resistance war led by Metacom that devastated Native power in southern New England.</li>
+      </ul>
+ 
+      <h4>Spanish-Native Conflict</h4>
+      <ul>
+        <li><strong>Pueblo Revolt:</strong> In 1680, Pueblo peoples rebelled against Spanish religious suppression and forced labor.</li>
+        <li><strong>Result:</strong> Spanish colonists were forced out of New Mexico temporarily.</li>
+        <li><strong>Significance:</strong> It was one of the most successful Native uprisings against European colonization.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 2.6 -->
+    <h2>Topic 2.6 — Slavery in the British Colonies</h2>
+    <div class="region-card region-slavery">
+      <h3>⛓️ Slavery and Colonial Labor</h3>
+      <p>During the 1600s, English colonies shifted from relying mainly on indentured servants to relying more heavily on enslaved African labor, especially in plantation colonies.</p>
+ 
+      <h4>Indentured Servitude</h4>
+      <ul>
+        <li><strong>Definition:</strong> Workers signed contracts to work for several years in exchange for passage to America.</li>
+        <li><strong>Used heavily in:</strong> Chesapeake tobacco colonies like Virginia and Maryland.</li>
+        <li><strong>Problems:</strong> Former servants often became poor landless men, creating social tension.</li>
+      </ul>
+ 
+      <h4>Bacon's Rebellion</h4>
+      <ul>
+        <li><strong>Cause:</strong> Frontier settlers were angry about Native policy, land access, taxes, and elite control.</li>
+        <li><strong>Leader:</strong> Nathaniel Bacon led poor farmers, former indentured servants, and some enslaved Africans against Virginia's government.</li>
+        <li><strong>Significance:</strong> Virginia elites became more fearful of poor white rebellion and increasingly turned to enslaved African labor.</li>
+      </ul>
+ 
+      <h4>Growth of Racial Slavery</h4>
+      <ul>
+        <li><strong>Slave codes:</strong> Colonies passed laws that made slavery permanent, hereditary, and race-based.</li>
+        <li><strong>Plantation colonies:</strong> Tobacco, rice, and indigo plantations depended heavily on enslaved labor.</li>
+        <li><strong>Resistance:</strong> Enslaved people resisted through work slowdowns, escape, cultural survival, and rebellion.</li>
+        <li><strong>Stono Rebellion:</strong> 1739 uprising in South Carolina that led to harsher slave laws.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 2.7 -->
+    <h2>Topic 2.7 — Colonial Society and Culture</h2>
+    <div class="region-card region-comparison">
+      <h3>📜 Religion, Self-Government, and Identity</h3>
+      <p>By the mid-1700s, British colonists were developing their own regional cultures, political traditions, religious ideas, and economic interests.</p>
+ 
+      <h4>Self-Government</h4>
+      <ul>
+        <li><strong>House of Burgesses:</strong> Created in Virginia in 1619; early example of representative government.</li>
+        <li><strong>Mayflower Compact:</strong> Agreement by Plymouth settlers to create a government based on consent.</li>
+        <li><strong>Town meetings:</strong> New England communities practiced local self-government.</li>
+        <li><strong>Salutary neglect:</strong> England often loosely enforced trade laws, allowing colonies to develop more independence.</li>
+      </ul>
+ 
+      <h4>Religion</h4>
+      <ul>
+        <li><strong>Puritans:</strong> Wanted to create a godly society in New England.</li>
+        <li><strong>Religious toleration:</strong> Rhode Island and Pennsylvania became known for greater religious freedom.</li>
+        <li><strong>First Great Awakening:</strong> Religious revival movement that emphasized emotional preaching, personal conversion, and challenged traditional church authority.</li>
+      </ul>
+ 
+      <h4>Enlightenment Ideas</h4>
+      <ul>
+        <li><strong>Reason and science:</strong> Enlightenment thinkers emphasized logic, natural laws, and human progress.</li>
+        <li><strong>John Locke:</strong> Ideas about natural rights and government by consent influenced later American political thought.</li>
+        <li><strong>Benjamin Franklin:</strong> Represented Enlightenment values through science, invention, writing, and civic improvement.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/George_Whitefield_preaching.jpg?width=1000" alt="George Whitefield preaching during the First Great Awakening" class="unit-image">
+      <div class="image-caption">George Whitefield preaching — connects to the First Great Awakening and colonial religious revival.</div>
+    </div>
+ 
+    <!-- TOPIC 2.8 -->
+    <h2>Topic 2.8 — Comparison in Period 2</h2>
+    <p>The CED asks you to compare colonial regions and European empires. Use this table as a starting point.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Region / Empire</th>
+            <th>Main Goal</th>
+            <th>Economy</th>
+            <th>Native Relations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Spanish Colonies</td><td>Wealth, Catholic conversion, imperial control</td><td>Mining, ranching, missions, forced labor</td><td>Often coercive; Native resistance like Pueblo Revolt</td></tr>
+          <tr><td>French Colonies</td><td>Fur trade and Catholic missions</td><td>Fur trade, river trade, small settlements</td><td>More alliance-based because French needed Native trade partners</td></tr>
+          <tr><td>Dutch Colonies</td><td>Trade and profit</td><td>Commerce through New Amsterdam</td><td>Trade-focused but still involved land conflict</td></tr>
+          <tr><td>New England</td><td>Religious community and towns</td><td>Fishing, shipbuilding, trade, small farms</td><td>Major land conflict, including King Philip's War</td></tr>
+          <tr><td>Middle Colonies</td><td>Trade, farming, religious diversity</td><td>Grain, ports, commerce</td><td>More diverse relations; Pennsylvania initially had better relations</td></tr>
+          <tr><td>Chesapeake / South</td><td>Agriculture and profit</td><td>Tobacco, rice, indigo plantations</td><td>Land conflict and expansion; growing dependence on slavery</td></tr>
+        </tbody>
+      </table>
+    </div>
+ 
+    <h3>Cross-Regional Continuities &amp; Change</h3>
+    <ul>
+      <li><strong>Continuity:</strong> European colonies continued to seek wealth, land, trade, and religious influence.</li>
+      <li><strong>Change:</strong> English colonies became more permanent, more populated, and more regionally distinct.</li>
+      <li><strong>Similarities:</strong> All European powers depended on Native interactions, Atlantic trade, and imperial competition.</li>
+      <li><strong>Differences:</strong> French colonies focused more on trade and alliances, while English colonies focused more on settlement and agriculture.</li>
+    </ul>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Jamestown</span>First permanent English settlement in North America, founded in Virginia in 1607.</div>
+      <div class="vocab-item"><span class="vocab-term">House of Burgesses</span>Virginia representative assembly created in 1619.</div>
+      <div class="vocab-item"><span class="vocab-term">Mayflower Compact</span>1620 agreement by Plymouth settlers to form a government based on consent.</div>
+      <div class="vocab-item"><span class="vocab-term">Puritans</span>English Protestants who wanted to purify the Church of England and built Massachusetts Bay.</div>
+      <div class="vocab-item"><span class="vocab-term">John Winthrop</span>Puritan leader who described Massachusetts as a “city upon a hill.”</div>
+      <div class="vocab-item"><span class="vocab-term">Roger Williams</span>Founder of Rhode Island; supported religious freedom and separation of church and state.</div>
+      <div class="vocab-item"><span class="vocab-term">Anne Hutchinson</span>Religious dissenter banished from Massachusetts for challenging Puritan leaders.</div>
+      <div class="vocab-item"><span class="vocab-term">Mercantilism</span>Economic idea that colonies should enrich the mother country.</div>
+      <div class="vocab-item"><span class="vocab-term">Navigation Acts</span>English laws controlling colonial trade for England's benefit.</div>
+      <div class="vocab-item"><span class="vocab-term">Salutary Neglect</span>Loose enforcement of British trade laws, allowing colonial self-government to grow.</div>
+      <div class="vocab-item"><span class="vocab-term">Indentured Servitude</span>Labor system where people worked for several years in exchange for passage to America.</div>
+      <div class="vocab-item"><span class="vocab-term">Bacon's Rebellion</span>1676 Virginia rebellion that exposed class tensions and helped increase reliance on slavery.</div>
+      <div class="vocab-item"><span class="vocab-term">Middle Passage</span>Forced voyage of enslaved Africans across the Atlantic.</div>
+      <div class="vocab-item"><span class="vocab-term">Slave Codes</span>Laws that defined slavery as permanent, hereditary, and race-based.</div>
+      <div class="vocab-item"><span class="vocab-term">Stono Rebellion</span>1739 slave uprising in South Carolina.</div>
+      <div class="vocab-item"><span class="vocab-term">Pueblo Revolt</span>1680 Native uprising against Spanish rule in New Mexico.</div>
+      <div class="vocab-item"><span class="vocab-term">King Philip's War</span>1675–1676 war between New England colonists and Native peoples led by Metacom.</div>
+      <div class="vocab-item"><span class="vocab-term">First Great Awakening</span>Religious revival movement of the 1730s–1740s emphasizing emotional preaching and personal faith.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+ 
+      <div class="quiz-question">
+        <p><strong>1. Which of the following best explains why the French generally had better relations with many Native groups than the English did?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) The French brought more settlers and took more Native land than the English.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) The French depended more on fur trade alliances and had fewer permanent settlers.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) The French refused to trade with Native peoples.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) The French colonies were located only in the Caribbean.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> French colonies had smaller populations and relied heavily on Native trade partners for the fur trade, so alliances were more important to them than mass settlement.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. Which colonial region was most closely associated with Puritan religious communities, town meetings, fishing, and shipbuilding?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(A) New England.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(B) Chesapeake.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) Spanish Florida.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) French Louisiana.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: A.</strong> New England colonies like Massachusetts were shaped by Puritanism, town-based settlement, fishing, shipbuilding, trade, and small farms.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. Bacon's Rebellion most directly contributed to which of the following developments?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) The end of tobacco farming in Virginia.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(B) The permanent alliance between English settlers and Native peoples.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(C) Greater reliance on enslaved African labor instead of indentured servitude.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) The creation of the First Great Awakening.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: C.</strong> After Bacon's Rebellion, Virginia elites worried about poor white indentured servants and former servants rebelling, so they increasingly relied on enslaved African labor.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>4. Which statement best describes mercantilism?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) Colonies should be politically independent from the mother country.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) Colonies exist to provide raw materials and wealth for the mother country.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) Native peoples should control all colonial trade.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) Governments should ban all overseas trade.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> Mercantilism was an economic system where European nations used colonies to gain raw materials, markets, and wealth.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. Which event was a successful Native uprising against Spanish rule in New Mexico?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Bacon's Rebellion.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Stono Rebellion.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(C) Pueblo Revolt.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Glorious Revolution.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: C.</strong> The Pueblo Revolt of 1680 forced Spanish colonists out of New Mexico temporarily and was one of the most successful Native revolts against European colonization.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+    <p>SAQs ask you to respond in complete sentences — no thesis needed, but be specific and use evidence. Aim for 2–4 sentences per part.</p>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — Colonial Regions (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE difference between the economy of New England and the economy of the Chesapeake colonies.</li>
+        <li>Identify ONE reason the Middle Colonies were more diverse than some other English colonial regions.</li>
+        <li>Explain ONE way geography shaped the development of one English colonial region.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> New England's economy relied more on fishing, shipbuilding, trade, and small farms, while the Chesapeake relied heavily on tobacco plantations.</p>
+        <p><strong>(b)</strong> The Middle Colonies were more diverse because they attracted many ethnic and religious groups, including Dutch, Germans, Quakers, and Jews, especially through trade and religious tolerance.</p>
+        <p><strong>(c)</strong> The Chesapeake's warm climate and fertile soil made tobacco farming profitable, which encouraged plantation agriculture and a growing need for labor.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+      <p style="background:#f8fbff; padding:0.8rem; border-radius:6px; border-left:4px solid #1f3a5f;">
+        "God Almighty in his most holy and wise providence hath so disposed of the condition of mankind, as in all times some must be rich, some poor, some high and eminent in power and dignity, others mean and in subjection."
+        <br>
+        <em>— John Winthrop, “A Model of Christian Charity,” 1630</em>
+      </p>
+      <ol type="a">
+        <li>Identify ONE religious goal of Puritan settlers in New England.</li>
+        <li>Explain ONE way Puritan beliefs shaped New England society.</li>
+        <li>Explain ONE way a dissenter challenged Puritan authority in New England.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Puritan settlers wanted to create a godly community that would serve as an example, or “city upon a hill,” for other Christians.</p>
+        <p><strong>(b)</strong> Puritan beliefs shaped New England by making the church central to town life, education, laws, and community expectations.</p>
+        <p><strong>(c)</strong> Roger Williams challenged Puritan authority by arguing for religious freedom and separation of church and state, which led to his banishment and the founding of Rhode Island.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>European empires colonized differently.</strong> Spain emphasized conquest and missions, France emphasized fur trade, the Dutch emphasized commerce, and England emphasized settlement and agriculture.</li>
+        <li><strong>English colonies developed regional differences.</strong> New England, Middle, Chesapeake, and Southern colonies had different economies, religions, labor systems, and settlement patterns.</li>
+        <li><strong>Native peoples resisted and adapted.</strong> Native Americans traded, allied, negotiated, and fought to protect their land and power.</li>
+        <li><strong>Slavery expanded.</strong> Labor systems shifted from indentured servitude toward race-based African slavery, especially in plantation colonies.</li>
+        <li><strong>Colonial self-government grew.</strong> Assemblies, town meetings, and salutary neglect helped colonists develop political habits that later mattered in the American Revolution.</li>
+        <li><strong>Religion shaped colonial identity.</strong> Puritanism, religious toleration, and the First Great Awakening influenced colonial society and culture.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP United States History</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
+
