@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP World History: Modern Unit 9 — Globalization (c. 1900–present). In-depth notes on technology, disease, environment, economics, reform, culture, resistance, and institutions — with photos, MCQs, and SAQs." />
+  <title>Unit 9: Globalization (c. 1900–present)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #faf6f1; color: #333; line-height: 1.6; }
+    .container { max-width: 980px; margin: 2rem auto; padding: 2rem 1.5rem; background: white; border-radius: 10px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: #8b4513; }
+    h1 { font-size: 2.4rem; text-align: center; margin-bottom: 0.4rem; }
+    .subtitle { text-align: center; color: #d2691e; font-weight: 600; margin-bottom: 2rem; }
+    h2 { margin-top: 2.5rem; border-bottom: 3px solid #d2691e; padding-bottom: 0.3rem; }
+    h3 { color: #a0522d; margin-top: 1.5rem; }
+    h4 { color: #8b4513; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b4513; text-decoration: none; font-weight: bold; font-size: 1.5rem; }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box { background: linear-gradient(135deg, #fde7c9, #fff3e0); border-left: 6px solid #d2691e; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+ 
+    .weighting-badge { display: inline-block; background: #8b4513; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem; }
+ 
+    figure.photo { margin: 1.2rem 0; text-align: center; }
+    figure.photo img { width: 100%; max-width: 640px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+    figure.photo figcaption { font-size: 0.92rem; color: #666; margin-top: 0.4rem; font-style: italic; }
+ 
+    .timeline { position: relative; margin: 2rem 0; padding-left: 2rem; border-left: 4px solid #d2691e; }
+    .timeline-event { position: relative; margin-bottom: 1.4rem; padding: 0.8rem 1rem; background: #fff8ef; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .timeline-event::before { content: ""; position: absolute; left: -2.55rem; top: 1.1rem; width: 14px; height: 14px; background: #8b4513; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px #d2691e; }
+    .timeline-date { display: inline-block; font-weight: 700; color: #8b4513; margin-right: 0.5rem; }
+ 
+    .region-card { border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-left: 6px solid; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .region-tech      { border-color: #1565c0; background: #e3f2fd; }
+    .region-disease   { border-color: #b71c1c; background: #ffebee; }
+    .region-environ   { border-color: #2e7d32; background: #e8f5e9; }
+    .region-econ      { border-color: #ef6c00; background: #fff3e0; }
+    .region-reform    { border-color: #ad1457; background: #fce4ec; }
+    .region-culture   { border-color: #6a1b9a; background: #f3e5f5; }
+    .region-resist    { border-color: #c62828; background: #ffebee; }
+    .region-inst      { border-color: #37474f; background: #eceff1; }
+    .region-causation { border-color: #455a64; background: #eceff1; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+    .vocab-item { background: #fff8ef; border: 1px solid #e0c9a6; border-radius: 8px; padding: 0.8rem 1rem; }
+    .vocab-term { font-weight: 700; color: #8b4513; display: block; margin-bottom: 0.2rem; }
+ 
+    .compare-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    .compare-table th, .compare-table td { border: 1px solid #e0c9a6; padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+    .compare-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: white; }
+    .compare-table tbody tr:nth-child(even) { background: #fff8ef; }
+ 
+    .quiz-container { background: linear-gradient(135deg, #fde7c9, #fff8ef); border: 2px solid #8b4513; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+    .quiz-container h2 { margin-top: 0; border: none; color: #8b4513; }
+    .quiz-subheading { font-family: 'Montserrat', sans-serif; color: #a0522d; font-weight: 700; margin-top: 1.5rem; border-bottom: 1px dashed #a0522d; padding-bottom: 0.2rem; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option { padding: 0.6rem 0.8rem; border: 1px solid #8b4513; border-radius: 6px; cursor: pointer; background: white; transition: background-color 0.2s; }
+    .quiz-option:hover { background-color: #fff3e0; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation { display: none; margin-top: 0.6rem; padding: 0.8rem; background: #fff; border-left: 4px solid #8b4513; border-radius: 6px; font-size: 0.95rem; }
+    .explanation.show { display: block; }
+ 
+    .saq-box { background: #fff; border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample { margin-top: 0.8rem; background: #fff8ef; border: 1px dashed #8b4513; border-radius: 6px; padding: 0.6rem 0.9rem; }
+    details.saq-sample summary { cursor: pointer; font-weight: 600; color: #8b4513; }
+ 
+    .key-takeaways { background: linear-gradient(135deg, #fff3e0, #fde7c9); border: 2px solid #d2691e; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP World History: Modern</a>
+    <h1>Unit 9: Globalization</h1>
+    <p class="subtitle">c. 1900 – present &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 8–10%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🌐 Unit Overview</h3>
+      <p>
+        Since 1900 — and especially since 1991 — the world has been more deeply interconnected than ever
+        before. New technologies (computers, the internet, mobile phones, airliners, containerized
+        shipping) have collapsed distances. International institutions (UN, WHO, WTO, IMF, EU) have tried
+        to govern shared problems. Global popular culture, from Hollywood to K-pop, crosses borders with
+        unprecedented speed. But globalization has also produced <strong>backlash</strong>:
+        environmental crises, pandemics, inequality, religious and nationalist movements, migration
+        conflicts, and resistance to Western cultural dominance.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How have technological, economic, cultural, and environmental
+        globalization since 1900 reshaped human life — and what resistance has that change provoked?
+      </p>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 9 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">1903:</span> Wright brothers' <strong>first powered flight</strong>.</div>
+      <div class="timeline-event"><span class="timeline-date">1918–19:</span> <strong>Global influenza pandemic</strong> kills 50–100 million.</div>
+      <div class="timeline-event"><span class="timeline-date">1928:</span> <strong>Penicillin</strong> discovered (Fleming); widely used by the 1940s.</div>
+      <div class="timeline-event"><span class="timeline-date">1940s–60s:</span> <strong>Green Revolution</strong> sharply raises crop yields (Borlaug).</div>
+      <div class="timeline-event"><span class="timeline-date">1945:</span> Atomic bombs; <strong>UN</strong> and <strong>Bretton Woods</strong> institutions founded.</div>
+      <div class="timeline-event"><span class="timeline-date">1948:</span> <strong>WHO</strong> and <strong>Universal Declaration of Human Rights</strong>.</div>
+      <div class="timeline-event"><span class="timeline-date">1957:</span> Sputnik; space age begins.</div>
+      <div class="timeline-event"><span class="timeline-date">1962:</span> Rachel Carson's <strong>Silent Spring</strong>.</div>
+      <div class="timeline-event"><span class="timeline-date">1969:</span> Apollo 11 lands on the moon; ARPANET prototype.</div>
+      <div class="timeline-event"><span class="timeline-date">1973 &amp; 1979:</span> <strong>OPEC oil shocks</strong> reshape global economy.</div>
+      <div class="timeline-event"><span class="timeline-date">1980:</span> WHO declares <strong>smallpox eradicated</strong>.</div>
+      <div class="timeline-event"><span class="timeline-date">1981:</span> AIDS first clinically identified; global epidemic follows.</div>
+      <div class="timeline-event"><span class="timeline-date">1989–91:</span> Fall of Soviet bloc; <strong>World Wide Web</strong> proposed (Berners-Lee, 1989).</div>
+      <div class="timeline-event"><span class="timeline-date">1992:</span> <strong>Rio Earth Summit</strong>; Maastricht Treaty creates the European Union.</div>
+      <div class="timeline-event"><span class="timeline-date">1994:</span> NAFTA takes effect; Rwanda genocide; Mandela elected in South Africa.</div>
+      <div class="timeline-event"><span class="timeline-date">1995:</span> <strong>WTO</strong> replaces GATT.</div>
+      <div class="timeline-event"><span class="timeline-date">2001:</span> <strong>9/11 attacks</strong>; U.S. "War on Terror" begins.</div>
+      <div class="timeline-event"><span class="timeline-date">2008:</span> <strong>Global financial crisis</strong>.</div>
+      <div class="timeline-event"><span class="timeline-date">2011:</span> <strong>Arab Spring</strong> uprisings.</div>
+      <div class="timeline-event"><span class="timeline-date">2020:</span> <strong>COVID-19 pandemic</strong> reshapes work, travel, and politics worldwide.</div>
+    </div>
+ 
+    <!-- TOPIC 9.1 -->
+    <h2>Topic 9.1 — Advances in Technology and Exchange after 1900</h2>
+    <div class="region-card region-tech">
+      <h3>💻 Shrinking the Globe</h3>
+ 
+      <figure class="photo">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Container_ship_MSC_FABIENNE.jpg?width=700" alt="Container ship MSC Fabienne" />
+        <figcaption>A modern <strong>container ship</strong>. Standardized shipping containers (from the 1950s) dramatically reduced the cost and time of global trade, a defining driver of late-20th-century globalization.</figcaption>
+      </figure>
+ 
+      <h4>Transportation Revolutions</h4>
+      <ul>
+        <li><strong>Aviation</strong>: Wright brothers (1903) → commercial jetliners (from the 1950s) → mass international tourism and business travel.</li>
+        <li><strong>Containerization</strong>: standardized steel containers (1956 onward) cut shipping costs by roughly 90%.</li>
+        <li><strong>Highway and rail</strong>: U.S. Interstate system (1956), Japanese Shinkansen (1964), European high-speed rail.</li>
+        <li><strong>Pipelines</strong>: transport of oil and gas across continents.</li>
+      </ul>
+ 
+      <h4>Energy and Materials</h4>
+      <ul>
+        <li><strong>Petroleum</strong> became the world's dominant energy source in the 20th century.</li>
+        <li><strong>Nuclear energy</strong> (from the 1950s) — civilian reactors and weapons.</li>
+        <li>New materials: plastics, synthetic fibers, semiconductors.</li>
+      </ul>
+ 
+      <h4>Communications Revolution</h4>
+      <ul>
+        <li><strong>Radio and television</strong> created mass audiences.</li>
+        <li><strong>Satellites</strong> (from 1957) enabled global TV and phone links.</li>
+        <li><strong>Personal computers</strong> (1970s), the <strong>World Wide Web</strong> (1989), and <strong>mobile phones</strong> (especially smartphones, after 2007) drove a new communications revolution.</li>
+        <li>By 2020s, more than half the world's population was online; real-time communication across continents became commonplace.</li>
+      </ul>
+ 
+      <h4>Agriculture and Biotechnology</h4>
+      <ul>
+        <li><strong>Green Revolution</strong> (1940s–60s): Norman Borlaug's high-yield wheat and rice, synthetic fertilizers, pesticides, and irrigation transformed world food production — especially in Mexico, India, and the Philippines.</li>
+        <li><strong>Genetic engineering</strong> (from the 1970s); <strong>CRISPR</strong> gene editing (after 2012).</li>
+        <li>Human Genome Project completed (2003).</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.2 -->
+    <h2>Topic 9.2 — Technological Advances and Limitations: Disease</h2>
+    <div class="region-card region-disease">
+      <h3>🦠 Triumphs and New Threats</h3>
+ 
+      <h4>Medical Triumphs</h4>
+      <ul>
+        <li><strong>Vaccines</strong>: mass vaccination campaigns against polio (from 1955), measles, hepatitis, smallpox.</li>
+        <li><strong>Antibiotics</strong>: penicillin (1928; mass-produced 1940s) transformed treatment of bacterial disease.</li>
+        <li><strong>Smallpox eradicated</strong> (WHO declaration, 1980) — the only infectious human disease fully eradicated to date.</li>
+        <li>Rising <strong>life expectancy</strong>: global average from ~30 years in 1900 to ~72 by the 2020s.</li>
+      </ul>
+ 
+      <h4>Pandemics and Epidemics</h4>
+      <ul>
+        <li><strong>1918 influenza pandemic</strong>: killed 50–100 million worldwide (spread partly by WWI troop movements).</li>
+        <li><strong>HIV/AIDS</strong>: identified 1981; devastating impact on sub-Saharan Africa; ~40 million deaths by the 2020s; antiretroviral therapy has made it a manageable chronic disease in many places.</li>
+        <li><strong>Malaria and tuberculosis</strong> remained major killers, disproportionately affecting the Global South.</li>
+        <li><strong>Ebola</strong>: outbreaks in West Africa (2014–16) and Congo.</li>
+        <li><strong>COVID-19</strong> (from 2019): first global pandemic of the social-media age; ~7 million recorded deaths; massive economic and social disruption; rapid mRNA vaccine development.</li>
+      </ul>
+ 
+      <h4>Diseases of Affluence</h4>
+      <ul>
+        <li>Rise of non-infectious diseases: <strong>heart disease</strong>, <strong>diabetes</strong>, and <strong>cancers</strong> linked to smoking, diet, pollution, and longer lifespans.</li>
+        <li>Obesity rates rose sharply in high-income and many middle-income countries after 1980.</li>
+      </ul>
+ 
+      <h4>Limits of Technology</h4>
+      <ul>
+        <li>Unequal access: poorer countries suffer more from preventable diseases.</li>
+        <li>Rise of <strong>antibiotic resistance</strong>.</li>
+        <li>Ethical debates over vaccination, genetic engineering, and end-of-life care.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.3 -->
+    <h2>Topic 9.3 — Debates about the Environment after 1900</h2>
+    <div class="region-card region-environ">
+      <h3>🌍 The Planet Under Strain</h3>
+ 
+      <figure class="photo">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earthrise.jpg?width=600" alt="Earthrise, Apollo 8, 1968" />
+        <figcaption><strong>Earthrise</strong> by Apollo 8 astronaut William Anders (24 December 1968). The image became iconic for the modern environmental movement, visualizing Earth as a fragile, interconnected whole.</figcaption>
+      </figure>
+ 
+      <h4>Environmental Pressures</h4>
+      <ul>
+        <li><strong>Population growth</strong>: from ~1.6 billion (1900) to ~8 billion (2022).</li>
+        <li><strong>Urbanization</strong>: over half the world lived in cities by ~2008.</li>
+        <li><strong>Deforestation</strong>: Amazon, Southeast Asia, Central Africa.</li>
+        <li><strong>Pollution</strong>: air (smog, acid rain), water, ocean plastic.</li>
+        <li><strong>Overfishing</strong>, soil depletion, biodiversity loss ("sixth extinction" debate).</li>
+      </ul>
+ 
+      <h4>Climate Change</h4>
+      <ul>
+        <li><strong>Greenhouse gas emissions</strong> from fossil fuels have caused measurable global warming since the mid-20th century.</li>
+        <li>Effects: rising sea levels, shrinking ice caps and glaciers, more intense storms and wildfires, shifting agricultural zones.</li>
+        <li>Disproportionate impact on poorer, low-lying, or drought-prone regions (Bangladesh, Pacific islands, the Sahel).</li>
+      </ul>
+ 
+      <h4>Environmental Movement</h4>
+      <ul>
+        <li>Rachel Carson's <em>Silent Spring</em> (1962) — catalyst for modern environmentalism.</li>
+        <li><strong>Earth Day</strong> (from 1970); <strong>Greenpeace</strong> (1971).</li>
+        <li>Rise of NGOs: WWF, Sierra Club, 350.org.</li>
+        <li>Youth movements in the 21st century (e.g., Greta Thunberg and Fridays for Future).</li>
+      </ul>
+ 
+      <h4>International Agreements</h4>
+      <ul>
+        <li><strong>Stockholm Conference</strong> (1972) — first major UN environment conference.</li>
+        <li><strong>Montreal Protocol</strong> (1987) — successfully phased down ozone-depleting chemicals.</li>
+        <li><strong>Rio Earth Summit</strong> (1992).</li>
+        <li><strong>Kyoto Protocol</strong> (1997) and <strong>Paris Agreement</strong> (2015) — emissions reductions commitments.</li>
+        <li>Debates: "common but differentiated responsibilities" — should wealthy industrial emitters pay more?</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.4 -->
+    <h2>Topic 9.4 — Economics in the Global Age</h2>
+    <div class="region-card region-econ">
+      <h3>💰 Markets Without Borders</h3>
+ 
+      <h4>Rise of Neoliberal Globalization</h4>
+      <ul>
+        <li>From the 1970s–80s, major powers shifted toward <strong>neoliberalism</strong>: free trade, privatization, deregulation, reduced social spending (Thatcher in the UK, Reagan in the U.S., Pinochet in Chile).</li>
+        <li><strong>WTO</strong> (1995, succeeding GATT) lowered tariffs and pushed open markets.</li>
+        <li>Regional blocs: <strong>European Union</strong> (1993; euro 1999), <strong>NAFTA</strong> (1994; replaced by USMCA 2020), <strong>ASEAN</strong>, Mercosur, African Union.</li>
+      </ul>
+ 
+      <h4>Global Financial Markets</h4>
+      <ul>
+        <li><strong>Multinational corporations (MNCs)</strong>: Royal Dutch Shell, Walmart, Toyota, Apple, Samsung.</li>
+        <li>Massive <strong>foreign direct investment</strong>, capital flows, and 24-hour financial markets.</li>
+        <li><strong>Offshoring</strong> of manufacturing from high-wage to lower-wage economies (U.S./Japan → China, Mexico, Vietnam).</li>
+        <li>Rise of <strong>supply chains</strong> like Apple's (U.S. design, Taiwanese chips, Chinese assembly).</li>
+      </ul>
+ 
+      <h4>Rise of New Economic Powers</h4>
+      <ul>
+        <li><strong>China</strong>'s post-1978 reforms produced the largest sustained economic boom in history; by the 2010s, the world's second-largest economy.</li>
+        <li><strong>India</strong>'s 1991 liberalization; tech services boom (Bengaluru/Bangalore).</li>
+        <li><strong>BRICS</strong> (Brazil, Russia, India, China, South Africa, later expanded) reshaped global economic geography.</li>
+      </ul>
+ 
+      <h4>Crises and Inequality</h4>
+      <ul>
+        <li><strong>1973 and 1979 oil shocks</strong> — OPEC leverage reshaped energy politics.</li>
+        <li><strong>1980s debt crisis</strong> in Latin America and Africa led to IMF/World Bank <strong>structural adjustment</strong>.</li>
+        <li><strong>1997 Asian financial crisis</strong>.</li>
+        <li><strong>2008 global financial crisis</strong>: U.S. housing and banking collapse triggered a global recession and new regulations.</li>
+        <li>Rising <strong>inequality within countries</strong>, even as inequality between some countries narrowed.</li>
+        <li><strong>Precarious labor</strong>: gig economy, contract work, informal sector.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.5 -->
+    <h2>Topic 9.5 — Calls for Reform and Responses after 1900</h2>
+    <div class="region-card region-reform">
+      <h3>📣 Expanding Rights and Dignity</h3>
+ 
+      <h4>Human Rights Movements</h4>
+      <ul>
+        <li><strong>Universal Declaration of Human Rights</strong> (1948) set a new vocabulary of universal rights.</li>
+        <li><strong>NGOs</strong>: Amnesty International (1961), Human Rights Watch (1978), Médecins Sans Frontières (1971).</li>
+        <li>Expansion of rights discourse to gender, race, sexuality, disability, children.</li>
+      </ul>
+ 
+      <h4>Women's Rights</h4>
+      <ul>
+        <li>Women's suffrage spread across the 20th century — from New Zealand (1893) and the U.S. (1920) to Saudi municipal elections (2015).</li>
+        <li><strong>UN women's conferences</strong> (Mexico City 1975, Beijing 1995).</li>
+        <li>Ongoing struggles: reproductive rights, violence against women, wage gaps, educational access, female political leadership.</li>
+      </ul>
+ 
+      <h4>Racial Equality and Decolonization of Knowledge</h4>
+      <ul>
+        <li>U.S. Civil Rights Movement; South African anti-apartheid; indigenous land rights.</li>
+        <li><strong>Black Lives Matter</strong> (from 2013): global movement against police violence and structural racism.</li>
+        <li>Calls to "decolonize" universities, museums, and cultural institutions.</li>
+      </ul>
+ 
+      <h4>LGBTQ+ Rights</h4>
+      <ul>
+        <li><strong>Stonewall riots</strong> (1969) launched the modern gay-rights movement.</li>
+        <li>Decriminalization and recognition of same-sex marriage in many countries (Netherlands 2001; Argentina 2010; U.S. 2015; Taiwan 2019).</li>
+        <li>Backlash and continued criminalization in other states.</li>
+      </ul>
+ 
+      <h4>Labor Movements</h4>
+      <ul>
+        <li>Industrial unions became a major force in the early-to-mid 20th century (AFL-CIO, Cosatu, Solidarity).</li>
+        <li>Declining union density in many high-income countries after 1980.</li>
+        <li>New struggles: "Fight for $15," gig-worker organizing, farmworker movements (César Chávez and UFW).</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.6 -->
+    <h2>Topic 9.6 — Globalized Culture after 1900</h2>
+    <div class="region-card region-culture">
+      <h3>🎬 A Shared Cultural Marketplace</h3>
+ 
+      <h4>Mass Culture Goes Global</h4>
+      <ul>
+        <li><strong>Hollywood</strong> became the world's most influential film industry from the 1920s.</li>
+        <li><strong>Television</strong> and then <strong>streaming platforms</strong> (Netflix, Disney+) homogenized and diversified global viewing.</li>
+        <li><strong>Music</strong>: jazz, blues, rock (Elvis, Beatles), hip-hop, Latin pop, Afrobeats, K-pop (BTS, BLACKPINK).</li>
+        <li><strong>Sports</strong>: FIFA World Cup and the Olympics as massive global spectacles.</li>
+      </ul>
+ 
+      <h4>Consumer Culture</h4>
+      <ul>
+        <li>Global brands: Coca-Cola, Nike, McDonald's, Apple, Samsung, Toyota.</li>
+        <li>Fashion and food globalized (sushi in Kansas; pizza in Shanghai; Starbucks in 80+ countries).</li>
+        <li>Concept of "<strong>McDonaldization</strong>" (George Ritzer) — standardization, efficiency, predictability.</li>
+      </ul>
+ 
+      <h4>Cultural Hybridity</h4>
+      <ul>
+        <li>Global flows produced fusions: Bollywood blending Indian classical forms with Hollywood conventions; reggaeton's mix of Latin, Caribbean, and hip-hop.</li>
+        <li>Migration built multicultural cities: London, Toronto, São Paulo, Singapore, Dubai.</li>
+      </ul>
+ 
+      <h4>Religion in a Global Age</h4>
+      <ul>
+        <li>Continued global growth of <strong>Christianity</strong> in Africa, Latin America, and Asia; evangelical and Pentecostal movements surged.</li>
+        <li><strong>Islamic revival</strong> from the late 20th century (Iranian Revolution, Muslim Brotherhood, Salafism).</li>
+        <li><strong>New religious movements</strong>, spiritual pluralism, and growing "nones" (religiously unaffiliated) in Europe and North America.</li>
+      </ul>
+ 
+      <h4>Digital Culture</h4>
+      <ul>
+        <li>Social media (from the 2000s) reshaped politics, protest, and identity.</li>
+        <li>"Viral" phenomena, memes, and influencer culture.</li>
+        <li>Simultaneously enabled <strong>disinformation</strong>, polarization, and new forms of authoritarian control (Great Firewall of China, state surveillance).</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.7 -->
+    <h2>Topic 9.7 — Resistance to Globalization after 1900</h2>
+    <div class="region-card region-resist">
+      <h3>🛑 Globalization's Discontents</h3>
+ 
+      <h4>Economic Resistance</h4>
+      <ul>
+        <li><strong>Anti-globalization protests</strong>: Seattle WTO protests (1999), Genoa G8 (2001).</li>
+        <li><strong>Labor opposition</strong>: unions in high-income countries resisted offshoring and free-trade deals (e.g., opposition to NAFTA).</li>
+        <li>Rise of <strong>populist protectionism</strong> in the 2010s (Trump's tariffs, Brexit).</li>
+      </ul>
+ 
+      <h4>Religious Fundamentalism and Violence</h4>
+      <ul>
+        <li><strong>Islamist extremism</strong>: al-Qaeda (from 1988), 9/11 attacks (2001), ISIS (2014), Boko Haram.</li>
+        <li>Hindu nationalism in India (BJP); Buddhist-nationalist violence against Muslims in Myanmar.</li>
+        <li>Christian nationalism in parts of Europe and the Americas.</li>
+      </ul>
+ 
+      <h4>Political Backlash</h4>
+      <ul>
+        <li>Rise of <strong>right-wing populism</strong>: Hungary's Orbán, India's Modi, the U.S. under Trump, Bolsonaro in Brazil, far-right parties in the EU.</li>
+        <li><strong>Brexit</strong> (2016, implemented 2020) — UK voted to leave the European Union.</li>
+        <li>Authoritarian turns: Putin's Russia, Erdoğan's Turkey, Xi Jinping's centralization in China.</li>
+      </ul>
+ 
+      <h4>Cultural Resistance</h4>
+      <ul>
+        <li>Protection of <strong>indigenous languages and knowledge</strong>.</li>
+        <li>"<strong>Slow Food</strong>" movement (Italy, 1986) against fast-food globalization.</li>
+        <li>French cultural defense of its language and film industry against U.S. dominance.</li>
+      </ul>
+ 
+      <h4>Environmental and Social Justice Movements</h4>
+      <ul>
+        <li>Indigenous resistance to oil pipelines (Standing Rock, 2016).</li>
+        <li>Climate strikes (Fridays for Future, 2018–).</li>
+        <li>Global <strong>#MeToo</strong> and <strong>Black Lives Matter</strong> movements mobilized online across borders.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.8 -->
+    <h2>Topic 9.8 — Institutions Developing in a Globalized World</h2>
+    <div class="region-card region-inst">
+      <h3>🏛️ Governing a Smaller Planet</h3>
+ 
+      <h4>The United Nations System</h4>
+      <ul>
+        <li><strong>Security Council</strong> (P5: U.S., UK, France, China, Russia) with veto power.</li>
+        <li><strong>General Assembly</strong>: 193 member states.</li>
+        <li>Specialized agencies: <strong>WHO</strong>, <strong>UNESCO</strong>, <strong>UNICEF</strong>, <strong>UNHCR</strong>.</li>
+        <li>UN peacekeeping missions ("blue helmets") since the Suez Crisis (1956).</li>
+      </ul>
+ 
+      <h4>Economic Institutions</h4>
+      <ul>
+        <li><strong>IMF</strong> and <strong>World Bank</strong> (1944 Bretton Woods).</li>
+        <li><strong>WTO</strong> (1995, from GATT) — manages rules of global trade.</li>
+        <li><strong>G7</strong>, <strong>G20</strong> — coordinating bodies of major economies.</li>
+        <li><strong>OPEC</strong> (1960) — oil exporters' cartel.</li>
+      </ul>
+ 
+      <h4>Regional Organizations</h4>
+      <ul>
+        <li><strong>European Union</strong>: shared market, single currency (euro), common foreign-policy machinery.</li>
+        <li><strong>African Union</strong> (2002, succeeding OAU 1963).</li>
+        <li><strong>ASEAN</strong>, Mercosur, Arab League.</li>
+      </ul>
+ 
+      <h4>Humanitarian and NGO Networks</h4>
+      <ul>
+        <li>Red Cross/Red Crescent.</li>
+        <li>Médecins Sans Frontières / Doctors Without Borders.</li>
+        <li>Amnesty International, Oxfam, Save the Children.</li>
+        <li>Gates Foundation and other mega-philanthropies.</li>
+      </ul>
+ 
+      <h4>New Security Challenges</h4>
+      <ul>
+        <li><strong>Terrorism</strong> and counterterrorism.</li>
+        <li><strong>Cybersecurity</strong> and cyberwarfare.</li>
+        <li>Return of <strong>great-power competition</strong>: U.S.–China, Russia's 2014 annexation of Crimea and 2022 invasion of Ukraine.</li>
+        <li>Climate-driven migration and conflict.</li>
+      </ul>
+ 
+      <h4>Tensions within Global Governance</h4>
+      <ul>
+        <li>UN Security Council vetoes often paralyze responses (Syria, Ukraine).</li>
+        <li>Critics argue that existing institutions over-represent 1945 power balances and under-represent the Global South.</li>
+        <li>Regional and bilateral arrangements increasingly bypass global institutions.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 9.9 -->
+    <h2>Topic 9.9 — Continuity and Change in a Globalized World</h2>
+    <div class="region-card region-causation">
+      <h3>🔄 Synthesizing Unit 9 and the Course</h3>
+ 
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Continuity (1200 → present)</th>
+              <th>Change (esp. 1900 → present)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Trade</strong></td><td>Long-distance exchange persists (Silk Roads → container ships)</td><td>Volume, speed, and complexity grew enormously; digital trade</td></tr>
+            <tr><td><strong>Disease</strong></td><td>Pandemics spread along trade networks</td><td>Modern medicine extended lifespan; new threats (HIV, COVID)</td></tr>
+            <tr><td><strong>Environment</strong></td><td>Human impact on landscapes is ancient</td><td>Global-scale, anthropogenic climate change</td></tr>
+            <tr><td><strong>Power</strong></td><td>Strong states &amp; empires shape the world</td><td>Superpowers, NGOs, MNCs, and digital platforms share power</td></tr>
+            <tr><td><strong>Culture</strong></td><td>Cross-cultural exchange (e.g., Islamic world; Columbian Exchange)</td><td>Real-time global media; hybrid global pop culture</td></tr>
+            <tr><td><strong>Rights</strong></td><td>Status hierarchies (gender, race, class) widespread</td><td>Universal human rights framework; ongoing struggle for equality</td></tr>
+            <tr><td><strong>Migration</strong></td><td>People have always moved (nomadic, slavery, labor)</td><td>Mass air travel, refugees, diasporas, digital nomads</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <h4>Major Continuities from the Whole Course</h4>
+      <ul>
+        <li><strong>Interconnectedness</strong> has deepened across every period — from post-classical trade networks to the internet.</li>
+        <li><strong>Disease, migration, and environmental change</strong> travel along exchange networks; their scale has grown.</li>
+        <li><strong>State-building</strong> remains a key political project — even as the forms (empires, nation-states, regional blocs) change.</li>
+        <li><strong>Inequalities</strong> — of wealth, gender, and race — endure in new forms.</li>
+      </ul>
+ 
+      <h4>Major Changes</h4>
+      <ul>
+        <li><strong>Scale and speed</strong>: today's flows of information, capital, people, and disease dwarf those of earlier periods.</li>
+        <li><strong>Anthropocene</strong>: humans are now the dominant force shaping the planetary environment.</li>
+        <li><strong>Human rights framework</strong>: universalist rights discourse is a 20th-century innovation.</li>
+        <li><strong>Decline of formal empire</strong>: near-universal norm of sovereign nation-states.</li>
+        <li><strong>Rise of new powers</strong>: China's re-emergence and the shifting U.S.–China rivalry are defining forces of the early 21st century.</li>
+      </ul>
+ 
+      <h4>Open Questions for the Future</h4>
+      <ul>
+        <li>Can international institutions adapt fast enough to climate change, pandemics, and AI?</li>
+        <li>Will democracy, authoritarianism, or hybrid systems dominate the 21st century?</li>
+        <li>How will nations manage the trade-offs between openness, security, and equality?</li>
+      </ul>
+    </div>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Globalization</span>Growing interconnection of economies, cultures, and populations.</div>
+      <div class="vocab-item"><span class="vocab-term">Containerization</span>Standardized steel containers that cut shipping costs dramatically.</div>
+      <div class="vocab-item"><span class="vocab-term">Green Revolution</span>Mid-20th-century rise in yields from new seeds, fertilizers, and irrigation.</div>
+      <div class="vocab-item"><span class="vocab-term">World Wide Web</span>Tim Berners-Lee's 1989 hypertext system; foundation of the modern internet.</div>
+      <div class="vocab-item"><span class="vocab-term">Smartphone</span>Handheld internet-connected phone (mass adopted after iPhone 2007).</div>
+      <div class="vocab-item"><span class="vocab-term">Social media</span>User-generated online networks (Facebook, Twitter/X, WeChat, TikTok).</div>
+      <div class="vocab-item"><span class="vocab-term">1918 Flu</span>Post-WWI pandemic that killed 50–100 million worldwide.</div>
+      <div class="vocab-item"><span class="vocab-term">Penicillin</span>First widely used antibiotic (Fleming 1928; mass-produced 1940s).</div>
+      <div class="vocab-item"><span class="vocab-term">Smallpox eradication</span>WHO-led program that eliminated smallpox (declared 1980).</div>
+      <div class="vocab-item"><span class="vocab-term">HIV/AIDS</span>Late-20th-century pandemic, especially devastating in sub-Saharan Africa.</div>
+      <div class="vocab-item"><span class="vocab-term">COVID-19</span>Coronavirus pandemic beginning in 2019–20; reshaped global life.</div>
+      <div class="vocab-item"><span class="vocab-term">Anthropocene</span>Proposed geological epoch defined by human impact on Earth.</div>
+      <div class="vocab-item"><span class="vocab-term">Climate change</span>Long-term warming of Earth's climate driven by greenhouse gases.</div>
+      <div class="vocab-item"><span class="vocab-term">Silent Spring</span>Rachel Carson's 1962 book; catalyst for environmentalism.</div>
+      <div class="vocab-item"><span class="vocab-term">Montreal Protocol</span>1987 treaty that phased down ozone-depleting chemicals.</div>
+      <div class="vocab-item"><span class="vocab-term">Kyoto Protocol</span>1997 treaty committing industrial states to emissions cuts.</div>
+      <div class="vocab-item"><span class="vocab-term">Paris Agreement</span>2015 global climate agreement with voluntary national targets.</div>
+      <div class="vocab-item"><span class="vocab-term">Neoliberalism</span>Free-market, deregulation, privatization approach dominant since 1980s.</div>
+      <div class="vocab-item"><span class="vocab-term">WTO</span>World Trade Organization (1995), regulating global trade rules.</div>
+      <div class="vocab-item"><span class="vocab-term">NAFTA</span>1994 North American trade agreement (replaced by USMCA, 2020).</div>
+      <div class="vocab-item"><span class="vocab-term">European Union</span>Economic and political union formalized in 1993; 27 states today.</div>
+      <div class="vocab-item"><span class="vocab-term">Multinational corporation (MNC)</span>Firm operating in multiple countries (Shell, Apple, Toyota).</div>
+      <div class="vocab-item"><span class="vocab-term">Offshoring</span>Relocating production to lower-wage countries.</div>
+      <div class="vocab-item"><span class="vocab-term">Structural adjustment</span>IMF/World Bank conditions (privatization, austerity) on loans.</div>
+      <div class="vocab-item"><span class="vocab-term">2008 financial crisis</span>Global recession triggered by U.S. housing/banking collapse.</div>
+      <div class="vocab-item"><span class="vocab-term">BRICS</span>Brazil, Russia, India, China, South Africa bloc of rising economies.</div>
+      <div class="vocab-item"><span class="vocab-term">Universal Declaration of Human Rights</span>1948 UN document codifying universal rights.</div>
+      <div class="vocab-item"><span class="vocab-term">NGO</span>Non-governmental organization (e.g., Amnesty International).</div>
+      <div class="vocab-item"><span class="vocab-term">Black Lives Matter</span>Global movement (from 2013) against police violence and systemic racism.</div>
+      <div class="vocab-item"><span class="vocab-term">#MeToo</span>Viral 2017 movement against sexual harassment and assault.</div>
+      <div class="vocab-item"><span class="vocab-term">Hollywood</span>U.S. film industry exporting global mass culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Bollywood</span>Mumbai-based Hindi film industry, the world's most prolific.</div>
+      <div class="vocab-item"><span class="vocab-term">K-pop</span>Korean pop music, a leading global cultural export in the 2010s–20s.</div>
+      <div class="vocab-item"><span class="vocab-term">McDonaldization</span>Sociological term for standardization of global consumer experience.</div>
+      <div class="vocab-item"><span class="vocab-term">Islamic revival</span>Late-20th-century resurgence of political Islam.</div>
+      <div class="vocab-item"><span class="vocab-term">9/11</span>2001 al-Qaeda attacks on the U.S.; triggered War on Terror.</div>
+      <div class="vocab-item"><span class="vocab-term">Arab Spring</span>2011 wave of uprisings across the Arab world.</div>
+      <div class="vocab-item"><span class="vocab-term">Brexit</span>UK's withdrawal from the European Union (vote 2016; exit 2020).</div>
+      <div class="vocab-item"><span class="vocab-term">Populism</span>Politics pitting "the people" against "elites" — left and right forms.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Three questions per sub-topic (27 total). Click an answer to check it.</p>
+ 
+      <!-- 9.1 -->
+      <h3 class="quiz-subheading">Topic 9.1 — Technology &amp; Exchange</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>1. Which of the following MOST dramatically reduced global shipping costs after 1950?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) The invention of the airplane.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Containerization — standardized steel containers and purpose-built ships and ports.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) The Erie Canal.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) The steam engine.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> Containerization (from the late 1950s) is often credited with cutting shipping costs roughly 90%.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. The Green Revolution of the 1940s–60s is BEST described as</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) An environmentalist protest movement.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) The spread of high-yield seeds, synthetic fertilizers, pesticides, and irrigation that sharply increased food production in parts of the Global South.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) A movement against the use of fossil fuels.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) A series of wars over farmland.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: B.</strong> Borlaug's work in Mexico, India, and the Philippines helped avert predicted famines.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. The World Wide Web (1989) mattered for globalization because it</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Was used only by militaries.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) Created a mass public platform for sharing information across borders, enabling e-commerce, digital media, and instant global communication.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Ended television.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Replaced automobiles.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: B.</strong> The Web is a foundation of late-20th- and 21st-century globalization.</div>
+      </div>
+ 
+      <!-- 9.2 -->
+      <h3 class="quiz-subheading">Topic 9.2 — Disease</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>4. The 1918 influenza pandemic is significant to world history because</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) It was limited to one continent.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) Its scale (50–100 million dead), spread along WWI military networks, and impact on public health made it one of the deadliest events of the 20th century.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) It ended WWI.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) It only killed the elderly.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> The pandemic showed how modern transportation networks spread disease globally.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. The WHO declared smallpox eradicated in 1980, which illustrates</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) That all diseases have been eradicated.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) The potential of coordinated international public-health campaigns using vaccination to eliminate a human disease.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) That vaccines do not work.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) That smallpox was never dangerous.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: B.</strong> Smallpox remains the only infectious human disease fully eradicated.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>6. Which of the following is an example of the "limits of modern medicine"?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 6)">(A) Polio vaccine.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 6)">(B) The rise of antibiotic-resistant bacteria ("superbugs") and unequal global access to medicines.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 6)">(C) Eradication of smallpox.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 6)">(D) Longer life expectancy.</div>
+        </div>
+        <div class="explanation" id="exp-6"><strong>Answer: B.</strong> Resistance and unequal access illustrate how technology alone cannot solve all health challenges.</div>
+      </div>
+ 
+      <!-- 9.3 -->
+      <h3 class="quiz-subheading">Topic 9.3 — Environment</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>7. Rachel Carson's Silent Spring (1962) was significant because it</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 7)">(A) Promoted pesticide use.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 7)">(B) Alerted a broad public to the ecological dangers of synthetic pesticides (DDT) and helped launch the modern environmental movement.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 7)">(C) Denied climate change.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 7)">(D) Celebrated industrial agriculture.</div>
+        </div>
+        <div class="explanation" id="exp-7"><strong>Answer: B.</strong> Silent Spring galvanized environmentalism and contributed to the DDT ban.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>8. Which of the following is the BEST example of successful international environmental cooperation?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 8)">(A) The Treaty of Versailles.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 8)">(B) The Montreal Protocol (1987), which phased down ozone-depleting chemicals and measurably repaired the ozone layer.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 8)">(C) The Cuban Missile Crisis.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 8)">(D) The Marshall Plan.</div>
+        </div>
+        <div class="explanation" id="exp-8"><strong>Answer: B.</strong> Montreal is often cited as the most effective environmental treaty to date.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>9. Which statement BEST describes global climate change by the 21st century?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 9)">(A) It is driven entirely by natural causes.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 9)">(B) Scientific consensus links it to greenhouse gas emissions since the Industrial Revolution, with unequal impacts that fall heaviest on poorer, low-lying regions.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 9)">(C) It is only a theoretical problem with no measured effects.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 9)">(D) It affects only European countries.</div>
+        </div>
+        <div class="explanation" id="exp-9"><strong>Answer: B.</strong> Climate change also raises debates about "common but differentiated responsibilities" between rich and poor countries.</div>
+      </div>
+ 
+      <!-- 9.4 -->
+      <h3 class="quiz-subheading">Topic 9.4 — Economics</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>10. Neoliberal policies of the 1980s–90s emphasized</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 10)">(A) Expansion of government ownership of industry.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 10)">(B) Privatization, deregulation, lower tariffs, and reduced public spending.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 10)">(C) Revival of feudalism.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 10)">(D) Adoption of central planning.</div>
+        </div>
+        <div class="explanation" id="exp-10"><strong>Answer: B.</strong> Thatcher, Reagan, and allied policymakers led this shift; it also shaped IMF structural adjustment programs.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>11. China's post-1978 economic transformation under Deng Xiaoping is BEST described as</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 11)">(A) A return to Maoist collectivization.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 11)">(B) Market-oriented reforms (special economic zones, foreign investment, export-led growth) combined with continued one-party rule.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 11)">(C) Full democratization.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 11)">(D) Isolation from world trade.</div>
+        </div>
+        <div class="explanation" id="exp-11"><strong>Answer: B.</strong> China became the world's factory and, by the 2010s, its second-largest economy.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>12. The 2008 global financial crisis</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 12)">(A) Was limited to the U.S.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 12)">(B) Originated in the U.S. housing and banking sectors but spread worldwide through interconnected financial markets, causing recession and political backlash in many countries.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 12)">(C) Was caused by the oil shocks.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 12)">(D) Only affected China.</div>
+        </div>
+        <div class="explanation" id="exp-12"><strong>Answer: B.</strong> The crisis illustrated how financial globalization can transmit shocks worldwide.</div>
+      </div>
+ 
+      <!-- 9.5 -->
+      <h3 class="quiz-subheading">Topic 9.5 — Reform</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>13. The Universal Declaration of Human Rights (1948) is significant because it</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 13)">(A) Was legally binding on all states.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 13)">(B) Provided a universal vocabulary of rights that later generations of activists have invoked to challenge injustice worldwide.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 13)">(C) Established communism globally.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 13)">(D) Ended all wars.</div>
+        </div>
+        <div class="explanation" id="exp-13"><strong>Answer: B.</strong> The Declaration is a foundational text of the modern human-rights regime.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>14. The global spread of women's rights in the 20th century included all of the following EXCEPT</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 14)">(A) Women's suffrage in additional countries.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 14)">(B) International UN women's conferences.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 14)">(C) Growing women's participation in formal paid work.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 14)">(D) Global abolition of all legal gender inequality.</div>
+        </div>
+        <div class="explanation" id="exp-14"><strong>Answer: D.</strong> Legal and practical gender inequalities remain widespread even where formal rights have expanded.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>15. The 21st-century Black Lives Matter movement illustrates</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 15)">(A) The irrelevance of race to modern politics.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 15)">(B) How local protest can spread globally via social media, linking racial justice issues in the U.S. to similar struggles elsewhere.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 15)">(C) The end of civil rights activism.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 15)">(D) The closure of the internet.</div>
+        </div>
+        <div class="explanation" id="exp-15"><strong>Answer: B.</strong> BLM protests emerged globally after 2013 and especially in 2020, showing 21st-century networked activism.</div>
+      </div>
+ 
+      <!-- 9.6 -->
+      <h3 class="quiz-subheading">Topic 9.6 — Globalized Culture</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>16. "McDonaldization" refers to</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 16)">(A) The decline of restaurants.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 16)">(B) The sociologist George Ritzer's term for the spread of standardization, efficiency, and predictability in global consumer culture.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 16)">(C) A 1990s protectionist policy.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 16)">(D) A Soviet command-economy term.</div>
+        </div>
+        <div class="explanation" id="exp-16"><strong>Answer: B.</strong> McDonaldization is shorthand for a critique of global consumer homogenization.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>17. The rise of K-pop, Bollywood, and Nollywood illustrates</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 17)">(A) U.S. cultural dominance without competition.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 17)">(B) That globalization does not only flow from the West — non-Western cultural industries also export worldwide.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 17)">(C) The end of local cultures.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 17)">(D) That cinema is no longer popular.</div>
+        </div>
+        <div class="explanation" id="exp-17"><strong>Answer: B.</strong> These industries illustrate multidirectional cultural globalization and hybridity.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>18. Social media has had which of the following dual effects on global politics in the 21st century?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 18)">(A) Only negative effects.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 18)">(B) Enabled grassroots mobilization (e.g., Arab Spring, #MeToo, BLM) while also facilitating disinformation, polarization, and state surveillance.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 18)">(C) Only democratizing effects.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 18)">(D) No effect on politics.</div>
+        </div>
+        <div class="explanation" id="exp-18"><strong>Answer: B.</strong> Social media is a double-edged technology in political life.</div>
+      </div>
+ 
+      <!-- 9.7 -->
+      <h3 class="quiz-subheading">Topic 9.7 — Resistance</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>19. The 1999 Seattle WTO protests are BEST understood as</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 19)">(A) A pro-free-trade rally.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 19)">(B) A wave of anti-globalization protest bringing together labor, environmentalists, and social-justice activists against the WTO's trade agenda.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 19)">(C) A celebration of NAFTA.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 19)">(D) A Cold War event.</div>
+        </div>
+        <div class="explanation" id="exp-19"><strong>Answer: B.</strong> Seattle became a symbol of organized resistance to globalization.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>20. Which of the following is an example of 21st-century populist backlash against globalization?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 20)">(A) The founding of the WTO.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 20)">(B) Brexit (UK's 2016 vote to leave the EU) and the rise of tariff- and immigration-focused politics in the U.S. and Europe.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 20)">(C) The Marshall Plan.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 20)">(D) The Bandung Conference.</div>
+        </div>
+        <div class="explanation" id="exp-20"><strong>Answer: B.</strong> Right-populist movements reject aspects of open trade, migration, and supranational governance.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>21. Al-Qaeda's 9/11 attacks on the United States can be interpreted as</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 21)">(A) Support for globalization.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 21)">(B) A violent form of transnational extremist resistance to U.S. global power and Westernization, using globalized media and networks for propaganda.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 21)">(C) A Cold War proxy war.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 21)">(D) An attack by a state army.</div>
+        </div>
+        <div class="explanation" id="exp-21"><strong>Answer: B.</strong> 9/11 catalyzed the "War on Terror" and reshaped U.S. foreign policy for two decades.</div>
+      </div>
+ 
+      <!-- 9.8 -->
+      <h3 class="quiz-subheading">Topic 9.8 — Institutions</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>22. The UN Security Council's veto power has been criticized because it</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 22)">(A) Gave too much power to small states.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 22)">(B) Allows any of the five permanent members (U.S., UK, France, Russia, China) to block collective action, reflecting 1945 power balances and paralyzing responses to crises like Syria and Ukraine.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 22)">(C) Was abolished in 1991.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 22)">(D) Gives Europe ultimate authority.</div>
+        </div>
+        <div class="explanation" id="exp-22"><strong>Answer: B.</strong> P5 veto is a major target of UN reform proposals.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>23. The European Union is BEST described as</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 23)">(A) A purely military alliance.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 23)">(B) An unprecedented supranational political and economic union with a single market, common institutions, and (for many members) a shared currency.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 23)">(C) A branch of NATO.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 23)">(D) The successor to the Warsaw Pact.</div>
+        </div>
+        <div class="explanation" id="exp-23"><strong>Answer: B.</strong> The EU pools significant sovereignty in economic and regulatory affairs.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>24. Which of the following BEST illustrates the role of NGOs in global affairs?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 24)">(A) The UN Security Council's permanent members.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 24)">(B) Amnesty International campaigning for political prisoners and Médecins Sans Frontières providing humanitarian aid in conflict zones.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 24)">(C) The U.S. Defense Department.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 24)">(D) OPEC's oil policy.</div>
+        </div>
+        <div class="explanation" id="exp-24"><strong>Answer: B.</strong> NGOs have become major actors in rights, humanitarian aid, environment, and development.</div>
+      </div>
+ 
+      <!-- 9.9 -->
+      <h3 class="quiz-subheading">Topic 9.9 — Continuity &amp; Change</h3>
+ 
+      <div class="quiz-question">
+        <p><strong>25. Which of the following is a long-term CONTINUITY across the whole AP World course (c. 1200–present)?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 25)">(A) Fully equal global wealth distribution.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 25)">(B) The persistence of long-distance trade networks moving people, goods, ideas, and disease.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 25)">(C) Global absence of states.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 25)">(D) Identical technologies everywhere.</div>
+        </div>
+        <div class="explanation" id="exp-25"><strong>Answer: B.</strong> From the Silk Roads to container ships to the internet, cross-regional exchange is a deep continuity.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>26. Which is a major CHANGE distinguishing the post-1900 world from the 19th century?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 26)">(A) A return to formal European empires.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 26)">(B) The decline of formal empires and the near-universal spread of sovereign nation-states, along with a global human-rights framework.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 26)">(C) The disappearance of trade.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 26)">(D) An absence of nationalism.</div>
+        </div>
+        <div class="explanation" id="exp-26"><strong>Answer: B.</strong> Decolonization and human-rights discourse are defining 20th-century changes.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>27. Which of the following BEST characterizes the early 21st-century world order?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 27)">(A) A stable bipolar Cold War.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 27)">(B) A shifting order with multiple poles (U.S., China, EU, regional powers), deep globalization, rising populist backlash, and new transnational challenges like climate change and pandemics.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 27)">(C) A fully unified world government.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 27)">(D) A return to medieval feudalism.</div>
+        </div>
+        <div class="explanation" id="exp-27"><strong>Answer: B.</strong> The post-Cold War "unipolar moment" has given way to more complex, multipolar, and contested politics.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — Globalization (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE technological development since 1900 that accelerated globalization.</li>
+        <li>Explain ONE economic consequence of globalization in the period 1945–present.</li>
+        <li>Explain ONE form of resistance to globalization in the period 1945–present.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The spread of the World Wide Web and the internet from the late 1980s enabled instantaneous global communication and commerce, collapsing distances for information, finance, and popular culture.</p>
+        <p><strong>(b)</strong> Neoliberal globalization made it possible for multinational corporations to offshore manufacturing to lower-wage countries — for example, U.S. and Japanese firms relocating production to China, Mexico, and Vietnam after 1980, producing rapid industrial growth in those countries while contributing to deindustrialization and income stagnation in parts of the U.S. and Europe.</p>
+        <p><strong>(c)</strong> One form of resistance was the rise of populist nationalism in the 2010s — notably the 2016 Brexit vote, in which a majority of UK voters chose to leave the European Union, rejecting freedom of movement and supranational EU rule in favor of what supporters called restoring national sovereignty.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus (Earthrise, 1968)</h3>
+      <figure class="photo">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Earthrise.jpg?width=400" alt="Earthrise" />
+        <figcaption><em>Earthrise</em>, photographed from Apollo 8, 24 December 1968.</figcaption>
+      </figure>
+      <ol type="a">
+        <li>Identify ONE historical development in the 1960s that helps explain why this image had such broad cultural impact.</li>
+        <li>Explain ONE way the environmental movement since 1960 has responded to global challenges illustrated by the image.</li>
+        <li>Explain ONE obstacle to effective global environmental action since 1960.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The image was released in 1968, at the height of the Cold War space race and shortly after Rachel Carson's <em>Silent Spring</em> (1962) had popularized environmental concerns; it reached a public already beginning to think of the Earth as a fragile, shared home.</p>
+        <p><strong>(b)</strong> The environmental movement used such imagery to push for coordinated action, resulting in the first UN environment conference (Stockholm, 1972), the Montreal Protocol (1987) phasing down ozone-depleting chemicals, and successive climate treaties such as the Paris Agreement (2015).</p>
+        <p><strong>(c)</strong> A major obstacle is disagreement between wealthier "developed" countries (historically the largest emitters) and poorer "developing" countries over who should bear the cost of cutting emissions — the "common but differentiated responsibilities" debate — which has slowed binding action on climate change.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Technology collapsed distance.</strong> Jets, containers, satellites, the internet, and smartphones intensified globalization.</li>
+        <li><strong>Medicine lengthened lives — unevenly.</strong> Huge gains (vaccines, antibiotics, smallpox eradication) coexist with pandemics (1918 flu, HIV, COVID).</li>
+        <li><strong>Humans reshape the planet.</strong> Climate change, pollution, and biodiversity loss make the environment a central political issue.</li>
+        <li><strong>Global capitalism became deeply integrated.</strong> Neoliberalism, offshoring, BRICS rise, and recurring financial crises define the new economy.</li>
+        <li><strong>Rights movements expanded.</strong> Human rights, women's rights, civil rights, LGBTQ+, and indigenous movements built on the 1948 UDHR.</li>
+        <li><strong>Culture went global and hybrid.</strong> Hollywood, Bollywood, K-pop, football, and social media built a shared-but-contested culture.</li>
+        <li><strong>Resistance is part of globalization.</strong> Religious fundamentalism, populism, and anti-globalization protests reshape politics.</li>
+        <li><strong>Institutions matter — and are contested.</strong> UN, WTO, EU, and NGOs govern much of global life, but are criticized as unequal and slow.</li>
+        <li><strong>The course's long arc:</strong> from increasingly connected regional networks in 1200 to a single, uneven, turbulent global system today.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP World History: Modern</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
