@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP United States History Unit 4 — Period 4: 1800–1848. Timeline, comprehensive notes covering Jeffersonian democracy, the Marshall Court, the War of 1812, market revolution, Jacksonian democracy, reform movements, expansion, slavery, and sectionalism, plus MCQs and SAQs." />
+  <title>Unit 4: Period 4 (1800–1848)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f3a5f;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: #b22234;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #b22234;
+      padding-bottom: 0.3rem;
+    }
+    h3 { color: #2f5d8c; margin-top: 1.5rem; }
+    h4 { color: #1f3a5f; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box {
+      background: linear-gradient(135deg, #dbeafe, #eef4ff);
+      border-left: 6px solid #b22234;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+ 
+    .weighting-badge {
+      display: inline-block;
+      background: #1f3a5f;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+ 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #b22234;
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8fbff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f3a5f;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #b22234;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f3a5f;
+      margin-right: 0.5rem;
+    }
+ 
+    /* Region cards */
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region-context     { border-color: #8b1e3f; background: #fff1f4; }
+    .region-politics    { border-color: #174ea6; background: #e8f1ff; }
+    .region-market      { border-color: #2f6f73; background: #eef9f9; }
+    .region-jackson     { border-color: #b22234; background: #fff1f4; }
+    .region-reform      { border-color: #5b3f8c; background: #f3efff; }
+    .region-expansion   { border-color: #c45a1b; background: #eef4ff; }
+    .region-comparison  { border-color: #7b2d43; background: #fff0f3; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f3a5f;
+      background: #eef4ff;
+      font-weight: 600;
+    }
+ 
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .vocab-item {
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+    .vocab-term {
+      font-weight: 700;
+      color: #1f3a5f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #b8c7dc;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .compare-table thead {
+      background: linear-gradient(to right, #1f3a5f, #b22234);
+      color: white;
+    }
+    .compare-table tbody tr:nth-child(even) { background: #f8fbff; }
+ 
+    /* Quiz */
+    .quiz-container {
+      background: linear-gradient(135deg, #dbeafe, #f8fbff);
+      border: 2px solid #1f3a5f;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-container h2 { margin-top: 0; border: none; color: #1f3a5f; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f3a5f;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #eef4ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f3a5f;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .explanation.show { display: block; }
+ 
+    /* SAQ */
+    .saq-box {
+      background: #fff;
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8fbff;
+      border: 1px dashed #1f3a5f;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f3a5f;
+    }
+ 
+    .key-takeaways {
+      background: linear-gradient(135deg, #eef4ff, #dbeafe);
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP United States History</a>
+    <h1>Unit 4: Period 4</h1>
+    <p class="subtitle">1800 – 1848 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 10–17%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🇺🇸 Unit Overview</h3>
+      <p>
+        APUSH Unit 4 covers the growth of the United States during the early 1800s. This period includes Jeffersonian democracy,
+        the Louisiana Purchase, the War of 1812, the rise of nationalism, the Market Revolution, Jacksonian democracy,
+        westward expansion, reform movements, and growing sectional tensions over slavery. The United States became larger,
+        more democratic for white men, more economically connected, and more divided over slavery and federal power.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How did democracy, economic change, reform movements, and territorial expansion transform
+        the United States between 1800 and 1848?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/LouisianaPurchase.png?width=1000" alt="Map of the Louisiana Purchase" class="unit-image">
+      <div class="image-caption">Louisiana Purchase map — connects to Jefferson, westward expansion, and the growth of federal power.</div>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 4 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">1800:</span> Election of 1800, sometimes called the “Revolution of 1800,” peacefully transfers power from Federalists to Democratic-Republicans.</div>
+      <div class="timeline-event"><span class="timeline-date">1803:</span> Marbury v. Madison establishes judicial review; Louisiana Purchase doubles the size of the United States.</div>
+      <div class="timeline-event"><span class="timeline-date">1804–1806:</span> Lewis and Clark Expedition explores the Louisiana Territory.</div>
+      <div class="timeline-event"><span class="timeline-date">1807:</span> Embargo Act attempts to avoid war but hurts American merchants.</div>
+      <div class="timeline-event"><span class="timeline-date">1812–1815:</span> War of 1812 is fought between the United States and Britain.</div>
+      <div class="timeline-event"><span class="timeline-date">1816:</span> Second Bank of the United States is chartered; Era of Good Feelings begins.</div>
+      <div class="timeline-event"><span class="timeline-date">1819:</span> Panic of 1819 causes economic hardship; McCulloch v. Maryland strengthens federal power.</div>
+      <div class="timeline-event"><span class="timeline-date">1820:</span> Missouri Compromise tries to balance free and slave states.</div>
+      <div class="timeline-event"><span class="timeline-date">1823:</span> Monroe Doctrine warns European powers against new colonization in the Americas.</div>
+      <div class="timeline-event"><span class="timeline-date">1825:</span> Erie Canal opens, connecting the Great Lakes to the Atlantic market.</div>
+      <div class="timeline-event"><span class="timeline-date">1828:</span> Andrew Jackson is elected president, marking the rise of Jacksonian democracy.</div>
+      <div class="timeline-event"><span class="timeline-date">1830:</span> Indian Removal Act authorizes removal of Native peoples east of the Mississippi.</div>
+      <div class="timeline-event"><span class="timeline-date">1831:</span> Nat Turner's Rebellion increases Southern fear and leads to harsher slave laws.</div>
+      <div class="timeline-event"><span class="timeline-date">1832:</span> Nullification Crisis challenges federal tariff power.</div>
+      <div class="timeline-event"><span class="timeline-date">1837:</span> Panic of 1837 triggers a major economic depression.</div>
+      <div class="timeline-event"><span class="timeline-date">1848:</span> Seneca Falls Convention calls for women's rights; Treaty of Guadalupe Hidalgo ends the Mexican-American War.</div>
+    </div>
+ 
+    <!-- TOPIC 4.1 -->
+    <h2>Topic 4.1 — Contextualizing Period 4</h2>
+    <div class="region-card region-context">
+      <h3>🌎 A Growing and Changing Nation</h3>
+      <p>Between 1800 and 1848, the United States expanded west, developed a stronger national economy, and experienced major political and social change. At the same time, slavery expanded in the South and became an even bigger national conflict.</p>
+ 
+      <h4>Major Themes</h4>
+      <ul>
+        <li><strong>Expansion:</strong> The U.S. acquired new western lands through the Louisiana Purchase, migration, and war.</li>
+        <li><strong>Democracy:</strong> Voting rights expanded for many white men, and political parties became more organized.</li>
+        <li><strong>Market Revolution:</strong> New transportation, factories, and banking systems connected regional economies.</li>
+        <li><strong>Reform:</strong> Religious revival and social activism inspired movements for temperance, abolition, education, prisons, and women's rights.</li>
+        <li><strong>Sectionalism:</strong> The North and South developed different economies and political interests, especially around slavery.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 4.2 -->
+    <h2>Topic 4.2 — The Rise of Political Parties and the Era of Jefferson</h2>
+    <div class="region-card region-politics">
+      <h3>🗳️ Jeffersonian Democracy</h3>
+      <p>Thomas Jefferson's election in 1800 marked the first peaceful transfer of power between political parties. Jefferson wanted a limited federal government, an agricultural republic, and lower taxes, but some of his actions expanded federal power.</p>
+ 
+      <h4>Election of 1800</h4>
+      <ul>
+        <li><strong>Peaceful transfer:</strong> Power moved from Federalist John Adams to Democratic-Republican Thomas Jefferson without violence.</li>
+        <li><strong>Revolution of 1800:</strong> Jefferson's supporters saw the election as a return to republican simplicity and limited government.</li>
+        <li><strong>Decline of Federalists:</strong> The Federalist Party slowly weakened after 1800, especially after the War of 1812.</li>
+      </ul>
+ 
+      <h4>Jefferson's Presidency</h4>
+      <ul>
+        <li><strong>Reduced federal power:</strong> Jefferson cut taxes, reduced the army, and tried to limit government spending.</li>
+        <li><strong>Louisiana Purchase:</strong> Jefferson bought Louisiana from France in 1803, doubling U.S. territory, even though the Constitution did not clearly say presidents could buy land.</li>
+        <li><strong>Lewis and Clark:</strong> Explored the Louisiana Territory and gathered information about geography, plants, animals, and Native peoples.</li>
+        <li><strong>Embargo Act:</strong> Jefferson tried to avoid war by stopping foreign trade, but it hurt American merchants and was unpopular.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 4.3 -->
+    <h2>Topic 4.3 — The Marshall Court and Federal Power</h2>
+    <div class="region-card region-politics">
+      <h3>⚖️ Supreme Court Strengthens the Nation</h3>
+      <p>Chief Justice John Marshall helped strengthen the power of the federal government and the Supreme Court through major court decisions.</p>
+ 
+      <h4>Major Cases</h4>
+      <ul>
+        <li><strong>Marbury v. Madison (1803):</strong> Established judicial review, meaning the Supreme Court can declare laws unconstitutional.</li>
+        <li><strong>McCulloch v. Maryland (1819):</strong> Upheld the national bank and said states could not tax federal institutions.</li>
+        <li><strong>Gibbons v. Ogden (1824):</strong> Expanded federal power over interstate commerce.</li>
+        <li><strong>Worcester v. Georgia (1832):</strong> Ruled that states could not interfere with Cherokee territory, but Jackson refused to enforce the decision.</li>
+      </ul>
+ 
+      <h4>Significance</h4>
+      <ul>
+        <li>Marshall's decisions strengthened federal authority over state power.</li>
+        <li>The Supreme Court became a more important branch of government.</li>
+        <li>Debates over states' rights and federal power continued throughout the period.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 4.4 -->
+    <h2>Topic 4.4 — The War of 1812 and Nationalism</h2>
+    <div class="region-card region-politics">
+      <h3>🦅 War, National Pride, and the Era of Good Feelings</h3>
+      <p>The War of 1812 was caused by British interference with American trade, impressment of sailors, and conflict over western expansion. The war ended without major territorial changes, but it increased American nationalism.</p>
+ 
+      <h4>Causes</h4>
+      <ul>
+        <li><strong>Impressment:</strong> Britain forced American sailors into the British navy.</li>
+        <li><strong>Trade restrictions:</strong> Britain and France interfered with American shipping during the Napoleonic Wars.</li>
+        <li><strong>Western conflict:</strong> War Hawks believed Britain was encouraging Native resistance on the frontier.</li>
+      </ul>
+ 
+      <h4>Effects</h4>
+      <ul>
+        <li><strong>Nationalism:</strong> American pride increased after surviving another war with Britain.</li>
+        <li><strong>Death of the Federalist Party:</strong> The Hartford Convention made Federalists look disloyal.</li>
+        <li><strong>American System:</strong> Henry Clay promoted a national bank, protective tariff, and internal improvements.</li>
+        <li><strong>Monroe Doctrine:</strong> The U.S. warned European powers not to create new colonies in the Americas.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 4.5 -->
+    <h2>Topic 4.5 — The Market Revolution</h2>
+    <div class="region-card region-market">
+      <h3>🚂 Transportation, Industry, and Economic Change</h3>
+      <p>The Market Revolution transformed the American economy by connecting farmers, workers, factories, banks, roads, canals, and railroads. More people produced goods for markets instead of only for themselves.</p>
+ 
+      <h4>Transportation Revolution</h4>
+      <ul>
+        <li><strong>Roads:</strong> Turnpikes and the National Road helped connect western farmers to eastern markets.</li>
+        <li><strong>Steamboats:</strong> Made river travel faster and cheaper, especially on the Mississippi River.</li>
+        <li><strong>Canals:</strong> The Erie Canal connected the Great Lakes to New York City and made trade cheaper.</li>
+        <li><strong>Railroads:</strong> Expanded later in the period and eventually became the most important transportation system.</li>
+      </ul>
+ 
+      <h4>Industrialization</h4>
+      <ul>
+        <li><strong>Factories:</strong> Textile mills grew in the Northeast, especially in places like Lowell, Massachusetts.</li>
+        <li><strong>Lowell System:</strong> Young women worked in textile factories under strict rules and lived in company boardinghouses.</li>
+        <li><strong>Interchangeable parts:</strong> Helped make manufacturing faster and more efficient.</li>
+        <li><strong>Wage labor:</strong> More workers earned wages instead of working only on family farms.</li>
+      </ul>
+ 
+      <h4>Regional Economies</h4>
+      <ul>
+        <li><strong>North:</strong> Became more industrial, commercial, and urban.</li>
+        <li><strong>South:</strong> Expanded cotton plantations and slavery.</li>
+        <li><strong>West:</strong> Grew grain, livestock, and raw materials for national markets.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Lockport_bartlett_color.jpg?width=1000" alt="Erie Canal at Lockport, 1839" class="unit-image">
+      <div class="image-caption">Erie Canal at Lockport — connects to the Market Revolution and cheaper transportation.</div>
+    </div>
+ 
+    <!-- TOPIC 4.6 -->
+    <h2>Topic 4.6 — Slavery and King Cotton</h2>
+    <div class="region-card region-market">
+      <h3>🌱 Cotton, Slavery, and the South</h3>
+      <p>The Market Revolution did not affect every region the same way. In the South, the cotton gin and demand for cotton caused slavery to expand rapidly.</p>
+ 
+      <h4>Cotton Gin</h4>
+      <ul>
+        <li><strong>Invention:</strong> Eli Whitney's cotton gin made it easier to remove seeds from short-staple cotton.</li>
+        <li><strong>Effect:</strong> Cotton became much more profitable across the Deep South.</li>
+        <li><strong>Expansion of slavery:</strong> Instead of reducing slavery, the cotton gin made slavery more important to the Southern economy.</li>
+      </ul>
+ 
+      <h4>Southern Society</h4>
+      <ul>
+        <li><strong>Planter elite:</strong> A small group of wealthy slaveholders controlled much of the South's wealth and politics.</li>
+        <li><strong>Yeoman farmers:</strong> Most white Southerners owned small farms and often did not own slaves, but many still supported slavery.</li>
+        <li><strong>Enslaved people:</strong> Enslaved African Americans resisted through work slowdowns, escape, religion, family networks, and rebellion.</li>
+      </ul>
+ 
+      <h4>Sectional Impact</h4>
+      <ul>
+        <li>The North became more industrial while the South became more dependent on plantations.</li>
+        <li>Slavery became harder to compromise over as the nation expanded west.</li>
+        <li>The domestic slave trade separated families and moved enslaved people into the Deep South.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 4.7 -->
+    <h2>Topic 4.7 — Jacksonian Democracy</h2>
+    <div class="region-card region-jackson">
+      <h3>🎩 The Age of Jackson</h3>
+      <p>Jacksonian democracy expanded political participation for white men while also supporting Indian removal, strengthening party politics, and increasing conflict over federal power.</p>
+ 
+      <h4>Expansion of White Male Democracy</h4>
+      <ul>
+        <li><strong>Voting rights:</strong> Many states dropped property requirements for white male voters.</li>
+        <li><strong>Mass politics:</strong> Campaigns became more popular, emotional, and organized.</li>
+        <li><strong>Democratic Party:</strong> Jackson's supporters formed the modern Democratic Party.</li>
+        <li><strong>Whig Party:</strong> Jackson's opponents formed the Whig Party, supporting Congress, moral reform, and economic development.</li>
+      </ul>
+ 
+      <h4>Indian Removal</h4>
+      <ul>
+        <li><strong>Indian Removal Act:</strong> Passed in 1830 and authorized removal of Native peoples east of the Mississippi.</li>
+        <li><strong>Cherokee resistance:</strong> The Cherokee used courts and written government systems to defend their land.</li>
+        <li><strong>Trail of Tears:</strong> Forced removal of Cherokee people to Indian Territory caused suffering and death.</li>
+      </ul>
+ 
+      <h4>Bank War and Nullification</h4>
+      <ul>
+        <li><strong>Bank War:</strong> Jackson opposed the Second Bank of the United States, saying it gave too much power to elites.</li>
+        <li><strong>Nullification Crisis:</strong> South Carolina claimed it could nullify federal tariffs, but Jackson defended federal authority.</li>
+        <li><strong>Panic of 1837:</strong> Economic depression followed Jackson's banking policies and other economic problems.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Trails_of_Tears_en.png?width=1000" alt="Map of Trail of Tears removal routes" class="unit-image">
+      <div class="image-caption">Trail of Tears map — connects to Indian Removal and Jacksonian democracy's limits.</div>
+    </div>
+ 
+    <!-- TOPIC 4.8 -->
+    <h2>Topic 4.8 — Reform Movements</h2>
+    <div class="region-card region-reform">
+      <h3>🔥 Second Great Awakening and Social Reform</h3>
+      <p>The Second Great Awakening inspired many Americans to believe society could be improved. Reformers tried to fix social problems through religion, activism, education, and political pressure.</p>
+ 
+      <h4>Second Great Awakening</h4>
+      <ul>
+        <li><strong>Revivalism:</strong> Emotional religious meetings encouraged personal conversion.</li>
+        <li><strong>Charles Grandison Finney:</strong> Major revival preacher who argued people could choose salvation and improve society.</li>
+        <li><strong>Burned-over district:</strong> Area of western New York known for intense religious revival and reform activity.</li>
+      </ul>
+ 
+      <h4>Major Reform Movements</h4>
+      <ul>
+        <li><strong>Temperance:</strong> Campaign to reduce alcohol consumption.</li>
+        <li><strong>Education reform:</strong> Horace Mann supported public schools and teacher training.</li>
+        <li><strong>Prison and asylum reform:</strong> Dorothea Dix pushed for better treatment of prisoners and people with mental illness.</li>
+        <li><strong>Abolition:</strong> William Lloyd Garrison, Frederick Douglass, and others called for ending slavery.</li>
+        <li><strong>Women's rights:</strong> Seneca Falls Convention issued the Declaration of Sentiments in 1848.</li>
+      </ul>
+ 
+      <h4>Utopian Communities</h4>
+      <ul>
+        <li><strong>Goal:</strong> Create ideal societies based on cooperation, equality, religion, or shared labor.</li>
+        <li><strong>Examples:</strong> Shakers, Brook Farm, and Oneida experimented with alternative ways of living.</li>
+        <li><strong>Significance:</strong> These communities reflected the belief that society could be perfected.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cady_Stanton_home%2C_Women%27s_Rights_National_Historical_Park%2C_Seneca_Falls%2C_NY.jpg?width=1000" alt="Elizabeth Cady Stanton home sign in Seneca Falls" class="unit-image">
+      <div class="image-caption">Elizabeth Cady Stanton Home at Seneca Falls — connects to the women's rights movement.</div>
+    </div>
+ 
+    <!-- TOPIC 4.9 -->
+    <h2>Topic 4.9 — Westward Expansion and Manifest Destiny</h2>
+    <div class="region-card region-expansion">
+      <h3>🧭 Expansion, Conflict, and Sectional Tension</h3>
+      <p>Americans increasingly believed the United States was destined to expand across North America. This idea encouraged migration, conflict with Native peoples, war with Mexico, and debates over slavery in new territories.</p>
+ 
+      <h4>Manifest Destiny</h4>
+      <ul>
+        <li><strong>Meaning:</strong> Belief that the U.S. was destined by God or history to expand westward.</li>
+        <li><strong>Supporters:</strong> Many Americans saw expansion as spreading democracy and opportunity.</li>
+        <li><strong>Critics:</strong> Some opposed expansion because it caused war, Native removal, and the spread of slavery.</li>
+      </ul>
+ 
+      <h4>Texas and Oregon</h4>
+      <ul>
+        <li><strong>Texas Revolution:</strong> American settlers in Texas rebelled against Mexico and created the Republic of Texas.</li>
+        <li><strong>Annexation debate:</strong> Adding Texas raised conflict because it could expand slavery.</li>
+        <li><strong>Oregon:</strong> The U.S. and Britain negotiated a boundary at the 49th parallel in 1846.</li>
+      </ul>
+ 
+      <h4>Mexican-American War</h4>
+      <ul>
+        <li><strong>Cause:</strong> Conflict over Texas annexation and the border between Texas and Mexico.</li>
+        <li><strong>Treaty of Guadalupe Hidalgo:</strong> Mexico ceded California and much of the Southwest to the United States in 1848.</li>
+        <li><strong>Sectional debate:</strong> The new land raised the question of whether slavery would expand west.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 4.10 -->
+    <h2>Topic 4.10 — Comparison in Period 4</h2>
+    <p>The CED asks you to compare political, economic, and social developments during Period 4. Use this table as a starting point.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Comparison</th>
+            <th>Side 1</th>
+            <th>Side 2</th>
+            <th>Main Difference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Jeffersonian vs. Jacksonian Democracy</td><td>Jefferson favored limited government and an agrarian republic</td><td>Jackson expanded white male political participation and mass party politics</td><td>Jacksonian democracy was more populist for white men but more aggressive toward Native peoples</td></tr>
+          <tr><td>North vs. South</td><td>North became more industrial, urban, and wage-labor based</td><td>South became more plantation-based and dependent on slavery</td><td>Different economies increased sectional tension</td></tr>
+          <tr><td>Democrats vs. Whigs</td><td>Democrats supported limited government, states' rights, and Jackson</td><td>Whigs supported Congress, reform, internal improvements, and the American System</td><td>Different views of federal power and economic development</td></tr>
+          <tr><td>Market Revolution vs. Plantation Expansion</td><td>Market Revolution connected commerce, factories, roads, canals, and railroads</td><td>Plantation expansion spread cotton and slavery deeper into the South</td><td>Both expanded the economy but deepened regional differences</td></tr>
+          <tr><td>Reformers vs. Defenders of Tradition</td><td>Reformers wanted to improve society through activism</td><td>Defenders of tradition resisted changes to slavery, gender roles, and social hierarchy</td><td>Reform challenged existing power structures</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/George_Caleb_Bingham_-_The_County_Election.jpg?width=1000" alt="George Caleb Bingham painting The County Election" class="unit-image">
+      <div class="image-caption">The County Election by George Caleb Bingham — connects to mass democracy and political participation in the Jacksonian era.</div>
+    </div>
+ 
+    <h3>Cross-Regional Continuities &amp; Change</h3>
+    <ul>
+      <li><strong>Continuity:</strong> Americans continued debating the balance between federal power, states' rights, democracy, and liberty.</li>
+      <li><strong>Change:</strong> The United States expanded west, grew more democratic for white men, and became more connected through markets and transportation.</li>
+      <li><strong>Similarities:</strong> Many reformers, politicians, and expansionists claimed they were improving or strengthening the nation.</li>
+      <li><strong>Differences:</strong> Expansion and economic growth benefited some Americans while harming Native peoples, enslaved people, women, and many workers.</li>
+    </ul>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Revolution of 1800</span>Peaceful transfer of power from Federalists to Democratic-Republicans.</div>
+      <div class="vocab-item"><span class="vocab-term">Louisiana Purchase</span>1803 land purchase from France that doubled the size of the United States.</div>
+      <div class="vocab-item"><span class="vocab-term">Marbury v. Madison</span>Supreme Court case that established judicial review.</div>
+      <div class="vocab-item"><span class="vocab-term">Judicial Review</span>Power of the Supreme Court to declare laws unconstitutional.</div>
+      <div class="vocab-item"><span class="vocab-term">War of 1812</span>War between the United States and Britain that increased American nationalism.</div>
+      <div class="vocab-item"><span class="vocab-term">American System</span>Henry Clay's plan for a national bank, protective tariff, and internal improvements.</div>
+      <div class="vocab-item"><span class="vocab-term">Monroe Doctrine</span>1823 policy warning Europe against new colonization in the Americas.</div>
+      <div class="vocab-item"><span class="vocab-term">Market Revolution</span>Economic transformation caused by transportation, industry, banking, and commercial farming.</div>
+      <div class="vocab-item"><span class="vocab-term">Erie Canal</span>Canal connecting the Great Lakes to the Atlantic through New York.</div>
+      <div class="vocab-item"><span class="vocab-term">Lowell System</span>Factory system using young women workers in textile mills.</div>
+      <div class="vocab-item"><span class="vocab-term">Cotton Gin</span>Machine that made cotton production faster and expanded slavery.</div>
+      <div class="vocab-item"><span class="vocab-term">Jacksonian Democracy</span>Political movement expanding white male voting and mass party politics.</div>
+      <div class="vocab-item"><span class="vocab-term">Indian Removal Act</span>1830 law authorizing forced removal of Native peoples east of the Mississippi.</div>
+      <div class="vocab-item"><span class="vocab-term">Trail of Tears</span>Forced removal of the Cherokee to Indian Territory.</div>
+      <div class="vocab-item"><span class="vocab-term">Nullification Crisis</span>Conflict over South Carolina's claim that it could nullify federal tariffs.</div>
+      <div class="vocab-item"><span class="vocab-term">Second Great Awakening</span>Religious revival movement that inspired reform.</div>
+      <div class="vocab-item"><span class="vocab-term">Seneca Falls Convention</span>1848 women's rights convention that issued the Declaration of Sentiments.</div>
+      <div class="vocab-item"><span class="vocab-term">Manifest Destiny</span>Belief that the U.S. was destined to expand westward.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+ 
+      <div class="quiz-question">
+        <p><strong>1. Which of the following best explains why the Louisiana Purchase was controversial for Jefferson?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) It reduced the size of the United States.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Jefferson believed in strict construction, but the Constitution did not clearly give presidents power to buy land.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) It gave France control of New Orleans.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) It ended all westward expansion.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> Jefferson usually supported strict construction, but the Louisiana Purchase required a broader interpretation of presidential power.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. Which development most directly contributed to the Market Revolution?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) The end of all banking in the United States.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) Improvements in transportation such as roads, canals, steamboats, and railroads.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) The disappearance of cities in the Northeast.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) The decline of commercial agriculture.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: B.</strong> Transportation improvements lowered costs, connected regions, and allowed farmers and manufacturers to sell goods in wider markets.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. What was one major effect of the cotton gin?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) It ended slavery in the South.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) It made cotton more profitable and expanded slavery in the Deep South.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) It caused the North to abandon factories.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) It stopped westward migration.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: B.</strong> The cotton gin made short-staple cotton profitable, which increased demand for enslaved labor and expanded plantation slavery.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>4. Which statement best describes Jacksonian democracy?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) It expanded voting rights for all Americans equally.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) It expanded political participation for white men while excluding women, Native Americans, and most African Americans.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) It eliminated political parties.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) It gave Native peoples more control over eastern lands.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> Jacksonian democracy expanded white male suffrage and mass politics, but it excluded many groups and supported Indian removal.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. Which reform movement is most directly connected to the Seneca Falls Convention?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Temperance.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Prison reform.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(C) Women's rights.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) The Bank War.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: C.</strong> The Seneca Falls Convention of 1848 was a major early women's rights convention and produced the Declaration of Sentiments.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+    <p>SAQs ask you to respond in complete sentences — no thesis needed, but be specific and use evidence. Aim for 2–4 sentences per part.</p>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — Market Revolution (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE transportation development that contributed to the Market Revolution.</li>
+        <li>Identify ONE way the Market Revolution changed the North.</li>
+        <li>Explain ONE way the Market Revolution increased sectional differences between the North and South.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The Erie Canal contributed to the Market Revolution by connecting the Great Lakes to New York City and making trade cheaper.</p>
+        <p><strong>(b)</strong> The Market Revolution changed the North by increasing factory work, wage labor, urban growth, and commercial farming.</p>
+        <p><strong>(c)</strong> It increased sectional differences because the North became more industrial and wage-labor based, while the South expanded cotton plantations and slavery.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+      <p style="background:#f8fbff; padding:0.8rem; border-radius:6px; border-left:4px solid #1f3a5f;">
+        "We hold these truths to be self-evident: that all men and women are created equal..."
+        <br>
+        <em>— Declaration of Sentiments, Seneca Falls Convention, 1848</em>
+      </p>
+      <ol type="a">
+        <li>Identify ONE reform movement reflected in the excerpt.</li>
+        <li>Explain ONE way the Second Great Awakening contributed to reform movements.</li>
+        <li>Explain ONE limitation of reform movements during this period.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The excerpt reflects the women's rights movement because it argues that women should have equal rights with men.</p>
+        <p><strong>(b)</strong> The Second Great Awakening contributed to reform by encouraging people to believe that individuals and society could be morally improved.</p>
+        <p><strong>(c)</strong> One limitation was that many reform movements faced strong resistance, and women still did not gain national voting rights during this period.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>The U.S. expanded dramatically.</strong> The Louisiana Purchase, westward migration, Texas, Oregon, and war with Mexico increased U.S. territory.</li>
+        <li><strong>Federal power grew through the courts.</strong> Marshall Court decisions strengthened the Supreme Court and national authority.</li>
+        <li><strong>The Market Revolution transformed the economy.</strong> Transportation, factories, banks, and commercial farming connected regions more tightly.</li>
+        <li><strong>Slavery expanded with cotton.</strong> The cotton gin and plantation agriculture made slavery more central to the Southern economy.</li>
+        <li><strong>Jacksonian democracy expanded voting for white men.</strong> However, it excluded many groups and included forced Native removal.</li>
+        <li><strong>Reform movements grew.</strong> The Second Great Awakening inspired temperance, abolition, education reform, prison reform, and women's rights.</li>
+        <li><strong>Sectionalism increased.</strong> Economic differences, slavery, tariffs, and westward expansion made North-South conflict worse.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP United States History</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
+
