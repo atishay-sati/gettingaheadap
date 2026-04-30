@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 6: Thermodynamics — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 6: Thermodynamics | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">🔥 Unit 6: Thermodynamics</h1>
+      <p class="lead mt-3">Explore energy changes in chemical reactions &mdash; enthalpy, calorimetry, bond energies, and Hess&rsquo;s Law.</p>
+      <p class="mt-2"><strong>Exam Weight: 7&ndash;9%</strong> &nbsp;|&nbsp; Topics 6.1&ndash;6.9</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-6-1"><li class="list-group-item">6.1 &mdash; Endothermic and Exothermic Processes</li></a>
+      <a href="#topic-6-2"><li class="list-group-item">6.2 &mdash; Energy Diagrams</li></a>
+      <a href="#topic-6-3"><li class="list-group-item">6.3 &mdash; Heat Transfer and Thermal Equilibrium</li></a>
+      <a href="#topic-6-4"><li class="list-group-item">6.4 &mdash; Heat Capacity and Calorimetry</li></a>
+      <a href="#topic-6-5"><li class="list-group-item">6.5 &mdash; Energy of Phase Changes</li></a>
+      <a href="#topic-6-6"><li class="list-group-item">6.6 &mdash; Introduction to Enthalpy of Reaction</li></a>
+      <a href="#topic-6-7"><li class="list-group-item">6.7 &mdash; Bond Enthalpies</li></a>
+      <a href="#topic-6-8"><li class="list-group-item">6.8 &mdash; Enthalpy of Formation</li></a>
+      <a href="#topic-6-9"><li class="list-group-item">6.9 &mdash; Hess&rsquo;s Law</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 6.1 ===== -->
+  <section class="container my-4" id="topic-6-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.1 &mdash; Endothermic and Exothermic Processes</h3>
+ 
+      <p>Every chemical and physical process involves energy changes. The <strong>system</strong> is the reaction or process being studied; the <strong>surroundings</strong> are everything else (including the container, the solvent, and the air).</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Feature</th><th>Exothermic</th><th>Endothermic</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Energy flow</td><td>System releases energy TO surroundings</td><td>System absorbs energy FROM surroundings</td></tr>
+            <tr><td>&Delta;H</td><td>Negative (&Delta;H &lt; 0)</td><td>Positive (&Delta;H &gt; 0)</td></tr>
+            <tr><td>Temperature of surroundings</td><td>Increases (feels warm/hot)</td><td>Decreases (feels cold)</td></tr>
+            <tr><td>Bond perspective</td><td>Energy released forming bonds &gt; energy absorbed breaking bonds</td><td>Energy absorbed breaking bonds &gt; energy released forming bonds</td></tr>
+            <tr><td>Examples</td><td>Combustion, neutralization, formation of ionic compounds</td><td>Photosynthesis, melting ice, dissolving NH₄NO₃</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Energy perspective on bonds:</strong><br>
+        &bull; <strong>Breaking bonds</strong> always requires energy (endothermic process).<br>
+        &bull; <strong>Forming bonds</strong> always releases energy (exothermic process).<br>
+        &bull; The overall &Delta;H depends on the balance: if more energy is released forming new bonds than is absorbed breaking old bonds, the reaction is exothermic.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.2 ===== -->
+  <section class="container my-4" id="topic-6-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.2 &mdash; Energy Diagrams</h3>
+ 
+      <p>Energy diagrams (enthalpy diagrams) visually represent the energy changes during a reaction. They show the relative enthalpy of reactants and products.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Activation_energy.svg"
+          alt="Exothermic energy diagram" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">Energy diagram showing activation energy, transition state, and &Delta;H. Products are lower than reactants for an exothermic reaction. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Exothermic reaction:</strong> Products are at a LOWER energy level than reactants. Energy is released. &Delta;H &lt; 0.<br><br>
+        <strong>Endothermic reaction:</strong> Products are at a HIGHER energy level than reactants. Energy is absorbed. &Delta;H &gt; 0.<br><br>
+        <strong>Reading the diagram:</strong><br>
+        &bull; The vertical axis = enthalpy (H) or potential energy<br>
+        &bull; &Delta;H = H<sub>products</sub> &minus; H<sub>reactants</sub><br>
+        &bull; E<sub>a</sub> (forward) = height of the peak above the reactants<br>
+        &bull; E<sub>a</sub> (reverse) = height of the peak above the products<br>
+        &bull; E<sub>a</sub>(reverse) = E<sub>a</sub>(forward) &minus; &Delta;H (for exothermic) or E<sub>a</sub>(forward) + |&Delta;H| (for endothermic)
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.3 ===== -->
+  <section class="container my-4" id="topic-6-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.3 &mdash; Heat Transfer and Thermal Equilibrium</h3>
+ 
+      <p><strong>Heat (q)</strong> is the transfer of thermal energy between objects at different temperatures. Heat always flows spontaneously from hot to cold until <strong>thermal equilibrium</strong> is reached (both objects at the same temperature).</p>
+ 
+      <div class="key-concept">
+        <strong>Conservation of energy in heat transfer:</strong><br>
+        q<sub>lost</sub> = &minus;q<sub>gained</sub><br><br>
+        The heat lost by the hotter object equals the heat gained by the cooler object (assuming no heat loss to the environment).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Important Distinctions</h5>
+      <ul>
+        <li><strong>Temperature</strong> (T): A measure of the <em>average</em> kinetic energy of particles. Intensive property (does not depend on amount).</li>
+        <li><strong>Heat</strong> (q): The <em>total</em> energy transferred. Extensive property (depends on amount of substance).</li>
+        <li><strong>Internal energy</strong> (U): The total kinetic + potential energy of all particles in a system.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> A 50.0 g piece of copper (c = 0.385 J/g&middot;&deg;C) at 100.0&deg;C is placed in 200.0 g of water (c = 4.184 J/g&middot;&deg;C) at 25.0&deg;C. Find the final temperature.<br><br>
+        q<sub>lost by Cu</sub> = &minus;q<sub>gained by H₂O</sub><br>
+        (50.0)(0.385)(T<sub>f</sub> &minus; 100.0) = &minus;(200.0)(4.184)(T<sub>f</sub> &minus; 25.0)<br>
+        19.25(T<sub>f</sub> &minus; 100.0) = &minus;836.8(T<sub>f</sub> &minus; 25.0)<br>
+        19.25T<sub>f</sub> &minus; 1925 = &minus;836.8T<sub>f</sub> + 20920<br>
+        856.05T<sub>f</sub> = 22845<br>
+        T<sub>f</sub> = <strong>26.7&deg;C</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.4 ===== -->
+  <section class="container my-4" id="topic-6-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.4 &mdash; Heat Capacity and Calorimetry</h3>
+ 
+      <p><strong>Calorimetry</strong> is the experimental measurement of heat changes in chemical or physical processes.</p>
+ 
+      <div class="key-concept">
+        <strong>q = mc&Delta;T</strong><br><br>
+        &bull; q = heat (J or kJ)<br>
+        &bull; m = mass (g)<br>
+        &bull; c = specific heat capacity (J/g&middot;&deg;C) &mdash; amount of heat needed to raise 1 g by 1&deg;C<br>
+        &bull; &Delta;T = T<sub>final</sub> &minus; T<sub>initial</sub><br><br>
+        <strong>Specific heat of water:</strong> 4.184 J/g&middot;&deg;C (one of the highest of any common substance &mdash; water is an excellent heat sink)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Coffee Cup Calorimeter (Constant Pressure)</h5>
+      <ul>
+        <li>Used for reactions in aqueous solution (acid-base, dissolution, etc.).</li>
+        <li>Open to the atmosphere &rarr; pressure is constant &rarr; q<sub>rxn</sub> = &Delta;H.</li>
+        <li>Assumes all heat is absorbed by the water: q<sub>water</sub> = mc&Delta;T, and q<sub>rxn</sub> = &minus;q<sub>water</sub>.</li>
+        <li>To find &Delta;H per mole: divide q<sub>rxn</sub> by the moles of limiting reagent.</li>
+      </ul>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Bomb Calorimeter (Constant Volume)</h5>
+      <ul>
+        <li>Used for combustion reactions.</li>
+        <li>Sealed, rigid container &rarr; constant volume &rarr; measures &Delta;U (internal energy change), which is approximately equal to &Delta;H for most reactions.</li>
+        <li>q = C<sub>cal</sub> &times; &Delta;T &nbsp;where C<sub>cal</sub> = heat capacity of the entire calorimeter (J/&deg;C).</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> 50.0 mL of 1.00 M HCl and 50.0 mL of 1.00 M NaOH (both at 25.0&deg;C) are mixed in a coffee cup calorimeter. T<sub>f</sub> = 31.9&deg;C. Find &Delta;H for the neutralization (per mole).<br>
+        q<sub>water</sub> = (100.0 g)(4.184 J/g&middot;&deg;C)(31.9 &minus; 25.0) = 2887 J = 2.887 kJ<br>
+        q<sub>rxn</sub> = &minus;2.887 kJ (exothermic)<br>
+        Moles = 0.0500 mol HCl (limiting)<br>
+        &Delta;H = &minus;2.887 / 0.0500 = <strong>&minus;57.7 kJ/mol</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.5 ===== -->
+  <section class="container my-4" id="topic-6-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.5 &mdash; Energy of Phase Changes</h3>
+ 
+      <p>Phase changes involve energy changes even though the temperature remains constant during the transition. The energy goes into overcoming (or forming) intermolecular forces, not into changing kinetic energy.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Phase Change</th><th>Direction</th><th>Energy</th><th>Equation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Melting (fusion)</td><td>Solid &rarr; Liquid</td><td>Endothermic</td><td>q = n &times; &Delta;H<sub>fus</sub></td></tr>
+            <tr><td>Vaporization</td><td>Liquid &rarr; Gas</td><td>Endothermic</td><td>q = n &times; &Delta;H<sub>vap</sub></td></tr>
+            <tr><td>Sublimation</td><td>Solid &rarr; Gas</td><td>Endothermic</td><td>q = n &times; (&Delta;H<sub>fus</sub> + &Delta;H<sub>vap</sub>)</td></tr>
+            <tr><td>Freezing</td><td>Liquid &rarr; Solid</td><td>Exothermic</td><td>q = &minus;n &times; &Delta;H<sub>fus</sub></td></tr>
+            <tr><td>Condensation</td><td>Gas &rarr; Liquid</td><td>Exothermic</td><td>q = &minus;n &times; &Delta;H<sub>vap</sub></td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>&Delta;H<sub>vap</sub> &gt; &Delta;H<sub>fus</sub></strong> because going from liquid to gas requires breaking ALL remaining IMFs, while going from solid to liquid only requires <em>partially</em> overcoming them (particles gain enough freedom to flow but remain close together).<br><br>
+        For water: &Delta;H<sub>fus</sub> = 6.02 kJ/mol &nbsp;|&nbsp; &Delta;H<sub>vap</sub> = 40.7 kJ/mol
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Heating Curve Calculations</h5>
+      <p>To calculate the total energy needed to go from one state to another (e.g., ice at &minus;10&deg;C to steam at 120&deg;C), add up the energy for <strong>each segment</strong>:</p>
+      <ol>
+        <li>Heat the solid: q₁ = mc<sub>solid</sub>&Delta;T</li>
+        <li>Melt the solid: q₂ = n&Delta;H<sub>fus</sub></li>
+        <li>Heat the liquid: q₃ = mc<sub>liquid</sub>&Delta;T</li>
+        <li>Boil the liquid: q₄ = n&Delta;H<sub>vap</sub></li>
+        <li>Heat the gas: q₅ = mc<sub>gas</sub>&Delta;T</li>
+      </ol>
+      <p>Total q = q₁ + q₂ + q₃ + q₄ + q₅</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.6 ===== -->
+  <section class="container my-4" id="topic-6-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.6 &mdash; Introduction to Enthalpy of Reaction</h3>
+ 
+      <p>The <strong>enthalpy of reaction (&Delta;H<sub>rxn</sub>)</strong> is the heat change associated with a chemical reaction at constant pressure. It is one of the most important quantities in thermochemistry.</p>
+ 
+      <div class="key-concept">
+        <strong>Properties of &Delta;H:</strong><br>
+        1. <strong>Extensive:</strong> &Delta;H is proportional to the amount of reactants. If you double the reaction, &Delta;H doubles.<br>
+        2. <strong>Sign reversal:</strong> Reversing the reaction reverses the sign of &Delta;H.<br>
+        3. <strong>State-dependent:</strong> &Delta;H depends on the states of reactants and products (s, l, g, aq).<br>
+        4. &Delta;H<sub>rxn</sub> = H<sub>products</sub> &minus; H<sub>reactants</sub>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Thermochemical equations:</strong><br>
+        A balanced equation with &Delta;H specified:<br>
+        CH₄(g) + 2O₂(g) &rarr; CO₂(g) + 2H₂O(l) &nbsp;&nbsp;&Delta;H = &minus;890.4 kJ<br><br>
+        This means 890.4 kJ of heat is released when <strong>1 mol CH₄</strong> reacts with <strong>2 mol O₂</strong> to form CO₂ and liquid water.<br>
+        If 2 mol CH₄ react: &Delta;H = 2(&minus;890.4) = &minus;1780.8 kJ<br>
+        The reverse reaction: CO₂(g) + 2H₂O(l) &rarr; CH₄(g) + 2O₂(g) &nbsp;&Delta;H = +890.4 kJ
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.7 ===== -->
+  <section class="container my-4" id="topic-6-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.7 &mdash; Bond Enthalpies</h3>
+ 
+      <p><strong>Bond enthalpy</strong> (bond energy) is the energy required to break one mole of a particular bond in the gas phase. It can be used to estimate &Delta;H<sub>rxn</sub> when standard enthalpies of formation are not available.</p>
+ 
+      <div class="key-concept">
+        <strong>&Delta;H<sub>rxn</sub> &asymp; &Sigma;(bonds broken) &minus; &Sigma;(bonds formed)</strong><br><br>
+        &bull; Breaking bonds is <strong>endothermic</strong> (+)<br>
+        &bull; Forming bonds is <strong>exothermic</strong> (&minus;)<br>
+        &bull; If more energy is released forming bonds than absorbed breaking bonds &rarr; exothermic (&Delta;H &lt; 0)
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> Estimate &Delta;H for H₂(g) + Cl₂(g) &rarr; 2HCl(g)<br><br>
+        Bonds broken: 1 H&mdash;H (436 kJ/mol) + 1 Cl&mdash;Cl (242 kJ/mol) = 678 kJ<br>
+        Bonds formed: 2 H&mdash;Cl (431 kJ/mol each) = 862 kJ<br>
+        &Delta;H = 678 &minus; 862 = <strong>&minus;184 kJ</strong> (exothermic)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Limitations of Bond Enthalpies</h5>
+      <ul>
+        <li>Bond enthalpies are <strong>averages</strong> over many different molecules. The actual O&mdash;H bond energy in water is slightly different from the O&mdash;H in ethanol.</li>
+        <li>This method gives <strong>estimates</strong>, not exact values.</li>
+        <li>Only applies to <strong>gas-phase reactions</strong>. If reactants or products are liquids or solids, additional energy terms (e.g., &Delta;H<sub>vap</sub>) are needed.</li>
+        <li>Works best for simple molecules; less accurate for complex ones or resonance structures.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.8 ===== -->
+  <section class="container my-4" id="topic-6-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.8 &mdash; Enthalpy of Formation</h3>
+ 
+      <p>The <strong>standard enthalpy of formation (&Delta;H&deg;<sub>f</sub>)</strong> is the enthalpy change when <strong>one mole</strong> of a compound is formed from its elements in their <strong>standard states</strong> (most stable form at 1 atm and 25&deg;C).</p>
+ 
+      <div class="key-concept">
+        <strong>Key rules:</strong><br>
+        &bull; &Delta;H&deg;<sub>f</sub> of any <strong>element in its standard state</strong> = 0 (by definition).<br>
+        &nbsp;&nbsp;Examples: O₂(g), N₂(g), C(graphite), Fe(s), H₂(g) all have &Delta;H&deg;<sub>f</sub> = 0<br>
+        &bull; &Delta;H&deg;<sub>f</sub> of compounds can be positive (endothermic formation) or negative (exothermic formation).<br>
+        &bull; Compounds with very negative &Delta;H&deg;<sub>f</sub> are very stable (e.g., CO₂: &minus;393.5 kJ/mol; H₂O(l): &minus;285.8 kJ/mol).
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Using &Delta;H&deg;<sub>f</sub> to calculate &Delta;H&deg;<sub>rxn</sub>:</strong><br><br>
+        <strong>&Delta;H&deg;<sub>rxn</sub> = &Sigma; n&Delta;H&deg;<sub>f</sub>(products) &minus; &Sigma; n&Delta;H&deg;<sub>f</sub>(reactants)</strong><br><br>
+        where n = stoichiometric coefficients from the balanced equation.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> Calculate &Delta;H&deg; for the combustion of methane:<br>
+        CH₄(g) + 2O₂(g) &rarr; CO₂(g) + 2H₂O(l)<br><br>
+        &Delta;H&deg;<sub>f</sub> values: CH₄(g) = &minus;74.8 kJ/mol; O₂(g) = 0; CO₂(g) = &minus;393.5 kJ/mol; H₂O(l) = &minus;285.8 kJ/mol<br><br>
+        &Delta;H&deg;<sub>rxn</sub> = [(&minus;393.5) + 2(&minus;285.8)] &minus; [(&minus;74.8) + 2(0)]<br>
+        = (&minus;393.5 &minus; 571.6) &minus; (&minus;74.8)<br>
+        = &minus;965.1 + 74.8 = <strong>&minus;890.3 kJ</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 6.9 ===== -->
+  <section class="container my-4" id="topic-6-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">6.9 &mdash; Hess&rsquo;s Law</h3>
+ 
+      <p><strong>Hess&rsquo;s Law</strong> states that the total enthalpy change for a reaction is the same regardless of whether it occurs in one step or multiple steps. This works because enthalpy is a <strong>state function</strong> &mdash; it depends only on the initial and final states, not the path taken.</p>
+ 
+      <div class="key-concept">
+        <strong>Rules for manipulating thermochemical equations:</strong><br>
+        1. If you <strong>reverse</strong> an equation, <strong>change the sign</strong> of &Delta;H.<br>
+        2. If you <strong>multiply</strong> an equation by a factor, <strong>multiply &Delta;H</strong> by the same factor.<br>
+        3. If you <strong>add</strong> equations, <strong>add their &Delta;H values</strong>.<br>
+        4. Species that appear on both sides of the summed equation cancel out.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Worked Example:</strong> Find &Delta;H for: C(s) + 2H₂(g) &rarr; CH₄(g)<br><br>
+        Given:<br>
+        (1) C(s) + O₂(g) &rarr; CO₂(g) &nbsp;&nbsp;&nbsp;&Delta;H₁ = &minus;393.5 kJ<br>
+        (2) H₂(g) + ½O₂(g) &rarr; H₂O(l) &nbsp;&nbsp;&nbsp;&Delta;H₂ = &minus;285.8 kJ<br>
+        (3) CH₄(g) + 2O₂(g) &rarr; CO₂(g) + 2H₂O(l) &nbsp;&nbsp;&nbsp;&Delta;H₃ = &minus;890.3 kJ<br><br>
+ 
+        Strategy: We need C and H₂ as reactants and CH₄ as the product.<br>
+        Use equation (1) as is: C(s) + O₂(g) &rarr; CO₂(g) &nbsp;&Delta;H = &minus;393.5<br>
+        Multiply equation (2) by 2: 2H₂(g) + O₂(g) &rarr; 2H₂O(l) &nbsp;&Delta;H = 2(&minus;285.8) = &minus;571.6<br>
+        Reverse equation (3): CO₂(g) + 2H₂O(l) &rarr; CH₄(g) + 2O₂(g) &nbsp;&Delta;H = +890.3<br><br>
+ 
+        Sum: C(s) + 2H₂(g) + O₂(g) + CO₂(g) + 2H₂O(l) &rarr; CO₂(g) + 2H₂O(l) + CH₄(g) + 2O₂(g)<br>
+        Cancel: CO₂, 2H₂O, and net O₂ cancel<br>
+        Result: C(s) + 2H₂(g) &rarr; CH₄(g)<br>
+        <strong>&Delta;H = &minus;393.5 + (&minus;571.6) + 890.3 = &minus;74.8 kJ</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">AP Exam Strategy for Hess&rsquo;s Law</h5>
+      <ol>
+        <li>Write the <strong>target equation</strong> clearly.</li>
+        <li>Look at each given equation and decide if you need to use it <strong>as is</strong>, <strong>reversed</strong>, or <strong>multiplied</strong>.</li>
+        <li>Focus on species that appear in the target equation &mdash; ensure they end up on the correct side.</li>
+        <li>Add equations and &Delta;H values. Verify that unwanted species cancel.</li>
+      </ol>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 6. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. In an exothermic reaction:</p>
+      <ul class="options">
+        <li>(A) The system absorbs energy from the surroundings</li>
+        <li>(B) &Delta;H is positive</li>
+        <li>(C) The temperature of the surroundings increases</li>
+        <li>(D) Energy is required to form products</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        In an exothermic reaction, the system releases heat to the surroundings, causing the <strong>temperature of the surroundings to increase</strong>. &Delta;H is negative.
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. On an energy diagram, the activation energy of the forward reaction is the difference between:</p>
+      <ul class="options">
+        <li>(A) Products and reactants</li>
+        <li>(B) Transition state and products</li>
+        <li>(C) Transition state and reactants</li>
+        <li>(D) Reactants and 0</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        E<sub>a</sub>(forward) = energy of the <strong>transition state</strong> minus the energy of the <strong>reactants</strong>. This is the energy barrier molecules must overcome for the reaction to proceed.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. A 100.0 g sample of water absorbs 4184 J of heat. By how much does its temperature increase? (c<sub>water</sub> = 4.184 J/g&middot;&deg;C)</p>
+      <ul class="options">
+        <li>(A) 1.0&deg;C</li>
+        <li>(B) 10.0&deg;C</li>
+        <li>(C) 41.84&deg;C</li>
+        <li>(D) 100.0&deg;C</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        &Delta;T = q / (mc) = 4184 / (100.0 &times; 4.184) = <strong>10.0&deg;C</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. Which statement about calorimetry is correct?</p>
+      <ul class="options">
+        <li>(A) A bomb calorimeter operates at constant pressure</li>
+        <li>(B) A coffee cup calorimeter operates at constant volume</li>
+        <li>(C) q<sub>rxn</sub> = &minus;q<sub>solution</sub> in a coffee cup calorimeter</li>
+        <li>(D) Heat capacity and specific heat are the same thing</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        In a coffee cup calorimeter (constant pressure), the heat released by the reaction is absorbed by the solution: <strong>q<sub>rxn</sub> = &minus;q<sub>solution</sub></strong>. A bomb calorimeter operates at constant volume, not pressure.
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. Why is &Delta;H<sub>vap</sub> greater than &Delta;H<sub>fus</sub> for the same substance?</p>
+      <ul class="options">
+        <li>(A) Vaporization requires breaking all remaining intermolecular forces</li>
+        <li>(B) Fusion produces a gas with more kinetic energy</li>
+        <li>(C) Fusion requires more energy because solids are more ordered</li>
+        <li>(D) Vaporization involves breaking covalent bonds</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (A)</strong><br>
+        <strong>Vaporization</strong> requires breaking essentially ALL remaining intermolecular forces to completely separate molecules into the gas phase. Fusion only requires partially overcoming IMFs (enough for particles to flow but not completely separate).
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. If a reaction has &Delta;H = &minus;200 kJ, what is &Delta;H for the reverse reaction?</p>
+      <ul class="options">
+        <li>(A) &minus;200 kJ</li>
+        <li>(B) +200 kJ</li>
+        <li>(C) &minus;400 kJ</li>
+        <li>(D) 0 kJ</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Reversing a reaction changes the sign of &Delta;H. If the forward reaction releases 200 kJ (exothermic), the reverse reaction absorbs 200 kJ (endothermic): <strong>+200 kJ</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. Using bond enthalpies: H&mdash;H = 436 kJ/mol, Cl&mdash;Cl = 242 kJ/mol, H&mdash;Cl = 431 kJ/mol. Estimate &Delta;H for H₂ + Cl₂ &rarr; 2HCl.</p>
+      <ul class="options">
+        <li>(A) &minus;184 kJ</li>
+        <li>(B) +184 kJ</li>
+        <li>(C) &minus;247 kJ</li>
+        <li>(D) &minus;862 kJ</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (A)</strong><br>
+        Bonds broken: 436 + 242 = 678 kJ. Bonds formed: 2(431) = 862 kJ.<br>
+        &Delta;H = 678 &minus; 862 = <strong>&minus;184 kJ</strong> (exothermic).
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. The standard enthalpy of formation of O₂(g) is:</p>
+      <ul class="options">
+        <li>(A) &minus;249 kJ/mol</li>
+        <li>(B) +249 kJ/mol</li>
+        <li>(C) 0 kJ/mol</li>
+        <li>(D) Cannot be determined</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        O₂(g) is oxygen in its <strong>standard state</strong> (most stable form at 1 atm, 25&deg;C). By definition, &Delta;H&deg;<sub>f</sub> of any element in its standard state = <strong>0 kJ/mol</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. Hess&rsquo;s Law works because:</p>
+      <ul class="options">
+        <li>(A) All reactions are reversible</li>
+        <li>(B) Enthalpy is a state function</li>
+        <li>(C) Energy is always conserved as heat</li>
+        <li>(D) Bond enthalpies are exact values</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Hess&rsquo;s Law works because enthalpy is a <strong>state function</strong> &mdash; it depends only on the initial and final states, not the pathway. So the total &Delta;H is the same whether the reaction occurs in one step or many.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. Given: (1) A &rarr; B, &Delta;H = &minus;100 kJ; (2) B &rarr; C, &Delta;H = +50 kJ. What is &Delta;H for A &rarr; C?</p>
+      <ul class="options">
+        <li>(A) &minus;150 kJ</li>
+        <li>(B) &minus;50 kJ</li>
+        <li>(C) +50 kJ</li>
+        <li>(D) +150 kJ</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        By Hess&rsquo;s Law: &Delta;H(A &rarr; C) = &Delta;H(A &rarr; B) + &Delta;H(B &rarr; C) = (&minus;100) + (+50) = <strong>&minus;50 kJ</strong>.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 6</h5>
+        <p class="card-text">Thermodynamics connects to almost every other unit. Master the <strong>q = mc&Delta;T</strong> and <strong>q = n&Delta;H</strong> calculations &mdash; they appear in many FRQ problems. Practice <strong>Hess&rsquo;s Law</strong> manipulations (reversing, multiplying, adding equations) until they feel automatic. Know the <strong>&Delta;H&deg;<sub>f</sub> formula</strong> (products minus reactants) and remember that elements in standard states = 0. For bond enthalpies, remember the formula is &Sigma;broken &minus; &Sigma;formed. Always check your signs &mdash; the most common error is mixing up endothermic and exothermic.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
