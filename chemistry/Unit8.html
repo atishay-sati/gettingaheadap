@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 8: Acids and Bases — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 8: Acids and Bases | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">🧫 Unit 8: Acids and Bases</h1>
+      <p class="lead mt-3">Dive into proton transfer chemistry &mdash; pH, K<sub>a</sub>/K<sub>b</sub>, buffers, and titrations.</p>
+      <p class="mt-2"><strong>Exam Weight: 11&ndash;15%</strong> &nbsp;|&nbsp; Topics 8.1&ndash;8.10</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-8-1"><li class="list-group-item">8.1 &mdash; Introduction to Acids and Bases</li></a>
+      <a href="#topic-8-2"><li class="list-group-item">8.2 &mdash; pH and pOH of Strong Acids and Bases</li></a>
+      <a href="#topic-8-3"><li class="list-group-item">8.3 &mdash; Weak Acid and Base Equilibria</li></a>
+      <a href="#topic-8-4"><li class="list-group-item">8.4 &mdash; Acid-Base Reactions and Buffers</li></a>
+      <a href="#topic-8-5"><li class="list-group-item">8.5 &mdash; Acid-Base Titrations</li></a>
+      <a href="#topic-8-6"><li class="list-group-item">8.6 &mdash; Molecular Structure of Acids and Bases</li></a>
+      <a href="#topic-8-7"><li class="list-group-item">8.7 &mdash; pH and pK<sub>a</sub></li></a>
+      <a href="#topic-8-8"><li class="list-group-item">8.8 &mdash; Properties of Buffers</li></a>
+      <a href="#topic-8-9"><li class="list-group-item">8.9 &mdash; Henderson-Hasselbalch Equation</li></a>
+      <a href="#topic-8-10"><li class="list-group-item">8.10 &mdash; Buffer Capacity</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 8.1 ===== -->
+  <section class="container my-4" id="topic-8-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.1 &mdash; Introduction to Acids and Bases</h3>
+ 
+      <p>There are multiple models for understanding acid-base chemistry. The AP exam primarily uses the <strong>Br&oslash;nsted-Lowry</strong> model.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Model</th><th>Acid Definition</th><th>Base Definition</th><th>Scope</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Arrhenius</strong></td><td>Produces H⁺ in water</td><td>Produces OH⁻ in water</td><td>Aqueous solutions only</td></tr>
+            <tr><td><strong>Br&oslash;nsted-Lowry</strong></td><td>Proton (H⁺) donor</td><td>Proton (H⁺) acceptor</td><td>Any solvent; gas phase too</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Conjugate Acid-Base Pairs:</strong><br>
+        When a Br&oslash;nsted-Lowry acid donates a proton, it becomes a <strong>conjugate base</strong>. When a base accepts a proton, it becomes a <strong>conjugate acid</strong>.<br><br>
+        Example: NH₃(aq) + H₂O(l) ⇌ NH₄⁺(aq) + OH⁻(aq)<br>
+        &bull; NH₃ is the <strong>base</strong> (accepts H⁺) &rarr; NH₄⁺ is its <strong>conjugate acid</strong><br>
+        &bull; H₂O is the <strong>acid</strong> (donates H⁺) &rarr; OH⁻ is its <strong>conjugate base</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Amphoteric (Amphiprotic) Substances</h5>
+      <p><strong>Water</strong> is the most common amphiprotic substance &mdash; it can act as either an acid or a base depending on the reaction partner. Other examples include HSO₄⁻, HCO₃⁻, and H₂PO₄⁻.</p>
+ 
+      <div class="key-concept">
+        <strong>Autoionization of water:</strong><br>
+        H₂O(l) + H₂O(l) ⇌ H₃O⁺(aq) + OH⁻(aq)<br><br>
+        <strong>K<sub>w</sub> = [H₃O⁺][OH⁻] = 1.0 &times; 10⁻¹⁴</strong> at 25&deg;C<br><br>
+        In pure water: [H₃O⁺] = [OH⁻] = 1.0 &times; 10⁻⁷ M &rarr; pH = 7.00 (neutral)<br>
+        K<sub>w</sub> applies to ALL aqueous solutions, not just pure water.
+      </div>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Acid-base_titration.svg"
+          alt="pH scale illustration" class="img-fluid" style="max-height: 300px;">
+        <p class="img-caption">Acids and bases in titration. The pH scale ranges from 0 (strongly acidic) to 14 (strongly basic). (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Strong vs. Weak</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th></th><th>Strong</th><th>Weak</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Ionization</strong></td><td>100% ionized in water</td><td>Partially ionized (&lt; 100%)</td></tr>
+            <tr><td><strong>Equilibrium</strong></td><td>Single arrow (&rarr;); goes to completion</td><td>Double arrow (⇌); equilibrium established</td></tr>
+            <tr><td><strong>K<sub>a</sub> or K<sub>b</sub></strong></td><td>Very large (not usually given)</td><td>Small (K<sub>a</sub> or K<sub>b</sub> &lt;&lt; 1)</td></tr>
+            <tr><td><strong>Strong acids</strong></td><td colspan="2">HCl, HBr, HI, HNO₃, H₂SO₄, HClO₃, HClO₄</td></tr>
+            <tr><td><strong>Strong bases</strong></td><td colspan="2">LiOH, NaOH, KOH, Ca(OH)₂, Sr(OH)₂, Ba(OH)₂</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.2 ===== -->
+  <section class="container my-4" id="topic-8-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.2 &mdash; pH and pOH of Strong Acids and Bases</h3>
+ 
+      <p>For <strong>strong acids and bases</strong>, the calculation is straightforward because they ionize completely.</p>
+ 
+      <div class="key-concept">
+        <strong>Key relationships:</strong><br>
+        &bull; <strong>pH = &minus;log[H₃O⁺]</strong><br>
+        &bull; <strong>pOH = &minus;log[OH⁻]</strong><br>
+        &bull; <strong>pH + pOH = 14.00</strong> (at 25&deg;C)<br>
+        &bull; <strong>[H₃O⁺] = 10<sup>&minus;pH</sup></strong><br>
+        &bull; <strong>[OH⁻] = 10<sup>&minus;pOH</sup></strong><br>
+        &bull; <strong>[H₃O⁺][OH⁻] = K<sub>w</sub> = 1.0 &times; 10⁻¹⁴</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Strong acid:</strong><br>
+        What is the pH of 0.0025 M HCl?<br>
+        HCl is a strong acid &rarr; [H₃O⁺] = 0.0025 M<br>
+        pH = &minus;log(0.0025) = <strong>2.60</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Strong base:</strong><br>
+        What is the pH of 0.010 M Ba(OH)₂?<br>
+        Ba(OH)₂ &rarr; Ba²⁺ + 2OH⁻ (strong base, 100% dissociation)<br>
+        [OH⁻] = 2 &times; 0.010 = 0.020 M<br>
+        pOH = &minus;log(0.020) = 1.70<br>
+        pH = 14.00 &minus; 1.70 = <strong>12.30</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>AP Exam tip:</strong> Watch for diprotic/triprotic strong acids. H₂SO₄ is strong for the first proton only (the second dissociation has K<sub>a2</sub> = 0.012, which is weak). For dilute solutions of Ba(OH)₂, Ca(OH)₂, and Sr(OH)₂, remember to multiply [OH⁻] by 2.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.3 ===== -->
+  <section class="container my-4" id="topic-8-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.3 &mdash; Weak Acid and Base Equilibria</h3>
+ 
+      <p>Weak acids and bases only partially ionize. We must use equilibrium expressions and ICE tables to calculate pH.</p>
+ 
+      <div class="key-concept">
+        <strong>Weak acid equilibrium:</strong><br>
+        HA(aq) + H₂O(l) ⇌ H₃O⁺(aq) + A⁻(aq)<br><br>
+        <strong>K<sub>a</sub> = [H₃O⁺][A⁻] / [HA]</strong><br><br>
+        <strong>Weak base equilibrium:</strong><br>
+        B(aq) + H₂O(l) ⇌ BH⁺(aq) + OH⁻(aq)<br><br>
+        <strong>K<sub>b</sub> = [BH⁺][OH⁻] / [B]</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key relationship:</strong> For any conjugate acid-base pair:<br>
+        <strong>K<sub>a</sub> &times; K<sub>b</sub> = K<sub>w</sub> = 1.0 &times; 10⁻¹⁴</strong><br><br>
+        This means: the stronger the acid (larger K<sub>a</sub>), the weaker its conjugate base (smaller K<sub>b</sub>), and vice versa.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Weak acid pH calculation:</strong><br>
+        Find the pH of 0.100 M acetic acid (CH₃COOH), K<sub>a</sub> = 1.8 &times; 10⁻⁵<br><br>
+        <table class="table table-bordered mt-2 mb-2" style="font-size: 0.95rem;">
+          <thead style="background: #d2691e; color: #fff;">
+            <tr><th></th><th>CH₃COOH</th><th>H₃O⁺</th><th>CH₃COO⁻</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>I</strong></td><td>0.100</td><td>0</td><td>0</td></tr>
+            <tr><td><strong>C</strong></td><td>&minus;x</td><td>+x</td><td>+x</td></tr>
+            <tr><td><strong>E</strong></td><td>0.100 &minus; x</td><td>x</td><td>x</td></tr>
+          </tbody>
+        </table>
+        K<sub>a</sub> = x² / (0.100 &minus; x) &asymp; x² / 0.100 = 1.8 &times; 10⁻⁵<br>
+        x² = 1.8 &times; 10⁻⁶ &rarr; x = 1.34 &times; 10⁻³ M = [H₃O⁺]<br>
+        Check: 1.34 &times; 10⁻³ / 0.100 = 1.34% &lt; 5% &mdash; approximation valid!<br>
+        pH = &minus;log(1.34 &times; 10⁻³) = <strong>2.87</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Percent Ionization</h5>
+      <div class="key-concept">
+        <strong>% ionization = ([H₃O⁺]<sub>eq</sub> / [HA]<sub>initial</sub>) &times; 100%</strong><br><br>
+        For weak acids:<br>
+        &bull; % ionization <strong>increases</strong> as initial concentration <strong>decreases</strong> (dilution effect).<br>
+        &bull; % ionization <strong>increases</strong> as K<sub>a</sub> <strong>increases</strong> (stronger weak acid).<br><br>
+        From the example above: % ionization = (1.34 &times; 10⁻³ / 0.100) &times; 100% = <strong>1.34%</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.4 ===== -->
+  <section class="container my-4" id="topic-8-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.4 &mdash; Acid-Base Reactions and Buffers</h3>
+ 
+      <p>When an acid reacts with a base, the reaction goes essentially to completion if one of them is strong. This is the foundation for understanding titrations and buffers.</p>
+ 
+      <div class="key-concept">
+        <strong>Types of acid-base reactions:</strong><br><br>
+        <strong>1. Strong acid + Strong base &rarr; salt + water</strong><br>
+        HCl + NaOH &rarr; NaCl + H₂O &nbsp;&nbsp;(pH = 7 at equivalence)<br><br>
+        <strong>2. Strong acid + Weak base &rarr; conjugate acid salt</strong><br>
+        HCl + NH₃ &rarr; NH₄Cl &nbsp;&nbsp;(pH &lt; 7 at equivalence)<br><br>
+        <strong>3. Weak acid + Strong base &rarr; conjugate base salt</strong><br>
+        CH₃COOH + NaOH &rarr; CH₃COONa + H₂O &nbsp;&nbsp;(pH &gt; 7 at equivalence)<br><br>
+        <strong>4. Weak acid + Weak base:</strong> Direction favors the side with weaker acid and weaker base (compare K<sub>a</sub> and K<sub>b</sub>).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Salt Hydrolysis &mdash; Predicting the pH of Salt Solutions</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Salt From</th><th>Cation</th><th>Anion</th><th>Solution pH</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Strong acid + Strong base</td><td>Neutral (Na⁺, K⁺)</td><td>Neutral (Cl⁻, NO₃⁻)</td><td><strong>pH = 7</strong></td></tr>
+            <tr><td>Strong acid + Weak base</td><td>Acidic (NH₄⁺)</td><td>Neutral (Cl⁻)</td><td><strong>pH &lt; 7</strong></td></tr>
+            <tr><td>Weak acid + Strong base</td><td>Neutral (Na⁺)</td><td>Basic (CH₃COO⁻)</td><td><strong>pH &gt; 7</strong></td></tr>
+            <tr><td>Weak acid + Weak base</td><td>Acidic</td><td>Basic</td><td>Compare K<sub>a</sub> vs K<sub>b</sub></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.5 ===== -->
+  <section class="container my-4" id="topic-8-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.5 &mdash; Acid-Base Titrations</h3>
+ 
+      <p>A <strong>titration</strong> is a technique for determining the concentration of an unknown solution by reacting it with a solution of known concentration (the <strong>titrant</strong>).</p>
+ 
+      <div class="key-concept">
+        <strong>Key regions of a titration curve:</strong><br><br>
+        &bull; <strong>Initial point:</strong> pH of the analyte alone before any titrant is added.<br>
+        &bull; <strong>Buffer region:</strong> The region where both the weak acid/base and its conjugate are present. pH changes gradually.<br>
+        &bull; <strong>Half-equivalence point:</strong> Exactly half the acid (or base) has been neutralized. [HA] = [A⁻], so <strong>pH = pK<sub>a</sub></strong>.<br>
+        &bull; <strong>Equivalence point:</strong> Moles of acid = moles of base. All the analyte has been neutralized.<br>
+        &bull; <strong>Post-equivalence:</strong> Excess titrant determines the pH.
+      </div>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Titration_of_weak_acid_with_strong_base.svg"
+          alt="Weak acid-strong base titration curve" class="img-fluid" style="max-height: 340px;">
+        <p class="img-caption">Titration curve for a weak acid titrated with a strong base. Note the buffer region, half-equivalence point (pH = pKa), and the equivalence point above pH 7. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Equivalence Point pH</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Titration Type</th><th>pH at Equivalence Point</th><th>Reason</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Strong acid + Strong base</td><td><strong>pH = 7</strong></td><td>Neutral salt formed</td></tr>
+            <tr><td>Weak acid + Strong base</td><td><strong>pH &gt; 7</strong></td><td>Conjugate base of weak acid is basic</td></tr>
+            <tr><td>Strong acid + Weak base</td><td><strong>pH &lt; 7</strong></td><td>Conjugate acid of weak base is acidic</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Equivalence point calculation:</strong><br>
+        At the equivalence point: moles acid = moles base<br>
+        M<sub>acid</sub> &times; V<sub>acid</sub> = M<sub>base</sub> &times; V<sub>base</sub><br><br>
+        <strong>Example:</strong> 25.0 mL of 0.100 M HCl is titrated with 0.200 M NaOH. What volume of NaOH is needed?<br>
+        (0.100)(25.0) = (0.200)(V<sub>NaOH</sub>) &rarr; V<sub>NaOH</sub> = <strong>12.5 mL</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Choosing an Indicator</h5>
+      <p>Select an indicator whose <strong>color change range (pK<sub>in</sub> &plusmn; 1)</strong> includes the pH at the equivalence point. For a weak acid/strong base titration (equivalence pH &gt; 7), use phenolphthalein (range 8.2&ndash;10). For strong acid/strong base, most indicators work since the pH jump is very steep around pH 7.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.6 ===== -->
+  <section class="container my-4" id="topic-8-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.6 &mdash; Molecular Structure of Acids and Bases</h3>
+ 
+      <p>The molecular structure of a compound determines its acid or base strength. Several structural factors affect how easily a molecule donates or accepts protons.</p>
+ 
+      <h5 style="color: #8b4513;">Binary Acids (HX)</h5>
+      <div class="key-concept">
+        <strong>Across a period</strong> (same row): Acid strength <strong>increases</strong> with electronegativity of X.<br>
+        &bull; CH₄ &lt; NH₃ &lt; H₂O &lt; HF (but all except HF are extremely weak acids in water)<br><br>
+        <strong>Down a group</strong> (same column): Acid strength <strong>increases</strong> with size of X (weaker H&mdash;X bond is easier to break).<br>
+        &bull; HF &lt; HCl &lt; HBr &lt; HI<br>
+        &bull; Bond strength is the dominant factor down a group (larger atoms form weaker bonds with H).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Oxyacids (HO&mdash;X&mdash;O...)</h5>
+      <div class="key-concept">
+        <strong>Same central atom, different number of oxygens:</strong> More oxygen atoms = stronger acid (they withdraw electron density from O&mdash;H bond, making it easier to release H⁺).<br>
+        &bull; HClO &lt; HClO₂ &lt; HClO₃ &lt; HClO₄<br><br>
+        <strong>Different central atoms, same structure:</strong> More electronegative central atom = stronger acid.<br>
+        &bull; HOBr &lt; HOCl (Cl is more electronegative than Br)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Carboxylic Acids</h5>
+      <p>Electron-withdrawing groups (like &minus;F, &minus;Cl, &minus;NO₂) near the &minus;COOH group stabilize the conjugate base (carboxylate anion) through inductive effects, increasing acid strength. The closer the electron-withdrawing group is to &minus;COOH, the stronger the effect.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.7 ===== -->
+  <section class="container my-4" id="topic-8-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.7 &mdash; pH and pK<sub>a</sub></h3>
+ 
+      <p>The <strong>pK<sub>a</sub></strong> is the negative logarithm of K<sub>a</sub> and provides a convenient way to compare acid strengths.</p>
+ 
+      <div class="key-concept">
+        <strong>pK<sub>a</sub> = &minus;log K<sub>a</sub></strong> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <strong>pK<sub>b</sub> = &minus;log K<sub>b</sub></strong><br><br>
+        &bull; <strong>Smaller pK<sub>a</sub></strong> = stronger acid (larger K<sub>a</sub>)<br>
+        &bull; <strong>Larger pK<sub>a</sub></strong> = weaker acid (smaller K<sub>a</sub>)<br>
+        &bull; <strong>pK<sub>a</sub> + pK<sub>b</sub> = pK<sub>w</sub> = 14.00</strong> (at 25&deg;C)
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Relationship between pH and pK<sub>a</sub>:</strong><br>
+        &bull; If pH &lt; pK<sub>a</sub>: The acid form (HA) predominates.<br>
+        &bull; If pH = pK<sub>a</sub>: [HA] = [A⁻] (equal amounts).<br>
+        &bull; If pH &gt; pK<sub>a</sub>: The conjugate base form (A⁻) predominates.<br><br>
+        This is critical for understanding buffer chemistry and for predicting the dominant species at any given pH.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> Acetic acid has pK<sub>a</sub> = 4.74. In a solution at pH 6.0:<br>
+        pH &gt; pK<sub>a</sub> &rarr; the conjugate base CH₃COO⁻ predominates. The solution has more acetate ions than acetic acid molecules.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.8 ===== -->
+  <section class="container my-4" id="topic-8-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.8 &mdash; Properties of Buffers</h3>
+ 
+      <p>A <strong>buffer</strong> is a solution that resists changes in pH when small amounts of acid or base are added. Buffers are essential in biological systems (blood pH = 7.4) and many chemical processes.</p>
+ 
+      <div class="key-concept">
+        <strong>A buffer consists of:</strong><br>
+        &bull; A <strong>weak acid</strong> and its <strong>conjugate base</strong> (e.g., CH₃COOH / CH₃COO⁻), OR<br>
+        &bull; A <strong>weak base</strong> and its <strong>conjugate acid</strong> (e.g., NH₃ / NH₄⁺)<br><br>
+        Both components must be present in <strong>significant amounts</strong>.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">How Buffers Work</h5>
+      <div class="key-concept">
+        <strong>When acid (H⁺) is added:</strong> The conjugate base reacts with H⁺ to neutralize it.<br>
+        A⁻ + H⁺ &rarr; HA<br>
+        This consumes the added acid, preventing a large pH drop.<br><br>
+        <strong>When base (OH⁻) is added:</strong> The weak acid reacts with OH⁻ to neutralize it.<br>
+        HA + OH⁻ &rarr; A⁻ + H₂O<br>
+        This consumes the added base, preventing a large pH increase.<br><br>
+        The pH changes slightly because the <strong>ratio [A⁻]/[HA]</strong> changes, but the change is much smaller than it would be in an unbuffered solution.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.9 ===== -->
+  <section class="container my-4" id="topic-8-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.9 &mdash; Henderson-Hasselbalch Equation</h3>
+ 
+      <p>The <strong>Henderson-Hasselbalch equation</strong> is the most important equation for buffer calculations on the AP exam.</p>
+ 
+      <div class="key-concept">
+        <strong>pH = pK<sub>a</sub> + log([A⁻] / [HA])</strong><br><br>
+        &bull; [A⁻] = concentration of the conjugate base<br>
+        &bull; [HA] = concentration of the weak acid<br>
+        &bull; When [A⁻] = [HA]: pH = pK<sub>a</sub> + log(1) = pK<sub>a</sub> (the log term is 0)<br>
+        &bull; When [A⁻] &gt; [HA]: pH &gt; pK<sub>a</sub> (log term is positive)<br>
+        &bull; When [A⁻] &lt; [HA]: pH &lt; pK<sub>a</sub> (log term is negative)
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> What is the pH of a buffer containing 0.30 M CH₃COOH and 0.50 M CH₃COONa? (K<sub>a</sub> = 1.8 &times; 10⁻⁵, pK<sub>a</sub> = 4.74)<br><br>
+        pH = 4.74 + log(0.50 / 0.30) = 4.74 + log(1.67) = 4.74 + 0.22 = <strong>4.96</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Adding acid to a buffer:</strong><br>
+        To the buffer above (total volume = 1.00 L), 0.050 mol HCl is added. Find the new pH.<br><br>
+        Before: 0.30 mol HA, 0.50 mol A⁻<br>
+        HCl reacts with A⁻: A⁻ + H⁺ &rarr; HA<br>
+        After: HA = 0.30 + 0.050 = 0.35 mol; A⁻ = 0.50 &minus; 0.050 = 0.45 mol<br><br>
+        pH = 4.74 + log(0.45 / 0.35) = 4.74 + log(1.286) = 4.74 + 0.11 = <strong>4.85</strong><br>
+        The pH changed by only 0.11 units despite adding a strong acid!
+      </div>
+ 
+      <div class="key-concept">
+        <strong>AP Exam tip:</strong> You can use <strong>moles</strong> instead of concentrations in the Henderson-Hasselbalch equation because the volume cancels in the ratio [A⁻]/[HA] (as long as both are in the same solution volume).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 8.10 ===== -->
+  <section class="container my-4" id="topic-8-10">
+    <div class="topic-card">
+      <h3 class="topic-heading">8.10 &mdash; Buffer Capacity</h3>
+ 
+      <p><strong>Buffer capacity</strong> is the amount of strong acid or base a buffer can neutralize before the pH changes significantly (usually defined as a change of more than 1 pH unit).</p>
+ 
+      <div class="key-concept">
+        <strong>Factors that increase buffer capacity:</strong><br>
+        1. <strong>Higher concentrations</strong> of both the weak acid and conjugate base. A buffer made with 1.0 M components can absorb more acid/base than one made with 0.10 M components.<br><br>
+        2. <strong>Equal ratio of [HA] to [A⁻]</strong> (ratio closest to 1:1). This maximizes the buffer&rsquo;s ability to resist pH change in <em>both</em> directions.<br><br>
+        3. The buffer is most effective when <strong>pH is within &plusmn;1 of pK<sub>a</sub></strong>. Outside this range, one component is largely depleted.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>When a buffer is &ldquo;broken&rdquo;:</strong><br>
+        If you add more moles of strong acid than there are moles of A⁻ in the buffer, the buffer is overwhelmed. All A⁻ is consumed, excess H⁺ remains, and the pH drops sharply. The solution is no longer buffered.<br><br>
+        Similarly, adding more moles of strong base than moles of HA will break the buffer on the basic side.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Designing a buffer:</strong><br>
+        To make a buffer at a target pH:<br>
+        1. Choose a weak acid with pK<sub>a</sub> close to the desired pH.<br>
+        2. Use Henderson-Hasselbalch to determine the [A⁻]/[HA] ratio needed.<br>
+        3. Use high concentrations for greater capacity.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 8. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. According to the Br&oslash;nsted-Lowry model, a base is a substance that:</p>
+      <ul class="options">
+        <li>(A) Produces OH⁻ in solution</li>
+        <li>(B) Donates a proton</li>
+        <li>(C) Accepts a proton</li>
+        <li>(D) Donates an electron pair</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        A Br&oslash;nsted-Lowry base is a <strong>proton (H⁺) acceptor</strong>. (A) is the Arrhenius definition. (D) is the Lewis definition.
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. What is the pH of a 0.0050 M solution of NaOH?</p>
+      <ul class="options">
+        <li>(A) 2.30</li>
+        <li>(B) 5.00</li>
+        <li>(C) 9.00</li>
+        <li>(D) 11.70</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (D)</strong><br>
+        NaOH is a strong base: [OH⁻] = 0.0050 M. pOH = &minus;log(0.0050) = 2.30. pH = 14.00 &minus; 2.30 = <strong>11.70</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. A 0.10 M solution of a weak acid HA has a pH of 3.0. What is the K<sub>a</sub> of the acid?</p>
+      <ul class="options">
+        <li>(A) 1.0 &times; 10⁻³</li>
+        <li>(B) 1.0 &times; 10⁻⁵</li>
+        <li>(C) 1.0 &times; 10⁻⁷</li>
+        <li>(D) 1.0 &times; 10⁻²</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        pH = 3.0 &rarr; [H₃O⁺] = 1.0 &times; 10⁻³ M.<br>
+        K<sub>a</sub> = x² / (0.10 &minus; x) &asymp; (1.0 &times; 10⁻³)² / 0.10 = 1.0 &times; 10⁻⁶ / 0.10 = <strong>1.0 &times; 10⁻⁵</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. A solution of NaCH₃COO (sodium acetate) dissolved in water will be:</p>
+      <ul class="options">
+        <li>(A) Acidic (pH &lt; 7)</li>
+        <li>(B) Neutral (pH = 7)</li>
+        <li>(C) Basic (pH &gt; 7)</li>
+        <li>(D) Cannot be determined</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Sodium acetate is the salt of a <strong>weak acid (CH₃COOH) and a strong base (NaOH)</strong>. The acetate ion (CH₃COO⁻) acts as a base in water, hydrolyzing to produce OH⁻, making the solution <strong>basic</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. During the titration of a weak acid with a strong base, at the half-equivalence point:</p>
+      <ul class="options">
+        <li>(A) pH = 7</li>
+        <li>(B) pH = pK<sub>b</sub></li>
+        <li>(C) pH = pK<sub>a</sub></li>
+        <li>(D) All of the acid has been neutralized</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        At the half-equivalence point, half of the weak acid has been neutralized, so [HA] = [A⁻]. By Henderson-Hasselbalch: pH = pK<sub>a</sub> + log(1) = <strong>pK<sub>a</sub></strong>.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. Which of the following acids is the strongest?</p>
+      <ul class="options">
+        <li>(A) HClO (K<sub>a</sub> = 3.0 &times; 10⁻⁸)</li>
+        <li>(B) HClO₂ (K<sub>a</sub> = 1.1 &times; 10⁻²)</li>
+        <li>(C) HF (K<sub>a</sub> = 6.8 &times; 10⁻⁴)</li>
+        <li>(D) CH₃COOH (K<sub>a</sub> = 1.8 &times; 10⁻⁵)</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        The strongest acid has the <strong>largest K<sub>a</sub></strong>. HClO₂ has K<sub>a</sub> = 1.1 &times; 10⁻², which is the largest value among the choices.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. If a weak acid has pK<sub>a</sub> = 5.0 and the solution pH is 6.0, which species predominates?</p>
+      <ul class="options">
+        <li>(A) HA (the acid form)</li>
+        <li>(B) A⁻ (the conjugate base)</li>
+        <li>(C) Both are equal</li>
+        <li>(D) Cannot be determined without K<sub>a</sub></li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        When pH &gt; pK<sub>a</sub>, the conjugate base form <strong>A⁻ predominates</strong>. At pH = 6.0 and pK<sub>a</sub> = 5.0: log([A⁻]/[HA]) = 6.0 &minus; 5.0 = 1.0 &rarr; [A⁻]/[HA] = 10, so there is 10&times; more A⁻ than HA.
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. A buffer is prepared with 0.40 M NH₃ and 0.40 M NH₄Cl. K<sub>b</sub> for NH₃ = 1.8 &times; 10⁻⁵. What is the pH?</p>
+      <ul class="options">
+        <li>(A) 4.74</li>
+        <li>(B) 9.26</li>
+        <li>(C) 7.00</li>
+        <li>(D) 5.00</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        For this base buffer, first find pK<sub>a</sub> of NH₄⁺:<br>
+        K<sub>a</sub> = K<sub>w</sub>/K<sub>b</sub> = (1.0 &times; 10⁻¹⁴)/(1.8 &times; 10⁻⁵) = 5.6 &times; 10⁻¹⁰ &rarr; pK<sub>a</sub> = 9.26<br>
+        pH = pK<sub>a</sub> + log([NH₃]/[NH₄⁺]) = 9.26 + log(0.40/0.40) = 9.26 + 0 = <strong>9.26</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. Which of the following would NOT make an effective buffer?</p>
+      <ul class="options">
+        <li>(A) HF and NaF</li>
+        <li>(B) NH₃ and NH₄Cl</li>
+        <li>(C) HCl and NaCl</li>
+        <li>(D) CH₃COOH and CH₃COONa</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        <strong>HCl is a strong acid</strong>, not a weak acid. Buffers require a <strong>weak</strong> acid/base and its conjugate. NaCl is the salt of a strong acid and strong base &mdash; neither component can neutralize added acid or base effectively.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. Which change increases buffer capacity?</p>
+      <ul class="options">
+        <li>(A) Diluting the buffer with water</li>
+        <li>(B) Increasing the concentrations of both buffer components</li>
+        <li>(C) Using a weak acid with a very different pK<sub>a</sub> from the desired pH</li>
+        <li>(D) Removing the conjugate base</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Buffer capacity increases with <strong>higher concentrations</strong> of both components. More moles of HA and A⁻ means the buffer can absorb more added acid or base before being overwhelmed. Diluting (A) reduces capacity, and removing a component (D) destroys the buffer.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 8</h5>
+        <p class="card-text">Acids and Bases is one of the <strong>highest-weighted units</strong> on the AP exam (11&ndash;15%). Master the <strong>Henderson-Hasselbalch equation</strong> &mdash; it&rsquo;s used in nearly every buffer and titration problem. Know the 7 strong acids and 6 strong bases by heart. Practice calculating pH for strong acids/bases (direct), weak acids/bases (ICE tables), and buffers (Henderson-Hasselbalch). For titration curves, be able to identify the buffer region, half-equivalence point (pH = pK<sub>a</sub>), and equivalence point, and know why the equivalence pH is above 7 for weak acid/strong base and below 7 for strong acid/weak base. Finally, practice salt hydrolysis &mdash; predicting whether a salt solution is acidic, basic, or neutral.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
