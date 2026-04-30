@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 1: Atomic Structure and Properties — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 1: Atomic Structure and Properties | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">⚛️ Unit 1: Atomic Structure and Properties</h1>
+      <p class="lead mt-3">Explore the building blocks of matter &mdash; from counting atoms to predicting their behavior across the periodic table.</p>
+      <p class="mt-2"><strong>Exam Weight: 7&ndash;9%</strong> &nbsp;|&nbsp; Topics 1.1&ndash;1.8</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-1-1"><li class="list-group-item">1.1 &mdash; Moles and Molar Mass</li></a>
+      <a href="#topic-1-2"><li class="list-group-item">1.2 &mdash; Mass Spectrometry of Elements</li></a>
+      <a href="#topic-1-3"><li class="list-group-item">1.3 &mdash; Elemental Composition of Pure Substances</li></a>
+      <a href="#topic-1-4"><li class="list-group-item">1.4 &mdash; Composition of Mixtures</li></a>
+      <a href="#topic-1-5"><li class="list-group-item">1.5 &mdash; Atomic Structure and Electron Configuration</li></a>
+      <a href="#topic-1-6"><li class="list-group-item">1.6 &mdash; Photoelectron Spectroscopy</li></a>
+      <a href="#topic-1-7"><li class="list-group-item">1.7 &mdash; Periodic Trends</li></a>
+      <a href="#topic-1-8"><li class="list-group-item">1.8 &mdash; Valence Electrons and Ionic Compounds</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 1.1 ===== -->
+  <section class="container my-4" id="topic-1-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.1 &mdash; Moles and Molar Mass</h3>
+ 
+      <p>Chemistry deals with incredibly large numbers of atoms and molecules. A single drop of water contains roughly 10<sup>21</sup> molecules. To make these numbers manageable, chemists use the <strong>mole</strong> (abbreviated mol), one of the seven SI base units. The mole bridges the gap between the atomic world (individual atoms and molecules) and the macroscopic world (grams, liters) that we can measure in the lab.</p>
+ 
+      <div class="key-concept">
+        <strong>Avogadro&rsquo;s Number:</strong> One mole of any substance contains exactly <strong>6.022 &times; 10<sup>23</sup></strong> representative particles (atoms, molecules, ions, or formula units). This number is defined so that 12.000 g of carbon-12 contains exactly 1 mole of atoms.
+      </div>
+ 
+      <p>The <strong>molar mass</strong> of an element is the mass of one mole of that element, expressed in grams per mole (g/mol). It is numerically equal to the element&rsquo;s average atomic mass found on the periodic table (in amu). For compounds, the molar mass is the sum of the molar masses of all atoms in the chemical formula.</p>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">The Mole Roadmap &mdash; Dimensional Analysis</h5>
+      <p>Dimensional analysis (factor-label method) is the core problem-solving strategy for mole conversions. Always start with what you know, then multiply by conversion factors until you reach the desired unit. Units must cancel properly.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Conversion</th><th>Formula</th><th>Units</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mass &rarr; Moles</td><td>n = mass &divide; molar mass</td><td>g &divide; (g/mol) = mol</td></tr>
+            <tr><td>Moles &rarr; Particles</td><td>Particles = n &times; 6.022 &times; 10<sup>23</sup></td><td>mol &times; (particles/mol)</td></tr>
+            <tr><td>Moles &rarr; Mass</td><td>mass = n &times; molar mass</td><td>mol &times; (g/mol) = g</td></tr>
+            <tr><td>Particles &rarr; Moles</td><td>n = particles &divide; 6.022 &times; 10<sup>23</sup></td><td>particles &divide; (particles/mol) = mol</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example 1:</strong> How many moles are in 36.0 g of water (H₂O)?<br>
+        Molar mass of H₂O = 2(1.008) + 16.00 = 18.016 g/mol<br>
+        n = 36.0 g &divide; 18.016 g/mol = <strong>2.00 mol</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example 2:</strong> How many molecules are in 2.50 mol of CO₂?<br>
+        Molecules = 2.50 mol &times; 6.022 &times; 10<sup>23</sup> molecules/mol = <strong>1.51 &times; 10<sup>24</sup> molecules</strong><br><br>
+        <em>Follow-up:</em> How many <strong>oxygen atoms</strong> are in that sample?<br>
+        Each CO₂ has 2 oxygen atoms, so: 1.51 &times; 10<sup>24</sup> &times; 2 = <strong>3.01 &times; 10<sup>24</sup> oxygen atoms</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example 3 (Multi-step):</strong> What is the mass of 3.01 &times; 10<sup>22</sup> atoms of iron?<br>
+        Step 1: Moles of Fe = 3.01 &times; 10<sup>22</sup> &divide; 6.022 &times; 10<sup>23</sup> = 0.0500 mol<br>
+        Step 2: Mass = 0.0500 mol &times; 55.85 g/mol = <strong>2.79 g</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Common Mistakes on the AP Exam</h5>
+      <ul>
+        <li>Confusing <strong>atoms</strong> with <strong>molecules</strong>: 1 mol of H₂O = 6.022 &times; 10<sup>23</sup> <em>molecules</em>, but 3 &times; 6.022 &times; 10<sup>23</sup> <em>atoms</em> (2H + 1O per molecule).</li>
+        <li>Forgetting subscripts when calculating molar mass: Ca(OH)₂ = 40.08 + 2(16.00 + 1.008) = 74.10 g/mol, <strong>not</strong> 57.09.</li>
+        <li>Not properly canceling units in dimensional analysis &mdash; always write out units to check.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.2 ===== -->
+  <section class="container my-4" id="topic-1-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.2 &mdash; Mass Spectrometry of Elements</h3>
+ 
+      <p>A <strong>mass spectrometer</strong> is an instrument that separates atoms or molecules based on their mass-to-charge ratio (m/z). In AP Chemistry, you will encounter mass spectra of elements to determine isotopic composition and calculate average atomic mass. Understanding mass spectrometry is essential because it provides <strong>direct experimental evidence</strong> for the existence of isotopes.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Block_diagram_of_a_mass_spectrometer.jpg"
+          alt="Block diagram of a mass spectrometer" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">Block diagram of a mass spectrometer &mdash; sample is ionized, accelerated, deflected by a magnetic field, and detected. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 style="color: #8b4513;">How a Mass Spectrometer Works</h5>
+      <ol>
+        <li><strong>Vaporization:</strong> The sample is converted into a gas.</li>
+        <li><strong>Ionization:</strong> Atoms are bombarded with high-energy electrons to form positive ions (lose one electron). This gives a charge of +1 for most atoms, so m/z &asymp; mass number.</li>
+        <li><strong>Acceleration:</strong> Ions are accelerated through an electric field. All ions with the same charge gain the same kinetic energy.</li>
+        <li><strong>Deflection:</strong> A magnetic field deflects the ions. Lighter ions are deflected more, heavier ions are deflected less. This separates isotopes.</li>
+        <li><strong>Detection:</strong> The detector records the relative abundance of each ion as a current. More ions &rarr; stronger signal &rarr; taller peak.</li>
+      </ol>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Reading a Mass Spectrum</h5>
+      <p>The x-axis shows <strong>m/z</strong> (mass-to-charge ratio, which for singly-charged ions equals the mass number). The y-axis shows <strong>relative abundance</strong> (%). Each peak represents a different isotope of the element.</p>
+ 
+      <div class="key-concept">
+        <strong>What the spectrum tells you:</strong><br>
+        &bull; <strong>Number of peaks</strong> = number of isotopes<br>
+        &bull; <strong>Position of each peak</strong> (x-axis) = mass number of that isotope<br>
+        &bull; <strong>Height of each peak</strong> (y-axis) = relative abundance of that isotope<br>
+        &bull; The <strong>tallest peak</strong> represents the most abundant isotope<br>
+        &bull; The <strong>average atomic mass</strong> on the periodic table will be closest to the most abundant isotope's mass
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Calculating Average Atomic Mass:</strong><br>
+        Average atomic mass = &Sigma;(isotope mass &times; fractional abundance)<br><br>
+        <strong>Example &mdash; Chlorine:</strong><br>
+        Cl-35: mass = 34.97 amu, abundance = 75.76%<br>
+        Cl-37: mass = 36.97 amu, abundance = 24.24%<br>
+        Average = (34.97 &times; 0.7576) + (36.97 &times; 0.2424) = 26.50 + 8.96 = <strong>35.45 amu</strong><br><br>
+        Notice: The average (35.45) is closer to 35 than 37, which makes sense because Cl-35 is about 3&times; more abundant.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Estimating from a spectrum:</strong> If a mass spectrum shows two peaks at m/z = 63 and m/z = 65, with the peak at 63 being about twice as tall, you can estimate the average atomic mass is about (63 &times; 0.67) + (65 &times; 0.33) &asymp; 63.7 amu. This matches <strong>copper</strong> (63.55 amu).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">AP Exam Tips</h5>
+      <ul>
+        <li>If the average atomic mass is given and one isotope mass and abundance is known, you can work backward to find the other isotope&rsquo;s mass or abundance.</li>
+        <li>For elements with 2 isotopes, if you know the average atomic mass, you can determine which isotope is more abundant &mdash; the average will be closer to the more abundant isotope.</li>
+        <li>On the AP exam, mass spectra are always for <strong>singly charged ions</strong> (z = 1), so m/z = mass number directly.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.3 ===== -->
+  <section class="container my-4" id="topic-1-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.3 &mdash; Elemental Composition of Pure Substances</h3>
+ 
+      <p>Every pure substance has a fixed, definite composition by mass. This is described by the <strong>Law of Definite Proportions</strong> (also known as the Law of Constant Composition): a given compound always contains the same elements in the same proportions by mass, regardless of the sample size or source.</p>
+ 
+      <h5 style="color: #8b4513;">Percent Composition by Mass</h5>
+      <p>Percent composition tells you the percentage of the total mass contributed by each element in a compound. This is useful for identifying unknown compounds and verifying purity.</p>
+ 
+      <div class="key-concept">
+        <strong>Formula:</strong><br>
+        % by mass of element = (mass of element in 1 mol of compound &divide; molar mass of compound) &times; 100%<br><br>
+        <strong>Example:</strong> Find the percent composition of H₂SO₄ (M = 98.09 g/mol).<br>
+        %H = 2(1.008)/98.09 &times; 100 = <strong>2.06%</strong><br>
+        %S = 32.07/98.09 &times; 100 = <strong>32.69%</strong><br>
+        %O = 4(16.00)/98.09 &times; 100 = <strong>65.25%</strong><br>
+        Check: 2.06 + 32.69 + 65.25 = 100.00%
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Empirical vs. Molecular Formulas</h5>
+      <ul>
+        <li><strong>Empirical formula:</strong> The simplest whole-number ratio of atoms in a compound (e.g., CH₂O for glucose).</li>
+        <li><strong>Molecular formula:</strong> The actual number of atoms in one molecule (e.g., C₆H₁₂O₆ for glucose). It is always a whole-number multiple of the empirical formula.</li>
+      </ul>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Step-by-Step: Finding the Empirical Formula</h5>
+      <ol>
+        <li><strong>Start with percent composition</strong> (or mass data). Assume 100 g of the compound so percentages become grams directly.</li>
+        <li><strong>Convert grams to moles</strong> for each element (divide by atomic mass).</li>
+        <li><strong>Divide each by the smallest</strong> number of moles to get the mole ratio.</li>
+        <li>If the ratios are not whole numbers, <strong>multiply all by the smallest integer</strong> that converts them to whole numbers (e.g., if you get 1.5, multiply all by 2).</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> A compound is 40.0% C, 6.71% H, and 53.3% O. Find the empirical formula.<br>
+        Assume 100 g: 40.0 g C, 6.71 g H, 53.3 g O<br>
+        Moles: C = 40.0/12.01 = 3.33 mol; H = 6.71/1.008 = 6.66 mol; O = 53.3/16.00 = 3.33 mol<br>
+        Ratio: 3.33/3.33 : 6.66/3.33 : 3.33/3.33 = 1 : 2 : 1<br>
+        Empirical formula = <strong>CH₂O</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Finding the Molecular Formula</h5>
+      <div class="key-concept">
+        <strong>n = molar mass of compound &divide; molar mass of empirical formula</strong><br><br>
+        Molecular formula = (empirical formula) &times; n<br><br>
+        <strong>Example:</strong> If the empirical formula is CH₂O (M = 30.03 g/mol) and the actual molar mass is 180.2 g/mol:<br>
+        n = 180.2 / 30.03 = 6<br>
+        Molecular formula = C₆H₁₂O₆ (glucose)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Combustion Analysis</h5>
+      <p>Combustion analysis is used to determine the empirical formula of organic compounds (containing C, H, and sometimes O). The compound is burned in excess O₂, and the masses of CO₂ and H₂O produced are measured.</p>
+      <div class="key-concept">
+        <strong>Strategy:</strong><br>
+        &bull; All carbon in the sample ends up as CO₂: mol C = mol CO₂<br>
+        &bull; All hydrogen ends up as H₂O: mol H = 2 &times; mol H₂O<br>
+        &bull; If oxygen is present: mass O = total sample mass &minus; mass C &minus; mass H<br>
+        Then convert to moles and find the ratio as usual.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.4 ===== -->
+  <section class="container my-4" id="topic-1-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.4 &mdash; Composition of Mixtures</h3>
+ 
+      <p>Unlike pure substances, <strong>mixtures</strong> can vary in composition. They are classified as either <strong>homogeneous</strong> (uniform throughout, e.g., saltwater, air, brass) or <strong>heterogeneous</strong> (non-uniform, e.g., sand and water, granite). The key distinction from pure substances is that mixtures do <strong>not</strong> have a fixed composition.</p>
+ 
+      <h5 style="color: #8b4513;">Analyzing Mixtures</h5>
+      <p>When a mixture contains substances with known formulas, you can use elemental analysis, mass data, or reaction data to determine the amount of each component present. These are often algebraic problems.</p>
+ 
+      <div class="key-concept">
+        <strong>Strategy for mixture problems:</strong>
+        <ol style="margin-bottom: 0;">
+          <li>Define variables: Let x = mass (or moles) of component A, and (total &minus; x) = mass (or moles) of component B.</li>
+          <li>Write an equation relating a measured quantity (e.g., total mass of a specific element, total moles of a product) to the variables.</li>
+          <li>Solve the equation for x.</li>
+        </ol>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> A 10.0 g mixture of NaCl and KCl is dissolved in water and treated with excess AgNO₃, producing 18.0 g of AgCl. Find the mass percent of NaCl.<br><br>
+        Let x = g NaCl, then (10.0 &minus; x) = g KCl.<br>
+        Mol Cl⁻ from NaCl = x / 58.44; mol Cl⁻ from KCl = (10.0 &minus; x) / 74.55<br>
+        Total mol Cl⁻ = mol AgCl = 18.0 / 143.32 = 0.1256 mol<br>
+        x/58.44 + (10.0 &minus; x)/74.55 = 0.1256<br>
+        Solving: x = <strong>4.3 g NaCl</strong> (43% NaCl by mass)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Separation Techniques</h5>
+      <p>Mixtures can be separated based on differences in physical properties:</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Technique</th><th>Separates Based On</th><th>Example Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Filtration</strong></td><td>Particle size (solid from liquid)</td><td>Sand from saltwater</td></tr>
+            <tr><td><strong>Distillation</strong></td><td>Boiling point differences</td><td>Separating ethanol from water</td></tr>
+            <tr><td><strong>Chromatography</strong></td><td>Differential affinity for stationary vs. mobile phase</td><td>Separating pigments in ink</td></tr>
+            <tr><td><strong>Evaporation</strong></td><td>Volatility (remove solvent)</td><td>Recovering NaCl from saltwater</td></tr>
+            <tr><td><strong>Centrifugation</strong></td><td>Density differences</td><td>Separating blood components</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Pure Substance vs. Mixture &mdash; How to Tell</h5>
+      <ul>
+        <li>A <strong>pure substance</strong> has a sharp, fixed melting point and boiling point.</li>
+        <li>A <strong>mixture</strong> melts/boils over a range of temperatures.</li>
+        <li>If chromatography produces only one spot/band, it is likely a pure substance.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.5 ===== -->
+  <section class="container my-4" id="topic-1-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.5 &mdash; Atomic Structure and Electron Configuration</h3>
+ 
+      <p>Atoms consist of a dense, positively charged <strong>nucleus</strong> (containing protons and neutrons) surrounded by <strong>electrons</strong> occupying energy levels (shells) and subshells. Understanding electron configurations is foundational &mdash; it explains periodic trends, bonding, and reactivity.</p>
+ 
+      <div class="row my-4">
+        <div class="col-md-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Bohr_atom_model.svg"
+            alt="Bohr model of the atom" class="img-fluid" style="max-height: 280px;">
+          <p class="img-caption">Bohr model of the atom showing discrete energy levels (shells). (Wikimedia Commons)</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Electron_orbitals.svg"
+            alt="Electron orbital shapes (s, p, d, f)" class="img-fluid" style="max-height: 280px;">
+          <p class="img-caption">Shapes of s, p, d, and f orbitals. Each orbital holds a maximum of 2 electrons. (Wikimedia Commons)</p>
+        </div>
+      </div>
+ 
+      <h5 style="color: #8b4513;">Subatomic Particles</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Particle</th><th>Symbol</th><th>Charge</th><th>Mass (amu)</th><th>Location</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Proton</td><td>p⁺</td><td>+1</td><td>1.007</td><td>Nucleus</td></tr>
+            <tr><td>Neutron</td><td>n⁰</td><td>0</td><td>1.009</td><td>Nucleus</td></tr>
+            <tr><td>Electron</td><td>e⁻</td><td>&minus;1</td><td>~0 (5.49 &times; 10⁻⁴)</td><td>Electron cloud</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Atomic number (Z)</strong> = number of protons = defines the element. <strong>Mass number (A)</strong> = protons + neutrons. <strong>Isotopes</strong> have the same Z but different A (different numbers of neutrons).</p>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Three Key Principles for Electron Configuration</h5>
+      <ul>
+        <li><strong>Aufbau Principle:</strong> Electrons fill orbitals in order of increasing energy: 1s &rarr; 2s &rarr; 2p &rarr; 3s &rarr; 3p &rarr; 4s &rarr; 3d &rarr; 4p &rarr; 5s &rarr; 4d &rarr; ... Use the diagonal rule or the periodic table as a guide (each row corresponds to filling a specific set of subshells).</li>
+        <li><strong>Pauli Exclusion Principle:</strong> No two electrons in the same atom can have identical sets of four quantum numbers. This means each orbital holds at most <strong>2 electrons</strong> with opposite spins (&uarr;&darr;).</li>
+        <li><strong>Hund&rsquo;s Rule:</strong> Within a subshell, electrons fill each orbital singly (with parallel spins) before any orbital gets a second electron. This minimizes electron-electron repulsion.</li>
+      </ul>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Subshell Capacities</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Subshell</th><th># of Orbitals</th><th>Max Electrons</th><th>Shape</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>s</td><td>1</td><td>2</td><td>Spherical</td></tr>
+            <tr><td>p</td><td>3</td><td>6</td><td>Dumbbell (along x, y, z axes)</td></tr>
+            <tr><td>d</td><td>5</td><td>10</td><td>Cloverleaf (various orientations)</td></tr>
+            <tr><td>f</td><td>7</td><td>14</td><td>Complex multilobed</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Writing Electron Configurations</h5>
+      <p>List each occupied subshell with a superscript for the number of electrons. Noble-gas shorthand uses brackets around the previous noble gas core.</p>
+ 
+      <div class="key-concept">
+        <strong>Examples:</strong><br>
+        Carbon (C, Z = 6): 1s² 2s² 2p²<br>
+        Sodium (Na, Z = 11): 1s² 2s² 2p⁶ 3s¹ &nbsp;or&nbsp; [Ne] 3s¹<br>
+        Iron (Fe, Z = 26): [Ar] 3d⁶ 4s² &nbsp;(note: 4s fills before 3d)<br>
+        Krypton (Kr, Z = 36): [Ar] 3d¹⁰ 4s² 4p⁶<br><br>
+        <strong>Important exceptions (memorize these):</strong><br>
+        Chromium (Cr, Z = 24): [Ar] 3d⁵ 4s¹ (not 3d⁴ 4s²) &mdash; half-filled d subshell provides extra stability<br>
+        Copper (Cu, Z = 29): [Ar] 3d¹⁰ 4s¹ (not 3d⁹ 4s²) &mdash; fully-filled d subshell provides extra stability
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Electron Configurations of Ions</h5>
+      <p>This is a critical concept that appears frequently on the AP exam:</p>
+      <ul>
+        <li><strong>Cations (positive ions):</strong> Remove electrons from the <em>highest principal energy level first</em> (outermost shell). For transition metals, this means removing <strong>s electrons before d electrons</strong>.</li>
+        <li><strong>Anions (negative ions):</strong> Add electrons to the lowest available subshell.</li>
+      </ul>
+      <div class="key-concept">
+        <strong>Example:</strong><br>
+        Fe²⁺ (Z = 26, lost 2e⁻): [Ar] 3d⁶ &nbsp;(remove the two 4s electrons, NOT the 3d electrons)<br>
+        Fe³⁺ (Z = 26, lost 3e⁻): [Ar] 3d⁵ &nbsp;(remove 4s² first, then one 3d electron)<br>
+        Cl⁻ (Z = 17, gained 1e⁻): [Ne] 3s² 3p⁶ = [Ar] &nbsp;(isoelectronic with Ar)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Quantum Numbers (Supplemental)</h5>
+      <p>Each electron is described by four quantum numbers:</p>
+      <ul>
+        <li><strong>n</strong> (principal): Energy level (1, 2, 3...). Larger n = farther from nucleus, higher energy.</li>
+        <li><strong>l</strong> (angular momentum): Subshell shape (0 = s, 1 = p, 2 = d, 3 = f). Range: 0 to n&minus;1.</li>
+        <li><strong>m<sub>l</sub></strong> (magnetic): Specific orbital orientation. Range: &minus;l to +l.</li>
+        <li><strong>m<sub>s</sub></strong> (spin): +½ or &minus;½ (spin-up or spin-down).</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.6 ===== -->
+  <section class="container my-4" id="topic-1-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.6 &mdash; Photoelectron Spectroscopy (PES)</h3>
+ 
+      <p><strong>Photoelectron spectroscopy</strong> provides direct experimental evidence for the shell structure of atoms and validates electron configurations. It works by hitting atoms with high-energy photons (usually X-rays or UV light) and measuring the kinetic energy of the ejected electrons. The difference between the photon energy and the kinetic energy gives the <strong>binding energy</strong> of each electron.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/EM_spectrum.svg"
+          alt="Electromagnetic spectrum" class="img-fluid" style="max-height: 280px;">
+        <p class="img-caption">The electromagnetic spectrum &mdash; PES uses high-energy UV or X-ray photons to eject core and valence electrons. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key Equation:</strong><br>
+        E<sub>photon</sub> = E<sub>binding</sub> + E<sub>kinetic</sub><br><br>
+        The binding energy (ionization energy) of an electron = energy of the incoming photon &minus; kinetic energy of the ejected electron.<br>
+        Binding energy tells you how tightly an electron is held by the nucleus.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Reading a PES Diagram &mdash; Step by Step</h5>
+      <ul>
+        <li>The <strong>x-axis</strong> shows <strong>binding energy</strong> (decreasing from left to right). Electrons closer to the nucleus have higher binding energies.</li>
+        <li>The <strong>y-axis</strong> shows <strong>relative number of electrons</strong> (signal intensity).</li>
+        <li>Each peak corresponds to a <strong>subshell</strong>. The <strong>height</strong> (or area) of the peak is proportional to the number of electrons in that subshell.</li>
+        <li>The <strong>leftmost peak</strong> (highest binding energy) always corresponds to the 1s electrons.</li>
+        <li>Moving right, peaks correspond to 2s, 2p, 3s, 3p, etc., in order of decreasing binding energy.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Nitrogen (Z = 7):</strong><br>
+        Configuration: 1s² 2s² 2p³<br>
+        PES shows 3 peaks:<br>
+        &bull; Peak 1 (highest BE): relative height 2 &rarr; 1s²<br>
+        &bull; Peak 2 (medium BE): relative height 2 &rarr; 2s²<br>
+        &bull; Peak 3 (lowest BE): relative height 3 &rarr; 2p³
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Identifying an element from PES data:</strong><br>
+        A spectrum shows peaks with relative heights: 2, 2, 6, 2, 4.<br>
+        Total electrons = 2 + 2 + 6 + 2 + 4 = 16 &rarr; <strong>Sulfur (S)</strong><br>
+        Configuration: 1s² 2s² 2p⁶ 3s² 3p⁴
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">What PES Reveals</h5>
+      <ul>
+        <li><strong>Subshell structure is real:</strong> Electrons in different subshells have different binding energies, confirming the quantum mechanical model.</li>
+        <li><strong>Core vs. valence electrons:</strong> Core electrons (1s, 2s, 2p for period 3 elements) have much higher binding energies than valence electrons.</li>
+        <li><strong>Nuclear charge effect:</strong> As atomic number increases, the binding energy of every subshell increases because the nucleus has more protons pulling on all electrons.</li>
+        <li><strong>Shielding effect:</strong> Outer electrons are shielded from the full nuclear charge by inner electrons, so they have lower binding energies.</li>
+      </ul>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Common AP Exam Mistakes</h5>
+      <ul>
+        <li>Confusing the x-axis direction: binding energy <strong>decreases</strong> from left to right.</li>
+        <li>Forgetting that peak <strong>height</strong> represents electron count, not energy.</li>
+        <li>Not recognizing that two elements with the same number of electrons (isoelectronic species) would have different PES spectra because their nuclear charges differ (binding energies shift).</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.7 ===== -->
+  <section class="container my-4" id="topic-1-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.7 &mdash; Periodic Trends</h3>
+ 
+      <p>The periodic table organizes elements so that properties change predictably. Understanding these trends is fundamental to predicting chemical behavior. The underlying explanation for <strong>all</strong> periodic trends is <strong>effective nuclear charge (Z<sub>eff</sub>)</strong> and <strong>electron shielding</strong>.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Periodic_trends.png"
+          alt="Periodic trends diagram" class="img-fluid" style="max-height: 380px;">
+        <p class="img-caption">Major periodic trends: atomic radius, ionization energy, electron affinity, and electronegativity. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Effective Nuclear Charge (Z<sub>eff</sub>):</strong><br>
+        Z<sub>eff</sub> = Z &minus; S (where Z = atomic number, S = shielding by inner electrons)<br><br>
+        &bull; <strong>Across a period:</strong> Z increases by 1 with each element, but electrons are added to the <em>same</em> shell (same shielding). So Z<sub>eff</sub> <strong>increases</strong>.<br>
+        &bull; <strong>Down a group:</strong> New electron shells are added, greatly increasing shielding. Even though Z also increases, the effect of the new shell dominates, so Z<sub>eff</sub> felt by valence electrons does not increase as dramatically.
+      </div>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Atomic Radius</h5>
+      <ul>
+        <li><strong>Across a period (left &rarr; right):</strong> Decreases. Higher Z<sub>eff</sub> pulls electrons closer to the nucleus, shrinking the atom.</li>
+        <li><strong>Down a group (top &rarr; bottom):</strong> Increases. Each period adds a new principal energy level, increasing the distance of valence electrons from the nucleus.</li>
+      </ul>
+      <div class="key-concept">
+        <strong>Ionic Radius Comparisons:</strong><br>
+        &bull; <strong>Cations</strong> are <em>smaller</em> than their parent atoms (lost electrons &rarr; fewer e⁻, same nuclear charge &rarr; stronger pull).<br>
+        &bull; <strong>Anions</strong> are <em>larger</em> than their parent atoms (gained electrons &rarr; more e⁻ repulsion, same nuclear charge).<br>
+        &bull; <strong>Isoelectronic series</strong> (same # of electrons, e.g., O²⁻, F⁻, Ne, Na⁺, Mg²⁺): The ion with more protons is smallest. So Mg²⁺ &lt; Na⁺ &lt; Ne &lt; F⁻ &lt; O²⁻.
+      </div>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Ionization Energy (IE)</h5>
+      <ul>
+        <li><strong>Definition:</strong> The energy required to remove the most loosely bound electron from a gaseous atom or ion.</li>
+        <li><strong>Across a period:</strong> Generally increases (higher Z<sub>eff</sub> &rarr; harder to remove electrons).</li>
+        <li><strong>Down a group:</strong> Decreases (valence electrons are farther from nucleus and easier to remove).</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Important exceptions to memorize:</strong><br>
+        1. <strong>Group 2 &rarr; Group 13:</strong> IE <em>drops</em> (e.g., Be &gt; B). The electron removed from B is in a 2p orbital, which is higher in energy and easier to remove than the 2s electron in Be.<br>
+        2. <strong>Group 15 &rarr; Group 16:</strong> IE <em>drops</em> (e.g., N &gt; O). Oxygen has a <em>paired</em> electron in one 2p orbital, and the electron-electron repulsion makes it easier to remove.
+      </div>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Ionization_energies_of_atoms_-_labeled_-_atomic_orbital_filling_indicated.svg"
+          alt="Ionization energies of elements graph" class="img-fluid" style="max-height: 350px;">
+        <p class="img-caption">First ionization energies of elements, showing the periodic pattern and notable exceptions. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Successive Ionization Energies</h5>
+      <p>Each successive ionization energy is <strong>larger</strong> than the previous one (removing an electron from a more positive ion is harder). A <strong>large jump</strong> in successive IEs indicates that a <strong>core electron</strong> is being removed (breaking into the next shell).</p>
+      <div class="key-concept">
+        <strong>Example &mdash; Aluminum (Z = 13): 1s² 2s² 2p⁶ 3s² 3p¹</strong><br>
+        IE₁, IE₂, IE₃: remove the 3 valence electrons (gradual increase)<br>
+        <strong>IE₄: HUGE jump</strong> &mdash; now removing a 2p core electron<br>
+        This pattern reveals that Al has <strong>3 valence electrons</strong>.
+      </div>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Electronegativity</h5>
+      <ul>
+        <li><strong>Definition:</strong> A measure of an atom&rsquo;s ability to attract shared electrons in a chemical bond.</li>
+        <li><strong>Across a period:</strong> Increases (higher Z<sub>eff</sub> attracts bonding electrons more strongly).</li>
+        <li><strong>Down a group:</strong> Decreases (valence electrons farther from nucleus, weaker attraction).</li>
+        <li>Fluorine is the most electronegative element (3.98 on the Pauling scale). Noble gases are generally not assigned electronegativity values.</li>
+      </ul>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Electron Affinity</h5>
+      <ul>
+        <li><strong>Definition:</strong> The energy change when an atom in the gas phase gains an electron. A more negative value means the atom more readily accepts an electron.</li>
+        <li>Generally becomes more negative (more favorable) across a period.</li>
+        <li>Halogens (Group 17) have the most negative electron affinities &mdash; they need only one electron to complete their octet.</li>
+        <li><strong>Exceptions:</strong> Group 2 and Group 15 elements have surprisingly low electron affinities because adding an electron means entering a new, higher-energy subshell (Group 2) or pairing in a half-filled subshell (Group 15).</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 1.8 ===== -->
+  <section class="container my-4" id="topic-1-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">1.8 &mdash; Valence Electrons and Ionic Compounds</h3>
+ 
+      <p><strong>Valence electrons</strong> are the electrons in an atom&rsquo;s outermost energy level (highest principal quantum number). They determine an element&rsquo;s chemical properties, bonding behavior, and reactivity. Elements in the same group have the same number of valence electrons, which is why they exhibit similar chemistry.</p>
+ 
+      <h5 style="color: #8b4513;">Finding Valence Electrons</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Group (1&ndash;18 numbering)</th><th>Valence Electrons</th><th>Examples</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Group 1 (Alkali metals)</td><td>1</td><td>Na [Ne] 3s¹</td></tr>
+            <tr><td>Group 2 (Alkaline earth)</td><td>2</td><td>Mg [Ne] 3s²</td></tr>
+            <tr><td>Groups 13&ndash;18</td><td>Group # &minus; 10</td><td>C (Group 14) = 4 VE</td></tr>
+            <tr><td>Transition metals (Groups 3&ndash;12)</td><td>Varies; includes s + d electrons</td><td>Fe: 2 (4s²) shown commonly</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Ionic Compounds</h5>
+      <p>Ionic compounds form when metals <strong>transfer</strong> electrons to nonmetals. The result is oppositely charged ions held together by <strong>electrostatic attraction</strong> (the ionic bond). Both ions typically achieve a noble-gas electron configuration.</p>
+ 
+      <div class="key-concept">
+        <strong>Predicting ionic charges:</strong><br>
+        &bull; Group 1 metals form <strong>+1</strong> cations (lose 1 e⁻)<br>
+        &bull; Group 2 metals form <strong>+2</strong> cations (lose 2 e⁻)<br>
+        &bull; Aluminum forms <strong>+3</strong> (loses 3 e⁻ to get [Ne] configuration)<br>
+        &bull; Group 16 nonmetals form <strong>&minus;2</strong> anions (gain 2 e⁻)<br>
+        &bull; Group 17 halogens form <strong>&minus;1</strong> anions (gain 1 e⁻)<br>
+        &bull; Transition metals can form multiple charges (e.g., Fe²⁺ and Fe³⁺)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Coulomb&rsquo;s Law and Ionic Bond Strength</h5>
+      <div class="key-concept">
+        <strong>Coulomb&rsquo;s Law:</strong> F = k &middot; |q₁||q₂| / r²<br><br>
+        The electrostatic force (and therefore the strength of the ionic bond) is:<br>
+        &bull; <strong>Directly proportional</strong> to the product of the ion charges (higher charges = stronger bond)<br>
+        &bull; <strong>Inversely proportional</strong> to the square of the distance between ion centers (smaller ions = stronger bond)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Lattice Energy</h5>
+      <p><strong>Lattice energy</strong> is the energy released when gaseous ions come together to form a solid ionic compound (or equivalently, the energy required to completely separate an ionic solid into gaseous ions). It directly correlates with the strength of ionic bonds in the crystal:</p>
+      <ul>
+        <li>Higher charges &rarr; higher lattice energy &rarr; higher melting point</li>
+        <li>Smaller ions &rarr; higher lattice energy &rarr; higher melting point</li>
+        <li>Lattice energy affects solubility, melting point, and hardness of ionic compounds</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Ranking lattice energies:</strong><br>
+        Rank: NaCl, MgO, KBr, CaO<br><br>
+        CaO (2+/2&minus;, small ions) &asymp; MgO (2+/2&minus;, even smaller ions) &gt; NaCl (1+/1&minus;, small) &gt; KBr (1+/1&minus;, larger ions)<br>
+        <strong>MgO &gt; CaO &gt; NaCl &gt; KBr</strong><br><br>
+        MgO has the highest lattice energy because Mg²⁺ is smaller than Ca²⁺, and both have 2+/2&minus; charges.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Properties of Ionic Compounds</h5>
+      <ul>
+        <li><strong>High melting and boiling points</strong> (strong electrostatic forces between ions)</li>
+        <li><strong>Hard but brittle</strong> (shifting layers of ions causes like charges to align, which repel and crack the crystal)</li>
+        <li><strong>Conduct electricity when dissolved in water or melted</strong> (free-moving ions carry charge), but <strong>not as a solid</strong> (ions locked in place)</li>
+        <li><strong>Often soluble in polar solvents</strong> like water (ion-dipole interactions with water molecules)</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 1. Click <strong>"Show Answer"</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. A sample of an element contains two isotopes: isotope A has a mass of 10.01 amu and a relative abundance of 19.9%, and isotope B has a mass of 11.01 amu and a relative abundance of 80.1%. What is the average atomic mass of the element?</p>
+      <ul class="options">
+        <li>(A) 10.01 amu</li>
+        <li>(B) 10.51 amu</li>
+        <li>(C) 10.81 amu</li>
+        <li>(D) 11.01 amu</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Average = (10.01 &times; 0.199) + (11.01 &times; 0.801) = 1.99 + 8.82 = <strong>10.81 amu</strong>. The average is weighted toward isotope B since it is far more abundant (~80%).
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. How many moles of oxygen atoms are present in 0.50 mol of Ca(NO₃)₂?</p>
+      <ul class="options">
+        <li>(A) 1.0 mol</li>
+        <li>(B) 1.5 mol</li>
+        <li>(C) 3.0 mol</li>
+        <li>(D) 6.0 mol</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Ca(NO₃)₂ contains 6 oxygen atoms per formula unit (3 oxygens &times; 2 nitrate groups = 6). Moles of O = 0.50 mol &times; 6 = <strong>3.0 mol</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. A compound has the empirical formula CH₂O and a molar mass of approximately 180 g/mol. What is its molecular formula?</p>
+      <ul class="options">
+        <li>(A) C₂H₄O₂</li>
+        <li>(B) C₃H₆O₃</li>
+        <li>(C) C₆H₁₂O₆</li>
+        <li>(D) C₄H₈O₄</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Empirical formula mass of CH₂O = 12.01 + 2(1.008) + 16.00 = 30.03 g/mol. Multiplier = 180 / 30.03 = 6. Molecular formula = <strong>C₆H₁₂O₆</strong> (glucose).
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. Which of the following represents the correct ground-state electron configuration for chromium (Cr, Z = 24)?</p>
+      <ul class="options">
+        <li>(A) [Ar] 3d⁴ 4s²</li>
+        <li>(B) [Ar] 3d⁵ 4s¹</li>
+        <li>(C) [Ar] 3d⁶</li>
+        <li>(D) [Ar] 3d³ 4s² 4p¹</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Chromium is an exception: a half-filled 3d⁵ subshell is especially stable, so one electron from 4s moves to 3d, giving <strong>[Ar] 3d⁵ 4s¹</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. A PES spectrum for an element shows three peaks. The peak with the highest binding energy has a relative height of 2, the middle peak has a relative height of 2, and the peak with the lowest binding energy has a relative height of 3. Which element is this most likely?</p>
+      <ul class="options">
+        <li>(A) Boron (Z = 5)</li>
+        <li>(B) Carbon (Z = 6)</li>
+        <li>(C) Nitrogen (Z = 7)</li>
+        <li>(D) Oxygen (Z = 8)</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        The peak heights indicate electron counts: 2 (1s²), 2 (2s²), 3 (2p³). Total = 7 electrons = <strong>Nitrogen</strong>. The 3 peaks correspond to 3 subshells.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. Which of the following correctly ranks the atoms in order of increasing atomic radius?</p>
+      <ul class="options">
+        <li>(A) Na &lt; Mg &lt; Al &lt; Si</li>
+        <li>(B) Si &lt; Al &lt; Mg &lt; Na</li>
+        <li>(C) Al &lt; Si &lt; Na &lt; Mg</li>
+        <li>(D) Mg &lt; Na &lt; Si &lt; Al</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        All are in Period 3. Atomic radius <strong>decreases</strong> across a period (left to right) due to increasing Z<sub>eff</sub>. So Na is the largest and Si is the smallest: <strong>Si &lt; Al &lt; Mg &lt; Na</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. The first ionization energy of oxygen is lower than that of nitrogen. Which of the following best explains this observation?</p>
+      <ul class="options">
+        <li>(A) Oxygen has a larger atomic radius than nitrogen.</li>
+        <li>(B) Oxygen has fewer protons than nitrogen.</li>
+        <li>(C) In oxygen, the electron removed comes from a paired 2p orbital, and electron-electron repulsion makes it easier to remove.</li>
+        <li>(D) Nitrogen has a lower effective nuclear charge than oxygen.</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Nitrogen has a half-filled 2p³ (one electron per orbital, no pairing). Oxygen's 2p⁴ forces one pair, and the <strong>electron-electron repulsion</strong> in that paired orbital makes it easier (less energy) to remove that electron. This is a classic AP exam exception.
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. Which of the following ionic compounds would be expected to have the highest lattice energy?</p>
+      <ul class="options">
+        <li>(A) NaCl</li>
+        <li>(B) KBr</li>
+        <li>(C) MgO</li>
+        <li>(D) CsI</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Lattice energy depends on charge and ionic radius (Coulomb's Law). MgO has <strong>2+ and 2&minus;</strong> charges with small ionic radii, producing a much stronger electrostatic attraction than any of the 1+/1&minus; compounds. CsI would have the lowest (1+/1&minus;, very large ions).
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. The successive ionization energies (in kJ/mol) of an unknown element X are: 578, 1817, 2745, 11,578, 14,831. In which group of the periodic table is element X most likely found?</p>
+      <ul class="options">
+        <li>(A) Group 1</li>
+        <li>(B) Group 2</li>
+        <li>(C) Group 3</li>
+        <li>(D) Group 13</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        The <strong>huge jump</strong> occurs between IE₃ (2745) and IE₄ (11,578) &mdash; a factor of &gt;4. This means the first 3 electrons were valence electrons, and the 4th is a core electron. Three valence electrons &rarr; <strong>Group 3</strong> (or Group 13 with the 1&ndash;18 system, but here the pattern of 3 relatively low IEs followed by a big jump matches Group 13/3 with 3 VE).
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. Which of the following elements has the highest electronegativity?</p>
+      <ul class="options">
+        <li>(A) Li</li>
+        <li>(B) C</li>
+        <li>(C) N</li>
+        <li>(D) F</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (D)</strong><br>
+        Electronegativity increases across a period (left &rarr; right). All four elements are in Period 2, and <strong>fluorine</strong> is the most electronegative element on the entire periodic table (3.98 on the Pauling scale).
+      </div>
+    </div>
+ 
+  </section>
+ 
+  <!-- Study Tip Card -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 1</h5>
+        <p class="card-text">Unit 1 is the foundation for everything in AP Chemistry. Make sure you can <strong>write electron configurations quickly</strong> (including ions and exceptions like Cr and Cu), <strong>read PES spectra</strong> to identify elements, and <strong>explain every periodic trend using effective nuclear charge</strong>. These skills appear throughout Units 2, 3, 7, and 8. Practice dimensional analysis with mole conversions until it becomes second nature. For the AP exam, always show your units in calculations and watch for questions that ask about <strong>atoms</strong> vs. <strong>molecules</strong>.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
