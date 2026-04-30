@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP United States History Unit 5 — Period 5: 1844–1877. Timeline, comprehensive notes covering Manifest Destiny, the Mexican-American War, sectional conflict, slavery, abolition, the Civil War, and Reconstruction, plus MCQs and SAQs." />
+  <title>Unit 5: Period 5 (1844–1877)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f3a5f;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: #b22234;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #b22234;
+      padding-bottom: 0.3rem;
+    }
+    h3 { color: #2f5d8c; margin-top: 1.5rem; }
+    h4 { color: #1f3a5f; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box {
+      background: linear-gradient(135deg, #dbeafe, #eef4ff);
+      border-left: 6px solid #b22234;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+ 
+    .weighting-badge {
+      display: inline-block;
+      background: #1f3a5f;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+ 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #b22234;
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8fbff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f3a5f;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #b22234;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f3a5f;
+      margin-right: 0.5rem;
+    }
+ 
+    /* Region cards */
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region-context        { border-color: #8b1e3f; background: #fff1f4; }
+    .region-expansion      { border-color: #c45a1b; background: #eef4ff; }
+    .region-sectionalism   { border-color: #174ea6; background: #e8f1ff; }
+    .region-slavery        { border-color: #5b3f8c; background: #f3efff; }
+    .region-war            { border-color: #b22234; background: #fff1f4; }
+    .region-reconstruction { border-color: #2f6f73; background: #eef9f9; }
+    .region-comparison     { border-color: #7b2d43; background: #fff0f3; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f3a5f;
+      background: #eef4ff;
+      font-weight: 600;
+    }
+ 
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .vocab-item {
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+    .vocab-term {
+      font-weight: 700;
+      color: #1f3a5f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #b8c7dc;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .compare-table thead {
+      background: linear-gradient(to right, #1f3a5f, #b22234);
+      color: white;
+    }
+    .compare-table tbody tr:nth-child(even) { background: #f8fbff; }
+ 
+    /* Quiz */
+    .quiz-container {
+      background: linear-gradient(135deg, #dbeafe, #f8fbff);
+      border: 2px solid #1f3a5f;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-container h2 { margin-top: 0; border: none; color: #1f3a5f; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f3a5f;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #eef4ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f3a5f;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .explanation.show { display: block; }
+ 
+    /* SAQ */
+    .saq-box {
+      background: #fff;
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8fbff;
+      border: 1px dashed #1f3a5f;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f3a5f;
+    }
+ 
+    .key-takeaways {
+      background: linear-gradient(135deg, #eef4ff, #dbeafe);
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP United States History</a>
+    <h1>Unit 5: Period 5</h1>
+    <p class="subtitle">1844 – 1877 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 10–17%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🇺🇸 Unit Overview</h3>
+      <p>
+        APUSH Unit 5 covers one of the most important turning points in United States history. During this period, the nation expanded west,
+        fought Mexico, gained huge new territories, and then became more divided over slavery. Political compromises failed, sectional tension
+        increased, Southern states seceded, and the Civil War decided the future of slavery and the Union. Reconstruction then tried to rebuild
+        the South and define freedom for formerly enslaved people, but it faced violent resistance and eventually ended without full equality.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How did westward expansion, slavery, sectional conflict, the Civil War, and Reconstruction transform
+        the United States between 1844 and 1877?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/American_progress.JPG?width=1000" alt="American Progress painting by John Gast" class="unit-image">
+      <div class="image-caption">American Progress — connects to Manifest Destiny, western expansion, and the belief that U.S. expansion was inevitable.</div>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 5 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">1844:</span> James K. Polk is elected president on a platform of expansion and Manifest Destiny.</div>
+      <div class="timeline-event"><span class="timeline-date">1845:</span> Texas is annexed by the United States, increasing tension with Mexico.</div>
+      <div class="timeline-event"><span class="timeline-date">1846–1848:</span> Mexican-American War is fought over Texas, territory, and expansion.</div>
+      <div class="timeline-event"><span class="timeline-date">1848:</span> Treaty of Guadalupe Hidalgo gives the U.S. California and much of the Southwest; Seneca Falls Convention calls for women's rights.</div>
+      <div class="timeline-event"><span class="timeline-date">1849:</span> California Gold Rush increases migration to the West.</div>
+      <div class="timeline-event"><span class="timeline-date">1850:</span> Compromise of 1850 admits California as a free state and strengthens the Fugitive Slave Law.</div>
+      <div class="timeline-event"><span class="timeline-date">1852:</span> Uncle Tom's Cabin increases Northern opposition to slavery.</div>
+      <div class="timeline-event"><span class="timeline-date">1854:</span> Kansas-Nebraska Act allows popular sovereignty and helps create the Republican Party.</div>
+      <div class="timeline-event"><span class="timeline-date">1856:</span> Bleeding Kansas violence shows that compromise over slavery is collapsing.</div>
+      <div class="timeline-event"><span class="timeline-date">1857:</span> Dred Scott decision says Congress cannot ban slavery in the territories.</div>
+      <div class="timeline-event"><span class="timeline-date">1859:</span> John Brown raids Harpers Ferry, increasing Southern fear of abolitionism.</div>
+      <div class="timeline-event"><span class="timeline-date">1860:</span> Abraham Lincoln is elected president; Southern states begin seceding.</div>
+      <div class="timeline-event"><span class="timeline-date">1861–1865:</span> Civil War is fought between the Union and Confederacy.</div>
+      <div class="timeline-event"><span class="timeline-date">1863:</span> Emancipation Proclamation declares enslaved people free in rebelling states; Battle of Gettysburg becomes a major turning point.</div>
+      <div class="timeline-event"><span class="timeline-date">1865:</span> Civil War ends; Lincoln is assassinated; 13th Amendment abolishes slavery.</div>
+      <div class="timeline-event"><span class="timeline-date">1866:</span> 14th Amendment is passed by Congress, defining citizenship and equal protection.</div>
+      <div class="timeline-event"><span class="timeline-date">1867:</span> Radical Reconstruction begins, placing the South under military districts.</div>
+      <div class="timeline-event"><span class="timeline-date">1870:</span> 15th Amendment protects voting rights for Black men.</div>
+      <div class="timeline-event"><span class="timeline-date">1877:</span> Compromise of 1877 ends Reconstruction as federal troops leave the South.</div>
+    </div>
+ 
+    <!-- TOPIC 5.1 -->
+    <h2>Topic 5.1 — Contextualizing Period 5</h2>
+    <div class="region-card region-context">
+      <h3>🌎 Expansion, Slavery, War, and Reconstruction</h3>
+      <p>Period 5 focuses on the growing conflict between national expansion and slavery. The United States gained enormous new territories, but every new territory raised the question: would slavery expand west?</p>
+ 
+      <h4>Major Themes</h4>
+      <ul>
+        <li><strong>Manifest Destiny:</strong> Many Americans believed the U.S. was destined to expand across the continent.</li>
+        <li><strong>Sectionalism:</strong> The North and South developed different economies, labor systems, and political goals.</li>
+        <li><strong>Slavery:</strong> The central conflict of the period was whether slavery would expand, continue, or end.</li>
+        <li><strong>Civil War:</strong> The war preserved the Union and destroyed slavery.</li>
+        <li><strong>Reconstruction:</strong> The federal government tried to rebuild the South and define citizenship after slavery.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 5.2 -->
+    <h2>Topic 5.2 — Manifest Destiny and Westward Expansion</h2>
+    <div class="region-card region-expansion">
+      <h3>🧭 Expansion Across the Continent</h3>
+      <p>Manifest Destiny was the belief that the United States was meant to expand across North America. Supporters saw expansion as spreading democracy and opportunity, while critics argued it promoted war, Native removal, and slavery.</p>
+ 
+      <h4>Major Examples of Expansion</h4>
+      <ul>
+        <li><strong>Texas annexation:</strong> Texas joined the United States in 1845 after previously winning independence from Mexico.</li>
+        <li><strong>Oregon Territory:</strong> The U.S. and Britain agreed to divide Oregon at the 49th parallel in 1846.</li>
+        <li><strong>Mexican Cession:</strong> The Treaty of Guadalupe Hidalgo gave the U.S. California and much of the Southwest.</li>
+        <li><strong>California Gold Rush:</strong> The discovery of gold in 1848 brought thousands of migrants west.</li>
+      </ul>
+ 
+      <h4>Effects of Expansion</h4>
+      <ul>
+        <li>Expansion increased conflict with Mexico and Native peoples.</li>
+        <li>New western lands intensified debate over whether slavery should spread.</li>
+        <li>Migration changed the environment and disrupted Native communities.</li>
+        <li>The U.S. became a continental power stretching from the Atlantic to the Pacific.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 5.3 -->
+    <h2>Topic 5.3 — The Mexican-American War</h2>
+    <div class="region-card region-expansion">
+      <h3>⚔️ War With Mexico</h3>
+      <p>The Mexican-American War was strongly connected to Manifest Destiny. President James K. Polk wanted to acquire California and New Mexico, while Mexico disputed the U.S. annexation of Texas and the border.</p>
+ 
+      <h4>Causes</h4>
+      <ul>
+        <li><strong>Texas annexation:</strong> Mexico still considered Texas part of its territory.</li>
+        <li><strong>Border dispute:</strong> The U.S. claimed the Rio Grande as Texas's border, while Mexico claimed the Nueces River.</li>
+        <li><strong>Polk's expansionism:</strong> Polk wanted California, New Mexico, and other western lands.</li>
+      </ul>
+ 
+      <h4>Results</h4>
+      <ul>
+        <li><strong>Treaty of Guadalupe Hidalgo:</strong> Mexico ceded California and much of the Southwest to the U.S.</li>
+        <li><strong>Mexican Cession:</strong> New land created intense debate over slavery in the territories.</li>
+        <li><strong>Wilmot Proviso:</strong> Proposed banning slavery in land taken from Mexico, but it failed in the Senate.</li>
+        <li><strong>Sectional conflict:</strong> Many Northerners saw the war as an attempt to expand slave territory.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mexican_Cession.png?width=1000" alt="Map of the Mexican Cession" class="unit-image">
+      <div class="image-caption">Mexican Cession map — connects to the Mexican-American War and the debate over slavery in new territories.</div>
+    </div>
+ 
+    <!-- TOPIC 5.4 -->
+    <h2>Topic 5.4 — The Compromise of 1850 and Sectional Conflict</h2>
+    <div class="region-card region-sectionalism">
+      <h3>⚖️ Compromise Begins to Fail</h3>
+      <p>After the Mexican-American War, the country struggled to decide whether slavery would be allowed in new western territories. The Compromise of 1850 temporarily reduced tension but also made conflict worse in the long run.</p>
+ 
+      <h4>Compromise of 1850</h4>
+      <ul>
+        <li><strong>California:</strong> Admitted as a free state.</li>
+        <li><strong>Popular sovereignty:</strong> Utah and New Mexico territories would decide slavery by vote.</li>
+        <li><strong>Slave trade:</strong> The slave trade ended in Washington, D.C., but slavery itself continued there.</li>
+        <li><strong>Fugitive Slave Law:</strong> Required Northerners to help return escaped enslaved people and punished those who helped them.</li>
+      </ul>
+ 
+      <h4>Effects</h4>
+      <ul>
+        <li>The Fugitive Slave Law angered many Northerners and increased abolitionist activity.</li>
+        <li>Southern slaveholders demanded stronger protection for slavery.</li>
+        <li>Compromise became harder as both sides became more extreme.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 5.5 -->
+    <h2>Topic 5.5 — Slavery, Abolition, and Resistance</h2>
+    <div class="region-card region-slavery">
+      <h3>⛓️ Slavery and the Fight Against It</h3>
+      <p>Slavery remained the most divisive issue in the United States. Enslaved people resisted slavery, abolitionists attacked slavery morally and politically, and Southern defenders argued slavery was necessary and positive.</p>
+ 
+      <h4>Enslaved Resistance</h4>
+      <ul>
+        <li><strong>Everyday resistance:</strong> Enslaved people slowed work, broke tools, preserved culture, and resisted control.</li>
+        <li><strong>Escape:</strong> Some enslaved people escaped through the Underground Railroad.</li>
+        <li><strong>Rebellion:</strong> Revolts like Nat Turner's Rebellion increased Southern fear and repression.</li>
+      </ul>
+ 
+      <h4>Abolitionism</h4>
+      <ul>
+        <li><strong>William Lloyd Garrison:</strong> Published The Liberator and demanded immediate abolition.</li>
+        <li><strong>Frederick Douglass:</strong> Formerly enslaved abolitionist who used speeches and writing to expose slavery's brutality.</li>
+        <li><strong>Harriet Tubman:</strong> Helped enslaved people escape through the Underground Railroad.</li>
+        <li><strong>Uncle Tom's Cabin:</strong> Harriet Beecher Stowe's novel increased Northern opposition to slavery.</li>
+      </ul>
+ 
+      <h4>Southern Defense of Slavery</h4>
+      <ul>
+        <li>Southern leaders argued slavery was protected by property rights and the Constitution.</li>
+        <li>Some claimed slavery was a “positive good,” not just a necessary evil.</li>
+        <li>Southern states passed stricter laws to control enslaved people and silence abolitionist ideas.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Frederick_Douglass_%28circa_1879%29.jpg?width=1000" alt="Frederick Douglass portrait" class="unit-image">
+      <div class="image-caption">Frederick Douglass — connects to abolitionism, antislavery activism, and Black resistance to slavery.</div>
+    </div>
+ 
+    <!-- TOPIC 5.6 -->
+    <h2>Topic 5.6 — The 1850s: The Road to Civil War</h2>
+    <div class="region-card region-sectionalism">
+      <h3>🔥 Sectional Crisis</h3>
+      <p>During the 1850s, the political system failed to contain conflict over slavery. Violence spread, parties collapsed, and the Republican Party rose by opposing the expansion of slavery.</p>
+ 
+      <h4>Kansas-Nebraska Act</h4>
+      <ul>
+        <li><strong>Popular sovereignty:</strong> Allowed settlers in Kansas and Nebraska to vote on slavery.</li>
+        <li><strong>Repealed Missouri Compromise line:</strong> Opened land north of 36°30′ to possible slavery.</li>
+        <li><strong>Bleeding Kansas:</strong> Proslavery and antislavery settlers fought violently over Kansas's future.</li>
+      </ul>
+ 
+      <h4>Dred Scott Decision</h4>
+      <ul>
+        <li><strong>Supreme Court ruling:</strong> Dred Scott was not a citizen and could not sue in federal court.</li>
+        <li><strong>Territories:</strong> Congress could not ban slavery in the territories.</li>
+        <li><strong>Impact:</strong> The decision angered Northerners and strengthened the Republican Party.</li>
+      </ul>
+ 
+      <h4>John Brown and Harpers Ferry</h4>
+      <ul>
+        <li><strong>Goal:</strong> John Brown tried to start a slave uprising by raiding a federal arsenal.</li>
+        <li><strong>Southern reaction:</strong> Many Southerners saw Brown as proof that abolitionists wanted violent rebellion.</li>
+        <li><strong>Northern reaction:</strong> Some Northerners condemned his violence, while others admired his antislavery commitment.</li>
+      </ul>
+ 
+      <h4>Election of 1860</h4>
+      <ul>
+        <li><strong>Lincoln:</strong> Won as a Republican opposing the expansion of slavery.</li>
+        <li><strong>Southern secession:</strong> Southern states believed Lincoln threatened slavery and began leaving the Union.</li>
+        <li><strong>Confederacy:</strong> Seceding states formed the Confederate States of America.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 5.7 -->
+    <h2>Topic 5.7 — The Civil War</h2>
+    <div class="region-card region-war">
+      <h3>🪖 Union vs. Confederacy</h3>
+      <p>The Civil War began after Southern secession and the attack on Fort Sumter. The war started as a fight to preserve the Union, but it became a war to end slavery as well.</p>
+ 
+      <h4>Advantages</h4>
+      <ul>
+        <li><strong>Union advantages:</strong> Larger population, more factories, more railroads, stronger navy, and more financial resources.</li>
+        <li><strong>Confederate advantages:</strong> Strong military leadership, defensive war, and motivation to protect home territory.</li>
+      </ul>
+ 
+      <h4>Major Events</h4>
+      <ul>
+        <li><strong>Fort Sumter:</strong> Confederate attack started the Civil War.</li>
+        <li><strong>Antietam:</strong> Union victory allowed Lincoln to issue the Emancipation Proclamation.</li>
+        <li><strong>Emancipation Proclamation:</strong> Freed enslaved people in rebelling states and made abolition a Union war goal.</li>
+        <li><strong>Gettysburg:</strong> Major Union victory that stopped Lee's invasion of the North.</li>
+        <li><strong>Vicksburg:</strong> Union victory gave control of the Mississippi River.</li>
+        <li><strong>Appomattox:</strong> Lee surrendered to Grant in 1865.</li>
+      </ul>
+ 
+      <h4>Effects</h4>
+      <ul>
+        <li>The Union was preserved.</li>
+        <li>Slavery was abolished through the 13th Amendment.</li>
+        <li>Federal power increased.</li>
+        <li>The South was physically and economically devastated.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Emancipation_Proclamation.jpg?width=1000" alt="Emancipation Proclamation document" class="unit-image">
+      <div class="image-caption">Emancipation Proclamation — connects to the changing purpose of the Civil War and the fight to end slavery.</div>
+    </div>
+ 
+    <!-- TOPIC 5.8 -->
+    <h2>Topic 5.8 — Reconstruction</h2>
+    <div class="region-card region-reconstruction">
+      <h3>🏛️ Rebuilding the Nation</h3>
+      <p>Reconstruction was the period after the Civil War when the federal government tried to rebuild the South, bring former Confederate states back into the Union, and define the legal status of formerly enslaved people.</p>
+ 
+      <h4>Presidential Reconstruction</h4>
+      <ul>
+        <li><strong>Lincoln's plan:</strong> Wanted a relatively quick and lenient reunification.</li>
+        <li><strong>Andrew Johnson:</strong> Allowed many former Confederates to regain power and did little to protect freedpeople.</li>
+        <li><strong>Black Codes:</strong> Southern laws restricted the freedom and labor rights of formerly enslaved people.</li>
+      </ul>
+ 
+      <h4>Radical Reconstruction</h4>
+      <ul>
+        <li><strong>Radical Republicans:</strong> Wanted stronger federal protection for freedpeople and punishment of former Confederates.</li>
+        <li><strong>Military Reconstruction Acts:</strong> Divided the South into military districts.</li>
+        <li><strong>Freedmen's Bureau:</strong> Helped formerly enslaved people with education, labor contracts, food, and legal support.</li>
+      </ul>
+ 
+      <h4>Reconstruction Amendments</h4>
+      <ul>
+        <li><strong>13th Amendment:</strong> Abolished slavery.</li>
+        <li><strong>14th Amendment:</strong> Defined citizenship and guaranteed equal protection under the law.</li>
+        <li><strong>15th Amendment:</strong> Protected voting rights for Black men.</li>
+      </ul>
+ 
+      <h4>Resistance and Failure</h4>
+      <ul>
+        <li><strong>Ku Klux Klan:</strong> Used terror and violence to attack Black political participation and white Republicans.</li>
+        <li><strong>Sharecropping:</strong> Kept many Black and poor white farmers in debt and poverty.</li>
+        <li><strong>Compromise of 1877:</strong> Ended Reconstruction when federal troops left the South.</li>
+        <li><strong>Legacy:</strong> Reconstruction created constitutional protections, but many promises of equality were undermined by white Southern resistance.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Freedmen%27s_Bureau.jpg?width=1000" alt="Freedmen's Bureau image" class="unit-image">
+      <div class="image-caption">Freedmen's Bureau — connects to Reconstruction efforts to support formerly enslaved people.</div>
+    </div>
+ 
+    <!-- TOPIC 5.9 -->
+    <h2>Topic 5.9 — Comparison in Period 5</h2>
+    <p>The CED asks you to compare causes, effects, and competing visions during Period 5. Use this table as a starting point.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Comparison</th>
+            <th>Side 1</th>
+            <th>Side 2</th>
+            <th>Main Difference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>North vs. South</td><td>Industrializing economy, free labor ideology, stronger cities</td><td>Plantation economy, slavery, cotton exports</td><td>Different labor systems and economies drove sectional conflict</td></tr>
+          <tr><td>Popular Sovereignty vs. Free Soil</td><td>Settlers vote on slavery in territories</td><td>Slavery should not expand into western territories</td><td>Different solutions to slavery in the West</td></tr>
+          <tr><td>Union vs. Confederacy</td><td>Wanted to preserve the Union and later end slavery</td><td>Wanted independence and protection of slavery</td><td>Different visions of nationhood and federal authority</td></tr>
+          <tr><td>Presidential vs. Radical Reconstruction</td><td>More lenient toward the South</td><td>Stronger federal protection for freedpeople</td><td>Different approaches to rebuilding the South and protecting rights</td></tr>
+          <tr><td>Reconstruction Amendments vs. Southern Resistance</td><td>Expanded citizenship and voting rights</td><td>Black Codes, violence, and later Jim Crow limited rights</td><td>Legal equality clashed with white supremacist resistance</td></tr>
+        </tbody>
+      </table>
+    </div>
+ 
+    <h3>Cross-Regional Continuities &amp; Change</h3>
+    <ul>
+      <li><strong>Continuity:</strong> Debates over federal power, states' rights, expansion, and race continued throughout the period.</li>
+      <li><strong>Change:</strong> The Civil War ended slavery and greatly increased federal authority.</li>
+      <li><strong>Similarities:</strong> Both North and South claimed to defend liberty, but they defined liberty very differently.</li>
+      <li><strong>Differences:</strong> The North's free labor economy conflicted with the South's slave labor plantation economy.</li>
+    </ul>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Manifest Destiny</span>Belief that the United States was destined to expand across North America.</div>
+      <div class="vocab-item"><span class="vocab-term">Mexican-American War</span>War from 1846 to 1848 that resulted in major U.S. territorial gains.</div>
+      <div class="vocab-item"><span class="vocab-term">Treaty of Guadalupe Hidalgo</span>1848 treaty that ended the Mexican-American War and gave the U.S. the Mexican Cession.</div>
+      <div class="vocab-item"><span class="vocab-term">Wilmot Proviso</span>Failed proposal to ban slavery in land gained from Mexico.</div>
+      <div class="vocab-item"><span class="vocab-term">Compromise of 1850</span>Compromise admitting California as free and strengthening the Fugitive Slave Law.</div>
+      <div class="vocab-item"><span class="vocab-term">Fugitive Slave Law</span>Law requiring escaped enslaved people to be returned to enslavers.</div>
+      <div class="vocab-item"><span class="vocab-term">Popular Sovereignty</span>Policy allowing settlers to vote on whether to allow slavery.</div>
+      <div class="vocab-item"><span class="vocab-term">Kansas-Nebraska Act</span>1854 law allowing popular sovereignty in Kansas and Nebraska.</div>
+      <div class="vocab-item"><span class="vocab-term">Bleeding Kansas</span>Violence between proslavery and antislavery settlers in Kansas.</div>
+      <div class="vocab-item"><span class="vocab-term">Dred Scott v. Sandford</span>Supreme Court decision saying Congress could not ban slavery in territories.</div>
+      <div class="vocab-item"><span class="vocab-term">John Brown</span>Radical abolitionist who raided Harpers Ferry in 1859.</div>
+      <div class="vocab-item"><span class="vocab-term">Secession</span>Withdrawal of Southern states from the Union after Lincoln's election.</div>
+      <div class="vocab-item"><span class="vocab-term">Emancipation Proclamation</span>Lincoln's 1863 order freeing enslaved people in rebelling states.</div>
+      <div class="vocab-item"><span class="vocab-term">Gettysburg</span>Major Union victory and turning point in the Civil War.</div>
+      <div class="vocab-item"><span class="vocab-term">13th Amendment</span>Abolished slavery in the United States.</div>
+      <div class="vocab-item"><span class="vocab-term">14th Amendment</span>Defined citizenship and guaranteed equal protection.</div>
+      <div class="vocab-item"><span class="vocab-term">15th Amendment</span>Protected voting rights for Black men.</div>
+      <div class="vocab-item"><span class="vocab-term">Sharecropping</span>A labor system that kept many freedpeople and poor farmers in debt.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+ 
+      <div class="quiz-question">
+        <p><strong>1. Which issue most directly intensified after the Mexican-American War?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Whether the United States should remain neutral in Europe.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Whether slavery should be allowed in newly acquired western territories.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Whether the United States should give California back to Mexico.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Whether the Articles of Confederation should be restored.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> The Mexican Cession reopened the national debate over whether slavery would expand into western territories, increasing sectional conflict.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. Which part of the Compromise of 1850 most angered many Northerners?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) California entered as a free state.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(B) The slave trade ended in Washington, D.C.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(C) The Fugitive Slave Law required help returning escaped enslaved people.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Texas gave up land claims in exchange for money.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: C.</strong> The Fugitive Slave Law forced Northerners to participate in returning escaped enslaved people, which increased antislavery feeling in the North.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. The Kansas-Nebraska Act contributed to sectional violence mainly because it did which of the following?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Banned slavery in all western territories.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) Allowed popular sovereignty and reopened the question of slavery north of the Missouri Compromise line.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Required all enslaved people to be freed immediately.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Ended the Republican Party.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: B.</strong> The act allowed settlers to vote on slavery in Kansas and Nebraska, leading proslavery and antislavery settlers to fight in “Bleeding Kansas.”</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>4. Which statement best describes the significance of the Emancipation Proclamation?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) It immediately freed all enslaved people in every state.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) It made ending slavery a Union war goal and applied to enslaved people in rebelling states.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) It allowed the Confederacy to rejoin the Union without conditions.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) It ended Reconstruction.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> The Emancipation Proclamation did not free every enslaved person immediately, but it changed the purpose of the Civil War by making abolition a Union goal.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. Which of the following was a major goal of Radical Reconstruction?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Restore slavery in the South.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Remove all federal authority from the South immediately.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(C) Protect the rights of freedpeople and reshape Southern governments.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Give former Confederate leaders complete control of Reconstruction.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: C.</strong> Radical Republicans wanted stronger federal action to protect freedpeople, punish former Confederates, and rebuild Southern governments on new terms.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+    <p>SAQs ask you to respond in complete sentences — no thesis needed, but be specific and use evidence. Aim for 2–4 sentences per part.</p>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — Sectional Conflict (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE cause of sectional conflict between the North and South before the Civil War.</li>
+        <li>Identify ONE event in the 1850s that increased sectional tension.</li>
+        <li>Explain ONE way westward expansion contributed to the Civil War.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> One cause of sectional conflict was disagreement over whether slavery should expand into western territories.</p>
+        <p><strong>(b)</strong> The Kansas-Nebraska Act increased sectional tension because it allowed popular sovereignty and led to violence in Bleeding Kansas.</p>
+        <p><strong>(c)</strong> Westward expansion contributed to the Civil War because every new territory forced the nation to debate whether slavery would be allowed there, making compromise harder.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+      <p style="background:#f8fbff; padding:0.8rem; border-radius:6px; border-left:4px solid #1f3a5f;">
+        “A house divided against itself cannot stand. I believe this government cannot endure, permanently half slave and half free.”
+        <br>
+        <em>— Abraham Lincoln, 1858</em>
+      </p>
+      <ol type="a">
+        <li>Identify ONE issue Lincoln is referring to in the excerpt.</li>
+        <li>Explain ONE event before 1860 that supports Lincoln's claim that the nation was becoming divided.</li>
+        <li>Explain ONE way the Civil War changed the relationship between the federal government and slavery.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Lincoln is referring to the sectional conflict over slavery and whether the United States could survive divided between free and slave states.</p>
+        <p><strong>(b)</strong> Bleeding Kansas supports Lincoln's claim because proslavery and antislavery settlers fought violently over whether Kansas would allow slavery.</p>
+        <p><strong>(c)</strong> The Civil War changed the federal government's relationship to slavery because the government moved from trying to contain slavery to abolishing it through the Emancipation Proclamation and the 13th Amendment.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Manifest Destiny expanded the nation.</strong> Texas annexation, Oregon, the Mexican Cession, and the Gold Rush pushed the U.S. westward.</li>
+        <li><strong>Expansion made slavery harder to compromise over.</strong> Every new territory raised the question of free or slave labor.</li>
+        <li><strong>The 1850s broke the political system.</strong> The Compromise of 1850, Kansas-Nebraska Act, Dred Scott, and John Brown deepened sectional division.</li>
+        <li><strong>The Civil War preserved the Union and ended slavery.</strong> The war expanded federal power and led to emancipation.</li>
+        <li><strong>Reconstruction expanded rights on paper.</strong> The 13th, 14th, and 15th Amendments transformed the Constitution.</li>
+        <li><strong>Reconstruction faced violent resistance.</strong> Black Codes, the KKK, sharecropping, and the Compromise of 1877 limited freedom and equality.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP United States History</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
