@@ -11,16 +11,21 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
+      background-color: #f4f7fb;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #1f3a5f !important;
     }
 
     .hero {
-      background: linear-gradient(to right, #002868, #bf0a30);
+      background: linear-gradient(135deg, #1f3a5f, #b22234);
       color: white;
       padding: 5rem 1rem;
       text-align: center;
       border-radius: 0 0 30px 30px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
       animation: fadeIn 1.2s ease-in;
     }
 
@@ -36,7 +41,8 @@
 
     .topics-list li {
       background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      border: 1px solid #b8c7dc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       margin-bottom: 0.75rem;
       padding: 1rem;
       border-radius: 0.75rem;
@@ -45,20 +51,21 @@
     }
 
     .topics-list li:hover {
-      background: linear-gradient(to right, #e6eefc, #ffe6eb);
+      background: linear-gradient(to right, #eef4ff, #fff1f4);
       transform: scale(1.02);
     }
 
     .section-heading {
       font-weight: 700;
       font-size: 2rem;
-      color: #002868;
+      color: #1f3a5f;
       margin-bottom: 1.5rem;
     }
 
     .card {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      border: none;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #d6e0ee;
       border-radius: 1rem;
       transition: 0.3s ease;
     }
@@ -67,13 +74,13 @@
 
     .btn-outline-primary {
       border-radius: 30px;
-      color: #002868;
-      border-color: #002868;
+      color: #1f3a5f;
+      border-color: #1f3a5f;
     }
 
     .btn-outline-primary:hover {
-      background-color: #002868;
-      border-color: #002868;
+      background-color: #1f3a5f;
+      border-color: #1f3a5f;
       color: #ffffff;
     }
 
@@ -93,7 +100,7 @@
     }
 
     .exam-table thead {
-      background: linear-gradient(to right, #002868, #bf0a30);
+      background: linear-gradient(to right, #1f3a5f, #b22234);
       color: #ffffff;
     }
 
@@ -101,8 +108,12 @@
       vertical-align: middle;
     }
 
+    .table-bordered > :not(caption) > * > * {
+      border-color: #b8c7dc;
+    }
+
     footer {
-      background-color: #343a40;
+      background-color: #1f3a5f;
       color: #ffffff;
       padding: 2rem 0;
       margin-top: 4rem;
@@ -116,7 +127,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">🇺🇸 AP U.S. History</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -215,9 +226,9 @@
   <section class="container my-5">
     <div class="card p-4">
       <div class="card-body">
-        <h5 class="card-title">💡 Study Tip</h5>
+        <h5 class="card-title" style="color:#1f3a5f;">💡 Study Tip</h5>
         <p class="card-text">Practice SAQs, DBQs, and LEQs weekly. Focus on historical reasoning skills like causation, comparison, continuity and change, and using evidence to support a clear argument.</p>
-        <a href="https://apstudents.collegeboard.org/courses/ap-united-states-history" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+        <a href="https://apstudents.collegeboard.org/courses/ap-united-states-history" class="btn btn-outline-primary" target="_blank">Visit College Board APUSH Page</a>
       </div>
     </div>
   </section>
@@ -231,3 +242,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
