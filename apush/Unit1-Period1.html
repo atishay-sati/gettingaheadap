@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+ 
+    gtag('config', 'G-6TMSR9LD4H');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP United States History Unit 1 — Period 1: 1491–1607. Timeline, comprehensive notes covering Native American societies, European exploration, the Columbian Exchange, Spanish colonization, African labor, and historical comparison, plus MCQs and SAQs." />
+  <title>Unit 1: Period 1 (1491–1607)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f3a5f;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: #b22234;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #b22234;
+      padding-bottom: 0.3rem;
+    }
+    h3 { color: #2f5d8c; margin-top: 1.5rem; }
+    h4 { color: #1f3a5f; margin-top: 1rem; }
+    p { font-size: 1.05rem; margin-bottom: 1.1rem; }
+    ul, ol { padding-left: 1.3rem; }
+    li { margin-bottom: 0.5rem; }
+ 
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .back-link:hover { text-decoration: underline; transform: scale(1.02); }
+ 
+    .overview-box {
+      background: linear-gradient(135deg, #dbeafe, #eef4ff);
+      border-left: 6px solid #b22234;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+ 
+    .weighting-badge {
+      display: inline-block;
+      background: #1f3a5f;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+ 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #b22234;
+    }
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8fbff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f3a5f;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #b22234;
+    }
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f3a5f;
+      margin-right: 0.5rem;
+    }
+ 
+    /* Region cards */
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .region-native      { border-color: #8b1e3f; background: #fff1f4; }
+    .region-europe      { border-color: #174ea6; background: #e8f1ff; }
+    .region-exchange    { border-color: #2f6f73; background: #eef9f9; }
+    .region-spanish     { border-color: #c45a1b; background: #eef4ff; }
+    .region-africa      { border-color: #5b3f8c; background: #f3efff; }
+    .region-comparison  { border-color: #7b2d43; background: #fff0f3; }
+ 
+    .region-card h3 { margin-top: 0; }
+ 
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .vocab-item {
+      background: #f8fbff;
+      border: 1px solid #b8c7dc;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+    .vocab-term {
+      font-weight: 700;
+      color: #1f3a5f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+    .compare-table th, .compare-table td {
+      border: 1px solid #b8c7dc;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .compare-table thead {
+      background: linear-gradient(to right, #1f3a5f, #b22234);
+      color: white;
+    }
+    .compare-table tbody tr:nth-child(even) { background: #f8fbff; }
+ 
+    /* Quiz */
+    .quiz-container {
+      background: linear-gradient(135deg, #dbeafe, #f8fbff);
+      border: 2px solid #1f3a5f;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-container h2 { margin-top: 0; border: none; color: #1f3a5f; }
+    .quiz-question { margin-bottom: 1.5rem; }
+    .quiz-options { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f3a5f;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+    .quiz-option:hover { background-color: #eef4ff; }
+    .quiz-option.correct { background-color: #d4edda; border-color: #28a745; }
+    .quiz-option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f3a5f;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .explanation.show { display: block; }
+ 
+    /* SAQ */
+    .saq-box {
+      background: #fff;
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+    .saq-box h3 { margin-top: 0; }
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8fbff;
+      border: 1px dashed #1f3a5f;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f3a5f;
+    }
+ 
+    .key-takeaways {
+      background: linear-gradient(135deg, #eef4ff, #dbeafe);
+      border: 2px solid #b22234;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP United States History</a>
+    <h1>Unit 1: Period 1</h1>
+    <p class="subtitle">1491 – 1607 &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 4–6%</span></p>
+ 
+    <!-- OVERVIEW -->
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🇺🇸 Unit Overview</h3>
+      <p>
+        APUSH Unit 1 covers the Americas before permanent English settlement and explains how Native American societies,
+        European exploration, the Columbian Exchange, Spanish colonization, and African labor systems shaped early American history.
+        Before Europeans arrived, North America was filled with diverse Native societies that adapted to different environments.
+        After 1492, contact between Europe, Africa, and the Americas created massive biological, economic, cultural, and social change.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How did Native American societies develop before European arrival, and how did contact among
+        Native Americans, Europeans, and Africans transform the Atlantic world between 1491 and 1607?
+      </p>
+    </div>
+ 
+    <!-- TIMELINE -->
+    <h2>🗓️ Unit 1 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">Before 1492:</span> Diverse Native American societies develop across North America, shaped by geography, climate, agriculture, hunting, fishing, and trade.</div>
+      <div class="timeline-event"><span class="timeline-date">c. 1000–1500:</span> Mississippian societies, including Cahokia, build large mound cities and rely heavily on maize agriculture.</div>
+      <div class="timeline-event"><span class="timeline-date">1491:</span> The Americas are home to millions of Indigenous people with complex societies, political systems, and trade networks.</div>
+      <div class="timeline-event"><span class="timeline-date">1492:</span> Christopher Columbus reaches the Caribbean, beginning sustained contact between Europe, Africa, and the Americas.</div>
+      <div class="timeline-event"><span class="timeline-date">1494:</span> Treaty of Tordesillas divides Spanish and Portuguese claims in the Atlantic world.</div>
+      <div class="timeline-event"><span class="timeline-date">1512–1513:</span> Spanish Laws of Burgos attempt to regulate treatment of Native peoples but still support forced labor.</div>
+      <div class="timeline-event"><span class="timeline-date">1519–1521:</span> Hernán Cortés conquers the Aztec Empire with help from Native allies, disease, weapons, and political divisions.</div>
+      <div class="timeline-event"><span class="timeline-date">1530s:</span> Francisco Pizarro conquers the Inca Empire in South America.</div>
+      <div class="timeline-event"><span class="timeline-date">1542:</span> New Laws try to limit the encomienda system after criticism from reformers like Bartolomé de Las Casas.</div>
+      <div class="timeline-event"><span class="timeline-date">1565:</span> Spain establishes St. Augustine in Florida, the oldest permanent European settlement in what became the United States.</div>
+      <div class="timeline-event"><span class="timeline-date">1580s:</span> English attempts at Roanoke show early English interest in North American colonization.</div>
+      <div class="timeline-event"><span class="timeline-date">1607:</span> Jamestown is founded in Virginia, marking the start of permanent English settlement in North America.</div>
+    </div>
+ 
+    <!-- TOPIC 1.1 -->
+    <h2>Topic 1.1 — Contextualizing Period 1</h2>
+    <div class="region-card region-native">
+      <h3>🌽 Native America Before European Contact</h3>
+      <p>Before Europeans arrived, Native American societies were not all the same. They developed different ways of life based on geography, climate, available resources, and agriculture.</p>
+ 
+      <h4>Major Patterns</h4>
+      <ul>
+        <li><strong>Diversity:</strong> Native societies had different languages, religions, governments, economies, and social structures.</li>
+        <li><strong>Environmental adaptation:</strong> Native groups adapted to their regions through farming, hunting, fishing, gathering, and trade.</li>
+        <li><strong>Maize agriculture:</strong> Corn spread from Mesoamerica into North America and supported larger, more settled societies.</li>
+        <li><strong>Trade networks:</strong> Native communities exchanged food, tools, shells, copper, and ideas across long distances.</li>
+      </ul>
+ 
+      <h4>Why This Matters</h4>
+      <ul>
+        <li>European colonizers entered a world that was already populated, organized, and connected.</li>
+        <li>Native peoples shaped colonial history through resistance, diplomacy, trade, and alliance-building.</li>
+        <li>APUSH often asks you to compare Native societies by region and explain how environment shaped development.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.2 -->
+    <h2>Topic 1.2 — Native American Societies Before European Contact</h2>
+    <div class="region-card region-native">
+      <h3>🏜️ Regional Native Societies</h3>
+      <p>Native American societies developed differently depending on their environments. Some groups built large agricultural settlements, while others remained more mobile because hunting and gathering fit their region better.</p>
+ 
+      <h4>Southwest</h4>
+      <ul>
+        <li><strong>Pueblo peoples:</strong> Built adobe and stone villages in the dry Southwest.</li>
+        <li><strong>Irrigation:</strong> Used canals and water-control systems to grow maize, beans, and squash in arid areas.</li>
+        <li><strong>Settled communities:</strong> Agriculture allowed more permanent towns and complex social organization.</li>
+      </ul>
+ 
+      <h4>Great Plains</h4>
+      <ul>
+        <li><strong>Before horses:</strong> Many Plains groups combined hunting, gathering, and some farming near rivers.</li>
+        <li><strong>Mobility:</strong> Societies were often less permanently settled because the environment favored movement and hunting.</li>
+        <li><strong>After European contact:</strong> Horses later transformed Plains life, but that becomes more important in later periods.</li>
+      </ul>
+ 
+      <h4>Mississippi River Valley / Southeast</h4>
+      <ul>
+        <li><strong>Mississippian culture:</strong> Built large mound cities such as Cahokia.</li>
+        <li><strong>Maize-based agriculture:</strong> Supported dense populations and complex chiefdoms.</li>
+        <li><strong>Social hierarchy:</strong> Leaders controlled labor, trade, ceremonies, and food distribution.</li>
+      </ul>
+ 
+      <h4>Northeast / Atlantic Seaboard</h4>
+      <ul>
+        <li><strong>Mixed economy:</strong> Native peoples farmed maize, beans, and squash while also hunting, fishing, and gathering.</li>
+        <li><strong>Woodland societies:</strong> Used forests and rivers for transportation, food, and materials.</li>
+        <li><strong>Political organization:</strong> Some groups formed alliances or confederacies, such as the Haudenosaunee/Iroquois Confederacy.</li>
+      </ul>
+ 
+      <h4>Pacific Northwest</h4>
+      <ul>
+        <li><strong>Fishing societies:</strong> Salmon and other marine resources supported permanent villages.</li>
+        <li><strong>Wealth and status:</strong> Some groups developed social ranking because food resources were abundant.</li>
+        <li><strong>Trade:</strong> Coastal and river networks connected communities across the region.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.3 -->
+    <h2>Topic 1.3 — European Exploration in the Americas</h2>
+    <div class="region-card region-europe">
+      <h3>⛵ Europe Looks West</h3>
+      <p>European exploration was driven by economic, religious, and political motives. Europeans wanted wealth, trade routes, converts, and national power.</p>
+ 
+      <h4>Causes of Exploration</h4>
+      <ul>
+        <li><strong>God:</strong> Europeans wanted to spread Christianity, especially Catholicism.</li>
+        <li><strong>Gold:</strong> Europeans searched for precious metals, trade routes, and profitable goods.</li>
+        <li><strong>Glory:</strong> Monarchs wanted power, territory, and competition with rival nations.</li>
+        <li><strong>Technology:</strong> The caravel, compass, astrolabe, and better maps helped ocean travel.</li>
+      </ul>
+ 
+      <h4>Spain and Portugal</h4>
+      <ul>
+        <li><strong>Portugal:</strong> Focused heavily on African and Indian Ocean trade routes.</li>
+        <li><strong>Spain:</strong> Sponsored Columbus and quickly built a large empire in the Americas.</li>
+        <li><strong>Treaty of Tordesillas:</strong> Divided Spanish and Portuguese claims, giving Spain most of the Americas and Portugal Brazil.</li>
+      </ul>
+ 
+      <h4>Effects of Exploration</h4>
+      <ul>
+        <li>Europeans claimed land already inhabited by Native peoples.</li>
+        <li>Competition among European powers increased.</li>
+        <li>The Atlantic Ocean became a major center of trade, empire, migration, and forced labor.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.4 -->
+    <h2>Topic 1.4 — Columbian Exchange, Spanish Exploration, and Conquest</h2>
+    <div class="region-card region-exchange">
+      <h3>🌎 The Columbian Exchange</h3>
+      <p>The Columbian Exchange was the transfer of plants, animals, diseases, people, and ideas between the Eastern and Western Hemispheres after 1492. It completely changed life in the Americas, Europe, and Africa.</p>
+ 
+      <h4>From the Americas to Europe, Africa, and Asia</h4>
+      <ul>
+        <li><strong>Foods:</strong> Maize, potatoes, tomatoes, cacao, peppers, beans, squash, and tobacco spread globally.</li>
+        <li><strong>Population growth:</strong> Crops like potatoes and maize helped increase food supplies in Europe, Africa, and Asia.</li>
+        <li><strong>Economic change:</strong> American silver and cash crops helped expand global trade.</li>
+      </ul>
+ 
+      <h4>From Europe, Africa, and Asia to the Americas</h4>
+      <ul>
+        <li><strong>Animals:</strong> Horses, cattle, pigs, and sheep transformed Native life and colonial economies.</li>
+        <li><strong>Crops:</strong> Wheat, sugar, rice, and coffee became important in colonial agriculture.</li>
+        <li><strong>Disease:</strong> Smallpox, measles, and influenza devastated Native populations with little immunity.</li>
+      </ul>
+ 
+      <h4>Spanish Conquest</h4>
+      <ul>
+        <li><strong>Cortés and the Aztecs:</strong> Spanish victory was helped by disease, steel weapons, horses, Native allies, and divisions within the Aztec Empire.</li>
+        <li><strong>Pizarro and the Inca:</strong> The Spanish used political conflict, disease, and military advantages to conquer the Inca Empire.</li>
+        <li><strong>Native allies:</strong> Many Indigenous groups allied with Europeans because they opposed powerful empires like the Aztecs.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.5 -->
+    <h2>Topic 1.5 — Labor, Slavery, and Caste in the Spanish Colonial System</h2>
+    <div class="region-card region-spanish">
+      <h3>🏰 Spanish Colonization</h3>
+      <p>Spain created a colonial system based on land, Catholic conversion, forced labor, racial hierarchy, and extraction of wealth. This system became one of the first major European colonial models in the Americas.</p>
+ 
+      <h4>Encomienda System</h4>
+      <ul>
+        <li><strong>Definition:</strong> Spanish colonists received the right to demand labor and tribute from Native peoples.</li>
+        <li><strong>Justification:</strong> Colonists were supposed to protect and Christianize Native peoples.</li>
+        <li><strong>Reality:</strong> The system often became brutal forced labor and caused massive suffering.</li>
+      </ul>
+ 
+      <h4>Catholic Missions</h4>
+      <ul>
+        <li><strong>Goal:</strong> Convert Native peoples to Christianity and spread Spanish culture.</li>
+        <li><strong>Mission system:</strong> Priests created missions that combined religion, labor, and colonial control.</li>
+        <li><strong>Native response:</strong> Native peoples sometimes converted, blended beliefs, resisted, or fled.</li>
+      </ul>
+ 
+      <h4>Debate Over Native Treatment</h4>
+      <ul>
+        <li><strong>Bartolomé de Las Casas:</strong> Spanish priest who criticized the abuse of Native peoples and argued they should be treated more humanely.</li>
+        <li><strong>Juan Ginés de Sepúlveda:</strong> Argued that Spanish conquest was justified and that Native peoples were inferior.</li>
+        <li><strong>New Laws of 1542:</strong> Tried to limit abuses in the encomienda system, but colonists often resisted enforcement.</li>
+      </ul>
+ 
+      <h4>Casta System</h4>
+      <ul>
+        <li><strong>Peninsulares:</strong> People born in Spain, usually at the top of colonial society.</li>
+        <li><strong>Creoles:</strong> People of Spanish descent born in the Americas.</li>
+        <li><strong>Mestizos:</strong> People of mixed Spanish and Native ancestry.</li>
+        <li><strong>Mulattoes:</strong> People of mixed European and African ancestry.</li>
+        <li><strong>Native Americans and enslaved Africans:</strong> Usually placed at the bottom of the social hierarchy.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.6 -->
+    <h2>Topic 1.6 — African Labor and the Atlantic World</h2>
+    <div class="region-card region-africa">
+      <h3>⛓️ African Slavery and Atlantic Labor Systems</h3>
+      <p>As Native populations declined because of disease, warfare, and forced labor, Europeans increasingly relied on enslaved Africans to work in colonial economies.</p>
+ 
+      <h4>Why African Slavery Expanded</h4>
+      <ul>
+        <li><strong>Native population decline:</strong> Disease and exploitation killed millions of Indigenous people.</li>
+        <li><strong>Plantation labor demand:</strong> Sugar plantations required large numbers of workers.</li>
+        <li><strong>European profit:</strong> Slavery became tied to Atlantic trade and colonial wealth.</li>
+        <li><strong>Existing trade networks:</strong> Europeans expanded and transformed older African slave-trading systems into a larger Atlantic slave trade.</li>
+      </ul>
+ 
+      <h4>Atlantic Economy</h4>
+      <ul>
+        <li><strong>Triangular trade:</strong> Goods, enslaved people, and raw materials moved among Europe, Africa, and the Americas.</li>
+        <li><strong>Middle Passage:</strong> The forced journey of enslaved Africans across the Atlantic under brutal conditions.</li>
+        <li><strong>Sugar colonies:</strong> Caribbean and Brazilian plantations became major centers of enslaved labor.</li>
+      </ul>
+ 
+      <h4>Long-Term Significance</h4>
+      <ul>
+        <li>African labor became central to the development of the Atlantic economy.</li>
+        <li>Racial slavery created long-lasting social hierarchies in the Americas.</li>
+        <li>Africans resisted slavery through rebellion, escape, cultural survival, and community-building.</li>
+      </ul>
+    </div>
+ 
+    <!-- TOPIC 1.7 -->
+    <h2>Topic 1.7 — Causation in Period 1</h2>
+    <p>The CED asks you to explain causes and effects in Period 1. Use this table as a starting point.</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Development</th>
+            <th>Causes</th>
+            <th>Effects</th>
+            <th>Historical Significance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Native societies before contact</td><td>Geography, climate, maize agriculture, trade</td><td>Diverse regional cultures and political systems</td><td>Shows Native peoples were complex and adapted to their environments</td></tr>
+          <tr><td>European exploration</td><td>God, gold, glory, technology, competition</td><td>European claims, conquest, and Atlantic trade</td><td>Begins sustained contact between hemispheres</td></tr>
+          <tr><td>Columbian Exchange</td><td>Columbus's voyages and permanent contact after 1492</td><td>New crops, animals, diseases, and population changes</td><td>One of the most important turning points in world history</td></tr>
+          <tr><td>Spanish colonization</td><td>Search for wealth, land, labor, and converts</td><td>Encomienda, missions, casta system, Native resistance</td><td>Created a model of European empire in the Americas</td></tr>
+          <tr><td>African slavery expands</td><td>Native population decline and demand for plantation labor</td><td>Atlantic slave trade and racial slavery</td><td>Shaped colonial economies and racial hierarchy</td></tr>
+        </tbody>
+      </table>
+    </div>
+ 
+    <h3>Cross-Regional Continuities &amp; Change</h3>
+    <ul>
+      <li><strong>Continuity:</strong> Native peoples continued adapting to their environments and defending their communities even after European arrival.</li>
+      <li><strong>Change:</strong> European contact brought disease, conquest, Christianity, new animals, forced labor systems, and major demographic collapse.</li>
+      <li><strong>Similarities:</strong> Spain, Portugal, and later England all pursued wealth, land, trade, and power in the Americas.</li>
+      <li><strong>Differences:</strong> Spanish colonization focused heavily on conquest, Catholic missions, and extracting wealth, while later English colonization focused more on permanent settlements and agriculture.</li>
+    </ul>
+ 
+    <!-- VOCAB -->
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Maize</span>Corn originally domesticated in Mesoamerica; supported larger Native settlements.</div>
+      <div class="vocab-item"><span class="vocab-term">Cahokia</span>Large Mississippian mound city near modern St. Louis.</div>
+      <div class="vocab-item"><span class="vocab-term">Pueblo</span>Southwestern Native peoples known for settled villages and irrigation farming.</div>
+      <div class="vocab-item"><span class="vocab-term">Haudenosaunee / Iroquois Confederacy</span>Alliance of Native nations in the Northeast with a strong political structure.</div>
+      <div class="vocab-item"><span class="vocab-term">Columbian Exchange</span>Transfer of plants, animals, diseases, people, and ideas between hemispheres after 1492.</div>
+      <div class="vocab-item"><span class="vocab-term">Smallpox</span>European disease that devastated Native populations because they lacked immunity.</div>
+      <div class="vocab-item"><span class="vocab-term">Treaty of Tordesillas</span>1494 agreement dividing Spanish and Portuguese claims in the Atlantic world.</div>
+      <div class="vocab-item"><span class="vocab-term">Conquistadors</span>Spanish conquerors who explored and conquered parts of the Americas.</div>
+      <div class="vocab-item"><span class="vocab-term">Hernán Cortés</span>Spanish conquistador who conquered the Aztec Empire.</div>
+      <div class="vocab-item"><span class="vocab-term">Francisco Pizarro</span>Spanish conquistador who conquered the Inca Empire.</div>
+      <div class="vocab-item"><span class="vocab-term">Encomienda System</span>Spanish labor system that forced Native peoples to provide tribute and labor.</div>
+      <div class="vocab-item"><span class="vocab-term">Bartolomé de Las Casas</span>Spanish priest who criticized mistreatment of Native peoples.</div>
+      <div class="vocab-item"><span class="vocab-term">Juan Ginés de Sepúlveda</span>Spanish thinker who defended conquest and argued Native peoples were inferior.</div>
+      <div class="vocab-item"><span class="vocab-term">Casta System</span>Spanish colonial racial hierarchy based on ancestry and birthplace.</div>
+      <div class="vocab-item"><span class="vocab-term">Mestizo</span>Person of mixed Spanish and Native ancestry.</div>
+      <div class="vocab-item"><span class="vocab-term">Peninsulares</span>Spanish-born colonists at the top of Spanish colonial society.</div>
+      <div class="vocab-item"><span class="vocab-term">Middle Passage</span>Forced voyage of enslaved Africans across the Atlantic.</div>
+      <div class="vocab-item"><span class="vocab-term">Triangular Trade</span>Atlantic trade network connecting Europe, Africa, and the Americas.</div>
+    </div>
+ 
+    <!-- MCQs -->
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+ 
+      <div class="quiz-question">
+        <p><strong>1. Which of the following best explains why Native American societies in North America developed differently before European contact?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) All Native societies used the same farming methods and political systems.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Different environments led Native peoples to develop different economies and settlement patterns.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) European trade goods shaped Native societies before 1491.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Most Native groups lived in large empires controlled by one ruler.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> Native societies adapted to their environments. The Southwest used irrigation farming, the Pacific Northwest relied heavily on fishing, and the Great Plains used more mobile hunting and gathering patterns.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>2. The Columbian Exchange most directly caused which of the following?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) The end of European colonization in the Americas.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(B) The immediate creation of democratic governments in Native societies.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(C) The transfer of crops, animals, diseases, and people between hemispheres.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) The complete isolation of Europe from the Atlantic world.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: C.</strong> The Columbian Exchange moved crops like maize and potatoes, animals like horses and cattle, and diseases like smallpox between the Eastern and Western Hemispheres.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>3. Which of the following was a major reason for the rapid decline of Native populations after 1492?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Native peoples stopped growing maize.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(B) European diseases spread among Native peoples who lacked immunity.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(C) Spanish colonists ended all forced labor systems.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) The Treaty of Tordesillas protected Native lands.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: B.</strong> Diseases such as smallpox, measles, and influenza killed millions of Native people because they had no previous exposure and little immunity.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>4. Which statement best describes the encomienda system?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) A Native American confederacy formed to resist English colonists.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) A Spanish labor system that required Native peoples to provide labor and tribute.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) A Portuguese agreement to stop colonizing Brazil.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) An English farming system based on independent family farms.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> Under the encomienda system, Spanish colonists received the right to demand labor and tribute from Native peoples while claiming they would protect and Christianize them.</div>
+      </div>
+ 
+      <div class="quiz-question">
+        <p><strong>5. Which of the following best explains why Europeans increasingly used enslaved African labor in the Americas?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) European monarchs banned plantation agriculture.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Native population decline and plantation labor demands increased the need for forced labor.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) African kingdoms controlled all land in North America.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) The Columbian Exchange ended sugar production.</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: B.</strong> As Native populations declined from disease and exploitation, Europeans turned increasingly to enslaved Africans, especially for sugar plantations in the Caribbean and Brazil.</div>
+      </div>
+    </div>
+ 
+    <!-- SAQs -->
+    <h2>✍️ Short-Answer Practice (SAQ)</h2>
+    <p>SAQs ask you to respond in complete sentences — no thesis needed, but be specific and use evidence. Aim for 2–4 sentences per part.</p>
+ 
+    <div class="saq-box">
+      <h3>SAQ 1 — Native Societies (No Stimulus)</h3>
+      <ol type="a">
+        <li>Identify ONE way the environment shaped Native American societies before European contact.</li>
+        <li>Identify ONE difference between Native societies in the Southwest and Native societies in the Pacific Northwest.</li>
+        <li>Explain ONE way maize agriculture affected Native societies before European contact.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The environment shaped Native societies because groups adapted their food sources and settlement patterns to local conditions. For example, Pacific Northwest peoples relied heavily on salmon and other marine resources.</p>
+        <p><strong>(b)</strong> Southwestern Native societies such as the Pueblo used irrigation to farm maize in dry regions, while Pacific Northwest societies relied more on fishing and permanent coastal villages.</p>
+        <p><strong>(c)</strong> Maize agriculture supported population growth and more permanent settlements. In places like the Mississippi River Valley, maize helped support larger societies such as Cahokia.</p>
+      </details>
+    </div>
+ 
+    <div class="saq-box">
+      <h3>SAQ 2 — Stimulus-Based (Quote)</h3>
+      <p style="background:#f8fbff; padding:0.8rem; border-radius:6px; border-left:4px solid #1f3a5f;">
+        "The Spaniards have a perfect right to rule these barbarians of the New World... who in prudence, skill, virtues, and humanity are as inferior to the Spaniards as children to adults."
+        <br>
+        <em>— Juan Ginés de Sepúlveda, c. 1550</em>
+      </p>
+      <ol type="a">
+        <li>Identify ONE argument Sepúlveda used to justify Spanish colonization.</li>
+        <li>Explain ONE way Spanish colonization affected Native peoples in the Americas.</li>
+        <li>Explain ONE way another Spanish figure challenged Sepúlveda's view.</li>
+      </ol>
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Sepúlveda argued that Spanish colonization was justified because he believed Native peoples were inferior to Europeans and needed Spanish rule.</p>
+        <p><strong>(b)</strong> Spanish colonization forced many Native peoples into labor systems such as the encomienda, where they had to provide labor and tribute to Spanish colonists.</p>
+        <p><strong>(c)</strong> Bartolomé de Las Casas challenged Sepúlveda by arguing that Native peoples were human beings who deserved humane treatment and should not be abused by Spanish colonists.</p>
+      </details>
+    </div>
+ 
+    <!-- KEY TAKEAWAYS -->
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Native societies were diverse.</strong> Before European arrival, North America contained many different societies shaped by geography, climate, food sources, and trade.</li>
+        <li><strong>Maize mattered.</strong> The spread of maize agriculture supported larger populations, settled villages, and complex societies in some regions.</li>
+        <li><strong>European exploration had multiple causes.</strong> Europeans explored because of religion, wealth, competition, and new navigation technology.</li>
+        <li><strong>The Columbian Exchange transformed the world.</strong> Crops, animals, diseases, people, and ideas moved between hemispheres after 1492.</li>
+        <li><strong>Spanish colonization used forced labor and hierarchy.</strong> The encomienda system, missions, and casta system helped Spain control people and extract wealth.</li>
+        <li><strong>African slavery expanded in the Atlantic world.</strong> Native population decline and plantation labor demand pushed Europeans toward the forced labor of enslaved Africans.</li>
+      </ul>
+    </div>
+ 
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP United States History</a>
+    </p>
+  </div>
+ 
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
+
