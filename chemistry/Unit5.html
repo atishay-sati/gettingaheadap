@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 5: Kinetics — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 5: Kinetics | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">⏱️ Unit 5: Kinetics</h1>
+      <p class="lead mt-3">Understand how fast reactions occur, what factors control reaction rates, and how reaction mechanisms work.</p>
+      <p class="mt-2"><strong>Exam Weight: 7&ndash;9%</strong> &nbsp;|&nbsp; Topics 5.1&ndash;5.11</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-5-1"><li class="list-group-item">5.1 &mdash; Reaction Rates</li></a>
+      <a href="#topic-5-2"><li class="list-group-item">5.2 &mdash; Introduction to Rate Law</li></a>
+      <a href="#topic-5-3"><li class="list-group-item">5.3 &mdash; Concentration Changes Over Time</li></a>
+      <a href="#topic-5-4"><li class="list-group-item">5.4 &mdash; Elementary Reactions</li></a>
+      <a href="#topic-5-5"><li class="list-group-item">5.5 &mdash; Collision Model</li></a>
+      <a href="#topic-5-6"><li class="list-group-item">5.6 &mdash; Reaction Energy Profile</li></a>
+      <a href="#topic-5-7"><li class="list-group-item">5.7 &mdash; Introduction to Reaction Mechanisms</li></a>
+      <a href="#topic-5-8"><li class="list-group-item">5.8 &mdash; Reaction Mechanism and Rate Law</li></a>
+      <a href="#topic-5-9"><li class="list-group-item">5.9 &mdash; Steady-State Approximation</li></a>
+      <a href="#topic-5-10"><li class="list-group-item">5.10 &mdash; Multistep Reaction Energy Profile</li></a>
+      <a href="#topic-5-11"><li class="list-group-item">5.11 &mdash; Catalysis</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 5.1 ===== -->
+  <section class="container my-4" id="topic-5-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.1 &mdash; Reaction Rates</h3>
+ 
+      <p>The <strong>rate of a reaction</strong> measures how quickly reactants are consumed or products are formed, typically expressed as a change in concentration per unit time (mol/L&middot;s or M/s).</p>
+ 
+      <div class="key-concept">
+        <strong>For the reaction:</strong> aA + bB &rarr; cC + dD<br><br>
+        Rate = &minus;(1/a) &Delta;[A]/&Delta;t = &minus;(1/b) &Delta;[B]/&Delta;t = +(1/c) &Delta;[C]/&Delta;t = +(1/d) &Delta;[D]/&Delta;t<br><br>
+        The negative sign for reactants ensures the rate is positive (reactants decrease). The stoichiometric coefficients ensure a single, consistent rate regardless of which species you track.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> For 2N₂O₅ &rarr; 4NO₂ + O₂, if [N₂O₅] decreases at 0.010 M/s:<br>
+        Rate = (1/2)(0.010) = 0.0050 M/s<br>
+        Rate of NO₂ formation = 4 &times; 0.0050 = 0.020 M/s<br>
+        Rate of O₂ formation = 1 &times; 0.0050 = 0.0050 M/s
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Factors Affecting Reaction Rate</h5>
+      <ul>
+        <li><strong>Concentration:</strong> Higher concentration = more frequent collisions = faster rate.</li>
+        <li><strong>Temperature:</strong> Higher temperature = higher kinetic energy = more collisions exceeding E<sub>a</sub> = faster rate. A rough rule: rate approximately doubles for every 10&deg;C increase.</li>
+        <li><strong>Surface area:</strong> More surface area (smaller particles) = more contact between reactants = faster rate.</li>
+        <li><strong>Catalysts:</strong> Lower the activation energy, increasing the fraction of successful collisions.</li>
+        <li><strong>Nature of reactants:</strong> Some reactions are inherently faster (e.g., ionic reactions in solution are nearly instantaneous).</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.2 ===== -->
+  <section class="container my-4" id="topic-5-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.2 &mdash; Introduction to Rate Law</h3>
+ 
+      <p>The <strong>rate law</strong> is an equation that relates the rate of a reaction to the concentrations of reactants, each raised to a power (the order).</p>
+ 
+      <div class="key-concept">
+        <strong>Rate = k[A]<sup>m</sup>[B]<sup>n</sup></strong><br><br>
+        &bull; <strong>k</strong> = rate constant (depends on temperature, NOT on concentration)<br>
+        &bull; <strong>m</strong> = order with respect to A<br>
+        &bull; <strong>n</strong> = order with respect to B<br>
+        &bull; <strong>m + n</strong> = overall reaction order<br><br>
+        The orders m and n are <strong>determined experimentally</strong> (from initial rates data). They are NOT necessarily the stoichiometric coefficients!
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Method of Initial Rates</h5>
+      <p>To determine the rate law experimentally, run the reaction multiple times with different initial concentrations and measure the initial rate:</p>
+      <ol>
+        <li>Compare two experiments where <strong>only one reactant&rsquo;s concentration changes</strong>.</li>
+        <li>If doubling [A] doubles the rate: <strong>first order</strong> in A (m = 1).</li>
+        <li>If doubling [A] quadruples the rate: <strong>second order</strong> in A (m = 2).</li>
+        <li>If doubling [A] has no effect: <strong>zero order</strong> in A (m = 0).</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong><br>
+        <table class="table table-bordered mt-2 mb-2" style="font-size: 0.95rem;">
+          <thead style="background: #d2691e; color: #fff;">
+            <tr><th>Expt</th><th>[A] (M)</th><th>[B] (M)</th><th>Initial Rate (M/s)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>0.10</td><td>0.10</td><td>2.0 &times; 10⁻³</td></tr>
+            <tr><td>2</td><td>0.20</td><td>0.10</td><td>8.0 &times; 10⁻³</td></tr>
+            <tr><td>3</td><td>0.10</td><td>0.20</td><td>2.0 &times; 10⁻³</td></tr>
+          </tbody>
+        </table>
+        Expt 1→2: [A] doubles, rate quadruples &rarr; m = 2 (second order in A)<br>
+        Expt 1→3: [B] doubles, rate unchanged &rarr; n = 0 (zero order in B)<br>
+        <strong>Rate = k[A]²</strong><br>
+        k = rate/[A]² = 2.0 &times; 10⁻³ / (0.10)² = <strong>0.20 M⁻¹s⁻¹</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Units of k</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Overall Order</th><th>Units of k</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>M/s (or mol&middot;L⁻¹&middot;s⁻¹)</td></tr>
+            <tr><td>1</td><td>s⁻¹</td></tr>
+            <tr><td>2</td><td>M⁻¹s⁻¹ (or L&middot;mol⁻¹&middot;s⁻¹)</td></tr>
+            <tr><td>3</td><td>M⁻²s⁻¹</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.3 ===== -->
+  <section class="container my-4" id="topic-5-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.3 &mdash; Concentration Changes Over Time</h3>
+ 
+      <p><strong>Integrated rate laws</strong> relate concentration to time. They are used to determine the order of a reaction from concentration-time data and to calculate concentrations at specific times.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Order</th><th>Integrated Rate Law</th><th>Linear Plot (y vs. x)</th><th>Slope</th><th>Half-Life (t½)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>0</strong></td><td>[A] = [A]₀ &minus; kt</td><td>[A] vs. t</td><td>&minus;k</td><td>[A]₀ / 2k</td></tr>
+            <tr><td><strong>1</strong></td><td>ln[A] = ln[A]₀ &minus; kt</td><td>ln[A] vs. t</td><td>&minus;k</td><td>ln(2) / k = 0.693 / k</td></tr>
+            <tr><td><strong>2</strong></td><td>1/[A] = 1/[A]₀ + kt</td><td>1/[A] vs. t</td><td>+k</td><td>1 / (k[A]₀)</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>How to determine order from graphs:</strong><br>
+        Plot all three: [A] vs. t, ln[A] vs. t, and 1/[A] vs. t. Whichever is <strong>linear</strong> tells you the order.<br><br>
+        <strong>First-order half-life is constant</strong> &mdash; this is a critical distinction. It does NOT depend on [A]₀. This is why radioactive decay (first order) has a constant half-life.<br>
+        Zero-order half-life gets shorter as [A] decreases. Second-order half-life gets longer.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; First order:</strong> A reaction has k = 0.0500 s⁻¹. What is the half-life?<br>
+        t½ = 0.693 / 0.0500 = <strong>13.9 s</strong><br><br>
+        If [A]₀ = 1.00 M, what is [A] after 30.0 s?<br>
+        ln[A] = ln(1.00) &minus; (0.0500)(30.0) = 0 &minus; 1.50 = &minus;1.50<br>
+        [A] = e⁻¹·⁵⁰ = <strong>0.223 M</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.4 ===== -->
+  <section class="container my-4" id="topic-5-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.4 &mdash; Elementary Reactions</h3>
+ 
+      <p>An <strong>elementary reaction</strong> is a single-step reaction that occurs in one collision event. Unlike overall reactions, the rate law of an elementary reaction <em>can</em> be determined directly from its stoichiometry.</p>
+ 
+      <div class="key-concept">
+        <strong>Molecularity</strong> = number of reactant particles involved in an elementary step:<br>
+        &bull; <strong>Unimolecular:</strong> A &rarr; products. Rate = k[A]<br>
+        &bull; <strong>Bimolecular:</strong> A + B &rarr; products. Rate = k[A][B] &nbsp;or&nbsp; 2A &rarr; products. Rate = k[A]²<br>
+        &bull; <strong>Termolecular:</strong> Extremely rare (three particles must collide simultaneously). Not commonly tested.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key distinction:</strong> For an elementary reaction, the orders in the rate law <strong>equal</strong> the stoichiometric coefficients. This is NOT true for overall (multi-step) reactions, where orders must be determined experimentally.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.5 ===== -->
+  <section class="container my-4" id="topic-5-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.5 &mdash; Collision Model</h3>
+ 
+      <p>The <strong>collision model</strong> explains why not all collisions between reactant molecules lead to a reaction. For a reaction to occur, two conditions must be met:</p>
+ 
+      <ol>
+        <li><strong>Sufficient energy:</strong> The colliding molecules must have kinetic energy &ge; activation energy (E<sub>a</sub>). This energy is needed to break bonds in the reactants.</li>
+        <li><strong>Proper orientation:</strong> Molecules must collide in the correct geometric arrangement for bonds to break and new bonds to form.</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Effective collisions</strong> = collisions that satisfy BOTH conditions (energy AND orientation). Only a tiny fraction of all collisions are effective.<br><br>
+        <strong>Increasing temperature:</strong> Increases the fraction of molecules with energy &ge; E<sub>a</sub> (shifts the Maxwell-Boltzmann distribution to higher energies). This dramatically increases the rate.<br><br>
+        <strong>Increasing concentration:</strong> Increases the collision frequency (more molecules per unit volume = more collisions per second).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.6 ===== -->
+  <section class="container my-4" id="topic-5-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.6 &mdash; Reaction Energy Profile</h3>
+ 
+      <p>A <strong>reaction energy profile</strong> (potential energy diagram) shows how potential energy changes as reactants transform into products. It reveals the activation energy and whether the reaction is exothermic or endothermic.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Activation_energy.svg"
+          alt="Activation energy diagram" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">Reaction energy profile showing activation energy (E<sub>a</sub>), transition state, and enthalpy change (&Delta;H). (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key features of the diagram:</strong><br>
+        &bull; <strong>Reactants</strong> start at the left at their potential energy level.<br>
+        &bull; <strong>Transition state</strong> (activated complex) is at the peak &mdash; highest energy point. This is an unstable, fleeting arrangement of atoms partway between reactants and products.<br>
+        &bull; <strong>E<sub>a</sub> (forward)</strong> = energy of transition state &minus; energy of reactants.<br>
+        &bull; <strong>E<sub>a</sub> (reverse)</strong> = energy of transition state &minus; energy of products.<br>
+        &bull; <strong>&Delta;H</strong> = energy of products &minus; energy of reactants.<br>
+        &bull; <strong>Exothermic:</strong> Products lower than reactants (&Delta;H &lt; 0).<br>
+        &bull; <strong>Endothermic:</strong> Products higher than reactants (&Delta;H &gt; 0).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">The Arrhenius Equation</h5>
+      <div class="key-concept">
+        <strong>k = Ae<sup>&minus;Ea/RT</sup></strong><br><br>
+        &bull; k = rate constant &nbsp;|&nbsp; A = frequency factor (orientation and collision frequency) &nbsp;|&nbsp; E<sub>a</sub> = activation energy &nbsp;|&nbsp; R = 8.314 J/(mol&middot;K) &nbsp;|&nbsp; T = temperature in K<br><br>
+        <strong>Linearized form:</strong> ln(k) = &minus;E<sub>a</sub>/R &times; (1/T) + ln(A)<br>
+        A plot of <strong>ln(k) vs. 1/T</strong> gives a straight line with slope = &minus;E<sub>a</sub>/R.<br><br>
+        <strong>Two-point form:</strong> ln(k₂/k₁) = (E<sub>a</sub>/R)(1/T₁ &minus; 1/T₂)<br>
+        Use this when you have k at two temperatures and want to find E<sub>a</sub> (or find k at a new temperature).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.7 ===== -->
+  <section class="container my-4" id="topic-5-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.7 &mdash; Introduction to Reaction Mechanisms</h3>
+ 
+      <p>A <strong>reaction mechanism</strong> is a series of elementary steps that show how reactants are transformed into products at the molecular level. The overall reaction is the sum of all elementary steps.</p>
+ 
+      <h5 style="color: #8b4513;">Key Terminology</h5>
+      <ul>
+        <li><strong>Intermediate:</strong> A species produced in one step and consumed in a subsequent step. It does NOT appear in the overall equation.</li>
+        <li><strong>Catalyst:</strong> A species that speeds up the reaction but is regenerated &mdash; it appears in an early step and reappears in a later step. Not consumed overall.</li>
+        <li><strong>Rate-determining step (RDS):</strong> The <strong>slowest</strong> elementary step in the mechanism. It acts as the bottleneck and determines the overall reaction rate.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Requirements for a valid mechanism:</strong><br>
+        1. The elementary steps must <strong>sum to give the overall reaction</strong> (intermediates cancel out).<br>
+        2. The rate law predicted by the mechanism must <strong>agree with the experimentally determined rate law</strong>.<br>
+        3. Each step must be reasonable (unimolecular or bimolecular &mdash; termolecular is very unlikely).
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong><br>
+        Overall: 2NO₂ + F₂ &rarr; 2NO₂F<br>
+        Proposed mechanism:<br>
+        Step 1 (slow): NO₂ + F₂ &rarr; NO₂F + F &nbsp;&nbsp;[rate-determining]<br>
+        Step 2 (fast): NO₂ + F &rarr; NO₂F<br>
+        Sum: 2NO₂ + F₂ &rarr; 2NO₂F &nbsp;&nbsp;(F is an intermediate)<br>
+        Rate law from slow step: Rate = k[NO₂][F₂] (agrees with experiment).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.8 ===== -->
+  <section class="container my-4" id="topic-5-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.8 &mdash; Reaction Mechanism and Rate Law</h3>
+ 
+      <p>The rate law for a mechanism depends on whether the slow step is the <strong>first</strong> step or a <strong>later</strong> step. Two common scenarios:</p>
+ 
+      <h5 style="color: #8b4513;">Case 1: Slow Step First</h5>
+      <p>The rate law comes directly from the stoichiometry of the slow (first) step.</p>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Case 2: Fast Equilibrium Before Slow Step</h5>
+      <p>If a fast, reversible step precedes the slow step, you cannot have an intermediate in the rate law (because intermediates cannot be measured). Use the fast equilibrium to express the intermediate in terms of reactants.</p>
+ 
+      <div class="key-concept">
+        <strong>Fast-equilibrium approach (worked example):</strong><br>
+        Overall: 2NO + O₂ &rarr; 2NO₂<br>
+        Step 1 (fast, reversible): 2NO ⇌ N₂O₂ &nbsp;&nbsp;(K<sub>eq</sub> = k₁/k₋₁)<br>
+        Step 2 (slow): N₂O₂ + O₂ &rarr; 2NO₂<br><br>
+        Rate from slow step: Rate = k₂[N₂O₂][O₂]<br>
+        But N₂O₂ is an intermediate! Use equilibrium from Step 1:<br>
+        K<sub>eq</sub> = [N₂O₂] / [NO]² &nbsp;&rarr;&nbsp; [N₂O₂] = K<sub>eq</sub>[NO]²<br>
+        Substitute: Rate = k₂ &times; K<sub>eq</sub>[NO]² &times; [O₂] = <strong>k[NO]²[O₂]</strong><br>
+        This matches the experimentally observed rate law.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.9 ===== -->
+  <section class="container my-4" id="topic-5-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.9 &mdash; Steady-State Approximation</h3>
+ 
+      <p>The <strong>steady-state approximation</strong> is an alternative to the fast-equilibrium approach for eliminating intermediates from the rate law. It assumes that the concentration of an intermediate remains approximately constant during most of the reaction (its rate of production equals its rate of consumption).</p>
+ 
+      <div class="key-concept">
+        <strong>Method:</strong><br>
+        Set d[intermediate]/dt = 0 (rate of formation = rate of consumption).<br>
+        Solve for [intermediate] in terms of reactant concentrations and rate constants.<br>
+        Substitute into the rate law for the step that produces the final product.<br><br>
+        <strong>When to use:</strong> The steady-state approximation is more general than the fast-equilibrium method. It applies even when the first step is not clearly &ldquo;fast and reversible.&rdquo; However, for most AP Chemistry problems, the fast-equilibrium approach is sufficient.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.10 ===== -->
+  <section class="container my-4" id="topic-5-10">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.10 &mdash; Multistep Reaction Energy Profile</h3>
+ 
+      <p>For reactions with multiple elementary steps, the energy profile shows multiple peaks (transition states) and valleys (intermediates).</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Rxn_coordinate_diagram_5.PNG"
+          alt="Multistep reaction coordinate diagram" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">Energy profile for a two-step reaction. Two transition states (peaks) with an intermediate in the valley between them. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Reading a multistep energy profile:</strong><br>
+        &bull; Number of peaks = number of elementary steps<br>
+        &bull; Each peak = a transition state (activated complex)<br>
+        &bull; Each valley between peaks = an intermediate (real but short-lived species)<br>
+        &bull; The <strong>highest peak</strong> corresponds to the transition state of the <strong>rate-determining step</strong> (slowest step; largest E<sub>a</sub>)<br>
+        &bull; Overall &Delta;H = energy of final products &minus; energy of initial reactants<br>
+        &bull; The RDS has the <strong>largest</strong> activation energy barrier (tallest hill to climb from the preceding valley)
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 5.11 ===== -->
+  <section class="container my-4" id="topic-5-11">
+    <div class="topic-card">
+      <h3 class="topic-heading">5.11 &mdash; Catalysis</h3>
+ 
+      <p>A <strong>catalyst</strong> is a substance that increases the rate of a reaction without being consumed. It works by providing an <strong>alternative reaction pathway</strong> with a <strong>lower activation energy</strong>.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Activation_energy.svg"
+          alt="Catalyst energy diagram" class="img-fluid" style="max-height: 300px;">
+        <p class="img-caption">Catalyzed (green) vs. uncatalyzed (red) pathway. The catalyst lowers E<sub>a</sub> without changing &Delta;H. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>What a catalyst DOES:</strong><br>
+        &bull; Lowers the activation energy (E<sub>a</sub>)<br>
+        &bull; Increases the rate constant (k) at the same temperature<br>
+        &bull; Increases the fraction of collisions with sufficient energy<br>
+        &bull; Speeds up both the forward AND reverse reactions equally<br>
+        &bull; Reaches equilibrium faster<br><br>
+        <strong>What a catalyst does NOT do:</strong><br>
+        &bull; Does NOT change &Delta;H or &Delta;G<br>
+        &bull; Does NOT change the equilibrium position (K<sub>eq</sub> is unchanged)<br>
+        &bull; Does NOT change the overall enthalpy of the reaction<br>
+        &bull; Is NOT consumed overall (it participates in early steps and is regenerated)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Types of Catalysts</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Homogeneous</strong></td><td>Same phase as reactants (usually all in solution)</td><td>H⁺ catalyzing ester hydrolysis (all aqueous)</td></tr>
+            <tr><td><strong>Heterogeneous</strong></td><td>Different phase from reactants (usually solid catalyst with gas/liquid reactants)</td><td>Pt surface in catalytic converters; Fe in Haber process</td></tr>
+            <tr><td><strong>Enzymes</strong></td><td>Biological catalysts (proteins); extremely specific to their substrate</td><td>Lactase breaking down lactose; carbonic anhydrase</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Heterogeneous catalysis mechanism:</strong><br>
+        1. <strong>Adsorption:</strong> Reactant molecules bind to the catalyst surface.<br>
+        2. <strong>Reaction:</strong> Bonds weaken/break; new bonds form on the surface.<br>
+        3. <strong>Desorption:</strong> Product molecules detach from the surface, freeing active sites.<br>
+        The catalyst surface provides an alternative pathway by weakening bonds in the reactant molecules.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 5. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. For the reaction 2A + B &rarr; 3C, if the rate of disappearance of A is 0.040 M/s, what is the rate of appearance of C?</p>
+      <ul class="options">
+        <li>(A) 0.020 M/s</li>
+        <li>(B) 0.040 M/s</li>
+        <li>(C) 0.060 M/s</li>
+        <li>(D) 0.080 M/s</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Rate = (1/2)(0.040) = 0.020 M/s. Rate of C appearance = 3 &times; 0.020 = <strong>0.060 M/s</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. Doubling [A] quadruples the rate, and doubling [B] has no effect. What is the rate law?</p>
+      <ul class="options">
+        <li>(A) Rate = k[A][B]</li>
+        <li>(B) Rate = k[A]²</li>
+        <li>(C) Rate = k[B]²</li>
+        <li>(D) Rate = k[A]²[B]</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Doubling [A] &rarr; rate &times; 4 = 2² &rarr; second order in A. Doubling [B] &rarr; no effect &rarr; zero order in B. Rate = <strong>k[A]²</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. A first-order reaction has a half-life of 20.0 seconds. What is the rate constant?</p>
+      <ul class="options">
+        <li>(A) 0.0200 s⁻¹</li>
+        <li>(B) 0.0347 s⁻¹</li>
+        <li>(C) 0.0500 s⁻¹</li>
+        <li>(D) 0.693 s⁻¹</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        For first-order: k = 0.693 / t½ = 0.693 / 20.0 = <strong>0.0347 s⁻¹</strong>. First-order half-life is constant and independent of initial concentration.
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. For an elementary bimolecular reaction A + B &rarr; C, the rate law is:</p>
+      <ul class="options">
+        <li>(A) Rate = k[C]</li>
+        <li>(B) Rate = k[A]²[B]</li>
+        <li>(C) Rate = k[A][B]</li>
+        <li>(D) Cannot be determined from stoichiometry alone</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        For an <strong>elementary</strong> reaction, the rate law IS determined by stoichiometry. Bimolecular A + B &rarr; C gives Rate = <strong>k[A][B]</strong>. (This rule only applies to elementary reactions, not overall reactions.)
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. Which of the following would NOT increase the rate of a reaction?</p>
+      <ul class="options">
+        <li>(A) Increasing temperature</li>
+        <li>(B) Adding a catalyst</li>
+        <li>(C) Increasing concentration of reactants</li>
+        <li>(D) Adding an inert gas at constant volume</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (D)</strong><br>
+        Adding an inert gas at constant volume increases total pressure but does NOT change the concentrations (partial pressures) of the reactants. Since rate depends on reactant concentration, the rate is <strong>unchanged</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. On a reaction energy profile, the activation energy of the forward reaction is represented by:</p>
+      <ul class="options">
+        <li>(A) The energy difference between reactants and products</li>
+        <li>(B) The energy of the transition state minus the energy of the reactants</li>
+        <li>(C) The energy of the transition state minus the energy of the products</li>
+        <li>(D) The total energy released during the reaction</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        E<sub>a</sub>(forward) = energy of the transition state &minus; energy of the reactants. This is the energy barrier that must be overcome for the forward reaction to proceed.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. In a two-step mechanism, an intermediate is a species that:</p>
+      <ul class="options">
+        <li>(A) Appears in the overall balanced equation</li>
+        <li>(B) Is produced in one step and consumed in a subsequent step</li>
+        <li>(C) Speeds up the reaction without being consumed</li>
+        <li>(D) Is always present at the end of the reaction</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        An <strong>intermediate</strong> is produced in one elementary step and consumed in a later step. It does NOT appear in the overall equation (it cancels out). Choice (C) describes a catalyst, not an intermediate.
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. A plot of ln[A] vs. time gives a straight line. The reaction is:</p>
+      <ul class="options">
+        <li>(A) Zero order</li>
+        <li>(B) First order</li>
+        <li>(C) Second order</li>
+        <li>(D) Third order</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        The integrated rate law for a first-order reaction is ln[A] = ln[A]₀ &minus; kt, which is linear in ln[A] vs. t. A straight line for this plot confirms <strong>first order</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. A catalyst increases the rate of a reaction by:</p>
+      <ul class="options">
+        <li>(A) Increasing the enthalpy change (&Delta;H)</li>
+        <li>(B) Lowering the activation energy</li>
+        <li>(C) Increasing the equilibrium constant</li>
+        <li>(D) Decreasing the concentration of products</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        A catalyst provides an alternative pathway with a <strong>lower activation energy</strong>. It does NOT change &Delta;H or K<sub>eq</sub>. It speeds up both the forward and reverse reactions equally.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. In a multistep energy profile with two peaks, the rate-determining step corresponds to:</p>
+      <ul class="options">
+        <li>(A) The lowest valley</li>
+        <li>(B) The smallest energy barrier</li>
+        <li>(C) The largest energy barrier</li>
+        <li>(D) The overall &Delta;H of the reaction</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        The rate-determining step (RDS) is the slowest step, which has the <strong>largest activation energy barrier</strong>. On the energy profile, it is the highest peak relative to the preceding valley.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 5</h5>
+        <p class="card-text">Kinetics is heavily tested on the AP exam. Master the <strong>method of initial rates</strong> for determining rate laws, know the <strong>integrated rate law table</strong> cold (especially how to determine order from graphs), and understand how to <strong>derive rate laws from mechanisms</strong> using the slow-step and fast-equilibrium approaches. Practice the Arrhenius equation in both its exponential and two-point forms. Always remember: a catalyst lowers E<sub>a</sub> but does NOT change &Delta;H or K<sub>eq</sub>.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
