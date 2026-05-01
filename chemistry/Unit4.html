@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 4: Chemical Reactions — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 4: Chemical Reactions | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">⚗️ Unit 4: Chemical Reactions</h1>
+      <p class="lead mt-3">Master the language of chemistry &mdash; balancing equations, stoichiometry, titrations, and reaction types.</p>
+      <p class="mt-2"><strong>Exam Weight: 7&ndash;9%</strong> &nbsp;|&nbsp; Topics 4.1&ndash;4.9</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-4-1"><li class="list-group-item">4.1 &mdash; Introduction for Reactions</li></a>
+      <a href="#topic-4-2"><li class="list-group-item">4.2 &mdash; Net Ionic Equations</li></a>
+      <a href="#topic-4-3"><li class="list-group-item">4.3 &mdash; Representations of Reactions</li></a>
+      <a href="#topic-4-4"><li class="list-group-item">4.4 &mdash; Physical and Chemical Changes</li></a>
+      <a href="#topic-4-5"><li class="list-group-item">4.5 &mdash; Stoichiometry</li></a>
+      <a href="#topic-4-6"><li class="list-group-item">4.6 &mdash; Introduction to Titration</li></a>
+      <a href="#topic-4-7"><li class="list-group-item">4.7 &mdash; Types of Chemical Reactions</li></a>
+      <a href="#topic-4-8"><li class="list-group-item">4.8 &mdash; Introduction to Acid-Base Reactions</li></a>
+      <a href="#topic-4-9"><li class="list-group-item">4.9 &mdash; Oxidation-Reduction (Redox) Reactions</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 4.1 ===== -->
+  <section class="container my-4" id="topic-4-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.1 &mdash; Introduction for Reactions</h3>
+ 
+      <p>A <strong>chemical equation</strong> is a symbolic representation of a chemical reaction showing reactants on the left and products on the right. Equations must be <strong>balanced</strong> to satisfy the <strong>Law of Conservation of Mass</strong> &mdash; atoms are neither created nor destroyed in a chemical reaction.</p>
+ 
+      <h5 style="color: #8b4513;">Balancing Chemical Equations</h5>
+      <ol>
+        <li>Write the unbalanced equation with correct formulas for all reactants and products.</li>
+        <li>Count atoms of each element on both sides.</li>
+        <li>Adjust <strong>coefficients</strong> (the numbers in front of formulas) to equalize atom counts. Never change subscripts.</li>
+        <li>Balance metals first, then nonmetals, then hydrogen, then oxygen last.</li>
+        <li>Verify: every element has the same count on both sides, and coefficients are in the simplest whole-number ratio.</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> Balance: Fe₂O₃ + CO &rarr; Fe + CO₂<br>
+        Fe: 2 on left, 1 on right &rarr; put 2 in front of Fe<br>
+        O: 3 + 1 = 4 on left; need 4 on right &rarr; put 2 in front of CO₂, but check C<br>
+        C: 1 on left, 2 on right &rarr; put 2 in front of CO: Fe₂O₃ + 2CO &rarr; 2Fe + 2CO₂<br>
+        Check O: 3 + 2 = 5 on left; 4 on right &mdash; not balanced yet!<br>
+        Try: Fe₂O₃ + 3CO &rarr; 2Fe + 3CO₂<br>
+        Fe: 2 = 2; C: 3 = 3; O: 3 + 3 = 6 left; 6 right. <strong>Balanced!</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">State Symbols</h5>
+      <ul>
+        <li><strong>(s)</strong> = solid &nbsp;|&nbsp; <strong>(l)</strong> = liquid &nbsp;|&nbsp; <strong>(g)</strong> = gas &nbsp;|&nbsp; <strong>(aq)</strong> = aqueous (dissolved in water)</li>
+        <li>State symbols are important for net ionic equations and for determining which species are electrolytes.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Conservation of Mass in calculations:</strong> The total mass of reactants always equals the total mass of products. If 10.0 g of reactants are used, 10.0 g of products form (even if one product is a gas that escapes).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.2 ===== -->
+  <section class="container my-4" id="topic-4-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.2 &mdash; Net Ionic Equations</h3>
+ 
+      <p>When ionic compounds are dissolved in water, they dissociate into ions. A <strong>net ionic equation</strong> shows only the species that actually participate in the reaction, removing the <strong>spectator ions</strong> (ions that appear on both sides unchanged).</p>
+ 
+      <h5 style="color: #8b4513;">Three Types of Equations</h5>
+      <ol>
+        <li><strong>Molecular equation:</strong> Shows complete formulas of all reactants and products.<br>
+          AgNO₃(aq) + NaCl(aq) &rarr; AgCl(s) + NaNO₃(aq)</li>
+        <li><strong>Complete ionic equation:</strong> Shows all strong electrolytes dissociated into ions.<br>
+          Ag⁺(aq) + NO₃⁻(aq) + Na⁺(aq) + Cl⁻(aq) &rarr; AgCl(s) + Na⁺(aq) + NO₃⁻(aq)</li>
+        <li><strong>Net ionic equation:</strong> Remove spectator ions (Na⁺ and NO₃⁻ appear on both sides).<br>
+          <strong>Ag⁺(aq) + Cl⁻(aq) &rarr; AgCl(s)</strong></li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Rules for writing net ionic equations:</strong><br>
+        &bull; Dissociate <strong>strong electrolytes</strong> (soluble ionic compounds, strong acids, strong bases) into ions.<br>
+        &bull; Do NOT dissociate: weak acids, weak bases, insoluble compounds (precipitates), water, gases, or molecular compounds.<br>
+        &bull; Cancel spectator ions that appear identically on both sides.<br>
+        &bull; The net ionic equation must be balanced for both atoms and charge.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Neutralization:</strong><br>
+        Molecular: HCl(aq) + NaOH(aq) &rarr; NaCl(aq) + H₂O(l)<br>
+        Complete ionic: H⁺(aq) + Cl⁻(aq) + Na⁺(aq) + OH⁻(aq) &rarr; Na⁺(aq) + Cl⁻(aq) + H₂O(l)<br>
+        Net ionic: <strong>H⁺(aq) + OH⁻(aq) &rarr; H₂O(l)</strong><br>
+        (This is the net ionic equation for ALL strong acid + strong base reactions)
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.3 ===== -->
+  <section class="container my-4" id="topic-4-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.3 &mdash; Representations of Reactions</h3>
+ 
+      <p>Chemical reactions can be represented at three levels, and the AP exam expects you to move fluently between them:</p>
+ 
+      <ul>
+        <li><strong>Macroscopic:</strong> What you observe &mdash; color changes, gas bubbles, precipitate formation, temperature changes, odor.</li>
+        <li><strong>Particulate:</strong> Diagrams showing individual atoms, molecules, and ions before and after the reaction. Must show correct stoichiometric ratios and conservation of atoms.</li>
+        <li><strong>Symbolic:</strong> Balanced chemical equations with formulas, coefficients, and state symbols.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Interpreting particulate diagrams on the AP exam:</strong><br>
+        &bull; Count atoms of each element before and after &mdash; they must be equal (conservation of mass).<br>
+        &bull; Identify the limiting reagent: the reactant that runs out first determines how much product forms.<br>
+        &bull; Leftover reactant molecules should appear in the &ldquo;after&rdquo; diagram.<br>
+        &bull; Products should show correct molecular formulas and ratios.<br>
+        &bull; Ions in solution should be drawn as separate particles surrounded by water molecules.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.4 ===== -->
+  <section class="container my-4" id="topic-4-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.4 &mdash; Physical and Chemical Changes</h3>
+ 
+      <p>Understanding the difference between physical and chemical changes is fundamental to chemistry.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Feature</th><th>Physical Change</th><th>Chemical Change</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Definition</td><td>Change in form or appearance; no new substance formed</td><td>New substance(s) produced with different properties</td></tr>
+            <tr><td>Bonds</td><td>Intermolecular forces may be overcome, but chemical bonds are NOT broken</td><td>Chemical bonds are broken and new bonds are formed</td></tr>
+            <tr><td>Reversibility</td><td>Usually easily reversible</td><td>Often difficult to reverse</td></tr>
+            <tr><td>Examples</td><td>Melting ice, boiling water, dissolving sugar, cutting paper</td><td>Combustion, rusting, cooking, acid-base reactions</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Evidence of a chemical change:</strong><br>
+        &bull; Color change (e.g., iron turning rust-colored)<br>
+        &bull; Gas production (bubbles forming)<br>
+        &bull; Precipitate formation (solid appearing in solution)<br>
+        &bull; Temperature change (exothermic or endothermic)<br>
+        &bull; Odor change<br>
+        &bull; Light or sound emission<br><br>
+        <strong>Caution:</strong> Some physical changes also produce these signs (e.g., boiling produces bubbles, dissolving can release heat). Context matters!
+      </div>
+ 
+      <div class="key-concept">
+        <strong>AP exam distinction &mdash; dissolving:</strong><br>
+        &bull; Dissolving an ionic compound (NaCl in water) involves breaking the crystal lattice and forming ion-dipole interactions. This is a <strong>physical change</strong> &mdash; no chemical bonds are broken. NaCl can be recovered by evaporation.<br>
+        &bull; Dissolving a metal in acid (Zn in HCl) is a <strong>chemical change</strong> &mdash; the Zn is oxidized and forms a new compound.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.5 ===== -->
+  <section class="container my-4" id="topic-4-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.5 &mdash; Stoichiometry</h3>
+ 
+      <p><strong>Stoichiometry</strong> uses the mole ratios from a balanced chemical equation to calculate the amounts of reactants consumed and products formed. It is one of the most tested skills on the AP exam.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Electrolysis_of_water_%28Hofmann_voltameter%29.svg"
+          alt="Formation of water from hydrogen and oxygen" class="img-fluid" style="max-height: 280px;">
+        <p class="img-caption">The electrolysis of water demonstrates stoichiometric ratios: 2H₂ + O₂ → 2H₂O. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 style="color: #8b4513;">The Mole Roadmap for Stoichiometry</h5>
+      <ol>
+        <li><strong>Balance</strong> the chemical equation.</li>
+        <li><strong>Convert given quantity to moles</strong> (if given in grams, use molar mass; if given as volume of solution, use molarity; if given as volume of gas at STP, divide by 22.4 L).</li>
+        <li><strong>Use the mole ratio</strong> from the balanced equation to convert from moles of given substance to moles of desired substance.</li>
+        <li><strong>Convert moles of desired substance</strong> to the requested unit (grams, liters, particles, etc.).</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> How many grams of O₂ are needed to completely react with 10.0 g of H₂?<br>
+        Equation: 2H₂ + O₂ &rarr; 2H₂O<br>
+        Step 1: mol H₂ = 10.0 g / 2.016 g/mol = 4.96 mol<br>
+        Step 2: mol O₂ = 4.96 mol H₂ &times; (1 mol O₂ / 2 mol H₂) = 2.48 mol<br>
+        Step 3: mass O₂ = 2.48 mol &times; 32.00 g/mol = <strong>79.4 g O₂</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Limiting Reagent</h5>
+      <p>When two or more reactants are present, the <strong>limiting reagent</strong> is the reactant that runs out first &mdash; it limits how much product can form. The other reactant(s) are in <strong>excess</strong>.</p>
+ 
+      <div class="key-concept">
+        <strong>How to find the limiting reagent:</strong><br>
+        1. Convert each reactant to moles.<br>
+        2. Divide each by its coefficient in the balanced equation.<br>
+        3. The one with the <strong>smallest value</strong> is the limiting reagent.<br>
+        4. Use the limiting reagent to calculate the theoretical yield.<br><br>
+        <strong>Example:</strong> 5.0 mol H₂ and 2.0 mol O₂ react: 2H₂ + O₂ &rarr; 2H₂O<br>
+        H₂: 5.0/2 = 2.5 &nbsp;|&nbsp; O₂: 2.0/1 = 2.0 &larr; smaller<br>
+        O₂ is the <strong>limiting reagent</strong>. It produces 2.0 &times; 2 = 4.0 mol H₂O.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Percent Yield</h5>
+      <div class="key-concept">
+        <strong>% yield = (actual yield / theoretical yield) &times; 100%</strong><br><br>
+        &bull; <strong>Theoretical yield:</strong> Maximum product calculated from stoichiometry using the limiting reagent.<br>
+        &bull; <strong>Actual yield:</strong> What you actually get in the lab (always &le; theoretical yield).<br>
+        &bull; Percent yield is always &le; 100% (if &gt; 100%, there is an error or impurity).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.6 ===== -->
+  <section class="container my-4" id="topic-4-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.6 &mdash; Introduction to Titration</h3>
+ 
+      <p>A <strong>titration</strong> is a technique for determining the concentration of an unknown solution by reacting it with a solution of known concentration (the <strong>standard solution</strong> or titrant). It is most commonly used for acid-base reactions.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Titration.svg"
+          alt="Titration setup diagram" class="img-fluid" style="max-height: 360px;">
+        <p class="img-caption">Typical titration setup &mdash; titrant is added from a buret to the analyte in a flask until the endpoint is reached. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 style="color: #8b4513;">Key Terminology</h5>
+      <ul>
+        <li><strong>Analyte:</strong> The solution of unknown concentration (in the flask).</li>
+        <li><strong>Titrant:</strong> The solution of known concentration (in the buret).</li>
+        <li><strong>Equivalence point:</strong> The point at which the moles of titrant exactly react with the moles of analyte (stoichiometric ratio is satisfied).</li>
+        <li><strong>Endpoint:</strong> The point at which the indicator changes color. Ideally, the endpoint is very close to the equivalence point.</li>
+        <li><strong>Indicator:</strong> A substance that changes color near the equivalence point (e.g., phenolphthalein turns pink in base).</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Titration calculation:</strong><br>
+        At the equivalence point: moles of acid = moles of base (for 1:1 stoichiometry)<br>
+        M<sub>acid</sub> &times; V<sub>acid</sub> = M<sub>base</sub> &times; V<sub>base</sub><br><br>
+        <strong>Example:</strong> 25.0 mL of unknown HCl requires 18.5 mL of 0.200 M NaOH to reach the equivalence point. Find [HCl].<br>
+        mol NaOH = 0.0185 L &times; 0.200 M = 0.00370 mol<br>
+        HCl + NaOH &rarr; NaCl + H₂O (1:1 ratio), so mol HCl = 0.00370 mol<br>
+        [HCl] = 0.00370 / 0.0250 = <strong>0.148 M</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>For non-1:1 ratios:</strong><br>
+        H₂SO₄ + 2NaOH &rarr; Na₂SO₄ + 2H₂O<br>
+        At equivalence: mol H₂SO₄ = (1/2) &times; mol NaOH<br>
+        Always use the balanced equation to determine the correct stoichiometric ratio.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Back Titration</h5>
+      <p>A <strong>back titration</strong> is used when the analyte cannot be easily titrated directly. You add a known excess of one reagent, let it react, then titrate the excess with another standard solution. The difference tells you how much analyte was present.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.7 ===== -->
+  <section class="container my-4" id="topic-4-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.7 &mdash; Types of Chemical Reactions</h3>
+ 
+      <p>Reactions can be classified into categories that help predict products. Knowing these patterns is essential for the AP exam free-response questions.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Reaction Type</th><th>General Form</th><th>Example</th><th>How to Recognize</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Synthesis</strong></td><td>A + B &rarr; AB</td><td>2Na + Cl₂ &rarr; 2NaCl</td><td>Two or more substances combine to form one product</td></tr>
+            <tr><td><strong>Decomposition</strong></td><td>AB &rarr; A + B</td><td>2H₂O₂ &rarr; 2H₂O + O₂</td><td>One compound breaks into two or more substances</td></tr>
+            <tr><td><strong>Single Replacement</strong></td><td>A + BC &rarr; AC + B</td><td>Zn + CuSO₄ &rarr; ZnSO₄ + Cu</td><td>An element replaces another in a compound (use activity series)</td></tr>
+            <tr><td><strong>Double Replacement</strong></td><td>AB + CD &rarr; AD + CB</td><td>AgNO₃ + NaCl &rarr; AgCl + NaNO₃</td><td>Ions switch partners; often forms a precipitate, gas, or water</td></tr>
+            <tr><td><strong>Combustion</strong></td><td>C<sub>x</sub>H<sub>y</sub> + O₂ &rarr; CO₂ + H₂O</td><td>CH₄ + 2O₂ &rarr; CO₂ + 2H₂O</td><td>Organic compound reacts with O₂; produces CO₂ and H₂O</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Precipitation Reactions &amp; Solubility Rules</h5>
+      <p>A <strong>precipitation reaction</strong> occurs when two aqueous ionic solutions mix and produce an <strong>insoluble solid</strong> (precipitate). Memorize these solubility rules:</p>
+ 
+      <div class="key-concept">
+        <strong>Soluble (dissolve in water):</strong><br>
+        &bull; All <strong>Group 1</strong> (Li⁺, Na⁺, K⁺) and <strong>NH₄⁺</strong> salts<br>
+        &bull; All <strong>nitrates</strong> (NO₃⁻) and <strong>acetates</strong> (CH₃COO⁻)<br>
+        &bull; Most <strong>chlorides, bromides, iodides</strong> &mdash; except Ag⁺, Pb²⁺, Hg₂²⁺<br>
+        &bull; Most <strong>sulfates</strong> &mdash; except BaSO₄, PbSO₄, CaSO₄, SrSO₄<br><br>
+        <strong>Insoluble (form precipitates):</strong><br>
+        &bull; Most <strong>hydroxides</strong> (OH⁻) &mdash; except Group 1 and Ba(OH)₂, Ca(OH)₂ (slightly)<br>
+        &bull; Most <strong>carbonates</strong> (CO₃²⁻), <strong>phosphates</strong> (PO₄³⁻), and <strong>sulfides</strong> (S²⁻) &mdash; except Group 1 and NH₄⁺
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Activity Series for Single Replacement</h5>
+      <p>A more active metal will displace a less active metal from a solution. If the free element is <strong>above</strong> the element in the compound on the activity series, the reaction proceeds. Otherwise, no reaction occurs.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.8 ===== -->
+  <section class="container my-4" id="topic-4-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.8 &mdash; Introduction to Acid-Base Reactions</h3>
+ 
+      <p>Acid-base reactions are among the most important in chemistry. The AP exam focuses on the <strong>Br&oslash;nsted-Lowry</strong> definitions.</p>
+ 
+      <h5 style="color: #8b4513;">Br&oslash;nsted-Lowry Definitions</h5>
+      <ul>
+        <li><strong>Acid:</strong> A proton (H⁺) <em>donor</em>.</li>
+        <li><strong>Base:</strong> A proton (H⁺) <em>acceptor</em>.</li>
+        <li>In every acid-base reaction, there is a <strong>conjugate acid-base pair</strong>: the acid donates a proton to become its conjugate base; the base accepts a proton to become its conjugate acid.</li>
+      </ul>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Strong vs. Weak Acids and Bases</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th></th><th>Strong (100% dissociation)</th><th>Weak (partial dissociation)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Acids</strong></td><td>HCl, HBr, HI, HNO₃, H₂SO₄, HClO₃, HClO₄</td><td>CH₃COOH (acetic), HF, H₂CO₃, H₃PO₄, HCN, HNO₂</td></tr>
+            <tr><td><strong>Bases</strong></td><td>NaOH, KOH, LiOH, Ca(OH)₂, Ba(OH)₂, Sr(OH)₂</td><td>NH₃, CH₃NH₂, pyridine, CO₃²⁻, HCO₃⁻</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Memorize the 7 strong acids!</strong> Everything else is weak. A strong acid/base dissociates 100% in water. A weak acid/base establishes an equilibrium with only partial ionization.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Neutralization reactions:</strong><br>
+        &bull; <strong>Strong acid + Strong base:</strong> H⁺(aq) + OH⁻(aq) &rarr; H₂O(l) &nbsp;(net ionic for all such reactions)<br>
+        &bull; <strong>Weak acid + Strong base:</strong> HA(aq) + OH⁻(aq) &rarr; A⁻(aq) + H₂O(l)<br>
+        &bull; <strong>Strong acid + Weak base:</strong> H⁺(aq) + B(aq) &rarr; BH⁺(aq)<br><br>
+        <strong>Gas-evolving reactions (memorize these patterns):</strong><br>
+        &bull; Acid + carbonate &rarr; salt + H₂O + CO₂(g)<br>
+        &bull; Acid + sulfite &rarr; salt + H₂O + SO₂(g)<br>
+        &bull; Acid + sulfide &rarr; salt + H₂S(g)
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 4.9 ===== -->
+  <section class="container my-4" id="topic-4-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">4.9 &mdash; Oxidation-Reduction (Redox) Reactions</h3>
+ 
+      <p><strong>Oxidation-reduction (redox)</strong> reactions involve the transfer of electrons between species. One substance loses electrons (oxidized) while another gains electrons (reduced). These reactions are fundamental to electrochemistry, metabolism, and industrial processes.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Redox_example.svg"
+          alt="Redox reaction example" class="img-fluid" style="max-height: 340px;">
+        <p class="img-caption">Redox reaction showing electron transfer: oxidation (loss of e⁻) and reduction (gain of e⁻). (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>OIL RIG:</strong><br>
+        &bull; <strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss (of electrons) &mdash; oxidation number increases<br>
+        &bull; <strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain (of electrons) &mdash; oxidation number decreases<br><br>
+        <strong>Oxidizing agent:</strong> Gets reduced (gains electrons); causes oxidation in the other species.<br>
+        <strong>Reducing agent:</strong> Gets oxidized (loses electrons); causes reduction in the other species.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Rules for Assigning Oxidation Numbers</h5>
+      <ol>
+        <li>Free elements have oxidation number = <strong>0</strong> (e.g., Na, O₂, P₄)</li>
+        <li>Monatomic ions: oxidation number = <strong>charge</strong> (e.g., Na⁺ = +1, Cl⁻ = &minus;1)</li>
+        <li><strong>Hydrogen</strong> is usually +1 (except in metal hydrides like NaH, where it is &minus;1)</li>
+        <li><strong>Oxygen</strong> is usually &minus;2 (except in peroxides like H₂O₂, where it is &minus;1, and in OF₂ where it is +2)</li>
+        <li><strong>Fluorine</strong> is always &minus;1</li>
+        <li>The sum of oxidation numbers in a neutral compound = 0; in a polyatomic ion = the ion&rsquo;s charge</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Identifying oxidation and reduction:</strong><br>
+        2Fe₂O₃ + 3C &rarr; 4Fe + 3CO₂<br><br>
+        Fe in Fe₂O₃: let Fe = x, O = &minus;2 &rarr; 2x + 3(&minus;2) = 0 &rarr; x = <strong>+3</strong><br>
+        Fe in product: <strong>0</strong> (free element)<br>
+        Fe goes from +3 to 0: <strong>reduction</strong> (gained electrons). Fe₂O₃ is the oxidizing agent.<br><br>
+        C in reactant: <strong>0</strong> (free element)<br>
+        C in CO₂: let C = x, O = &minus;2 &rarr; x + 2(&minus;2) = 0 &rarr; x = <strong>+4</strong><br>
+        C goes from 0 to +4: <strong>oxidation</strong> (lost electrons). C is the reducing agent.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Activity Series</h5>
+      <p>The activity series ranks metals by their tendency to be oxidized (lose electrons). A metal higher on the series can displace a metal lower on the series from a solution of its ions.</p>
+      <div class="key-concept">
+        <strong>Top (most easily oxidized):</strong> Li, K, Ca, Na, Mg, Al, Zn, Fe, Ni, Sn, Pb, <strong>H₂</strong>, Cu, Ag, Pt, Au <strong>(least easily oxidized)</strong><br><br>
+        A metal above H₂ can react with acids to produce H₂ gas.<br>
+        A metal below H₂ does not react with most acids (Cu, Ag, Au).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 4. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. When the equation __Fe + __O₂ &rarr; __Fe₂O₃ is balanced with the smallest whole-number coefficients, the coefficient for Fe is:</p>
+      <ul class="options">
+        <li>(A) 1</li>
+        <li>(B) 2</li>
+        <li>(C) 3</li>
+        <li>(D) 4</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (D)</strong><br>
+        4Fe + 3O₂ &rarr; 2Fe₂O₃. Check: Fe: 4 = 2(2) = 4; O: 3(2) = 6 = 2(3) = 6. The coefficient for Fe is <strong>4</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. What is the net ionic equation for the reaction between Pb(NO₃)₂(aq) and KI(aq)?</p>
+      <ul class="options">
+        <li>(A) Pb²⁺(aq) + 2NO₃⁻(aq) + 2K⁺(aq) + 2I⁻(aq) &rarr; PbI₂(s) + 2KNO₃(aq)</li>
+        <li>(B) Pb²⁺(aq) + 2I⁻(aq) &rarr; PbI₂(s)</li>
+        <li>(C) Pb(NO₃)₂(aq) + 2KI(aq) &rarr; PbI₂(s) + 2KNO₃(aq)</li>
+        <li>(D) K⁺(aq) + NO₃⁻(aq) &rarr; KNO₃(aq)</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        PbI₂ is insoluble (Pb²⁺ with I⁻). The spectator ions K⁺ and NO₃⁻ are removed. Net ionic: <strong>Pb²⁺(aq) + 2I⁻(aq) &rarr; PbI₂(s)</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. Which of the following is evidence of a chemical change?</p>
+      <ul class="options">
+        <li>(A) Ice melting at 0&deg;C</li>
+        <li>(B) Sugar dissolving in water</li>
+        <li>(C) A nail rusting when exposed to air and water</li>
+        <li>(D) Alcohol evaporating from an open container</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Rusting is a chemical change: iron reacts with oxygen and water to form iron oxide (Fe₂O₃). A new substance with different properties is formed. The other options are physical changes.
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. If 5.0 mol H₂ and 2.0 mol O₂ react according to 2H₂ + O₂ &rarr; 2H₂O, what is the theoretical yield of H₂O?</p>
+      <ul class="options">
+        <li>(A) 2.0 mol</li>
+        <li>(B) 4.0 mol</li>
+        <li>(C) 5.0 mol</li>
+        <li>(D) 7.0 mol</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Find limiting reagent: H₂: 5.0/2 = 2.5; O₂: 2.0/1 = 2.0. O₂ is limiting (smaller value). Mol H₂O = 2.0 mol O₂ &times; (2 mol H₂O / 1 mol O₂) = <strong>4.0 mol H₂O</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. A student obtains 15.0 g of product in a reaction where the theoretical yield is 20.0 g. What is the percent yield?</p>
+      <ul class="options">
+        <li>(A) 25.0%</li>
+        <li>(B) 50.0%</li>
+        <li>(C) 75.0%</li>
+        <li>(D) 133%</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        % yield = (actual / theoretical) &times; 100 = (15.0 / 20.0) &times; 100 = <strong>75.0%</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. 30.0 mL of 0.100 M NaOH is required to neutralize 20.0 mL of an HCl solution. What is the molarity of the HCl?</p>
+      <ul class="options">
+        <li>(A) 0.0667 M</li>
+        <li>(B) 0.100 M</li>
+        <li>(C) 0.150 M</li>
+        <li>(D) 0.300 M</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        mol NaOH = 0.0300 L &times; 0.100 M = 0.00300 mol. HCl + NaOH is 1:1, so mol HCl = 0.00300. [HCl] = 0.00300 / 0.0200 = <strong>0.150 M</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. When solutions of Na₂CO₃ and CaCl₂ are mixed, a precipitate forms. Which compound precipitates?</p>
+      <ul class="options">
+        <li>(A) NaCl</li>
+        <li>(B) CaCO₃</li>
+        <li>(C) Na₂CO₃</li>
+        <li>(D) No precipitate forms</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        According to solubility rules, most carbonates are insoluble (except alkali metals and NH₄⁺). <strong>CaCO₃</strong> is insoluble and forms a white precipitate. NaCl is soluble.
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. In the reaction: Zn(s) + 2HCl(aq) &rarr; ZnCl₂(aq) + H₂(g), which species is the reducing agent?</p>
+      <ul class="options">
+        <li>(A) Zn</li>
+        <li>(B) HCl</li>
+        <li>(C) ZnCl₂</li>
+        <li>(D) H₂</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (A)</strong><br>
+        Zn goes from 0 to +2 (oxidized &mdash; loses electrons). The <strong>reducing agent</strong> is the species that gets oxidized. Zn donates electrons to H⁺, which is reduced from +1 to 0 (H₂ gas).
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. What is the oxidation number of Cr in K₂Cr₂O₇?</p>
+      <ul class="options">
+        <li>(A) +3</li>
+        <li>(B) +5</li>
+        <li>(C) +6</li>
+        <li>(D) +7</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        K = +1 (Group 1), O = &minus;2. 2(+1) + 2(Cr) + 7(&minus;2) = 0 &rarr; 2 + 2Cr &minus; 14 = 0 &rarr; 2Cr = 12 &rarr; Cr = <strong>+6</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. According to the activity series, which of the following metals can displace Cu²⁺ from a CuSO₄ solution?</p>
+      <ul class="options">
+        <li>(A) Ag</li>
+        <li>(B) Au</li>
+        <li>(C) Pt</li>
+        <li>(D) Zn</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (D)</strong><br>
+        <strong>Zn</strong> is above Cu in the activity series, so it is more easily oxidized and can displace Cu²⁺: Zn + CuSO₄ &rarr; ZnSO₄ + Cu. Ag, Au, and Pt are below Cu and cannot displace it.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 4</h5>
+        <p class="card-text">Unit 4 brings together many core skills. Make sure you can <strong>balance equations quickly</strong>, <strong>write net ionic equations</strong> (memorize the strong acids and solubility rules), and <strong>solve stoichiometry problems with limiting reagents</strong>. Practice titration calculations until they are second nature. For redox, focus on assigning oxidation numbers and identifying the oxidizing/reducing agents. These skills are essential for Units 7&ndash;9 (equilibrium, acids/bases, and electrochemistry).</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
