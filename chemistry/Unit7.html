@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 7: Equilibrium — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 7: Equilibrium | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">⚖️ Unit 7: Equilibrium</h1>
+      <p class="lead mt-3">Master the dynamic balance of chemical reactions &mdash; equilibrium constants, reaction quotients, and Le Chatelier&rsquo;s Principle.</p>
+      <p class="mt-2"><strong>Exam Weight: 7&ndash;9%</strong> &nbsp;|&nbsp; Topics 7.1&ndash;7.14</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-7-1"><li class="list-group-item">7.1 &mdash; Introduction to Equilibrium</li></a>
+      <a href="#topic-7-2"><li class="list-group-item">7.2 &mdash; Direction of Reversible Reactions</li></a>
+      <a href="#topic-7-3"><li class="list-group-item">7.3 &mdash; Reaction Quotient and Equilibrium Constant</li></a>
+      <a href="#topic-7-4"><li class="list-group-item">7.4 &mdash; Calculating the Equilibrium Constant</li></a>
+      <a href="#topic-7-5"><li class="list-group-item">7.5 &mdash; Magnitude of the Equilibrium Constant</li></a>
+      <a href="#topic-7-6"><li class="list-group-item">7.6 &mdash; Properties of the Equilibrium Constant</li></a>
+      <a href="#topic-7-7"><li class="list-group-item">7.7 &mdash; Calculating Equilibrium Concentrations</li></a>
+      <a href="#topic-7-8"><li class="list-group-item">7.8 &mdash; Representations of Equilibrium</li></a>
+      <a href="#topic-7-9"><li class="list-group-item">7.9 &mdash; Introduction to Le Chatelier&rsquo;s Principle</li></a>
+      <a href="#topic-7-10"><li class="list-group-item">7.10 &mdash; Reaction Quotient and Le Chatelier&rsquo;s Principle</li></a>
+      <a href="#topic-7-11"><li class="list-group-item">7.11 &mdash; Introduction to Solubility Equilibria</li></a>
+      <a href="#topic-7-12"><li class="list-group-item">7.12 &mdash; Common-Ion Effect</li></a>
+      <a href="#topic-7-13"><li class="list-group-item">7.13 &mdash; pH and Solubility</li></a>
+      <a href="#topic-7-14"><li class="list-group-item">7.14 &mdash; Free Energy of Dissolution</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 7.1 ===== -->
+  <section class="container my-4" id="topic-7-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.1 &mdash; Introduction to Equilibrium</h3>
+ 
+      <p>Many chemical reactions are <strong>reversible</strong> &mdash; they can proceed in both the forward and reverse directions. When the rate of the forward reaction equals the rate of the reverse reaction, the system has reached <strong>dynamic equilibrium</strong>.</p>
+ 
+      <div class="key-concept">
+        <strong>At equilibrium:</strong><br>
+        &bull; Rate<sub>forward</sub> = Rate<sub>reverse</sub><br>
+        &bull; Concentrations of reactants and products remain <strong>constant</strong> (but NOT necessarily equal).<br>
+        &bull; The reaction has NOT stopped &mdash; both forward and reverse reactions continue at equal rates. This is why it is called <strong>dynamic</strong> equilibrium.<br>
+        &bull; Equilibrium can be reached from either direction (starting with all reactants OR all products).
+      </div>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Equilibrium.svg"
+          alt="Equilibrium concentration diagram" class="img-fluid" style="max-height: 300px;">
+        <p class="img-caption">Concentrations of reactants and products approach constant values at equilibrium. The forward and reverse rates become equal. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 style="color: #8b4513;">Conditions for Equilibrium</h5>
+      <ul>
+        <li>The system must be <strong>closed</strong> (no matter enters or leaves).</li>
+        <li>Temperature must be <strong>constant</strong> (changing T changes K).</li>
+        <li>Both forward and reverse reactions must be occurring.</li>
+        <li>Macroscopic properties (color, pressure, concentration) remain constant over time.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.2 ===== -->
+  <section class="container my-4" id="topic-7-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.2 &mdash; Direction of Reversible Reactions</h3>
+ 
+      <p>A reversible reaction can shift toward products (<strong>forward</strong>) or toward reactants (<strong>reverse</strong>) depending on conditions. The system always moves toward equilibrium.</p>
+ 
+      <div class="key-concept">
+        <strong>How to know which direction a reaction shifts:</strong><br>
+        &bull; If the system has too many reactants relative to equilibrium &rarr; the reaction shifts <strong>forward</strong> (toward products) to reach equilibrium.<br>
+        &bull; If the system has too many products relative to equilibrium &rarr; the reaction shifts <strong>reverse</strong> (toward reactants) to reach equilibrium.<br>
+        &bull; We quantify this using the <strong>reaction quotient Q</strong> compared to the <strong>equilibrium constant K</strong>.
+      </div>
+ 
+      <p>At the molecular level, the shift occurs because reaction rates are concentration-dependent. If [reactants] is high, the forward rate exceeds the reverse rate, consuming reactants and forming products until rates equalize again.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.3 ===== -->
+  <section class="container my-4" id="topic-7-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.3 &mdash; Reaction Quotient and Equilibrium Constant</h3>
+ 
+      <p>The <strong>equilibrium constant (K)</strong> is the ratio of product concentrations to reactant concentrations at equilibrium, each raised to the power of its stoichiometric coefficient.</p>
+ 
+      <div class="key-concept">
+        <strong>For the reaction:</strong> aA + bB ⇌ cC + dD<br><br>
+        <strong>K<sub>c</sub> = [C]<sup>c</sup>[D]<sup>d</sup> / [A]<sup>a</sup>[B]<sup>b</sup></strong><br><br>
+        &bull; K<sub>c</sub> uses molar concentrations (mol/L).<br>
+        &bull; K<sub>p</sub> uses partial pressures (atm) for gas-phase reactions: K<sub>p</sub> = (P<sub>C</sub>)<sup>c</sup>(P<sub>D</sub>)<sup>d</sup> / (P<sub>A</sub>)<sup>a</sup>(P<sub>B</sub>)<sup>b</sup><br><br>
+        <strong>Relationship:</strong> K<sub>p</sub> = K<sub>c</sub>(RT)<sup>&Delta;n</sup> &nbsp;where &Delta;n = (moles of gaseous products) &minus; (moles of gaseous reactants)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">The Reaction Quotient (Q)</h5>
+      <div class="key-concept">
+        <strong>Q</strong> has the <em>same formula</em> as K, but uses concentrations at <strong>any point in time</strong> (not necessarily at equilibrium).<br><br>
+        <strong>Comparing Q to K:</strong><br>
+        &bull; <strong>Q &lt; K:</strong> Too few products. Reaction shifts <strong>forward</strong> (toward products) to reach equilibrium.<br>
+        &bull; <strong>Q = K:</strong> System is <strong>at equilibrium</strong>. No net change.<br>
+        &bull; <strong>Q &gt; K:</strong> Too many products. Reaction shifts <strong>reverse</strong> (toward reactants) to reach equilibrium.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">What to Include and Exclude in K Expressions</h5>
+      <ul>
+        <li><strong>Include:</strong> Aqueous species (aq) and gases (g).</li>
+        <li><strong>Exclude:</strong> Pure solids (s) and pure liquids (l). Their concentrations are constant and are incorporated into K.</li>
+        <li>Example: CaCO₃(s) ⇌ CaO(s) + CO₂(g) &nbsp;&rarr;&nbsp; K<sub>p</sub> = P<sub>CO₂</sub> (solids omitted)</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.4 ===== -->
+  <section class="container my-4" id="topic-7-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.4 &mdash; Calculating the Equilibrium Constant</h3>
+ 
+      <p>Given equilibrium concentrations, you can calculate K by substituting directly into the expression. If initial concentrations and one equilibrium concentration are given, use an <strong>ICE table</strong>.</p>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Direct calculation:</strong><br>
+        N₂(g) + 3H₂(g) ⇌ 2NH₃(g)<br>
+        At equilibrium: [N₂] = 0.50 M, [H₂] = 0.30 M, [NH₃] = 0.20 M<br><br>
+        K<sub>c</sub> = [NH₃]² / ([N₂][H₂]³) = (0.20)² / ((0.50)(0.30)³)<br>
+        = 0.040 / (0.50 &times; 0.027) = 0.040 / 0.0135 = <strong>2.96</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">ICE Tables</h5>
+      <p><strong>ICE</strong> stands for <strong>I</strong>nitial, <strong>C</strong>hange, <strong>E</strong>quilibrium. It&rsquo;s a systematic method for organizing equilibrium calculations.</p>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; ICE table:</strong><br>
+        H₂(g) + I₂(g) ⇌ 2HI(g) &nbsp;&nbsp;K<sub>c</sub> = 50.0<br>
+        Initially: [H₂] = 1.00, [I₂] = 1.00, [HI] = 0<br><br>
+        <table class="table table-bordered mt-2 mb-2" style="font-size: 0.95rem;">
+          <thead style="background: #d2691e; color: #fff;">
+            <tr><th></th><th>H₂</th><th>I₂</th><th>2HI</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>I</strong></td><td>1.00</td><td>1.00</td><td>0</td></tr>
+            <tr><td><strong>C</strong></td><td>&minus;x</td><td>&minus;x</td><td>+2x</td></tr>
+            <tr><td><strong>E</strong></td><td>1.00 &minus; x</td><td>1.00 &minus; x</td><td>2x</td></tr>
+          </tbody>
+        </table>
+        K<sub>c</sub> = (2x)² / ((1.00 &minus; x)(1.00 &minus; x)) = 4x² / (1.00 &minus; x)² = 50.0<br>
+        Take square root: 2x / (1.00 &minus; x) = 7.07<br>
+        2x = 7.07 &minus; 7.07x &rarr; 9.07x = 7.07 &rarr; x = 0.780<br>
+        [HI] = 2(0.780) = <strong>1.56 M</strong>, [H₂] = [I₂] = 1.00 &minus; 0.780 = <strong>0.220 M</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.5 ===== -->
+  <section class="container my-4" id="topic-7-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.5 &mdash; Magnitude of the Equilibrium Constant</h3>
+ 
+      <p>The value of K tells you the extent to which a reaction proceeds at a given temperature.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Value of K</th><th>Meaning</th><th>Position of Equilibrium</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>K &gt;&gt; 1</strong> (e.g., 10³ or larger)</td><td>Products are strongly favored</td><td>Equilibrium lies far to the <strong>right</strong> (mostly products)</td></tr>
+            <tr><td><strong>K &asymp; 1</strong></td><td>Neither side is strongly favored</td><td>Significant amounts of both reactants and products</td></tr>
+            <tr><td><strong>K &lt;&lt; 1</strong> (e.g., 10⁻³ or smaller)</td><td>Reactants are strongly favored</td><td>Equilibrium lies far to the <strong>left</strong> (mostly reactants)</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Important:</strong> K only tells you the <em>position</em> of equilibrium, NOT the <em>rate</em> at which equilibrium is reached. A reaction can have a very large K but still be extremely slow (e.g., diamond converting to graphite has K &gt; 1 but occurs incredibly slowly at room temperature).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.6 ===== -->
+  <section class="container my-4" id="topic-7-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.6 &mdash; Properties of the Equilibrium Constant</h3>
+ 
+      <p>The equilibrium constant can be manipulated mathematically when you change the way a reaction is written.</p>
+ 
+      <div class="key-concept">
+        <strong>Rules for manipulating K:</strong><br><br>
+        1. <strong>Reverse the reaction:</strong> K<sub>new</sub> = 1 / K<sub>original</sub><br>
+        &nbsp;&nbsp;If A ⇌ B has K = 100, then B ⇌ A has K = 1/100 = 0.01<br><br>
+        2. <strong>Multiply the reaction by a factor n:</strong> K<sub>new</sub> = K<sub>original</sub><sup>n</sup><br>
+        &nbsp;&nbsp;If A ⇌ B has K = 100, then 2A ⇌ 2B has K = 100² = 10,000<br><br>
+        3. <strong>Add two reactions:</strong> K<sub>overall</sub> = K₁ &times; K₂<br>
+        &nbsp;&nbsp;If reaction 1 has K₁ and reaction 2 has K₂, the combined reaction has K = K₁ &times; K₂
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong><br>
+        Given: N₂ + O₂ ⇌ 2NO &nbsp;&nbsp;K₁ = 4.0 &times; 10⁻³¹<br>
+        Find K for: NO ⇌ ½N₂ + ½O₂<br><br>
+        Step 1: Reverse: 2NO ⇌ N₂ + O₂ &nbsp;&rarr;&nbsp; K = 1/(4.0 &times; 10⁻³¹) = 2.5 &times; 10³⁰<br>
+        Step 2: Multiply by ½: K = (2.5 &times; 10³⁰)^(1/2) = <strong>1.6 &times; 10¹⁵</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.7 ===== -->
+  <section class="container my-4" id="topic-7-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.7 &mdash; Calculating Equilibrium Concentrations</h3>
+ 
+      <p>This topic extends ICE table calculations to more complex scenarios, including cases where you need to solve a quadratic equation or use approximations.</p>
+ 
+      <h5 style="color: #8b4513;">The Small-x Approximation</h5>
+      <div class="key-concept">
+        <strong>When K is very small</strong> (K &lt; ~10⁻³ relative to initial concentrations), the change in concentration x is negligible compared to the initial concentration.<br><br>
+        If [A]₀ = 0.50 M and K is very small: (0.50 &minus; x) &asymp; 0.50<br>
+        This simplifies the algebra considerably.<br><br>
+        <strong>Validity check:</strong> After solving, verify that x is &lt; 5% of the initial concentration. If x &gt; 5%, use the quadratic formula instead.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example with small-x approximation:</strong><br>
+        N₂O₄(g) ⇌ 2NO₂(g) &nbsp;&nbsp;K<sub>c</sub> = 4.6 &times; 10⁻³<br>
+        Initially: [N₂O₄] = 0.500 M, [NO₂] = 0<br><br>
+        <table class="table table-bordered mt-2 mb-2" style="font-size: 0.95rem;">
+          <thead style="background: #d2691e; color: #fff;">
+            <tr><th></th><th>N₂O₄</th><th>2NO₂</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>I</strong></td><td>0.500</td><td>0</td></tr>
+            <tr><td><strong>C</strong></td><td>&minus;x</td><td>+2x</td></tr>
+            <tr><td><strong>E</strong></td><td>0.500 &minus; x</td><td>2x</td></tr>
+          </tbody>
+        </table>
+        K = (2x)² / (0.500 &minus; x) &asymp; 4x² / 0.500 = 4.6 &times; 10⁻³<br>
+        x² = 5.75 &times; 10⁻⁴ &rarr; x = 0.0240<br>
+        Check: 0.0240 / 0.500 = 4.8% &lt; 5% &mdash; approximation is valid!<br>
+        [NO₂] = 2(0.0240) = <strong>0.0480 M</strong>, [N₂O₄] = 0.500 &minus; 0.024 = <strong>0.476 M</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.8 ===== -->
+  <section class="container my-4" id="topic-7-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.8 &mdash; Representations of Equilibrium</h3>
+ 
+      <p>Equilibrium can be represented in multiple ways on the AP exam. You must be comfortable with all of them:</p>
+ 
+      <ul>
+        <li><strong>Concentration vs. time graphs:</strong> Concentrations change initially, then flatten out at constant values when equilibrium is reached.</li>
+        <li><strong>Particulate diagrams:</strong> Show the number of reactant and product particles at equilibrium. You should be able to calculate K from the particle counts.</li>
+        <li><strong>Rate vs. time graphs:</strong> Forward rate decreases and reverse rate increases until they meet (are equal) at equilibrium.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Reading particulate diagrams for K:</strong><br>
+        Count the number of each species in the diagram. Convert counts to concentrations (if volume is given) or use counts directly as relative amounts.<br><br>
+        <strong>Example:</strong> A 1.0 L container at equilibrium contains 3 molecules of A and 6 molecules of B for A ⇌ 2B:<br>
+        K = [B]² / [A] = (6)² / (3) = 36/3 = <strong>12</strong> (using particle counts as concentrations in 1.0 L)
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.9 ===== -->
+  <section class="container my-4" id="topic-7-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.9 &mdash; Introduction to Le Chatelier&rsquo;s Principle</h3>
+ 
+      <p><strong>Le Chatelier&rsquo;s Principle:</strong> If a stress is applied to a system at equilibrium, the system will shift to partially counteract the stress and establish a new equilibrium.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Stress Applied</th><th>Direction of Shift</th><th>Effect on K</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Add reactant</td><td>Shifts <strong>right</strong> (toward products)</td><td>K unchanged</td></tr>
+            <tr><td>Remove reactant</td><td>Shifts <strong>left</strong> (toward reactants)</td><td>K unchanged</td></tr>
+            <tr><td>Add product</td><td>Shifts <strong>left</strong> (toward reactants)</td><td>K unchanged</td></tr>
+            <tr><td>Remove product</td><td>Shifts <strong>right</strong> (toward products)</td><td>K unchanged</td></tr>
+            <tr><td>Decrease volume (increase pressure)</td><td>Shifts toward the side with <strong>fewer moles of gas</strong></td><td>K unchanged</td></tr>
+            <tr><td>Increase volume (decrease pressure)</td><td>Shifts toward the side with <strong>more moles of gas</strong></td><td>K unchanged</td></tr>
+            <tr><td>Add inert gas (at constant V)</td><td><strong>No shift</strong> (concentrations unchanged)</td><td>K unchanged</td></tr>
+            <tr><td>Increase temperature</td><td>Shifts in the <strong>endothermic</strong> direction</td><td><strong>K changes</strong></td></tr>
+            <tr><td>Decrease temperature</td><td>Shifts in the <strong>exothermic</strong> direction</td><td><strong>K changes</strong></td></tr>
+            <tr><td>Add catalyst</td><td><strong>No shift</strong> (reaches equilibrium faster)</td><td>K unchanged</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Critical point:</strong> Only <strong>temperature</strong> changes K. Changes in concentration, pressure, and volume shift the position of equilibrium but do NOT change the value of K. A catalyst speeds up both forward and reverse reactions equally &mdash; it does NOT change K or the equilibrium position.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Temperature and K:</strong><br>
+        Think of heat as a &ldquo;reactant&rdquo; or &ldquo;product&rdquo;:<br>
+        &bull; <strong>Exothermic</strong> reaction: A + B ⇌ C + heat. Increasing T shifts <strong>left</strong>, K <strong>decreases</strong>.<br>
+        &bull; <strong>Endothermic</strong> reaction: A + B + heat ⇌ C. Increasing T shifts <strong>right</strong>, K <strong>increases</strong>.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.10 ===== -->
+  <section class="container my-4" id="topic-7-10">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.10 &mdash; Reaction Quotient and Le Chatelier&rsquo;s Principle</h3>
+ 
+      <p>Le Chatelier&rsquo;s Principle can be understood quantitatively through Q vs. K analysis. When a stress is applied, Q changes, and the system shifts to return Q to K.</p>
+ 
+      <div class="key-concept">
+        <strong>How stresses change Q:</strong><br>
+        &bull; <strong>Add reactant:</strong> Denominator of Q increases &rarr; Q decreases &rarr; Q &lt; K &rarr; shifts right.<br>
+        &bull; <strong>Add product:</strong> Numerator of Q increases &rarr; Q increases &rarr; Q &gt; K &rarr; shifts left.<br>
+        &bull; <strong>Decrease volume:</strong> All concentrations increase. If &Delta;n<sub>gas</sub> &ne; 0, Q changes. The system shifts toward fewer moles of gas to reduce Q back toward K.<br><br>
+        <strong>Example:</strong> For N₂(g) + 3H₂(g) ⇌ 2NH₃(g) at equilibrium, if we add more N₂:<br>
+        Q = [NH₃]² / ([N₂][H₂]³). Adding N₂ increases the denominator &rarr; Q &lt; K &rarr; the reaction shifts <strong>right</strong> to produce more NH₃ until Q = K again.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.11 ===== -->
+  <section class="container my-4" id="topic-7-11">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.11 &mdash; Introduction to Solubility Equilibria</h3>
+ 
+      <p>When a sparingly soluble ionic compound is placed in water, it partially dissolves until a dynamic equilibrium is established between the solid and its dissolved ions. The equilibrium constant for this process is the <strong>solubility product constant (K<sub>sp</sub>)</strong>.</p>
+ 
+      <div class="key-concept">
+        <strong>For:</strong> A<sub>m</sub>B<sub>n</sub>(s) ⇌ mA<sup>n+</sup>(aq) + nB<sup>m&minus;</sup>(aq)<br><br>
+        <strong>K<sub>sp</sub> = [A<sup>n+</sup>]<sup>m</sup>[B<sup>m&minus;</sup>]<sup>n</sup></strong><br><br>
+        The solid is NOT included in the expression (pure solid).
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; Calculating molar solubility from K<sub>sp</sub>:</strong><br>
+        AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq) &nbsp;&nbsp;K<sub>sp</sub> = 1.8 &times; 10⁻¹⁰<br><br>
+        Let s = molar solubility (mol/L that dissolves):<br>
+        [Ag⁺] = s, [Cl⁻] = s<br>
+        K<sub>sp</sub> = s &times; s = s² = 1.8 &times; 10⁻¹⁰<br>
+        s = &radic;(1.8 &times; 10⁻¹⁰) = <strong>1.3 &times; 10⁻⁵ M</strong>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example &mdash; 2:1 salt:</strong><br>
+        PbCl₂(s) ⇌ Pb²⁺(aq) + 2Cl⁻(aq) &nbsp;&nbsp;K<sub>sp</sub> = 1.7 &times; 10⁻⁵<br><br>
+        [Pb²⁺] = s, [Cl⁻] = 2s<br>
+        K<sub>sp</sub> = (s)(2s)² = 4s³ = 1.7 &times; 10⁻⁵<br>
+        s³ = 4.25 &times; 10⁻⁶ &rarr; s = <strong>1.6 &times; 10⁻² M</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Predicting Precipitation Using Q<sub>sp</sub></h5>
+      <div class="key-concept">
+        Compare the ion product Q<sub>sp</sub> to K<sub>sp</sub>:<br>
+        &bull; <strong>Q<sub>sp</sub> &lt; K<sub>sp</sub>:</strong> Unsaturated solution &mdash; no precipitate forms. More solid can dissolve.<br>
+        &bull; <strong>Q<sub>sp</sub> = K<sub>sp</sub>:</strong> Saturated solution &mdash; at equilibrium.<br>
+        &bull; <strong>Q<sub>sp</sub> &gt; K<sub>sp</sub>:</strong> Supersaturated &mdash; <strong>precipitate forms</strong> until Q = K<sub>sp</sub>.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.12 ===== -->
+  <section class="container my-4" id="topic-7-12">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.12 &mdash; Common-Ion Effect</h3>
+ 
+      <p>The <strong>common-ion effect</strong> occurs when a soluble salt provides an ion that is already present in the equilibrium. By Le Chatelier&rsquo;s Principle, adding a common ion shifts the equilibrium to the <strong>left</strong>, decreasing the solubility of the sparingly soluble salt.</p>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> What is the solubility of AgCl in 0.10 M NaCl?<br><br>
+        AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq) &nbsp;&nbsp;K<sub>sp</sub> = 1.8 &times; 10⁻¹⁰<br><br>
+        NaCl provides 0.10 M Cl⁻ already in solution (common ion).<br>
+        [Ag⁺] = s, [Cl⁻] = 0.10 + s &asymp; 0.10 (since s is very small)<br>
+        K<sub>sp</sub> = s(0.10) = 1.8 &times; 10⁻¹⁰<br>
+        s = 1.8 &times; 10⁻¹⁰ / 0.10 = <strong>1.8 &times; 10⁻⁹ M</strong><br><br>
+        Compare: In pure water, s = 1.3 &times; 10⁻⁵ M. The common ion reduced solubility by a factor of ~7000!
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.13 ===== -->
+  <section class="container my-4" id="topic-7-13">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.13 &mdash; pH and Solubility</h3>
+ 
+      <p>The solubility of certain salts is affected by the pH of the solution. This is especially true for salts whose anions are the conjugate bases of weak acids.</p>
+ 
+      <div class="key-concept">
+        <strong>Salts that are MORE soluble in acidic solution:</strong><br>
+        If the anion is a weak base (conjugate base of a weak acid), adding H⁺ will react with the anion and remove it from the equilibrium, shifting it to the <strong>right</strong> and increasing solubility.<br><br>
+        &bull; CaCO₃(s) ⇌ Ca²⁺(aq) + CO₃²⁻(aq)<br>
+        &bull; In acid: CO₃²⁻ + 2H⁺ &rarr; H₂CO₃ &rarr; H₂O + CO₂(g)<br>
+        &bull; Removing CO₃²⁻ shifts the dissolution equilibrium <strong>right</strong> &rarr; more CaCO₃ dissolves.<br><br>
+        <strong>Salts NOT affected by pH:</strong><br>
+        Salts with anions that are conjugate bases of strong acids (Cl⁻, Br⁻, I⁻, NO₃⁻) are unaffected because these anions do not react with H⁺ in any meaningful way.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>AP Exam tip:</strong> Common anions whose solubility IS affected by pH: OH⁻, S²⁻, CO₃²⁻, PO₄³⁻, F⁻, CH₃COO⁻, C₂O₄²⁻. These are all weak bases that react with H⁺.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 7.14 ===== -->
+  <section class="container my-4" id="topic-7-14">
+    <div class="topic-card">
+      <h3 class="topic-heading">7.14 &mdash; Free Energy of Dissolution</h3>
+ 
+      <p>The spontaneity of dissolution depends on both enthalpy and entropy changes. The <strong>Gibbs free energy change (&Delta;G)</strong> determines whether dissolution is spontaneous.</p>
+ 
+      <div class="key-concept">
+        <strong>&Delta;G = &Delta;H &minus; T&Delta;S</strong><br><br>
+        &bull; <strong>&Delta;H<sub>dissolution</sub>:</strong> Can be positive (endothermic, e.g., NH₄NO₃) or negative (exothermic, e.g., NaOH).<br>
+        &bull; <strong>&Delta;S<sub>dissolution</sub>:</strong> Usually positive (ions or molecules become more disordered in solution than in the solid lattice).<br>
+        &bull; If &Delta;G &lt; 0: Dissolution is spontaneous.<br>
+        &bull; If &Delta;G &gt; 0: Dissolution is not spontaneous (the compound is insoluble or sparingly soluble).
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Connecting &Delta;G to K<sub>sp</sub>:</strong><br>
+        &Delta;G&deg; = &minus;RT ln K<sub>sp</sub><br><br>
+        &bull; If K<sub>sp</sub> is large (very soluble): &Delta;G&deg; is negative (spontaneous).<br>
+        &bull; If K<sub>sp</sub> is very small (sparingly soluble): &Delta;G&deg; is positive (not spontaneous under standard conditions).<br><br>
+        <strong>Example:</strong> If K<sub>sp</sub> = 1.8 &times; 10⁻¹⁰ at 298 K:<br>
+        &Delta;G&deg; = &minus;(8.314)(298) ln(1.8 &times; 10⁻¹⁰) = &minus;(2478)(&minus;22.4) = <strong>+55.5 kJ/mol</strong><br>
+        Positive &Delta;G&deg; confirms AgCl is sparingly soluble.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Entropy-Driven Dissolution</h5>
+      <p>Some endothermic dissolutions ARE spontaneous because the large positive &Delta;S (increased disorder of ions in solution) overcomes the positive &Delta;H. Example: NH₄NO₃ dissolves endothermically (&Delta;H &gt; 0, solution feels cold), but the large &Delta;S makes &Delta;G negative at room temperature.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 7. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. At equilibrium, which of the following is true?</p>
+      <ul class="options">
+        <li>(A) The concentrations of reactants and products are equal</li>
+        <li>(B) The reaction has stopped</li>
+        <li>(C) The rates of the forward and reverse reactions are equal</li>
+        <li>(D) The value of Q is zero</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        At dynamic equilibrium, the <strong>rates of the forward and reverse reactions are equal</strong>, NOT the concentrations. The reaction continues in both directions; concentrations remain constant but are not necessarily equal.
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. For the reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), which is the correct equilibrium expression?</p>
+      <ul class="options">
+        <li>(A) K = [SO₃]² / [SO₂]²[O₂]</li>
+        <li>(B) K = [SO₂]²[O₂] / [SO₃]²</li>
+        <li>(C) K = 2[SO₃] / (2[SO₂] + [O₂])</li>
+        <li>(D) K = [SO₃] / [SO₂][O₂]</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (A)</strong><br>
+        K = products over reactants, each raised to the stoichiometric coefficient: <strong>[SO₃]² / ([SO₂]²[O₂])</strong>. Coefficients become exponents, not multipliers.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. If Q &gt; K for a reaction, the system will:</p>
+      <ul class="options">
+        <li>(A) Shift right to form more products</li>
+        <li>(B) Shift left to form more reactants</li>
+        <li>(C) Remain at equilibrium</li>
+        <li>(D) Increase in temperature</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        When Q &gt; K, there are too many products relative to equilibrium. The reaction shifts <strong>left (reverse)</strong> to consume products and form reactants until Q decreases to equal K.
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. If K = 3.2 &times; 10⁸ for a reaction, which statement is correct?</p>
+      <ul class="options">
+        <li>(A) At equilibrium, mostly reactants are present</li>
+        <li>(B) The reaction is very slow</li>
+        <li>(C) At equilibrium, mostly products are present</li>
+        <li>(D) The reaction is endothermic</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        K &gt;&gt; 1 means the equilibrium lies far to the right &mdash; <strong>products are strongly favored</strong>. K says nothing about the rate (B) or whether the reaction is endo/exothermic (D).
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. If the reaction A ⇌ 2B has K = 25, what is K for 2B ⇌ A?</p>
+      <ul class="options">
+        <li>(A) 25</li>
+        <li>(B) &minus;25</li>
+        <li>(C) 0.040</li>
+        <li>(D) 625</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Reversing a reaction takes the reciprocal of K: K<sub>reverse</sub> = 1/K = 1/25 = <strong>0.040</strong>. K values are never negative.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. For the exothermic reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), which change will increase the value of K?</p>
+      <ul class="options">
+        <li>(A) Increasing the pressure</li>
+        <li>(B) Decreasing the temperature</li>
+        <li>(C) Adding a catalyst</li>
+        <li>(D) Adding more N₂</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Only temperature changes K. For an exothermic reaction, <strong>decreasing the temperature</strong> shifts equilibrium right and <strong>increases K</strong>. Pressure, catalysts, and concentration changes shift the position but do NOT change K.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. Adding an inert gas (such as Ar) to an equilibrium mixture at constant volume will:</p>
+      <ul class="options">
+        <li>(A) Shift the equilibrium toward products</li>
+        <li>(B) Shift the equilibrium toward reactants</li>
+        <li>(C) Have no effect on the equilibrium</li>
+        <li>(D) Change the value of K</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Adding an inert gas at constant volume increases total pressure but does NOT change the partial pressures or concentrations of the reacting gases. Since Q is unchanged, there is <strong>no shift</strong> in equilibrium.
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. The K<sub>sp</sub> of PbI₂ is 9.8 &times; 10⁻⁹. What is the molar solubility of PbI₂ in pure water?</p>
+      <ul class="options">
+        <li>(A) 1.4 &times; 10⁻³ M</li>
+        <li>(B) 9.9 &times; 10⁻⁵ M</li>
+        <li>(C) 2.1 &times; 10⁻³ M</li>
+        <li>(D) 3.1 &times; 10⁻³ M</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (A)</strong><br>
+        PbI₂ ⇌ Pb²⁺ + 2I⁻. K<sub>sp</sub> = (s)(2s)² = 4s³.<br>
+        4s³ = 9.8 &times; 10⁻⁹ &rarr; s³ = 2.45 &times; 10⁻⁹ &rarr; s = <strong>1.35 &times; 10⁻³ M &asymp; 1.4 &times; 10⁻³ M</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. The solubility of CaF₂ (K<sub>sp</sub> = 3.9 &times; 10⁻¹¹) would be LOWEST in which solution?</p>
+      <ul class="options">
+        <li>(A) Pure water</li>
+        <li>(B) 0.10 M NaF</li>
+        <li>(C) 0.10 M NaCl</li>
+        <li>(D) 0.010 M NaF</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        F⁻ is a common ion. By the common-ion effect, having the highest [F⁻] (0.10 M NaF) suppresses the dissolution of CaF₂ the most, giving the <strong>lowest solubility</strong>. NaCl has no common ion effect.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. CaCO₃ is more soluble in acidic solution than in pure water because:</p>
+      <ul class="options">
+        <li>(A) Acid increases the temperature of the solution</li>
+        <li>(B) H⁺ reacts with CO₃²⁻, removing it from equilibrium and shifting dissolution right</li>
+        <li>(C) Acid changes the K<sub>sp</sub> of CaCO₃</li>
+        <li>(D) Ca²⁺ reacts with the acid</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        CO₃²⁻ is a weak base that reacts with H⁺: CO₃²⁻ + 2H⁺ &rarr; H₂O + CO₂. This <strong>removes CO₃²⁻</strong> from the dissolution equilibrium, shifting CaCO₃(s) ⇌ Ca²⁺ + CO₃²⁻ to the <strong>right</strong>, increasing solubility. K<sub>sp</sub> itself does not change (only temperature changes K<sub>sp</sub>).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 7</h5>
+        <p class="card-text">Equilibrium is one of the most tested topics on the AP Chemistry exam. Master <strong>writing K expressions</strong> (remember: no solids or liquids!), <strong>ICE tables</strong>, and <strong>Q vs. K analysis</strong>. Le Chatelier&rsquo;s Principle appears on almost every exam &mdash; memorize the table of stresses and shifts, and remember that <strong>only temperature changes K</strong>. For solubility equilibria, practice K<sub>sp</sub> calculations with 1:1 and non-1:1 salts, the common-ion effect, and predicting precipitation. The connection between K<sub>sp</sub>, &Delta;G, and pH-dependent solubility ties together multiple units.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
