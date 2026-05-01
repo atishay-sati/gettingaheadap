@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 9: Applications of Thermodynamics — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 9: Applications of Thermodynamics | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">⚡ Unit 9: Applications of Thermodynamics</h1>
+      <p class="lead mt-3">Entropy, Gibbs free energy, electrochemistry, and the driving forces behind every chemical reaction.</p>
+      <p class="mt-2"><strong>Exam Weight: 7&ndash;9%</strong> &nbsp;|&nbsp; Topics 9.1&ndash;9.10</p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-9-1"><li class="list-group-item">9.1 &mdash; Introduction to Entropy</li></a>
+      <a href="#topic-9-2"><li class="list-group-item">9.2 &mdash; Absolute Entropy and Entropy Change</li></a>
+      <a href="#topic-9-3"><li class="list-group-item">9.3 &mdash; Gibbs Free Energy and Thermodynamic Favorability</li></a>
+      <a href="#topic-9-4"><li class="list-group-item">9.4 &mdash; Thermodynamic and Kinetic Control</li></a>
+      <a href="#topic-9-5"><li class="list-group-item">9.5 &mdash; Free Energy and Equilibrium</li></a>
+      <a href="#topic-9-6"><li class="list-group-item">9.6 &mdash; Coupled Reactions</li></a>
+      <a href="#topic-9-7"><li class="list-group-item">9.7 &mdash; Galvanic (Voltaic) Cells</li></a>
+      <a href="#topic-9-8"><li class="list-group-item">9.8 &mdash; Cell Potential and Free Energy</li></a>
+      <a href="#topic-9-9"><li class="list-group-item">9.9 &mdash; Cell Potential Under Nonstandard Conditions</li></a>
+      <a href="#topic-9-10"><li class="list-group-item">9.10 &mdash; Electrolysis and Faraday&rsquo;s Law</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 9.1 ===== -->
+  <section class="container my-4" id="topic-9-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.1 &mdash; Introduction to Entropy</h3>
+ 
+      <p><strong>Entropy (S)</strong> is a measure of the number of possible arrangements (microstates) of a system. More microstates = greater disorder = higher entropy.</p>
+ 
+      <div class="key-concept">
+        <strong>The Second Law of Thermodynamics:</strong><br>
+        For any spontaneous process, the <strong>total entropy of the universe increases</strong>:<br>
+        &Delta;S<sub>universe</sub> = &Delta;S<sub>system</sub> + &Delta;S<sub>surroundings</sub> &gt; 0<br><br>
+        A process is spontaneous if &Delta;S<sub>universe</sub> &gt; 0.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Predicting the Sign of &Delta;S</h5>
+      <div class="key-concept">
+        <strong>&Delta;S is positive (entropy increases) when:</strong><br>
+        &bull; Solid &rarr; liquid &rarr; gas (phase changes that increase disorder)<br>
+        &bull; Fewer moles of gas &rarr; more moles of gas<br>
+        &bull; A solid or liquid dissolves in a solvent<br>
+        &bull; Temperature increases (more kinetic energy, more microstates)<br>
+        &bull; A molecule breaks into smaller fragments<br><br>
+        <strong>&Delta;S is negative (entropy decreases) when:</strong><br>
+        &bull; Gas &rarr; liquid &rarr; solid<br>
+        &bull; More moles of gas &rarr; fewer moles of gas<br>
+        &bull; Precipitation (ions come together into ordered solid)
+      </div>
+ 
+      <div class="key-concept">
+        <strong>The Third Law of Thermodynamics:</strong><br>
+        The entropy of a perfect crystalline substance at <strong>absolute zero (0 K)</strong> is exactly <strong>zero</strong>. This provides a reference point for measuring absolute entropy values.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.2 ===== -->
+  <section class="container my-4" id="topic-9-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.2 &mdash; Absolute Entropy and Entropy Change</h3>
+ 
+      <p>Unlike enthalpy, we CAN measure <strong>absolute entropy</strong> values (S&deg;) for substances because of the Third Law. These are tabulated as <strong>standard molar entropy</strong> values in J/(mol&middot;K).</p>
+ 
+      <div class="key-concept">
+        <strong>Standard entropy change of a reaction:</strong><br><br>
+        <strong>&Delta;S&deg;<sub>rxn</sub> = &Sigma; nS&deg;(products) &minus; &Sigma; nS&deg;(reactants)</strong><br><br>
+        where n = stoichiometric coefficients and S&deg; = standard molar entropy values.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Trends in Absolute Entropy</h5>
+      <ul>
+        <li><strong>Gases &gt; liquids &gt; solids</strong> (gases have far more microstates)</li>
+        <li><strong>Larger/more complex molecules</strong> have higher S&deg; (more ways to vibrate and rotate)</li>
+        <li><strong>More moles of substance</strong> = higher total entropy (S is extensive)</li>
+        <li><strong>Higher temperature</strong> = higher entropy</li>
+        <li>Allotropes: more disordered structure = higher S&deg; (e.g., graphite &gt; diamond)</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> Calculate &Delta;S&deg; for: 2H₂(g) + O₂(g) &rarr; 2H₂O(g)<br><br>
+        S&deg; values: H₂(g) = 130.7 J/(mol&middot;K), O₂(g) = 205.2 J/(mol&middot;K), H₂O(g) = 188.8 J/(mol&middot;K)<br><br>
+        &Delta;S&deg; = [2(188.8)] &minus; [2(130.7) + 205.2] = 377.6 &minus; 466.6 = <strong>&minus;89.0 J/(mol&middot;K)</strong><br><br>
+        Negative &Delta;S&deg; makes sense: 3 moles of gas &rarr; 2 moles of gas (fewer gas molecules = less disorder).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.3 ===== -->
+  <section class="container my-4" id="topic-9-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.3 &mdash; Gibbs Free Energy and Thermodynamic Favorability</h3>
+ 
+      <p><strong>Gibbs free energy (G)</strong> combines enthalpy and entropy into a single criterion for spontaneity at constant temperature and pressure.</p>
+ 
+      <div class="key-concept">
+        <strong>&Delta;G = &Delta;H &minus; T&Delta;S</strong><br><br>
+        &bull; <strong>&Delta;G &lt; 0:</strong> Process is <strong>thermodynamically favorable</strong> (spontaneous) in the forward direction.<br>
+        &bull; <strong>&Delta;G = 0:</strong> System is at <strong>equilibrium</strong>.<br>
+        &bull; <strong>&Delta;G &gt; 0:</strong> Process is <strong>not favorable</strong> in the forward direction (spontaneous in reverse).
+      </div>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>&Delta;H</th><th>&Delta;S</th><th>&Delta;G</th><th>Spontaneity</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&minus; (exothermic)</td><td>+ (entropy increases)</td><td><strong>Always negative</strong></td><td>Spontaneous at <strong>all temperatures</strong></td></tr>
+            <tr><td>+ (endothermic)</td><td>&minus; (entropy decreases)</td><td><strong>Always positive</strong></td><td><strong>Never</strong> spontaneous</td></tr>
+            <tr><td>&minus; (exothermic)</td><td>&minus; (entropy decreases)</td><td>Depends on T</td><td>Spontaneous at <strong>low T</strong> (enthalpy driven)</td></tr>
+            <tr><td>+ (endothermic)</td><td>+ (entropy increases)</td><td>Depends on T</td><td>Spontaneous at <strong>high T</strong> (entropy driven)</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Calculating &Delta;G&deg; from &Delta;H&deg;<sub>f</sub> values:</strong><br>
+        <strong>&Delta;G&deg;<sub>rxn</sub> = &Sigma; n&Delta;G&deg;<sub>f</sub>(products) &minus; &Sigma; n&Delta;G&deg;<sub>f</sub>(reactants)</strong><br><br>
+        Just like &Delta;H&deg;<sub>f</sub>: &Delta;G&deg;<sub>f</sub> of elements in their standard states = 0.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Finding the crossover temperature:</strong><br>
+        When &Delta;G = 0: &Delta;H = T&Delta;S &rarr; <strong>T = &Delta;H / &Delta;S</strong><br><br>
+        This is the temperature where the reaction switches from spontaneous to non-spontaneous (or vice versa).<br><br>
+        <strong>Example:</strong> If &Delta;H = &minus;100 kJ and &Delta;S = &minus;200 J/K:<br>
+        T = (&minus;100,000 J) / (&minus;200 J/K) = <strong>500 K</strong><br>
+        Below 500 K: &Delta;G &lt; 0 (spontaneous). Above 500 K: &Delta;G &gt; 0 (not spontaneous).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.4 ===== -->
+  <section class="container my-4" id="topic-9-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.4 &mdash; Thermodynamic and Kinetic Control</h3>
+ 
+      <p>A reaction can be thermodynamically favorable (&Delta;G &lt; 0) but still occur extremely slowly if it has a high activation energy barrier. Thermodynamics tells us <em>whether</em> a reaction can happen; kinetics tells us <em>how fast</em>.</p>
+ 
+      <div class="key-concept">
+        <strong>Key distinction:</strong><br>
+        &bull; <strong>Thermodynamic favorability (&Delta;G &lt; 0):</strong> The reaction CAN proceed spontaneously &mdash; products are more stable than reactants.<br>
+        &bull; <strong>Kinetic feasibility (E<sub>a</sub>):</strong> Determines HOW FAST the reaction actually proceeds.<br><br>
+        <strong>Examples:</strong><br>
+        &bull; <strong>Diamond &rarr; Graphite:</strong> &Delta;G &lt; 0 (thermodynamically favorable), but E<sub>a</sub> is enormous &rarr; essentially never happens at room temperature.<br>
+        &bull; <strong>Combustion of glucose:</strong> &Delta;G is very negative, but glucose can sit in air indefinitely until a spark (activation energy) is provided.<br>
+        &bull; A catalyst lowers E<sub>a</sub> but does NOT change &Delta;G or the position of equilibrium.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>AP Exam tip:</strong> &ldquo;Thermodynamically favorable&rdquo; is the preferred AP term instead of &ldquo;spontaneous&rdquo; because &ldquo;spontaneous&rdquo; implies the reaction happens immediately, which is misleading. A favorable reaction might take millions of years without a catalyst.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.5 ===== -->
+  <section class="container my-4" id="topic-9-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.5 &mdash; Free Energy and Equilibrium</h3>
+ 
+      <p>There is a direct mathematical relationship between &Delta;G&deg; and the equilibrium constant K.</p>
+ 
+      <div class="key-concept">
+        <strong>&Delta;G&deg; = &minus;RT ln K</strong><br><br>
+        &bull; R = 8.314 J/(mol&middot;K)<br>
+        &bull; T = temperature in Kelvin<br>
+        &bull; K = equilibrium constant<br>
+        &bull; ln = natural logarithm
+      </div>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>&Delta;G&deg;</th><th>K value</th><th>Meaning</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&Delta;G&deg; &lt; 0</td><td><strong>K &gt; 1</strong></td><td>Products favored at equilibrium</td></tr>
+            <tr><td>&Delta;G&deg; = 0</td><td><strong>K = 1</strong></td><td>Neither side favored</td></tr>
+            <tr><td>&Delta;G&deg; &gt; 0</td><td><strong>K &lt; 1</strong></td><td>Reactants favored at equilibrium</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>&Delta;G under nonstandard conditions:</strong><br><br>
+        <strong>&Delta;G = &Delta;G&deg; + RT ln Q</strong><br><br>
+        &bull; Q = reaction quotient (current conditions)<br>
+        &bull; At equilibrium: Q = K, so &Delta;G = &Delta;G&deg; + RT ln K = 0<br>
+        &bull; This equation tells you whether a reaction is favorable at any specific set of concentrations.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> Calculate K at 298 K for a reaction with &Delta;G&deg; = &minus;30.0 kJ/mol.<br><br>
+        &Delta;G&deg; = &minus;RT ln K<br>
+        &minus;30,000 = &minus;(8.314)(298) ln K<br>
+        ln K = 30,000 / 2478 = 12.1<br>
+        K = e<sup>12.1</sup> = <strong>1.8 &times; 10⁵</strong><br><br>
+        A large K confirms that products are strongly favored, consistent with the negative &Delta;G&deg;.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.6 ===== -->
+  <section class="container my-4" id="topic-9-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.6 &mdash; Coupled Reactions</h3>
+ 
+      <p>A thermodynamically unfavorable reaction (&Delta;G &gt; 0) can be driven forward by <strong>coupling</strong> it with a highly favorable reaction (&Delta;G &lt;&lt; 0), so that the overall &Delta;G is negative.</p>
+ 
+      <div class="key-concept">
+        <strong>How coupling works:</strong><br>
+        If reaction 1 has &Delta;G₁ &gt; 0 (unfavorable) and reaction 2 has &Delta;G₂ &lt; 0 (favorable), and |&Delta;G₂| &gt; |&Delta;G₁|, then:<br><br>
+        &Delta;G<sub>overall</sub> = &Delta;G₁ + &Delta;G₂ &lt; 0 &nbsp;&nbsp;(favorable!)<br><br>
+        The coupled process is thermodynamically favorable even though one individual step is not.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Biological example &mdash; ATP hydrolysis:</strong><br>
+        Many biological reactions are endergonic (&Delta;G &gt; 0). Cells couple them with ATP hydrolysis:<br><br>
+        ATP &rarr; ADP + P<sub>i</sub> &nbsp;&nbsp;&Delta;G&deg; = &minus;30.5 kJ/mol<br><br>
+        If a reaction needs +20 kJ/mol, coupling with ATP hydrolysis gives:<br>
+        &Delta;G<sub>overall</sub> = +20 + (&minus;30.5) = <strong>&minus;10.5 kJ/mol</strong> (now favorable!)
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Industrial example &mdash; Extraction of metals:</strong><br>
+        Extracting iron from Fe₂O₃ is unfavorable alone, but coupling with carbon oxidation makes the overall process favorable:<br>
+        Fe₂O₃ + 3CO &rarr; 2Fe + 3CO₂ &nbsp;&nbsp;(&Delta;G &lt; 0 overall at high temperatures)
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.7 ===== -->
+  <section class="container my-4" id="topic-9-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.7 &mdash; Galvanic (Voltaic) Cells</h3>
+ 
+      <p>A <strong>galvanic cell</strong> (also called a voltaic cell) converts chemical energy into electrical energy through a spontaneous redox reaction. The two half-reactions occur in separate half-cells connected by a salt bridge.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Galvanic_cell_labeled.svg"
+          alt="Galvanic cell diagram" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">A galvanic (voltaic) cell showing the anode, cathode, salt bridge, and electron flow. Oxidation occurs at the anode; reduction at the cathode. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key components:</strong><br>
+        &bull; <strong>Anode:</strong> Where <strong>oxidation</strong> occurs (loses electrons). Negative terminal. Remember: <strong>AN OX</strong> (anode = oxidation).<br>
+        &bull; <strong>Cathode:</strong> Where <strong>reduction</strong> occurs (gains electrons). Positive terminal. Remember: <strong>RED CAT</strong> (reduction = cathode).<br>
+        &bull; <strong>Salt bridge:</strong> Allows ions to flow between half-cells to maintain electrical neutrality. Cations migrate toward the cathode; anions toward the anode.<br>
+        &bull; <strong>External wire:</strong> Electrons flow from anode to cathode through the wire.<br>
+        &bull; <strong>Cell potential (E&deg;<sub>cell</sub>):</strong> The &ldquo;voltage&rdquo; driving the electrons. Must be <strong>positive</strong> for a galvanic cell.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Calculating E&deg;<sub>cell</sub>:</strong><br><br>
+        <strong>E&deg;<sub>cell</sub> = E&deg;<sub>cathode</sub> &minus; E&deg;<sub>anode</sub></strong><br><br>
+        Use <strong>standard reduction potentials</strong> from the table. Do NOT flip the sign when writing the equation &mdash; always subtract anode from cathode using the tabulated reduction potentials.<br><br>
+        <strong>Example:</strong> Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s)<br>
+        E&deg;(Cu²⁺/Cu) = +0.34 V (cathode, reduction)<br>
+        E&deg;(Zn²⁺/Zn) = &minus;0.76 V (anode, oxidation)<br>
+        E&deg;<sub>cell</sub> = +0.34 &minus; (&minus;0.76) = <strong>+1.10 V</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Cell Notation</h5>
+      <div class="key-concept">
+        <strong>Anode | Anode solution || Cathode solution | Cathode</strong><br><br>
+        &bull; Single line (|) separates phases.<br>
+        &bull; Double line (||) represents the salt bridge.<br>
+        &bull; Anode is always on the left; cathode on the right.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.8 ===== -->
+  <section class="container my-4" id="topic-9-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.8 &mdash; Cell Potential and Free Energy</h3>
+ 
+      <p>Cell potential, free energy, and the equilibrium constant are all related. If you know one, you can calculate the others.</p>
+ 
+      <div class="key-concept">
+        <strong>The three-way relationship:</strong><br><br>
+        <strong>&Delta;G&deg; = &minus;nFE&deg;<sub>cell</sub></strong><br><br>
+        &bull; n = moles of electrons transferred in the balanced equation<br>
+        &bull; F = Faraday&rsquo;s constant = 96,485 C/mol e⁻<br>
+        &bull; E&deg;<sub>cell</sub> = standard cell potential (V)<br><br>
+        Also: <strong>&Delta;G&deg; = &minus;RT ln K</strong> and <strong>E&deg;<sub>cell</sub> = (RT / nF) ln K</strong>
+      </div>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>E&deg;<sub>cell</sub></th><th>&Delta;G&deg;</th><th>K</th><th>Reaction</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&gt; 0</td><td>&lt; 0</td><td>&gt; 1</td><td>Spontaneous (galvanic cell)</td></tr>
+            <tr><td>= 0</td><td>= 0</td><td>= 1</td><td>At equilibrium</td></tr>
+            <tr><td>&lt; 0</td><td>&gt; 0</td><td>&lt; 1</td><td>Non-spontaneous (requires electrolysis)</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> For the Zn-Cu cell (E&deg;<sub>cell</sub> = +1.10 V, n = 2):<br><br>
+        &Delta;G&deg; = &minus;nFE&deg; = &minus;(2)(96,485)(1.10) = <strong>&minus;212,267 J = &minus;212 kJ</strong><br><br>
+        Large negative &Delta;G&deg; confirms this is a strongly favorable reaction.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.9 ===== -->
+  <section class="container my-4" id="topic-9-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.9 &mdash; Cell Potential Under Nonstandard Conditions</h3>
+ 
+      <p>Standard cell potentials assume all concentrations are 1 M and all gas pressures are 1 atm. Under nonstandard conditions, the <strong>Nernst equation</strong> is used.</p>
+ 
+      <div class="key-concept">
+        <strong>Nernst Equation:</strong><br><br>
+        <strong>E = E&deg; &minus; (RT / nF) ln Q</strong><br><br>
+        At 25&deg;C (298 K), this simplifies to:<br>
+        <strong>E = E&deg; &minus; (0.0592 / n) log Q</strong><br><br>
+        &bull; E = cell potential under actual conditions<br>
+        &bull; Q = reaction quotient (current concentrations/pressures)<br>
+        &bull; n = moles of electrons transferred
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key insights from the Nernst equation:</strong><br>
+        &bull; If Q &lt; K (Q &lt; 1 for standard conditions): E &gt; E&deg; (cell potential is higher).<br>
+        &bull; If Q = K: E = 0 (the cell is &ldquo;dead&rdquo; &mdash; at equilibrium, no voltage).<br>
+        &bull; If Q &gt; K: E &lt; E&deg; (cell potential is lower).<br>
+        &bull; Increasing [reactants] or decreasing [products] increases E (shifts Q lower).
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> The Zn-Cu cell with [Zn²⁺] = 0.10 M and [Cu²⁺] = 2.0 M:<br>
+        Q = [Zn²⁺] / [Cu²⁺] = 0.10 / 2.0 = 0.050<br>
+        E = 1.10 &minus; (0.0592/2) log(0.050) = 1.10 &minus; (0.0296)(&minus;1.30) = 1.10 + 0.039 = <strong>1.14 V</strong><br><br>
+        E &gt; E&deg; because Q &lt; 1 (more reactant, less product than standard).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Concentration Cells</h5>
+      <p>A concentration cell has the same electrode material on both sides but different ion concentrations. E&deg; = 0 (identical electrodes), but E &ne; 0 because Q &ne; 1. The cell works to equalize concentrations: the dilute side is oxidized (anode) and the concentrated side is reduced (cathode).</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 9.10 ===== -->
+  <section class="container my-4" id="topic-9-10">
+    <div class="topic-card">
+      <h3 class="topic-heading">9.10 &mdash; Electrolysis and Faraday&rsquo;s Law</h3>
+ 
+      <p><strong>Electrolysis</strong> uses electrical energy to drive a non-spontaneous reaction. It is the reverse of a galvanic cell &mdash; an external power source forces the reaction to proceed.</p>
+ 
+      <div class="key-concept">
+        <strong>Galvanic vs. Electrolytic Cells:</strong><br>
+        <table class="table table-bordered mt-2 mb-2" style="font-size: 0.95rem;">
+          <thead style="background: #d2691e; color: #fff;">
+            <tr><th>Feature</th><th>Galvanic</th><th>Electrolytic</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&Delta;G</td><td>&lt; 0 (spontaneous)</td><td>&gt; 0 (non-spontaneous)</td></tr>
+            <tr><td>E<sub>cell</sub></td><td>Positive</td><td>Negative (requires external voltage)</td></tr>
+            <tr><td>Energy conversion</td><td>Chemical &rarr; electrical</td><td>Electrical &rarr; chemical</td></tr>
+            <tr><td>Anode</td><td>Negative (&minus;)</td><td>Positive (+)</td></tr>
+            <tr><td>Cathode</td><td>Positive (+)</td><td>Negative (&minus;)</td></tr>
+            <tr><td>Oxidation at anode?</td><td>Yes</td><td>Yes (always!)</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Faraday&rsquo;s Law of Electrolysis</h5>
+      <div class="key-concept">
+        <strong>The amount of substance produced is proportional to the charge passed:</strong><br><br>
+        <strong>q = It</strong><br>
+        &bull; q = charge (Coulombs)<br>
+        &bull; I = current (Amperes)<br>
+        &bull; t = time (seconds)<br><br>
+        <strong>Conversion pathway:</strong><br>
+        Coulombs &rarr; moles e⁻ &rarr; moles substance &rarr; grams substance<br>
+        q / F = mol e⁻ &nbsp;&nbsp;then use stoichiometry to find moles of substance deposited.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> How many grams of Cu are deposited when a 3.00 A current passes through a CuSO₄ solution for 2.00 hours?<br><br>
+        Cu²⁺ + 2e⁻ &rarr; Cu(s)<br>
+        q = It = (3.00 A)(2.00 &times; 3600 s) = 21,600 C<br>
+        mol e⁻ = 21,600 / 96,485 = 0.2239 mol<br>
+        mol Cu = 0.2239 / 2 = 0.1120 mol (2 electrons per Cu)<br>
+        mass Cu = 0.1120 &times; 63.55 = <strong>7.12 g</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Applications of Electrolysis</h5>
+      <ul>
+        <li><strong>Electroplating:</strong> Depositing a thin layer of metal (e.g., chrome plating, silver plating)</li>
+        <li><strong>Electrolysis of water:</strong> 2H₂O &rarr; 2H₂ + O₂ (hydrogen fuel production)</li>
+        <li><strong>Aluminum refining:</strong> Hall-H&eacute;roult process uses electrolysis to extract Al from Al₂O₃</li>
+        <li><strong>Chlor-alkali process:</strong> Electrolysis of brine to produce Cl₂, NaOH, and H₂</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 9. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. Which of the following changes results in an increase in entropy?</p>
+      <ul class="options">
+        <li>(A) H₂O(g) &rarr; H₂O(l)</li>
+        <li>(B) 2H₂(g) + O₂(g) &rarr; 2H₂O(g)</li>
+        <li>(C) NaCl(s) &rarr; Na⁺(aq) + Cl⁻(aq)</li>
+        <li>(D) N₂(g) + 3H₂(g) &rarr; 2NH₃(g)</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Dissolving a solid into aqueous ions <strong>increases disorder</strong> (&Delta;S &gt; 0). (A) is gas&rarr;liquid (decrease). (B) and (D) have fewer moles of gas as products (decrease).
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. A reaction has &Delta;H = +50 kJ and &Delta;S = +150 J/K. At what temperature does it become thermodynamically favorable?</p>
+      <ul class="options">
+        <li>(A) 0.33 K</li>
+        <li>(B) 333 K</li>
+        <li>(C) Above 333 K</li>
+        <li>(D) Below 333 K</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        T = &Delta;H / &Delta;S = 50,000 / 150 = 333 K. With &Delta;H &gt; 0 and &Delta;S &gt; 0, the reaction is favorable when T&Delta;S &gt; &Delta;H, which means <strong>above 333 K</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. If &Delta;G&deg; = &minus;40 kJ/mol for a reaction, which is true about K?</p>
+      <ul class="options">
+        <li>(A) K &lt; 1</li>
+        <li>(B) K = 1</li>
+        <li>(C) K &gt; 1</li>
+        <li>(D) K cannot be determined</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        &Delta;G&deg; = &minus;RT ln K. If &Delta;G&deg; is negative, then ln K must be positive, which means <strong>K &gt; 1</strong> (products favored at equilibrium).
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. Diamond spontaneously converting to graphite has &Delta;G &lt; 0 but does not occur at room temperature. This is because:</p>
+      <ul class="options">
+        <li>(A) &Delta;H is positive</li>
+        <li>(B) The activation energy is extremely high</li>
+        <li>(C) K &lt; 1 for the reaction</li>
+        <li>(D) &Delta;S is negative</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        The reaction is thermodynamically favorable (&Delta;G &lt; 0, K &gt; 1), but the <strong>activation energy is extremely high</strong>, so the reaction is kinetically hindered. Thermodynamics says it CAN happen; kinetics says it won&rsquo;t happen fast enough to observe.
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. In a galvanic cell, electrons flow from:</p>
+      <ul class="options">
+        <li>(A) Cathode to anode through the wire</li>
+        <li>(B) Anode to cathode through the salt bridge</li>
+        <li>(C) Anode to cathode through the wire</li>
+        <li>(D) Cathode to anode through the solution</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Electrons are produced at the <strong>anode</strong> (oxidation) and flow through the <strong>external wire</strong> to the <strong>cathode</strong> (reduction). Ions (not electrons) flow through the salt bridge/solution.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. Given E&deg;(Ag⁺/Ag) = +0.80 V and E&deg;(Fe²⁺/Fe) = &minus;0.44 V. What is E&deg;<sub>cell</sub> for Fe | Fe²⁺ || Ag⁺ | Ag?</p>
+      <ul class="options">
+        <li>(A) +0.36 V</li>
+        <li>(B) +1.24 V</li>
+        <li>(C) &minus;1.24 V</li>
+        <li>(D) +2.04 V</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        E&deg;<sub>cell</sub> = E&deg;<sub>cathode</sub> &minus; E&deg;<sub>anode</sub> = (+0.80) &minus; (&minus;0.44) = <strong>+1.24 V</strong>. Ag is reduced (cathode), Fe is oxidized (anode).
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. For a galvanic cell with E&deg;<sub>cell</sub> = +0.50 V and n = 2, what is &Delta;G&deg;?</p>
+      <ul class="options">
+        <li>(A) &minus;96.5 kJ</li>
+        <li>(B) +96.5 kJ</li>
+        <li>(C) &minus;48.2 kJ</li>
+        <li>(D) &minus;193 kJ</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (A)</strong><br>
+        &Delta;G&deg; = &minus;nFE&deg; = &minus;(2)(96,485)(0.50) = &minus;96,485 J = <strong>&minus;96.5 kJ</strong>. Positive E&deg; gives negative &Delta;G&deg; (spontaneous).
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. According to the Nernst equation, increasing the concentration of reactants in a galvanic cell will:</p>
+      <ul class="options">
+        <li>(A) Decrease E<sub>cell</sub></li>
+        <li>(B) Increase E<sub>cell</sub></li>
+        <li>(C) Have no effect on E<sub>cell</sub></li>
+        <li>(D) Make E<sub>cell</sub> negative</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Increasing [reactants] decreases Q. Since E = E&deg; &minus; (0.0592/n) log Q, a smaller Q (smaller log Q, possibly negative) makes the subtracted term smaller or negative, so <strong>E increases</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. In electrolysis, the anode is:</p>
+      <ul class="options">
+        <li>(A) Negative and the site of reduction</li>
+        <li>(B) Positive and the site of oxidation</li>
+        <li>(C) Positive and the site of reduction</li>
+        <li>(D) Negative and the site of oxidation</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        In an <strong>electrolytic cell</strong>, the anode is connected to the positive terminal of the power source and is the site of <strong>oxidation</strong> (always!). The sign of the anode flips from galvanic to electrolytic, but oxidation ALWAYS occurs at the anode.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. A current of 5.00 A is passed through a solution of AgNO₃ for 1.00 hour. How many grams of Ag are deposited? (Ag⁺ + e⁻ &rarr; Ag; M<sub>Ag</sub> = 107.87 g/mol)</p>
+      <ul class="options">
+        <li>(A) 5.58 g</li>
+        <li>(B) 10.1 g</li>
+        <li>(C) 20.1 g</li>
+        <li>(D) 40.3 g</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        q = It = (5.00)(3600) = 18,000 C<br>
+        mol e⁻ = 18,000 / 96,485 = 0.1866 mol<br>
+        Ag⁺ requires 1 e⁻, so mol Ag = 0.1866 mol<br>
+        mass = 0.1866 &times; 107.87 = <strong>20.1 g</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 9</h5>
+        <p class="card-text">Unit 9 ties together thermodynamics, equilibrium, and electrochemistry. Memorize the <strong>&Delta;G = &Delta;H &minus; T&Delta;S</strong> and <strong>&Delta;G&deg; = &minus;RT ln K = &minus;nFE&deg;</strong> relationships &mdash; they connect everything. Know the four-case table for spontaneity (signs of &Delta;H and &Delta;S). For electrochemistry, master <strong>E&deg;<sub>cell</sub> = E&deg;<sub>cathode</sub> &minus; E&deg;<sub>anode</sub></strong> and the Nernst equation. Remember that <strong>oxidation always occurs at the anode</strong> in BOTH galvanic and electrolytic cells (the sign of the electrode flips, but not the reaction type). Practice Faraday&rsquo;s Law calculations &mdash; the conversion pathway is always: Coulombs &rarr; mol e⁻ &rarr; mol substance &rarr; grams.</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
