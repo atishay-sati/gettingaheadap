@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6TMSR9LD4H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-6TMSR9LD4H');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="description" content="AP Chemistry Unit 3: Intermolecular Forces and Properties — in-depth notes, visuals, and practice questions.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 3: Intermolecular Forces and Properties | Getting Ahead: AP Chemistry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .hero { background: linear-gradient(to right, #8b4513, #d2691e); color: white; padding: 4rem 1rem; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); animation: fadeIn 1.2s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .section-heading { font-weight: 700; font-size: 2rem; color: #8b4513; margin-bottom: 1.5rem; }
+    .topic-heading { font-weight: 700; font-size: 1.5rem; color: #8b4513; margin-top: 2rem; margin-bottom: 1rem; border-left: 5px solid #d2691e; padding-left: 0.75rem; }
+    .card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: none; border-radius: 1rem; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-outline-primary { border-radius: 30px; color: #8b4513; border-color: #8b4513; }
+    .btn-outline-primary:hover { background-color: #8b4513; border-color: #8b4513; color: #fff; }
+    .topic-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+    .topic-card p { font-size: 1.05rem; line-height: 1.75; color: #333; }
+    .topic-card ul, .topic-card ol { font-size: 1.05rem; line-height: 1.8; color: #333; }
+    .topic-card img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .key-concept { background: linear-gradient(to right, #fde7c9, #fff3e0); border-left: 5px solid #d2691e; padding: 1rem 1.25rem; border-radius: 0 0.75rem 0.75rem 0; margin: 1rem 0; font-size: 1.05rem; }
+    .key-concept strong { color: #8b4513; }
+    .mcq-card { background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.25rem; transition: 0.3s ease; }
+    .mcq-card:hover { transform: scale(1.01); }
+    .mcq-card .question { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.75rem; color: #333; }
+    .mcq-card .options { list-style: none; padding-left: 0; }
+    .mcq-card .options li { padding: 0.4rem 0; font-size: 1.02rem; }
+    .mcq-card .answer-btn { background-color: #8b4513; color: #fff; border: none; border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.9rem; cursor: pointer; margin-top: 0.5rem; transition: 0.2s ease; }
+    .mcq-card .answer-btn:hover { background-color: #d2691e; }
+    .mcq-card .answer-reveal { display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; background: linear-gradient(to right, #fde7c9, #fff3e0); border-radius: 0.5rem; font-size: 1rem; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list li { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 0.5rem; padding: 0.75rem 1rem; border-radius: 0.75rem; transition: 0.3s ease; font-size: 1.05rem; }
+    .toc-list li:hover { background: linear-gradient(to right, #fde7c9, #fff3e0); transform: scale(1.02); }
+    .exam-table { border-radius: 1rem; overflow: hidden; }
+    .exam-table thead { background: linear-gradient(to right, #8b4513, #d2691e); color: #fff; }
+    .exam-table th, .exam-table td { vertical-align: middle; }
+    footer { background-color: #343a40; color: #fff; padding: 2rem 0; margin-top: 4rem; border-radius: 20px 20px 0 0; }
+    footer p::before { content: "🌟 "; }
+    .img-caption { font-size: 0.85rem; color: #6c757d; text-align: center; margin-top: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+ 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🧪 AP Chemistry</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">🌊 Unit 3: Intermolecular Forces and Properties</h1>
+      <p class="lead mt-3">Discover how forces between molecules govern the physical properties of matter &mdash; from boiling points to solubility.</p>
+      <p class="mt-2"><strong>Exam Weight: 18&ndash;22%</strong> &nbsp;|&nbsp; Topics 3.1&ndash;3.13 &nbsp;|&nbsp; <em>Largest unit on the AP exam!</em></p>
+    </div>
+  </section>
+ 
+  <!-- Table of Contents -->
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📑 In This Unit</h2>
+    <ul class="list-group toc-list">
+      <a href="#topic-3-1"><li class="list-group-item">3.1 &mdash; Intermolecular Forces</li></a>
+      <a href="#topic-3-2"><li class="list-group-item">3.2 &mdash; Properties of Solids</li></a>
+      <a href="#topic-3-3"><li class="list-group-item">3.3 &mdash; Solids, Liquids, and Gases</li></a>
+      <a href="#topic-3-4"><li class="list-group-item">3.4 &mdash; Ideal Gas Law</li></a>
+      <a href="#topic-3-5"><li class="list-group-item">3.5 &mdash; Kinetic Molecular Theory</li></a>
+      <a href="#topic-3-6"><li class="list-group-item">3.6 &mdash; Deviation from Ideal Gas Law</li></a>
+      <a href="#topic-3-7"><li class="list-group-item">3.7 &mdash; Solutions and Mixtures</li></a>
+      <a href="#topic-3-8"><li class="list-group-item">3.8 &mdash; Representations of Solutions</li></a>
+      <a href="#topic-3-9"><li class="list-group-item">3.9 &mdash; Separation of Solutions and Mixtures</li></a>
+      <a href="#topic-3-10"><li class="list-group-item">3.10 &mdash; Solubility</li></a>
+      <a href="#topic-3-11"><li class="list-group-item">3.11 &mdash; Spectroscopy and the Electromagnetic Spectrum</li></a>
+      <a href="#topic-3-12"><li class="list-group-item">3.12 &mdash; Photoelectric Effect</li></a>
+      <a href="#topic-3-13"><li class="list-group-item">3.13 &mdash; Beer-Lambert Law</li></a>
+      <a href="#practice-mcqs"><li class="list-group-item">📝 Practice Multiple-Choice Questions (10)</li></a>
+    </ul>
+  </section>
+ 
+  <!-- ===== TOPIC 3.1 ===== -->
+  <section class="container my-4" id="topic-3-1">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.1 &mdash; Intermolecular Forces</h3>
+ 
+      <p><strong>Intermolecular forces (IMFs)</strong> are the attractive forces <em>between</em> molecules (or formula units). They are much weaker than intramolecular forces (ionic, covalent, metallic bonds within molecules), but they determine critical physical properties such as boiling point, melting point, viscosity, and surface tension.</p>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/3D_model_hydrogen_bonds_in_water.svg"
+          alt="Hydrogen bonding in water" class="img-fluid" style="max-height: 300px;">
+        <p class="img-caption">Hydrogen bonding between water molecules &mdash; the partial positive H of one molecule is attracted to the lone pair on the O of another. (Wikimedia Commons)</p>
+      </div>
+ 
+      <h5 style="color: #8b4513;">Types of IMFs (Weakest to Strongest)</h5>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>IMF Type</th><th>Present In</th><th>Strength</th><th>Origin</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>London Dispersion Forces (LDF)</strong></td><td>ALL molecules and atoms</td><td>Weakest (but increases with molar mass and surface area)</td><td>Temporary, instantaneous dipoles caused by random electron motion inducing dipoles in neighbors</td></tr>
+            <tr><td><strong>Dipole-Dipole</strong></td><td>Polar molecules</td><td>Moderate</td><td>Permanent partial charges (&delta;+ and &delta;&minus;) on polar molecules attract each other</td></tr>
+            <tr><td><strong>Hydrogen Bonding</strong></td><td>Molecules with H bonded to N, O, or F</td><td>Strongest IMF (special case of dipole-dipole)</td><td>Very electronegative N, O, or F creates a large &delta;+ on H, which is attracted to lone pairs on N, O, or F of another molecule</td></tr>
+            <tr><td><strong>Ion-Dipole</strong></td><td>Ionic compound + polar solvent</td><td>Strongest of all (not technically IMF between molecules)</td><td>Full charge on ion attracts partial charge on polar molecule</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>How to identify IMFs present in a substance:</strong><br>
+        1. Is it ionic? &rarr; Ion-dipole when dissolved; strong lattice forces when solid<br>
+        2. Does the molecule have H bonded to N, O, or F? &rarr; Hydrogen bonding + dipole-dipole + LDF<br>
+        3. Is it a polar molecule? &rarr; Dipole-dipole + LDF<br>
+        4. Is it nonpolar? &rarr; LDF only<br><br>
+        <strong>Remember:</strong> ALL molecules have LDF. Polar molecules have both LDF and dipole-dipole. H-bonding molecules have all three.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>LDF strength depends on:</strong><br>
+        &bull; <strong>Molar mass:</strong> More electrons = more polarizable = stronger LDF. This is why I₂ is a solid but F₂ is a gas at room temperature.<br>
+        &bull; <strong>Shape/surface area:</strong> Long, extended molecules have stronger LDF than compact, spherical ones (more points of contact). Example: n-pentane (bp 36&deg;C) vs. neopentane (bp 10&deg;C) &mdash; same formula C₅H₁₂, different shapes.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">IMFs and Physical Properties</h5>
+      <ul>
+        <li><strong>Boiling point:</strong> Stronger IMFs = higher boiling point (more energy needed to separate molecules into gas phase).</li>
+        <li><strong>Melting point:</strong> Stronger IMFs = higher melting point.</li>
+        <li><strong>Surface tension:</strong> Stronger IMFs = higher surface tension (molecules at surface pulled inward more strongly).</li>
+        <li><strong>Viscosity:</strong> Stronger IMFs = higher viscosity (greater resistance to flow).</li>
+        <li><strong>Vapor pressure:</strong> Stronger IMFs = LOWER vapor pressure (fewer molecules escape to gas phase).</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.2 ===== -->
+  <section class="container my-4" id="topic-3-2">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.2 &mdash; Properties of Solids</h3>
+ 
+      <p>The properties of a solid depend on the type of particles present and the forces between them. The AP exam requires you to classify solids and predict their properties.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Solid Type</th><th>Particles</th><th>Forces</th><th>Melting Pt</th><th>Conductivity</th><th>Hardness</th><th>Examples</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Ionic</strong></td><td>Cations &amp; anions</td><td>Electrostatic (lattice energy)</td><td>High</td><td>No (solid); Yes (liquid/dissolved)</td><td>Hard, brittle</td><td>NaCl, MgO, CaCl₂</td></tr>
+            <tr><td><strong>Molecular</strong></td><td>Molecules</td><td>IMFs (LDF, dipole-dipole, H-bonding)</td><td>Low</td><td>No</td><td>Soft</td><td>Ice, sugar, dry ice</td></tr>
+            <tr><td><strong>Covalent network</strong></td><td>Atoms linked by covalent bonds throughout</td><td>Covalent bonds in 3D network</td><td>Very high</td><td>No (except graphite)</td><td>Very hard</td><td>Diamond, SiO₂, SiC</td></tr>
+            <tr><td><strong>Metallic</strong></td><td>Cations in electron sea</td><td>Metallic bonds</td><td>Variable (often high)</td><td>Yes</td><td>Variable</td><td>Fe, Cu, Au, W</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Covalent network solids explained:</strong><br>
+        &bull; <strong>Diamond:</strong> Each C is sp³ hybridized and bonded to 4 other C atoms in a tetrahedral network. Extremely hard (hardest natural substance), very high mp (3550&deg;C), does NOT conduct electricity (all electrons in bonds).<br>
+        &bull; <strong>Graphite:</strong> Each C is sp² hybridized in flat hexagonal sheets. Delocalized &pi; electrons between layers allow conductivity. Layers slide over each other easily &rarr; soft and slippery (lubricant).<br>
+        &bull; <strong>SiO₂ (quartz):</strong> Each Si bonded to 4 O atoms in a 3D network. Very high mp, very hard, insulator.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Amorphous vs. Crystalline Solids</h5>
+      <ul>
+        <li><strong>Crystalline solids:</strong> Regular, repeating 3D arrangement of particles. Sharp melting point. Examples: NaCl, diamond, ice.</li>
+        <li><strong>Amorphous solids:</strong> Irregular, disordered arrangement. Soften gradually over a range of temperatures. Examples: glass, rubber, plastic.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.3 ===== -->
+  <section class="container my-4" id="topic-3-3">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.3 &mdash; Solids, Liquids, and Gases</h3>
+ 
+      <p>Matter exists in three common phases: solid, liquid, and gas. The phase depends on the balance between <strong>kinetic energy</strong> (which tends to separate particles) and <strong>intermolecular forces</strong> (which tend to hold them together).</p>
+ 
+      <h5 style="color: #8b4513;">Heating Curves</h5>
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Heating_curve_for_water.svg"
+          alt="Heating curve for water showing phase changes" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">Heating curve for water showing the five regions: solid, melting, liquid, boiling, and gas. Temperature is constant during phase changes. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Key features of a heating curve:</strong><br>
+        &bull; <strong>Sloped regions:</strong> Temperature is rising. Only ONE phase is present. Use q = mc&Delta;T.<br>
+        &bull; <strong>Flat regions (plateaus):</strong> Temperature is constant. TWO phases coexist. Use q = n&Delta;H<sub>fus</sub> or q = n&Delta;H<sub>vap</sub>. All added energy goes to breaking IMFs, not increasing temperature.<br>
+        &bull; The <strong>boiling plateau</strong> is longer than the melting plateau because &Delta;H<sub>vap</sub> &gt; &Delta;H<sub>fus</sub> (more IMFs must be broken to go from liquid to gas than from solid to liquid).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Phase Diagrams</h5>
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Phase-diag2.svg"
+          alt="Generic phase diagram showing solid, liquid, and gas regions" class="img-fluid" style="max-height: 320px;">
+        <p class="img-caption">A generic phase diagram. Lines represent phase boundaries; the triple point is where all three phases coexist; the critical point marks the end of the liquid-gas boundary. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Phase diagram features:</strong><br>
+        &bull; <strong>Triple point:</strong> The unique T and P where solid, liquid, and gas all coexist in equilibrium.<br>
+        &bull; <strong>Critical point:</strong> Beyond this T and P, the liquid and gas phases become indistinguishable (supercritical fluid).<br>
+        &bull; <strong>Normal boiling point:</strong> Temperature at which vapor pressure = 1 atm (intersection with P = 1 atm line).<br>
+        &bull; <strong>Normal melting point:</strong> Temperature at which solid and liquid coexist at 1 atm.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Phase Changes</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Phase Change</th><th>Direction</th><th>Energy</th><th>&Delta;H</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Melting (fusion)</td><td>Solid &rarr; Liquid</td><td>Absorbs energy (endothermic)</td><td>&Delta;H<sub>fus</sub> &gt; 0</td></tr>
+            <tr><td>Vaporization</td><td>Liquid &rarr; Gas</td><td>Absorbs energy (endothermic)</td><td>&Delta;H<sub>vap</sub> &gt; 0</td></tr>
+            <tr><td>Sublimation</td><td>Solid &rarr; Gas</td><td>Absorbs energy (endothermic)</td><td>&Delta;H<sub>sub</sub> = &Delta;H<sub>fus</sub> + &Delta;H<sub>vap</sub></td></tr>
+            <tr><td>Freezing</td><td>Liquid &rarr; Solid</td><td>Releases energy (exothermic)</td><td>&minus;&Delta;H<sub>fus</sub></td></tr>
+            <tr><td>Condensation</td><td>Gas &rarr; Liquid</td><td>Releases energy (exothermic)</td><td>&minus;&Delta;H<sub>vap</sub></td></tr>
+            <tr><td>Deposition</td><td>Gas &rarr; Solid</td><td>Releases energy (exothermic)</td><td>&minus;&Delta;H<sub>sub</sub></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.4 ===== -->
+  <section class="container my-4" id="topic-3-4">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.4 &mdash; Ideal Gas Law</h3>
+ 
+      <p>The ideal gas law combines several gas laws into one equation that relates pressure, volume, temperature, and amount of gas. It assumes gas particles have no volume and no intermolecular forces.</p>
+ 
+      <div class="key-concept">
+        <strong>PV = nRT</strong><br><br>
+        P = pressure (atm) &nbsp;|&nbsp; V = volume (L) &nbsp;|&nbsp; n = moles &nbsp;|&nbsp; R = 0.08206 L&middot;atm/(mol&middot;K) &nbsp;|&nbsp; T = temperature in <strong>Kelvin</strong><br><br>
+        <strong>Always convert temperature to Kelvin:</strong> K = &deg;C + 273.15
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Component Gas Laws</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Law</th><th>Relationship</th><th>Conditions</th><th>Formula</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Boyle&rsquo;s</strong></td><td>P and V are inversely proportional</td><td>Constant n, T</td><td>P₁V₁ = P₂V₂</td></tr>
+            <tr><td><strong>Charles&rsquo;s</strong></td><td>V and T are directly proportional</td><td>Constant n, P</td><td>V₁/T₁ = V₂/T₂</td></tr>
+            <tr><td><strong>Gay-Lussac&rsquo;s</strong></td><td>P and T are directly proportional</td><td>Constant n, V</td><td>P₁/T₁ = P₂/T₂</td></tr>
+            <tr><td><strong>Avogadro&rsquo;s</strong></td><td>V and n are directly proportional</td><td>Constant P, T</td><td>V₁/n₁ = V₂/n₂</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Worked Example:</strong> A 2.50 L container holds 0.100 mol of an ideal gas at 300 K. What is the pressure?<br>
+        P = nRT / V = (0.100)(0.08206)(300) / 2.50 = <strong>0.985 atm</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Dalton&rsquo;s Law of Partial Pressures</h5>
+      <div class="key-concept">
+        <strong>P<sub>total</sub> = P<sub>A</sub> + P<sub>B</sub> + P<sub>C</sub> + ...</strong><br><br>
+        Each gas in a mixture exerts pressure independently. Partial pressure: P<sub>A</sub> = &chi;<sub>A</sub> &times; P<sub>total</sub> &nbsp;where &chi;<sub>A</sub> = mole fraction = n<sub>A</sub> / n<sub>total</sub><br><br>
+        <strong>Example:</strong> A mixture contains 0.30 mol N₂ and 0.10 mol O₂ at 2.0 atm total pressure.<br>
+        &chi;<sub>N₂</sub> = 0.30 / 0.40 = 0.75 &nbsp;&rarr;&nbsp; P<sub>N₂</sub> = 0.75 &times; 2.0 = <strong>1.5 atm</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Molar Volume and Gas Density</h5>
+      <p>At STP (0&deg;C, 1 atm), one mole of any ideal gas occupies <strong>22.4 L</strong>. The density of a gas can be found from:</p>
+      <div class="key-concept">
+        <strong>d = PM / RT</strong> &nbsp;where M = molar mass (g/mol)<br>
+        Heavier gases are denser at the same T and P.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.5 ===== -->
+  <section class="container my-4" id="topic-3-5">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.5 &mdash; Kinetic Molecular Theory</h3>
+ 
+      <p>The <strong>Kinetic Molecular Theory (KMT)</strong> provides a model to explain the behavior of ideal gases at the molecular level. Its postulates are the foundation for all gas law behavior.</p>
+ 
+      <h5 style="color: #8b4513;">The Five Postulates of KMT</h5>
+      <ol>
+        <li>Gas particles are in <strong>continuous, random, straight-line motion</strong>.</li>
+        <li>The <strong>volume of individual gas particles is negligible</strong> compared to the container volume.</li>
+        <li>Gas particles exert <strong>no attractive or repulsive forces</strong> on each other.</li>
+        <li>Collisions between particles (and with container walls) are <strong>perfectly elastic</strong> &mdash; total kinetic energy is conserved.</li>
+        <li>The <strong>average kinetic energy</strong> of gas particles is directly proportional to the absolute temperature (in Kelvin).</li>
+      </ol>
+ 
+      <div class="text-center my-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Maxwell-Boltzmann_distribution.svg"
+          alt="Maxwell-Boltzmann speed distribution" class="img-fluid" style="max-height: 300px;">
+        <p class="img-caption">Maxwell-Boltzmann distribution of molecular speeds at different temperatures. Higher T &rarr; broader curve, peak shifts right. (Wikimedia Commons)</p>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Average kinetic energy:</strong> KE<sub>avg</sub> = (3/2) k<sub>B</sub>T &nbsp;(per molecule) &nbsp;or&nbsp; KE<sub>avg</sub> = (3/2) RT &nbsp;(per mole)<br><br>
+        <strong>Root-mean-square speed:</strong> u<sub>rms</sub> = &radic;(3RT / M) &nbsp;where M = molar mass in <strong>kg/mol</strong><br><br>
+        <strong>Key insight:</strong> At the same temperature, all gases have the <strong>same average KE</strong>. Lighter gases move <em>faster</em> (higher u<sub>rms</sub>).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Maxwell-Boltzmann Distribution</h5>
+      <ul>
+        <li>At higher temperatures: curve broadens, peak shifts to higher speeds, peak height decreases.</li>
+        <li>At lower temperatures: curve is narrower, peak is taller, speeds are clustered more tightly.</li>
+        <li>Lighter gases at the same T: curve is broader with peak shifted right (faster speeds).</li>
+        <li>The area under the curve always equals the total number of molecules (remains constant).</li>
+      </ul>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Effusion and Graham&rsquo;s Law</h5>
+      <div class="key-concept">
+        <strong>Graham&rsquo;s Law:</strong> rate₁ / rate₂ = &radic;(M₂ / M₁)<br><br>
+        Lighter gases effuse (escape through a tiny hole) and diffuse faster.<br>
+        <strong>Example:</strong> H₂ (M = 2) effuses &radic;(32/2) = 4 times faster than O₂ (M = 32).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.6 ===== -->
+  <section class="container my-4" id="topic-3-6">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.6 &mdash; Deviation from Ideal Gas Law</h3>
+ 
+      <p>Real gases deviate from ideal behavior because molecules <em>do</em> have volume and <em>do</em> exert intermolecular forces. The <strong>van der Waals equation</strong> corrects for these two flawed assumptions of KMT:</p>
+ 
+      <div class="key-concept">
+        <strong>(P + an²/V²)(V &minus; nb) = nRT</strong><br><br>
+        &bull; <strong>a correction</strong> (added to P): Accounts for intermolecular attractions. Real molecules attract each other, reducing the force of collisions with walls. The term an²/V² corrects P upward. Larger <em>a</em> = stronger IMFs.<br>
+        &bull; <strong>b correction</strong> (subtracted from V): Accounts for the finite volume of molecules. Real molecules take up space, so the actual free volume is less than V. Larger <em>b</em> = larger molecule size.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">When Do Gases Deviate Most?</h5>
+      <ul>
+        <li><strong>High pressure:</strong> Molecules are forced close together &rarr; their volume becomes significant relative to container volume, and IMFs become stronger.</li>
+        <li><strong>Low temperature:</strong> Molecules move slowly &rarr; IMFs have more influence (particles don&rsquo;t have enough KE to overcome attractions).</li>
+        <li><strong>Large, polar molecules:</strong> Stronger IMFs and larger molecular volume &rarr; greater deviation.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Ideal behavior is most closely approached at:</strong><br>
+        &bull; <strong>Low pressure</strong> (particles far apart &rarr; volume negligible, IMFs minimal)<br>
+        &bull; <strong>High temperature</strong> (high KE overcomes IMFs)<br>
+        &bull; Small, nonpolar molecules with weak IMFs (e.g., He, H₂)
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">AP Exam Tip</h5>
+      <p>When comparing two gases at the same conditions, the gas with <strong>stronger IMFs</strong> (larger <em>a</em>) will have a <strong>lower actual pressure</strong> than predicted by the ideal gas law, because intermolecular attractions reduce the force of wall collisions.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.7 ===== -->
+  <section class="container my-4" id="topic-3-7">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.7 &mdash; Solutions and Mixtures</h3>
+ 
+      <p>A <strong>solution</strong> is a homogeneous mixture of a solute dissolved in a solvent. The dissolution process involves breaking solute-solute and solvent-solvent interactions and forming new solute-solvent interactions.</p>
+ 
+      <h5 style="color: #8b4513;">&ldquo;Like Dissolves Like&rdquo;</h5>
+      <ul>
+        <li><strong>Polar solutes</strong> dissolve in <strong>polar solvents</strong> (e.g., NaCl in water, sugar in water).</li>
+        <li><strong>Nonpolar solutes</strong> dissolve in <strong>nonpolar solvents</strong> (e.g., oil in hexane, I₂ in CCl₄).</li>
+        <li>Polar and nonpolar substances generally do NOT mix (e.g., oil and water).</li>
+      </ul>
+ 
+      <h5 class="mt-3" style="color: #8b4513;">Dissolution of Ionic Compounds</h5>
+      <p>When an ionic compound dissolves in water, the process involves:</p>
+      <ol>
+        <li><strong>Breaking the crystal lattice</strong> (requires energy = lattice energy; endothermic)</li>
+        <li><strong>Hydration of ions</strong> (releases energy = hydration energy; exothermic). Water molecules surround each ion &mdash; &delta;&minus; oxygen faces cations, &delta;+ hydrogen faces anions.</li>
+        <li>If hydration energy &ge; lattice energy, dissolution is energetically favorable.</li>
+      </ol>
+ 
+      <div class="key-concept">
+        <strong>Concentration Units:</strong><br>
+        &bull; <strong>Molarity (M)</strong> = moles of solute / liters of solution<br>
+        &bull; <strong>Molality (m)</strong> = moles of solute / kg of solvent (not on the AP exam but useful to know)<br><br>
+        <strong>Dilution formula:</strong> M₁V₁ = M₂V₂ (moles of solute before = moles after)<br><br>
+        <strong>Example:</strong> How many mL of 12.0 M HCl are needed to prepare 500 mL of 0.500 M HCl?<br>
+        (12.0)(V₁) = (0.500)(500) &rarr; V₁ = <strong>20.8 mL</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.8 ===== -->
+  <section class="container my-4" id="topic-3-8">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.8 &mdash; Representations of Solutions</h3>
+ 
+      <p>Solutions can be described at three levels of representation, and the AP exam frequently asks you to translate between them:</p>
+ 
+      <ul>
+        <li><strong>Macroscopic:</strong> What you observe in the lab &mdash; a clear, homogeneous liquid (e.g., saltwater looks like water). Cannot distinguish individual particles.</li>
+        <li><strong>Particulate:</strong> A diagram showing individual ions or molecules surrounded by solvent molecules. This is very commonly tested on the AP exam.</li>
+        <li><strong>Symbolic:</strong> Chemical equations with state symbols, e.g., NaCl(s) &rarr; Na⁺(aq) + Cl⁻(aq).</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Reading particulate diagrams on the AP exam:</strong><br>
+        &bull; <strong>Strong electrolytes</strong> (strong acids, strong bases, soluble salts) dissociate completely into ions. Show Na⁺ and Cl⁻ separately, NOT NaCl units.<br>
+        &bull; <strong>Weak electrolytes</strong> (weak acids, weak bases) partially dissociate. Show mostly intact molecules with a few ions.<br>
+        &bull; <strong>Nonelectrolytes</strong> (molecular compounds like sugar, ethanol) dissolve as intact molecules. Show individual C₁₂H₂₂O₁₁ molecules, NOT broken up into atoms or ions.<br>
+        &bull; The number of particles in the diagram should reflect the correct stoichiometric ratios (e.g., CaCl₂ produces 1 Ca²⁺ and 2 Cl⁻).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.9 ===== -->
+  <section class="container my-4" id="topic-3-9">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.9 &mdash; Separation of Solutions and Mixtures</h3>
+ 
+      <p>Mixtures can be separated using physical methods that exploit differences in the physical properties of the components. The choice of technique depends on the properties of the substances in the mixture.</p>
+ 
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Technique</th><th>Separates Based On</th><th>How It Works</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Filtration</strong></td><td>Particle size</td><td>Porous barrier traps solid particles while allowing liquid to pass through</td><td>Sand from saltwater</td></tr>
+            <tr><td><strong>Distillation</strong></td><td>Boiling point differences</td><td>Heat mixture; component with lower bp evaporates first, then condenses and is collected separately</td><td>Ethanol from water; desalination</td></tr>
+            <tr><td><strong>Chromatography</strong></td><td>Differential affinity for mobile vs. stationary phase</td><td>Components travel at different rates based on polarity/size; more attracted to stationary phase = travels slower</td><td>Separating pigments, amino acids, or drug components</td></tr>
+            <tr><td><strong>Evaporation</strong></td><td>Volatility</td><td>Heat to evaporate solvent, leaving dissolved solid behind</td><td>Recovering NaCl from saltwater</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Chromatography details for AP exam:</strong><br>
+        &bull; <strong>Stationary phase:</strong> Does not move (e.g., paper, silica gel, packed column).<br>
+        &bull; <strong>Mobile phase:</strong> Moves (e.g., solvent flowing through the stationary phase).<br>
+        &bull; <strong>R<sub>f</sub> value</strong> (retention factor) = distance traveled by substance / distance traveled by solvent front. Each substance has a characteristic R<sub>f</sub> under the same conditions.<br>
+        &bull; Components with greater affinity for the <strong>mobile phase</strong> travel farther (higher R<sub>f</sub>).<br>
+        &bull; Components with greater affinity for the <strong>stationary phase</strong> travel less (lower R<sub>f</sub>).
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.10 ===== -->
+  <section class="container my-4" id="topic-3-10">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.10 &mdash; Solubility</h3>
+ 
+      <p><strong>Solubility</strong> is the maximum amount of solute that can dissolve in a given amount of solvent at a specific temperature. It depends on the nature of the solute and solvent, temperature, and (for gases) pressure.</p>
+ 
+      <h5 style="color: #8b4513;">Temperature Effects on Solubility</h5>
+      <ul>
+        <li><strong>Most solid solutes:</strong> Solubility <em>increases</em> with temperature (dissolving is usually endothermic &mdash; adding heat shifts equilibrium toward dissolved state by Le Chatelier&rsquo;s principle).</li>
+        <li><strong>Some solids (exceptions):</strong> Li₂SO₄ and Ce₂(SO₄)₃ decrease in solubility with temperature.</li>
+        <li><strong>Gases:</strong> Solubility <em>decreases</em> with temperature (dissolving gas is exothermic; higher T drives gas out of solution). This is why warm soda goes flat faster.</li>
+      </ul>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Pressure Effects on Solubility (Henry&rsquo;s Law)</h5>
+      <div class="key-concept">
+        <strong>Henry&rsquo;s Law:</strong> C = k<sub>H</sub> &times; P<sub>gas</sub><br><br>
+        The solubility of a gas is directly proportional to the partial pressure of the gas above the solution. Higher pressure &rarr; more gas dissolves.<br>
+        <em>This applies only to gases, not solids or liquids.</em><br><br>
+        <strong>Example:</strong> Carbonated drinks are bottled under high CO₂ pressure. When opened, pressure drops, CO₂ solubility decreases, and bubbles form.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Types of Solutions by Saturation</h5>
+      <ul>
+        <li><strong>Unsaturated:</strong> Contains less solute than the maximum; more can dissolve.</li>
+        <li><strong>Saturated:</strong> Contains the maximum amount of solute at that temperature. A dynamic equilibrium exists between dissolving and crystallization.</li>
+        <li><strong>Supersaturated:</strong> Contains MORE solute than should dissolve at that temperature. Unstable &mdash; crystallization can be triggered by adding a seed crystal or scratching the container.</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.11 ===== -->
+  <section class="container my-4" id="topic-3-11">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.11 &mdash; Spectroscopy and the Electromagnetic Spectrum</h3>
+ 
+      <p>Electromagnetic radiation interacts with matter in ways that depend on the energy (frequency) of the radiation. Different regions of the EM spectrum provide different types of information about molecular structure.</p>
+ 
+      <div class="key-concept">
+        <strong>Key equations:</strong><br>
+        &bull; E = h&nu; &nbsp;(energy of a photon; h = 6.626 &times; 10⁻³⁴ J&middot;s, &nu; = frequency in Hz)<br>
+        &bull; c = &lambda;&nu; &nbsp;(c = 3.00 &times; 10⁸ m/s, &lambda; = wavelength, &nu; = frequency)<br>
+        &bull; E = hc / &lambda; &nbsp;(combining both)<br><br>
+        Higher frequency (&nu;) = shorter wavelength (&lambda;) = higher energy
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Types of Spectroscopy on the AP Exam</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table">
+          <thead>
+            <tr><th>Type</th><th>EM Region</th><th>What It Probes</th><th>AP Relevance</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>UV-Vis</strong></td><td>Ultraviolet &amp; visible</td><td>Electronic transitions (electrons jumping between energy levels)</td><td>Beer-Lambert Law, colored solutions</td></tr>
+            <tr><td><strong>IR</strong></td><td>Infrared</td><td>Molecular vibrations (bond stretching and bending)</td><td>Identifying functional groups (O&mdash;H, C=O, N&mdash;H peaks)</td></tr>
+            <tr><td><strong>Microwave</strong></td><td>Microwave</td><td>Molecular rotations</td><td>Less commonly tested</td></tr>
+          </tbody>
+        </table>
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Why substances appear colored:</strong><br>
+        A substance absorbs certain wavelengths of visible light. The color you see is the <strong>complementary color</strong> of the absorbed light. For example, a solution that absorbs red light appears <strong>green</strong>.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.12 ===== -->
+  <section class="container my-4" id="topic-3-12">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.12 &mdash; Photoelectric Effect</h3>
+ 
+      <p>The <strong>photoelectric effect</strong> occurs when light shining on a metal surface ejects electrons. It provided key evidence for the particle nature of light (photons) and was explained by Einstein.</p>
+ 
+      <div class="key-concept">
+        <strong>Key equation:</strong> KE<sub>electron</sub> = h&nu; &minus; &Phi;<br><br>
+        &bull; h&nu; = energy of the incoming photon<br>
+        &bull; &Phi; (work function) = minimum energy needed to eject an electron from the metal surface<br>
+        &bull; KE<sub>electron</sub> = kinetic energy of the ejected electron<br><br>
+        <strong>Threshold frequency (&nu;₀):</strong> The minimum frequency of light needed to eject an electron. At &nu;₀, KE = 0, so &Phi; = h&nu;₀.
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Key Observations</h5>
+      <ul>
+        <li>Below the threshold frequency, <strong>no electrons are ejected</strong> regardless of light intensity (brightness). This contradicts the wave model of light.</li>
+        <li>Above the threshold frequency, <strong>increasing intensity</strong> ejects <em>more</em> electrons (more photons hit the surface) but does NOT increase their KE.</li>
+        <li><strong>Increasing frequency</strong> (above threshold) increases the KE of ejected electrons.</li>
+        <li>Electrons are ejected <strong>instantly</strong> when light of sufficient frequency hits the surface &mdash; no time delay.</li>
+      </ul>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> A metal has a work function of 4.50 &times; 10⁻¹⁹ J. Light with &nu; = 1.00 &times; 10¹⁵ Hz strikes the surface. What is the KE of the ejected electrons?<br>
+        E<sub>photon</sub> = h&nu; = (6.626 &times; 10⁻³⁴)(1.00 &times; 10¹⁵) = 6.626 &times; 10⁻¹⁹ J<br>
+        KE = 6.626 &times; 10⁻¹⁹ &minus; 4.50 &times; 10⁻¹⁹ = <strong>2.13 &times; 10⁻¹⁹ J</strong>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TOPIC 3.13 ===== -->
+  <section class="container my-4" id="topic-3-13">
+    <div class="topic-card">
+      <h3 class="topic-heading">3.13 &mdash; Beer-Lambert Law</h3>
+ 
+      <p>The <strong>Beer-Lambert Law</strong> (also called Beer&rsquo;s Law) relates the absorbance of light by a solution to the concentration of the absorbing species. It is the basis for using spectrophotometry to determine unknown concentrations.</p>
+ 
+      <div class="key-concept">
+        <strong>A = &epsilon;bc</strong><br><br>
+        &bull; <strong>A</strong> = absorbance (unitless, measured by a spectrophotometer)<br>
+        &bull; <strong>&epsilon;</strong> = molar absorptivity (L/(mol&middot;cm)) &mdash; a constant specific to the substance and wavelength<br>
+        &bull; <strong>b</strong> = path length (cm) &mdash; the distance light travels through the solution (usually 1 cm in standard cuvettes)<br>
+        &bull; <strong>c</strong> = molar concentration (mol/L)<br><br>
+        Key point: Absorbance is <strong>directly proportional</strong> to concentration (at a given wavelength with constant &epsilon; and b).
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Calibration Curves</h5>
+      <p>A <strong>calibration curve</strong> (standard curve) is a graph of absorbance vs. concentration using solutions of <em>known</em> concentrations (standards). The resulting line should be linear (following Beer&rsquo;s Law). You can then use this line to determine the concentration of an <em>unknown</em> solution by measuring its absorbance and finding the corresponding concentration.</p>
+ 
+      <div class="key-concept">
+        <strong>How to use a calibration curve:</strong><br>
+        1. Prepare several standard solutions of known concentration.<br>
+        2. Measure the absorbance of each at the same wavelength (usually &lambda;<sub>max</sub>, the wavelength of maximum absorbance).<br>
+        3. Plot A vs. c &mdash; should be linear through the origin.<br>
+        4. Measure absorbance of unknown solution.<br>
+        5. Use the line (or equation y = mx) to find the unknown concentration.
+      </div>
+ 
+      <div class="key-concept">
+        <strong>Example:</strong> A calibration curve gives A = 125c (where c is in mol/L). An unknown solution has A = 0.500. What is its concentration?<br>
+        c = A / 125 = 0.500 / 125 = <strong>0.00400 mol/L = 4.00 &times; 10⁻³ M</strong>
+      </div>
+ 
+      <h5 class="mt-4" style="color: #8b4513;">Absorbance vs. Transmittance</h5>
+      <p>Transmittance (T) is the fraction of light that passes through the solution. A = &minus;log(T). Higher concentration &rarr; higher absorbance &rarr; lower transmittance (more light absorbed). On the AP exam, you primarily work with absorbance.</p>
+    </div>
+  </section>
+ 
+  <!-- ===== PRACTICE MCQs ===== -->
+  <section class="container my-5" id="practice-mcqs">
+    <h2 class="text-center section-heading">📝 Practice Multiple-Choice Questions</h2>
+    <p class="text-center mb-4">Test your knowledge of Unit 3. Click <strong>&ldquo;Show Answer&rdquo;</strong> to reveal the correct choice and explanation.</p>
+ 
+    <!-- Q1 -->
+    <div class="mcq-card">
+      <p class="question">1. Which intermolecular force is primarily responsible for the high boiling point of water compared to H₂S?</p>
+      <ul class="options">
+        <li>(A) London dispersion forces</li>
+        <li>(B) Dipole-dipole interactions</li>
+        <li>(C) Hydrogen bonding</li>
+        <li>(D) Ion-dipole forces</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Water (H₂O) can form <strong>hydrogen bonds</strong> because H is bonded to the highly electronegative O atom. H₂S cannot form H-bonds (S is not electronegative enough). Despite being lighter than H₂S, water has a much higher boiling point (100&deg;C vs. &minus;60&deg;C) due to hydrogen bonding.
+      </div>
+    </div>
+ 
+    <!-- Q2 -->
+    <div class="mcq-card">
+      <p class="question">2. Which type of solid would you expect to have the highest melting point?</p>
+      <ul class="options">
+        <li>(A) Molecular solid (ice)</li>
+        <li>(B) Ionic solid (NaCl)</li>
+        <li>(C) Covalent network solid (diamond)</li>
+        <li>(D) Metallic solid (sodium)</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        <strong>Diamond</strong> is a covalent network solid where every carbon is bonded to four others by strong covalent bonds throughout the entire structure. Breaking these requires enormous energy. Diamond&rsquo;s mp is ~3550&deg;C, far higher than NaCl (801&deg;C), Na (98&deg;C), or ice (0&deg;C).
+      </div>
+    </div>
+ 
+    <!-- Q3 -->
+    <div class="mcq-card">
+      <p class="question">3. On a heating curve, what happens to the temperature during a phase change?</p>
+      <ul class="options">
+        <li>(A) Temperature increases rapidly</li>
+        <li>(B) Temperature decreases</li>
+        <li>(C) Temperature remains constant</li>
+        <li>(D) Temperature oscillates</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        During a phase change, temperature <strong>remains constant</strong> even though heat is being added. All the energy goes toward overcoming intermolecular forces (breaking IMFs), not increasing kinetic energy. This is why heating curves have flat plateaus at the melting and boiling points.
+      </div>
+    </div>
+ 
+    <!-- Q4 -->
+    <div class="mcq-card">
+      <p class="question">4. A mixture of gases contains 2.0 mol N₂ and 3.0 mol O₂ at a total pressure of 5.0 atm. What is the partial pressure of O₂?</p>
+      <ul class="options">
+        <li>(A) 1.0 atm</li>
+        <li>(B) 2.0 atm</li>
+        <li>(C) 3.0 atm</li>
+        <li>(D) 5.0 atm</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Mole fraction of O₂ = 3.0 / (2.0 + 3.0) = 0.60. Partial pressure = 0.60 &times; 5.0 = <strong>3.0 atm</strong>.
+      </div>
+    </div>
+ 
+    <!-- Q5 -->
+    <div class="mcq-card">
+      <p class="question">5. At the same temperature, which gas has the highest root-mean-square speed?</p>
+      <ul class="options">
+        <li>(A) O₂ (M = 32)</li>
+        <li>(B) N₂ (M = 28)</li>
+        <li>(C) He (M = 4)</li>
+        <li>(D) CO₂ (M = 44)</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        u<sub>rms</sub> = &radic;(3RT/M). At the same T, lighter gases move faster. <strong>Helium</strong> (M = 4 g/mol) is the lightest, so it has the highest u<sub>rms</sub>.
+      </div>
+    </div>
+ 
+    <!-- Q6 -->
+    <div class="mcq-card">
+      <p class="question">6. Under which conditions does a real gas behave MOST like an ideal gas?</p>
+      <ul class="options">
+        <li>(A) High pressure and high temperature</li>
+        <li>(B) High pressure and low temperature</li>
+        <li>(C) Low pressure and low temperature</li>
+        <li>(D) Low pressure and high temperature</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (D)</strong><br>
+        At <strong>low pressure</strong>, molecules are far apart (volume is negligible, IMFs are minimal). At <strong>high temperature</strong>, molecules have high KE that overcomes any IMF attractions. These are the conditions closest to ideal behavior.
+      </div>
+    </div>
+ 
+    <!-- Q7 -->
+    <div class="mcq-card">
+      <p class="question">7. When NaCl dissolves in water, which interaction is primarily responsible for stabilizing the ions in solution?</p>
+      <ul class="options">
+        <li>(A) London dispersion forces</li>
+        <li>(B) Hydrogen bonding</li>
+        <li>(C) Ion-dipole interactions</li>
+        <li>(D) Covalent bonding</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        When ionic compounds dissolve, <strong>ion-dipole interactions</strong> form between the ions (full charges) and the polar water molecules (partial charges). The &delta;&minus; oxygen of water faces Na⁺; the &delta;+ hydrogen faces Cl⁻. This hydration energy helps overcome the lattice energy.
+      </div>
+    </div>
+ 
+    <!-- Q8 -->
+    <div class="mcq-card">
+      <p class="question">8. The solubility of CO₂ gas in water decreases when the temperature is increased. Which of the following best explains this?</p>
+      <ul class="options">
+        <li>(A) CO₂ decomposes at high temperatures</li>
+        <li>(B) Dissolving CO₂ is exothermic, so increasing T shifts equilibrium toward less dissolved gas</li>
+        <li>(C) Water molecules move too fast to interact with CO₂</li>
+        <li>(D) The polarity of water decreases at higher temperatures</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        Dissolving a gas in a liquid is generally <strong>exothermic</strong>. By Le Chatelier&rsquo;s principle, increasing temperature shifts the equilibrium toward the endothermic direction (gas coming OUT of solution), decreasing solubility.
+      </div>
+    </div>
+ 
+    <!-- Q9 -->
+    <div class="mcq-card">
+      <p class="question">9. Light with a frequency below the threshold frequency strikes a metal surface. What happens?</p>
+      <ul class="options">
+        <li>(A) Electrons are ejected with low kinetic energy</li>
+        <li>(B) Electrons are ejected but only after a delay</li>
+        <li>(C) No electrons are ejected regardless of light intensity</li>
+        <li>(D) More electrons are ejected if intensity is increased</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (C)</strong><br>
+        Below the threshold frequency, individual photons do not carry enough energy to overcome the work function (&Phi;). <strong>No electrons are ejected</strong>, regardless of how bright (intense) the light is. This is because energy comes in discrete packets (photons), and each photon must individually have enough energy.
+      </div>
+    </div>
+ 
+    <!-- Q10 -->
+    <div class="mcq-card">
+      <p class="question">10. A solution of known concentration has an absorbance of 0.800 at a path length of 1.00 cm and a molar absorptivity of 200 L/(mol&middot;cm). What is the concentration?</p>
+      <ul class="options">
+        <li>(A) 4.00 &times; 10⁻⁴ M</li>
+        <li>(B) 4.00 &times; 10⁻³ M</li>
+        <li>(C) 2.50 &times; 10⁻³ M</li>
+        <li>(D) 1.60 &times; 10² M</li>
+      </ul>
+      <button class="answer-btn" onclick="this.nextElementSibling.style.display='block'">Show Answer</button>
+      <div class="answer-reveal">
+        <strong>Answer: (B)</strong><br>
+        A = &epsilon;bc &rarr; c = A / (&epsilon;b) = 0.800 / (200 &times; 1.00) = <strong>4.00 &times; 10⁻³ M</strong>.
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Study Tip -->
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title">💡 Study Tip for Unit 3</h5>
+        <p class="card-text">Unit 3 is the <strong>largest unit on the AP exam</strong> (18&ndash;22%). Master identifying IMFs from molecular structure &mdash; this skill appears on virtually every AP Chemistry exam. Know the ideal gas law cold and practice Dalton&rsquo;s Law problems. Understand heating curves inside and out (why plateaus are flat, how to calculate energy for each segment). For spectroscopy, focus on Beer&rsquo;s Law and calibration curves &mdash; they are high-yield FRQ topics. Always connect molecular-level explanations (IMFs, KMT) to macroscopic observations (boiling points, pressure, solubility).</p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-chemistry" class="btn btn-outline-primary" target="_blank">Visit AP Central</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mission</h5>
+          <p>Making AP Chemistry accessible and engaging for every student.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Other Stuff</h5>
+          <ul class="list-unstyled">
+            <li><a href="study-tips.html" style="color: #fff; text-decoration: none;">Study Tips &amp; Tricks</a></li>
+            <li><a href="fun-facts.html" style="color: #fff; text-decoration: none;">Chemistry Fun Facts</a></li>
+            <li><a href="exam-prep.html" style="color: #fff; text-decoration: none;">Exam Prep Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: #fff;">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
