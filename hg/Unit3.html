@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP Human Geography Unit 3 — Cultural Patterns and Processes. Comprehensive notes on culture, cultural landscapes, cultural patterns, diffusion, language, religion, globalization, popular culture, folk culture, cultural identity, MCQs, FRQs, vocab, and key takeaways." />
+  <title>Unit 3: Cultural Patterns and Processes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4faf8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f5f5b;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #5c6bc0;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #5c6bc0;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      color: #2f7f78;
+      margin-top: 1.5rem;
+    }
+
+    h4 {
+      color: #1f5f5b;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f5f5b;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    .overview-box {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border-left: 6px solid #5c6bc0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .weighting-badge {
+      display: inline-block;
+      background: #1f5f5b;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #5c6bc0;
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8ffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f5f5b;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #5c6bc0;
+    }
+
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f5f5b;
+      margin-right: 0.5rem;
+    }
+
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .region-culture    { border-color: #1f5f5b; background: #e8f8f6; }
+    .region-landscape  { border-color: #5c6bc0; background: #eef0ff; }
+    .region-patterns   { border-color: #2f7f78; background: #edfdfb; }
+    .region-diffusion  { border-color: #6a994e; background: #f0faeb; }
+    .region-history    { border-color: #7e57c2; background: #f5efff; }
+    .region-language   { border-color: #d99228; background: #fff7e8; }
+    .region-religion   { border-color: #0f766e; background: #ecfeff; }
+
+    .region-card h3 {
+      margin-top: 0;
+    }
+
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f5f5b;
+      background: #e8f8f6;
+      font-weight: 600;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .vocab-item {
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+
+    .vocab-term {
+      font-weight: 700;
+      color: #1f5f5b;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+
+    .compare-table th, .compare-table td {
+      border: 1px solid #b9d8d4;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .compare-table thead {
+      background: linear-gradient(to right, #1f5f5b, #5c6bc0);
+      color: white;
+    }
+
+    .compare-table tbody tr:nth-child(even) {
+      background: #f8ffff;
+    }
+
+    .quiz-container {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #1f5f5b;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-container h2 {
+      margin-top: 0;
+      border: none;
+      color: #1f5f5b;
+    }
+
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f5f5b;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+
+    .quiz-option:hover {
+      background-color: #e8f8f6;
+    }
+
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f5f5b;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .explanation.show {
+      display: block;
+    }
+
+    .saq-box {
+      background: #fff;
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+
+    .saq-box h3 {
+      margin-top: 0;
+    }
+
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8ffff;
+      border: 1px dashed #1f5f5b;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f5f5b;
+    }
+
+    .key-takeaways {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP Human Geography</a>
+
+    <h1>Unit 3: Cultural Patterns and Processes</h1>
+    <p class="subtitle">Culture, Language, Religion, Diffusion, and Cultural Landscapes &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–17%</span></p>
+
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🗣️ Unit Overview</h3>
+      <p>
+        AP Human Geography Unit 3 focuses on how culture shapes the world and how cultural traits spread across space.
+        Culture includes language, religion, food, clothing, music, architecture, customs, values, and everyday ways of life.
+      </p>
+      <p>
+        This unit is important because culture affects identity, landscapes, politics, migration, conflict, globalization,
+        and how people connect to places. You will study folk culture, popular culture, cultural landscapes, language families,
+        religions, diffusion, assimilation, acculturation, syncretism, and multiculturalism.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How do cultural practices, languages, religions, and identities spread and shape places over time?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cultural_diversity.jpg" alt="Cultural diversity" class="unit-image">
+      <div class="image-caption">Cultural diversity — connects to identity, customs, language, religion, and cultural patterns.</div>
+    </div>
+
+    <h2>🗓️ Unit 3 Concept Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">Ancient Era:</span> Early cultures developed around river valleys, trade routes, religions, languages, and settlement patterns.</div>
+      <div class="timeline-event"><span class="timeline-date">Classical Era:</span> Major religions, empires, and trade networks spread cultural practices across large regions.</div>
+      <div class="timeline-event"><span class="timeline-date">600–1450:</span> Trade routes such as the Silk Roads and Indian Ocean networks spread languages, religions, goods, and ideas.</div>
+      <div class="timeline-event"><span class="timeline-date">1450–1750:</span> European colonialism spread languages, Christianity, architecture, and new cultural systems across the Americas, Africa, and Asia.</div>
+      <div class="timeline-event"><span class="timeline-date">1800s:</span> Industrialization and migration increased cultural mixing in cities and colonial regions.</div>
+      <div class="timeline-event"><span class="timeline-date">1900s:</span> Radio, television, film, and mass media spread popular culture more quickly.</div>
+      <div class="timeline-event"><span class="timeline-date">Late 1900s:</span> Globalization, tourism, migration, and multinational corporations increased cultural diffusion.</div>
+      <div class="timeline-event"><span class="timeline-date">Today:</span> Social media, streaming platforms, migration, and global business spread culture almost instantly across the world.</div>
+    </div>
+
+    <h2>Topic 3.1 — Introduction to Culture</h2>
+    <div class="region-card region-culture">
+      <h3>🌍 What Is Culture?</h3>
+      <p>
+        Culture is the shared way of life of a group of people. It includes both visible traits, like clothing and architecture,
+        and less visible traits, like beliefs, values, language, traditions, and social rules.
+      </p>
+
+      <h4>Main Parts of Culture</h4>
+      <ul>
+        <li><strong>Cultural traits:</strong> Individual parts of culture, such as food, clothing, music, language, or holidays.</li>
+        <li><strong>Cultural complex:</strong> A group of related cultural traits, such as baseball including uniforms, rules, stadiums, fans, and traditions.</li>
+        <li><strong>Cultural hearth:</strong> A place where a cultural trait or culture begins and spreads from.</li>
+        <li><strong>Customs:</strong> Common practices followed by a group.</li>
+        <li><strong>Taboos:</strong> Behaviors strongly forbidden by a culture.</li>
+      </ul>
+
+      <h4>Folk Culture vs. Popular Culture</h4>
+      <ul>
+        <li><strong>Folk culture:</strong> Traditional practices of small, usually rural groups. It spreads slowly and is often tied to local environment.</li>
+        <li><strong>Popular culture:</strong> Widespread culture found across large societies. It spreads quickly through media, technology, and globalization.</li>
+        <li><strong>Example of folk culture:</strong> Traditional clothing, local music, handmade crafts, or regional food customs.</li>
+        <li><strong>Example of popular culture:</strong> Fast food chains, global music trends, sports brands, movies, and social media trends.</li>
+      </ul>
+
+      <h4>Why Culture Matters in Geography</h4>
+      <p>
+        Culture changes landscapes and creates regional differences. For example, religion can shape sacred sites,
+        language can shape place names, and food customs can shape agriculture and trade.
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Traditional_clothing_of_the_world.jpg" alt="Traditional clothing from around the world" class="unit-image">
+      <div class="image-caption">Traditional clothing — connects to folk culture, identity, and regional cultural traits.</div>
+    </div>
+
+    <h2>Topic 3.2 — Cultural Landscapes</h2>
+    <div class="region-card region-landscape">
+      <h3>🏘️ Culture Written on the Land</h3>
+      <p>
+        A cultural landscape is the visible human imprint on the physical environment. Buildings, roads, farms,
+        religious structures, signs, monuments, neighborhoods, and land-use patterns can all show culture.
+      </p>
+
+      <h4>Examples of Cultural Landscapes</h4>
+      <ul>
+        <li><strong>Religious landscapes:</strong> Churches, mosques, temples, cemeteries, shrines, and sacred spaces.</li>
+        <li><strong>Linguistic landscapes:</strong> Street signs, business names, advertisements, and place names in different languages.</li>
+        <li><strong>Agricultural landscapes:</strong> Terraced farms, rice paddies, vineyards, barns, irrigation systems, and crop patterns.</li>
+        <li><strong>Urban landscapes:</strong> Architecture, neighborhoods, public spaces, transportation systems, and ethnic enclaves.</li>
+        <li><strong>Commercial landscapes:</strong> Shopping centers, fast food restaurants, hotels, billboards, and corporate chains.</li>
+      </ul>
+
+      <h4>Sequent Occupance</h4>
+      <p>
+        Sequent occupance is the idea that different groups leave layers of cultural evidence on the landscape over time.
+        A city may show Indigenous place names, colonial buildings, immigrant neighborhoods, modern skyscrapers, and global brands all in one place.
+      </p>
+
+      <h4>Why Cultural Landscapes Matter</h4>
+      <ul>
+        <li>They show who lived in a place and how they used it.</li>
+        <li>They reveal power, identity, religion, language, wealth, and inequality.</li>
+        <li>They can preserve culture, but they can also show cultural change or conflict.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Hagia_Sophia_Mars_2013.jpg" alt="Hagia Sophia" class="unit-image">
+      <div class="image-caption">Hagia Sophia — a cultural landscape showing religious, political, and historical layers over time.</div>
+    </div>
+
+    <h2>Topic 3.3 — Cultural Patterns</h2>
+    <div class="region-card region-patterns">
+      <h3>📍 Where Culture Appears</h3>
+      <p>
+        Cultural patterns are the way cultural traits are arranged across space. Geographers look for where cultures are clustered,
+        where boundaries exist, and how cultural traits connect to physical and human geography.
+      </p>
+
+      <h4>How Cultural Patterns Form</h4>
+      <ul>
+        <li><strong>Environment:</strong> Climate, landforms, and resources influence food, clothing, housing, and agriculture.</li>
+        <li><strong>History:</strong> Migration, conquest, trade, and colonization shape culture.</li>
+        <li><strong>Religion:</strong> Religious beliefs can shape diet, architecture, holidays, and sacred spaces.</li>
+        <li><strong>Language:</strong> Language creates cultural regions and influences identity.</li>
+        <li><strong>Economics:</strong> Wealth, technology, and globalization spread popular culture.</li>
+      </ul>
+
+      <h4>Identity and Culture</h4>
+      <ul>
+        <li><strong>Ethnicity:</strong> Shared cultural heritage, such as language, ancestry, religion, or traditions.</li>
+        <li><strong>Nationality:</strong> Legal identity connected to a state or country.</li>
+        <li><strong>Gender roles:</strong> Social expectations tied to gender that vary across cultures.</li>
+        <li><strong>Ethnocentrism:</strong> Judging another culture by the standards of one’s own culture.</li>
+        <li><strong>Cultural relativism:</strong> Understanding a culture on its own terms instead of judging it as inferior.</li>
+      </ul>
+
+      <h4>AP Exam Tip</h4>
+      <p>
+        If a question asks about cultural patterns, do not just define the term. Describe where the pattern appears,
+        why it appears there, and how it affects people or landscapes.
+      </p>
+    </div>
+
+    <h2>Topic 3.4 — Types of Diffusion</h2>
+    <div class="region-card region-diffusion">
+      <h3>🌊 How Culture Spreads</h3>
+      <p>
+        Diffusion is the spread of people, ideas, technology, diseases, religions, languages, or cultural practices from one place to another.
+        AP Human Geography questions often ask you to identify the type of diffusion shown in a situation.
+      </p>
+
+      <h4>Relocation Diffusion</h4>
+      <ul>
+        <li>Culture spreads because people physically move.</li>
+        <li>Example: Migrants bring their language, religion, food, or holidays to a new country.</li>
+        <li>This is very common with migration, religion, and language.</li>
+      </ul>
+
+      <h4>Expansion Diffusion</h4>
+      <ul>
+        <li>Culture spreads outward from a hearth while staying strong in the original place.</li>
+        <li>Expansion diffusion has three main types: contagious, hierarchical, and stimulus diffusion.</li>
+      </ul>
+
+      <h4>Contagious Diffusion</h4>
+      <ul>
+        <li>Spreads rapidly from person to person, like a wave.</li>
+        <li>Example: Viral social media trends, slang, memes, or diseases.</li>
+      </ul>
+
+      <h4>Hierarchical Diffusion</h4>
+      <ul>
+        <li>Spreads from important people or major places to smaller places.</li>
+        <li>Example: Fashion trends spreading from global cities like Paris, New York, or Tokyo to smaller cities.</li>
+      </ul>
+
+      <h4>Stimulus Diffusion</h4>
+      <ul>
+        <li>The main idea spreads, but people change it to fit local culture.</li>
+        <li>Example: A global fast food company changing menu items to match local tastes.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/McDonald%27s_Golden_Arches.svg" alt="McDonald's Golden Arches" class="unit-image">
+      <div class="image-caption">Global fast food logo — connects to popular culture, hierarchical diffusion, globalization, and stimulus diffusion.</div>
+    </div>
+
+    <h2>Topic 3.5 — Historical Causes of Diffusion</h2>
+    <div class="region-card region-history">
+      <h3>⛵ Trade, Migration, Conquest, and Colonialism</h3>
+      <p>
+        Cultural diffusion has happened throughout history. Before the internet and modern transportation, culture still spread through trade,
+        migration, conquest, religious missions, empires, and colonialism.
+      </p>
+
+      <h4>Historical Forces That Spread Culture</h4>
+      <ul>
+        <li><strong>Trade routes:</strong> The Silk Roads, Indian Ocean trade, and trans-Saharan routes spread goods, languages, religions, and ideas.</li>
+        <li><strong>Migration:</strong> Moving people brought languages, foodways, religions, and customs into new regions.</li>
+        <li><strong>Conquest:</strong> Empires spread languages, laws, religions, architecture, and political systems.</li>
+        <li><strong>Colonialism:</strong> European powers spread Christianity, European languages, plantation systems, and new borders.</li>
+        <li><strong>Missionaries:</strong> Religious workers spread faiths, schools, writing systems, and cultural values.</li>
+      </ul>
+
+      <h4>Colonialism and Culture</h4>
+      <p>
+        Colonialism had major cultural effects. In many places, European languages became official languages.
+        Christianity spread widely. Colonial borders sometimes divided ethnic groups or forced different groups into one state.
+        These cultural effects still matter today.
+      </p>
+    </div>
+
+    <h2>Topic 3.6 — Contemporary Causes of Diffusion</h2>
+    <div class="region-card region-diffusion">
+      <h3>📱 Globalization and Modern Media</h3>
+      <p>
+        Today, culture spreads faster than ever because of transportation, the internet, social media, streaming platforms,
+        tourism, migration, multinational corporations, and global trade.
+      </p>
+
+      <h4>Modern Forces That Spread Culture</h4>
+      <ul>
+        <li><strong>Social media:</strong> Trends, music, fashion, slang, and political ideas spread quickly across borders.</li>
+        <li><strong>Television and film:</strong> Movies, shows, and celebrities spread popular culture globally.</li>
+        <li><strong>Tourism:</strong> Tourists bring cultural expectations and influence local economies and landscapes.</li>
+        <li><strong>Migration:</strong> Migrants carry language, religion, food, and traditions into new places.</li>
+        <li><strong>Multinational corporations:</strong> Global brands spread products, logos, advertisements, and lifestyles.</li>
+      </ul>
+
+      <h4>Cultural Convergence and Divergence</h4>
+      <ul>
+        <li><strong>Cultural convergence:</strong> Cultures become more similar because of globalization.</li>
+        <li><strong>Cultural divergence:</strong> Cultures become more different or protect themselves from outside influence.</li>
+        <li><strong>Example of convergence:</strong> People around the world wearing similar brands or using the same apps.</li>
+        <li><strong>Example of divergence:</strong> A group preserves a local language or tradition to resist cultural change.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 3.7 — Diffusion of Religion and Language</h2>
+    <div class="region-card region-language">
+      <h3>🗣️ Language Patterns</h3>
+      <p>
+        Language is one of the strongest markers of culture. It shapes identity, communication, education, politics,
+        and place names. Languages spread through migration, conquest, colonization, trade, and globalization.
+      </p>
+
+      <h4>Language Concepts</h4>
+      <ul>
+        <li><strong>Language family:</strong> A group of languages with a shared ancient origin.</li>
+        <li><strong>Indo-European language family:</strong> A major language family that includes English, Spanish, French, Hindi, Russian, and many others.</li>
+        <li><strong>Dialect:</strong> A regional version of a language with differences in pronunciation, vocabulary, or grammar.</li>
+        <li><strong>Lingua franca:</strong> A common language used by people who speak different native languages.</li>
+        <li><strong>Pidgin language:</strong> A simplified language that develops for communication between groups.</li>
+        <li><strong>Creole language:</strong> A stable language formed from mixing languages, often in colonial or trade settings.</li>
+        <li><strong>Toponym:</strong> A place name that can reveal culture, history, language, or power.</li>
+      </ul>
+
+      <h4>Language and Power</h4>
+      <p>
+        Language can create unity, but it can also create conflict. Governments may promote one official language to unify a country,
+        while minority groups may fight to preserve their languages as part of their identity.
+      </p>
+    </div>
+
+    <div class="region-card region-religion">
+      <h3>🕌 Religion Patterns</h3>
+      <p>
+        Religion shapes culture, identity, architecture, holidays, food rules, clothing, sacred spaces, migration, conflict, and political boundaries.
+        Different religions spread in different ways.
+      </p>
+
+      <h4>Universalizing Religions</h4>
+      <ul>
+        <li>Universalizing religions actively seek converts and are not limited to one ethnic group.</li>
+        <li><strong>Christianity:</strong> Spread through missionaries, migration, colonialism, and relocation diffusion.</li>
+        <li><strong>Islam:</strong> Spread through trade, conquest, missionaries, migration, and cultural contact.</li>
+        <li><strong>Buddhism:</strong> Spread from South Asia into East and Southeast Asia through missionaries, trade, and cultural contact.</li>
+      </ul>
+
+      <h4>Ethnic Religions</h4>
+      <ul>
+        <li>Ethnic religions are closely tied to one cultural group or place.</li>
+        <li><strong>Hinduism:</strong> Strongly concentrated in India and Nepal.</li>
+        <li><strong>Judaism:</strong> Closely tied to Jewish ethnic identity and history, though Jewish communities exist worldwide.</li>
+        <li><strong>Shinto:</strong> Strongly associated with Japanese culture and identity.</li>
+      </ul>
+
+      <h4>Sacred Spaces</h4>
+      <ul>
+        <li><strong>Sacred site:</strong> A place considered holy or spiritually important.</li>
+        <li><strong>Pilgrimage:</strong> Travel to a sacred place for religious reasons.</li>
+        <li><strong>Religious architecture:</strong> Churches, mosques, temples, synagogues, shrines, and stupas shape cultural landscapes.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Religion_distribution.png" alt="World religion distribution map" class="unit-image">
+      <div class="image-caption">World religion distribution — connects to universalizing religions, ethnic religions, diffusion, and cultural regions.</div>
+    </div>
+
+    <h2>Topic 3.8 — Effects of Diffusion</h2>
+    <div class="region-card region-religion">
+      <h3>🌐 What Happens When Cultures Mix?</h3>
+      <p>
+        Cultural diffusion can create new cultural forms, but it can also create tension. When cultures interact,
+        people may adopt, blend, resist, or transform cultural traits.
+      </p>
+
+      <h4>Important Effects</h4>
+      <ul>
+        <li><strong>Acculturation:</strong> One group adopts some traits of another culture while still keeping parts of its original culture.</li>
+        <li><strong>Assimilation:</strong> One group loses much of its original culture and becomes more like the dominant culture.</li>
+        <li><strong>Syncretism:</strong> Different cultural or religious traditions blend into a new form.</li>
+        <li><strong>Multiculturalism:</strong> Multiple cultures exist in the same society and are recognized or valued.</li>
+        <li><strong>Globalization:</strong> Increasing connections among places through trade, media, migration, and technology.</li>
+      </ul>
+
+      <h4>Positive Effects of Diffusion</h4>
+      <ul>
+        <li>New foods, music, languages, religions, and ideas spread.</li>
+        <li>People can learn from other cultures and form new cultural combinations.</li>
+        <li>Economic opportunities can grow through tourism, trade, and global markets.</li>
+      </ul>
+
+      <h4>Negative Effects of Diffusion</h4>
+      <ul>
+        <li>Local cultures may weaken because of global popular culture.</li>
+        <li>Indigenous languages and traditions may decline.</li>
+        <li>Cultural conflict can occur when groups feel threatened or excluded.</li>
+        <li>Commodification can turn cultural traditions into products for tourists or profit.</li>
+      </ul>
+    </div>
+
+    <h2>Topic Comparison Table</h2>
+    <p>Use this table to quickly compare major Unit 3 concepts.</p>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Meaning</th>
+            <th>Example</th>
+            <th>AP Exam Tip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Folk Culture</td>
+            <td>Traditional culture of small, local groups</td>
+            <td>Regional food, handmade clothing, local music</td>
+            <td>Usually spreads slowly and stays tied to place</td>
+          </tr>
+          <tr>
+            <td>Popular Culture</td>
+            <td>Widespread culture spread by media and globalization</td>
+            <td>Fast food, social media trends, global sports brands</td>
+            <td>Usually spreads quickly across large areas</td>
+          </tr>
+          <tr>
+            <td>Relocation Diffusion</td>
+            <td>Culture spreads when people move</td>
+            <td>Migrants bring their religion to a new country</td>
+            <td>Look for movement of people</td>
+          </tr>
+          <tr>
+            <td>Contagious Diffusion</td>
+            <td>Rapid person-to-person spread</td>
+            <td>A viral meme or slang term</td>
+            <td>Spreads like a wave</td>
+          </tr>
+          <tr>
+            <td>Hierarchical Diffusion</td>
+            <td>Spread from powerful people or places to others</td>
+            <td>Fashion spreading from major cities</td>
+            <td>Look for big city to smaller places</td>
+          </tr>
+          <tr>
+            <td>Stimulus Diffusion</td>
+            <td>Main idea spreads but changes locally</td>
+            <td>Fast food menus changing by country</td>
+            <td>Idea stays, details change</td>
+          </tr>
+          <tr>
+            <td>Assimilation</td>
+            <td>Original culture mostly disappears into dominant culture</td>
+            <td>A migrant family stops using its original language</td>
+            <td>More cultural loss</td>
+          </tr>
+          <tr>
+            <td>Acculturation</td>
+            <td>Adopts some new traits while keeping original culture</td>
+            <td>Learning English while still speaking a home language</td>
+            <td>More cultural blending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Culture</span>The shared beliefs, practices, values, language, and way of life of a group.</div>
+      <div class="vocab-item"><span class="vocab-term">Cultural Trait</span>One part of culture, such as food, clothing, language, or music.</div>
+      <div class="vocab-item"><span class="vocab-term">Cultural Hearth</span>The place where a cultural trait or culture begins.</div>
+      <div class="vocab-item"><span class="vocab-term">Custom</span>A common cultural practice followed by a group.</div>
+      <div class="vocab-item"><span class="vocab-term">Taboo</span>A behavior that is strongly forbidden by a culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Folk Culture</span>Traditional culture practiced by small, usually rural groups.</div>
+      <div class="vocab-item"><span class="vocab-term">Popular Culture</span>Widespread culture spread by media, technology, and globalization.</div>
+      <div class="vocab-item"><span class="vocab-term">Cultural Landscape</span>The visible human imprint on the physical environment.</div>
+      <div class="vocab-item"><span class="vocab-term">Sequent Occupance</span>The idea that different groups leave layers of culture on a landscape over time.</div>
+      <div class="vocab-item"><span class="vocab-term">Ethnicity</span>Shared cultural heritage, such as ancestry, language, religion, or traditions.</div>
+      <div class="vocab-item"><span class="vocab-term">Cultural Relativism</span>Understanding a culture on its own terms instead of judging it as inferior.</div>
+      <div class="vocab-item"><span class="vocab-term">Ethnocentrism</span>Judging another culture by the standards of one’s own culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Diffusion</span>The spread of cultural traits, ideas, people, or practices over space.</div>
+      <div class="vocab-item"><span class="vocab-term">Relocation Diffusion</span>Culture spreads when people physically move.</div>
+      <div class="vocab-item"><span class="vocab-term">Expansion Diffusion</span>Culture spreads outward from a hearth while staying strong there.</div>
+      <div class="vocab-item"><span class="vocab-term">Contagious Diffusion</span>Rapid person-to-person spread.</div>
+      <div class="vocab-item"><span class="vocab-term">Hierarchical Diffusion</span>Spread from powerful people or major places to smaller places.</div>
+      <div class="vocab-item"><span class="vocab-term">Stimulus Diffusion</span>The main idea spreads but changes to fit local culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Globalization</span>Increasing connection between places through trade, migration, media, and technology.</div>
+      <div class="vocab-item"><span class="vocab-term">Language Family</span>A group of languages with a shared ancient origin.</div>
+      <div class="vocab-item"><span class="vocab-term">Dialect</span>A regional version of a language.</div>
+      <div class="vocab-item"><span class="vocab-term">Lingua Franca</span>A common language used by people who speak different native languages.</div>
+      <div class="vocab-item"><span class="vocab-term">Pidgin Language</span>A simplified language used for communication between groups.</div>
+      <div class="vocab-item"><span class="vocab-term">Creole Language</span>A stable language formed from mixing languages.</div>
+      <div class="vocab-item"><span class="vocab-term">Toponym</span>A place name that reveals cultural or historical information.</div>
+      <div class="vocab-item"><span class="vocab-term">Universalizing Religion</span>A religion that actively seeks converts and is not limited to one ethnic group.</div>
+      <div class="vocab-item"><span class="vocab-term">Ethnic Religion</span>A religion closely tied to one ethnic group or place.</div>
+      <div class="vocab-item"><span class="vocab-term">Sacred Site</span>A place considered holy or spiritually important.</div>
+      <div class="vocab-item"><span class="vocab-term">Pilgrimage</span>Religious travel to a sacred place.</div>
+      <div class="vocab-item"><span class="vocab-term">Acculturation</span>Adopting some traits of another culture while keeping parts of the original culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Assimilation</span>Losing much of one’s original culture and becoming more like the dominant culture.</div>
+      <div class="vocab-item"><span class="vocab-term">Syncretism</span>Blending different cultural or religious traditions into a new form.</div>
+      <div class="vocab-item"><span class="vocab-term">Multiculturalism</span>Different cultures existing together in one society.</div>
+      <div class="vocab-item"><span class="vocab-term">Commodification</span>Turning culture into something sold for profit.</div>
+    </div>
+
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+
+      <div class="quiz-question">
+        <p><strong>1. Which example best shows relocation diffusion?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) A fashion trend spreads from Paris to smaller cities.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Migrants bring their language and religion to a new country.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) A meme spreads rapidly through social media.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) A restaurant changes its menu to fit local tastes.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> Relocation diffusion happens when people physically move and bring cultural traits with them.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. A global fast food chain changing its menu to match local tastes is an example of which type of diffusion?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) Contagious diffusion</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(B) Relocation diffusion</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(C) Stimulus diffusion</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Reverse diffusion</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: C.</strong> Stimulus diffusion means the main idea spreads, but people change it to fit local culture.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. Which feature is most clearly part of a cultural landscape?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Plate tectonics below Earth’s surface</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(B) Ocean currents in the Pacific</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(C) A mosque, church, or temple in a city</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Wind patterns over a desert</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: C.</strong> Cultural landscapes are visible human imprints, such as religious buildings, signs, roads, farms, and neighborhoods.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. Which religion is usually classified as an ethnic religion?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) Christianity</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(B) Islam</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) Buddhism</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(D) Hinduism</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: D.</strong> Hinduism is strongly tied to India and is usually classified as an ethnic religion.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. Which term means adopting some traits of another culture while still keeping parts of the original culture?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(A) Acculturation</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Assimilation</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) Distance decay</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Sovereignty</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: A.</strong> Acculturation means adopting some traits from another culture while still keeping parts of the original culture.</div>
+      </div>
+    </div>
+
+    <h2>✍️ Free-Response Practice</h2>
+    <p>APHUG FRQs ask you to define, describe, explain, compare, or apply concepts. Be direct and use specific vocabulary.</p>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 1 — Diffusion</h3>
+      <ol type="a">
+        <li>Define relocation diffusion.</li>
+        <li>Define hierarchical diffusion.</li>
+        <li>Explain how popular culture can spread through hierarchical diffusion.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Relocation diffusion is the spread of culture when people physically move from one place to another.</p>
+        <p><strong>(b)</strong> Hierarchical diffusion is the spread of a cultural trait from powerful people or major places to smaller places.</p>
+        <p><strong>(c)</strong> Popular culture can spread through hierarchical diffusion when a fashion or music trend begins in a major global city and then spreads to smaller cities through media and influencers.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 2 — Cultural Landscapes</h3>
+      <ol type="a">
+        <li>Define cultural landscape.</li>
+        <li>Identify ONE example of a cultural landscape.</li>
+        <li>Explain how religion can shape a cultural landscape.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> A cultural landscape is the visible human imprint on the physical environment.</p>
+        <p><strong>(b)</strong> One example is a neighborhood with religious buildings, signs in different languages, and traditional architecture.</p>
+        <p><strong>(c)</strong> Religion can shape a cultural landscape by creating churches, mosques, temples, cemeteries, sacred sites, and pilgrimage routes.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 3 — Language and Religion</h3>
+      <ol type="a">
+        <li>Define lingua franca.</li>
+        <li>Explain why English is often used as a lingua franca in global business.</li>
+        <li>Explain ONE difference between universalizing religions and ethnic religions.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> A lingua franca is a common language used by people who speak different native languages.</p>
+        <p><strong>(b)</strong> English is often used as a lingua franca in global business because it has spread through colonialism, trade, technology, education, and international communication.</p>
+        <p><strong>(c)</strong> Universalizing religions actively seek converts and spread widely, while ethnic religions are usually closely tied to one ethnic group or region.</p>
+      </details>
+    </div>
+
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Culture is a shared way of life.</strong> It includes language, religion, food, clothing, customs, values, and identity.</li>
+        <li><strong>Cultural landscapes show culture visually.</strong> Buildings, signs, farms, sacred sites, and neighborhoods reveal cultural patterns.</li>
+        <li><strong>Folk culture and popular culture spread differently.</strong> Folk culture is local and slower; popular culture is widespread and faster.</li>
+        <li><strong>Diffusion is central to this unit.</strong> Know relocation, contagious, hierarchical, and stimulus diffusion.</li>
+        <li><strong>History shaped culture.</strong> Trade, migration, conquest, colonialism, and religion spread cultural traits across regions.</li>
+        <li><strong>Language creates identity and regions.</strong> Language families, dialects, lingua francas, and toponyms all show cultural geography.</li>
+        <li><strong>Religion shapes landscapes and movement.</strong> Sacred sites, pilgrimages, architecture, and diffusion patterns are major AP topics.</li>
+        <li><strong>Globalization creates both convergence and resistance.</strong> Some cultures become more similar, while others work to preserve local identity.</li>
+      </ul>
+    </div>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP Human Geography</a>
+    </p>
+  </div>
+
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
