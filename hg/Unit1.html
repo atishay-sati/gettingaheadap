@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP Human Geography Unit 1 — Thinking Geographically. Comprehensive notes on maps, geographic data, spatial concepts, human-environment interaction, scale, regions, vocabulary, MCQ practice, SAQ practice, and key takeaways." />
+  <title>Unit 1: Thinking Geographically</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4faf8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f5f5b;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #5c6bc0;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #5c6bc0;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      color: #2f7f78;
+      margin-top: 1.5rem;
+    }
+
+    h4 {
+      color: #1f5f5b;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f5f5b;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    .overview-box {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border-left: 6px solid #5c6bc0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .weighting-badge {
+      display: inline-block;
+      background: #1f5f5b;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #5c6bc0;
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8ffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f5f5b;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #5c6bc0;
+    }
+
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f5f5b;
+      margin-right: 0.5rem;
+    }
+
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .region-maps        { border-color: #1f5f5b; background: #e8f8f6; }
+    .region-data        { border-color: #5c6bc0; background: #eef0ff; }
+    .region-spatial     { border-color: #2f7f78; background: #edfdfb; }
+    .region-environment { border-color: #6a994e; background: #f0faeb; }
+    .region-scale       { border-color: #7e57c2; background: #f5efff; }
+    .region-regions     { border-color: #d99228; background: #fff7e8; }
+    .region-skills      { border-color: #0f766e; background: #ecfeff; }
+
+    .region-card h3 {
+      margin-top: 0;
+    }
+
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f5f5b;
+      background: #e8f8f6;
+      font-weight: 600;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .vocab-item {
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+
+    .vocab-term {
+      font-weight: 700;
+      color: #1f5f5b;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+
+    .compare-table th, .compare-table td {
+      border: 1px solid #b9d8d4;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .compare-table thead {
+      background: linear-gradient(to right, #1f5f5b, #5c6bc0);
+      color: white;
+    }
+
+    .compare-table tbody tr:nth-child(even) {
+      background: #f8ffff;
+    }
+
+    .quiz-container {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #1f5f5b;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-container h2 {
+      margin-top: 0;
+      border: none;
+      color: #1f5f5b;
+    }
+
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f5f5b;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+
+    .quiz-option:hover {
+      background-color: #e8f8f6;
+    }
+
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f5f5b;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .explanation.show {
+      display: block;
+    }
+
+    .saq-box {
+      background: #fff;
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+
+    .saq-box h3 {
+      margin-top: 0;
+    }
+
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8ffff;
+      border: 1px dashed #1f5f5b;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f5f5b;
+    }
+
+    .key-takeaways {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP Human Geography</a>
+
+    <h1>Unit 1: Thinking Geographically</h1>
+    <p class="subtitle">Maps, Data, Spatial Patterns, Scale, and Regions &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 8–10%</span></p>
+
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🌍 Unit Overview</h3>
+      <p>
+        AP Human Geography Unit 1 introduces the basic tools and ideas geographers use to study the world.
+        Instead of only memorizing locations, this unit teaches you how to think spatially. You will learn how maps,
+        data, regions, scale, patterns, and human-environment interactions help explain why things happen where they do.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How do geographers use maps, data, scale, and spatial thinking to understand patterns on Earth?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg" alt="World map" class="unit-image">
+      <div class="image-caption">World map — connects to spatial thinking, map projections, scale, and geographic patterns.</div>
+    </div>
+
+    <h2>🗓️ Unit 1 Concept Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">Ancient Era:</span> Early civilizations used maps for trade, navigation, land ownership, and military planning.</div>
+      <div class="timeline-event"><span class="timeline-date">150 CE:</span> Ptolemy helped organize ideas about latitude, longitude, and mapmaking.</div>
+      <div class="timeline-event"><span class="timeline-date">1500s:</span> The Age of Exploration increased European demand for accurate navigation maps.</div>
+      <div class="timeline-event"><span class="timeline-date">1569:</span> Gerardus Mercator created a map projection useful for navigation, but it distorted land size near the poles.</div>
+      <div class="timeline-event"><span class="timeline-date">1800s:</span> Modern geography grew as scholars studied human settlement, environment, and spatial patterns.</div>
+      <div class="timeline-event"><span class="timeline-date">1900s:</span> Aerial photography, census data, and thematic maps helped geographers study population and land use.</div>
+      <div class="timeline-event"><span class="timeline-date">1960s–Present:</span> GIS, GPS, satellites, and remote sensing changed how geographers collect and analyze data.</div>
+      <div class="timeline-event"><span class="timeline-date">Today:</span> Human geographers use digital data to study migration, cities, climate risk, culture, politics, agriculture, and development.</div>
+    </div>
+
+    <h2>Topic 1.1 — Introduction to Maps</h2>
+    <div class="region-card region-maps">
+      <h3>🗺️ Maps Are Tools, Not Perfect Pictures</h3>
+      <p>
+        Maps are simplified models of Earth. They help people show location, distance, direction, and patterns,
+        but every map has some kind of distortion because Earth is round and maps are flat.
+      </p>
+
+      <h4>Types of Maps</h4>
+      <ul>
+        <li><strong>Reference map:</strong> Shows general information such as cities, roads, rivers, mountains, and borders.</li>
+        <li><strong>Thematic map:</strong> Shows a specific topic or pattern, such as population density, climate, income, religion, or voting.</li>
+        <li><strong>Political map:</strong> Shows countries, states, borders, and capitals.</li>
+        <li><strong>Physical map:</strong> Shows natural features like mountains, rivers, deserts, and oceans.</li>
+        <li><strong>Topographic map:</strong> Uses contour lines to show elevation and landforms.</li>
+      </ul>
+
+      <h4>Map Projections</h4>
+      <ul>
+        <li><strong>Mercator projection:</strong> Good for navigation but makes places near the poles look much larger than they really are.</li>
+        <li><strong>Robinson projection:</strong> Tries to balance size and shape, so it is useful for general world maps.</li>
+        <li><strong>Goode homolosine projection:</strong> Shows land size more accurately but interrupts the oceans.</li>
+        <li><strong>Azimuthal projection:</strong> Shows directions from one central point; often used for polar maps or airline routes.</li>
+      </ul>
+
+      <h4>Important Map Elements</h4>
+      <ul>
+        <li><strong>Title:</strong> Tells what the map is about.</li>
+        <li><strong>Legend/key:</strong> Explains symbols, colors, or patterns.</li>
+        <li><strong>Scale:</strong> Shows the relationship between map distance and real-world distance.</li>
+        <li><strong>Compass rose:</strong> Shows direction.</li>
+        <li><strong>Grid system:</strong> Uses latitude and longitude to locate places.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Mercator_projection_Square.JPG" alt="Mercator projection world map" class="unit-image">
+      <div class="image-caption">Mercator projection — useful for navigation but distorts the size of land near the poles.</div>
+    </div>
+
+    <h2>Topic 1.2 — Geographic Data</h2>
+    <div class="region-card region-data">
+      <h3>📊 How Geographers Collect Information</h3>
+      <p>
+        Geographic data is information connected to location. Geographers use data to identify patterns,
+        compare places, explain problems, and make decisions.
+      </p>
+
+      <h4>Types of Geographic Data</h4>
+      <ul>
+        <li><strong>Quantitative data:</strong> Numerical data, such as population, income, birth rates, or distance.</li>
+        <li><strong>Qualitative data:</strong> Descriptive data, such as interviews, photographs, observations, or field notes.</li>
+        <li><strong>Census data:</strong> Population information collected by governments.</li>
+        <li><strong>Survey data:</strong> Information collected by asking people questions.</li>
+        <li><strong>Field observation:</strong> Directly studying a place by visiting it.</li>
+      </ul>
+
+      <h4>Modern Geographic Tools</h4>
+      <ul>
+        <li><strong>GIS:</strong> Geographic Information Systems use computer layers to analyze spatial data.</li>
+        <li><strong>GPS:</strong> Global Positioning System uses satellites to determine exact location.</li>
+        <li><strong>Remote sensing:</strong> Collecting information from satellites, aircraft, or drones without touching the place being studied.</li>
+        <li><strong>Satellite imagery:</strong> Images from space used to study land use, weather, cities, farming, and environmental change.</li>
+      </ul>
+
+      <h4>Why Data Matters</h4>
+      <ul>
+        <li>Governments use geographic data to plan roads, schools, hospitals, and emergency services.</li>
+        <li>Businesses use location data to decide where to open stores.</li>
+        <li>Scientists use satellite data to monitor deforestation, climate, and natural disasters.</li>
+        <li>Urban planners use GIS to study traffic, housing, zoning, and public transportation.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/GIS_layers.jpg" alt="GIS layers diagram" class="unit-image">
+      <div class="image-caption">GIS layers — geographers can stack different types of data to study patterns in one place.</div>
+    </div>
+
+    <h2>Topic 1.3 — The Power of Geographic Data</h2>
+    <div class="region-card region-data">
+      <h3>🛰️ Data Can Reveal Hidden Patterns</h3>
+      <p>
+        Geographic data becomes powerful when it helps people see patterns that are not obvious at first.
+        For example, a city might use maps to find where traffic accidents happen most often or where grocery stores are missing.
+      </p>
+
+      <h4>Examples of Geographic Data Use</h4>
+      <ul>
+        <li><strong>Public health:</strong> Mapping disease outbreaks to find where they spread fastest.</li>
+        <li><strong>Urban planning:</strong> Mapping housing prices, transportation, and population density.</li>
+        <li><strong>Environmental protection:</strong> Mapping deforestation, fires, pollution, or flooding.</li>
+        <li><strong>Business:</strong> Finding the best location for stores based on customers and competition.</li>
+        <li><strong>Emergency response:</strong> Locating areas most affected by earthquakes, hurricanes, or wildfires.</li>
+      </ul>
+
+      <h4>Spatial Data Privacy</h4>
+      <p>
+        Location data can be helpful, but it can also raise privacy concerns. Phones, apps, cars, and websites can collect
+        location information. Geographers must think about how data is collected, who uses it, and whether people are protected.
+      </p>
+    </div>
+
+    <h2>Topic 1.4 — Spatial Concepts</h2>
+    <div class="region-card region-spatial">
+      <h3>📍 Thinking About Location and Patterns</h3>
+      <p>
+        Spatial concepts help geographers explain where things are, why they are there, and how they are connected.
+        These concepts show up constantly on the AP exam.
+      </p>
+
+      <h4>Core Spatial Concepts</h4>
+      <ul>
+        <li><strong>Location:</strong> Where something is.</li>
+        <li><strong>Absolute location:</strong> Exact location, usually using latitude and longitude.</li>
+        <li><strong>Relative location:</strong> Location described compared to another place.</li>
+        <li><strong>Place:</strong> The physical and human characteristics that make a location unique.</li>
+        <li><strong>Space:</strong> The area between places or objects.</li>
+        <li><strong>Distance decay:</strong> Interaction usually decreases as distance increases.</li>
+        <li><strong>Time-space compression:</strong> Technology makes distant places feel closer because communication and travel are faster.</li>
+      </ul>
+
+      <h4>Spatial Patterns</h4>
+      <ul>
+        <li><strong>Clustered pattern:</strong> Things are grouped close together.</li>
+        <li><strong>Dispersed pattern:</strong> Things are spread out.</li>
+        <li><strong>Linear pattern:</strong> Things are arranged in a line, often along a road, river, or coast.</li>
+        <li><strong>Grid pattern:</strong> Things are arranged in a regular, organized layout.</li>
+      </ul>
+
+      <h4>Why Spatial Patterns Matter</h4>
+      <p>
+        Patterns help geographers make arguments. If schools, hospitals, pollution, or poverty are clustered in certain areas,
+        geographers can ask why that pattern exists and what effects it has.
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Aerial_view_of_San_Francisco%2C_California.jpg" alt="Aerial view of San Francisco" class="unit-image">
+      <div class="image-caption">A city from above — connects to spatial patterns, density, land use, transportation, and urban geography.</div>
+    </div>
+
+    <h2>Topic 1.5 — Human-Environmental Interaction</h2>
+    <div class="region-card region-environment">
+      <h3>🌱 Humans and the Environment Affect Each Other</h3>
+      <p>
+        Human-environment interaction studies how people depend on, adapt to, and modify the environment.
+        This is one of the biggest ideas in AP Human Geography because almost every unit connects back to it.
+      </p>
+
+      <h4>Three Main Ideas</h4>
+      <ul>
+        <li><strong>Dependence:</strong> People rely on the environment for food, water, energy, land, and resources.</li>
+        <li><strong>Adaptation:</strong> People adjust to environmental conditions, such as building houses for hot, cold, dry, or wet climates.</li>
+        <li><strong>Modification:</strong> People change the environment through farming, dams, roads, cities, mining, and deforestation.</li>
+      </ul>
+
+      <h4>Environmental Determinism vs. Possibilism</h4>
+      <ul>
+        <li><strong>Environmental determinism:</strong> The outdated idea that the physical environment completely controls human behavior and culture.</li>
+        <li><strong>Possibilism:</strong> The idea that the environment creates limits and opportunities, but humans make choices using culture, technology, and resources.</li>
+      </ul>
+
+      <h4>Examples</h4>
+      <ul>
+        <li>People in dry regions may use irrigation to grow crops.</li>
+        <li>Cities near rivers may grow because rivers support trade and transportation.</li>
+        <li>Coastal settlements may face flooding or hurricane risks.</li>
+        <li>Deforestation may create farmland but also cause erosion and habitat loss.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Center-pivot_irrigation_near_Eubank_Kentucky.jpg" alt="Center pivot irrigation" class="unit-image">
+      <div class="image-caption">Irrigation — connects to human-environment interaction, agriculture, technology, and land use.</div>
+    </div>
+
+    <h2>Topic 1.6 — Scales of Analysis</h2>
+    <div class="region-card region-scale">
+      <h3>🔎 Scale Changes the Story</h3>
+      <p>
+        Scale is the level at which you study something. The same issue can look different depending on whether you study it
+        globally, nationally, regionally, locally, or individually.
+      </p>
+
+      <h4>Types of Scale</h4>
+      <ul>
+        <li><strong>Global scale:</strong> Looks at patterns across the whole world.</li>
+        <li><strong>National scale:</strong> Looks at patterns within one country.</li>
+        <li><strong>Regional scale:</strong> Looks at a section of a country or world region.</li>
+        <li><strong>Local scale:</strong> Looks at a city, neighborhood, or small area.</li>
+      </ul>
+
+      <h4>Example: Population Density</h4>
+      <p>
+        At the global scale, South Asia and East Asia look very densely populated. At the national scale, a country might show
+        crowded cities and empty rural areas. At the local scale, one neighborhood might have high-rise apartments while another has single-family homes.
+      </p>
+
+      <h4>Scale of Inquiry vs. Map Scale</h4>
+      <ul>
+        <li><strong>Scale of inquiry:</strong> The level of analysis, such as global, national, regional, or local.</li>
+        <li><strong>Map scale:</strong> The relationship between distance on a map and distance in real life.</li>
+        <li><strong>Large-scale map:</strong> Shows a smaller area with more detail, like a city map.</li>
+        <li><strong>Small-scale map:</strong> Shows a larger area with less detail, like a world map.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 1.7 — Regional Analysis</h2>
+    <div class="region-card region-regions">
+      <h3>🧭 Regions Help Organize the World</h3>
+      <p>
+        A region is an area with one or more shared characteristics. Geographers create regions to make the world easier to study.
+        Regions can be based on language, religion, climate, economics, politics, culture, or physical features.
+      </p>
+
+      <h4>Types of Regions</h4>
+      <ul>
+        <li><strong>Formal region:</strong> An area with a shared measurable characteristic, such as a country, state, climate zone, or language region.</li>
+        <li><strong>Functional region:</strong> An area organized around a central point, such as a city and its suburbs, a school district, or a delivery area.</li>
+        <li><strong>Vernacular region:</strong> A region based on people's perceptions, such as “the South,” “the Midwest,” or “Silicon Valley.”</li>
+      </ul>
+
+      <h4>Important Reminder</h4>
+      <p>
+        Regions are not always perfect or fixed. Some regions have clear borders, while others are fuzzy and based on perception.
+        For example, people may disagree about where “Northern California” begins.
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/US_Census_geographical_region_map.svg" alt="United States Census regions map" class="unit-image">
+      <div class="image-caption">U.S. Census regions — an example of formal regions used to organize geographic data.</div>
+    </div>
+
+    <h2>Unit 1 Skill Focus — How to Think Like a Geographer</h2>
+    <div class="region-card region-skills">
+      <h3>🧠 What the AP Exam Wants You to Do</h3>
+      <p>
+        Unit 1 is not just about memorizing map terms. The exam wants you to use geographic reasoning.
+        That means you should be able to describe patterns, explain causes, compare places, and connect evidence to a geographic concept.
+      </p>
+
+      <h4>Common AP Human Geography Skills</h4>
+      <ul>
+        <li><strong>Describe:</strong> Say what the map, data, or pattern shows.</li>
+        <li><strong>Explain:</strong> Give a reason why the pattern exists.</li>
+        <li><strong>Compare:</strong> Show similarities or differences between places, regions, or patterns.</li>
+        <li><strong>Use evidence:</strong> Support your answer with a map, chart, image, or example.</li>
+        <li><strong>Apply a concept:</strong> Use vocabulary correctly in a real-world situation.</li>
+      </ul>
+
+      <h4>Good AP Sentence Frames</h4>
+      <ul>
+        <li>“The map shows a clustered pattern because...”</li>
+        <li>“At the national scale, the pattern appears different because...”</li>
+        <li>“This is an example of human-environment interaction because...”</li>
+        <li>“A limitation of this map is...”</li>
+        <li>“This region is functional because...”</li>
+      </ul>
+    </div>
+
+    <h2>Topic Comparison Table</h2>
+    <p>Use this table to quickly compare major Unit 1 concepts.</p>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Meaning</th>
+            <th>Example</th>
+            <th>AP Exam Tip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reference Map</td>
+            <td>Shows general location information</td>
+            <td>Road map or political map</td>
+            <td>Use it to locate places</td>
+          </tr>
+          <tr>
+            <td>Thematic Map</td>
+            <td>Shows one specific topic or pattern</td>
+            <td>Population density map</td>
+            <td>Use it to describe spatial patterns</td>
+          </tr>
+          <tr>
+            <td>Absolute Location</td>
+            <td>Exact location</td>
+            <td>Latitude and longitude</td>
+            <td>Usually precise and measurable</td>
+          </tr>
+          <tr>
+            <td>Relative Location</td>
+            <td>Location compared to another place</td>
+            <td>Pleasanton is east of San Francisco</td>
+            <td>Often helps explain connections</td>
+          </tr>
+          <tr>
+            <td>Formal Region</td>
+            <td>Shared measurable trait</td>
+            <td>California, the Sahara Desert, Spanish-speaking Latin America</td>
+            <td>Look for clear common traits</td>
+          </tr>
+          <tr>
+            <td>Functional Region</td>
+            <td>Organized around a central node</td>
+            <td>Bay Area commute zone</td>
+            <td>Think center + surrounding connections</td>
+          </tr>
+          <tr>
+            <td>Vernacular Region</td>
+            <td>Based on perception</td>
+            <td>The South, the Midwest, Silicon Valley</td>
+            <td>Borders are often unclear</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Human Geography</span>The study of people, culture, cities, politics, economics, and their relationship to space and place.</div>
+      <div class="vocab-item"><span class="vocab-term">Physical Geography</span>The study of natural features like landforms, climate, water, and ecosystems.</div>
+      <div class="vocab-item"><span class="vocab-term">Map Projection</span>A way of showing the round Earth on a flat surface.</div>
+      <div class="vocab-item"><span class="vocab-term">Distortion</span>Inaccuracy in shape, size, distance, or direction on a map.</div>
+      <div class="vocab-item"><span class="vocab-term">Reference Map</span>A map showing general information such as roads, cities, rivers, or borders.</div>
+      <div class="vocab-item"><span class="vocab-term">Thematic Map</span>A map that shows one specific topic or pattern.</div>
+      <div class="vocab-item"><span class="vocab-term">Choropleth Map</span>A thematic map that uses colors or shading to show data by area.</div>
+      <div class="vocab-item"><span class="vocab-term">Dot Density Map</span>A map where dots represent the amount of something in an area.</div>
+      <div class="vocab-item"><span class="vocab-term">Isoline Map</span>A map with lines connecting points of equal value, such as elevation or temperature.</div>
+      <div class="vocab-item"><span class="vocab-term">GIS</span>Computer system that stores, layers, maps, and analyzes geographic data.</div>
+      <div class="vocab-item"><span class="vocab-term">GPS</span>Satellite system used to find exact location.</div>
+      <div class="vocab-item"><span class="vocab-term">Remote Sensing</span>Collecting geographic information from satellites, aircraft, or drones.</div>
+      <div class="vocab-item"><span class="vocab-term">Absolute Location</span>The exact location of a place, often using latitude and longitude.</div>
+      <div class="vocab-item"><span class="vocab-term">Relative Location</span>Location described in relation to another place.</div>
+      <div class="vocab-item"><span class="vocab-term">Place</span>The physical and human characteristics that make a location unique.</div>
+      <div class="vocab-item"><span class="vocab-term">Distance Decay</span>The idea that interaction decreases as distance increases.</div>
+      <div class="vocab-item"><span class="vocab-term">Time-Space Compression</span>Technology makes distant places feel closer through faster travel and communication.</div>
+      <div class="vocab-item"><span class="vocab-term">Scale of Analysis</span>The level at which a geographic pattern is studied.</div>
+      <div class="vocab-item"><span class="vocab-term">Formal Region</span>A region with a shared measurable characteristic.</div>
+      <div class="vocab-item"><span class="vocab-term">Functional Region</span>A region organized around a central point or node.</div>
+      <div class="vocab-item"><span class="vocab-term">Vernacular Region</span>A region based on people's feelings or perceptions.</div>
+      <div class="vocab-item"><span class="vocab-term">Possibilism</span>The environment creates limits and opportunities, but humans make choices.</div>
+      <div class="vocab-item"><span class="vocab-term">Environmental Determinism</span>Outdated belief that the environment controls human culture and behavior.</div>
+      <div class="vocab-item"><span class="vocab-term">Spatial Pattern</span>The arrangement of objects or people across space.</div>
+    </div>
+
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+
+      <div class="quiz-question">
+        <p><strong>1. Which type of map would be best for showing population density by country?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(A) Physical map</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(B) Choropleth map</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Road map</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Topographic map</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: B.</strong> A choropleth map uses colors or shading to show data by area, making it useful for population density by country.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. Which statement best describes relative location?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) The exact latitude and longitude of a place.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) The location of a place compared to another place.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) The elevation of a place above sea level.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) The climate zone of a place.</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: B.</strong> Relative location describes where something is by comparing it to another location.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. Which technology allows geographers to layer different types of spatial data on a computer map?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Compass rose</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(B) Mercator projection</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(C) GIS</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Relative location</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: C.</strong> GIS allows geographers to store, layer, analyze, and display geographic data.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. Which example best represents a functional region?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) A desert climate zone.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(B) The idea of “the South.”</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(C) A city and the suburbs connected to it by commuting.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) A country with a clearly drawn border.</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: C.</strong> A functional region is organized around a central node, such as a city connected to surrounding suburbs.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. Which concept explains why interaction between two places usually decreases as distance increases?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Possibilism</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(B) Distance decay</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(C) Formal region</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Remote sensing</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: B.</strong> Distance decay means that interaction usually weakens as distance increases.</div>
+      </div>
+    </div>
+
+    <h2>✍️ Free-Response Practice</h2>
+    <p>APHUG FRQs ask you to define, describe, explain, compare, or apply concepts. Be direct and use specific examples.</p>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 1 — Maps and Data</h3>
+      <ol type="a">
+        <li>Define thematic map.</li>
+        <li>Describe ONE way a choropleth map can show population data.</li>
+        <li>Explain ONE limitation of using a choropleth map to study population patterns.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> A thematic map is a map that shows one specific topic or pattern, such as population density or income.</p>
+        <p><strong>(b)</strong> A choropleth map can use darker shading to show areas with higher population density and lighter shading to show areas with lower population density.</p>
+        <p><strong>(c)</strong> One limitation is that choropleth maps can hide variation within an area. For example, a whole state may appear dense even if most people live in only one city.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 2 — Regions</h3>
+      <ol type="a">
+        <li>Define formal region.</li>
+        <li>Define functional region.</li>
+        <li>Explain how a city and its surrounding suburbs can be considered a functional region.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> A formal region is an area with a shared measurable characteristic, such as a language, climate, or political boundary.</p>
+        <p><strong>(b)</strong> A functional region is an area organized around a central point or node.</p>
+        <p><strong>(c)</strong> A city and its suburbs can be a functional region because people travel between the suburbs and the city for work, school, shopping, and services.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 3 — Human-Environment Interaction</h3>
+      <ol type="a">
+        <li>Identify ONE example of humans modifying the environment.</li>
+        <li>Explain ONE reason humans modify the environment.</li>
+        <li>Explain ONE possible negative effect of environmental modification.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> One example of humans modifying the environment is building irrigation systems to bring water to farmland.</p>
+        <p><strong>(b)</strong> Humans modify the environment to meet needs such as food production, transportation, housing, and economic development.</p>
+        <p><strong>(c)</strong> A negative effect is that irrigation can use large amounts of water, which may reduce water supplies or damage ecosystems.</p>
+      </details>
+    </div>
+
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Maps are models.</strong> They help show patterns, but every flat map has distortion.</li>
+        <li><strong>Thematic maps are very important.</strong> They show specific geographic patterns like population, income, climate, religion, or land use.</li>
+        <li><strong>GIS, GPS, and remote sensing changed geography.</strong> These tools help geographers collect and analyze location-based data.</li>
+        <li><strong>Spatial thinking is the main skill.</strong> Always ask where something is, why it is there, and how it connects to other places.</li>
+        <li><strong>Scale changes the pattern.</strong> A global pattern may look different at the national, regional, or local scale.</li>
+        <li><strong>Regions organize space.</strong> Formal, functional, and vernacular regions help geographers group places.</li>
+        <li><strong>Human-environment interaction connects to every unit.</strong> People depend on, adapt to, and modify their environments.</li>
+      </ul>
+    </div>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP Human Geography</a>
+    </p>
+  </div>
+
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
