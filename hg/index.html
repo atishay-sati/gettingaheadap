@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Welcome to the homepage of this AP Human Geography learning resource.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Getting Ahead: AP Human Geography</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4faf8;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #1f5f5b !important;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1f5f5b, #5c6bc0);
+      color: white;
+      padding: 5rem 1rem;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #1f5f5b;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #d6ebe7;
+      border-radius: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .btn-outline-primary {
+      border-radius: 30px;
+      color: #1f5f5b;
+      border-color: #1f5f5b;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #1f5f5b;
+      border-color: #1f5f5b;
+      color: #ffffff;
+    }
+
+    .hero-image-clickable {
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-image-clickable:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-img {
+      max-height: 300px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .exam-table {
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .exam-table thead {
+      background: linear-gradient(to right, #1f5f5b, #5c6bc0);
+      color: #ffffff;
+    }
+
+    .exam-table th, .exam-table td {
+      vertical-align: middle;
+    }
+
+    .table-bordered > :not(caption) > * > * {
+      border-color: #b9d8d4;
+    }
+
+    .unit-card {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .unit-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .unit-card .card-body {
+      padding: 1.25rem;
+    }
+
+    .unit-card h5 {
+      color: #1f5f5b;
+      font-weight: 700;
+    }
+
+    .unit-card p {
+      color: #555;
+    }
+
+    .unit-card a {
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #1f5f5b;
+      color: #ffffff;
+      padding: 2rem 0;
+      margin-top: 4rem;
+      border-radius: 20px 20px 0 0;
+    }
+
+    footer p::before {
+      content: "🌍 ";
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🌍 AP Human Geography</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-4 fw-bold">Getting Ahead: AP Human Geography</h1>
+          <p class="lead">Explore how people, places, cultures, cities, and economies shape the world. Get ready to earn that 5!</p>
+        </div>
+
+        <div class="col-md-6 text-center">
+          <a href="https://gettingaheadap.org">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg" 
+              alt="World map" 
+              class="img-fluid hero-image-clickable hero-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📝 AP Exam Breakdown</h2>
+    <p class="text-center mb-4">The AP Human Geography exam is <strong>2 hours and 15 minutes</strong> long and has two sections.</p>
+
+    <div class="card p-4">
+      <div class="table-responsive">
+        <table class="table table-bordered exam-table mb-0">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Question Type</th>
+              <th># of Questions</th>
+              <th>Time</th>
+              <th>% of Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Section I</strong></td>
+              <td>Multiple Choice</td>
+              <td>60 questions</td>
+              <td>1 hour</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td><strong>Section II</strong></td>
+              <td>Free Response</td>
+              <td>3 questions</td>
+              <td>1 hour 15 minutes</td>
+              <td>50%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="text-center section-heading">📘 Core Units You'll Learn</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit1.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg" alt="World map">
+            <div class="card-body">
+              <h5>🗺️ Unit 1: Thinking Geographically</h5>
+              <p>Maps, spatial patterns, scale, regions, and geographic tools.</p>
+              <strong>Exam Weight: 8–10%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit2.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Crowd_in_Hong_Kong.jpg" alt="Crowd of people">
+            <div class="card-body">
+              <h5>👥 Unit 2: Population and Migration</h5>
+              <p>Population patterns, density, migration, and demographic change.</p>
+              <strong>Exam Weight: 12–17%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit3.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cultural_diversity.jpg" alt="Cultural diversity">
+            <div class="card-body">
+              <h5>🗣️ Unit 3: Cultural Patterns and Processes</h5>
+              <p>Culture, language, religion, diffusion, and identity.</p>
+              <strong>Exam Weight: 12–17%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit4.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Political_World_Map.jpg" alt="Political world map">
+            <div class="card-body">
+              <h5>🏛️ Unit 4: Political Patterns and Processes</h5>
+              <p>States, nations, borders, boundaries, and political power.</p>
+              <strong>Exam Weight: 12–17%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit5.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Agriculture_in_Volgograd_Oblast_002.JPG" alt="Agriculture field">
+            <div class="card-body">
+              <h5>🌾 Unit 5: Agriculture and Rural Land Use</h5>
+              <p>Farming, food production, rural settlement, and land-use patterns.</p>
+              <strong>Exam Weight: 12–17%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit6.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Manhattan_from_Weehawken%2C_NJ.jpg" alt="City skyline">
+            <div class="card-body">
+              <h5>🏙️ Unit 6: Cities and Urban Land Use</h5>
+              <p>Urbanization, city models, suburbs, planning, and inequality.</p>
+              <strong>Exam Weight: 12–17%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="Unit7.html">
+          <div class="card unit-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Industrial_landscape.jpg" alt="Industrial landscape">
+            <div class="card-body">
+              <h5>🏭 Unit 7: Industrial and Economic Development</h5>
+              <p>Industrialization, development, globalization, trade, and services.</p>
+              <strong>Exam Weight: 12–17%</strong>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <div class="card p-4">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#1f5f5b;">💡 Study Tip</h5>
+        <p class="card-text">
+          Practice using geographic terms with real-world examples. Focus on maps, population data, cultural diffusion, political boundaries, agriculture, urban models, and economic development patterns.
+        </p>
+        <a href="https://apstudents.collegeboard.org/courses/ap-human-geography" class="btn btn-outline-primary" target="_blank">
+          Visit College Board AP Human Geography Page
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">Built for students, by students.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
