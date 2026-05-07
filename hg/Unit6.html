@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP Human Geography Unit 6 — Cities and Urban Land-Use Patterns and Processes. Comprehensive notes on urbanization, global cities, city size and distribution, urban models, density, land use, infrastructure, sustainability, urban data, gentrification, sprawl, MCQs, FRQs, vocab, and key takeaways." />
+  <title>Unit 6: Cities and Urban Land-Use Patterns and Processes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4faf8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f5f5b;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #5c6bc0;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #5c6bc0;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      color: #2f7f78;
+      margin-top: 1.5rem;
+    }
+
+    h4 {
+      color: #1f5f5b;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f5f5b;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    .overview-box {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border-left: 6px solid #5c6bc0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .weighting-badge {
+      display: inline-block;
+      background: #1f5f5b;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #5c6bc0;
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8ffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f5f5b;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #5c6bc0;
+    }
+
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f5f5b;
+      margin-right: 0.5rem;
+    }
+
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .region-origin        { border-color: #1f5f5b; background: #e8f8f6; }
+    .region-world         { border-color: #5c6bc0; background: #eef0ff; }
+    .region-globalization { border-color: #2f7f78; background: #edfdfb; }
+    .region-size          { border-color: #6a994e; background: #f0faeb; }
+    .region-structure     { border-color: #7e57c2; background: #f5efff; }
+    .region-density       { border-color: #d99228; background: #fff7e8; }
+    .region-challenges    { border-color: #0f766e; background: #ecfeff; }
+
+    .region-card h3 {
+      margin-top: 0;
+    }
+
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f5f5b;
+      background: #e8f8f6;
+      font-weight: 600;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .vocab-item {
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+
+    .vocab-term {
+      font-weight: 700;
+      color: #1f5f5b;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+
+    .compare-table th, .compare-table td {
+      border: 1px solid #b9d8d4;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .compare-table thead {
+      background: linear-gradient(to right, #1f5f5b, #5c6bc0);
+      color: white;
+    }
+
+    .compare-table tbody tr:nth-child(even) {
+      background: #f8ffff;
+    }
+
+    .quiz-container {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #1f5f5b;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-container h2 {
+      margin-top: 0;
+      border: none;
+      color: #1f5f5b;
+    }
+
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f5f5b;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+
+    .quiz-option:hover {
+      background-color: #e8f8f6;
+    }
+
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f5f5b;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .explanation.show {
+      display: block;
+    }
+
+    .saq-box {
+      background: #fff;
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+
+    .saq-box h3 {
+      margin-top: 0;
+    }
+
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8ffff;
+      border: 1px dashed #1f5f5b;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f5f5b;
+    }
+
+    .key-takeaways {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP Human Geography</a>
+
+    <h1>Unit 6: Cities and Urban Land-Use Patterns and Processes</h1>
+    <p class="subtitle">Urbanization, City Models, Infrastructure, Sustainability, and Urban Change &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–17%</span></p>
+
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🏙️ Unit Overview</h3>
+      <p>
+        AP Human Geography Unit 6 focuses on cities and urban land use. Cities are centers of population,
+        culture, transportation, jobs, government, trade, innovation, and inequality. This unit explains why cities form,
+        where they grow, how they are organized, and how urban change affects people and landscapes.
+      </p>
+      <p>
+        In this unit, you will study urbanization, site and situation, global cities, city networks,
+        urban hierarchy, central place theory, rank-size rule, primate cities, urban models, suburbanization,
+        sprawl, gentrification, infrastructure, sustainability, urban data, and challenges of urban change.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How do cities develop, organize space, connect to globalization, and create both opportunities and challenges?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Manhattan_from_Weehawken%2C_NJ.jpg" alt="Manhattan skyline" class="unit-image">
+      <div class="image-caption">Urban skyline — connects to density, globalization, infrastructure, land use, and city hierarchy.</div>
+    </div>
+
+    <h2>🗓️ Unit 6 Concept Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">Ancient Era:</span> Early cities develop in river valleys and trade centers, often near fertile land, water, and transportation routes.</div>
+      <div class="timeline-event"><span class="timeline-date">Classical Era:</span> Cities such as Rome, Athens, Chang’an, and Teotihuacán become centers of government, trade, culture, and religion.</div>
+      <div class="timeline-event"><span class="timeline-date">Medieval Era:</span> Walled cities, market towns, religious centers, and trade cities grow across Europe, Asia, Africa, and the Middle East.</div>
+      <div class="timeline-event"><span class="timeline-date">1500s–1800s:</span> Colonialism creates port cities and administrative capitals that connect colonies to global trade networks.</div>
+      <div class="timeline-event"><span class="timeline-date">1800s:</span> Industrialization causes rapid urbanization as factories attract rural migrants to cities.</div>
+      <div class="timeline-event"><span class="timeline-date">1900s:</span> Automobiles, highways, suburbanization, zoning, and mass transit reshape urban land use.</div>
+      <div class="timeline-event"><span class="timeline-date">Late 1900s:</span> Globalization strengthens world cities as centers of finance, culture, technology, and corporate control.</div>
+      <div class="timeline-event"><span class="timeline-date">Today:</span> Cities face challenges involving housing, sprawl, transportation, segregation, sustainability, climate risk, infrastructure, and inequality.</div>
+    </div>
+
+    <h2>Topic 6.1 — The Origin and Influences of Urbanization</h2>
+    <div class="region-card region-origin">
+      <h3>🌆 Why Cities Begin and Grow</h3>
+      <p>
+        Urbanization is the growth in the percentage of people living in cities. Cities usually grow because they offer jobs,
+        services, transportation, education, markets, government functions, and cultural opportunities.
+      </p>
+
+      <h4>Basic Urban Terms</h4>
+      <ul>
+        <li><strong>City:</strong> A large, densely populated settlement with many economic, political, and cultural functions.</li>
+        <li><strong>Urban area:</strong> A built-up area with high population density and non-agricultural land use.</li>
+        <li><strong>Urbanization:</strong> The process of people moving to cities and cities expanding.</li>
+        <li><strong>Urbanism:</strong> The way of life associated with living in cities.</li>
+        <li><strong>Metropolitan area:</strong> A city and the surrounding suburbs and communities connected to it economically and socially.</li>
+      </ul>
+
+      <h4>Site and Situation</h4>
+      <ul>
+        <li><strong>Site:</strong> The physical characteristics of a city’s location, such as climate, landforms, water, soil, and elevation.</li>
+        <li><strong>Situation:</strong> A city’s location relative to other places, trade routes, resources, and transportation networks.</li>
+        <li><strong>Example:</strong> A port city may grow because its site provides a harbor and its situation connects it to global trade routes.</li>
+      </ul>
+
+      <h4>Reasons Cities Grow</h4>
+      <ul>
+        <li><strong>Economic opportunity:</strong> Factories, offices, ports, tourism, finance, and services attract workers.</li>
+        <li><strong>Transportation:</strong> Roads, railroads, airports, rivers, and ports connect cities to other places.</li>
+        <li><strong>Government:</strong> Capitals and administrative centers attract people and institutions.</li>
+        <li><strong>Education and health care:</strong> Universities and hospitals create jobs and draw residents.</li>
+        <li><strong>Culture:</strong> Museums, restaurants, sports, entertainment, and diverse communities attract people.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 6.2 — Cities Across the World</h2>
+    <div class="region-card region-world">
+      <h3>🌍 Urbanization Looks Different by Region</h3>
+      <p>
+        Cities exist in every world region, but they do not all grow in the same way. Some cities grew from ancient trade
+        and religious centers. Others grew from colonialism, industrialization, migration, or globalization.
+      </p>
+
+      <h4>Different Types of Cities</h4>
+      <ul>
+        <li><strong>Megacity:</strong> A metropolitan area with more than 10 million people.</li>
+        <li><strong>Metacity:</strong> A city with more than 20 million people.</li>
+        <li><strong>Primate city:</strong> A city that is much larger and more important than any other city in the same country.</li>
+        <li><strong>Global city:</strong> A city that strongly influences the global economy, culture, politics, and transportation networks.</li>
+        <li><strong>Colonial city:</strong> A city shaped by imperial powers, often with ports, administrative districts, and European-style planning.</li>
+      </ul>
+
+      <h4>Urbanization in Developed Countries</h4>
+      <ul>
+        <li>Urbanization happened earlier, especially during industrialization.</li>
+        <li>Many cities now grow slowly or even lose population in their central areas.</li>
+        <li>Suburbanization, redevelopment, and gentrification are common urban processes.</li>
+        <li>Infrastructure is usually more developed, but aging roads, bridges, housing, and transit can still be major problems.</li>
+      </ul>
+
+      <h4>Urbanization in Developing Countries</h4>
+      <ul>
+        <li>Urbanization is often faster and more recent.</li>
+        <li>Rural-to-urban migration can cause rapid city growth.</li>
+        <li>Governments may struggle to provide housing, sanitation, transportation, schools, and health care fast enough.</li>
+        <li>Informal settlements may grow when formal housing is too expensive or unavailable.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:Shibuya_Crossing%2C_Tokyo%2C_Japan.jpg?width=1000" alt="Shibuya Crossing in Tokyo" class="unit-image">
+      <div class="image-caption">Tokyo street scene — connects to megacities, density, transportation, and global urban culture.</div>
+    </div>
+
+    <h2>Topic 6.3 — Cities and Globalization</h2>
+    <div class="region-card region-globalization">
+      <h3>🌐 Cities as Global Nodes</h3>
+      <p>
+        Globalization connects cities through trade, finance, transportation, communication, migration, media, and technology.
+        Some cities become powerful global nodes because they control flows of money, information, goods, and people.
+      </p>
+
+      <h4>Characteristics of Global Cities</h4>
+      <ul>
+        <li>Major financial institutions, stock exchanges, banks, and corporate headquarters.</li>
+        <li>Advanced transportation links such as international airports, seaports, rail networks, and highways.</li>
+        <li>Concentrations of producer services such as law, advertising, consulting, design, accounting, and technology.</li>
+        <li>Cultural influence through media, fashion, universities, museums, tourism, sports, and entertainment.</li>
+        <li>Large immigrant communities and strong connections to other world regions.</li>
+      </ul>
+
+      <h4>Global City Examples</h4>
+      <ul>
+        <li><strong>New York:</strong> Finance, media, culture, diplomacy, immigration, and corporate power.</li>
+        <li><strong>London:</strong> Finance, transportation, global business, and colonial historical connections.</li>
+        <li><strong>Tokyo:</strong> Technology, finance, manufacturing command, transportation, and high-density urban life.</li>
+        <li><strong>Singapore:</strong> Port activity, finance, trade, and strategic location in Southeast Asia.</li>
+      </ul>
+
+      <h4>Effects of Globalization on Cities</h4>
+      <ul>
+        <li>Creates jobs in finance, technology, tourism, logistics, and services.</li>
+        <li>Increases cultural diversity through migration and global media.</li>
+        <li>Raises land values in central areas and can increase housing costs.</li>
+        <li>Can deepen inequality between wealthy districts and low-income neighborhoods.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 6.4 — The Size and Distribution of Cities</h2>
+    <div class="region-card region-size">
+      <h3>📍 Why Cities Are Arranged in Patterns</h3>
+      <p>
+        Cities are not randomly distributed. They form networks and hierarchies based on size, function, location,
+        transportation, history, resources, and economic power.
+      </p>
+
+      <h4>Urban Hierarchy</h4>
+      <ul>
+        <li><strong>Urban hierarchy:</strong> Ranking cities based on size, influence, and services.</li>
+        <li><strong>Hamlet or village:</strong> Small settlement with limited services.</li>
+        <li><strong>Town:</strong> Larger settlement with more services and businesses.</li>
+        <li><strong>City:</strong> Larger urban area with many specialized functions.</li>
+        <li><strong>Metropolis:</strong> Large city with suburbs and strong regional influence.</li>
+        <li><strong>Global city:</strong> City with major worldwide influence.</li>
+      </ul>
+
+      <h4>Central Place Theory</h4>
+      <ul>
+        <li><strong>Central place:</strong> A settlement that provides goods and services to surrounding areas.</li>
+        <li><strong>Hinterland:</strong> The surrounding area served by a central place.</li>
+        <li><strong>Threshold:</strong> The minimum number of customers needed to support a business or service.</li>
+        <li><strong>Range:</strong> The maximum distance people are willing to travel for a good or service.</li>
+        <li><strong>High-order goods:</strong> Specialized goods or services people travel farther to get, such as hospitals or universities.</li>
+        <li><strong>Low-order goods:</strong> Everyday goods people buy nearby, such as groceries or gas.</li>
+      </ul>
+
+      <h4>Rank-Size Rule and Primate Cities</h4>
+      <ul>
+        <li><strong>Rank-size rule:</strong> The nth largest city is about 1/n the size of the largest city.</li>
+        <li><strong>Primate city:</strong> The largest city is much bigger and more influential than the next largest cities.</li>
+        <li><strong>Meaning:</strong> Rank-size distribution suggests a more balanced urban system, while primacy suggests strong concentration of power in one city.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:Central_place_theory.svg?width=1000" alt="Central place theory diagram" class="unit-image">
+      <div class="image-caption">Central place theory — explains settlement size, spacing, range, threshold, and service areas.</div>
+    </div>
+
+    <h2>Topic 6.5 — The Internal Structure of Cities</h2>
+    <div class="region-card region-structure">
+      <h3>🏙️ How Cities Are Organized Inside</h3>
+      <p>
+        Urban models help geographers explain patterns inside cities. These models are simplified, so they are not perfect,
+        but they help explain residential zones, business districts, transportation corridors, industry, suburbs, and inequality.
+      </p>
+
+      <h4>Classic North American Urban Models</h4>
+      <ul>
+        <li><strong>Burgess concentric zone model:</strong> City grows outward in rings from the central business district.</li>
+        <li><strong>Hoyt sector model:</strong> City grows in wedge-shaped sectors along transportation routes.</li>
+        <li><strong>Harris and Ullman multiple nuclei model:</strong> City has several centers or nodes, not just one downtown.</li>
+        <li><strong>Galactic city model:</strong> City is spread out with edge cities, suburbs, highways, and decentralized activity.</li>
+        <li><strong>Bid-rent theory:</strong> Land value is highest near the center, so land users compete based on what they can pay.</li>
+      </ul>
+
+      <h4>Models from Other World Regions</h4>
+      <ul>
+        <li><strong>Latin American city model:</strong> Often includes a strong central business district, elite residential spine, and peripheral informal settlements.</li>
+        <li><strong>Southeast Asian city model:</strong> Often includes port zones, market gardening areas, mixed land use, and colonial influences.</li>
+        <li><strong>African city model:</strong> Often includes colonial CBDs, traditional markets, ethnic neighborhoods, and informal settlements.</li>
+      </ul>
+
+      <h4>Model Limitations</h4>
+      <ul>
+        <li>Models simplify real cities and may not fit every place.</li>
+        <li>Historical, cultural, political, and environmental factors change urban structure.</li>
+        <li>Transportation technology, zoning laws, globalization, and government policy can reshape land use.</li>
+        <li>Models may not fully explain informal settlements, inequality, or rapid urban growth in developing regions.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:Burgess_model.svg?width=1000" alt="Burgess concentric zone model" class="unit-image">
+      <div class="image-caption">Burgess concentric zone model — explains city growth outward from a central business district.</div>
+    </div>
+
+    <h2>Topic 6.6 — Density and Land Use</h2>
+    <div class="region-card region-density">
+      <h3>🏘️ How Urban Land Is Used</h3>
+      <p>
+        Urban land use shows how different parts of a city are organized for housing, business, industry,
+        transportation, recreation, government, and public services.
+      </p>
+
+      <h4>Common Urban Land Uses</h4>
+      <ul>
+        <li><strong>Central business district:</strong> The downtown core with offices, stores, government buildings, entertainment, and high land values.</li>
+        <li><strong>Residential land use:</strong> Areas where people live, including apartments, townhouses, single-family homes, and high-rises.</li>
+        <li><strong>Commercial land use:</strong> Stores, restaurants, hotels, offices, malls, and business districts.</li>
+        <li><strong>Industrial land use:</strong> Factories, warehouses, shipping facilities, and manufacturing areas.</li>
+        <li><strong>Mixed-use development:</strong> Combines housing, shopping, offices, and recreation in one area.</li>
+        <li><strong>Public land use:</strong> Schools, libraries, parks, government buildings, roads, and transit facilities.</li>
+      </ul>
+
+      <h4>Housing Density</h4>
+      <ul>
+        <li><strong>Low-density housing:</strong> Single-family homes, larger lots, and automobile dependence.</li>
+        <li><strong>Medium-density housing:</strong> Townhouses, duplexes, small apartment buildings, and walkable neighborhoods.</li>
+        <li><strong>High-density housing:</strong> Large apartment buildings, high-rises, and compact urban living.</li>
+      </ul>
+
+      <h4>Zoning and Land Use</h4>
+      <ul>
+        <li><strong>Zoning:</strong> Government rules that determine how land can be used.</li>
+        <li>Zoning can separate residential, commercial, industrial, and public land uses.</li>
+        <li>Zoning can protect neighborhoods but can also increase segregation or limit affordable housing.</li>
+        <li><strong>Infill development:</strong> Building on empty or underused land inside existing urban areas.</li>
+        <li><strong>Brownfield:</strong> Abandoned or polluted industrial land that can be cleaned and reused.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 6.7 — Infrastructure</h2>
+    <div class="region-card region-density">
+      <h3>🚇 The Systems That Keep Cities Running</h3>
+      <p>
+        Infrastructure includes the basic systems and services that allow a city to function. The quality and location
+        of infrastructure strongly affect economic opportunity, public health, mobility, and inequality.
+      </p>
+
+      <h4>Types of Urban Infrastructure</h4>
+      <ul>
+        <li><strong>Transportation:</strong> Roads, bridges, highways, buses, trains, subways, sidewalks, bike lanes, airports, and ports.</li>
+        <li><strong>Utilities:</strong> Water, electricity, natural gas, sewage, internet, and waste collection.</li>
+        <li><strong>Public services:</strong> Schools, hospitals, libraries, parks, police stations, fire stations, and government offices.</li>
+        <li><strong>Green infrastructure:</strong> Parks, trees, wetlands, green roofs, rain gardens, and systems that manage stormwater naturally.</li>
+      </ul>
+
+      <h4>Infrastructure and Inequality</h4>
+      <ul>
+        <li>Wealthier neighborhoods often have better roads, parks, schools, transit access, and public services.</li>
+        <li>Low-income neighborhoods may face fewer transit options, older infrastructure, pollution, or limited access to healthy food.</li>
+        <li>Poor infrastructure can make it harder for people to reach jobs, schools, health care, and grocery stores.</li>
+        <li>Infrastructure investment can improve quality of life but can also raise property values and contribute to displacement.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:TransMilenio_Bogota.jpg?width=1000" alt="Bus rapid transit in Bogota" class="unit-image">
+      <div class="image-caption">Urban transit — connects to infrastructure, mobility, sustainability, and access to jobs and services.</div>
+    </div>
+
+    <h2>Topic 6.8 — Urban Sustainability</h2>
+    <div class="region-card region-challenges">
+      <h3>🌱 Making Cities More Livable</h3>
+      <p>
+        Urban sustainability means designing cities to meet current needs while protecting resources and quality of life for the future.
+        Sustainable cities try to reduce pollution, preserve land, improve transportation, and provide fair access to services.
+      </p>
+
+      <h4>Sustainable Urban Strategies</h4>
+      <ul>
+        <li><strong>Smart growth:</strong> Planning that limits sprawl and encourages compact, mixed-use development.</li>
+        <li><strong>New Urbanism:</strong> Design movement that promotes walkable neighborhoods, mixed land use, public spaces, and less car dependence.</li>
+        <li><strong>Transit-oriented development:</strong> Building housing, jobs, and services near public transportation.</li>
+        <li><strong>Greenbelts:</strong> Protected open land around cities that limits outward growth.</li>
+        <li><strong>Urban infill:</strong> Developing empty or underused land inside existing cities.</li>
+        <li><strong>Green roofs:</strong> Roofs with vegetation that can reduce heat, manage stormwater, and improve insulation.</li>
+      </ul>
+
+      <h4>Benefits</h4>
+      <ul>
+        <li>Reduces traffic congestion and car dependence.</li>
+        <li>Protects farmland, forests, and open space outside cities.</li>
+        <li>Improves air quality and reduces greenhouse gas emissions.</li>
+        <li>Creates walkable neighborhoods with access to services.</li>
+        <li>Can reduce flooding and urban heat island effects.</li>
+      </ul>
+
+      <h4>Challenges</h4>
+      <ul>
+        <li>Sustainable development can be expensive.</li>
+        <li>New transit or green improvements may raise property values.</li>
+        <li>Residents may disagree about density, zoning, parking, and development.</li>
+        <li>Low-income communities may not receive equal access to sustainability projects.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 6.9 — Urban Data</h2>
+    <div class="region-card region-world">
+      <h3>📊 Using Data to Understand Cities</h3>
+      <p>
+        Urban geographers use data to study housing, transportation, income, race and ethnicity, pollution,
+        health, land use, population density, business activity, infrastructure, and access to services.
+      </p>
+
+      <h4>Types of Urban Data</h4>
+      <ul>
+        <li><strong>Census data:</strong> Population information about age, income, household size, housing, and other traits.</li>
+        <li><strong>GIS data:</strong> Digital layers that show roads, buildings, land use, zoning, transit, schools, and environmental patterns.</li>
+        <li><strong>Remote sensing:</strong> Satellite or aerial images used to study land cover, sprawl, heat islands, and urban growth.</li>
+        <li><strong>Transportation data:</strong> Traffic counts, commute times, transit ridership, and pedestrian movement.</li>
+        <li><strong>Housing data:</strong> Rent prices, home values, vacancies, evictions, and building permits.</li>
+      </ul>
+
+      <h4>How Urban Data Is Used</h4>
+      <ul>
+        <li>Identify neighborhoods with limited access to grocery stores, parks, schools, or transit.</li>
+        <li>Plan bus routes, bike lanes, sidewalks, housing, and public services.</li>
+        <li>Map pollution exposure and environmental justice issues.</li>
+        <li>Study gentrification, displacement, suburbanization, and segregation.</li>
+        <li>Prepare for flooding, heat waves, wildfires, and other climate risks.</li>
+      </ul>
+
+      <h4>Limitations and Privacy</h4>
+      <p>
+        Urban data can be useful, but it can also be incomplete, outdated, biased, or too broad to show neighborhood-level differences.
+        Location data can also raise privacy concerns when it tracks people’s movement.
+      </p>
+    </div>
+
+    <h2>Topic 6.10 — Challenges of Urban Change</h2>
+    <div class="region-card region-challenges">
+      <h3>⚠️ Urban Growth Creates Problems and Opportunities</h3>
+      <p>
+        Cities constantly change. Some changes create jobs, housing, transportation, and cultural growth.
+        Other changes create inequality, displacement, environmental stress, and political conflict.
+      </p>
+
+      <h4>Suburbanization and Sprawl</h4>
+      <ul>
+        <li><strong>Suburbanization:</strong> Growth of areas outside the central city.</li>
+        <li><strong>Urban sprawl:</strong> Low-density, car-dependent development spreading outward from a city.</li>
+        <li><strong>Edge city:</strong> A suburban area with offices, shopping, entertainment, and jobs outside the traditional downtown.</li>
+        <li><strong>Exurb:</strong> A settlement beyond the suburbs, often connected to the city by commuting.</li>
+        <li><strong>Boomburb:</strong> A rapidly growing suburban city.</li>
+      </ul>
+
+      <h4>Problems Linked to Sprawl</h4>
+      <ul>
+        <li>Loss of farmland and natural habitats.</li>
+        <li>Longer commutes and traffic congestion.</li>
+        <li>Higher infrastructure costs for roads, utilities, and schools.</li>
+        <li>Greater car dependence and air pollution.</li>
+        <li>Social separation between income groups.</li>
+      </ul>
+
+      <h4>Gentrification and Displacement</h4>
+      <ul>
+        <li><strong>Gentrification:</strong> Wealthier residents and businesses move into a lower-income urban area, often raising property values and rents.</li>
+        <li><strong>Positive effects:</strong> New investment, renovated buildings, businesses, services, and tax revenue.</li>
+        <li><strong>Negative effects:</strong> Higher rents, cultural change, and displacement of long-time residents.</li>
+      </ul>
+
+      <h4>Segregation and Uneven Development</h4>
+      <ul>
+        <li><strong>Redlining:</strong> Historical denial of loans or investment in neighborhoods based on race or ethnicity.</li>
+        <li><strong>Blockbusting:</strong> Real estate practice that encouraged fear-based selling and racial turnover in neighborhoods.</li>
+        <li><strong>Disamenity zone:</strong> Area with poverty, weak infrastructure, informal housing, or environmental risk.</li>
+        <li><strong>Environmental justice:</strong> Fair treatment of all communities regarding pollution, land use, and environmental protection.</li>
+      </ul>
+
+      <h4>Informal Settlements</h4>
+      <p>
+        Informal settlements grow when people need housing but cannot access formal housing markets.
+        These areas may lack secure land ownership, clean water, sanitation, electricity, paved roads, or public services.
+        They often reflect rapid urbanization and economic inequality.
+      </p>
+    </div>
+
+    <h2>Topic Comparison Table</h2>
+    <p>Use this table to quickly compare major Unit 6 concepts.</p>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Meaning</th>
+            <th>Example</th>
+            <th>AP Exam Tip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Urbanization</td>
+            <td>Increase in the percentage of people living in cities</td>
+            <td>Rural migrants moving to a city for jobs</td>
+            <td>Connect to industrialization, migration, and services</td>
+          </tr>
+          <tr>
+            <td>Site</td>
+            <td>Physical characteristics of a city’s location</td>
+            <td>Harbor, river, flat land, climate</td>
+            <td>Think physical geography</td>
+          </tr>
+          <tr>
+            <td>Situation</td>
+            <td>Location relative to other places</td>
+            <td>City near trade routes or other major cities</td>
+            <td>Think connections</td>
+          </tr>
+          <tr>
+            <td>Central Place Theory</td>
+            <td>Explains size, spacing, and services of settlements</td>
+            <td>Small towns provide basic goods; big cities provide specialized services</td>
+            <td>Know range, threshold, and hinterland</td>
+          </tr>
+          <tr>
+            <td>Rank-Size Rule</td>
+            <td>The nth city is about 1/n the size of the largest city</td>
+            <td>Second city is about half the largest city</td>
+            <td>Shows a balanced urban hierarchy</td>
+          </tr>
+          <tr>
+            <td>Primate City</td>
+            <td>Largest city is much bigger than the next largest cities</td>
+            <td>One dominant capital or economic center</td>
+            <td>Shows concentration of power</td>
+          </tr>
+          <tr>
+            <td>Gentrification</td>
+            <td>Wealthier people move into lower-income urban areas</td>
+            <td>Rising rents in a redeveloped neighborhood</td>
+            <td>Know both investment and displacement</td>
+          </tr>
+          <tr>
+            <td>Smart Growth</td>
+            <td>Planning that limits sprawl and promotes compact development</td>
+            <td>Mixed-use, walkable, transit-oriented neighborhoods</td>
+            <td>Connect to sustainability</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">City</span>A large, dense settlement with economic, political, and cultural functions.</div>
+      <div class="vocab-item"><span class="vocab-term">Urbanization</span>The growth in the percentage of people living in cities.</div>
+      <div class="vocab-item"><span class="vocab-term">Urbanism</span>The way of life associated with cities.</div>
+      <div class="vocab-item"><span class="vocab-term">Metropolitan Area</span>A city and surrounding suburbs connected socially and economically.</div>
+      <div class="vocab-item"><span class="vocab-term">Site</span>The physical characteristics of a city’s location.</div>
+      <div class="vocab-item"><span class="vocab-term">Situation</span>A city’s location relative to other places and networks.</div>
+      <div class="vocab-item"><span class="vocab-term">Megacity</span>A metropolitan area with more than 10 million people.</div>
+      <div class="vocab-item"><span class="vocab-term">Metacity</span>A city with more than 20 million people.</div>
+      <div class="vocab-item"><span class="vocab-term">Global City</span>A city with major global influence in finance, culture, transportation, and politics.</div>
+      <div class="vocab-item"><span class="vocab-term">Urban Hierarchy</span>A ranking of cities by size, influence, and services.</div>
+      <div class="vocab-item"><span class="vocab-term">Central Place Theory</span>A model explaining settlement size, spacing, and services.</div>
+      <div class="vocab-item"><span class="vocab-term">Hinterland</span>The surrounding area served by a central place.</div>
+      <div class="vocab-item"><span class="vocab-term">Threshold</span>The minimum number of customers needed to support a service.</div>
+      <div class="vocab-item"><span class="vocab-term">Range</span>The maximum distance people will travel for a good or service.</div>
+      <div class="vocab-item"><span class="vocab-term">Rank-Size Rule</span>Rule where the nth largest city is about 1/n the size of the largest city.</div>
+      <div class="vocab-item"><span class="vocab-term">Primate City</span>A city much larger and more influential than any other city in a country.</div>
+      <div class="vocab-item"><span class="vocab-term">Central Business District</span>The downtown core of business, government, shopping, and entertainment.</div>
+      <div class="vocab-item"><span class="vocab-term">Concentric Zone Model</span>Model showing city growth outward in rings from the CBD.</div>
+      <div class="vocab-item"><span class="vocab-term">Sector Model</span>Model showing wedge-shaped urban growth along transportation routes.</div>
+      <div class="vocab-item"><span class="vocab-term">Multiple Nuclei Model</span>Model showing several centers of activity inside a city.</div>
+      <div class="vocab-item"><span class="vocab-term">Galactic City Model</span>Model showing decentralized urban growth with suburbs, highways, and edge cities.</div>
+      <div class="vocab-item"><span class="vocab-term">Bid-Rent Theory</span>The idea that land users compete for land based on distance from the center.</div>
+      <div class="vocab-item"><span class="vocab-term">Zoning</span>Government rules controlling how land can be used.</div>
+      <div class="vocab-item"><span class="vocab-term">Mixed-Use Development</span>Development that combines housing, shopping, offices, and recreation.</div>
+      <div class="vocab-item"><span class="vocab-term">Brownfield</span>Abandoned or polluted industrial land that can be reused after cleanup.</div>
+      <div class="vocab-item"><span class="vocab-term">Infrastructure</span>Basic systems such as roads, water, electricity, transit, sewage, and public services.</div>
+      <div class="vocab-item"><span class="vocab-term">Urban Sprawl</span>Low-density, car-dependent development spreading outward from a city.</div>
+      <div class="vocab-item"><span class="vocab-term">Suburbanization</span>Growth of areas outside the central city.</div>
+      <div class="vocab-item"><span class="vocab-term">Edge City</span>A suburban center with jobs, shopping, offices, and entertainment.</div>
+      <div class="vocab-item"><span class="vocab-term">Exurb</span>A settlement beyond the suburbs, often connected to a city by commuting.</div>
+      <div class="vocab-item"><span class="vocab-term">Gentrification</span>Wealthier people and businesses move into a lower-income area, raising property values.</div>
+      <div class="vocab-item"><span class="vocab-term">Displacement</span>Residents are pushed out because housing costs or redevelopment pressures rise.</div>
+      <div class="vocab-item"><span class="vocab-term">Redlining</span>Historical denial of loans or investment in neighborhoods based on race or ethnicity.</div>
+      <div class="vocab-item"><span class="vocab-term">Informal Settlement</span>Housing built without formal legal ownership or full public services.</div>
+      <div class="vocab-item"><span class="vocab-term">Smart Growth</span>Planning that limits sprawl and promotes compact, mixed-use development.</div>
+      <div class="vocab-item"><span class="vocab-term">New Urbanism</span>Urban design movement emphasizing walkability, mixed use, and public spaces.</div>
+      <div class="vocab-item"><span class="vocab-term">Greenbelt</span>Protected open land around a city that limits outward growth.</div>
+      <div class="vocab-item"><span class="vocab-term">Transit-Oriented Development</span>Development centered around public transportation access.</div>
+      <div class="vocab-item"><span class="vocab-term">Environmental Justice</span>Fair treatment of communities regarding pollution, land use, and environmental protection.</div>
+    </div>
+
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+
+      <div class="quiz-question">
+        <p><strong>1. Which term refers to the physical characteristics of a city’s location?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(A) Site</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(B) Situation</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Range</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) Threshold</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: A.</strong> Site means the physical characteristics of a location, such as landforms, water, elevation, and climate.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. Which concept explains the minimum number of customers needed to support a service?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) Range</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) Threshold</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) Sprawl</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Bid rent</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: B.</strong> Threshold is the minimum market size needed to support a business or service.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. Which urban model describes a city with several centers of activity instead of one single downtown core?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) Concentric zone model</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(B) Von Thünen model</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(C) Multiple nuclei model</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) Demographic transition model</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: C.</strong> The multiple nuclei model argues that cities have several nodes of activity, such as downtowns, shopping centers, airports, and industrial districts.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. Which is the best example of urban sprawl?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) Compact apartments built near a subway station</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(B) Low-density suburbs spreading outward along highways</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(C) A downtown financial district with high-rise buildings</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) A small village surrounded by farmland</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: B.</strong> Urban sprawl is low-density, car-dependent development that spreads outward from a city.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. Which urban planning strategy is most closely connected to smart growth?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Expanding highways into farmland</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Building only single-family homes far from jobs</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(C) Creating walkable, mixed-use neighborhoods near public transit</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Removing all public transportation from the city center</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: C.</strong> Smart growth promotes compact, walkable, mixed-use development and better access to public transportation.</div>
+      </div>
+    </div>
+
+    <h2>✍️ Free-Response Practice</h2>
+    <p>APHUG FRQs ask you to define, describe, explain, compare, or apply concepts. Be direct and use specific vocabulary.</p>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 1 — Urbanization</h3>
+      <ol type="a">
+        <li>Define urbanization.</li>
+        <li>Explain ONE reason cities grew rapidly during industrialization.</li>
+        <li>Explain ONE challenge caused by rapid urbanization in developing countries.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Urbanization is the growth in the percentage of people living in cities.</p>
+        <p><strong>(b)</strong> Cities grew rapidly during industrialization because factories created jobs that attracted rural migrants.</p>
+        <p><strong>(c)</strong> One challenge is that housing and infrastructure may not grow fast enough, which can lead to informal settlements or limited access to water, sanitation, and transportation.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 2 — Urban Models</h3>
+      <ol type="a">
+        <li>Define central business district.</li>
+        <li>Identify ONE urban model that explains the internal structure of cities.</li>
+        <li>Explain ONE limitation of using urban models to study real cities.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The central business district is the downtown core of a city where business, government, shopping, and entertainment are concentrated.</p>
+        <p><strong>(b)</strong> One urban model is the Burgess concentric zone model, which shows a city growing outward in rings from the CBD.</p>
+        <p><strong>(c)</strong> One limitation is that real cities are affected by history, culture, transportation, zoning, physical geography, and inequality, so they rarely match one model perfectly.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 3 — Urban Sustainability and Change</h3>
+      <ol type="a">
+        <li>Define urban sprawl.</li>
+        <li>Explain ONE negative environmental effect of urban sprawl.</li>
+        <li>Explain ONE way smart growth can reduce the effects of sprawl.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Urban sprawl is low-density, car-dependent development that spreads outward from a city.</p>
+        <p><strong>(b)</strong> One negative environmental effect is the loss of farmland or natural habitat as suburban development expands.</p>
+        <p><strong>(c)</strong> Smart growth can reduce sprawl by encouraging compact, mixed-use neighborhoods near public transit, which reduces car dependence and preserves open land.</p>
+      </details>
+    </div>
+
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Cities grow because of site, situation, and opportunity.</strong> Jobs, transportation, trade, services, and government functions attract people.</li>
+        <li><strong>Urbanization varies by region.</strong> Developed countries urbanized earlier, while many developing countries are urbanizing quickly today.</li>
+        <li><strong>Global cities are powerful nodes.</strong> They control flows of finance, information, transportation, culture, and corporate decision-making.</li>
+        <li><strong>City systems have patterns.</strong> Urban hierarchy, central place theory, rank-size rule, and primate cities explain city size and distribution.</li>
+        <li><strong>Urban models simplify city structure.</strong> Concentric zone, sector, multiple nuclei, galactic, and regional models help explain land use.</li>
+        <li><strong>Land use reflects power and values.</strong> Zoning, density, housing, CBDs, transportation, and infrastructure shape urban landscapes.</li>
+        <li><strong>Infrastructure affects opportunity.</strong> Transit, roads, utilities, schools, parks, and health care influence economic and social development.</li>
+        <li><strong>Urban sustainability tries to reduce harm.</strong> Smart growth, New Urbanism, transit-oriented development, infill, and greenbelts fight sprawl.</li>
+        <li><strong>Urban change creates winners and losers.</strong> Gentrification, suburbanization, segregation, redlining, and informal settlements show how cities can produce inequality.</li>
+      </ul>
+    </div>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP Human Geography</a>
+    </p>
+  </div>
+
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
