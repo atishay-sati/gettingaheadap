@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AP Human Geography Unit 5 — Agriculture and Rural Land-Use Patterns and Processes. Comprehensive notes on agricultural origins, settlement patterns, agricultural revolutions, production regions, von Thünen model, global agriculture, sustainability, MCQs, FRQs, vocab, and key takeaways." />
+  <title>Unit 5: Agriculture and Rural Land-Use Patterns and Processes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4faf8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: #1f5f5b;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #5c6bc0;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 3px solid #5c6bc0;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      color: #2f7f78;
+      margin-top: 1.5rem;
+    }
+
+    h4 {
+      color: #1f5f5b;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1f5f5b;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+    }
+
+    .overview-box {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border-left: 6px solid #5c6bc0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .weighting-badge {
+      display: inline-block;
+      background: #1f5f5b;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 4px solid #5c6bc0;
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 0.8rem 1rem;
+      background: #f8ffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -2.55rem;
+      top: 1.1rem;
+      width: 14px;
+      height: 14px;
+      background: #1f5f5b;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #5c6bc0;
+    }
+
+    .timeline-date {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f5f5b;
+      margin-right: 0.5rem;
+    }
+
+    .region-card {
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      border-left: 6px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .region-intro       { border-color: #1f5f5b; background: #e8f8f6; }
+    .region-settlement  { border-color: #5c6bc0; background: #eef0ff; }
+    .region-origins     { border-color: #2f7f78; background: #edfdfb; }
+    .region-revolutions { border-color: #6a994e; background: #f0faeb; }
+    .region-regions     { border-color: #7e57c2; background: #f5efff; }
+    .region-model       { border-color: #d99228; background: #fff7e8; }
+    .region-challenges  { border-color: #0f766e; background: #ecfeff; }
+
+    .region-card h3 {
+      margin-top: 0;
+    }
+
+    .image-card {
+      margin: 1.5rem 0;
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .unit-image {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-caption {
+      padding: 0.7rem 1rem;
+      font-size: 0.92rem;
+      color: #1f5f5b;
+      background: #e8f8f6;
+      font-weight: 600;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .vocab-item {
+      background: #f8ffff;
+      border: 1px solid #b9d8d4;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+    }
+
+    .vocab-term {
+      font-weight: 700;
+      color: #1f5f5b;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.98rem;
+    }
+
+    .compare-table th, .compare-table td {
+      border: 1px solid #b9d8d4;
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .compare-table thead {
+      background: linear-gradient(to right, #1f5f5b, #5c6bc0);
+      color: white;
+    }
+
+    .compare-table tbody tr:nth-child(even) {
+      background: #f8ffff;
+    }
+
+    .quiz-container {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #1f5f5b;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .quiz-container h2 {
+      margin-top: 0;
+      border: none;
+      color: #1f5f5b;
+    }
+
+    .quiz-question {
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .quiz-option {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #1f5f5b;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      transition: background-color 0.2s;
+    }
+
+    .quiz-option:hover {
+      background-color: #e8f8f6;
+    }
+
+    .quiz-option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+
+    .quiz-option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+
+    .explanation {
+      display: none;
+      margin-top: 0.6rem;
+      padding: 0.8rem;
+      background: #fff;
+      border-left: 4px solid #1f5f5b;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .explanation.show {
+      display: block;
+    }
+
+    .saq-box {
+      background: #fff;
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+    }
+
+    .saq-box h3 {
+      margin-top: 0;
+    }
+
+    details.saq-sample {
+      margin-top: 0.8rem;
+      background: #f8ffff;
+      border: 1px dashed #1f5f5b;
+      border-radius: 6px;
+      padding: 0.6rem 0.9rem;
+    }
+
+    details.saq-sample summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1f5f5b;
+    }
+
+    .key-takeaways {
+      background: linear-gradient(135deg, #e8f8f6, #eef0ff);
+      border: 2px solid #5c6bc0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to AP Human Geography</a>
+
+    <h1>Unit 5: Agriculture and Rural Land-Use Patterns and Processes</h1>
+    <p class="subtitle">Farming, Food Production, Rural Settlement, and Land Use &nbsp;|&nbsp; <span class="weighting-badge">Exam Weight: 12–17%</span></p>
+
+    <div class="overview-box">
+      <h3 style="margin-top:0;">🌾 Unit Overview</h3>
+      <p>
+        AP Human Geography Unit 5 focuses on agriculture, food production, rural settlement, and how humans use land to grow crops and raise animals.
+        Agriculture is one of the most important human activities because it shapes landscapes, economies, cultures, diets, settlement patterns, and the environment.
+      </p>
+      <p>
+        In this unit, you will study the origins of agriculture, agricultural hearths, diffusion, rural settlement patterns,
+        agricultural revolutions, commercial and subsistence farming, the von Thünen model, agribusiness, food security,
+        sustainability, biotechnology, and the environmental consequences of farming.
+      </p>
+      <p style="margin-bottom:0;">
+        <strong>Big question:</strong> How do agriculture and food production shape rural landscapes, economies, and human-environment interactions?
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Agriculture_in_Volgograd_Oblast_002.JPG" alt="Agricultural field" class="unit-image">
+      <div class="image-caption">Agricultural landscape — connects to land use, food production, rural settlement, and human-environment interaction.</div>
+    </div>
+
+    <h2>🗓️ Unit 5 Concept Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event"><span class="timeline-date">Before 10,000 BCE:</span> Humans mostly relied on hunting, gathering, and fishing for food.</div>
+      <div class="timeline-event"><span class="timeline-date">Around 10,000 BCE:</span> The First Agricultural Revolution begins as humans domesticate plants and animals.</div>
+      <div class="timeline-event"><span class="timeline-date">Ancient Era:</span> Agriculture spreads from hearths such as Southwest Asia, East Asia, Sub-Saharan Africa, Mesoamerica, and the Andes.</div>
+      <div class="timeline-event"><span class="timeline-date">1500s:</span> The Columbian Exchange spreads crops, animals, diseases, and farming systems between the Eastern and Western Hemispheres.</div>
+      <div class="timeline-event"><span class="timeline-date">1700s–1800s:</span> The Second Agricultural Revolution increases productivity through crop rotation, selective breeding, mechanization, and better tools.</div>
+      <div class="timeline-event"><span class="timeline-date">1826:</span> Johann Heinrich von Thünen develops a model explaining agricultural land use around a market city.</div>
+      <div class="timeline-event"><span class="timeline-date">Mid-1900s:</span> The Green Revolution increases food production through high-yield seeds, irrigation, fertilizers, and pesticides.</div>
+      <div class="timeline-event"><span class="timeline-date">Late 1900s–Today:</span> Agribusiness, biotechnology, GMOs, global food trade, sustainability, and food security become major agricultural issues.</div>
+    </div>
+
+    <h2>Topic 5.1 — Introduction to Agriculture</h2>
+    <div class="region-card region-intro">
+      <h3>🌱 What Is Agriculture?</h3>
+      <p>
+        Agriculture is the practice of growing crops and raising animals for food, fiber, fuel, and other products.
+        It changed human history because it allowed people to settle in one place, produce food surpluses, build villages,
+        specialize in different jobs, and develop complex societies.
+      </p>
+
+      <h4>Basic Agriculture Terms</h4>
+      <ul>
+        <li><strong>Domestication:</strong> The process of adapting plants or animals for human use.</li>
+        <li><strong>Crop:</strong> A plant grown by humans for food or other uses.</li>
+        <li><strong>Livestock:</strong> Animals raised for food, labor, or products such as milk, wool, or leather.</li>
+        <li><strong>Subsistence agriculture:</strong> Farming mainly to feed the farmer’s family or local community.</li>
+        <li><strong>Commercial agriculture:</strong> Farming mainly to sell products for profit.</li>
+        <li><strong>Intensive agriculture:</strong> Farming that uses a lot of labor or inputs on a small amount of land.</li>
+        <li><strong>Extensive agriculture:</strong> Farming that uses large amounts of land with fewer inputs per acre.</li>
+      </ul>
+
+      <h4>Why Agriculture Matters</h4>
+      <ul>
+        <li>It supports population growth by creating more stable food supplies.</li>
+        <li>It creates rural landscapes such as fields, villages, terraces, barns, canals, and plantations.</li>
+        <li>It affects culture through diets, festivals, land ownership, gender roles, and traditions.</li>
+        <li>It creates environmental impacts such as deforestation, soil erosion, irrigation, pollution, and habitat loss.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 5.2 — Settlement Patterns and Survey Methods</h2>
+    <div class="region-card region-settlement">
+      <h3>🏘️ Rural Settlement Patterns</h3>
+      <p>
+        Rural settlement patterns show how homes, farms, roads, and fields are arranged in agricultural areas.
+        These patterns are shaped by physical geography, culture, land ownership, transportation, and government policies.
+      </p>
+
+      <h4>Settlement Patterns</h4>
+      <ul>
+        <li><strong>Clustered settlement:</strong> Homes are grouped together, often near a village center, church, water source, or road.</li>
+        <li><strong>Dispersed settlement:</strong> Homes are spread out across farmland, with each family living near its fields.</li>
+        <li><strong>Linear settlement:</strong> Homes and farms are arranged in a line, often along a road, river, canal, or coastline.</li>
+      </ul>
+
+      <h4>Survey Systems</h4>
+      <ul>
+        <li><strong>Metes and bounds:</strong> Uses natural features and landmarks to define property boundaries. It can create irregular property shapes.</li>
+        <li><strong>Township and range:</strong> Uses a grid system to divide land into square sections. It is common in much of the United States Midwest and West.</li>
+        <li><strong>Long-lot survey:</strong> Creates long, narrow farms with access to a river, road, or canal. It was common in French-settled areas.</li>
+      </ul>
+
+      <h4>Why Settlement Patterns Matter</h4>
+      <p>
+        Settlement patterns affect transportation, community life, access to services, land ownership, and agricultural efficiency.
+        They also create visible cultural landscapes that geographers can study from maps or aerial images.
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Township_range_system.svg" alt="Township and range survey system" class="unit-image">
+      <div class="image-caption">Township and range — a grid-based land survey system that shaped rural settlement in the United States.</div>
+    </div>
+
+    <h2>Topic 5.3 — Agricultural Origins and Diffusion</h2>
+    <div class="region-card region-origins">
+      <h3>🌍 Where Agriculture Began</h3>
+      <p>
+        Agriculture developed independently in several hearths around the world. From these hearths, crops, animals,
+        tools, and farming techniques spread through migration, trade, conquest, and cultural diffusion.
+      </p>
+
+      <h4>Major Agricultural Hearths</h4>
+      <ul>
+        <li><strong>Southwest Asia:</strong> Wheat, barley, lentils, sheep, goats, cattle, and pigs.</li>
+        <li><strong>East Asia:</strong> Rice, millet, soybeans, pigs, and chickens.</li>
+        <li><strong>South Asia:</strong> Rice, cotton, and other tropical crops.</li>
+        <li><strong>Sub-Saharan Africa:</strong> Sorghum, yams, millet, coffee, and cattle in some regions.</li>
+        <li><strong>Mesoamerica:</strong> Maize, beans, squash, peppers, and turkeys.</li>
+        <li><strong>Andes region:</strong> Potatoes, quinoa, llamas, and alpacas.</li>
+      </ul>
+
+      <h4>First Agricultural Revolution</h4>
+      <ul>
+        <li>Also called the Neolithic Revolution.</li>
+        <li>People shifted from hunting and gathering to farming and herding.</li>
+        <li>Permanent settlements became more common.</li>
+        <li>Food surpluses allowed job specialization, trade, social hierarchy, and early states.</li>
+      </ul>
+
+      <h4>Diffusion of Agriculture</h4>
+      <ul>
+        <li><strong>Relocation diffusion:</strong> Farmers moved and brought crops, animals, and techniques with them.</li>
+        <li><strong>Expansion diffusion:</strong> Farming practices spread outward from agricultural hearths.</li>
+        <li><strong>Columbian Exchange:</strong> Crops and animals moved between the Americas, Europe, Africa, and Asia after 1492.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Origins_of_agriculture.svg" alt="Origins of agriculture map" class="unit-image">
+      <div class="image-caption">Agricultural hearths — shows where farming began and diffused to other regions.</div>
+    </div>
+
+    <h2>Topic 5.4 — The Second Agricultural Revolution</h2>
+    <div class="region-card region-revolutions">
+      <h3>🚜 Agriculture Becomes More Productive</h3>
+      <p>
+        The Second Agricultural Revolution happened mainly in Europe during the 1700s and 1800s.
+        It increased food production and helped support population growth and industrialization.
+      </p>
+
+      <h4>Important Changes</h4>
+      <ul>
+        <li><strong>Crop rotation:</strong> Farmers rotated crops to maintain soil fertility and reduce fallow land.</li>
+        <li><strong>Seed drill:</strong> Planted seeds more efficiently and evenly.</li>
+        <li><strong>Selective breeding:</strong> Farmers bred animals and plants for better traits.</li>
+        <li><strong>Enclosure movement:</strong> Common lands were fenced into private farms, making farming more efficient but displacing many peasants.</li>
+        <li><strong>Mechanization:</strong> Machines reduced labor needs and increased output.</li>
+      </ul>
+
+      <h4>Effects</h4>
+      <ul>
+        <li>Food production increased.</li>
+        <li>Population growth accelerated.</li>
+        <li>Fewer farm workers were needed, causing many people to move to cities.</li>
+        <li>Industrialization became easier because cities had more workers and food supplies.</li>
+        <li>Rural landscapes changed as fields were enclosed, reorganized, and commercialized.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 5.5 — The Green Revolution</h2>
+    <div class="region-card region-revolutions">
+      <h3>🌾 High-Yield Agriculture</h3>
+      <p>
+        The Green Revolution began in the mid-1900s and used science and technology to increase crop yields,
+        especially in developing countries. It focused heavily on crops such as wheat, rice, and maize.
+      </p>
+
+      <h4>Main Features</h4>
+      <ul>
+        <li><strong>High-yield seeds:</strong> New varieties produced more food per acre.</li>
+        <li><strong>Irrigation:</strong> More reliable water supplies increased productivity.</li>
+        <li><strong>Synthetic fertilizers:</strong> Added nutrients to soil to raise yields.</li>
+        <li><strong>Pesticides and herbicides:</strong> Reduced crop loss from insects and weeds.</li>
+        <li><strong>Mechanization:</strong> Tractors and machines increased efficiency.</li>
+      </ul>
+
+      <h4>Benefits</h4>
+      <ul>
+        <li>Food production increased dramatically in many regions.</li>
+        <li>Some countries reduced famine risk and became more food secure.</li>
+        <li>Farmers could grow more crops on the same amount of land.</li>
+        <li>Urban populations could grow because food supplies became more reliable.</li>
+      </ul>
+
+      <h4>Criticisms and Problems</h4>
+      <ul>
+        <li>Fertilizers and pesticides polluted soil and water.</li>
+        <li>Irrigation increased pressure on rivers, aquifers, and groundwater.</li>
+        <li>Small farmers sometimes could not afford seeds, chemicals, and machines.</li>
+        <li>Biodiversity declined as farmers relied on fewer crop varieties.</li>
+        <li>Some regions benefited more than others, increasing inequality.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Combine_harvester_in_South_Dakota.jpg" alt="Combine harvester in a field" class="unit-image">
+      <div class="image-caption">Mechanized farming — connects to agricultural revolutions, productivity, and commercial agriculture.</div>
+    </div>
+
+    <h2>Topic 5.6 — Agricultural Production Regions</h2>
+    <div class="region-card region-regions">
+      <h3>🌎 Different Places, Different Farming</h3>
+      <p>
+        Agricultural production varies by climate, soil, culture, technology, development level, labor costs,
+        land availability, and access to markets.
+      </p>
+
+      <h4>Subsistence Agriculture</h4>
+      <ul>
+        <li>Farmers produce mainly enough food for themselves and their families.</li>
+        <li>Often found in developing regions.</li>
+        <li>Usually involves more human labor and fewer machines.</li>
+        <li>Examples include shifting cultivation, pastoral nomadism, and intensive subsistence rice farming.</li>
+      </ul>
+
+      <h4>Commercial Agriculture</h4>
+      <ul>
+        <li>Farmers produce crops or animals mainly for sale.</li>
+        <li>Often found in developed regions.</li>
+        <li>Usually involves machinery, science, transportation, and global markets.</li>
+        <li>Examples include grain farming, dairy farming, mixed crop and livestock farming, ranching, and plantation agriculture.</li>
+      </ul>
+
+      <h4>Major Farming Types</h4>
+      <ul>
+        <li><strong>Shifting cultivation:</strong> Farmers clear land, farm it temporarily, then move when soil fertility declines.</li>
+        <li><strong>Pastoral nomadism:</strong> Herding animals and moving with them to find pasture and water.</li>
+        <li><strong>Intensive subsistence agriculture:</strong> Small farms with high labor input, often in densely populated regions.</li>
+        <li><strong>Dairy farming:</strong> Milk production, usually near markets because milk spoils quickly.</li>
+        <li><strong>Grain farming:</strong> Large-scale wheat, corn, or other grain production for sale.</li>
+        <li><strong>Ranching:</strong> Raising livestock over large areas of land.</li>
+        <li><strong>Plantation agriculture:</strong> Large farms growing cash crops such as coffee, sugar, cocoa, bananas, or rubber.</li>
+        <li><strong>Mediterranean agriculture:</strong> Grapes, olives, citrus, vegetables, and wine production in Mediterranean climates.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 5.7 — Spatial Organization of Agriculture</h2>
+    <div class="region-card region-model">
+      <h3>📍 Why Farming Happens Where It Does</h3>
+      <p>
+        Agricultural land use is spatially organized. Farmers choose what to grow based on climate, land cost,
+        transportation cost, labor, technology, markets, government policy, and cultural preferences.
+      </p>
+
+      <h4>Factors That Shape Agricultural Location</h4>
+      <ul>
+        <li><strong>Climate:</strong> Temperature and rainfall determine which crops can grow.</li>
+        <li><strong>Soil:</strong> Fertile soil supports higher yields.</li>
+        <li><strong>Land cost:</strong> Expensive land near cities encourages intensive farming.</li>
+        <li><strong>Transportation:</strong> Perishable goods need fast access to markets.</li>
+        <li><strong>Labor:</strong> Some crops require more workers than others.</li>
+        <li><strong>Technology:</strong> Machines, refrigeration, irrigation, and fertilizers expand farming possibilities.</li>
+        <li><strong>Government policy:</strong> Subsidies, tariffs, land reform, and regulations shape farming decisions.</li>
+      </ul>
+
+      <h4>Perishability and Market Access</h4>
+      <p>
+        Perishable products such as milk, fruit, vegetables, and flowers often need to be produced closer to markets
+        or transported quickly using refrigeration. Less perishable products such as grain can be grown farther from markets.
+      </p>
+    </div>
+
+    <h2>Topic 5.8 — Von Thünen Model</h2>
+    <div class="region-card region-model">
+      <h3>⭕ Agricultural Land Use Around a Market</h3>
+      <p>
+        The von Thünen model explains how agricultural land use may be arranged around a central market city.
+        It assumes flat land, one market, equal soil quality, and transportation costs based mainly on distance.
+      </p>
+
+      <h4>Basic Rings of the Model</h4>
+      <ul>
+        <li><strong>Center:</strong> Market city where products are sold.</li>
+        <li><strong>Ring 1:</strong> Dairy and market gardening because these products are perishable and land near the city is expensive.</li>
+        <li><strong>Ring 2:</strong> Forest products because wood is heavy and was historically expensive to transport.</li>
+        <li><strong>Ring 3:</strong> Grains and field crops because they are less perishable and can be grown farther away.</li>
+        <li><strong>Ring 4:</strong> Ranching and livestock because animals need lots of land and can move to market.</li>
+      </ul>
+
+      <h4>Why the Model Matters</h4>
+      <ul>
+        <li>It shows the relationship between land cost, transportation cost, and agricultural choices.</li>
+        <li>It helps explain why intensive agriculture is often closer to cities.</li>
+        <li>It shows why extensive agriculture often occurs farther from markets.</li>
+      </ul>
+
+      <h4>Limitations</h4>
+      <ul>
+        <li>Real landscapes are not perfectly flat.</li>
+        <li>There are usually multiple markets, not just one.</li>
+        <li>Rivers, highways, railroads, ports, and refrigeration change transportation costs.</li>
+        <li>Government policies, technology, climate, and global trade can change land use.</li>
+      </ul>
+    </div>
+
+    <div class="image-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Von_Th%C3%BCnen_model.svg" alt="Von Thunen model" class="unit-image">
+      <div class="image-caption">Von Thünen model — explains agricultural land use based on distance from a market and transportation costs.</div>
+    </div>
+
+    <h2>Topic 5.9 — The Global System of Agriculture</h2>
+    <div class="region-card region-challenges">
+      <h3>🌐 Food Is Part of a Global Economy</h3>
+      <p>
+        Modern agriculture is connected to global trade, multinational corporations, transportation networks,
+        food processing, technology, and consumer demand.
+      </p>
+
+      <h4>Global Agriculture Concepts</h4>
+      <ul>
+        <li><strong>Agribusiness:</strong> Commercial agriculture organized as a large-scale business, including production, processing, transportation, and sales.</li>
+        <li><strong>Commodity chain:</strong> The full process of producing, processing, distributing, and selling a product.</li>
+        <li><strong>Export commodity:</strong> A crop grown mainly to sell to other countries.</li>
+        <li><strong>Cash crop:</strong> A crop grown for sale rather than direct consumption by the farmer.</li>
+        <li><strong>Food desert:</strong> An area with limited access to affordable, healthy food.</li>
+        <li><strong>Food security:</strong> Reliable access to enough safe and nutritious food.</li>
+        <li><strong>Food insecurity:</strong> Lack of reliable access to enough food.</li>
+      </ul>
+
+      <h4>Global Food Trade</h4>
+      <ul>
+        <li>Some countries export large amounts of grain, meat, coffee, sugar, cocoa, fruit, or vegetables.</li>
+        <li>Some developing countries rely on export crops, which can make them vulnerable to global price changes.</li>
+        <li>Food travels long distances because of refrigeration, container shipping, airplanes, trucks, and global markets.</li>
+        <li>Consumer demand in wealthy countries can shape farming patterns in poorer countries.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 5.10 — Consequences of Agricultural Practices</h2>
+    <div class="region-card region-challenges">
+      <h3>⚠️ Environmental and Social Effects</h3>
+      <p>
+        Agriculture feeds people, but it also changes the environment. Farming can cause serious environmental problems
+        if land, water, soil, and chemicals are not managed carefully.
+      </p>
+
+      <h4>Environmental Consequences</h4>
+      <ul>
+        <li><strong>Deforestation:</strong> Forests are cleared for fields, ranches, plantations, or settlement.</li>
+        <li><strong>Soil erosion:</strong> Fertile topsoil is lost through wind, water, or poor farming methods.</li>
+        <li><strong>Desertification:</strong> Land becomes more desert-like because of overgrazing, deforestation, drought, or poor land use.</li>
+        <li><strong>Water pollution:</strong> Fertilizers, pesticides, and animal waste can runoff into rivers and lakes.</li>
+        <li><strong>Salinization:</strong> Salt builds up in soil because of irrigation, making farming harder.</li>
+        <li><strong>Biodiversity loss:</strong> Monocropping and habitat destruction reduce plant and animal diversity.</li>
+        <li><strong>Greenhouse gases:</strong> Livestock, rice paddies, fertilizer use, and transportation contribute to emissions.</li>
+      </ul>
+
+      <h4>Social and Economic Consequences</h4>
+      <ul>
+        <li>Small farmers may struggle to compete with large agribusinesses.</li>
+        <li>Farmworkers may face low wages, seasonal work, and difficult working conditions.</li>
+        <li>Export crop dependence can make countries vulnerable to global price changes.</li>
+        <li>Land ownership inequality can create poverty and rural conflict.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 5.11 — Challenges of Contemporary Agriculture</h2>
+    <div class="region-card region-challenges">
+      <h3>🔬 Modern Farming Debates</h3>
+      <p>
+        Contemporary agriculture faces challenges involving food supply, environmental sustainability, technology,
+        inequality, climate change, and consumer choices.
+      </p>
+
+      <h4>Biotechnology and GMOs</h4>
+      <ul>
+        <li><strong>Biotechnology:</strong> Using science to modify plants or animals for human purposes.</li>
+        <li><strong>GMOs:</strong> Genetically modified organisms designed for traits such as pest resistance, drought tolerance, or higher yields.</li>
+        <li><strong>Benefits:</strong> GMOs can increase yields, reduce crop loss, and help crops survive difficult conditions.</li>
+        <li><strong>Concerns:</strong> Critics worry about corporate control, environmental impacts, seed costs, and biodiversity loss.</li>
+      </ul>
+
+      <h4>Sustainable Agriculture</h4>
+      <ul>
+        <li><strong>Goal:</strong> Produce food while protecting land, water, ecosystems, and future farming ability.</li>
+        <li><strong>Crop rotation:</strong> Rotating crops to protect soil nutrients.</li>
+        <li><strong>Organic farming:</strong> Farming with limited synthetic chemicals.</li>
+        <li><strong>Conservation tillage:</strong> Reducing plowing to prevent erosion.</li>
+        <li><strong>Integrated pest management:</strong> Using multiple strategies to control pests with fewer chemicals.</li>
+        <li><strong>Local food systems:</strong> Producing and buying food closer to where people live.</li>
+      </ul>
+
+      <h4>Climate Change and Agriculture</h4>
+      <ul>
+        <li>Changing rainfall patterns can increase droughts or floods.</li>
+        <li>Rising temperatures can reduce yields in some regions.</li>
+        <li>Farmers may need new crops, irrigation systems, or farming locations.</li>
+        <li>Food prices may rise when climate events damage crops.</li>
+      </ul>
+    </div>
+
+    <h2>Topic 5.12 — Women in Agriculture</h2>
+    <div class="region-card region-intro">
+      <h3>👩‍🌾 Gender and Farming</h3>
+      <p>
+        Women play a major role in agriculture around the world, especially in subsistence farming and small-scale food production.
+        However, women often have less access to land ownership, credit, education, equipment, and political power.
+      </p>
+
+      <h4>Challenges Women Farmers May Face</h4>
+      <ul>
+        <li>Limited legal rights to own or inherit land.</li>
+        <li>Less access to loans, machinery, fertilizer, and technology.</li>
+        <li>Less access to formal agricultural training or education.</li>
+        <li>Unpaid labor and household responsibilities in addition to farm work.</li>
+        <li>Lower wages in agricultural labor markets.</li>
+      </ul>
+
+      <h4>Why Gender Equity Matters</h4>
+      <ul>
+        <li>Improving women’s access to land and resources can increase food production.</li>
+        <li>Educating women often improves family health, nutrition, and income.</li>
+        <li>Supporting women farmers can reduce poverty and improve food security.</li>
+      </ul>
+    </div>
+
+    <h2>Topic Comparison Table</h2>
+    <p>Use this table to quickly compare major Unit 5 concepts.</p>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Meaning</th>
+            <th>Example</th>
+            <th>AP Exam Tip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Subsistence Agriculture</td>
+            <td>Farming mainly to feed the farmer’s family</td>
+            <td>Small rice farm or shifting cultivation</td>
+            <td>Usually local, labor-intensive, and less commercial</td>
+          </tr>
+          <tr>
+            <td>Commercial Agriculture</td>
+            <td>Farming mainly to sell products</td>
+            <td>Large wheat farm, dairy farm, plantation</td>
+            <td>Usually connected to markets, machines, and profit</td>
+          </tr>
+          <tr>
+            <td>Intensive Agriculture</td>
+            <td>High inputs on smaller land area</td>
+            <td>Market gardening or wet rice farming</td>
+            <td>Think high labor/capital per acre</td>
+          </tr>
+          <tr>
+            <td>Extensive Agriculture</td>
+            <td>Large land area with fewer inputs per acre</td>
+            <td>Ranching or large grain farms</td>
+            <td>Think large space and lower density</td>
+          </tr>
+          <tr>
+            <td>Green Revolution</td>
+            <td>Modern technology increased crop yields</td>
+            <td>High-yield wheat and rice</td>
+            <td>Know both benefits and environmental costs</td>
+          </tr>
+          <tr>
+            <td>Von Thünen Model</td>
+            <td>Explains farming around a market city</td>
+            <td>Dairy close to city, ranching farther away</td>
+            <td>Focus on transport cost, land cost, and perishability</td>
+          </tr>
+          <tr>
+            <td>Agribusiness</td>
+            <td>Large-scale commercial food production system</td>
+            <td>Corporate farming, processing, shipping, retail</td>
+            <td>Connect to globalization and food commodity chains</td>
+          </tr>
+          <tr>
+            <td>Sustainable Agriculture</td>
+            <td>Farming that protects long-term resources</td>
+            <td>Crop rotation, organic farming, conservation tillage</td>
+            <td>Connect to soil, water, biodiversity, and future food supply</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>📚 Key Vocabulary</h2>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-term">Agriculture</span>The practice of growing crops and raising animals for human use.</div>
+      <div class="vocab-item"><span class="vocab-term">Domestication</span>Adapting plants or animals for human use.</div>
+      <div class="vocab-item"><span class="vocab-term">Subsistence Agriculture</span>Farming mainly to feed the farmer’s family or local community.</div>
+      <div class="vocab-item"><span class="vocab-term">Commercial Agriculture</span>Farming mainly to sell products for profit.</div>
+      <div class="vocab-item"><span class="vocab-term">Intensive Agriculture</span>Farming using high labor or inputs on a small amount of land.</div>
+      <div class="vocab-item"><span class="vocab-term">Extensive Agriculture</span>Farming using large amounts of land with fewer inputs per acre.</div>
+      <div class="vocab-item"><span class="vocab-term">Agricultural Hearth</span>A place where agriculture began and spread from.</div>
+      <div class="vocab-item"><span class="vocab-term">First Agricultural Revolution</span>Shift from hunting and gathering to farming and herding.</div>
+      <div class="vocab-item"><span class="vocab-term">Second Agricultural Revolution</span>Increase in productivity through crop rotation, mechanization, selective breeding, and improved tools.</div>
+      <div class="vocab-item"><span class="vocab-term">Green Revolution</span>Mid-1900s increase in crop yields using high-yield seeds, irrigation, fertilizers, pesticides, and machinery.</div>
+      <div class="vocab-item"><span class="vocab-term">Columbian Exchange</span>Transfer of crops, animals, diseases, and cultures between the Eastern and Western Hemispheres after 1492.</div>
+      <div class="vocab-item"><span class="vocab-term">Shifting Cultivation</span>Farming where land is cleared, farmed temporarily, then left to recover.</div>
+      <div class="vocab-item"><span class="vocab-term">Pastoral Nomadism</span>Moving with livestock to find pasture and water.</div>
+      <div class="vocab-item"><span class="vocab-term">Intensive Subsistence Farming</span>Small-scale farming with high labor input, often in densely populated regions.</div>
+      <div class="vocab-item"><span class="vocab-term">Plantation Agriculture</span>Large-scale commercial farming of cash crops, often in tropical regions.</div>
+      <div class="vocab-item"><span class="vocab-term">Market Gardening</span>Small-scale commercial farming of fruits, vegetables, and flowers near markets.</div>
+      <div class="vocab-item"><span class="vocab-term">Dairy Farming</span>Commercial agriculture focused on milk and dairy products.</div>
+      <div class="vocab-item"><span class="vocab-term">Ranching</span>Raising livestock over large areas of land.</div>
+      <div class="vocab-item"><span class="vocab-term">Von Thünen Model</span>Model explaining agricultural land use around a market based on distance and transport costs.</div>
+      <div class="vocab-item"><span class="vocab-term">Agribusiness</span>Large-scale commercial agriculture involving production, processing, distribution, and sales.</div>
+      <div class="vocab-item"><span class="vocab-term">Cash Crop</span>A crop grown mainly for sale rather than direct consumption.</div>
+      <div class="vocab-item"><span class="vocab-term">Commodity Chain</span>The full process of producing, processing, transporting, and selling a product.</div>
+      <div class="vocab-item"><span class="vocab-term">Food Security</span>Reliable access to enough safe and nutritious food.</div>
+      <div class="vocab-item"><span class="vocab-term">Food Insecurity</span>Lack of reliable access to enough food.</div>
+      <div class="vocab-item"><span class="vocab-term">Food Desert</span>An area with limited access to affordable, healthy food.</div>
+      <div class="vocab-item"><span class="vocab-term">Desertification</span>Land becoming more desert-like because of overuse, drought, or poor land management.</div>
+      <div class="vocab-item"><span class="vocab-term">Salinization</span>Salt buildup in soil, often caused by irrigation.</div>
+      <div class="vocab-item"><span class="vocab-term">Monocropping</span>Growing one crop over a large area.</div>
+      <div class="vocab-item"><span class="vocab-term">GMOs</span>Genetically modified organisms designed for traits like pest resistance or higher yields.</div>
+      <div class="vocab-item"><span class="vocab-term">Sustainable Agriculture</span>Farming that protects resources so food can continue to be produced in the future.</div>
+    </div>
+
+    <div class="quiz-container">
+      <h2>📝 Multiple Choice Practice</h2>
+      <p>Click an answer to check it. Each question includes an explanation.</p>
+
+      <div class="quiz-question">
+        <p><strong>1. Which development best describes the First Agricultural Revolution?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, true, 1)">(A) Humans shifted from hunting and gathering to farming and herding.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(B) Farmers began using high-yield seeds and synthetic fertilizers.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(C) Commercial agribusiness replaced all family farms.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 1)">(D) The von Thünen model was created.</div>
+        </div>
+        <div class="explanation" id="exp-1"><strong>Answer: A.</strong> The First Agricultural Revolution was the shift from hunting and gathering to plant and animal domestication.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>2. Which type of agriculture is mainly practiced to feed the farmer’s family?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(A) Commercial agriculture</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 2)">(B) Subsistence agriculture</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(C) Plantation agriculture</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 2)">(D) Agribusiness</div>
+        </div>
+        <div class="explanation" id="exp-2"><strong>Answer: B.</strong> Subsistence agriculture is farming mainly to feed the farmer’s family or local community.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>3. In the von Thünen model, why are dairy and market gardening closest to the city?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(A) They require the least valuable land.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(B) They are not affected by transportation costs.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 3)">(C) Their products are perishable and need quick access to markets.</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 3)">(D) They require the largest amount of open land.</div>
+        </div>
+        <div class="explanation" id="exp-3"><strong>Answer: C.</strong> Dairy and market gardening are close to the market because products like milk, vegetables, and flowers spoil quickly.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>4. Which was a major feature of the Green Revolution?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(A) A return to hunting and gathering</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(B) The end of global food trade</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 4)">(C) High-yield seeds, irrigation, fertilizers, and pesticides</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 4)">(D) The elimination of all environmental problems in farming</div>
+        </div>
+        <div class="explanation" id="exp-4"><strong>Answer: C.</strong> The Green Revolution increased yields through high-yield seeds, irrigation, fertilizers, pesticides, and mechanization.</div>
+      </div>
+
+      <div class="quiz-question">
+        <p><strong>5. Which problem is most directly caused by irrigation in dry regions?</strong></p>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(A) Hierarchical diffusion</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(B) Gerrymandering</div>
+          <div class="quiz-option" onclick="checkAnswer(this, true, 5)">(C) Salinization</div>
+          <div class="quiz-option" onclick="checkAnswer(this, false, 5)">(D) Lingua franca</div>
+        </div>
+        <div class="explanation" id="exp-5"><strong>Answer: C.</strong> Irrigation in dry regions can leave salts behind in the soil, causing salinization.</div>
+      </div>
+    </div>
+
+    <h2>✍️ Free-Response Practice</h2>
+    <p>APHUG FRQs ask you to define, describe, explain, compare, or apply concepts. Be direct and use specific vocabulary.</p>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 1 — Agricultural Revolutions</h3>
+      <ol type="a">
+        <li>Define the First Agricultural Revolution.</li>
+        <li>Identify ONE change associated with the Second Agricultural Revolution.</li>
+        <li>Explain ONE positive effect of the Green Revolution.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The First Agricultural Revolution was the shift from hunting and gathering to farming and herding through plant and animal domestication.</p>
+        <p><strong>(b)</strong> One change associated with the Second Agricultural Revolution was crop rotation, which helped maintain soil fertility and increase food production.</p>
+        <p><strong>(c)</strong> One positive effect of the Green Revolution was that high-yield seeds, irrigation, and fertilizers increased food production in many regions.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 2 — Von Thünen Model</h3>
+      <ol type="a">
+        <li>Define the von Thünen model.</li>
+        <li>Explain why perishable products are usually located closer to the market in the model.</li>
+        <li>Explain ONE limitation of the von Thünen model in the modern world.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> The von Thünen model explains agricultural land use around a central market based on transportation cost, land cost, and perishability.</p>
+        <p><strong>(b)</strong> Perishable products are closer to the market because they spoil quickly and need fast transportation to consumers.</p>
+        <p><strong>(c)</strong> One limitation is that modern refrigeration, highways, airplanes, and global trade allow perishable goods to travel much farther than the model assumes.</p>
+      </details>
+    </div>
+
+    <div class="saq-box">
+      <h3>FRQ Practice 3 — Contemporary Agriculture</h3>
+      <ol type="a">
+        <li>Define food security.</li>
+        <li>Identify ONE environmental consequence of commercial agriculture.</li>
+        <li>Explain ONE way sustainable agriculture can reduce environmental damage.</li>
+      </ol>
+
+      <details class="saq-sample">
+        <summary>Click to see a sample response</summary>
+        <p><strong>(a)</strong> Food security means reliable access to enough safe and nutritious food.</p>
+        <p><strong>(b)</strong> One environmental consequence of commercial agriculture is water pollution from fertilizer and pesticide runoff.</p>
+        <p><strong>(c)</strong> Sustainable agriculture can reduce environmental damage by using crop rotation or conservation tillage to protect soil and reduce erosion.</p>
+      </details>
+    </div>
+
+    <h2>⭐ Key Takeaways</h2>
+    <div class="key-takeaways">
+      <ul>
+        <li><strong>Agriculture changed human society.</strong> Farming allowed permanent settlements, food surpluses, population growth, and complex societies.</li>
+        <li><strong>Agriculture began in multiple hearths.</strong> Crops and animals were domesticated independently in several world regions.</li>
+        <li><strong>Rural landscapes show settlement patterns.</strong> Clustered, dispersed, linear, township and range, metes and bounds, and long-lot systems shape land use.</li>
+        <li><strong>Agricultural revolutions increased productivity.</strong> The First, Second, and Green Revolutions each changed food production in major ways.</li>
+        <li><strong>Subsistence and commercial agriculture are different.</strong> Subsistence farming feeds local families; commercial farming produces for markets.</li>
+        <li><strong>The von Thünen model explains agricultural location.</strong> Land cost, transportation cost, perishability, and market access shape farming patterns.</li>
+        <li><strong>Modern agriculture is globalized.</strong> Agribusiness, commodity chains, exports, and multinational corporations shape food systems.</li>
+        <li><strong>Agriculture creates environmental challenges.</strong> Deforestation, soil erosion, salinization, water pollution, biodiversity loss, and greenhouse gases are major issues.</li>
+        <li><strong>Sustainable agriculture tries to protect the future.</strong> It focuses on producing food while protecting soil, water, ecosystems, and rural communities.</li>
+      </ul>
+    </div>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="back-link" style="font-size:1.2rem;">← Back to AP Human Geography</a>
+    </p>
+  </div>
+
+  <script>
+    function checkAnswer(element, isCorrect, qNum) {
+      const options = element.parentElement.querySelectorAll('.quiz-option');
+      options.forEach(o => o.classList.remove('correct', 'incorrect'));
+
+      element.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) exp.classList.add('show');
+    }
+  </script>
+</body>
+</html>
